@@ -44,11 +44,11 @@ jobs:
             run: |
               touch ./$group_name/$channel_name.m3u8
               sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
-#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-$(yt-dlp --print urls $channel_url)
-EOL" >> .github/workflows/ytm.yml
+              #EXTM3U
+              #EXT-X-VERSION:3
+              #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+              $(yt-dlp --print urls $channel_url)
+              EOL" >> .github/workflows/ytm.yml
         done < youtube_channel_info.txt
 
     - name: Configure Git
