@@ -54,9 +54,19 @@ jobs:
 
       - name: Add and Check for Changes
         run: |
-          # Add files and check for changes
+          # Add files
           git add .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
+    
+          # Check for changes
+          git status
+
+          # Check for differences
           git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || git commit -m "Update YTM workflow"
+
+          # Show changes after committing
+          git show
+        working-directory: .github/workflows
+
 
       - name: Push Changes
         run: |
