@@ -17,14 +17,14 @@ jobs:
           repository: GoonerM466/YTM
           ref: main
 
+      - name: Backup YTM Workflow File
+        run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
+
       - name: Wait for 30 Seconds
         run: sleep 30
 
       - name: Read Channel Info
         run: |
-          # Skip the first two lines
-          sed -i '1,2d' youtube_channel_info.txt
-
           while IFS= read -r line; do
             # Extracting values from the line
             channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
@@ -55,4 +55,15 @@ jobs:
 
       - name: Check for Changes and Push
         run: |
-          git diff --exit-code && echo "No changes detected" || (git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow" && git push)
+          diff_output=$(git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml)
+          if [ $? -ne 0 ]; then
+            echo "Changes detected. Committing and pushing..."
+            git add .github/workflows/ytm.yml
+            git commit -m "Update YTM workflow"
+            git push
+          else
+            echo "No changes detected."
+          fi
+
+          # Remove the temporary backup file
+          rm .github/workflows/ytm_backup.yml
