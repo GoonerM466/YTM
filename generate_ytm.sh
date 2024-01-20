@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Skip the first two lines
-sed -i '1,2d' youtube_channel_info.txt
+tail -n +3 youtube_channel_info.txt > temp_youtube_channel_info.txt
 
 while IFS= read -r line; do
   # Extracting values from the line
@@ -23,4 +23,7 @@ while IFS= read -r line; do
       #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
       \$(yt-dlp --print urls $channel_url)
       EOL" >> .github/workflows/ytm.yml
-done < youtube_channel_info.txt
+done < temp_youtube_channel_info.txt
+
+# Clean up temporary file
+rm temp_youtube_channel_info.txt
