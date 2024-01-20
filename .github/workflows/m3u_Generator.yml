@@ -23,7 +23,7 @@ jobs:
           category=$(basename "$(dirname "$file")")
           channel=$(basename "$file" .m3u8)
           echo "#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\" tvg-logo=\"\" group-title=\"$category\",$channel"
-          cat "$file"
+          grep -vE '^#(EXTM3U|EXT-X-VERSION:|EXT-X-STREAM-INF:)' "$file"
         done > Combined_YTL_Playlist.m3u
 
     - name: Commit and Push Changes
