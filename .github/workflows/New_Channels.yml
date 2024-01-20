@@ -29,8 +29,8 @@ jobs:
             # Extracting values from the line
             if [[ $line == New:* ]]; then
               # Extracting channel name and group name from the "New:" line
-              channel_info=$(echo "$line" | cut -d ',' -f 2-)
-              IFS=', ' read -r channel_name group_name <<< "$channel_info"
+              channel_info=$(echo "$line" | cut -d ':' -f 2 | awk -F ',' '{print $1, $2}' | tr -d ' ')
+              IFS=' ' read -r group_name channel_name <<< "$channel_info"
             else
               # Skip non-"New:" lines
               continue
