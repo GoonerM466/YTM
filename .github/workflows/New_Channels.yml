@@ -1,49 +1,58 @@
+name: New Channel Scrape Workflow
+
+on:
+  push:
+    paths:
+      - youtube_channel_info.txt
+  workflow_dispatch:
+
 jobs:
-  process_entries:
+  scrape:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      with:
-        repository: GoonerM466/YTM
-        ref: main
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          repository: GoonerM466/YTM
+          ref: main
 
-    - name: Process Channel Info
-      run: |
-        sed -n '/^New: /{n;p}' youtube_channel_info.txt | while IFS= read -r line; do
-          # Extracting values from the line
-          channel_name=$(echo "$line" | cut -d ',' -f 1 | tr -d ' ')
-          group_name=$(echo "$line" | cut -d ',' -f 2 | tr -d ' ')
+      - name: Wait for 30 Seconds
+        run: sleep 30
 
-          # Reading the next line for the channel URL
-          read -r channel_url
+      - name: Read Channel Info
+        run: |
+          # Skip the first two lines
+          sed -i '1,2d' youtube_channel_info.txt
 
-          # Check if entry has already been transferred
-          if grep -q "Successfully pushed on" youtube_channel_info.txt; then
-            echo "Entry already transferred: $channel_name"
-          else
-            # Appending new entry to ytm.yml
-            echo "    - name: $channel_name
-      run: |
-        touch ./$group_name/$channel_name.m3u8
-        sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        \$(yt-dlp --print urls $channel_url)
-        EOL" >> .github/workflows/ytm.yml
+          while IFS= read -r line; do
+            # Extracting values from the line
+            channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
+            group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
+            channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
 
-            # Update the timestamp in youtube_channel_info.txt
-            sed -i "/^New: $channel_name, $group_name/ a\# Successfully pushed on $(date)" youtube_channel_info.txt
-          fi
-        done
+            if [[ $channel_url == "https://www.youtube.com/"* ]]; then
+              # Appending new entry to ytm.yml
+              echo "- name: $channel_name
+                run: |
+                  touch ./$group_name/$channel_name.m3u8
+                  sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
+                  #EXTM3U
+                  #EXT-X-VERSION:3
+                  #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+                  \$(yt-dlp --print urls $channel_url)
+                  EOL" >> .github/workflows/ytm.yml
 
-    - name: Configure Git
-      run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
+              # Mark the entry as successfully processed
+              sed -i "/$channel_name, $group_name/ s/$/ # Successfully pushed on $(date)/" youtube_channel_info.txt
+            fi
+          done < youtube_channel_info.txt
 
-    - name: Check for Changes and Push
-      run: |
-        git diff --exit-code && echo "No changes detected" || (git add .github/workflows/ytm.yml && git add youtube_channel_info.txt && git commit -m "Update YTM workflow" && git push)
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Check for Changes and Push
+        run: |
+          git diff --exit-code && echo "No changes detected" || (git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow" && git push)
