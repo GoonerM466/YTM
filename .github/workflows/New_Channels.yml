@@ -57,20 +57,8 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
 
-      - name: Check for Changes
+      - name: Commit and Push Changes
         run: |
-          # Check for changes and commit if any
-          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || (git add .github/workflows/ytm.yml && git add .github/workflows/ytm_backup.yml && git commit -m "Update YTM workflow") || true
-
-      - name: Push Changes
-        run: |
-          # Display the current status
-          git status
-
-          # Commit changes made by awk
-          git add .github/workflows/ytm.yml
-          git add .github/workflows/ytm_backup.yml
+          git add .
           git commit -m "Update YTM workflow"
-          
-          # Push changes
           git push
