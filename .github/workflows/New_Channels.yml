@@ -64,14 +64,8 @@ jobs:
 
       - name: Check for Changes
         run: |
-          diff_output=$(git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml)
-          if [ $? -ne 0 ]; then
-            echo "Changes detected. Committing..."
-            git add .github/workflows/ytm.yml
-            git commit -m "Update YTM workflow"
-          else
-            echo "No changes detected."
-          fi
+          # Check for changes and commit if any
+          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow"
 
       - name: Push Changes
         run: |
