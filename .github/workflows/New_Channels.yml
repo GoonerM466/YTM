@@ -30,7 +30,7 @@ jobs:
             channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
             group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
             channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
-
+  
             if [[ $channel_url == "https://www.youtube.com/"* ]]; then
               # Appending new entry to ytm.yml
               echo "- name: $channel_name
@@ -42,7 +42,7 @@ jobs:
                   #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
                   \$(yt-dlp --print urls $channel_url)
                   EOL" >> .github/workflows/ytm.yml
-
+  
               # Mark the entry as successfully processed
               sed -i "/$channel_name, $group_name/ s/$/ # Successfully pushed on $(date)/" youtube_channel_info.txt
             fi
