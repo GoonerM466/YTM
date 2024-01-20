@@ -64,10 +64,11 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
 
-      - name: Check for Changes
+      - name: Add and Check for Changes
         run: |
-          # Check for changes and commit if any
-          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow"
+          # Add files and check for changes
+          git add .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
+          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || git commit -m "Update YTM workflow"
 
       - name: Push Changes
         run: |
