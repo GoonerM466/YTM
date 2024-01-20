@@ -9,10 +9,6 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    permissions:
-      actions: write
-      contents: write
-      pull-requests: write
 
     steps:
       - name: Checkout Repository
@@ -72,6 +68,10 @@ jobs:
             mv .github/workflows/ytm_backup_temp.yml .github/workflows/ytm_backup1.yml
             git add .github/workflows/ytm.yml .github/workflows/ytm_backup*.yml
             git commit -m "Update YTM workflow"
+            
+            # Use GitHub Secret for Personal Access Token
+            gh auth login --with-token "${{ secrets.PAT_YTLM_TOKEN }}"
+            
             git push
           else
             echo "No changes detected."
