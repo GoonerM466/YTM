@@ -64,10 +64,16 @@ jobs:
 
       - name: Push Changes
         run: |
-          # Push changes only if there are any
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "Pushing changes..."
-            git push
+          # Display the current status
+          git status
+
+          # Check for changes using git diff
+          if git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml; then
+            echo "No changes detected."
           else
-            echo "No changes to push."
+            echo "Pushing changes..."
+            git add .github/workflows/ytm.yml
+            git add .github/workflows/ytm_backup.yml
+            git commit -m "Update YTM workflow"
+            git push
           fi
