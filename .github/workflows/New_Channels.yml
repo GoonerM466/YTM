@@ -27,9 +27,9 @@ jobs:
         run: |
           while IFS= read -r line; do
             # Extracting values from the line
-            channel_name=$(echo "$line" | awk -F '|' '{print $1}' | tr -d ' ')
-            group_name=$(echo "$line" | awk -F '|' '{print $2}' | tr -d ' ')
-            channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
+            channel_name=$(echo "$line" | awk -F ', ' '{print $1}' | tr -d ' ')
+            group_name=$(echo "$line" | awk -F ', ' '{print $2}' | tr -d ' ')
+            channel_url=$(echo "$line" | awk -F ', ' '{print $3}' | tr -d ' ')
   
             if [[ $channel_url == "https://www.youtube.com/"* ]]; then
               # Use awk to insert new entries on line 23 with proper indentation
@@ -51,14 +51,16 @@ jobs:
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
             fi
           done < youtube_channel_info.txt
+
       - name: Configure Git
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
+
       - name: Check for Changes
         run: |
           # Check for changes and commit if any
-          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || (git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow") || true
+          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || (git add .github/workflows/ytm.yml && git add .github/workflows/ytm_backup.yml && git commit -m "Update YTM workflow") || true
 
       - name: Push Changes
         run: |
@@ -69,5 +71,3 @@ jobs:
           else
             echo "No changes to push."
           fi
-          # Remove the temporary backup file
-          rm .github/workflows/ytm_backup.yml
