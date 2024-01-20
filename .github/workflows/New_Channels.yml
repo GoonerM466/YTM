@@ -1,62 +1,3 @@
-name: New Channel Scrape Workflow
-
-on:
-  push:
-    paths:
-      - youtube_channel_info.txt
-  workflow_dispatch:
-
-jobs:
-  scrape:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-        with:
-          repository: GoonerM466/YTM
-          ref: main
-
-      - name: Backup YTM Workflow File
-        run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup1.yml
-
-      - name: Wait for 30 Seconds
-        run: sleep 30
-
-      - name: Read Channel Info
-        run: |
-          while IFS= read -r line; do
-            # Extracting values from the line
-            channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
-            group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
-            channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
-  
-            if [[ $channel_url == "https://www.youtube.com/"* ]]; then
-              # Appending new entry to ytm.yml
-              echo "- name: $channel_name
-                run: |
-                  touch ./$group_name/$channel_name.m3u8
-                  sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
-                  #EXTM3U
-                  #EXT-X-VERSION:3
-                  #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-                  \$(yt-dlp --print urls $channel_url)
-                  EOL" >> .github/workflows/ytm.yml
-            fi
-          done < youtube_channel_info.txt
-
-      - name: Remove Bookmark and Add New Entries
-        run: |
-          sed -i '/# --- NEXT ENTRY GOES BELOW THIS LINE ---/,$d' .github/workflows/ytm.yml
-          cat .github/workflows/ytm.yml >> .github/workflows/ytm_temp.yml
-          echo "# --- NEXT ENTRY GOES BELOW THIS LINE ---" >> .github/workflows/ytm_temp.yml
-          mv .github/workflows/ytm_temp.yml .github/workflows/ytm.yml
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-
       - name: Check for Changes and Push
         run: |
           if ! git diff --exit-code .github/workflows/ytm_backup1.yml .github/workflows/ytm.yml; then
@@ -72,8 +13,9 @@ jobs:
             # Use GitHub Secret for Personal Access Token
             PAT_TOKEN="${{ secrets.PAT_YTLM_TOKEN }}"
             
-            # Set up GitHub CLI
-            echo "machine github.com login $PAT_TOKEN" > ~/.netrc
+            # Set up GitHub CLI with token from standard input
+            echo "$PAT_TOKEN" | gh auth login --with-token -
+            
             git push
           else
             echo "No changes detected."
