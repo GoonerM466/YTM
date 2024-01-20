@@ -63,6 +63,26 @@ jobs:
         $(yt-dlp --print urls https://www.youtube.com/@EERIEISSSS/live)
         EOL
 
+    - name: Get JimmyBroadbent
+      run: |
+        touch ./ytl/JimmyBroadbent.m3u8
+        sudo cat >./ytl/JimmyBroadbent.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@Jimmy_Broadbent/live)
+        EOL
+
+    - name: Get DeadEyeDelBoy
+      run: |
+        touch ./ytl/DeadEyeDelBoy.m3u8
+        sudo cat >./ytl/DeadEyeDelBoy.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@deadeyedelboy/live)
+        EOL
+        
     - name: Get NBCNews
       run: |
         touch ./news/NBCNews.m3u8
