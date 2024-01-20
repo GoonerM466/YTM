@@ -27,33 +27,22 @@ jobs:
         run: |
           while IFS= read -r line; do
             # Extracting values from the line
-            channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
-            group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
-            channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
+            channel_name=$(echo "$line" | cut -d ', ' -f 1 | tr -d ' ')
+            group_name=$(echo "$line" | cut -d ', ' -f 2 | tr -d ' ')
+            channel_url=$(echo "$line" | cut -d ', ' -f 3 | tr -d ' ')
   
             if [[ $channel_url == "https://www.youtube.com/"* ]]; then
-              # Search for the bookmark
-              bookmark_line=$(grep -n "# --- NEXT ENTRY GOES BELOW THIS LINE ---" .github/workflows/ytm.yml | cut -d ':' -f 1)
-  
-              if [ -n "$bookmark_line" ]; then
-                # Remove the bookmark line
-                sed -i "${bookmark_line}d" .github/workflows/ytm.yml
-              fi
-  
               # Insert new entries
-              echo "# --- NEXT ENTRY GOES BELOW THIS LINE ---
-              - name: $channel_name
-                run: |
-                  touch ./$group_name/$channel_name.m3u8
-                  sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
-                  #EXTM3U
-                  #EXT-X-VERSION:3
-                  #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-                  \$(yt-dlp --print urls $channel_url)
-                  EOL" >> .github/workflows/ytm.yml
-  
-              # Add the bookmark line again at the end of new entries
-              echo "# --- NEXT ENTRY GOES BELOW THIS LINE ---" >> .github/workflows/ytm.yml
+              echo "              - name: $channel_name" >> .github/workflows/ytm.yml
+              echo "                run: |" >> .github/workflows/ytm.yml
+              echo "                  touch ./$group_name/$channel_name.m3u8" >> .github/workflows/ytm.yml
+              echo "                  sudo cat > ./$group_name/$channel_name.m3u8 <<EOL" >> .github/workflows/ytm.yml
+              echo "                  #EXTM3U" >> .github/workflows/ytm.yml
+              echo "                  #EXT-X-VERSION:3" >> .github/workflows/ytm.yml
+              echo "                  #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000" >> .github/workflows/ytm.yml
+              echo "                  \$(yt-dlp --print urls $channel_url)" >> .github/workflows/ytm.yml
+              echo "                  EOL" >> .github/workflows/ytm.yml
+              echo "" >> .github/workflows/ytm.yml  # Insert blank line
             fi
           done < youtube_channel_info.txt
 
@@ -65,7 +54,7 @@ jobs:
       - name: Check for Changes
         run: |
           # Check for changes and commit if any
-          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow"
+          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || (git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow") || true
 
       - name: Push Changes
         run: |
