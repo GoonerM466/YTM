@@ -40,8 +40,8 @@ jobs:
                 sed -i "${bookmark_line}d" .github/workflows/ytm.yml
               fi
   
-              # Insert new entries
-              echo "# --- NEXT ENTRY GOES BELOW THIS LINE ---
+              # Insert new entries with a one-line gap
+              echo "  # --- NEXT ENTRY GOES BELOW THIS LINE ---
               - name: $channel_name
                 run: |
                   touch ./$group_name/$channel_name.m3u8
@@ -52,8 +52,10 @@ jobs:
                   \$(yt-dlp --print urls $channel_url)
                   EOL" >> .github/workflows/ytm.yml
   
+              # Add a blank line after the new entry
+              echo "  " >> .github/workflows/ytm.yml
               # Add the bookmark line again at the end of new entries
-              echo "# --- NEXT ENTRY GOES BELOW THIS LINE ---" >> .github/workflows/ytm.yml
+              echo "  # --- NEXT ENTRY GOES BELOW THIS LINE ---" >> .github/workflows/ytm.yml
             fi
           done < youtube_channel_info.txt
 
