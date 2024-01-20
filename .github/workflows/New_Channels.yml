@@ -9,6 +9,86 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+name: New Channel Scrape Workflow
+
+on:
+  push:
+    paths:
+      - youtube_channel_info.txt
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.PAT_YTLM_TOKEN }}
+
+      - name: Backup YTM Workflow File
+        run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
+
+      - name: Wait for 30 Seconds
+        run: sleep 30
+
+      - name: Read Channel Info
+        run: |
+          while IFS= read -r line; do
+            # Extracting values from the line
+            channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
+            group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
+            channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
+  
+            if [[ $channel_url == "https://www.youtube.com/"* ]]; then
+              # Search for the bookmark and get its line number
+              bookmark_line=$(grep -n "# --- NEXT ENTRY GOES BELOW THIS LINE ---" .github/workflows/ytm.yml | cut -d ':' -f 1)
+  
+              if [ -n "$bookmark_line" ]; then
+                # Calculate the indentation level
+                indentation=$(awk -F':' '{print length($1)}' .github/workflows/ytm.yml | head -n 1)
+  
+                # Remove the bookmark line
+                sed -i "${bookmark_line}d" .github/workflows/ytm.yml
+                # Insert new entries with correct indentation
+                sed -i "${bookmark_line}i\\
+$(printf '%*s')- name: $channel_name
+$(printf '%*s')  run: |
+$(printf '%*s')    touch ./$group_name/$channel_name.m3u8
+$(printf '%*s')    sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
+$(printf '%*s')    #EXTM3U
+$(printf '%*s')    #EXT-X-VERSION:3
+$(printf '%*s')    #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+$(printf '%*s')    \$(yt-dlp --print urls $channel_url)
+$(printf '%*s')    EOL" .github/workflows/ytm.yml
+              fi
+            fi
+          done < youtube_channel_info.txt
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Check for Changes
+        run: |
+          # Check for changes and commit if any
+          git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml || git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow"
+
+      - name: Push Changes
+        run: |
+          # Push changes only if there are any
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Pushing changes..."
+            git push
+          else
+            echo "No changes to push."
+          fi
+
+          # Remove the temporary backup file
+          rm .github/workflows/ytm_backup.yml
 
     steps:
       - name: Checkout Repository
