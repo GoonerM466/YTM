@@ -61,27 +61,9 @@ jobs:
         run: |
           if ! git diff --exit-code .github/workflows/ytm_backup1.yml .github/workflows/ytm.yml; then
             echo "Changes detected. Committing and pushing..."
-            cat .github/workflows/ytm.yml > .github/workflows/ytm_backup_temp.yml
-            mv .github/workflows/ytm_backup3.yml .github/workflows/ytm_backup_temp1.yml 2>/dev/null || true
-            mv .github/workflows/ytm_backup2.yml .github/workflows/ytm_backup3.yml 2>/dev/null || true
-            mv .github/workflows/ytm_backup1.yml .github/workflows/ytm_backup2.yml 2>/dev/null || true
-            mv .github/workflows/ytm_backup_temp.yml .github/workflows/ytm_backup1.yml
             git add .github/workflows/ytm.yml .github/workflows/ytm_backup*.yml
             git commit -m "Update YTM workflow"
-            
-            # Use GitHub Secret for Personal Access Token
-            PAT_TOKEN="${{ secrets.PAT_YTLM_TOKEN }}"
-            
-            # Set up GitHub CLI with token
-            echo "$PAT_TOKEN" | gh auth login --with-token -
-            
-            # Create a new branch and push changes
-            gh repo fork GoonerM466/YTM --remote="fork"
-            git checkout -b update-ytm-workflow
-            git push fork update-ytm-workflow
-            
-            # Create a pull request
-            gh pr create --base main --head update-ytm-workflow --title "Update YTM workflow"
+            git push origin main
           else
             echo "No changes detected."
           fi
