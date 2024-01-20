@@ -11,59 +11,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-        with:
-          repository: GoonerM466/YTM
-          ref: main
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        repository: GoonerM466/YTM
+        ref: main
 
-      - name: Backup YTM Workflow File
-        run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
-
-      - name: Wait for 30 Seconds
-        run: sleep 30
-
-      - name: Read Channel Info
-        run: |
-          while IFS= read -r line; do
-            # Extracting values from the line
-            channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
-            group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
-            channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
+    - name: Read Channel Info
+      run: |
+        while IFS= read -r line; do
+          # Extracting values from the line
+          channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
+          group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
+          channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
   
-            if [[ $channel_url == "https://www.youtube.com/"* ]]; then
-              # Appending new entry to ytm.yml
-              echo "- name: $channel_name
-                run: |
-                  touch ./$group_name/$channel_name.m3u8
-                  sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
-                  #EXTM3U
-                  #EXT-X-VERSION:3
-                  #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-                  \$(yt-dlp --print urls $channel_url)
-                  EOL" >> .github/workflows/ytm.yml
-  
-              # Mark the entry as successfully processed
-              sed -i "/$channel_name, $group_name/ s/$/ # Successfully pushed on $(date)/" youtube_channel_info.txt
-            fi
-          done < youtube_channel_info.txt
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-
-      - name: Check for Changes and Push
-        run: |
-          diff_output=$(git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml)
-          if [ $? -ne 0 ]; then
-            echo "Changes detected. Committing and pushing..."
-            git add .github/workflows/ytm.yml
-            git commit -m "Update YTM workflow"
-            git push
-          else
-            echo "No changes detected."
+          if [[ $channel_url == "https://www.youtube.com/"* ]]; then
+            # Appending new entry to ytm.yml
+            echo "- name: $channel_name
+              run: |
+                touch ./$group_name/$channel_name.m3u8
+                sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
+                #EXTM3U
+                #EXT-X-VERSION:3
+                #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+                \$(yt-dlp --print urls $channel_url)
+                EOL" >> .github/workflows/ytm.yml
           fi
+        done < youtube_channel_info.txt
 
-          # Remove the temporary backup file
-          rm .github/workflows/ytm_backup.yml
+    - name: Check for Changes and Push
+      run: |
+        git diff --exit-code && echo "No changes detected" || (git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow" && git push)
