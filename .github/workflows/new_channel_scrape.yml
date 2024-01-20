@@ -27,7 +27,7 @@ jobs:
           group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
           logo=$(echo "$line" | cut -d '|' -f 3 | tr -d ' ')
           tvg_id=$(echo "$line" | cut -d '|' -f 4 | tr -d ' ')
-          channel_url=$(echo "$line" | awk -F '|' '{print $2}' | tr -d ' ')
+          channel_url=$(echo "$line" | cut -d '|' -f 5 | tr -d ' ')
 
           # Appending new entry to m3u_Generator.yml
           echo "- name: $channel_name
@@ -37,9 +37,14 @@ jobs:
               #EXTM3U
               #EXT-X-VERSION:3
               #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-              $channel_url
+              \$(yt-dlp --print urls $channel_url)
               EOL" >> .github/workflows/m3u_Generator.yml
         done < youtube_channel_info.txt
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
 
     - name: Check for Changes
       run: |
