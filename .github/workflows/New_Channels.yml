@@ -70,8 +70,12 @@ jobs:
             git commit -m "Update YTM workflow"
             
             # Use GitHub Secret for Personal Access Token
-            gh auth login --with-token "${{ secrets.PAT_YTLM_TOKEN }}"
+            PAT_TOKEN="${{ secrets.PAT_YTLM_TOKEN }}"
             
+            # Set up GitHub CLI
+            gh --version
+            gh auth login --with-token "$PAT_TOKEN"
+
             git push
           else
             echo "No changes detected."
