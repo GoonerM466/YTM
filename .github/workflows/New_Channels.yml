@@ -1,11 +1,3 @@
-name: New Channel Workflow
-
-on:
-  push:
-    paths:
-      - youtube_channel_info.txt
-  workflow_dispatch:
-
 jobs:
   process_entries:
     runs-on: ubuntu-latest
