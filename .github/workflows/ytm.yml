@@ -20,7 +20,15 @@ jobs:
         sudo chmod a+rx /usr/local/bin/yt-dlp
 
 # --- NEXT ENTRY GOES BELOW THIS LINE ---
-
+  - name: https://www.youtube.com/@DPWorldTour/live
+    run: |
+      touch .//https://www.youtube.com/@DPWorldTour/live.m3u8
+      sudo cat > .//https://www.youtube.com/@DPWorldTour/live.m3u8 <<EOL
+      #EXTM3U
+      #EXT-X-VERSION:3
+      #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+      $(yt-dlp --print urls https://www.youtube.com/@DPWorldTour/live)
+      EOL
     - name: Get beINSportsHaber
       run: |
         touch ./spor/beinsportshaber.m3u8
