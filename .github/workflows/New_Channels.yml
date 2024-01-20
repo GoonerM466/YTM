@@ -19,7 +19,9 @@ jobs:
 
     - name: Install yt-dlp
       run: |
-        pip install yt-dlp
+        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        sudo chmod a+rx /usr/local/bin/yt-dlp
+        echo "PATH: $PATH"
       shell: bash
 
     - name: Wait for 30 Seconds
@@ -36,10 +38,10 @@ jobs:
           group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
           logo=$(echo "$line" | cut -d '|' -f 3 | tr -d ' ')
           tvg_id=$(echo "$line" | cut -d '|' -f 4 | tr -d ' ')
-
+  
           # Reading the next line for the channel URL
           read -r channel_url
-
+  
           # Appending new entry to ytm.yml
           echo "- name: $channel_name
             run: |
