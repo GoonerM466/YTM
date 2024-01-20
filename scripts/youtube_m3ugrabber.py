@@ -21,9 +21,9 @@ if 'win' in sys.platform:
     windows = True
 
 def grab(url):
-    response = requests.get(url, timeout=30).text
+    response = requests.get(url, timeout=30).m3u8
     if '.m3u8' not in response:
-        #response = requests.get(url).text
+        #response = requests.get(url).m3u8
         if '.m3u8' not in response:
             if windows:
                 print('https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u')
@@ -49,7 +49,7 @@ def grab(url):
 print('#EXTM3U x-tvg-url="https://github.com/botallen/epg/releases/download/latest/epg.xml"')
 print(banner)
 #s = requests.Session()
-with open('../youtube_channel_info.txt') as f:
+with open as f:
     for line in f:
         line = line.strip()
         if not line or line.startswith('~~'):
