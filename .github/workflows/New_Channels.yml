@@ -18,7 +18,7 @@ jobs:
           ref: main
 
       - name: Backup YTM Workflow File
-        run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
+        run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup1.yml
 
       - name: Wait for 30 Seconds
         run: sleep 30
@@ -59,11 +59,14 @@ jobs:
 
       - name: Check for Changes and Push
         run: |
-          diff_output=$(git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml)
-          echo "Diff Output: $diff_output"
-          if [ $? -ne 0 ]; then
+          if ! git diff --exit-code .github/workflows/ytm_backup1.yml .github/workflows/ytm.yml; then
             echo "Changes detected. Committing and pushing..."
-            git add .github/workflows/ytm.yml
+            cat .github/workflows/ytm.yml > .github/workflows/ytm_backup_temp.yml
+            mv .github/workflows/ytm_backup3.yml .github/workflows/ytm_backup_temp1.yml 2>/dev/null || true
+            mv .github/workflows/ytm_backup2.yml .github/workflows/ytm_backup3.yml 2>/dev/null || true
+            mv .github/workflows/ytm_backup1.yml .github/workflows/ytm_backup2.yml 2>/dev/null || true
+            mv .github/workflows/ytm_backup_temp.yml .github/workflows/ytm_backup1.yml
+            git add .github/workflows/ytm.yml .github/workflows/ytm_backup*.yml
             git commit -m "Update YTM workflow"
             git push
           else
@@ -71,4 +74,4 @@ jobs:
           fi
 
           # Remove the temporary backup file
-          rm .github/workflows/ytm_backup.yml
+          rm .github/workflows/ytm_backup1.yml
