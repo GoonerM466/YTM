@@ -35,15 +35,16 @@ jobs:
               # Use awk to insert new entries on line 23 with proper indentation
               awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
                 NR==23{
-                  print "  - name: " channel_name
-                  print "    run: |"
-                  print "      touch ./" group_name "/" channel_name ".m3u8"
-                  print "      sudo cat > ./" group_name "/" channel_name ".m3u8 <<EOL"
-                  print "      #EXTM3U"
-                  print "      #EXT-X-VERSION:3"
-                  print "      #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  print "      $(yt-dlp --print urls " channel_url ")"
-                  print "      EOL"
+                  print "    - name: " channel_name
+                  print "      run: |"
+                  print "        touch ./" group_name "/" channel_name ".m3u8"
+                  print "        sudo cat > ./" group_name "/" channel_name ".m3u8 <<EOL"
+                  print "        #EXTM3U"
+                  print "        #EXT-X-VERSION:3"
+                  print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
+                  print "        $(yt-dlp --print urls " channel_url ")"
+                  print "        EOL"
+                  print "           "
                   next
                 }
                 { print }
