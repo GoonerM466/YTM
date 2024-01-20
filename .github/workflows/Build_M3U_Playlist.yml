@@ -1,0 +1,39 @@
+name: Build M3U Playlist
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        repository: GoonerM466/YTM
+        ref: main
+
+    - name: Create M3U Playlist
+      run: |
+        find . -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
+          category=$(basename "$(dirname "$file")")
+          channel=$(basename "$file" .m3u8)
+          video_url=$(grep -E '^http' "$file" || echo "https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u")
+          
+          if [ -n "$video_url" ]; then
+            echo "#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\" tvg-logo=\"\" group-title=\"$category\",$channel"
+            echo "$video_url"
+          fi
+        done > Combined_YTL_Playlist.m3u
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add Combined_YTL_Playlist.m3u
+        git commit -m "Update Combined YTL Playlist"
+        git push
