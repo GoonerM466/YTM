@@ -67,13 +67,10 @@ jobs:
           # Display the current status
           git status
 
-          # Check for changes using git diff
-          if git diff --exit-code .github/workflows/ytm_backup.yml .github/workflows/ytm.yml; then
-            echo "No changes detected."
-          else
-            echo "Pushing changes..."
-            git add .github/workflows/ytm.yml
-            git add .github/workflows/ytm_backup.yml
-            git commit -m "Update YTM workflow"
-            git push
-          fi
+          # Commit changes made by awk
+          git add .github/workflows/ytm.yml
+          git add .github/workflows/ytm_backup.yml
+          git commit -m "Update YTM workflow"
+          
+          # Push changes
+          git push
