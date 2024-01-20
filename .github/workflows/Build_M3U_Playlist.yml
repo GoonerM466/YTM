@@ -2,19 +2,19 @@ name: Build M3U Playlist
 
 on:
   schedule:
-    - cron: '0 0/1 * * *'
-
+    - cron: '0 * * * *' # Run every hour
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
-    - name: config
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        repository: GoonerM466/YTM
+        ref: main
 
     - name: Create M3U Playlist
       run: |
