@@ -4,10 +4,7 @@ on:
   push:
     paths:
       - youtube_channel_info.txt
-  workflow_run:
-    workflows: ["New Channel Scrape Workflow"]
-    types:
-      - completed
+
   workflow_dispatch:
 
 jobs:
