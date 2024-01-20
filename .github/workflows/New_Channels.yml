@@ -34,7 +34,7 @@ jobs:
             if [[ $channel_url == "https://www.youtube.com/"* ]]; then
               # Directly insert new entries on line 23 with a blank line between each entry
               sed -i '23a\
-
+  
                 - name: '"$channel_name"'
                   run: |
                     touch ./'"$group_name/$channel_name"'.m3u8
