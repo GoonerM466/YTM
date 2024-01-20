@@ -29,7 +29,7 @@ jobs:
           tvg_id=$(echo "$line" | cut -d '|' -f 4 | tr -d ' ')
           channel_url=$(echo "$line" | cut -d '|' -f 5 | tr -d ' ')
 
-          # Appending new entry to m3u_Generator.yml
+          # Appending new entry to ytm.yml
           echo "- name: $channel_name
             run: |
               touch ./$group_name/$channel_name.m3u8
@@ -38,7 +38,7 @@ jobs:
               #EXT-X-VERSION:3
               #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
               \$(yt-dlp --print urls $channel_url)
-              EOL" >> .github/workflows/m3u_Generator.yml
+              EOL" >> .github/workflows/ytm.yml
         done < youtube_channel_info.txt
 
     - name: Configure Git
