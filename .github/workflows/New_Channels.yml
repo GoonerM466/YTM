@@ -72,10 +72,16 @@ jobs:
             # Use GitHub Secret for Personal Access Token
             PAT_TOKEN="${{ secrets.PAT_YTLM_TOKEN }}"
             
-            # Configure Git with the Personal Access Token
-            git remote set-url origin "https://${PAT_TOKEN}@github.com/GoonerM466/YTM.git"
+            # Set up GitHub CLI with token
+            echo "$PAT_TOKEN" | gh auth login --with-token -
             
-            git push origin main
+            # Create a new branch and push changes
+            gh repo fork GoonerM466/YTM --remote="fork"
+            git checkout -b update-ytm-workflow
+            git push fork update-ytm-workflow
+            
+            # Create a pull request
+            gh pr create --base main --head update-ytm-workflow --title "Update YTM workflow"
           else
             echo "No changes detected."
           fi
