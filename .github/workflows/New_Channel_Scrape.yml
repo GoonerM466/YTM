@@ -27,5 +27,4 @@ jobs:
 
     - name: Check for Changes
       run: |
-        git diff --exit-code || git commit -am "Add new channels from youtube_channel_info.txt"
-        git push
+        git diff --exit-code || git commit -am "Update channels based on youtube_channel_info.txt" && git push
