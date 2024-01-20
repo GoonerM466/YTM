@@ -72,13 +72,17 @@ jobs:
             # Use GitHub Secret for Personal Access Token
             PAT_TOKEN="${{ secrets.PAT_YTLM_TOKEN }}"
             
+            # Save token to a file
+            echo "$PAT_TOKEN" > gh_token
+            
             # Set up GitHub CLI
             gh --version
-            echo "$PAT_TOKEN" | gh auth login --with-token -
+            gh auth login --with-token "$(cat gh_token)"
+            
             git push
           else
             echo "No changes detected."
           fi
 
-          # Remove the temporary backup file
-          rm .github/workflows/ytm_backup1.yml
+          # Remove the temporary backup file and token file
+          rm .github/workflows/ytm_backup1.yml gh_token
