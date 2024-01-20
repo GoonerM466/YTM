@@ -72,15 +72,13 @@ jobs:
             # Use GitHub Secret for Personal Access Token
             PAT_TOKEN="${{ secrets.PAT_YTLM_TOKEN }}"
             
-            # Set up GitHub CLI with token from standard input
-            echo "$PAT_TOKEN" | gh auth login --with-token -
+            # Configure Git with the Personal Access Token
+            git remote set-url origin "https://${PAT_TOKEN}@github.com/GoonerM466/YTM.git"
             
-            git push
+            git push origin main
           else
             echo "No changes detected."
           fi
 
           # Remove the temporary backup file
           rm .github/workflows/ytm_backup1.yml
-    env:
-      PAT_TOKEN: ${{ secrets.PAT_YTLM_TOKEN }}
