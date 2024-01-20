@@ -33,104 +33,94 @@ jobs:
         $(yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/live)
         EOL
 
-    - name: Get ASpor
+    - name: Get AFCAsianCup
       run: |
-        touch ./spor/aspor.m3u8
-        sudo cat >./spor/aspor.m3u8 <<EOL
+        touch ./spor/AFCAsianCup.m3u8
+        sudo cat >./spor/AFCAsianCup.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@ASpor/live)
+        $(yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/live)
         EOL
 
-    - name: Get FBTV
+    - name: Get talkSPORT
       run: |
-        touch ./spor/fbtv.m3u8
-        sudo cat >./spor/fbtv.m3u8 <<EOL
+        touch ./spor/talkSPORT.m3u8
+        sudo cat >./spor/talkSPORT.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@fenerbahce/live)
+        $(yt-dlp --print urls https://www.youtube.com/@talkSPORT/live)
         EOL
 
-    - name: Get TayTv
+    - name: Get EERIEISSSS
       run: |
-        touch ./spor/taytv.m3u8
-        sudo cat >./spor/taytv.m3u8 <<EOL
+        touch ./ytl/EERIEISSSS.m3u8
+        sudo cat >./ytl/EERIEISSSS.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@TayTvOfficial/live)
+        $(yt-dlp --print urls https://www.youtube.com/@EERIEISSSS/live)
         EOL
 
-    - name: Get SportsDigitale
+    - name: Get NBCNews
       run: |
-        touch ./spor/sportsdigitale.m3u8
-        sudo cat >./spor/sportsdigitale.m3u8 <<EOL
+        touch ./news/NBCNews.m3u8
+        sudo cat >./news/NBCNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@SportsDigitale/live)
+        $(yt-dlp --print urls https://www.youtube.com/@NBCNews/live)
         EOL
 
-    - name: Get AHaber
+    - name: Get SkyNews
       run: |
-        touch ./haber/ahaber.m3u8
-        sudo cat >./haber/ahaber.m3u8 <<EOL
+        touch ./news/SkyNews.m3u8
+        sudo cat >./news/SkyNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@ahaber/live)
+        $(yt-dlp --print urls https://www.youtube.com/@SkyNews/live)
+        EOL
+        
+    - name: Get ABCNews
+      run: |
+        touch ./news/ABCNews.m3u8
+        sudo cat >./news/ABCNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@ABCNews/live)
+        EOL
+        
+    - name: Get HitsRadio
+      run: |
+        touch ./music/HitsRadio.m3u8
+        sudo cat >./music/HitsRadio.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/watch?v=HQtFR3mhzOY)
         EOL
 
-    - name: Get APara
+    - name: Get Classic80s
       run: |
-        touch ./haber/apara.m3u8
-        sudo cat >./haber/apara.m3u8 <<EOL
+        touch ./music/Classic80s.m3u8
+        sudo cat >./music/Classic80s.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@apara/live)
+        $(yt-dlp --print urls https://www.youtube.com/@classicmusic-top1/live)
         EOL
 
-    - name: Get FilmAtolyesi
+    - name: Get FobosPlanet
       run: |
-        touch ./film/filmatolyesi.m3u8
-        sudo cat >./film/filmatolyesi.m3u8 <<EOL
+        touch ./music/FobosPlanet.m3u8
+        sudo cat >./music/FobosPlanet.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@filmatolyesi/live)
-        EOL
-
-    - name: Get KemalSunalTV
-      run: |
-        touch ./film/kemalsunaltv.m3u8
-        sudo cat >./film/kemalsunaltv.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@KemalSunalTV/live)
-        EOL
-
-    - name: Get KemalSunalFilmleri
-      run: |
-        touch ./film/kemalsunalfilmleri.m3u8
-        sudo cat >./film/kemalsunalfilmleri.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@kemalsunalfilmleri/live)
-        EOL
-
-    - name: Get Sirinler
-      run: |
-        touch ./film/sirinler.m3u8
-        sudo cat >./film/sirinler.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@sirinler/live)
+        $(yt-dlp --print urls https://www.youtube.com/@FobosPlanet/live)
         EOL
 
     - name: git add
