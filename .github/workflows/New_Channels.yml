@@ -66,6 +66,9 @@ jobs:
         run: |
           git remote add origin_with_token https://$GITHUB_ACTOR:${{ secrets.PAT_YTLM_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
           git push origin_with_token main
+        env:
+          PAT_YTLM_TOKEN: ${{ secrets.PAT_YTLM_TOKEN }}
+
 
       - name: Remove the temporary backup file
         run: rm .github/workflows/ytm_backup1.yml
