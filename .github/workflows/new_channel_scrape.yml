@@ -18,6 +18,9 @@ jobs:
 
     - name: Read Channel Info
       run: |
+        # Skip the first two lines
+        sed -i '1,2d' youtube_channel_info.txt
+
         while IFS= read -r line; do
           # Extracting values from the line
           channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
