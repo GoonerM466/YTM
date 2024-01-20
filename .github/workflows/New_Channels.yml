@@ -32,18 +32,8 @@ jobs:
             channel_url=$(grep -E '^http' <<< "$line" | sed -n 1p | tr -d ' ')
   
             if [[ $channel_url == "https://www.youtube.com/"* ]]; then
-              # Directly insert new entries on line 23 with a blank line between each entry
-              sed -i '23a\
-  
-                - name: '"$channel_name"'
-                  run: |
-                    touch ./'"$group_name/$channel_name"'.m3u8
-                    sudo cat > ./'"$group_name/$channel_name"'.m3u8 <<EOL
-                    #EXTM3U
-                    #EXT-X-VERSION:3
-                    #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-                    \$(yt-dlp --print urls '"$channel_url"')
-                    EOL' .github/workflows/ytm.yml
+              # Use awk to insert new entries on line 23 with a blank line between each entry
+              awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" 'NR==23{print "\n- name: " channel_name "\n  run: |\n    touch ./" group_name "/" channel_name ".m3u8\n    sudo cat > ./" group_name "/" channel_name ".m3u8 <<EOL\n    #EXTM3U\n    #EXT-X-VERSION:3\n    #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n    $(yt-dlp --print urls " channel_url ")\n    EOL"} 1' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
             fi
           done < youtube_channel_info.txt
 
