@@ -1,4 +1,4 @@
-name: New Channel Scrape Workflow
+name: New Channel Workflow
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  scrape:
+  process_entries:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,49 +17,35 @@ jobs:
         repository: GoonerM466/YTM
         ref: main
 
-    - name: Install yt-dlp
+    - name: Process Channel Info
       run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-        sudo chmod a+rx /usr/local/bin/yt-dlp
-        echo "PATH: $PATH"
-      shell: bash
-
-    - name: Wait for 30 Seconds
-      run: sleep 30
-
-    - name: Read Channel Info
-      run: |
-        # Skip the first two lines
-        sed -i '1,2d' youtube_channel_info.txt
-
-        line_number=0
-        while IFS= read -r line; do
-          line_number=$((line_number + 1))
-
+        sed -n '/^New: /{n;p}' youtube_channel_info.txt | while IFS= read -r line; do
           # Extracting values from the line
-          if [ $((line_number % 2)) -eq 1 ]; then
-            channel_name=$(echo "$line" | cut -d '|' -f 1 | tr -d ' ')
-            group_name=$(echo "$line" | cut -d '|' -f 2 | tr -d ' ')
-          else
-            channel_url=$(echo "$line" | tr -d ' ')
+          channel_name=$(echo "$line" | cut -d ',' -f 1 | tr -d ' ')
+          group_name=$(echo "$line" | cut -d ',' -f 2 | tr -d ' ')
 
-            # Check if the URL starts with "https://www.youtube.com/"
-            if [[ $channel_url == https://www.youtube.com/* ]]; then
-              # Appending new entry to ytm.yml
-              echo "- name: $channel_name
-                run: |
-                  touch ./$group_name/$channel_name.m3u8
-                  sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
-                  #EXTM3U
-                  #EXT-X-VERSION:3
-                  #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-                  $(yt-dlp --print urls "$channel_url")
-                  EOL" >> .github/workflows/ytm.yml
-            else
-              echo "Invalid channel URL at line $line_number: $channel_url"
-            fi
+          # Reading the next line for the channel URL
+          read -r channel_url
+
+          # Check if entry has already been transferred
+          if grep -q "Successfully pushed on" youtube_channel_info.txt; then
+            echo "Entry already transferred: $channel_name"
+          else
+            # Appending new entry to ytm.yml
+            echo "    - name: $channel_name
+      run: |
+        touch ./$group_name/$channel_name.m3u8
+        sudo cat > ./$group_name/$channel_name.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        \$(yt-dlp --print urls $channel_url)
+        EOL" >> .github/workflows/ytm.yml
+
+            # Update the timestamp in youtube_channel_info.txt
+            sed -i "/^New: $channel_name, $group_name/ a\# Successfully pushed on $(date)" youtube_channel_info.txt
           fi
-        done < youtube_channel_info.txt
+        done
 
     - name: Configure Git
       run: |
@@ -68,5 +54,4 @@ jobs:
 
     - name: Check for Changes and Push
       run: |
-       git diff --exit-code && echo "No changes detected" || (git add .github/workflows/ytm.yml && git commit -m "Update YTM workflow" && git push)
-
+        git diff --exit-code && echo "No changes detected" || (git add .github/workflows/ytm.yml && git add youtube_channel_info.txt && git commit -m "Update YTM workflow" && git push)
