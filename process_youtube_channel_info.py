@@ -7,15 +7,25 @@ def channel_exists(channel_name, ytm_content):
 
 # Read ytm.yml content
 with open('.github/workflows/ytm.yml', 'r') as ytm_file:
-    ytm_content = ytm_file.read()
+    ytm_lines = ytm_file.readlines()
 
-# Search for and remove the "git add," "commit & push" steps
-git_steps_pattern = re.compile(r'\s*- name: git add.*?git push', re.DOTALL)
-ytm_content = git_steps_pattern.sub('', ytm_content)
+# Remove the "git add," "commit & push" steps
+remove_git_steps = False
+filtered_ytm_lines = []
+
+for line in ytm_lines:
+    if "git add -A" in line:
+        remove_git_steps = True
+    elif "git commit -m \"links are updated\"" in line:
+        remove_git_steps = False
+    elif remove_git_steps:
+        continue
+    else:
+        filtered_ytm_lines.append(line)
 
 # Write the modified ytm.yml content back to the file
 with open('.github/workflows/ytm.yml', 'w') as ytm_file:
-    ytm_file.write(ytm_content)
+    ytm_file.writelines(filtered_ytm_lines)
 
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
