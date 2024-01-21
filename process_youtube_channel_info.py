@@ -40,7 +40,7 @@ with open('youtube_channel_info.txt', 'r') as info_file:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $$(yt-dlp --print urls {channel_url})
+        $(yt-dlp --print urls {channel_url})
         EOL
 """
 
