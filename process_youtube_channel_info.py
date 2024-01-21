@@ -44,15 +44,15 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 
             # Add entry to ytm.yml
             new_entry = f"""
-    - name: Get {channel_name}
-      run: |
-        touch ./{channel_group}/{channel_name}.m3u8
-        sudo cat >./{channel_group}/{channel_name}.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $$(yt-dlp --print urls {channel_url})
-        EOL
+- name: Get {channel_name}
+  run: |
+    touch ./{channel_group}/{channel_name}.m3u8
+    sudo cat >./{channel_group}/{channel_name}.m3u8 <<EOL
+    #EXTM3U
+    #EXT-X-VERSION:3
+    #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+    $$(yt-dlp --print urls {channel_url})
+    EOL
 """
 
             # Append new entry to ytm.yml
@@ -60,6 +60,22 @@ with open('youtube_channel_info.txt', 'r') as info_file:
                 ytm_file_append.write(new_entry)
 
             new_entries_added = True  # Set the flag to true
+
+# Add git add, commit, and push steps regardless of new entries
+git_steps = """
+- name: git add
+  run: |
+    git add -A
+    ls -la
+- name: commit & push
+  run: |
+    git commit -m "links are updated"
+    git push
+"""
+
+# Write git steps to ytm.yml
+with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
+    ytm_file_append.write(git_steps)
 
 # Print a message indicating the script has finished
 print("Script completed.")
