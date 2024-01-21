@@ -8,6 +8,7 @@ touch "$output_dir/$channel_name.m3u8"
 
 start_time=$(date +%s)
 video_count=0
+max_retries=1
 retry_count=0
 
 while true; do
@@ -30,8 +31,14 @@ while true; do
   if ! yt-dlp --print urls "https://www.youtube.com/@$channel_name/streams"; then
     error_message=$(yt-dlp "https://www.youtube.com/@$channel_name/streams" 2>&1)
     if [[ $error_message == *"HTTP Error 429: Too Many Requests"* ]]; then
-      echo "Encountered 'HTTP Error 429: Too Many Requests'. Stopping search for the channel after one retry."
-      break
+      echo "Encountered 'HTTP Error 429: Too Many Requests'. Retrying ($((retry_count + 1)) of $max_retries)."
+      retry_count=$((retry_count + 1))
+      if [ $retry_count -gt $max_retries ]; then
+        echo "Maximum retries reached. Stopping search for the channel."
+        break
+      fi
+      sleep 20
+      continue
     else
       echo "Error: $error_message"
       echo "Error while checking the channel. Moving on to the next channel."
@@ -50,4 +57,3 @@ while true; do
 
   video_count=$((video_count + 1))
 done
-
