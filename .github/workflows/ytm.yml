@@ -28,142 +28,33 @@ jobs:
     - name: Pull latest changes
       run: git pull origin main
 
-    - name: Rebase changes
-      run: git pull --rebase origin main
+    - name: Process channels and update ytm.yml
+      run: |
+        while IFS=, read -r channel_name channel_group channel_url; do
+          # Check if there are any live streams on the /streams endpoint
+          video_info_json=$(yt-dlp --print-json "${channel_url}/streams")
+          live_streams=$(echo "${video_info_json}" | jq -r '.entries | length')
 
-    - name: Get beINSportsHaber
-      run: |
-        touch ./spor/beinsportshaber.m3u8
-        sudo cat >./spor/beinsportshaber.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@beinsportsturkiye/live)
-        EOL
-    - name: Get AFCAsianCup
-      run: |
-        touch ./spor/AFCAsianCup.m3u8
-        sudo cat >./spor/AFCAsianCup.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@AFCAsianCup/live)
-        EOL
-    - name: Get talkSPORT
-      run: |
-        touch ./spor/talkSPORT.m3u8
-        sudo cat >./spor/talkSPORT.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@talkSPORT/live)
-        EOL
-    - name: Get EERIEISSSS
-      run: |
-        touch ./ytl/EERIEISSSS.m3u8
-        sudo cat >./ytl/EERIEISSSS.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@EERIEISSSS/live)
-        EOL
-    - name: Get JimmyBroadbent
-      run: |
-        touch ./ytl/JimmyBroadbent.m3u8
-        sudo cat >./ytl/JimmyBroadbent.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@Jimmy_Broadbent/live)
-        EOL
-    - name: Get DeadEyeDelBoy
-      run: |
-        touch ./ytl/DeadEyeDelBoy.m3u8
-        sudo cat >./ytl/DeadEyeDelBoy.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@deadeyedelboy/live)
-        EOL
-        
-    - name: Get NBCNews
-      run: |
-        touch ./news/NBCNews.m3u8
-        sudo cat >./news/NBCNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@NBCNews/live)
-        EOL
-    - name: Get SkyNews
-      run: |
-        touch ./news/SkyNews.m3u8
-        sudo cat >./news/SkyNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@SkyNews/live)
-        EOL
-        
-    - name: Get ABCNews
-      run: |
-        touch ./news/ABCNews.m3u8
-        sudo cat >./news/ABCNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@ABCNews/live)
-        EOL
-        
-    - name: Get HitsRadio
-      run: |
-        touch ./music/HitsRadio.m3u8
-        sudo cat >./music/HitsRadio.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/watch?v=HQtFR3mhzOY)
-        EOL
-        
-    - name: Get Classic80s
-      run: |
-        touch ./music/Classic80s.m3u8
-        sudo cat >./music/Classic80s.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@classicmusic-top1/live)
-        EOL
-    - name: Get FobosPlanet
-      run: |
-        touch ./music/FobosPlanet.m3u8
-        sudo cat >./music/FobosPlanet.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@FobosPlanet/live)
-        EOL
-     
-    - name: DPWorldTour
-      run: |
-        mkdir -p ./spor
-        touch ./spor/DPWorldTour.m3u8
-        sudo cat > ./spor/DPWorldTour.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url "https://www.youtube.com/@DPWorldTour/live")
-        EOL
+          if [ "${live_streams}" -gt 0 ]; then
+            echo "Processing live channel: ${channel_name}, ${channel_group}, ${channel_url}"
 
-    - name: Get GBNews
-      run: |
-        touch ./news/GBNews.m3u8
-        sudo cat >./news/GBNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url https://www.youtube.com/@GBNewsOnline/live)
-        EOL
+            # Add entry to ytm.yml
+            new_entry="    - name: Get ${channel_name}\n"\
+                      "      run: |\n"\
+                      "        touch ./${channel_group}/${channel_name}.m3u8\n"\
+                      "        sudo cat > ./${channel_group}/${channel_name}.m3u8 <<EOL\n"\
+                      "        #EXTM3U\n"\
+                      "        #EXT-X-VERSION:3\n"\
+                      "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n"\
+                      "        $(yt-dlp --force-generic-extractor --get-url ${channel_url}/streams)\n"\
+                      "        EOL\n"
+
+            # Append new entry to ytm.yml
+            echo -e "${new_entry}" >> .github/workflows/ytm.yml
+          else
+            echo "No live streams found for ${channel_name}. Skipping..."
+          fi
+        done < youtube_channel_info.txt
 
     - name: git add
       run: |
