@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import yaml
 import re
 from xml.etree.ElementTree import Element, SubElement, tostring, ElementTree
+from googleapiclient.discovery import build
 
 # Try to import googleapiclient, and install it if not present
 try:
@@ -47,6 +48,12 @@ def scrape_youtube_live_channel(channel_url, api_key):
 
             # Get channel logo using YouTube Data API
             channel_logo_url = get_channel_logo(api_key, channel_id) if channel_id else None
+
+            # Dump raw metadata to file
+            with open('meta_dump.txt', 'a', encoding='utf-8') as dump_file:
+                dump_file.write(f"Channel: {channel_url}\n")
+                dump_file.write(f"Metadata: {metadata_content}\n")
+                dump_file.write(f"Event Time: {event_time_content}\n\n")
 
             return {"metadata": metadata_content, "event_time": event_time_content, "channel_logo": channel_logo_url}
     else:
