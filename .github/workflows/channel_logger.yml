@@ -5,6 +5,7 @@ on:
     workflows: ["Build M3U Playlist"]
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   scrape:
