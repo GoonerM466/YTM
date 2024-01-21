@@ -32,6 +32,9 @@ jobs:
               # Change "New: " tag to "Added!!"
               line=$(echo "$line" | sed 's/New:/Added!!/')
               
+              # Debugging output to see what's being processed
+              echo "Processing line: $line"
+
               # AWK code to insert new entries at the end of the file
               awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
                 /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
@@ -59,8 +62,8 @@ jobs:
                 }
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
               
-              # Print the modified line to indicate it has been processed
-              echo "$line"
+              # Debugging output to see if line is printed correctly
+              echo "Line processed: $line"
 
               # Copy the entry to recently_added_channels.txt
               echo "$line" >> recently_added_channels.txt
@@ -83,3 +86,4 @@ jobs:
           git add .
           git commit -m "Update YTM workflow"
           git push
+
