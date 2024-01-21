@@ -32,7 +32,7 @@ jobs:
                 echo "$channel_name has been added, transferred to log"
     
                 # Copy line to recently_added_channels.txt
-                echo "$line" >> recently_added_channels.txt
+                echo "Added $(date '+%Y-%m-%d %H:%M:%S')!! $line" >> recently_added_channels.txt
     
                 # Remove line from youtube_channel_info.txt
                 awk -v pattern="$line" '$0 != pattern' youtube_channel_info.txt > tmpfile && mv tmpfile youtube_channel_info.txt
@@ -46,6 +46,14 @@ jobs:
           else
             echo "No changes to commit."
           fi
+
+      - name: Clean up and Filter recently_added_channels.txt
+        run: |
+          # Search for all instances of the text "New: " and replace with "Added <insert date & time>!! "
+          awk '{gsub("New: ", "Added " strftime("%Y-%m-%d %H:%M:%S") "!! ")}1' recently_added_channels.txt > tmpfile && mv tmpfile recently_added_channels.txt
+
+          # Sort each line alphabetically by <group_name> and <channel_name>
+          sort -k2,2 -k3,3 recently_added_channels.txt -o recently_added_channels.txt
 
       - name: Configure Git
         run: |
