@@ -20,9 +20,6 @@ jobs:
       - name: Backup YTM Workflow File
         run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
 
-#      - name: Wait for 30 Seconds
-#        run: sleep 30
-
       - name: Read Channel Info
         run: |
           while IFS= read -r line; do
