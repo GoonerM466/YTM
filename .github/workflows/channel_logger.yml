@@ -1,4 +1,4 @@
-name: Channel Logger Workflow
+name: Update YTM Workflow
 
 on:
   push:
