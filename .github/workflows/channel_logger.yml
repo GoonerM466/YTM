@@ -1,0 +1,45 @@
+name: Log updated new channels
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.PAT_YTLM_TOKEN }}
+
+      - name: Open and Process File
+        run: |
+          while IFS=, read -r action channel_name group_name channel_url; do
+            if [[ $action == "New: "* ]]; then
+              # Search for channel_name in ytm.yml
+              if grep -q "$channel_name" .github/workflows/ytm.yml; then
+                echo "$channel_name has been added, transferred to log"
+                
+                # Copy line to recently_added_channels.txt
+                echo "$action" >> recently_added_channels.txt
+
+                # Remove line from youtube_channel_info.txt
+                sed -i "/$channel_name/d" youtube_channel_info.txt
+              fi
+            fi
+          done < youtube_channel_info.txt
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Commit and Push Changes
+        run: |
+          git add .
+          git commit -m "Update YTM workflow"
+          git push
