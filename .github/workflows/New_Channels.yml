@@ -20,22 +20,16 @@ jobs:
       - name: Backup YTM Workflow File
         run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
 
-#      - name: Wait for 30 Seconds
-#        run: sleep 30
-
       - name: Read Channel Info
         run: |
           while IFS= read -r line; do
-            # Extracting values from the line
             channel_name=$(echo "$line" | awk -F ', ' '{print $1}' | sed 's/^New: //')
             group_name=$(echo "$line" | awk -F ', ' '{print $2}' | tr -d ' ')
             channel_url=$(echo "$line" | awk -F ', ' '{print $3}' | tr -d ' ')
   
             if [[ $channel_url == "https://www.youtube.com/"* ]]; then
-              # Change "New: " tag to "Added!!"
               line=$(echo "$line" | sed 's/New:/Added!!/')
               
-              # AWK code to insert new entries at the end of the file
               awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
                 /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
                 END {
@@ -47,22 +41,19 @@ jobs:
                   print "        #EXTM3U"
                   print "        #EXT-X-VERSION:3"
                   print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  print "        $(yt-dlp --print urls \x22" channel_url "\x22)"
+                  print "        $(yt-dlp --print urls \"" channel_url "\")"
                   print "        EOL"
-                  print "           "
-                  # Add new code here
                   print "    - name: git add"
                   print "      run: |"
                   print "        git add -A"
                   print "        ls -la"
                   print "    - name: commit & push"
                   print "      run: |"
-                  print "        git commit -m \x22links are updated\x22"
+                  print "        git commit -m \"links are updated\""
                   print "        git push"
                 }
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
-              
-              # Print the modified line to indicate it has been processed
+
               echo "$line"
             fi
           done < youtube_channel_info.txt
