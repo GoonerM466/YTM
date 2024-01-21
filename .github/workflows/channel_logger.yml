@@ -2,7 +2,7 @@ name: Channel Logger Workflow
 
 on:
   workflow_run:
-    workflows: ["ytm.yml"]
+    workflows: ["Build M3U Playlist"]
     types:
       - completed
 
