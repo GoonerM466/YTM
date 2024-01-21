@@ -1,4 +1,4 @@
-name: Update YTM Workflow
+name: Channel Logger Workflow
 
 on:
   push:
@@ -32,6 +32,8 @@ jobs:
 
                 # Remove line from youtube_channel_info.txt
                 sed -i "/$channel_info/d" youtube_channel_info.txt
+              else
+                echo "Searched for $channel_name, match not found."
               fi
             fi
           done < youtube_channel_info.txt
