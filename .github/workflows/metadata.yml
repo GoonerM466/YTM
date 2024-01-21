@@ -44,6 +44,9 @@ jobs:
     - name: Print XML Contents
       run: cat combined_epg.xml
 
+    - name: Remove untracked files
+      run: git clean -fdX
+
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
