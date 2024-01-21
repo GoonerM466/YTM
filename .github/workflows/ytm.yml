@@ -13,8 +13,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.PAT_YTLM_TOKEN }}
 
     - name: Configure Git
       run: |
@@ -27,6 +30,9 @@ jobs:
         sudo apt-get install -y ffmpeg
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
+    - name: Install jq
+      run: sudo apt-get install jq
+
     - name: Delay for 10 seconds
       run: sleep 10
 
