@@ -28,6 +28,9 @@ jobs:
     - name: Pull latest changes
       run: git pull --rebase origin main
 
+    - name: Grant execute permissions to the script
+      run: chmod +x check_channel.sh
+
     - name: Get beINSportsHaber
       run: ./check_channel.sh beinsportsturkiye ./spor
 
