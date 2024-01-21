@@ -10,14 +10,14 @@ with open('.github/workflows/ytm.yml', 'r') as ytm_file:
     ytm_content = ytm_file.read()
 
 # Search for and remove the "git add," "commit & push" steps
-remove_git_steps = True
+remove_git_steps = True  # Set to True initially to start removing from the beginning
 filtered_ytm_lines = []
 
 for line in ytm_content.splitlines():
     if "git add -A" in line:
-        remove_git_steps = True
+        remove_git_steps = False  # Stop removing when the first occurrence is found
     elif "git commit -m \"links are updated\"" in line:
-        remove_git_steps = False
+        continue  # Skip this line and the lines following it
     elif remove_git_steps:
         continue
     else:
