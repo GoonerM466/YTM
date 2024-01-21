@@ -5,7 +5,8 @@ on:
     - cron: '0 0/1 * * *'
   workflow_dispatch:
   workflow_run:
-    workflow: ["New Channel Scrape Workflow"]
+    workflows:
+      - ["New Channel Scrape Workflow"]
     types:
       - completed
 
@@ -19,74 +20,9 @@ jobs:
           ref: main
           token: ${{ secrets.PAT_YTLM_TOKEN }}
 
-      - name: Configure Git
-        run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-
-      - name: Install yt-dlp and ffmpeg
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
-          curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-          chmod a+rx /usr/local/bin/yt-dlp
-
-      - name: Install jq
-        run: sudo apt-get install jq
-
-      - name: Delay for 10 seconds
-        run: sleep 10
-
-      - name: Pull latest changes
-        run: git pull --rebase origin main
-
-      - name: Grant execute permissions to the script
-        run: chmod +x check_channel.sh
-
-      - name: Get beINSportsHaber
-        run: ./check_channel.sh beinsportsturkiye ./spor
-
-      - name: Get AFCAsianCup
-        run: ./check_channel.sh AFCAsianCup ./spor
-
-      - name: Get talkSPORT
-        run: ./check_channel.sh talkSPORT ./spor
-
-      - name: Get EERIEISSSS
-        run: ./check_channel.sh EERIEISSSS ./ytl
-
-      - name: Get JimmyBroadbent
-        run: ./check_channel.sh Jimmy_Broadbent ./ytl
-
-      - name: Get DeadEyeDelBoy
-        run: ./check_channel.sh deadeyedelboy ./ytl
-
-      - name: Get NBCNews
-        run: ./check_channel.sh NBCNews ./news
-
-      - name: Get SkyNews
-        run: ./check_channel.sh SkyNews ./news
-
-      - name: Get ABCNews
-        run: ./check_channel.sh ABCNews ./news
-
-      - name: Get HitsRadio
-        run: ./check_channel.sh HQtFR3mhzOY ./music
-
-      - name: Get Classic80s
-        run: ./check_channel.sh classicmusic-top1 ./music
-
-      - name: Get FobosPlanet
-        run: ./check_channel.sh FobosPlanet ./music
-
-      - name: Get DPWorldTour
-        run: ./check_channel.sh DPWorldTour ./spor
-
-      - name: Get GBNews
-        run: ./check_channel.sh GBNewsOnline ./news
+      # ... (rest of your job steps)
 
       - name: Git Add, Commit & Push
         run: |
           git add -A
           git diff --cached --quiet || git commit -m "Update live streaming links" && git push origin main
-
