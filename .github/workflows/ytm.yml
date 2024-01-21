@@ -1,160 +1,59 @@
-name: Get YouTube Live m3u8
-on:
-  schedule:
-    - cron: '0 0/1 * * *'
-  workflow_dispatch:
-  workflow_run:
-    workflows: [".github/workflows/New_Channels.yml"]
-    types:
-      - completed
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: config
+    - name: Get GBNews
       run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-    - name: Install yt-dlp
-      run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-        sudo chmod a+rx /usr/local/bin/yt-dlp
-    - name: Delay for 10 seconds
-      run: sleep 10
-
-# --- NEXT ENTRY GOES BELOW THIS LINE ---
-
-    - name: Get beINSportsHaber
-      run: |
-        touch ./spor/beinsportshaber.m3u8
-        sudo cat >./spor/beinsportshaber.m3u8 <<EOL
+        touch ./news/GBNews.m3u8
+        sudo cat >./news/GBNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/live)
-        EOL
-    - name: Get AFCAsianCup
-      run: |
-        touch ./spor/AFCAsianCup.m3u8
-        sudo cat >./spor/AFCAsianCup.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/live)
-        EOL
-    - name: Get talkSPORT
-      run: |
-        touch ./spor/talkSPORT.m3u8
-        sudo cat >./spor/talkSPORT.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@talkSPORT/live)
-        EOL
-    - name: Get EERIEISSSS
-      run: |
-        touch ./ytl/EERIEISSSS.m3u8
-        sudo cat >./ytl/EERIEISSSS.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@EERIEISSSS/live)
-        EOL
-    - name: Get JimmyBroadbent
-      run: |
-        touch ./ytl/JimmyBroadbent.m3u8
-        sudo cat >./ytl/JimmyBroadbent.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@Jimmy_Broadbent/live)
-        EOL
-    - name: Get DeadEyeDelBoy
-      run: |
-        touch ./ytl/DeadEyeDelBoy.m3u8
-        sudo cat >./ytl/DeadEyeDelBoy.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@deadeyedelboy/live)
-        EOL
-        
-    - name: Get NBCNews
-      run: |
-        touch ./news/NBCNews.m3u8
-        sudo cat >./news/NBCNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@NBCNews/live)
-        EOL
-    - name: Get SkyNews
-      run: |
-        touch ./news/SkyNews.m3u8
-        sudo cat >./news/SkyNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@SkyNews/live)
-        EOL
-        
-    - name: Get ABCNews
-      run: |
-        touch ./news/ABCNews.m3u8
-        sudo cat >./news/ABCNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@ABCNews/live)
-        EOL
-        
-    - name: Get HitsRadio
-      run: |
-        touch ./music/HitsRadio.m3u8
-        sudo cat >./music/HitsRadio.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/watch?v=HQtFR3mhzOY)
-        EOL
-        
-    - name: Get Classic80s
-      run: |
-        touch ./music/Classic80s.m3u8
-        sudo cat >./music/Classic80s.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@classicmusic-top1/live)
-        EOL
-    - name: Get FobosPlanet
-      run: |
-        touch ./music/FobosPlanet.m3u8
-        sudo cat >./music/FobosPlanet.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@FobosPlanet/live)
-        EOL
-     
-    - name: DPWorldTour
-      run: |
-        mkdir -p ./spor
-        touch ./spor/DPWorldTour.m3u8
-        sudo cat > ./spor/DPWorldTour.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
+        $$(yt-dlp --print urls https://www.youtube.com/@GBNewsOnline/live)
         EOL
 
-    - name: git add
+    - name: Get test1
       run: |
-        git add -A
-        ls -la
-    - name: commit & push
+        touch ./news/test1.m3u8
+        sudo cat >./news/test1.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $$(yt-dlp --print urls https://www.youtube.com/test1/live)
+        EOL
+
+    - name: Get test2
       run: |
-        git commit -m "links are updated"
-        git push
+        touch ./news/test2.m3u8
+        sudo cat >./news/test2.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $$(yt-dlp --print urls https://www.youtube.com/test2/live)
+        EOL
+
+    - name: Get test3
+      run: |
+        touch ./news/test3.m3u8
+        sudo cat >./news/test3.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $$(yt-dlp --print urls https://www.youtube.com/test3/live)
+        EOL
+
+- name: git add
+  run: |
+    git add -A
+    ls -la
+- name: commit & push
+  run: |
+    git commit -m "links are updated"
+    git push
+
+- name: git add
+  run: |
+    git add -A
+    ls -la
+- name: commit & push
+  run: |
+    git commit -m "links are updated"
+    git push
+
