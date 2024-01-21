@@ -36,6 +36,10 @@ jobs:
         touch ./spor/beinsportshaber.m3u8
         start_time=$(date +%s)
         while true; do
+          if yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/streams | grep -Eq 'This live event will begin in [0-9]+ (days|hours)'; then
+            echo "Skipping scheduled live event. Moving on to the next channel."
+            break
+          fi
           if yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/streams; then
             break
           fi
@@ -53,6 +57,10 @@ jobs:
         touch ./spor/AFCAsianCup.m3u8
         start_time=$(date +%s)
         while true; do
+          if yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/streams | grep -Eq 'This live event will begin in [0-9]+ (days|hours)'; then
+            echo "Skipping scheduled live event. Moving on to the next channel."
+            break
+          fi
           if yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/streams; then
             break
           fi
