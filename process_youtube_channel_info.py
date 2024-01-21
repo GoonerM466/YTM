@@ -8,13 +8,9 @@ def channel_exists(channel_name, ytm_content):
 with open('.github/workflows/ytm.yml', 'r') as ytm_file:
     ytm_content = ytm_file.read()
 
-# Find the last entry in ytm.yml
-last_entry_match = re.search(r'^\s*-\s+name:\s+([^ ]+)', ytm_content, re.MULTILINE | re.DOTALL)
-if last_entry_match:
-    last_entry_start = last_entry_match.start()
-
-# Adjust indentation for existing content
-ytm_content_adjusted = ytm_content[:last_entry_start]
+# Write the modified ytm.yml content back to the file
+with open('.github/workflows/ytm.yml', 'w') as ytm_file:
+    ytm_file.write(ytm_content)
 
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
@@ -35,7 +31,7 @@ with open('youtube_channel_info.txt', 'r') as info_file:
             # Process the channel information and add entry to ytm.yml
             print(f"Processing new channel: {channel_name}, {channel_group}, {channel_url}")
 
-            # Add entry to ytm.yml with adjusted indentation
+            # Add entry to ytm.yml
             new_entry = f"""
     - name: Get {channel_name}
       run: |
@@ -49,13 +45,22 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 """
 
             # Append new entry to ytm.yml
-            ytm_content_adjusted += new_entry
+            with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
+                ytm_file_append.write(new_entry)
 
             new_entries_added = True  # Set the flag to true
 
-# Write the modified ytm.yml content back to the file
-with open('.github/workflows/ytm.yml', 'w') as ytm_file:
-    ytm_file.write(ytm_content_adjusted)
+# After all new entries are added, adjust the indentation for "git add" and the following 7 lines
+if new_entries_added:
+    git_add_position = ytm_content.find('- name: git add')
+    if git_add_position != -1:
+        git_add_lines = ytm_content[git_add_position:git_add_position + len('- name: git add') + ytm_content[git_add_position:].find('\n') + 1]
+        git_add_lines_indented = '\n'.join(['    ' + line.strip() for line in git_add_lines.split('\n')])
+        ytm_content = ytm_content.replace(git_add_lines, git_add_lines_indented)
+
+        # Write the modified ytm.yml content back to the file
+        with open('.github/workflows/ytm.yml', 'w') as ytm_file:
+            ytm_file.write(ytm_content)
 
 # Print a message indicating the script has finished
 print("Script completed.")
