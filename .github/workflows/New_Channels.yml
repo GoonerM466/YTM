@@ -40,7 +40,7 @@ jobs:
               
               # Remove the processed line from the original file
               sed -i "/^$line\$/d" youtube_channel_info.txt
-
+              
               # AWK code to insert new entries at the end of the file
               awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
                 /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
@@ -69,17 +69,6 @@ jobs:
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
             fi
           done
-
-      - name: Sort and Categorize Entries
-        run: |
-          sort -o recently_added_channels.txt recently_added_channels.txt
-          awk -F',' '{ print $0 | "sort -t, -k2,2 -k1,1" }' recently_added_channels.txt > sorted_recently_added_channels.txt
-          mv sorted_recently_added_channels.txt recently_added_channels.txt
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
 
       - name: Commit and Push Changes
         run: |
