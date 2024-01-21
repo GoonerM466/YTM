@@ -33,7 +33,7 @@ jobs:
               echo "$line" >> recently_added_channels.txt
   
               # Remove line from youtube_channel_info.txt
-              grep -v "$line" youtube_channel_info.txt > tmpfile && mv tmpfile youtube_channel_info.txt
+              awk -v pattern="$line" '$0 != pattern' youtube_channel_info.txt > tmpfile && mv tmpfile youtube_channel_info.txt
             else
               echo "Searched for $channel_name, match not found."
   
