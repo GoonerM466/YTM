@@ -67,7 +67,7 @@ jobs:
     - name: Get FobosPlanet
       run: ./check_channel.sh FobosPlanet ./music
 
-    - name: DPWorldTour
+    - name: Get DPWorldTour
       run: ./check_channel.sh DPWorldTour ./spor
 
     - name: Get GBNews
