@@ -7,10 +7,26 @@ get_channel_urls() {
 
   mkdir -p "$output_path"
   touch "$output_path/$channel_name.m3u8"
-  cat > "$output_path/$channel_name.m3u8" <<EOL
+
+  echo "Checking live status for $channel_name"
+  video_status=$(yt-dlp --print-json "https://www.youtube.com/@$channel_name/live" | jq -r '.status')
+
+  if [ "$video_status" == "live" ]; then
+    echo "Fetching live stream URLs for $channel_name"
+    urls=$(yt-dlp --print urls "https://www.youtube.com/@$channel_name/live" 2>&1)
+    echo "yt-dlp output:"
+    echo "$urls"
+
+    cat > "$output_path/$channel_name.m3u8" <<EOL
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-$(yt-dlp --print urls "https://www.youtube.com/@$channel_name/live")
+$urls
 EOL
+
+  else
+    echo "$channel_name is not currently live."
+  fi
 }
+
+echo "Script execution completed"
