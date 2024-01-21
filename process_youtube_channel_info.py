@@ -55,14 +55,14 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 
 # Add git add, commit, and push steps regardless of new entries
 git_steps = """
-- name: git add
-  run: |
-    git add -A
-    ls -la
-- name: commit & push
-  run: |
-    git commit -m "links are updated"
-    git push
+    - name: git add
+      run: |
+        git add -A
+        ls -la
+    - name: commit & push
+      run: |
+        git commit -m "links are updated"
+        git push
 """
 
 # Append git steps to ytm.yml
