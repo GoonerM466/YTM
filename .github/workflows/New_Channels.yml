@@ -91,3 +91,9 @@ jobs:
           echo "      run: |"
           echo "        git commit -m \"links are updated\""
           echo "        git push"
+
+      - name: Commit and Push Changes
+        run: |
+          git add .
+          git commit -m "Update YTM workflow"
+          git push
