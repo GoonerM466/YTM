@@ -1,15 +1,21 @@
 name: Log Cleanup Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["channel_logger"]
+    types:
+      - completed
+
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Wait for 10 seconds
+        run: sleep 10
+
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
@@ -35,7 +41,7 @@ jobs:
       - name: Commit and Push changes
         run: |
           git add recently_added_channels.txt
-          git commit -m "Update recently_added_channels.txt with new entries"
+          git diff-index --quiet HEAD || git commit -m "Update recently_added_channels.txt with new entries"
           git push origin main
 
       # Add more steps as needed for your workflow
