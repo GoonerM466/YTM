@@ -63,18 +63,9 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 
             new_entries_added = True  # Set the flag to true
 
-# Add git add, commit, and push steps regardless of new entries
-git_steps = """
-    - name: git add
-      run: |
-        git add -A
-        ls -la
-    - name: commit & push
-      run: |
-        git commit -m "links are updated"
-        git push
-"""
-
+# Append git steps to ytm.yml
+with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
+    ytm_file_append.write(git_steps)
 
 # Print a message indicating the script has finished
 print("Script completed.")
