@@ -50,7 +50,7 @@ jobs:
       - name: Clean up and Filter recently_added_channels.txt
         run: |
           # Search for all instances of the text "New: " and replace with "Added <insert date & time>!! "
-          awk '{gsub("New: ", "Added " strftime("%Y-%m-%d %H:%M:%S") "!! ")}1' recently_added_channels.txt > tmpfile && mv tmpfile recently_added_channels.txt
+          sed -i 's/New: /Added '"$(date '+%Y-%m-%d %H:%M:%S')"'!! /g' recently_added_channels.txt
 
           # Sort each line alphabetically by <group_name> and <channel_name>
           sort -k2,2 -k3,3 recently_added_channels.txt -o recently_added_channels.txt
