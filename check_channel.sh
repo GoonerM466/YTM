@@ -12,19 +12,17 @@ get_live_urls() {
 
   # Check if the video is live or scheduled
   channel_url="https://www.youtube.com/@$channel_name/live"
-  video_info_json=$(yt-dlp --print-json "$channel_url")
-  video_status=$(echo "$video_info_json" | jq -r '.status')
-
-  if [ "$video_status" == "live" ]; then
-    urls=$(yt-dlp --print urls "$channel_url" 2>&1)
+  video_info_json=$(yt-dlp --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --get-url "$channel_url" 2>&1)
+  
+  if [[ "$video_info_json" == *"youtube"* ]]; then
     echo "yt-dlp output:"
-    echo "$urls"
+    echo "$video_info_json"
 
     cat > "$output_path/$channel_name.m3u8" <<EOL
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-$urls
+$video_info_json
 EOL
 
   else
