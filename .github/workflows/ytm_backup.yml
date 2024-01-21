@@ -140,14 +140,12 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --print urls https://www.youtube.com/@FobosPlanet/live)
         EOL
-
+     
     - name: git add
       run: |
         git add -A
         ls -la
-
     - name: commit & push
       run: |
         git commit -m "links are updated"
-        git pull origin main
         git push
