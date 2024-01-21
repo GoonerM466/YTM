@@ -1,33 +1,20 @@
 #!/bin/bash
 
-# Function to get live stream URLs for a channel
-get_live_urls() {
-  local channel_name="$1"
-  local output_path="$2"
+# Function to get live URLs for a channel and append them to the corresponding .m3u8 file
+get_channel_urls() {
+    channel_name=$1
+    directory=$2
+    mkdir -p "$directory"
+    touch "$directory/$channel_name.m3u8"
 
-  mkdir -p "$output_path"
-  touch "$output_path/$channel_name.m3u8"
+    # Fetch live stream URL
+    live_url=$(yt-dlp --print urls "https://www.youtube.com/@$channel_name/live")
 
-  echo "Fetching live stream URLs for $channel_name"
-
-  # Check if the video is live or scheduled
-  channel_url="https://www.youtube.com/@$channel_name/live"
-  video_info_json=$(yt-dlp --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --get-url "$channel_url" -o - | ffmpeg -i - -c copy -f mpegts - 2>/dev/null)
-  
-  if [[ "$video_info_json" != *"Input/output error"* ]]; then
-    echo "yt-dlp output:"
-    echo "$video_info_json"
-
-    cat > "$output_path/$channel_name.m3u8" <<EOL
-#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-$video_info_json
-EOL
-
-  else
-    echo "$channel_name is not currently live."
-  fi
+    # Append the live URL to the .m3u8 file
+    echo "#EXTM3U" > "$directory/$channel_name.m3u8"
+    echo "#EXT-X-VERSION:3" >> "$directory/$channel_name.m3u8"
+    echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000" >> "$directory/$channel_name.m3u8"
+    echo "$live_url" >> "$directory/$channel_name.m3u8"
 }
 
 # Call the function for each channel listed in the workflow
