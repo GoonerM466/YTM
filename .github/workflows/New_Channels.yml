@@ -62,11 +62,11 @@ jobs:
               # Print the modified line to indicate it has been processed
               echo "$line"
 
-              # Copy the entry to recently_added_channels.txt
-              echo "$line" >> recently_added_channels.txt
+      - name: Copy Entry to recently_added_channels.txt
+        run: echo "$line" >> recently_added_channels.txt
 
-              # Remove the entry from youtube_channel_info.txt
-              sed -i "/$line/d" youtube_channel_info.txt
+      - name: Remove Entry from youtube_channel_info.txt
+        run: sed -i "/$line/d" youtube_channel_info.txt
             fi
           done
 
