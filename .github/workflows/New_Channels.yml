@@ -20,6 +20,9 @@ jobs:
       - name: Backup YTM Workflow File
         run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
 
+#      - name: Wait for 30 Seconds
+#        run: sleep 30
+
       - name: Read Channel Info
         run: |
           while IFS= read -r line; do
@@ -44,15 +47,17 @@ jobs:
                   print "        #EXTM3U"
                   print "        #EXT-X-VERSION:3"
                   print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  print "        $(" "yt-dlp --print urls \"" channel_url "live\"")"
+                  print "        $(yt-dlp --print urls \x22" channel_url "\x22)"
                   print "        EOL"
+                  print "           "
+                  # Add new code here
                   print "    - name: git add"
                   print "      run: |"
                   print "        git add -A"
                   print "        ls -la"
                   print "    - name: commit & push"
                   print "      run: |"
-                  print "        git commit -m \"links are updated\""
+                  print "        git commit -m \x22links are updated\x22"
                   print "        git push"
                 }
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
