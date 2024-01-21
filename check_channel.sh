@@ -40,6 +40,8 @@ while true; do
 
   current_time=$(date +%s)
   elapsed_time=$((current_time - start_time))
+  echo "Elapsed time: $elapsed_time seconds"
+
   if [ $elapsed_time -ge 60 ]; then
     echo "Time limit reached. Moving on to the next channel."
     break
