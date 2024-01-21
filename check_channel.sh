@@ -8,6 +8,7 @@ touch "$output_dir/$channel_name.m3u8"
 
 start_time=$(date +%s)
 video_count=0
+retry_count=0
 
 while true; do
   if yt-dlp --print urls "https://www.youtube.com/@$channel_name/streams" | grep -Eq 'This live event will begin in [0-9]+ (days|hours)'; then
@@ -49,3 +50,4 @@ while true; do
 
   video_count=$((video_count + 1))
 done
+
