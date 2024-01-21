@@ -150,6 +150,47 @@ jobs:
         $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
         EOL
 
+
+    - name: Get GBNews
+      run: |
+        touch ./news/GBNews.m3u8
+        sudo cat >./news/GBNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $$(yt-dlp --print urls https://www.youtube.com/@GBNewsOnline/live)
+        EOL
+
+    - name: Get test10
+      run: |
+        touch ./news/test10.m3u8
+        sudo cat >./news/test10.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $$(yt-dlp --print urls https://www.youtube.com/test10/live)
+        EOL
+
+    - name: Get test20
+      run: |
+        touch ./news/test20.m3u8
+        sudo cat >./news/test20.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $$(yt-dlp --print urls https://www.youtube.com/test20/live)
+        EOL
+
+    - name: Get test30
+      run: |
+        touch ./news/test30.m3u8
+        sudo cat >./news/test30.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $$(yt-dlp --print urls https://www.youtube.com/test30/live)
+        EOL
+
     - name: git add
       run: |
         git add -A
@@ -158,3 +199,4 @@ jobs:
       run: |
         git commit -m "links are updated"
         git push
+
