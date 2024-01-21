@@ -32,8 +32,11 @@ jobs:
               # Change "New: " tag to "Added!!"
               line=$(echo "$line" | sed 's/New:/Added!!/')
               
+              # Escape special characters in the URL
+              escaped_url=$(printf '%s\n' "$channel_url" | sed -e 's/[]\/$*.^[]/\\&/g')
+
               # AWK code to insert new entries at the end of the file
-              awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
+              awk -v channel_name="$channel_name" -v group_name="$group_name" -v escaped_url="$escaped_url" '
                 /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
                 END {
                   print "    - name: " channel_name
@@ -44,10 +47,8 @@ jobs:
                   print "        #EXTM3U"
                   print "        #EXT-X-VERSION:3"
                   print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  print "        $(yt-dlp --print urls \x22" channel_url "\x22)"
+                  print "        $(yt-dlp --print urls \"" escaped_url "\")"
                   print "        EOL"
-                  print "           "
-                  # Add new code here
                   print "    - name: git add"
                   print "      run: |"
                   print "        git add -A"
