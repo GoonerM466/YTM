@@ -41,4 +41,30 @@ jobs:
                   print "        #EXTM3U"
                   print "        #EXT-X-VERSION:3"
                   print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  printf "        $(yt-dlp 
+                  printf "        $(yt-dlp --print urls \"%s\")\\\n" channel_url
+                  print "        EOL"
+                  print "    - name: git add"
+                  print "      run: |"
+                  print "        git add -A"
+                  print "        ls -la"
+                  print "    - name: commit & push"
+                  print "      run: |"
+                  print "        git commit -m \"links are updated\""
+                  print "        git push"
+                }
+              ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
+
+              echo "$line"
+            fi
+          done < youtube_channel_info.txt
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Commit and Push Changes
+        run: |
+          git add .
+          git commit -m "Update YTM workflow"
+          git push
