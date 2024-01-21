@@ -1,0 +1,41 @@
+name: Log Cleanup Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.PAT_YTLM_TOKEN }}
+
+      - name: Log Cleanup
+        run: |
+          # Add your log cleanup commands here
+          echo "Cleaning up logs..."
+
+      - name: Clean up and filter recently_added_channels.txt
+        run: |
+          current_datetime=$(date +"%Y-%m-%d %H:%M:%S")
+          sed -i "s|New:|Added $current_datetime!! |g" recently_added_channels.txt
+          sort -t, -k2,2 -k3,3 recently_added_channels.txt -o recently_added_channels.txt
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Commit and Push changes
+        run: |
+          git add recently_added_channels.txt
+          git commit -m "Update recently_added_channels.txt with new entries"
+          git push origin main
+
+      # Add more steps as needed for your workflow
