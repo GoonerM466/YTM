@@ -4,6 +4,10 @@ import re
 def channel_exists(channel_name, ytm_content):
     return re.search(fr'\s*channel_name:\s*{channel_name}\b', ytm_content) is not None
 
+# Read ytm.yml content
+with open('.github/workflows/ytm.yml', 'r') as ytm_file:
+    ytm_content = ytm_file.read()
+
 # Write the modified ytm.yml content back to the file
 with open('.github/workflows/ytm.yml', 'w') as ytm_file:
     ytm_file.write(ytm_content)
