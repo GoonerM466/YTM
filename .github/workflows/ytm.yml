@@ -36,12 +36,12 @@ jobs:
         touch ./spor/beinsportshaber.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/streams || yt-dlp --print --get-id https://www.youtube.com/@beinsportsturkiye --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -53,12 +53,12 @@ jobs:
         touch ./spor/AFCAsianCup.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/streams || yt-dlp --print --get-id https://www.youtube.com/@AFCAsianCup --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -70,12 +70,12 @@ jobs:
         touch ./spor/talkSPORT.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@talkSPORT/streams || yt-dlp --print --get-id https://www.youtube.com/@talkSPORT --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@talkSPORT/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -87,12 +87,12 @@ jobs:
         touch ./ytl/EERIEISSSS.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@EERIEISSSS/streams || yt-dlp --print --get-id https://www.youtube.com/@EERIEISSSS --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@EERIEISSSS/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -104,12 +104,12 @@ jobs:
         touch ./ytl/JimmyBroadbent.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@Jimmy_Broadbent/streams || yt-dlp --print --get-id https://www.youtube.com/@Jimmy_Broadbent --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@Jimmy_Broadbent/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -121,12 +121,12 @@ jobs:
         touch ./ytl/DeadEyeDelBoy.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@deadeyedelboy/streams || yt-dlp --print --get-id https://www.youtube.com/@deadeyedelboy --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@deadeyedelboy/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -138,12 +138,12 @@ jobs:
         touch ./news/NBCNews.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@NBCNews/streams || yt-dlp --print --get-id https://www.youtube.com/@NBCNews --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@NBCNews/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -155,12 +155,12 @@ jobs:
         touch ./news/SkyNews.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@SkyNews/streams || yt-dlp --print --get-id https://www.youtube.com/@SkyNews --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@SkyNews/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -172,12 +172,12 @@ jobs:
         touch ./news/ABCNews.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@ABCNews/streams || yt-dlp --print --get-id https://www.youtube.com/@ABCNews --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@ABCNews/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -189,12 +189,12 @@ jobs:
         touch ./music/HitsRadio.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/watch?v=HQtFR3mhzOY || yt-dlp --print --get-id https://www.youtube.com/watch?v=HQtFR3mhzOY --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/watch?v=HQtFR3mhzOY; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -206,12 +206,12 @@ jobs:
         touch ./music/Classic80s.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@classicmusic-top1/streams || yt-dlp --print --get-id https://www.youtube.com/@classicmusic-top1 --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@classicmusic-top1/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -223,12 +223,12 @@ jobs:
         touch ./music/FobosPlanet.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@FobosPlanet/streams || yt-dlp --print --get-id https://www.youtube.com/@FobosPlanet --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@FobosPlanet/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -241,12 +241,12 @@ jobs:
         touch ./spor/DPWorldTour.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/streams" || yt-dlp --print --get-id https://www.youtube.com/@DPWorldTour --dateafter now-5hours; then
+          if yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/streams"; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
@@ -258,12 +258,12 @@ jobs:
         touch ./news/GBNews.m3u8
         start_time=$(date +%s)
         while true; do
-          if yt-dlp --print urls https://www.youtube.com/@GBNewsOnline/streams || yt-dlp --print --get-id https://www.youtube.com/@GBNewsOnline --dateafter now-5hours; then
+          if yt-dlp --print urls https://www.youtube.com/@GBNewsOnline/streams; then
             break
           fi
           current_time=$(date +%s)
           elapsed_time=$((current_time - start_time))
-          if [ $elapsed_time -ge 30 ]; then
+          if [ $elapsed_time -ge 60 ]; then
             echo "Time limit reached. Moving on to the next channel."
             break
           fi
