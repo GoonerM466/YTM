@@ -2,8 +2,11 @@ name: Get YouTube Live m3u8
 on:
   schedule:
     - cron: '0 0/1 * * *'
-
   workflow_dispatch:
+  workflow_run:
+    workflows: [".github/workflows/New_Channels.yml"]
+    types:
+      - completed
 
 jobs:
   build:
@@ -18,6 +21,9 @@ jobs:
       run: |
         sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
+
+    - name: Delay for 10 seconds
+      run: sleep 10
 
 # --- NEXT ENTRY GOES BELOW THIS LINE ---
 
