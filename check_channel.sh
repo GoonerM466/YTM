@@ -9,15 +9,43 @@ touch "$output_dir/$channel_name.m3u8"
 start_time=$(date +%s)
 max_search_time=20
 video_count=0
+max_retries=1
+retry_count=0
 
 while true; do
-  if yt-dlp --print urls "https://www.youtube.com/@$channel_name/streams" | grep -Eq 'This live event will begin in [0-9]+ (days|hours)'; then
+  current_time=$(date +%s)
+  elapsed_time=$((current_time - start_time))
+
+  if [ $elapsed_time -ge $max_search_time ]; then
+    echo "Maximum search time reached. Stopping search for the channel."
+    break
+  fi
+
+  urls=$(yt-dlp --print urls "https://www.youtube.com/@$channel_name/streams" 2>&1)
+  if [ $? -ne 0 ]; then
+    error_message=$(echo "$urls" | tail -n 1)
+    if [[ $error_message == *"HTTP Error 429: Too Many Requests"* ]]; then
+      echo "Encountered 'HTTP Error 429: Too Many Requests'. Retrying ($((retry_count + 1)) of $max_retries)."
+      retry_count=$((retry_count + 1))
+      if [ $retry_count -gt $max_retries ]; then
+        echo "Maximum retries reached. Stopping search for the channel."
+        break
+      fi
+      sleep 20
+      continue
+    else
+      echo "Error: $error_message"
+      echo "Error while checking the channel. Moving on to the next channel."
+      break
+    fi
+  fi
+
+  if echo "$urls" | grep -Eq 'This live event will begin in [0-9]+ (days|hours)'; then
     echo "Skipping scheduled live event. Moving on to the next channel."
     break
   fi
 
-  # Check if there are any videos from the past
-  if yt-dlp --print urls "https://www.youtube.com/@$channel_name/streams" | grep -Eq 'This live event has ended'; then
+  if echo "$urls" | grep -Eq 'This live event has ended'; then
     echo "Found videos from the past. Moving on to the next channel."
     break
   fi
@@ -27,26 +55,7 @@ while true; do
     break
   fi
 
-  if ! yt-dlp --print urls "https://www.youtube.com/@$channel_name/streams"; then
-    error_message=$(yt-dlp "https://www.youtube.com/@$channel_name/streams" 2>&1)
-    if [[ $error_message == *"HTTP Error 429: Too Many Requests"* ]]; then
-      echo "Encountered 'HTTP Error 429: Too Many Requests'. Stopping search for the channel."
-      break
-    else
-      echo "Error: $error_message"
-      echo "Error while checking the channel. Moving on to the next channel."
-      break
-    fi
-  fi
-
-  current_time=$(date +%s)
-  elapsed_time=$((current_time - start_time))
-  echo "Elapsed time: $elapsed_time seconds"
-
-  if [ $elapsed_time -ge $max_search_time ]; then
-    echo "Maximum search time reached. Stopping search for the channel."
-    break
-  fi
+  echo "$urls" > "$output_dir/$channel_name.m3u8"
 
   video_count=$((video_count + 1))
 done
