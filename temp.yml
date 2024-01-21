@@ -158,11 +158,11 @@ jobs:
         $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
         EOL
 
-    - name: git add
+    - name: test3
       run: |
-        git add -A
-        ls -la
-    - name: commit & push
-      run: |
-        git commit -m "links are updated"
-        git push
+        mkdir -p ./news
+        touch ./news/test3.m3u8
+        sudo cat > ./news/test3.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
