@@ -1,8 +1,6 @@
 import os
 import requests
 from bs4 import BeautifulSoup
-import yaml
-import re
 from xml.etree.ElementTree import Element, SubElement, tostring, ElementTree
 from googleapiclient.discovery import build
 
@@ -42,12 +40,17 @@ def scrape_youtube_live_channel(channel_url, api_key):
             metadata_content = metadata.get('content')
             event_time_content = event_time.text.strip()
 
+            print(f"Metadata: {metadata_content}")
+            print(f"Event Time: {event_time_content}")
+
             # Extract channel ID from URL
             channel_id_match = re.search(r'https://www\.youtube\.com/channel/(\S+)', channel_url)
             channel_id = channel_id_match.group(1) if channel_id_match else None
 
             # Get channel logo using YouTube Data API
             channel_logo_url = get_channel_logo(api_key, channel_id) if channel_id else None
+
+            print(f"Channel Logo URL: {channel_logo_url}")
 
             # Dump raw metadata to file
             with open('meta_dump.txt', 'a', encoding='utf-8') as dump_file:
@@ -56,10 +59,13 @@ def scrape_youtube_live_channel(channel_url, api_key):
                 dump_file.write(f"Event Time: {event_time_content}\n\n")
 
             return {"metadata": metadata_content, "event_time": event_time_content, "channel_logo": channel_logo_url}
+        else:
+            print(f"Failed to find metadata or event time for {channel_url}")
     else:
         print(f"Failed to retrieve the page for {channel_url}. Status code: {response.status_code}")
     return None
 
+# Function to generate EPG XML
 def generate_epg_xml(youtube_data_list):
     root = Element('tv', generator_info_name="none", generator_info_url="none")
 
@@ -93,7 +99,7 @@ def generate_epg_xml(youtube_data_list):
     tree = ElementTree(root)
     tree.write('combined_epg.xml', encoding='utf-8', xml_declaration=True)
 
-# Read YAML file and extract channel URLs
+# Function to extract channel URLs from YAML file
 def extract_channel_urls(yaml_file_path):
     with open(yaml_file_path, 'r') as file:
         content = file.read()
