@@ -20,8 +20,8 @@ jobs:
       - name: Backup YTM Workflow File
         run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
 
-#      - name: Wait for 30 Seconds
-#        run: sleep 30
+      - name: Wait for 10 Seconds
+        run: sleep 10
 
       - name: Read Channel Info
         run: |
@@ -33,8 +33,8 @@ jobs:
   
             if [[ $channel_url == "https://www.youtube.com/"* ]]; then
               # Change "New: " tag to "Added!!"
-              line=$(echo "$line" | sed 's/New:/Added!!/')
-              
+              processed_line=$(echo "$line" | sed 's/New:/Added!!/')
+
               # AWK code to insert new entries at the end of the file
               awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
                 /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
@@ -61,11 +61,20 @@ jobs:
                   print "        git push"
                 }
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
-              
+
               # Print the modified line to indicate it has been processed
-              echo "$line"
+              echo "$processed_line" >> recently_added_channels.txt
+              
+              # Remove the processed line from the original file
+              sed -i "/^$line\$/d" youtube_channel_info.txt
             fi
-          done < youtube_channel_info.txt
+          done
+
+      - name: Sort and Categorize Entries
+        run: |
+          sort -o recently_added_channels.txt recently_added_channels.txt
+          awk -F, '{print $0 >> $2".txt"}' recently_added_channels.txt
+          rm recently_added_channels.txt
 
       - name: Configure Git
         run: |
