@@ -25,7 +25,7 @@ jobs:
 
     - name: Run scrape script
       run: |
-        python path/to/your/script.py
+        python metadata.py
 
     - name: Commit and push changes
       run: |
