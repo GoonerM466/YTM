@@ -27,18 +27,23 @@ def scrape_youtube_live_channel(channel_url):
     return None
 
 def generate_epg_xml(youtube_data_list):
-    root = Element('epg')
+    root = Element('tv')
 
-    for youtube_data in youtube_data_list:
+    for index, youtube_data in enumerate(youtube_data_list, start=1):
         if youtube_data:
-            channel = SubElement(root, 'channel')
-            metadata = SubElement(channel, 'metadata')
-            metadata.text = youtube_data["metadata"]
-            event_time = SubElement(channel, 'event_time')
-            event_time.text = youtube_data["event_time"]
+            channel = SubElement(root, 'channel', id=str(index))
+            display_name = SubElement(channel, 'display-name', lang='en')
+            display_name.text = f"Channel {index}"
+
+            programme = SubElement(root, 'programme', start='20240101000000 +0000', stop='20240101235959 +0000', channel=str(index))
+            title = SubElement(programme, 'title', lang='en')
+            title.text = f"Program {index}"
+
+            description = SubElement(programme, 'desc', lang='en')
+            description.text = youtube_data["metadata"]
 
     tree = ElementTree(root)
-    tree.write('combined_epg.xml')
+    tree.write('combined_epg.xml', encoding='utf-8', xml_declaration=True)
 
 # Read YAML file and extract channel URLs
 def extract_channel_urls(yaml_file_path):
