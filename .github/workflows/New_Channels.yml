@@ -21,7 +21,7 @@ jobs:
         run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
 
       - name: Wait for 30 Seconds
-        run: sleep 30
+        run: sleep 5
 
       - name: Read Channel Info
         run: |
