@@ -68,7 +68,9 @@ jobs:
           # Look for the line containing "- name: git add" and replace until the end of the file
           awk '/- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
 
-          # Add the following code after all new entries
+      - name: Add git add and commit & push at the end
+        run: |
+          echo ""
           echo "    - name: git add"
           echo "      run: |"
           echo "        git add -A"
