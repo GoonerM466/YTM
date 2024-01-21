@@ -8,10 +8,6 @@ def channel_exists(channel_name, ytm_content):
 with open('.github/workflows/ytm.yml', 'r') as ytm_file:
     ytm_content = ytm_file.read()
 
-# Write the modified ytm.yml content back to the file
-with open('.github/workflows/ytm.yml', 'w') as ytm_file:
-    ytm_file.write(ytm_content)
-
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
     new_entries_added = False  # Flag to track if new entries are added
@@ -40,7 +36,7 @@ with open('youtube_channel_info.txt', 'r') as info_file:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls {channel_url})
+        $(yt-dlp --force-generic-extractor --get-url {channel_url})
         EOL
 """
 
