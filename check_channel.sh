@@ -12,9 +12,9 @@ get_live_urls() {
 
   # Check if the video is live or scheduled
   channel_url="https://www.youtube.com/@$channel_name/live"
-  video_info_json=$(yt-dlp --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --get-url "$channel_url" 2>&1)
+  video_info_json=$(yt-dlp --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --get-url "$channel_url" -o - | ffmpeg -i - -c copy -f mpegts - 2>/dev/null)
   
-  if [[ "$video_info_json" == *"youtube"* ]]; then
+  if [[ "$video_info_json" != *"Input/output error"* ]]; then
     echo "yt-dlp output:"
     echo "$video_info_json"
 
