@@ -8,10 +8,6 @@ def channel_exists(channel_name, ytm_content):
 with open('.github/workflows/ytm.yml', 'r') as ytm_file:
     ytm_content = ytm_file.read()
 
-# Write the modified ytm.yml content back to the file
-with open('.github/workflows/ytm.yml', 'w') as ytm_file:
-    ytm_file.write(ytm_content)
-
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
     new_entries_added = False  # Flag to track if new entries are added
@@ -31,7 +27,7 @@ with open('youtube_channel_info.txt', 'r') as info_file:
             # Process the channel information and add entry to ytm.yml
             print(f"Processing new channel: {channel_name}, {channel_group}, {channel_url}")
 
-            # Add entry to ytm.yml
+            # Add entry to ytm.yml with adjusted indentation
             new_entry = f"""
     - name: Get {channel_name}
       run: |
@@ -45,10 +41,13 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 """
 
             # Append new entry to ytm.yml
-            with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
-                ytm_file_append.write(new_entry)
+            ytm_content += new_entry
 
             new_entries_added = True  # Set the flag to true
+
+# Write the modified ytm.yml content back to the file
+with open('.github/workflows/ytm.yml', 'w') as ytm_file:
+    ytm_file.write(ytm_content)
 
 # Print a message indicating the script has finished
 print("Script completed.")
