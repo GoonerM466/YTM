@@ -1,9 +1,6 @@
 name: Build M3U Playlist
 
 on:
-  push:
-    paths:
-      - .github/workflows/ytm.yml
   workflow_run:
     workflows: ["YTM Workflow"]
     types:
