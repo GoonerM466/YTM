@@ -4,17 +4,20 @@ import re
 def channel_exists(channel_name, ytm_content):
     return re.search(fr'\s*channel_name:\s*{channel_name}\b', ytm_content) is not None
 
-# Read ytm.yml content and remove the existing "git add," "commit & push" steps
+# Read ytm.yml content
 with open('.github/workflows/ytm.yml', 'r') as ytm_file:
-    ytm_content = ytm_file.read()
+    ytm_lines = ytm_file.readlines()
 
-# Search for the specified "git add," "commit & push" steps and remove them
-git_steps_pattern = re.compile(r'\s*- name: git add.*?git push', re.DOTALL)
-ytm_content = git_steps_pattern.sub('', ytm_content)
+# Find the index of the line containing "- name: git add"
+git_add_line_index = next((i for i, line in enumerate(ytm_lines) if "- name: git add" in line), None)
+
+# Remove the line and everything after it
+if git_add_line_index is not None:
+    ytm_lines = ytm_lines[:git_add_line_index]
 
 # Write the modified ytm.yml content back to the file
 with open('.github/workflows/ytm.yml', 'w') as ytm_file:
-    ytm_file.write(ytm_content)
+    ytm_file.writelines(ytm_lines)
 
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
@@ -26,6 +29,10 @@ with open('youtube_channel_info.txt', 'r') as info_file:
         if len(parts) == 2:
             _, channel_info = parts
             channel_name, channel_group, channel_url = channel_info.split(', ', 2)
+
+            # Read ytm.yml content
+            with open('.github/workflows/ytm.yml', 'r') as ytm_file:
+                ytm_content = ytm_file.read()
 
             # Check if the channel exists in ytm.yml
             if channel_exists(channel_name, ytm_content):
