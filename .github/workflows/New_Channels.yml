@@ -20,6 +20,9 @@ jobs:
       - name: Backup YTM Workflow File
         run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
 
+#      - name: Wait for 30 Seconds
+#        run: sleep 30
+
       - name: Read Channel Info
         run: |
           while IFS= read -r line; do
@@ -32,11 +35,8 @@ jobs:
               # Change "New: " tag to "Added!!"
               line=$(echo "$line" | sed 's/New:/Added!!/')
               
-              # Escape special characters in the URL
-              escaped_url=$(printf '%s\n' "$channel_url" | sed -e 's/[]\/$*.^[]/\\&/g')
-
               # AWK code to insert new entries at the end of the file
-              awk -v channel_name="$channel_name" -v group_name="$group_name" -v escaped_url="$escaped_url" '
+              awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
                 /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
                 END {
                   print "    - name: " channel_name
