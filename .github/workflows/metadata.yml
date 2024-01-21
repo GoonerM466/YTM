@@ -25,7 +25,24 @@ jobs:
 
     - name: Run scrape script
       run: |
-        python metadata.py
+        echo "Running metadata.py"
+        python metadata.py > output.txt 2>&1
+
+        # Print the contents of output.txt for debugging
+        echo "Script Output:"
+        cat output.txt
+
+        # Print metadata dump for debugging
+        echo "Metadata Dump:"
+        cat meta_dump.txt
+
+      continue-on-error: true
+
+    - name: Check Git Status
+      run: git status
+
+    - name: Print XML Contents
+      run: cat combined_epg.xml
 
     - name: Commit and push changes
       run: |
