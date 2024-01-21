@@ -44,7 +44,7 @@ jobs:
                   print "        #EXTM3U"
                   print "        #EXT-X-VERSION:3"
                   print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  print "        $("yt-dlp --print urls \"" channel_url"live"\")"
+                  print "        $(" "yt-dlp --print urls \"" channel_url"live"\")"
                   print "        EOL"
                   print "    - name: git add"
                   print "      run: |"
