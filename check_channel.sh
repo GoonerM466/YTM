@@ -11,9 +11,21 @@ max_search_time=25
 max_retries=1
 retry_count=0
 
+# Function to handle timeout
+timeout_handler() {
+  echo "Maximum search time reached. Stopping search for the channel."
+  exit 1
+}
+
+# Set a trap to call the timeout handler
+trap timeout_handler SIGALRM
+
 # Use timeout to limit the execution time
 timeout "$max_search_time"s bash -c "
 while true; do
+  # Reset the alarm on each iteration
+  trap timeout_handler SIGALRM
+
   urls=$(yt-dlp --print urls 'https://www.youtube.com/@$channel_name/streams' 2>&1)
   
   if [ $? -ne 0 ]; then
