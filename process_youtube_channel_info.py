@@ -21,18 +21,21 @@ with open('youtube_channel_info.txt', 'r') as info_file:
     new_entries_added = False  # Flag to track if new entries are added
     for line in info_file:
         # Extract information from the line
-        _, channel_name, channel_group, channel_url = line.strip().split(', ', 3)
+        parts = line.strip().split('New: ')
+        if len(parts) == 2:
+            _, channel_info = parts
+            channel_name, channel_group, channel_url = channel_info.split(', ', 2)
 
-        # Check if the channel exists in ytm.yml
-        if channel_exists(channel_name, ytm_content):
-            print(f"Channel '{channel_name}' already exists in ytm.yml. Skipping...")
-            continue
+            # Check if the channel exists in ytm.yml
+            if channel_exists(channel_name, ytm_content):
+                print(f"Channel '{channel_name}' already exists in ytm.yml. Skipping...")
+                continue
 
-        # Process the channel information and add entry to ytm.yml
-        print(f"Processing new channel: {channel_name}, {channel_group}, {channel_url}")
+            # Process the channel information and add entry to ytm.yml
+            print(f"Processing new channel: {channel_name}, {channel_group}, {channel_url}")
 
-        # Add entry to ytm.yml
-        new_entry = f"""
+            # Add entry to ytm.yml
+            new_entry = f"""
     - name: Get {channel_name}
       run: |
         touch ./{channel_group}/{channel_name}.m3u8
@@ -43,11 +46,11 @@ with open('youtube_channel_info.txt', 'r') as info_file:
         $(yt-dlp --print urls {channel_url})
         EOL
 """
-        # Append new entry to ytm.yml
-        with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
-            ytm_file_append.write(new_entry)
+            # Append new entry to ytm.yml
+            with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
+                ytm_file_append.write(new_entry)
 
-        new_entries_added = True  # Set the flag to true
+            new_entries_added = True  # Set the flag to true
 
 # Add git add, commit, and push steps regardless of new entries
 git_steps = """
