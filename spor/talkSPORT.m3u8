@@ -1,4 +1,4 @@
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1705887029/ei/1XCtZeDOKKylsfIPnvW0gAg/ip/52.159.136.149/id/nZz0NyfOLJo.1/itag/96/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr4---sn-a5msenek.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/spc/UWF9fyIZ-4_hPfwosg3FaiCJ9_fRcJjvOtgj/vprv/1/playlist_type/DVR/mh/fc/mm/44/mn/sn-a5msenek/ms/lva/mv/u/mvi/4/pl/16/dover/11/pacing/0/keepalive/yes/fexp/24007246/mt/1705864380/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,spc,vprv,playlist_type/sig/AJfQdSswRQIgAYUnUZ5ozdZIeBqaCvjRLyyNIVItEogY5XhgrU1pdc4CIQDhw8KU4-v3SNLGmpxbjZOb0bxJ4ehoed4UWoL7NoPSyA%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl/lsig/AAO5W4owRAIgcALyYkEpAj9avt8uJEJrH9ylAECpEVAe3LhPOYSaKwgCIDump4mCw4vKhvmod4FNygdsENJ_jB7ofpgFiwV3EQzn/playlist/index.m3u8
+ERROR: [youtube:tab] @talkSPORT: The channel is not currently live
