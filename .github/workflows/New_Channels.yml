@@ -17,54 +17,31 @@ jobs:
           ref: main
           token: ${{ secrets.PAT_YTLM_TOKEN }}
 
-      - name: Backup YTM Workflow File
-        run: cp .github/workflows/ytm.yml .github/workflows/ytm_backup.yml
-
-      - name: Read Channel Info
+      - name: Search and Remove Git Steps
         run: |
-          while IFS= read -r line; do
-            channel_name=$(echo "$line" | awk -F ', ' '{print $1}' | sed 's/^New: //')
-            group_name=$(echo "$line" | awk -F ', ' '{print $2}' | tr -d ' ')
-            channel_url=$(echo "$line" | awk -F ', ' '{print $3}' | tr -d ' ')
-  
-            if [[ $channel_url == "https://www.youtube.com/"* ]]; then
-              line=$(echo "$line" | sed 's/New:/Added!!/')
-              
-              awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
-                /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
-                END {
-                  print "    - name: " channel_name
-                  print "      run: |"
-                  print "        mkdir -p ./" group_name
-                  print "        touch ./" group_name "/" channel_name ".m3u8"
-                  print "        sudo cat > ./" group_name "/" channel_name ".m3u8 <<EOL"
-                  print "        #EXTM3U"
-                  print "        #EXT-X-VERSION:3"
-                  print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  printf "        $(yt-dlp --print-urls \"%s\")\\\n" channel_url
-                  print "        EOL"
-                  print "    - name: git add"
-                  print "      run: |"
-                  print "        git add -A"
-                  print "        ls -la"
-                  print "    - name: commit & push"
-                  print "      run: |"
-                  print "        git commit -m \"links are updated\""
-                  print "        git push"
-                }
-              ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
+          # Search for and remove the "git add," "commit & push" steps from ytm.yml
+          sed -i '/- name: git add/,/- git push/d' .github/workflows/ytm.yml
 
-              echo "$line"
-            fi
-          done < youtube_channel_info.txt
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8  # Adjust the Python version as needed
 
-      - name: Configure Git
+      - name: Process YouTube Channel Info
         run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
+          python process_youtube_channel_info.py
+          # Replace 'process_youtube_channel_info.py' with the actual script name
 
-      - name: Commit and Push Changes
+      - name: Add Git Steps
         run: |
-          git add .
-          git commit -m "Update YTM workflow"
-          git push
+          # Add git add, commit, and push steps to ytm.yml
+          echo "
+          - name: git add
+            run: |
+              git add -A
+              ls -la
+          - name: commit & push
+            run: |
+              git commit -m \"links are updated\"
+              git push
+          " >> .github/workflows/ytm.yml
