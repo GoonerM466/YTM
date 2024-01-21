@@ -1,4 +1,5 @@
 name: Get YouTube Live m3u8
+
 on:
   schedule:
     - cron: '0 0/1 * * *'
@@ -19,12 +20,16 @@ jobs:
         git config --global user.name "GitHub Action"
     - name: Install yt-dlp
       run: |
-        sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-        sudo chmod a+rx /usr/local/bin/yt-dlp
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        chmod a+rx /usr/local/bin/yt-dlp
     - name: Delay for 10 seconds
       run: sleep 10
 
-# --- NEXT ENTRY GOES BELOW THIS LINE ---
+    - name: Pull latest changes
+      run: git pull origin main
+
+    - name: Rebase changes
+      run: git pull --rebase origin main
 
     - name: Get beINSportsHaber
       run: |
@@ -150,7 +155,6 @@ jobs:
         $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
         EOL
 
-
     - name: Get GBNews
       run: |
         touch ./news/GBNews.m3u8
@@ -161,7 +165,6 @@ jobs:
         $(yt-dlp --print urls https://www.youtube.com/@GBNewsOnline/live)
         EOL
 
-
     - name: git add
       run: |
         git add -A
@@ -169,5 +172,4 @@ jobs:
     - name: commit & push
       run: |
         git commit -m "links are updated"
-        git push
-
+        git push origin main
