@@ -18,23 +18,27 @@ jobs:
 
       - name: Open and Process File
         run: |
-          while IFS=, read -r action line; do
-            if [[ $action == "New: "* ]]; then
-              # Extract channel_name without "New: "
-              channel_name=$(echo "$line" | awk -F ', ' '{print $1}' | sed 's/^New: //')
+          while read -r line; do
+            # Remove "New: " from the line
+            channel_info=$(echo "$line" | sed 's/New: //')
 
-              # Search for channel_name in ytm.yml
-              if grep -q "name: Get $channel_name\b" .github/workflows/ytm.yml; then
-                echo "$channel_name has been added, transferred to log"
-                
-                # Copy line to recently_added_channels.txt
-                echo "$action" >> recently_added_channels.txt
+            # Extract channel_name by finding the first ", " and removing everything after it
+            channel_name=$(echo "$channel_info" | awk -F ', ' '{print $1}')
 
-                # Remove line from youtube_channel_info.txt
-                sed -i "/$action/d" youtube_channel_info.txt
-              else
-                echo "Searched for $channel_name, match not found."
-              fi
+            # Search for channel_name in ytm.yml
+            if grep -q "$channel_name" .github/workflows/ytm.yml; then
+              echo "$channel_name has been added, transferred to log"
+
+              # Copy line to recently_added_channels.txt
+              echo "$line" >> recently_added_channels.txt
+
+              # Remove line from youtube_channel_info.txt
+              sed -i "/$line/d" youtube_channel_info.txt
+            else
+              echo "Searched for $channel_name, match not found."
+
+              # Restore the original line to youtube_channel_info.txt
+              echo "$line" >> youtube_channel_info.txt
             fi
           done < youtube_channel_info.txt
 
