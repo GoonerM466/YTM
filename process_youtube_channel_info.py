@@ -10,7 +10,7 @@ with open('.github/workflows/ytm.yml', 'r') as ytm_file:
     ytm_content = ytm_file.read()
 
 # Search for and remove the "git add," "commit & push" steps
-remove_git_steps = False
+remove_git_steps = True
 filtered_ytm_lines = []
 
 for line in ytm_content.splitlines():
@@ -62,6 +62,18 @@ with open('youtube_channel_info.txt', 'r') as info_file:
                 ytm_file_append.write(new_entry)
 
             new_entries_added = True  # Set the flag to true
+
+# Add git add, commit, and push steps regardless of new entries
+git_steps = """
+- name: git add
+  run: |
+    git add -A
+    ls -la
+- name: commit & push
+  run: |
+    git commit -m "links are updated"
+    git push
+"""
 
 # Append git steps to ytm.yml
 with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
