@@ -47,7 +47,7 @@ jobs:
                   print "        #EXTM3U"
                   print "        #EXT-X-VERSION:3"
                   print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  print "        \$(yt-dlp --print urls " channel_url ")"
+                  printf "        $(yt-dlp --print urls \"%s\")\n", channel_url
                   print "        EOL"
                   print "           "
                   # Add new code here
