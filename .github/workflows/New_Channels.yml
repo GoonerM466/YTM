@@ -38,9 +38,10 @@ jobs:
               # Remove "New: " tag from channel name
               channel_name=$(echo "$channel_name" | sed 's/^New: //')
               
-              # Use awk to insert new entries on line 23 with proper indentation
+              # AWK code to insert new entries at the end of the file
               awk -v channel_name="$channel_name" -v group_name="$group_name" -v channel_url="$channel_url" '
-                NR==23{
+                /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
+                END {
                   print "    - name: " channel_name
                   print "      run: |"
                   print "        mkdir -p ./" group_name
@@ -52,9 +53,17 @@ jobs:
                   print "        \$(yt-dlp --print urls " channel_url ")"
                   print "        EOL"
                   print "           "
-                  next
+                  print ""
+                  print "    - name: git add"
+                  print "      run: |"
+                  print "        git add -A"
+                  print "        ls -la"
+                  print ""
+                  print "    - name: commit & push"
+                  print "      run: |"
+                  print "        git commit -m \"links are updated\""
+                  print "        git push"
                 }
-                NR!=23 { print }
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
               
               # Print the modified line to indicate it has been processed
@@ -69,14 +78,8 @@ jobs:
 
       - name: Modify YTM Workflow File
         run: |
-          # Look for the line containing "- name: git add"
-          sed -i -e '/- name: git add/,${/git commit -m "Update YTM workflow"/d}' .github/workflows/ytm.yml
-
-          # Insert new entries on the same line
-          awk 'NR==/git add/{print "    - name: " channel_name "\n      run: |\n        mkdir -p ./" group_name "\n        touch ./" group_name "/" channel_name ".m3u8\n        sudo cat > ./" group_name "/" channel_name ".m3u8 <<EOL\n        #EXTM3U\n        #EXT-X-VERSION:3\n        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n        \$(yt-dlp --print urls " channel_url ")\n        EOL\n           \n        "}1' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
-
-          # Add 1 blank line between each entry
-          sed -i '/git add/!s/$/\n/' .github/workflows/ytm.yml
+          # Look for the line containing "- name: git add" and replace until the end of the file
+          awk '/- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
 
           # Add the following code after all new entries
           echo "    - name: git add"
@@ -88,12 +91,3 @@ jobs:
           echo "      run: |"
           echo "        git commit -m \"links are updated\""
           echo "        git push"
-
-          # Add 1 blank line after all new entries
-          echo "" >> .github/workflows/ytm.yml
-
-      - name: Commit and Push Changes
-        run: |
-          git add .
-          git commit -m "Update YTM workflow"
-          git push
