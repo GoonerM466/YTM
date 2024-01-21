@@ -8,6 +8,14 @@ def channel_exists(channel_name, ytm_content):
 with open('.github/workflows/ytm.yml', 'r') as ytm_file:
     ytm_content = ytm_file.read()
 
+# Find the last entry in ytm.yml
+last_entry_match = re.search(r'^\s*-\s+name:\s+([^ ]+)', ytm_content, re.MULTILINE | re.DOTALL)
+if last_entry_match:
+    last_entry_start = last_entry_match.start()
+
+# Adjust indentation for existing content
+ytm_content_adjusted = ytm_content[:last_entry_start]
+
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
     new_entries_added = False  # Flag to track if new entries are added
@@ -41,13 +49,13 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 """
 
             # Append new entry to ytm.yml
-            ytm_content += new_entry
+            ytm_content_adjusted += new_entry
 
             new_entries_added = True  # Set the flag to true
 
 # Write the modified ytm.yml content back to the file
 with open('.github/workflows/ytm.yml', 'w') as ytm_file:
-    ytm_file.write(ytm_content)
+    ytm_file.write(ytm_content_adjusted)
 
 # Print a message indicating the script has finished
 print("Script completed.")
