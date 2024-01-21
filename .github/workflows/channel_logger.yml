@@ -24,7 +24,7 @@ jobs:
               channel_name=$(echo "$channel_info" | sed 's/New: //;s/,.*//')
 
               # Search for channel_name in ytm.yml
-              if grep -q "$channel_name" .github/workflows/ytm.yml; then
+              if grep -q "name: Get $channel_name" .github/workflows/ytm.yml; then
                 echo "$channel_name has been added, transferred to log"
                 
                 # Copy line to recently_added_channels.txt
