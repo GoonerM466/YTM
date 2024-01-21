@@ -39,24 +39,24 @@ jobs:
               awk -v channel_name="$channel_name" -v group_name="$group_name" -v escaped_url="$escaped_url" '
                 /- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag {print}
                 END {
-                  print "    - name: " channel_name
-                  print "      run: |"
-                  print "        mkdir -p ./" group_name
-                  print "        touch ./" group_name "/" channel_name ".m3u8"
-                  print "        sudo cat > ./" group_name "/" channel_name ".m3u8 <<EOL"
-                  print "        #EXTM3U"
-                  print "        #EXT-X-VERSION:3"
-                  print "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                  print "        $(yt-dlp --print urls \"" escaped_url "\")"
-                  print "        EOL"
-                  print "    - name: git add"
-                  print "      run: |"
-                  print "        git add -A"
-                  print "        ls -la"
-                  print "    - name: commit & push"
-                  print "      run: |"
-                  print "        git commit -m \x22links are updated\x22"
-                  print "        git push"
+                  printf "    - name: %s\n", channel_name
+                  printf "      run: |\n"
+                  printf "        mkdir -p ./%s\n", group_name
+                  printf "        touch ./%s/%s.m3u8\n", group_name, channel_name
+                  printf "        sudo cat > ./%s/%s.m3u8 <<EOL\n", group_name, channel_name
+                  printf "        #EXTM3U\n"
+                  printf "        #EXT-X-VERSION:3\n"
+                  printf "        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n"
+                  printf "        $(yt-dlp --print urls \"%s\")\n", escaped_url
+                  printf "        EOL\n"
+                  printf "    - name: git add\n"
+                  printf "      run: |\n"
+                  printf "        git add -A\n"
+                  printf "        ls -la\n"
+                  printf "    - name: commit & push\n"
+                  printf "      run: |\n"
+                  printf "        git commit -m \"links are updated\"\n"
+                  printf "        git push\n"
                 }
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
               
