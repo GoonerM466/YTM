@@ -36,14 +36,14 @@ jobs:
         run: |
           # Add git add, commit, and push steps to ytm.yml
           echo "
-          - name: git add
-            run: |
-              git add -A
-              ls -la
-          - name: commit & push
-            run: |
-              git commit -m \"links are updated\"
-              git push
+              - name: git add
+                run: |
+                  git add -A
+                  ls -la
+              - name: commit & push
+                run: |
+                  git commit -m \"links are updated\"
+                  git push
           " >> .github/workflows/ytm.yml
           
       - name: Configure Git
