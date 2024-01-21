@@ -141,6 +141,17 @@ jobs:
         $(yt-dlp --print urls https://www.youtube.com/@FobosPlanet/live)
         EOL
      
+    - name: DPWorldTour
+      run: |
+        mkdir -p ./spor
+        touch ./spor/DPWorldTour.m3u8
+        sudo cat > ./spor/DPWorldTour.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
+        EOL
+           
     - name: git add
       run: |
         git add -A
