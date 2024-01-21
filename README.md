@@ -6,8 +6,8 @@ New: test_channel_1, catagory_name, https://www.youtube.com/@test_channel_1/live
 
 Each new entry should be on a new line. 
 
-The script will notice chanes have been requested and pull the new channels into the scraper.
-Once the scraper completes its task, the combines m3u will be built.
+The script will notice new channels have been requested and pull the new channels into the scraper.
+Once the scraper completes its task, the combined m3u will be built.
 Finally, the new channels file will be cleaned, the new entries will be added to the log (recently_added_channels.txt), the date & time the streams were added will be noted, and the streams will be sorted by catagory/name.
 
 This is my first go at scripting, so Im sure its not very effecient, but it works - and took me hours!!
