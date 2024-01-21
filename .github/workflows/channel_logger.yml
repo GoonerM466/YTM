@@ -21,22 +21,22 @@ jobs:
           while read -r line; do
             # Remove "New: " from the line
             channel_info=$(echo "$line" | sed 's/New: //')
-
+  
             # Extract channel_name by finding the first ", " and removing everything after it
             channel_name=$(echo "$channel_info" | awk -F ', ' '{print $1}')
-
+  
             # Search for channel_name in ytm.yml
             if grep -q "$channel_name" .github/workflows/ytm.yml; then
               echo "$channel_name has been added, transferred to log"
-
+  
               # Copy line to recently_added_channels.txt
               echo "$line" >> recently_added_channels.txt
-
+  
               # Remove line from youtube_channel_info.txt
-              sed -i "/$line/d" youtube_channel_info.txt
+              grep -v "$line" youtube_channel_info.txt > tmpfile && mv tmpfile youtube_channel_info.txt
             else
               echo "Searched for $channel_name, match not found."
-
+  
               # Restore the original line to youtube_channel_info.txt
               echo "$line" >> youtube_channel_info.txt
             fi
