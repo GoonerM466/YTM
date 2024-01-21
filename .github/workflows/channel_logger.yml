@@ -54,5 +54,5 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add .
-          git commit -m "Update Channel Logger Workflow"
-          git push
+          git commit -m "Update Channel Logger Workflow" || true
+          git push || true
