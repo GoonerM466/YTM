@@ -157,18 +157,7 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
         EOL
-           
-    - name: GBNews
-      run: |
-        mkdir -p ./news
-        touch ./news/GBNews.m3u8
-        sudo cat > ./news/GBNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls "%s")
- https://www.youtube.com/@GBNewsOnline/live
-        EOL
+
     - name: git add
       run: |
         git add -A
