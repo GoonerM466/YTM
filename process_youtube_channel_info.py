@@ -75,9 +75,6 @@ git_steps = """
         git push
 """
 
-# Append git steps to ytm.yml
-with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
-    ytm_file_append.write(git_steps)
 
 # Print a message indicating the script has finished
 print("Script completed.")
