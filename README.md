@@ -1,6 +1,7 @@
 This script pulls live streams from youtube, outputs the pulled streams into a m3u and logs new channels added & when.
 
 New channels can be added to the "youtube_channel_info.txt" file in the follwoing format:
+
 New: test_channel_1, catagory_name, https://www.youtube.com/@test_channel_1/live
 
 Each new entry should be on a new line. 
