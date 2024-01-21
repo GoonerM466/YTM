@@ -50,6 +50,15 @@ jobs:
                   print "        \$(yt-dlp --print urls " channel_url ")"
                   print "        EOL"
                   print "           "
+                  # Add new code here
+                  print "    - name: git add"
+                  print "      run: |"
+                  print "        git add -A"
+                  print "        ls -la"
+                  print "    - name: commit & push"
+                  print "      run: |"
+                  print "        git commit -m 'links are updated'"
+                  print "        git push"
                 }
               ' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
               
@@ -63,24 +72,6 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
 
-      - name: Modify YTM Workflow File
-        run: |
-          # Look for the line containing "- name: git add" and replace until the end of the file
-          awk '/- name: git add/{flag=1; next} /git commit -m "Update YTM workflow"/{flag=0} !flag' .github/workflows/ytm.yml > temp.yml && mv temp.yml .github/workflows/ytm.yml
-
-      - name: Add git add and commit & push at the end
-        run: |
-          echo ""
-          echo "    - name: git add"
-          echo "      run: |"
-          echo "        git add -A"
-          echo "        ls -la"
-          echo ""
-          echo "    - name: commit & push"
-          echo "      run: |"
-          echo "        git commit -m \"links are updated\""
-          echo "        git push"
-          
       - name: Commit and Push Changes
         run: |
           git add .
