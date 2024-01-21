@@ -1,4 +1,4 @@
 New: GBNews, news, https://www.youtube.com/@GBNewsOnline/live
-New: test1, news, https://www.youtube.com/test1/live
-New: test2, news, https://www.youtube.com/test2/live
-New: test3, news, https://www.youtube.com/test3/live
+New: test10, news, https://www.youtube.com/test10/live
+New: test20, news, https://www.youtube.com/test20/live
+New: test30, news, https://www.youtube.com/test30/live
