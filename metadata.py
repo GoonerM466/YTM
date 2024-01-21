@@ -4,7 +4,14 @@ from bs4 import BeautifulSoup
 import yaml
 import re
 from xml.etree.ElementTree import Element, SubElement, tostring, ElementTree
-from googleapiclient.discovery import build
+
+# Try to import googleapiclient, and install it if not present
+try:
+    from googleapiclient.discovery import build
+except ImportError:
+    print("google-api-python-client not found. Installing...")
+    os.system("pip install google-api-python-client")
+    from googleapiclient.discovery import build
 
 # Function to get channel logo from YouTube Data API
 def get_channel_logo(api_key, channel_id):
