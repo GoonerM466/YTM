@@ -1,4 +1,4 @@
-name: Log updated new channels
+name: Update YTM Workflow
 
 on:
   push:
@@ -18,8 +18,11 @@ jobs:
 
       - name: Open and Process File
         run: |
-          while IFS=, read -r action channel_name group_name channel_url; do
+          while IFS=, read -r action channel_info; do
             if [[ $action == "New: "* ]]; then
+              # Extract channel_name without "New: "
+              channel_name=$(echo "$channel_info" | sed 's/New: //')
+
               # Search for channel_name in ytm.yml
               if grep -q "$channel_name" .github/workflows/ytm.yml; then
                 echo "$channel_name has been added, transferred to log"
@@ -28,7 +31,7 @@ jobs:
                 echo "$action" >> recently_added_channels.txt
 
                 # Remove line from youtube_channel_info.txt
-                sed -i "/$channel_name/d" youtube_channel_info.txt
+                sed -i "/$channel_info/d" youtube_channel_info.txt
               fi
             fi
           done < youtube_channel_info.txt
