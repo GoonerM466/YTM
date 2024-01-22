@@ -21,7 +21,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # If you have any dependencies
+        # Remove the line below if you don't have any dependencies
+        # pip install -r requirements.txt
 
     - name: Execute script and generate XMLTV
       run: python generate_xmltv.py > combined_epg.xml
