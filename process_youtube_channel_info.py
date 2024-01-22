@@ -1,12 +1,12 @@
 import re
 
-# Function to check if $channel_name exists in ytm.yml
-def channel_exists(channel_name, ytm_content):
-    return re.search(fr'\s*channel_name:\s*{channel_name}\b', ytm_content) is not None
+# Function to check if $channel_name exists in current_channels.txt
+def channel_exists(channel_name, current_channels_content):
+    return re.search(fr'\s*{channel_name},', current_channels_content) is not None
 
-# Read ytm.yml content
-with open('.github/workflows/ytm.yml', 'r') as ytm_file:
-    ytm_content = ytm_file.read()
+# Read current_channels.txt content
+with open('current_channels.txt', 'r') as current_channels_file:
+    current_channels_content = current_channels_file.read()
 
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
@@ -19,30 +19,18 @@ with open('youtube_channel_info.txt', 'r') as info_file:
             _, channel_info = parts
             channel_name, channel_group, channel_url = channel_info.split(', ', 2)
 
-            # Check if the channel exists in ytm.yml
-            if channel_exists(channel_name, ytm_content):
-                print(f"Channel '{channel_name}' already exists in ytm.yml. Skipping...")
+            # Check if the channel exists in current_channels.txt
+            if channel_exists(channel_name, current_channels_content):
+                print(f"Channel '{channel_name}' already exists in current_channels.txt. Skipping...")
                 continue
 
-            # Process the channel information and add entry to ytm.yml
+            # Process the channel information and add entry to current_channels.txt
             print(f"Processing new channel: {channel_name}, {channel_group}, {channel_url}")
 
-            # Add entry to ytm.yml
-            new_entry = f"""
-    - name: Get {channel_name}
-      run: |
-        touch ./{channel_group}/{channel_name}.m3u8
-        sudo cat >./{channel_group}/{channel_name}.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --force-generic-extractor --get-url {channel_url})
-        EOL
-"""
-
-            # Append new entry to ytm.yml
-            with open('.github/workflows/ytm.yml', 'a') as ytm_file_append:
-                ytm_file_append.write(new_entry)
+            # Add entry to current_channels.txt
+            new_entry = f"{channel_name}, {channel_group}, {channel_url}\n"
+            with open('current_channels.txt', 'a') as current_channels_file_append:
+                current_channels_file_append.write(new_entry)
 
             new_entries_added = True  # Set the flag to true
 
