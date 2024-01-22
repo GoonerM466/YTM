@@ -5,13 +5,9 @@ on:
     - cron: '0 0/1 * * *'
   workflow_dispatch:
   workflow_run:
-    workflows:
-      - "Delete M3U8 Files"
-      - "New Channel Scrape Workflow"
+    workflows: ["New Channel Scrape Workflow"]
     types:
       - completed
-    branches:
-      - main
 
 jobs:
   build:
@@ -38,152 +34,18 @@ jobs:
     - name: Create current_channels directory
       run: mkdir -p ./current_channels
 
-    - name: Get beINSportsHaber
+    - name: Read channel information from current_channels.txt
       run: |
-        mkdir -p ./current_channels/spor
-        touch ./current_channels/spor/beinsportshaber.m3u8
-        sudo cat >./current_channels/spor/beinsportshaber.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/live)
-        EOL
-    - name: Get AFCAsianCup
-      run: |
-        mkdir -p ./current_channels/spor
-        touch ./current_channels/spor/AFCAsianCup.m3u8
-        sudo cat >./current_channels/spor/AFCAsianCup.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/live)
-        EOL
-    - name: Get talkSPORT
-      run: |
-        mkdir -p ./current_channels/spor
-        touch ./current_channels/spor/talkSPORT.m3u8
-        sudo cat >./current_channels/spor/talkSPORT.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@talkSPORT/live)
-        EOL
-    - name: Get EERIEISSSS
-      run: |
-        mkdir -p ./current_channels/ytl
-        touch ./current_channels/ytl/EERIEISSSS.m3u8
-        sudo cat >./current_channels/ytl/EERIEISSSS.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@EERIEISSSS/live)
-        EOL
-    - name: Get JimmyBroadbent
-      run: |
-        mkdir -p ./current_channels/ytl
-        touch ./current_channels/ytl/JimmyBroadbent.m3u8
-        sudo cat >./current_channels/ytl/JimmyBroadbent.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@Jimmy_Broadbent/live)
-        EOL
-    - name: Get DeadEyeDelBoy
-      run: |
-        mkdir -p ./current_channels/ytl
-        touch ./current_channels/ytl/DeadEyeDelBoy.m3u8
-        sudo cat >./current_channels/ytl/DeadEyeDelBoy.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@deadeyedelboy/live)
-        EOL
-        
-    - name: Get NBCNews
-      run: |
-        mkdir -p ./current_channels/news
-        touch ./current_channels/news/NBCNews.m3u8
-        sudo cat >./current_channels/news/NBCNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@NBCNews/live)
-        EOL
-    - name: Get SkyNews
-      run: |
-        mkdir -p ./current_channels/news
-        touch ./current_channels/news/SkyNews.m3u8
-        sudo cat >./current_channels/news/SkyNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@SkyNews/live)
-        EOL
-        
-    - name: Get ABCNews
-      run: |
-        mkdir -p ./current_channels/news
-        touch ./current_channels/news/ABCNews.m3u8
-        sudo cat >./current_channels/news/ABCNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@ABCNews/live)
-        EOL
-        
-    - name: Get HitsRadio
-      run: |
-        mkdir -p ./current_channels/music
-        touch ./current_channels/music/HitsRadio.m3u8
-        sudo cat >./current_channels/music/HitsRadio.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/watch?v=HQtFR3mhzOY)
-        EOL
-        
-    - name: Get Classic80s
-      run: |
-        mkdir -p ./current_channels/music
-        touch ./current_channels/music/Classic80s.m3u8
-        sudo cat >./current_channels/music/Classic80s.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@classicmusic-top1/live)
-        EOL
-    - name: Get FobosPlanet
-      run: |
-        mkdir -p ./current_channels/music
-        touch ./current_channels/music/FobosPlanet.m3u8
-        sudo cat >./current_channels/music/FobosPlanet.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@FobosPlanet/live)
-        EOL
-     
-    - name: DPWorldTour
-      run: |
-        mkdir -p ./current_channels/spor
-        touch ./current_channels/spor/DPWorldTour.m3u8
-        sudo cat > ./current_channels/spor/DPWorldTour.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
-        EOL
-
-    - name: Get GBNews
-      run: |
-        mkdir -p ./current_channels/news
-        touch ./current_channels/news/GBNews.m3u8
-        sudo cat >./current_channels/news/GBNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --print urls https://www.youtube.com/@GBNewsOnline/live)
-        EOL
+        while IFS=, read -r channel_name group channel_url; do
+          mkdir -p "./current_channels/$group"
+          touch "./current_channels/$group/$channel_name.m3u8"
+          sudo cat >"./current_channels/$group/$channel_name.m3u8" <<EOL
+          #EXTM3U
+          #EXT-X-VERSION:3
+          #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+          $(yt-dlp --print urls "$channel_url")
+          EOL
+        done < current_channels.txt
 
     - name: git add
       run: |
