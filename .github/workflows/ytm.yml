@@ -20,7 +20,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-
+          
       - name: Install yt-dlp
         run: |
           curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
@@ -32,36 +32,37 @@ jobs:
       - name: Check and update live channels
         run: |
           all_channels=(
-            "beinsportshaber"
-            "AFCAsianCup"
-            "talkSPORT"
-            "EERIEISSSS"
-            "Jimmy_Broadbent"
-            "deadeyedelboy"
-            "NBCNews"
-            "SkyNews"
-            "ABCNews"
-            "HitsRadio"
-            "classicmusic-top1"
-            "FobosPlanet"
-            "DPWorldTour"
-            "GBNewsOnline"
+            "beinsportshaber,sports,https://www.youtube.com/@beinsportsturkiye/live"
+            "AFCAsianCup,sports,https://www.youtube.com/@AFCAsianCup/live"
+            "talkSPORT,sports,https://www.youtube.com/@talkSPORT/live"
+            "EERIEISSSS,entertainment,https://www.youtube.com/@EERIEISSSS/live"
+            "Jimmy_Broadbent,gaming,https://www.youtube.com/@Jimmy_Broadbent/live"
+            "deadeyedelboy,gaming,https://www.youtube.com/@deadeyedelboy/live"
+            "NBCNews,news,https://www.youtube.com/@NBCNews/live"
+            "SkyNews,news,https://www.youtube.com/@SkyNews/live"
+            "ABCNews,news,https://www.youtube.com/@ABCNews/live"
+            "HitsRadio,music,https://www.youtube.com/@HitsRadio/live"
+            "classicmusic-top1,music,https://www.youtube.com/@classicmusic-top1/live"
+            "FobosPlanet,science,https://www.youtube.com/@FobosPlanet/live"
+            "DPWorldTour,sports,https://www.youtube.com/@DPWorldTour/live"
+            "GBNewsOnline,news,https://www.youtube.com/@GBNewsOnline/live"
           )
           
-          for channel in "${all_channels[@]}"; do
-            live_status=$(yt-dlp --print live "https://www.youtube.com/@$channel")
+          for channel_info in "${all_channels[@]}"; do
+            IFS=',' read -r channel_name channel_group channel_url <<< "$channel_info"
+            live_status=$(yt-dlp --print live "$channel_url")
             
             if [ "$live_status" = "true" ]; then
-              echo "Live stream found! Added to $channel.m3u8"
-              touch ./$channel/$channel.m3u8
-              sudo cat > ./$channel/$channel.m3u8 <<EOL
+              echo "Live stream found! Added to $channel_name.m3u8"
+              touch ./$channel_name/$channel_name.m3u8
+              sudo cat > ./$channel_name/$channel_name.m3u8 <<EOL
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-$(yt-dlp --print urls "https://www.youtube.com/@$channel/live")
+$(yt-dlp --print urls "$channel_url/live")
 EOL
             else
-              schedule_time=$(yt-dlp --print scheduledStartTime "https://www.youtube.com/@$channel")
+              schedule_time=$(yt-dlp --print scheduledStartTime "$channel_url")
               echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
             fi
           done
