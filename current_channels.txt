@@ -11,5 +11,3 @@ HitsRadio, music, https://www.youtube.com/@HitsRadio/live
 classicmusic-top1, music, https://www.youtube.com/@classicmusic-top1/live
 FobosPlanet, science, https://www.youtube.com/@FobosPlanet/live
 DPWorldTour, sports, https://www.youtube.com/@DPWorldTour/live
-
-GBNews, news, https://www.youtube.com/@GBNewsOnline/live
