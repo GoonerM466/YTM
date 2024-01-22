@@ -45,6 +45,10 @@ jobs:
             echo "#EXTM3U"
             echo "#EXT-X-VERSION:3"
             echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
+            live_status=$(yt-dlp --print urls "$channel_url" | grep -q "live" && echo "live" || echo "not live")
+            if [ "$live_status" = "live" ]; then
+              echo "$channel_name is live! Updating $channel_name.m3u8 with the current live stream!"
+            fi
             yt-dlp --print urls "$channel_url"
           } | sudo tee "./current_channels/$group/$channel_name.m3u8" >/dev/null
         done < current_channels.txt
