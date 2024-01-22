@@ -1,5 +1,6 @@
 import re
 from datetime import datetime, timedelta
+from xml.etree import ElementTree as ET
 
 def parse_live_status(line):
     # Parse the information from the live_status.txt line
@@ -36,10 +37,6 @@ def main():
     with open('live_status.txt', 'r') as file:
         lines = file.readlines()
 
-    header = '''<?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="none" generator-info-url="none">
-'''
-
     channel_info = ""
     program_info = ""
 
@@ -51,11 +48,27 @@ def main():
             program_info += generate_program_info(channel_name, live_status, time_str)
 
     # Combine all information into the final XMLTV content
-    xmltv_content = f"{header}{channel_info}{program_info}</tv>"
+    xmltv_content = f"<tv generator-info-name=\"none\" generator-info-url=\"none\">\n{channel_info}{program_info}</tv>"
 
-    # Remove contents of combined_epg.xml before writing new data
-    with open('combined_epg.xml', 'w') as output_file:
-        output_file.write(xmltv_content)
+    # Load existing program information from combined_epg.xml
+    try:
+        tree = ET.parse('combined_epg.xml')
+        root = tree.getroot()
+        for program in root.findall(".//programme"):
+            # Check if the end time is more than 12 hours ago
+            end_time = datetime.strptime(program.attrib['stop'], '%Y%m%d%H%M%S %z')
+            if (datetime.utcnow() - end_time) > timedelta(hours=12):
+                root.remove(program)
+    except (ET.ParseError, FileNotFoundError):
+        # Handle the case where the file is not found or cannot be parsed
+        pass
+
+    # Add the new content to the existing program information
+    root.extend(ET.fromstring(xmltv_content))
+
+    # Write the updated information to combined_epg.xml
+    tree = ET.ElementTree(root)
+    tree.write('combined_epg.xml', encoding='utf-8', xml_declaration=True)
 
 if __name__ == '__main__':
     main()
