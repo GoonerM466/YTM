@@ -1,6 +1,5 @@
 import re
 from datetime import datetime, timedelta
-from xml.etree import ElementTree as ET
 
 def parse_live_status(line):
     # Parse the information from the live_status.txt line
@@ -34,16 +33,12 @@ def generate_program_info(channel_name, live_status, time_str):
 '''
 
 def main():
-    try:
-        # Attempt to parse the existing XMLTV file
-        tree = ET.parse('combined_epg.xml')
-        root = tree.getroot()
-    except (ET.ParseError, FileNotFoundError):
-        # Handle the case where the file is not found or cannot be parsed
-        root = ET.Element('tv', attrib={'generator-info-name': 'none', 'generator-info-url': 'none'})
-
     with open('live_status.txt', 'r') as file:
         lines = file.readlines()
+
+    header = '''<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+'''
 
     channel_info = ""
     program_info = ""
@@ -55,13 +50,9 @@ def main():
             channel_info += generate_channel_info(channel_name)
             program_info += generate_program_info(channel_name, live_status, time_str)
 
-    # Create a new root element and add the channel and program information
-    new_root = ET.Element('tv', attrib={'generator-info-name': 'none', 'generator-info-url': 'none'})
-    new_root.extend(ET.fromstring(channel_info + program_info))
-
-    # Write the updated information to combined_epg.xml
-    tree = ET.ElementTree(new_root)
-    tree.write('combined_epg.xml', encoding='utf-8', xml_declaration=True)
+    # Combine all information into the final XMLTV content
+    xmltv_content = f"{header}{channel_info}{program_info}</tv>"
+    print(xmltv_content)
 
 if __name__ == '__main__':
     main()
