@@ -13,32 +13,163 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: config
-        run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-      - name: Install latest yt-dlp
-        run: |
-          curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-          chmod a+rx /usr/local/bin/yt-dlp
-      - name: Install jq
-        run: |
-          sudo apt-get update
-          sudo apt-get install jq
-      - name: Pull latest changes
-        run: git pull origin main
-      - name: Rebase changes
-        run: git pull --rebase origin main
-      - name: Set execute permissions for check_channels.sh
-        run: chmod +x check_channels.sh
-      - name: Run check_channels.sh
-        run: bash check_channels.sh
-      - name: git add
-        run: |
-          git add -A
-          ls -la
-      - name: commit & push
-        run: |
-          git diff --cached --quiet || git commit -m "links are updated"
-          git push origin main
+    - uses: actions/checkout@v2
+    - name: config
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+    - name: Install yt-dlp
+      run: |
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        chmod a+rx /usr/local/bin/yt-dlp
+    - name: Delay for 10 seconds
+      run: sleep 10
+
+    - name: Pull latest changes
+      run: git pull origin main
+
+    - name: Rebase changes
+      run: git pull --rebase origin main
+
+    - name: Get beINSportsHaber
+      run: |
+        touch ./current_channels/spor/beinsportshaber.m3u8
+        sudo cat >./current_channels/spor/beinsportshaber.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@beinsportsturkiye/live)
+        EOL
+    - name: Get AFCAsianCup
+      run: |
+        touch ./current_channels/spor/AFCAsianCup.m3u8
+        sudo cat >./current_channels/spor/AFCAsianCup.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@AFCAsianCup/live)
+        EOL
+    - name: Get talkSPORT
+      run: |
+        touch ./current_channels/spor/talkSPORT.m3u8
+        sudo cat >./current_channels/spor/talkSPORT.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@talkSPORT/live)
+        EOL
+    - name: Get EERIEISSSS
+      run: |
+        touch ./current_channels/ytl/EERIEISSSS.m3u8
+        sudo cat >./current_channels/ytl/EERIEISSSS.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@EERIEISSSS/live)
+        EOL
+    - name: Get JimmyBroadbent
+      run: |
+        touch ./current_channels/ytl/JimmyBroadbent.m3u8
+        sudo cat >./current_channels/ytl/JimmyBroadbent.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@Jimmy_Broadbent/live)
+        EOL
+    - name: Get DeadEyeDelBoy
+      run: |
+        touch ./current_channels/ytl/DeadEyeDelBoy.m3u8
+        sudo cat >./current_channels/ytl/DeadEyeDelBoy.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@deadeyedelboy/live)
+        EOL
+        
+    - name: Get NBCNews
+      run: |
+        touch ./current_channels/news/NBCNews.m3u8
+        sudo cat >./current_channels/news/NBCNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@NBCNews/live)
+        EOL
+    - name: Get SkyNews
+      run: |
+        touch ./current_channels/news/SkyNews.m3u8
+        sudo cat >./current_channels/news/SkyNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@SkyNews/live)
+        EOL
+        
+    - name: Get ABCNews
+      run: |
+        touch ./current_channels/news/ABCNews.m3u8
+        sudo cat >./current_channels/news/ABCNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@ABCNews/live)
+        EOL
+        
+    - name: Get HitsRadio
+      run: |
+        touch ./current_channels/music/HitsRadio.m3u8
+        sudo cat >./current_channels/music/HitsRadio.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/watch?v=HQtFR3mhzOY)
+        EOL
+        
+    - name: Get Classic80s
+      run: |
+        touch ./current_channels/music/Classic80s.m3u8
+        sudo cat >./current_channels/music/Classic80s.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@classicmusic-top1/live)
+        EOL
+    - name: Get FobosPlanet
+      run: |
+        touch ./current_channels/music/FobosPlanet.m3u8
+        sudo cat >./current_channels/music/FobosPlanet.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@FobosPlanet/live)
+        EOL
+     
+    - name: DPWorldTour
+      run: |
+        mkdir -p ./current_channels/spor
+        touch ./current_channels/spor/DPWorldTour.m3u8
+        sudo cat > ./current_channels/spor/DPWorldTour.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls "https://www.youtube.com/@DPWorldTour/live")
+        EOL
+
+    - name: Get GBNews
+      run: |
+        touch ./current_channels/news/GBNews.m3u8
+        sudo cat >./current_channels/news/GBNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp --print urls https://www.youtube.com/@GBNewsOnline/live)
+        EOL
+
+    - name: git add
+      run: |
+        git add -A
+        ls -la
+    - name: commit & push
+      run: |
+        git diff --cached --quiet || git commit -m "links are updated"
+        git push origin main
