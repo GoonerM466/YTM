@@ -79,7 +79,9 @@ def main():
             root.remove(program)
 
     # Append new program entries
-    root.extend(ET.fromstring(program_info))
+    new_programs = ET.fromstring(program_info)
+    for program in new_programs:
+        root.append(program)
 
     # Combine all information into the final XMLTV content
     xmltv_content = f"{header}{ET.tostring(root).decode('utf-8')}</tv>"
