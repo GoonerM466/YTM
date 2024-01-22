@@ -1,2 +1,156 @@
-<?xml version='1.0' encoding='utf-8'?>
-<tv generator_info_name="none" generator_info_url="none" />
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="beinsportshaber">
+    <display-name lang="en">beinsportshaber</display-name>
+  </channel>
+
+  <programme start="20240122212432 +0000" stop="20240123002432 +0000" channel="beinsportshaber">
+    <title lang="en">Live</title>
+    <desc lang="en">beinsportshaber is currently streaming live! Tune in & enjoy!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="AFCAsianCup">
+    <display-name lang="en">AFCAsianCup</display-name>
+  </channel>
+
+  <programme start="20240122212436 +0000" stop="20240123002436 +0000" channel="AFCAsianCup">
+    <title lang="en">Not Live</title>
+    <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="talkSPORT">
+    <display-name lang="en">talkSPORT</display-name>
+  </channel>
+
+  <programme start="20240122212440 +0000" stop="20240123002440 +0000" channel="talkSPORT">
+    <title lang="en">Not Live</title>
+    <desc lang="en">talkSPORT is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="EERIEISSSS">
+    <display-name lang="en">EERIEISSSS</display-name>
+  </channel>
+
+  <programme start="20240122212442 +0000" stop="20240123002442 +0000" channel="EERIEISSSS">
+    <title lang="en">Not Live</title>
+    <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="Jimmy_Broadbent">
+    <display-name lang="en">Jimmy_Broadbent</display-name>
+  </channel>
+
+  <programme start="20240122212444 +0000" stop="20240123002444 +0000" channel="Jimmy_Broadbent">
+    <title lang="en">Not Live</title>
+    <desc lang="en">Jimmy_Broadbent is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="deadeyedelboy">
+    <display-name lang="en">deadeyedelboy</display-name>
+  </channel>
+
+  <programme start="20240122212446 +0000" stop="20240123002446 +0000" channel="deadeyedelboy">
+    <title lang="en">Not Live</title>
+    <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="NBCNews">
+    <display-name lang="en">NBCNews</display-name>
+  </channel>
+
+  <programme start="20240122212450 +0000" stop="20240123002450 +0000" channel="NBCNews">
+    <title lang="en">Live</title>
+    <desc lang="en">NBCNews is currently streaming live! Tune in & enjoy!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="SkyNews">
+    <display-name lang="en">SkyNews</display-name>
+  </channel>
+
+  <programme start="20240122212454 +0000" stop="20240123002454 +0000" channel="SkyNews">
+    <title lang="en">Live</title>
+    <desc lang="en">SkyNews is currently streaming live! Tune in & enjoy!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="ABCNews">
+    <display-name lang="en">ABCNews</display-name>
+  </channel>
+
+  <programme start="20240122212458 +0000" stop="20240123002458 +0000" channel="ABCNews">
+    <title lang="en">Live</title>
+    <desc lang="en">ABCNews is currently streaming live! Tune in & enjoy!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="HitsRadio">
+    <display-name lang="en">HitsRadio</display-name>
+  </channel>
+
+  <programme start="20240122212500 +0000" stop="20240123002500 +0000" channel="HitsRadio">
+    <title lang="en">Not Live</title>
+    <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="FobosPlanet">
+    <display-name lang="en">FobosPlanet</display-name>
+  </channel>
+
+  <programme start="20240122212509 +0000" stop="20240123002509 +0000" channel="FobosPlanet">
+    <title lang="en">Live</title>
+    <desc lang="en">FobosPlanet is currently streaming live! Tune in & enjoy!</desc>
+  </programme>
+
+</tv>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+  <channel id="DPWorldTour">
+    <display-name lang="en">DPWorldTour</display-name>
+  </channel>
+
+  <programme start="20240122212513 +0000" stop="20240123002513 +0000" channel="DPWorldTour">
+    <title lang="en">Not Live</title>
+    <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
+
+</tv>
+
