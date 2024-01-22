@@ -28,24 +28,37 @@ jobs:
       - name: Check and update live channels
         run: |
           all_channels=(
-            "beinsportshaber,spor,https://www.youtube.com/@beinsportsturkiye"
-            "AFCAsianCup,spor,https://www.youtube.com/@AFCAsianCup"
-            "talkSPORT,spor,https://www.youtube.com/@talkSPORT"
-            "EERIEISSSS,ytl,https://www.youtube.com/@EERIEISSSS"
-            "Jimmy_Broadbent,ytl,https://www.youtube.com/@Jimmy_Broadbent"
-            "deadeyedelboy,ytl,https://www.youtube.com/@deadeyedelboy"
-            "NBCNews,news,https://www.youtube.com/@NBCNews"
-            "SkyNews,news,https://www.youtube.com/@SkyNews"
-            "ABCNews,news,https://www.youtube.com/@ABCNews"
-            "HitsRadio,music,https://www.youtube.com/watch?v=HQtFR3mhzOY"
-            "classicmusic-top1,music,https://www.youtube.com/@classicmusic-top1/live"
-            "FobosPlanet,music,https://www.youtube.com/@FobosPlanet/live"
-            "DPWorldTour,spor,https://www.youtube.com/@DPWorldTour/live"
-            "GBNewsOnline,news,https://www.youtube.com/@GBNewsOnline/live"
+            "beinsportshaber"
+            "AFCAsianCup"
+            "talkSPORT"
+            "EERIEISSSS"
+            "Jimmy_Broadbent"
+            "deadeyedelboy"
+            "NBCNews"
+            "SkyNews"
+            "ABCNews"
+            "HitsRadio"
+            "classicmusic-top1"
+            "FobosPlanet"
+            "DPWorldTour"
+            "GBNewsOnline"
           )
-
-          for channel_info in "${all_channels[@]}"; do
-            ./update_channels.sh "$channel_info"
+          for channel in "${all_channels[@]}"; do
+            live_status=$(yt-dlp --print live https://www.youtube.com/@$channel)
+            
+            if [ "$live_status" = "true" ]; then
+              echo "Live stream found! Added to $channel.m3u8"
+              touch ./$channel/$channel.m3u8
+              sudo cat > ./$channel/$channel.m3u8 <<EOL
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+$(yt-dlp --print urls https://www.youtube.com/@$channel/live)
+EOL
+            else
+              schedule_time=$(yt-dlp --print scheduledStartTime https://www.youtube.com/@$channel)
+              echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
+            fi
           done
 
       - name: git add
