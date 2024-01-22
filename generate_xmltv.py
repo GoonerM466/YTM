@@ -1,3 +1,9 @@
+import re
+from datetime import datetime, timedelta
+import xml.etree.ElementTree as ET
+
+# ... (rest of the functions remain the same)
+
 def main():
     # Read the existing XMLTV file
     try:
