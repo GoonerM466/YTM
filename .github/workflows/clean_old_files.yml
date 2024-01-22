@@ -39,13 +39,13 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const { data } = await octokit.request('POST /repos/YTM/YTM/actions/workflows/{workflow_id}/dispatches', {
+          const response = await octokit.rest.actions.createWorkflowDispatch({
             owner: 'YTM',
             repo: 'YTM',
-            workflow_id: 'YOUR_WORKFLOW_ID', // Replace with the actual workflow ID for "Get YouTube Live m3u8"
+            workflow_id: '7616522628', // Replace with your actual workflow ID
             ref: 'main', // Replace with the branch where the workflow is located
             inputs: {
               // Add any necessary inputs for the workflow
             }
           });
-          console.log('Workflow triggered:', data);
+          console.log('Workflow triggered:', response.data);
