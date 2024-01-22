@@ -16,14 +16,17 @@ while IFS=, read -r channel_name group channel_url; do
     channel_id=$(echo "${channel_url}" | sed -n 's/.*\/\([^\/]*\)\/live.*/\1/p')
 
     # Use YouTube API to get live stream information
-    video_url=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=id&channelId=${channel_id}&eventType=live&type=video&key=${API_KEY}" | jq -r '.items[0].id.videoId')
+    video_id=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=id&channelId=${channel_id}&eventType=live&type=video&key=${API_KEY}" | jq -r '.items[0].id.videoId')
 
-    cat >"${m3u8_file}" <<EOL
+    if [ "${video_id}" != "null" ]; then
+        cat >"${m3u8_file}" <<EOL
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-https://www.youtube.com/watch?v=${video_url}
+https://www.youtube.com/watch?v=${video_id}
 EOL
+    else
+        echo "ERROR: Unable to fetch live stream information for ${channel_name} (${group})"
+    fi
 
 done < current_channels.txt
-
