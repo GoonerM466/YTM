@@ -55,13 +55,13 @@ jobs:
         done < current_channels.txt
 
 
+
     - name: git add
       run: |
         git add -A
         ls -la
     - name: commit & push
       run: |
-        git diff --cached --quiet || git commit -m "links are updated"
+        git diff --cached --quiet || git commit -m links are updated
         git push origin main
-
 
