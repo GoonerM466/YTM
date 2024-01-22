@@ -1,6 +1,8 @@
 import os
 
 def delete_m3u8_files(directory):
+    print(f"Current working directory: {os.getcwd()}")
+    
     for root, dirs, files in os.walk(directory, topdown=True):
         # Exclude the .github/workflows directory
         if '.github' in dirs and 'workflows' in dirs:
@@ -25,6 +27,8 @@ if __name__ == "__main__":
     target_directory = os.environ.get("TARGET_DIRECTORY")
 
     if target_directory:
+        # Add "YTM" to the path
+        target_directory = os.path.join("YTM", target_directory)
         delete_m3u8_files(target_directory)
         print("Script executed successfully.")
     else:
