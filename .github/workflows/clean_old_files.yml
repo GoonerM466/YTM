@@ -1,0 +1,25 @@
+name: Delete Old m3u8 Files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  delete_m3u8:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Run script
+      run: |
+        python delete_m3u8.py
+      env:
+        TARGET_DIRECTORY: ${{ github.workspace }}
