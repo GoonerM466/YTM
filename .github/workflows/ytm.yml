@@ -47,31 +47,18 @@ jobs:
             echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
             yt-dlp --print urls "$channel_url"
           } | sudo tee "./current_channels/$group/$channel_name.m3u8" >/dev/null
+          
+          # Check if the channel is live
+          if yt-dlp --print is_live "$channel_url" | grep -q "True"; then
+            echo "$channel_name is live! Updating $channel_name.m3u8 with current live stream!"
+          fi
         done < current_channels.txt
 
-    - name: Check for changes
-      id: check_changes
-      run: |
-        if [[ $(git diff --name-only) ]]; then
-          echo "Changes detected."
-          CHANGED_CHANNELS=($(git diff --name-only))
-          for CHANGED_CHANNEL in "${CHANGED_CHANNELS[@]}"; do
-            CHANNEL_NAME=$(basename "${CHANGED_CHANNEL%.*}")
-            GROUP=$(basename "$(dirname "$CHANGED_CHANNEL")")
-            echo "$CHANNEL_NAME is live! Updating $CHANNEL_NAME.m3u8 with current live stream!"
-          done
-        else
-          echo "No changes detected."
-        fi
-
     - name: git add
-      if: steps.check_changes.outputs.CHANGED_CHANNELS != ''
       run: |
         git add -A
         ls -la
-
     - name: commit & push
-      if: steps.check_changes.outputs.CHANGED_CHANNELS != ''
       run: |
         git diff --cached --quiet || git commit -m "links are updated"
         git push origin main
