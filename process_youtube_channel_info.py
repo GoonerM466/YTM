@@ -27,10 +27,10 @@ with open('youtube_channel_info.txt', 'r') as info_file:
             # Process the channel information and add entry to current_channels.txt
             print(f"Processing new channel: {channel_name}, {channel_group}, {channel_url}")
 
-            # Add entry to current_channels.txt
+            # Add entry to current_channels.txt without leading/trailing whitespace
             new_entry = f"{channel_name}, {channel_group}, {channel_url}\n"
             with open('current_channels.txt', 'a') as current_channels_file_append:
-                current_channels_file_append.write(new_entry)
+                current_channels_file_append.write(new_entry.strip())
 
             new_entries_added = True  # Set the flag to true
 
