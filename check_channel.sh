@@ -1,5 +1,7 @@
+channels_yaml=$(cat ytm.yaml)
+
 for channel_info in "${channels_yaml[@]}"; do
-  name=$(echo "$channel_info" | grep -oP 'name: \K.*')
+  name=$(echo "$channel_info" | cut -d':' -f1)
   group=$(echo "$channel_info" | grep -oP 'group: \K.*')
   url=$(echo "$channel_info" | grep -oP 'url: \K.*')
 
@@ -12,7 +14,7 @@ for channel_info in "${channels_yaml[@]}"; do
       echo "#EXTM3U"
       echo "#EXT-X-VERSION:3"
       echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-      yt-dlp --print urls "$url/live"
+      yt-dlp --print urls "$url/live" 2>/dev/null
     } | sudo tee ./$name/$name.m3u8 > /dev/null
   else
     schedule_time=$(yt-dlp --print scheduledStartTime "$url" 2>/dev/null || echo "NA")
@@ -23,4 +25,3 @@ for channel_info in "${channels_yaml[@]}"; do
     fi
   fi
 done
-shell: /usr/bin/bash -e {0}
