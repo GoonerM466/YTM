@@ -1,6 +1,6 @@
 This script pulls live streams from youtube, outputs the pulled streams into a m3u and logs new channels added & when.
 
-The scripts will keep the channels up to day and run every 1-3 hours.
+The scripts will keep the channels up to date with new streaming links and run every 1-3 hours.
 
 New channels can be added to the "youtube_channel_info.txt" file in the follwoing format:
 
