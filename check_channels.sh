@@ -9,8 +9,8 @@ while IFS=, read -r channel_name group channel_url; do
     m3u8_file="./${group,,}/${channel_name}.m3u8"
     mkdir -p "${group,,}"
 
-    # Use yt-dlp to directly extract video URL
-    video_url=$(yt-dlp --get-url "${channel_url}")
+    # Use yt-dlp to dump pages and grep for the live stream URL
+    video_url=$(yt-dlp --dump-pages "${channel_url}" | grep -oP '(?<=ytplayer.config = ).*?(?=;</script>)' | jq -r '.args.player_response.streamingData.hlsManifestUrl')
 
     cat >"${m3u8_file}" <<EOL
 #EXTM3U
