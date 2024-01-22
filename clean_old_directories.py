@@ -10,6 +10,7 @@ def delete_m3u8_files(directory):
             if file.endswith(".m3u8"):
                 file_path = os.path.join(root, file)
                 try:
+                    print(f"Deleting file: {file_path}")
                     os.remove(file_path)
                     print(f"Deleted file: {file_path}")
                 except OSError as e:
