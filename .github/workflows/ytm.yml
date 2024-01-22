@@ -13,15 +13,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: config
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Configure Git
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
+
       - name: Install yt-dlp
         run: |
           curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
           chmod a+rx /usr/local/bin/yt-dlp
+
       - name: Delay for 10 seconds
         run: sleep 10
 
@@ -43,28 +47,27 @@ jobs:
             "DPWorldTour"
             "GBNewsOnline"
           )
+          
           for channel in "${all_channels[@]}"; do
-            live_status=$(yt-dlp --print live https://www.youtube.com/@$channel)
+            live_status=$(yt-dlp --print live "https://www.youtube.com/@$channel")
             
             if [ "$live_status" = "true" ]; then
               echo "Live stream found! Added to $channel.m3u8"
               touch ./$channel/$channel.m3u8
               sudo cat > ./$channel/$channel.m3u8 <<EOL
-            #EXTM3U
-            #EXT-X-VERSION:3
-            #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-            $(yt-dlp --print urls https://www.youtube.com/@$channel/live)
-            EOL
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+$(yt-dlp --print urls "https://www.youtube.com/@$channel/live")
+EOL
             else
-              schedule_time=$(yt-dlp --print scheduledStartTime https://www.youtube.com/@$channel)
+              schedule_time=$(yt-dlp --print scheduledStartTime "https://www.youtube.com/@$channel")
               echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
             fi
           done
 
-      - name: git add
+      - name: Commit and push
         run: |
           git add -A
-      - name: commit & push
-        run: |
-          git diff --cached --quiet || git commit -m "links are updated"
+          git diff --cached --quiet || git commit -m "Update links"
           git push origin main
