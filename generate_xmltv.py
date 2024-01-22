@@ -14,36 +14,45 @@ def convert_to_xmltv_time(time_str):
     dt = datetime.strptime(time_str, '%a %b %d %H:%M:%S %Z %Y')
     return dt.strftime('%Y%m%d%H%M%S +0000')
 
-def generate_xmltv(channel_name, live_status, time_str):
-    # Generate the XMLTV content based on the provided information
+def generate_channel_info(channel_name):
+    # Generate the XMLTV content for channel information
+    return f'''  <channel id="{channel_name}">
+    <display-name lang="en">{channel_name}</display-name>
+  </channel>
+'''
+
+def generate_program_info(channel_name, live_status, time_str):
+    # Generate the XMLTV content for program information
     start_time = convert_to_xmltv_time(time_str)
     stop_time = (datetime.strptime(start_time, '%Y%m%d%H%M%S +0000') + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
 
-    xmltv_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="none" generator-info-url="none">
-  <channel id="{channel_name}">
-    <display-name lang="en">{channel_name}</display-name>
-  </channel>
-
-  <programme start="{start_time}" stop="{stop_time}" channel="{channel_name}">
+    return f'''  <programme start="{start_time}" stop="{stop_time}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
     <desc lang="en">{"{} is currently streaming live! Tune in & enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
-
-</tv>
 '''
-    return xmltv_content
 
 def main():
     with open('live_status.txt', 'r') as file:
         lines = file.readlines()
-    
+
+    header = '''<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+'''
+
+    channel_info = ""
+    program_info = ""
+
     for line in lines:
         parsed_info = parse_live_status(line)
         if parsed_info:
             channel_name, live_status, time_str = parsed_info
-            xmltv_content = generate_xmltv(channel_name, live_status, time_str)
-            print(xmltv_content)
+            channel_info += generate_channel_info(channel_name)
+            program_info += generate_program_info(channel_name, live_status, time_str)
+
+    # Combine all information into the final XMLTV content
+    xmltv_content = f"{header}{channel_info}{program_info}</tv>"
+    print(xmltv_content)
 
 if __name__ == '__main__':
     main()
