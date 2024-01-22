@@ -1,32 +1,33 @@
-#!/bin/bash
+import os
 
-# Replace YOUR_API_KEY with your actual YouTube API key
-API_KEY="AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc"
+def delete_m3u8_files(directory):
+    print(f"Current working directory: {os.getcwd()}")
+    
+    for root, dirs, files in os.walk(directory, topdown=True):
+        # Exclude the .github/workflows directory
+        if '.github' in dirs and 'workflows' in dirs:
+            dirs.remove('workflows')
 
-# Read channels from current_channels.txt and update/create the corresponding m3u8 files
+        for file in files:
+            if file.endswith(".m3u8"):
+                file_path = os.path.join(root, file)
+                try:
+                    print(f"Deleting file: {file_path}")
+                    os.remove(file_path)
+                    print(f"Deleted file: {file_path}")
+                except OSError as e:
+                    print(f"Error deleting file {file_path}: {e}")
 
-while IFS=, read -r channel_name group channel_url; do
-    echo "Processing ${channel_name} (${group})"
-    echo "URL: ${channel_url}"
+        # Check if there are no more files in the current directory
+        if not os.listdir(root):
+            os.rmdir(root)
+            print(f"Deleted directory: {root}")
 
-    m3u8_file="./${group,,}/${channel_name}.m3u8"
-    mkdir -p "${group,,}"
+if __name__ == "__main__":
+    target_directory = os.environ.get("TARGET_DIRECTORY")
 
-    # Extract channel ID from the channel URL
-    channel_id=$(echo "${channel_url}" | sed -n 's/.*\/\([^\/]*\)\/live.*/\1/p')
-
-    # Use YouTube API to get live stream information
-    video_id=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=id&channelId=${channel_id}&eventType=live&type=video&key=${API_KEY}" | jq -r '.items[0].id.videoId')
-
-    if [ "${video_id}" != "null" ]; then
-        cat >"${m3u8_file}" <<EOL
-#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-https://www.youtube.com/watch?v=${video_id}
-EOL
-    else
-        echo "ERROR: Unable to fetch live stream information for ${channel_name} (${group})"
-    fi
-
-done < current_channels.txt
+    if target_directory:
+        delete_m3u8_files(target_directory)
+        print("Script executed successfully.")
+    else:
+        print("Error: TARGET_DIRECTORY environment variable not set.")
