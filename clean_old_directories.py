@@ -19,7 +19,7 @@ def delete_m3u8_files(directory):
 
 if __name__ == "__main__":
     target_directory = input("Enter the target directory path: ")
-    
+
     if os.path.exists(target_directory):
         delete_m3u8_files(target_directory)
         print("Script executed successfully.")
