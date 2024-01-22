@@ -55,14 +55,12 @@ def main():
             channel_info += generate_channel_info(channel_name)
             program_info += generate_program_info(channel_name, live_status, time_str)
 
-    # Combine all information into the final XMLTV content
-    xmltv_content = f"{channel_info}{program_info}"
-
-    # Add the new content to the existing program information
-    root.extend(ET.fromstring(xmltv_content))
+    # Create a new root element and add the channel and program information
+    new_root = ET.Element('tv', attrib={'generator-info-name': 'none', 'generator-info-url': 'none'})
+    new_root.extend(ET.fromstring(channel_info + program_info))
 
     # Write the updated information to combined_epg.xml
-    tree = ET.ElementTree(root)
+    tree = ET.ElementTree(new_root)
     tree.write('combined_epg.xml', encoding='utf-8', xml_declaration=True)
 
 if __name__ == '__main__':
