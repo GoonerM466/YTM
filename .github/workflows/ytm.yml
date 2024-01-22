@@ -20,11 +20,12 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          
+
       - name: Install yt-dlp
         run: |
           curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
           chmod a+rx /usr/local/bin/yt-dlp
+          
       - name: Delay for 10 seconds
         run: sleep 10
 
@@ -62,7 +63,11 @@ jobs:
               } | sudo tee ./$channel_name/$channel_name.m3u8 > /dev/null
             else
               schedule_time=$(yt-dlp --print scheduledStartTime "$channel_url")
-              echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
+              if [ "$schedule_time" != "NA" ]; then
+                echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
+              else
+                echo "This channel is not currently live."
+              fi
             fi
           done
 
