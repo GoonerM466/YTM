@@ -1,27 +1,28 @@
 #!/bin/bash
 
-# Function to get live URLs for a channel and append them to the corresponding .m3u8 file
-get_channel_urls() {
-    channel_name=$1
-    directory=$2
-    mkdir -p "$directory"
-    touch "$directory/$channel_name.m3u8"
+function update_channel() {
+  IFS=',' read -r channel_name channel_group channel_url <<< "$1"
 
-    # Check if the video is live or scheduled
-    channel_url="https://www.youtube.com/@$channel_name/live"
-    video_info_json=$(yt-dlp --print-json "$channel_url")
-    video_status=$(echo "$video_info_json" | jq -r .status)
+  live_status=$(yt-dlp --print live "$channel_url")
 
-    if [ "$video_status" = "live" ]; then
-        # Fetch live stream URL
-        live_url=$(yt-dlp --print urls "$channel_url")
-
-        # Append the live URL to the .m3u8 file
-        echo "#EXTM3U" > "$directory/$channel_name.m3u8"
-        echo "#EXT-X-VERSION:3" >> "$directory/$channel_name.m3u8"
-        echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000" >> "$directory/$channel_name.m3u8"
-        echo "$live_url" >> "$directory/$channel_name.m3u8"
-    else
-        echo "The video is not live or scheduled for $channel_name. Skipping..."
-    fi
+  if [ "$live_status" = "true" ]; then
+    echo "Live stream found for $channel_name! Added to $channel_name.m3u8 in $channel_group"
+    mkdir -p ./$channel_group
+    touch ./$channel_group/$channel_name.m3u8
+    cat > ./$channel_group/$channel_name.m3u8 <<EOL
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+$(yt-dlp --print urls "$channel_url/live")
+EOL
+  else
+    schedule_time=$(yt-dlp --print scheduledStartTime "$channel_url")
+    echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
+  fi
 }
+
+# Example usage:
+update_channel "beinsportshaber,spor,https://www.youtube.com/@beinsportsturkiye"
+update_channel "AFCAsianCup,spor,https://www.youtube.com/@AFCAsianCup"
+update_channel "talkSPORT,spor,https://www.youtube.com/@talkSPORT"
+# Add more channels as needed
