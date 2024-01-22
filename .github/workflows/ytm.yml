@@ -25,7 +25,6 @@ jobs:
         run: |
           curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
           chmod a+rx /usr/local/bin/yt-dlp
-
       - name: Delay for 10 seconds
         run: sleep 10
 
@@ -55,12 +54,12 @@ jobs:
             if [ "$live_status" = "true" ]; then
               echo "Live stream found! Added to $channel_name.m3u8"
               touch ./$channel_name/$channel_name.m3u8
-              sudo cat > ./$channel_name/$channel_name.m3u8 <<EOL
-#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-$(yt-dlp --print urls "$channel_url/live")
-EOL
+              {
+                echo "#EXTM3U"
+                echo "#EXT-X-VERSION:3"
+                echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
+                yt-dlp --print urls "$channel_url/live"
+              } | sudo tee ./$channel_name/$channel_name.m3u8 > /dev/null
             else
               schedule_time=$(yt-dlp --print scheduledStartTime "$channel_url")
               echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
