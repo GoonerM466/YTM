@@ -20,6 +20,6 @@ jobs:
 
     - name: Run script
       run: |
-        python delete_m3u8.py
+        clean_old_directories.py
       env:
         TARGET_DIRECTORY: ${{ github.workspace }}
