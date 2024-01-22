@@ -9,8 +9,11 @@ def delete_m3u8_files(directory):
         for file in files:
             if file.endswith(".m3u8"):
                 file_path = os.path.join(root, file)
-                os.remove(file_path)
-                print(f"Deleted file: {file_path}")
+                try:
+                    os.remove(file_path)
+                    print(f"Deleted file: {file_path}")
+                except OSError as e:
+                    print(f"Error deleting file {file_path}: {e}")
 
         # Check if there are no more files in the current directory
         if not os.listdir(root):
