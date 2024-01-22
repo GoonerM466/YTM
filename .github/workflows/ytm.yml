@@ -38,6 +38,9 @@ jobs:
 
     - name: Read channel information from current_channels.txt
       run: |
+        # Clear the contents of live_status.txt
+        echo "" > live_status.txt
+
         while IFS=, read -r channel_name group channel_url; do
           mkdir -p "./current_channels/$group"
           touch "./current_channels/$group/$channel_name.m3u8"
