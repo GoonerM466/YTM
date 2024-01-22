@@ -36,18 +36,23 @@ jobs:
     needs: delete_files
     runs-on: ubuntu-latest
     steps:
-    - name: Trigger Get YouTube Live m3u8 workflow
-      uses: actions/github-script@v5
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const response = await octokit.rest.actions.createWorkflowDispatch({
-            owner: 'YTM',
-            repo: 'YTM',
-            workflow_id: '7616522628', // Replace with your actual workflow ID
-            ref: 'main', // Replace with the branch where the workflow is located
-            inputs: {
-              // Add any necessary inputs for the workflow
-            }
-          });
-          console.log('Workflow triggered:', response.data);
+        node-version: '14'
+
+    - name: Run trigger script
+      run: |
+        const { Octokit } = require('@octokit/rest');
+        const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+        
+        const response = await octokit.actions.createWorkflowDispatch({
+          owner: 'YTM',
+          repo: 'YTM',
+          workflow_id: '7616522628', // Replace with your actual workflow ID
+          ref: 'main', // Replace with the branch where the workflow is located
+          inputs: {
+            // Add any necessary inputs for the workflow
+          }
+        });
+        console.log('Workflow triggered:', response.data);
