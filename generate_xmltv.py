@@ -28,7 +28,7 @@ def generate_program_info(channel_name, live_status, time_str):
 
     return f'''  <programme start="{start_time}" stop="{stop_time}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
-    <desc lang="en">{"{} is currently streaming live! Tune in & enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
+    <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
 '''
 
