@@ -15,7 +15,7 @@ Once the scraper completes its task, the combined m3u will be built. A seperate 
 
 Finally, the new channels file will be cleaned, the new entries will be added to the log (recently_added_channels.txt), the date & time the streams were added will be noted, and the streams will be sorted by catagory/name.
 
-Once a day, a script will look for any M3u8 files in the github directory and delete them to keep the directory clean from any uninteded duplication of channels or streams. This will in turn trigger the main YTM workflow to grab the latest available streams.
+Once a day, a script will look for any m3u8 files in the github directory and delete them to keep the directory clean from any uninteded duplication of channels or streams. This will in turn trigger the main YTM workflow to grab the latest available streams.
 
 This is my first go at scripting, so Im sure its not very effecient, but it works - and took me hours!!
 
