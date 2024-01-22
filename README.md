@@ -12,7 +12,7 @@ Each new entry should be on a new line.
 
 The script will notice new channels have been requested and pull the new channels into the current_channels.txt file which will be used by the YTM workflow to generate the streaming links & channel m3u8 files. If the channel already exists it will be ignored.
 While doing this the script will grab the live status of the channel and export to a seperate file (live_status.txt).
-Once the scraper completes its task, the combined m3u will be built. A seperate workflow will then trigger generate_xmltv.xml to write a very basic EPG based on the live status to provide a easier to determine what channels are live.
+Once the scraper completes its task, the combined m3u will be built. A seperate workflow will then trigger generate_xmltv.xml to write a very basic EPG based on the live status to provide an easier way to determine what channels are live.
 
 Finally, the new channels file will be cleaned, the new entries will be added to the log (recently_added_channels.txt), the date & time the streams were added will be noted, and the streams will be sorted by catagory/name.
 
