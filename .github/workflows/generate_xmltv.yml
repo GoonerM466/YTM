@@ -2,9 +2,11 @@ name: Generate XMLTV
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'live_status.txt'
+  workflow_run:
+    workflows:
+      - "Get YouTube Live m3u8"
+    types:
+      - completed
 
 jobs:
   generate_xmltv:
@@ -22,6 +24,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+
+    - name: Delay before script execution
+      run: sleep 30
 
     - name: Execute script and generate XMLTV
       run: python generate_xmltv.py > combined_epg.xml
