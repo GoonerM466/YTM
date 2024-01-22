@@ -1,28 +1,16 @@
-#!/usr/bin/bash -e
+#!/bin/bash
 
-channels_yaml=$(cat ytm.yaml)
+# Read channels from current_channels.txt and update/create the corresponding m3u8 files
 
-for channel_info in "${channels_yaml[@]}"; do
-  name=$(echo "$channel_info" | grep -oP 'name: \K.*')
-  group=$(echo "$channel_info" | grep -oP 'group: \K.*')
-  url=$(echo "$channel_info" | grep -oP 'url: \K.*')
+while IFS=, read -r channel_name group channel_url; do
+    m3u8_file="./${group,,}/${channel_name}.m3u8"
+    mkdir -p "${group,,}"
 
-  live_status=$(yt-dlp --print live "$url" 2>/dev/null || true)
+    cat >"${m3u8_file}" <<EOL
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+$(yt-dlp --print urls "${channel_url}")
+EOL
 
-  if [[ $live_status == *"This live event will begin"* ]]; then
-    schedule_time=$(yt-dlp --print scheduledStartTime "$url" 2>/dev/null || echo "NA")
-    echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
-  elif [ "$live_status" = "true" ]; then
-    echo "Live stream found! Added to $group/$name.m3u8"
-    mkdir -p ./$group/$name
-    touch ./$group/$name/$name.m3u8
-    {
-      echo "#EXTM3U"
-      echo "#EXT-X-VERSION:3"
-      echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-      yt-dlp --print urls "$url/live"
-    } | sudo tee ./$group/$name/$name.m3u8 > /dev/null
-  else
-    echo "This channel is not currently live."
-  fi
-done
+done < current_channels.txt
