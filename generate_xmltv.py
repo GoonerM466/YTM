@@ -1,16 +1,10 @@
-import re
-from datetime import datetime, timedelta
-import xml.etree.ElementTree as ET
-
-# ... (rest of the functions remain the same)
-
 def main():
     # Read the existing XMLTV file
     try:
         tree = ET.parse('combined_epg.xml')
         root = tree.getroot()
-    except FileNotFoundError:
-        # If the file doesn't exist, create a new root
+    except (FileNotFoundError, ET.ParseError):
+        # If the file doesn't exist or is not valid XML, create a new root
         root = ET.Element('tv')
         tree = ET.ElementTree(root)
 
