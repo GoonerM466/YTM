@@ -52,7 +52,10 @@ def main():
 
     # Combine all information into the final XMLTV content
     xmltv_content = f"{header}{channel_info}{program_info}</tv>"
-    print(xmltv_content)
+
+    # Remove contents of combined_epg.xml before writing new data
+    with open('combined_epg.xml', 'w') as output_file:
+        output_file.write(xmltv_content)
 
 if __name__ == '__main__':
     main()
