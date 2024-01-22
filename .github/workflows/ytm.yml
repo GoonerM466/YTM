@@ -39,12 +39,12 @@ jobs:
         while IFS=, read -r channel_name group channel_url; do
           mkdir -p "./current_channels/$group"
           touch "./current_channels/$group/$channel_name.m3u8"
-          cat <<EOL | sudo tee "./current_channels/$group/$channel_name.m3u8" >/dev/null
-          #EXTM3U
-          #EXT-X-VERSION:3
-          #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-          $(yt-dlp --print urls "$channel_url")
-          EOL
+          {
+            echo "#EXTM3U"
+            echo "#EXT-X-VERSION:3"
+            echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
+            yt-dlp --print urls "$channel_url"
+          } | sudo tee "./current_channels/$group/$channel_name.m3u8" >/dev/null
         done < current_channels.txt
 
     - name: git add
