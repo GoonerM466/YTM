@@ -20,6 +20,6 @@ jobs:
 
     - name: Run script
       run: |
-        clean_old_directories.py
+        python ${{ github.workspace }}/clean_old_directories.py
       env:
         TARGET_DIRECTORY: ${{ github.workspace }}
