@@ -1,4 +1,4 @@
-name: Delete Old m3u8 Files
+name: Delete M3U8 Files
 
 on:
   push:
@@ -6,20 +6,21 @@ on:
       - main
 
 jobs:
-  delete_m3u8:
+  delete_files:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-
-    - name: Run script
+    - name: Delete .m3u8 files
       run: |
-        python ${{ github.workspace }}/clean_old_directories.py
-      env:
-        TARGET_DIRECTORY: ${{ github.workspace }}
+        find . -type f -name "*.m3u8" -delete
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add .
+        git commit -m "Delete .m3u8 files"
+        git push
