@@ -18,10 +18,10 @@ def delete_m3u8_files(directory):
             print(f"Deleted directory: {root}")
 
 if __name__ == "__main__":
-    target_directory = input("Enter the target directory path: ")
+    target_directory = os.environ.get("TARGET_DIRECTORY")
 
-    if os.path.exists(target_directory):
+    if target_directory:
         delete_m3u8_files(target_directory)
         print("Script executed successfully.")
     else:
-        print(f"Error: The specified directory '{target_directory}' does not exist.")
+        print("Error: TARGET_DIRECTORY environment variable not set.")
