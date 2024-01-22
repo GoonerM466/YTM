@@ -1,7 +1,13 @@
+import re
+from datetime import datetime, timedelta
+import xml.etree.ElementTree as ET
+
+# ... (rest of the functions remain the same)
+
 def main():
     # Read the existing XMLTV file
     try:
-        tree = ET.parse('existing_file.xml')
+        tree = ET.parse('combined_epg.xml')
         root = tree.getroot()
     except FileNotFoundError:
         # If the file doesn't exist, create a new root
@@ -50,7 +56,7 @@ def main():
     xmltv_content = f"{header}{ET.tostring(root).decode('utf-8')}</tv>"
 
     # Write the updated XMLTV content to the file
-    with open('existing_file.xml', 'w') as file:
+    with open('combined_epg.xml', 'w') as file:
         file.write(xmltv_content)
 
 if __name__ == '__main__':
