@@ -1,31 +1,29 @@
 channels_yaml=$(cat ytm.yaml)
 
+api_key="AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc"
+
 for channel_info in "${channels_yaml[@]}"; do
   name=$(echo "$channel_info" | grep -oP 'name: \K.*')
   group=$(echo "$channel_info" | grep -oP 'group: \K.*')
   url=$(echo "$channel_info" | grep -oP 'url: \K.*')
 
-  channel_id=$(echo "$url" | grep -oP '(?<=youtube.com/)[^/]+')
-  api_key="AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc"
-
-  live_status=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=id&channelId=$channel_id&type=video&eventType=live&key=$api_key" | jq -r '.items | length')
-
-  if [ "$live_status" -gt 0 ]; then
-    echo "Live stream found for $name! Added to ./$group/$name.m3u8"
-    mkdir -p ./$group  # Ensure the group directory exists
-    touch ./$group/$name.m3u8
+  live_status=$(yt-dlp --print live --youtube-api-key "$api_key" "$url" 2>/dev/null || true)
+  
+  if [ "$live_status" = "true" ]; then
+    echo "Live stream found! Added to $group/$name.m3u8"
+    touch ./$group/$name/$name.m3u8
     {
       echo "#EXTM3U"
       echo "#EXT-X-VERSION:3"
       echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-      curl -s "$url/live" 2>/dev/null || echo "Error fetching live URLs for $name"
-    } | sudo tee ./$group/$name.m3u8 > /dev/null
+      yt-dlp --print urls --youtube-api-key "$api_key" "$url/live"
+    } | sudo tee ./$group/$name/$name.m3u8 > /dev/null
   else
-    schedule_time=$(yt-dlp --quiet --print scheduledStartTime "$url" 2>&1 || echo "NA")
+    schedule_time=$(yt-dlp --print scheduledStartTime --youtube-api-key "$api_key" "$url" 2>/dev/null || echo "NA")
     if [ "$schedule_time" != "NA" ]; then
-      echo "Channel $name is not currently live. It will be live at $schedule_time (EST timezone)"
+      echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
     else
-      echo "Channel $name is not currently live."
+      echo "This channel is not currently live."
     fi
   fi
 done
