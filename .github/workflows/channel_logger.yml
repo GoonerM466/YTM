@@ -30,8 +30,8 @@ jobs:
             # Extract channel_name by finding the first ", " and removing everything after it
             channel_name=$(echo "$channel_info" | awk -F ', ' '{print $1}')
   
-            # Search for channel_name in ytm.yml
-            if grep -q "$channel_name" .github/workflows/ytm.yml; then
+            # Search for channel_name in current_channels.txt
+            if grep -q "$channel_name" current_channels.txt; then
               echo "$channel_name has been added, transferred to log"
   
               # Copy line to recently_added_channels.txt
