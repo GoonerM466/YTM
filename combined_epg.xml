@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="none" generator-info-url="none">
+
   <channel id="beinsportshaber">
     <display-name lang="en">beinsportshaber</display-name>
   </channel>
@@ -84,4 +83,3 @@
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-</tv>
