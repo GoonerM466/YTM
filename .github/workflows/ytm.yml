@@ -31,6 +31,9 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
 
+    - name: Create current_channels directory
+      run: mkdir -p ./current_channels
+
     - name: Get beINSportsHaber
       run: |
         touch ./current_channels/spor/beinsportshaber.m3u8
