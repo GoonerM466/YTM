@@ -5,9 +5,12 @@ for channel_info in "${channels_yaml[@]}"; do
   group=$(echo "$channel_info" | grep -oP 'group: \K.*')
   url=$(echo "$channel_info" | grep -oP 'url: \K.*')
 
-  live_status=$(curl -s "$url" | grep -o '\"isLive\":true')
+  channel_id=$(echo "$url" | grep -oP '(?<=youtube.com/)[^/]+')
+  api_key="AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc"
 
-  if [ -n "$live_status" ]; then
+  live_status=$(curl -s "https://www.googleapis.com/youtube/v3/search?part=id&channelId=$channel_id&type=video&eventType=live&key=$api_key" | jq -r '.items | length')
+
+  if [ "$live_status" -gt 0 ]; then
     echo "Live stream found for $name! Added to ./$group/$name.m3u8"
     mkdir -p ./$group  # Ensure the group directory exists
     touch ./$group/$name.m3u8
