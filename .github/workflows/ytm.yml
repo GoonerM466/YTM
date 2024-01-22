@@ -39,7 +39,7 @@ jobs:
         while IFS=, read -r channel_name group channel_url; do
           mkdir -p "./current_channels/$group"
           touch "./current_channels/$group/$channel_name.m3u8"
-          sudo cat >"./current_channels/$group/$channel_name.m3u8" <<EOL
+          cat <<EOL | sudo tee "./current_channels/$group/$channel_name.m3u8" >/dev/null
           #EXTM3U
           #EXT-X-VERSION:3
           #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
