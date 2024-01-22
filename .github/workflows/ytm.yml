@@ -13,66 +13,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Configure Git
+      - uses: actions/checkout@v2
+      - name: config
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-
       - name: Install yt-dlp
         run: |
           curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
           chmod a+rx /usr/local/bin/yt-dlp
-          
       - name: Delay for 10 seconds
         run: sleep 10
-
-      - name: Check and update live channels
-        run: |
-          all_channels=(
-            "beinsportshaber,sports,https://www.youtube.com/@beinsportsturkiye/live"
-            "AFCAsianCup,sports,https://www.youtube.com/@AFCAsianCup/live"
-            "talkSPORT,sports,https://www.youtube.com/@talkSPORT/live"
-            "EERIEISSSS,entertainment,https://www.youtube.com/@EERIEISSSS/live"
-            "Jimmy_Broadbent,gaming,https://www.youtube.com/@Jimmy_Broadbent/live"
-            "deadeyedelboy,gaming,https://www.youtube.com/@deadeyedelboy/live"
-            "NBCNews,news,https://www.youtube.com/@NBCNews/live"
-            "SkyNews,news,https://www.youtube.com/@SkyNews/live"
-            "ABCNews,news,https://www.youtube.com/@ABCNews/live"
-            "HitsRadio,music,https://www.youtube.com/@HitsRadio/live"
-            "classicmusic-top1,music,https://www.youtube.com/@classicmusic-top1/live"
-            "FobosPlanet,science,https://www.youtube.com/@FobosPlanet/live"
-            "DPWorldTour,sports,https://www.youtube.com/@DPWorldTour/live"
-            "GBNewsOnline,news,https://www.youtube.com/@GBNewsOnline/live"
-          )
-          
-          for channel_info in "${all_channels[@]}"; do
-            IFS=',' read -r channel_name channel_group channel_url <<< "$channel_info"
-            live_status=$(yt-dlp --print live "$channel_url")
-            
-            if [ "$live_status" = "true" ]; then
-              echo "Live stream found! Added to $channel_name.m3u8"
-              touch ./$channel_name/$channel_name.m3u8
-              {
-                echo "#EXTM3U"
-                echo "#EXT-X-VERSION:3"
-                echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-                yt-dlp --print urls "$channel_url/live"
-              } | sudo tee ./$channel_name/$channel_name.m3u8 > /dev/null
-            else
-              schedule_time=$(yt-dlp --print scheduledStartTime "$channel_url")
-              if [ "$schedule_time" != "NA" ]; then
-                echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
-              else
-                echo "This channel is not currently live."
-              fi
-            fi
-          done
-
-      - name: Commit and push
+      - name: Pull latest changes
+        run: git pull origin main
+      - name: Rebase changes
+        run: git pull --rebase origin main
+      - name: Set execute permissions for update_channels.sh
+        run: chmod +x update_channels.sh
+      - name: Run update_channels.sh
+        run: bash update_channels.sh
+      - name: git add
         run: |
           git add -A
-          git diff --cached --quiet || git commit -m "Update links"
+          ls -la
+      - name: commit & push
+        run: |
+          git diff --cached --quiet || git commit -m "links are updated"
           git push origin main
