@@ -1,7 +1,11 @@
 import os
 
 def delete_m3u8_files(directory):
-    for root, dirs, files in os.walk(directory, topdown=False):
+    for root, dirs, files in os.walk(directory, topdown=True):
+        # Exclude the .github/workflows directory
+        if '.github' in dirs and 'workflows' in dirs:
+            dirs.remove('workflows')
+
         for file in files:
             if file.endswith(".m3u8"):
                 file_path = os.path.join(root, file)
