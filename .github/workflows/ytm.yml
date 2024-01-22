@@ -51,11 +51,11 @@ jobs:
               echo "Live stream found! Added to $channel.m3u8"
               touch ./$channel/$channel.m3u8
               cat > ./$channel/$channel.m3u8 <<EOL
-#EXTM3U
-#EXT-X-VERSION:3
-#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-$(yt-dlp --print urls https://www.youtube.com/@$channel/live)
-EOL
+              #EXTM3U
+              #EXT-X-VERSION:3
+              #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+              $(yt-dlp --print urls https://www.youtube.com/@$channel/live)
+              EOL
             else
               schedule_time=$(yt-dlp --print scheduledStartTime https://www.youtube.com/@$channel)
               echo "This channel is not currently live. It will be live at $schedule_time (EST timezone)"
