@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade pip
 
     - name: Delay before script execution
-      run: sleep 30
+      run: sleep 5
 
     - name: Execute script and generate XMLTV
       run: python generate_xmltv.py > combined_epg.xml
