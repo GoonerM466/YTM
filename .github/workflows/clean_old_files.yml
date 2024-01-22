@@ -19,15 +19,17 @@ jobs:
 
     - name: Delete .m3u8 files
       run: |
-        find . -type f -name "*.m3u8" -delete
-
-    - name: Commit and Push Changes
-      run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
-        git add .
-        git commit -m "Delete .m3u8 files"
-        git push
+        files=$(find . -type f -name "*.m3u8")
+        if [ -z "$files" ]; then
+          echo "Directories are already clean - Nothing to delete"
+        else
+          find . -type f -name "*.m3u8" -delete
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Delete .m3u8 files"
+          git push
+        fi
 
 # Add a new job to trigger the "Get YouTube Live m3u8" workflow
   trigger_get_youtube_live_m3u8:
