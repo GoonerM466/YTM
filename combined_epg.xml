@@ -38,7 +38,7 @@
   </channel>
   <programme start="20240122212432 +0000" stop="20240123002432 +0000" channel="beinsportshaber">
     <title lang="en">Live</title>
-    <desc lang="en">beinsportshaber is currently streaming live! Tune in & enjoy!</desc>
+    <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
   </programme>
   <programme start="20240122212436 +0000" stop="20240123002436 +0000" channel="AFCAsianCup">
     <title lang="en">Not Live</title>
@@ -62,15 +62,15 @@
   </programme>
   <programme start="20240122212450 +0000" stop="20240123002450 +0000" channel="NBCNews">
     <title lang="en">Live</title>
-    <desc lang="en">NBCNews is currently streaming live! Tune in & enjoy!</desc>
+    <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
   <programme start="20240122212454 +0000" stop="20240123002454 +0000" channel="SkyNews">
     <title lang="en">Live</title>
-    <desc lang="en">SkyNews is currently streaming live! Tune in & enjoy!</desc>
+    <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
   <programme start="20240122212458 +0000" stop="20240123002458 +0000" channel="ABCNews">
     <title lang="en">Live</title>
-    <desc lang="en">ABCNews is currently streaming live! Tune in & enjoy!</desc>
+    <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
   <programme start="20240122212500 +0000" stop="20240123002500 +0000" channel="HitsRadio">
     <title lang="en">Not Live</title>
@@ -78,7 +78,7 @@
   </programme>
   <programme start="20240122212509 +0000" stop="20240123002509 +0000" channel="FobosPlanet">
     <title lang="en">Live</title>
-    <desc lang="en">FobosPlanet is currently streaming live! Tune in & enjoy!</desc>
+    <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
   </programme>
   <programme start="20240122212513 +0000" stop="20240123002513 +0000" channel="DPWorldTour">
     <title lang="en">Not Live</title>
