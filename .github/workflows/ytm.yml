@@ -22,6 +22,7 @@ jobs:
         run: |
           curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
           chmod a+rx /usr/local/bin/yt-dlp
+          sudo apt-get install jq
       - name: Pull latest changes
         run: git pull origin main
       - name: Rebase changes
