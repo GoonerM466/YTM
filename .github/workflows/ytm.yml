@@ -28,10 +28,10 @@ jobs:
         run: git pull origin main
       - name: Rebase changes
         run: git pull --rebase origin main
-      - name: Set execute permissions for update_channels.sh
-        run: chmod +x update_channels.sh
-      - name: Run update_channels.sh
-        run: bash update_channels.sh
+      - name: Set execute permissions for check_channels.sh
+        run: chmod +x check_channels.sh
+      - name: Run check_channels.sh
+        run: bash check_channels.sh
       - name: git add
         run: |
           git add -A
