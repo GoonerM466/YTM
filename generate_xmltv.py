@@ -34,6 +34,14 @@ def generate_program_info(channel_name, live_status, time_str):
 '''
 
 def main():
+    try:
+        # Attempt to parse the existing XMLTV file
+        tree = ET.parse('combined_epg.xml')
+        root = tree.getroot()
+    except (ET.ParseError, FileNotFoundError):
+        # Handle the case where the file is not found or cannot be parsed
+        root = ET.Element('tv', attrib={'generator-info-name': 'none', 'generator-info-url': 'none'})
+
     with open('live_status.txt', 'r') as file:
         lines = file.readlines()
 
@@ -48,20 +56,7 @@ def main():
             program_info += generate_program_info(channel_name, live_status, time_str)
 
     # Combine all information into the final XMLTV content
-    xmltv_content = f"<tv generator-info-name=\"none\" generator-info-url=\"none\">\n{channel_info}{program_info}</tv>"
-
-    # Load existing program information from combined_epg.xml
-    try:
-        tree = ET.parse('combined_epg.xml')
-        root = tree.getroot()
-        for program in root.findall(".//programme"):
-            # Check if the end time is more than 12 hours ago
-            end_time = datetime.strptime(program.attrib['stop'], '%Y%m%d%H%M%S %z')
-            if (datetime.utcnow() - end_time) > timedelta(hours=12):
-                root.remove(program)
-    except (ET.ParseError, FileNotFoundError):
-        # Handle the case where the file is not found or cannot be parsed
-        pass
+    xmltv_content = f"{channel_info}{program_info}"
 
     # Add the new content to the existing program information
     root.extend(ET.fromstring(xmltv_content))
