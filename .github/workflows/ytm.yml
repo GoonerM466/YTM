@@ -5,9 +5,13 @@ on:
     - cron: '0 0/1 * * *'
   workflow_dispatch:
   workflow_run:
-    workflows: ["New Channel Scrape Workflow"]
+    workflows:
+      - "Delete M3U8 Files"
+      - "New Channel Scrape Workflow"
     types:
       - completed
+    branches:
+      - main
 
 jobs:
   build:
