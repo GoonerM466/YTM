@@ -33,7 +33,6 @@ def search_live_channels(api_key, max_results=50):
                 eventType="live",
                 maxResults=max_results,
                 order="viewCount",
-                regionCode="CA",
                 q="news",
                 type="video",
                 pageToken=next_page_token
