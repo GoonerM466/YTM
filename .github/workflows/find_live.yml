@@ -47,6 +47,9 @@ jobs:
     - name: Finding documentary channels
       run: python find_docs.py
 
+    - name: Finding comedy channels
+      run: python find_comedy.py
+
     - name: Check for changes
       id: check-changes
       run: |
