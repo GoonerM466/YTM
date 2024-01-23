@@ -31,7 +31,7 @@ jobs:
       run: python clean_old_epg.py
 
     - name: Print output file contents
-      run: cat epg_old.xml
+      run: cat old.epg.xml
 
     - name: Commit changes
       run: |
