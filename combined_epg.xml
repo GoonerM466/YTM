@@ -1,81 +1,65 @@
+Check if old_epg.xml exists, if not, create it - success!
+Read existing combined_epg.xml and parse the end time of each program - success!
+Remove header, channel info, and programs older than 36 hours - success!
+Filter programs with an end time within the last 36 hours - success!
+Write the remaining programs to old_epg.xml - success!
+Clean the contents of combined_epg.xml before writing new information - success!
+Process live_status.txt and add new program information to combined_epg.xml - success!
+Error parsing line: Failed to parse line: 
 
-  <channel id="beinsportshaber">
-    <display-name lang="en">beinsportshaber</display-name>
-  </channel>
-  <channel id="AFCAsianCup">
-    <display-name lang="en">AFCAsianCup</display-name>
-  </channel>
-  <channel id="talkSPORT">
-    <display-name lang="en">talkSPORT</display-name>
-  </channel>
-  <channel id="EERIEISSSS">
-    <display-name lang="en">EERIEISSSS</display-name>
-  </channel>
-  <channel id="Jimmy_Broadbent">
-    <display-name lang="en">Jimmy_Broadbent</display-name>
-  </channel>
-  <channel id="deadeyedelboy">
-    <display-name lang="en">deadeyedelboy</display-name>
-  </channel>
-  <channel id="NBCNews">
-    <display-name lang="en">NBCNews</display-name>
-  </channel>
-  <channel id="SkyNews">
-    <display-name lang="en">SkyNews</display-name>
-  </channel>
-  <channel id="ABCNews">
-    <display-name lang="en">ABCNews</display-name>
-  </channel>
-  <channel id="HitsRadio">
-    <display-name lang="en">HitsRadio</display-name>
-  </channel>
-  <channel id="FobosPlanet">
-    <display-name lang="en">FobosPlanet</display-name>
-  </channel>
-  <channel id="DPWorldTour">
-    <display-name lang="en">DPWorldTour</display-name>
-  </channel>
-  <programme start="20240122225439 +0000" stop="20240123015439 +0000" channel="beinsportshaber">
-    <title lang="en">Live</title>
-    <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240122225443 +0000" stop="20240123015443 +0000" channel="AFCAsianCup">
-    <title lang="en">Not Live</title>
-    <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240122225449 +0000" stop="20240123015449 +0000" channel="talkSPORT">
-    <title lang="en">Live</title>
-    <desc lang="en">talkSPORT is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240122225451 +0000" stop="20240123015451 +0000" channel="EERIEISSSS">
-    <title lang="en">Not Live</title>
-    <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240122225453 +0000" stop="20240123015453 +0000" channel="Jimmy_Broadbent">
-    <title lang="en">Not Live</title>
-    <desc lang="en">Jimmy_Broadbent is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240122225455 +0000" stop="20240123015455 +0000" channel="deadeyedelboy">
-    <title lang="en">Not Live</title>
-    <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240122225501 +0000" stop="20240123015501 +0000" channel="NBCNews">
-    <title lang="en">Live</title>
-    <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240122225506 +0000" stop="20240123015506 +0000" channel="SkyNews">
-    <title lang="en">Live</title>
-    <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240122225512 +0000" stop="20240123015512 +0000" channel="ABCNews">
-    <title lang="en">Live</title>
-    <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240122225514 +0000" stop="20240123015514 +0000" channel="HitsRadio">
-    <title lang="en">Not Live</title>
-    <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240122225525 +0000" stop="20240123015525 +0000" channel="FobosPlanet">
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Error parsing line: Failed to parse line: classicmusic-top1 - Live - Mon Jan 22 22:55:19 UTC 2024
+
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Parse the information from the live_status.txt line - success!
+Generate the XMLTV content for channel information - success!
+Convert the time string to XMLTV format - success!
+Generate the XMLTV content for program information - success!
+Combine all information into the final XMLTV content - success!
+Append the new program information to combined_epg.xml - success!
+bosPlanet">
     <title lang="en">Live</title>
     <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
   </programme>
