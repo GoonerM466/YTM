@@ -32,9 +32,10 @@ jobs:
       id: check_changes
       run: |
         git diff --exit-code || echo "Changes detected" && exit 0
-    - name: Pull remote changes
+
+    - name: Stage changes
       if: steps.check_changes.outputs.return-code == '0'
-      run: git pull || true
+      run: git add .
 
     - name: Commit and push changes
       if: steps.check_changes.outputs.return-code == '0'
