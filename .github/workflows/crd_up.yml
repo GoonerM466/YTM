@@ -1,0 +1,33 @@
+name: Update YouTube API Key
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_key_update:
+        description: 'Manually trigger API key update'
+        required: true
+        default: 'yes'
+
+jobs:
+  update-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Update API key in Python files
+      run: |
+        oldApiKey='AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc'
+        newApiKey='AIzaSyCQkT6oaf8A7rVaOx_ai0ode7QkquuJF0U'
+        find . -name 'find_*.py' -type f -exec sed -i "s/$oldApiKey/$newApiKey/g" {} +
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git commit -m "Update YouTube API Key [skip ci]"
+        git push
