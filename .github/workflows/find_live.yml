@@ -29,8 +29,8 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
 
-    - name: Finding popular live channels
-      run: python find_live.py
+#    - name: Finding popular live channels
+ #     run: python find_live.py
 
     - name: Waiting...
       run: sleep 20
