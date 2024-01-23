@@ -15,26 +15,14 @@ def convert_to_xmltv_time(time_str):
     return dt.strftime('%Y%m%d%H%M%S +0000')
 
 def generate_channel_info(channel_name, existing_channels):
-    # Check for duplicate channels and update group name if necessary
+    # Check for duplicate channels and do not add if already exists
     for existing_channel in existing_channels:
         if existing_channel['name'] == channel_name:
-            # Channel with the same name exists
-            if existing_channel['group'] == channel_group:
-                # Same group, do not add the channel
-                return None
-            else:
-                # Update the group name and return the updated channel info
-                existing_channel['group'] = channel_group
-                return f'''  <channel id="{channel_name}">
-    <display-name lang="en">{channel_name}</display-name>
-    <group>{channel_group}</group>
-  </channel>
-'''
+            return None
     
     # No matching channel found, add the new channel
     return f'''  <channel id="{channel_name}">
     <display-name lang="en">{channel_name}</display-name>
-    <group>{channel_group}</group>
   </channel>
 '''
 
@@ -77,9 +65,9 @@ def main():
     # Extract existing channel and program details from old_epg_content
     existing_channels = []
     existing_programs = []
-    channel_match = re.finditer(r'<channel id="(.+)">\s*<display-name lang="en">(.+)</display-name>\s*<group>(.+)</group>\s*</channel>', old_epg_content)
+    channel_match = re.finditer(r'<channel id="(.+)">\s*<display-name lang="en">(.+)</display-name>\s*</channel>', old_epg_content)
     for match in channel_match:
-        existing_channels.append({'name': match.group(2), 'group': match.group(3)})
+        existing_channels.append({'name': match.group(2)})
     program_match = re.finditer(r'<programme start="(.+)" stop="(.+)" channel="(.+)">', old_epg_content)
     for match in program_match:
         existing_programs.append({'channel': match.group(3), 'start': match.group(1), 'stop': match.group(2)})
