@@ -21,9 +21,6 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install dependencies
-      run: pip install -r requirements.txt  # Add this line if your script has any dependencies
-
     - name: Run clean_old_epg.py
       run: python clean_old_epg.py
 
