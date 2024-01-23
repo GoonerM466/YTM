@@ -1,14 +1,14 @@
 import yt_dlp
 from collections import defaultdict
 
-def get_live_channels(url):
+def search_live_channels(query):
     ydl_opts = {
         'quiet': True,
         'extract_flat': True,
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        result = ydl.extract_info(url, download=False)
+        result = ydl.extract_info(f'ytsearch:{query}', download=False)
         return result.get('entries', [])
 
 def get_channel_category(channel_id):
@@ -20,17 +20,16 @@ def get_channel_category(channel_id):
         result = ydl.extract_info(f'https://www.youtube.com/channel/{channel_id}', download=False)
         return result.get('categories', [])[0].lower() if result.get('categories') else None
 
-def search_live_links(channel_names):
+def search_live_links():
     live_links = []
-    for channel_name in channel_names:
-        search_query = f'{channel_name} live'
-        search_result = get_live_channels(search_query)
-        if search_result:
-            channel_id = search_result[0]['channel_id']
+    search_result = search_live_channels("is live")
+    if search_result:
+        for entry in search_result:
+            channel_id = entry['channel_id']
             group = get_channel_category(channel_id)
             live_links.append({
-                'name': channel_name,
-                'url': search_result[0]['url'],
+                'name': entry['title'],
+                'url': entry['url'],
                 'group': group if group else 'other',
             })
     return live_links
@@ -52,11 +51,15 @@ def write_to_file(live_channels):
         for channel in live_channels:
             file.write(f'New! {channel["name"]}, {channel["group"]}, {channel["url"]}\n')
 
+def print_live_channels(live_channels):
+    for channel in live_channels:
+        print(f'New! {channel["name"]}, {channel["group"]}, {channel["url"]}')
+
 if __name__ == '__main__':
-    live_channels = get_live_channels('https://youtube.com/live')
-    if live_channels:
-        channel_names = [entry['title'] for entry in live_channels]
-        live_links = search_live_links(channel_names)
+    live_links = search_live_links()
+    if live_links:
+        print("Live Channels:")
+        print_live_channels(live_links)
         write_to_file(live_links)
         print("Script executed successfully.")
     else:
