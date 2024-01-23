@@ -3,9 +3,18 @@ from googleapiclient.discovery import build
 from google.auth.credentials import AnonymousCredentials
 import yt_dlp
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 MAX_RUNTIME_SECONDS = 210  # 3.5 minutes
+
+def get_channel_category(channel_id):
+    ydl_opts = {
+        'quiet': True,
+    }
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(f'https://www.youtube.com/channel/{channel_id}', download=False)
+        return result.get('categories', [])[0].lower() if result.get('categories') else None
 
 def search_live_channels(api_key, max_results=50):
     start_time = time.time()
@@ -15,7 +24,7 @@ def search_live_channels(api_key, max_results=50):
     next_page_token = None
 
     # Set the publishedBefore parameter to the current time in RFC 3339 format
-    published_before = datetime.utcnow().isoformat() + "Z"
+    published_before = datetime.now(timezone.utc).isoformat() + "Z"
 
     while True:
         try:
@@ -50,7 +59,7 @@ def search_live_channels(api_key, max_results=50):
 
                 channel_name = item['snippet']['title']
                 channel_id = item['snippet']['channelId']
-                group = get_channel_category(channel_id)  # You may implement this function as in your previous script
+                group = get_channel_category(channel_id)
                 live_links.append({
                     'name': channel_name,
                     'url': f'https://www.youtube.com/channel/{channel_id}',
