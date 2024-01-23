@@ -15,11 +15,15 @@ def convert_to_xmltv_time(time_str):
     return dt.strftime('%Y%m%d%H%M%S +0000')
 
 def generate_channel_info(channel_name, existing_channels):
-    # Check for duplicate channels and do not add if already exists
+    # Extract the first part of the channel name before the first space
+    channel_name_first_part = channel_name.split()[0]
+
+    # Check for duplicate channels based on the first part of the channel name
     for existing_channel in existing_channels:
-        if existing_channel['name'] == channel_name:
+        existing_channel_first_part = existing_channel['name'].split()[0]
+        if existing_channel_first_part == channel_name_first_part:
             return None
-    
+
     # No matching channel found, add the new channel
     return f'''  <channel id="{channel_name}">
     <display-name lang="en">{channel_name}</display-name>
