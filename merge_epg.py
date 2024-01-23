@@ -13,9 +13,8 @@ def merge_epg(channel_info_file, epg_old_file, output_file):
     last_channel = channel_info_root.findall('.//channel')[-1]
 
     # Insert the content from epg_old.xml after the last channel entry
-    last_channel_index = channel_info_root.index(last_channel)
     for program in epg_old_root.findall('.//programme'):
-        channel_info_root.insert(last_channel_index + 1, program)
+        last_channel.addnext(program)
 
     # Write the combined information to the output file
     channel_info_tree.write(output_file, encoding='utf-8', xml_declaration=True)
