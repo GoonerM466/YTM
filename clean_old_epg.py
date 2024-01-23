@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import os
 
 def clean_old_epg(input_file, output_file, max_age_hours=36):
@@ -27,8 +27,8 @@ def clean_old_epg(input_file, output_file, max_age_hours=36):
     tree = ET.fromstring(content)
     root = ET.ElementTree(tree).getroot()
 
-    # Get the current time
-    current_time = datetime.utcnow()
+    # Get the current time with timezone information
+    current_time = datetime.utcnow().replace(tzinfo=timezone.utc)
 
     # Remove header and all channels
     for channel in root.findall('.//channel'):
