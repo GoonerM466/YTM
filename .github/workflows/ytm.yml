@@ -42,6 +42,8 @@ jobs:
         echo "" > live_status.txt
 
         while IFS=, read -r channel_name group channel_url; do
+          # Modify channel_name: remove spaces and trim to 3 words
+          channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g' | awk '{ print $1 " " $2 " " $3 }')
           mkdir -p "./current_channels/$group"
           touch "./current_channels/$group/$channel_name.m3u8"
           {
@@ -55,19 +57,12 @@ jobs:
           live_status="Not Live"
           if yt-dlp --print is_live "$channel_url" | grep -q "True"; then
             live_status="Live"
-            echo "$channel_name is live! Updating $channel_name.m3u8 with current live stream!"
+            echo "$channel_name is live! Updating $channel_name.m3u8 with the current live stream!"
           fi
           
           # Append live status information to live_status.txt
           echo "$channel_name - $live_status - $(date)" >> live_status.txt
         done < current_channels.txt
-
-
-
-
-
-
-
 
     - name: git add
       run: |
@@ -77,4 +72,3 @@ jobs:
       run: |
         git diff --cached --quiet || git commit -m Updated
         git push origin main
-
