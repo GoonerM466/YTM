@@ -26,7 +26,7 @@ def clean_old_epg(input_file, output_file, max_age_hours):
             root.remove(program)
 
     # Write the remaining programs to the output file
-    with open(output_file, 'wb') as output:
+    with open("old_" + output_file, 'wb') as output:
         tree.write(output)
 
     # Check if the input file is empty after removing programs
@@ -40,7 +40,7 @@ def clean_old_epg(input_file, output_file, max_age_hours):
 if __name__ == "__main__":
     # Set your parameters
     input_file = "combined_epg.xml"
-    output_file = "epg_old.xml"
+    output_file = "epg_old.xml"  # Corrected output file name
     max_age_hours = 36
 
     # Execute the script
