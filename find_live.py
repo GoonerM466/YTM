@@ -1,15 +1,35 @@
+import os
+import json
+from googleapiclient.discovery import build
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
 import yt_dlp
-from collections import defaultdict
 
-def search_live_channels(query):
-    ydl_opts = {
-        'quiet': True,
-        'extract_flat': True,
-    }
+def search_live_channels(api_key, max_results=250):
+    youtube = build('youtube', 'v3', developerKey=api_key)
 
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        result = ydl.extract_info(f'ytsearch:{query}', download=False)
-        return result.get('entries', [])
+    request = youtube.search().list(
+        part="snippet",
+        eventType="live",
+        maxResults=max_results,
+        order="viewCount",
+        type="video"
+    )
+
+    response = request.execute()
+
+    live_links = []
+    for item in response.get('items', []):
+        channel_name = item['snippet']['title']
+        channel_id = item['snippet']['channelId']
+        group = get_channel_category(channel_id)  # You may implement this function as in your previous script
+        live_links.append({
+            'name': channel_name,
+            'url': f'https://www.youtube.com/channel/{channel_id}',
+            'group': group if group else 'other',
+        })
+
+    return live_links
 
 def get_channel_category(channel_id):
     ydl_opts = {
@@ -19,20 +39,6 @@ def get_channel_category(channel_id):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         result = ydl.extract_info(f'https://www.youtube.com/channel/{channel_id}', download=False)
         return result.get('categories', [])[0].lower() if result.get('categories') else None
-
-def search_live_links():
-    live_links = []
-    search_result = search_live_channels("is live")
-    if search_result:
-        for entry in search_result:
-            channel_id = entry['channel_id']
-            group = get_channel_category(channel_id)
-            live_links.append({
-                'name': entry['title'],
-                'url': entry['url'],
-                'group': group if group else 'other',
-            })
-    return live_links
 
 def write_to_file(live_channels):
     live_channels.sort(key=lambda x: (x['group'], x['name']))
@@ -56,7 +62,9 @@ def print_live_channels(live_channels):
         print(f'New! {channel["name"]}, {channel["group"]}, {channel["url"]}')
 
 if __name__ == '__main__':
-    live_links = search_live_links()
+    youtube_api_key = "AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc"
+    live_links = search_live_channels(youtube_api_key)
+    
     if live_links:
         print("Live Channels:")
         print_live_channels(live_links)
