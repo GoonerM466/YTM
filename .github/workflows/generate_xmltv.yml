@@ -25,14 +25,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
-    - name: Delay before script execution
-      run: sleep 5
+    - name: Execute clean_old_epg.py
+      run: python clean_old_epg.py
 
     - name: Execute generate_channel_info.py
       run: python generate_channel_info.py > channel_info.xml
 
-   # - name: Execute your_intermediate_script.py
-   #   run: python your_intermediate_script.py
+    - name: Execute merge_epg.py
+      run: python merge_epg.py
 
     - name: Execute generate_program_info.py
       run: python generate_program_info.py > combined_epg.xml
