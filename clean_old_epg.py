@@ -8,9 +8,15 @@ def clean_old_epg(input_file, output_file, max_age_hours=36):
     root = tree.getroot()
     # Get the current time in UTC
     current_time = datetime.utcnow().replace(tzinfo=timezone.utc)
+
     # Remove header and all channels
+    header = root.find(".//header")
+    if header is not None:
+        root.remove(header)
+
     for channel in root.findall('.//channel'):
         root.remove(channel)
+
     # Filter out and remove programs older than max_age_hours
     for program in root.findall('.//programme'):
         start_time_str = program.get('start')
@@ -19,6 +25,7 @@ def clean_old_epg(input_file, output_file, max_age_hours=36):
         age_hours = (current_time - start_time).total_seconds() / 3600
         if age_hours > max_age_hours:
             root.remove(program)
+
     # Write the remaining programs to the output file
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
     # Check if the combined_epg.xml file is empty
