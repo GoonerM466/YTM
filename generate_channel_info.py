@@ -32,8 +32,12 @@ def main():
             channel_info += generate_channel_info(channel_name)
 
     # Combine all information into the final XMLTV content
-    xmltv_content = f"{header}{channel_info}</tv>"
-    print(xmltv_content)
+    xmltv_content = f"{header}{channel_info}"
+    
+    # Use the xmltv_content variable as needed (e.g., save to a file, send in an API request, etc.)
+    # Example: 
+    # with open('output.xml', 'w') as output_file:
+    #     output_file.write(xmltv_content)
 
 if __name__ == '__main__':
     main()
