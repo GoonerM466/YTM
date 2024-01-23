@@ -1,6 +1,5 @@
 import re
 from datetime import datetime, timedelta
-import os
 
 def parse_live_status(line):
     # Parse the information from the live_status.txt line
@@ -15,17 +14,44 @@ def convert_to_xmltv_time(time_str):
     dt = datetime.strptime(time_str, '%a %b %d %H:%M:%S %Z %Y')
     return dt.strftime('%Y%m%d%H%M%S +0000')
 
-def generate_channel_info(channel_name):
-    # Generate the XMLTV content for channel information
+def generate_channel_info(channel_name, existing_channels):
+    # Check for duplicate channels and update group name if necessary
+    for existing_channel in existing_channels:
+        if existing_channel['name'] == channel_name:
+            # Channel with the same name exists
+            if existing_channel['group'] == channel_group:
+                # Same group, do not add the channel
+                return None
+            else:
+                # Update the group name and return the updated channel info
+                existing_channel['group'] = channel_group
+                return f'''  <channel id="{channel_name}">
+    <display-name lang="en">{channel_name}</display-name>
+    <group>{channel_group}</group>
+  </channel>
+'''
+    
+    # No matching channel found, add the new channel
     return f'''  <channel id="{channel_name}">
     <display-name lang="en">{channel_name}</display-name>
+    <group>{channel_group}</group>
   </channel>
 '''
 
-def generate_program_info(channel_name, live_status, time_str):
-    # Generate the XMLTV content for program information
+def generate_program_info(channel_name, live_status, time_str, existing_programs):
+    # Convert time_str to XMLTV format
     start_time = convert_to_xmltv_time(time_str)
     stop_time = (datetime.strptime(start_time, '%Y%m%d%H%M%S +0000') + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
+
+    # Check for existing programs with the same details
+    for existing_program in existing_programs:
+        if existing_program['channel'] == channel_name and existing_program['start'] < stop_time and existing_program['stop'] > start_time:
+            # Update existing program's end time to the new program's start time
+            existing_program['stop'] = start_time
+            break
+    else:
+        # No matching program found, add the new program
+        existing_programs.append({'channel': channel_name, 'start': start_time, 'stop': stop_time})
 
     return f'''  <programme start="{start_time}" stop="{stop_time}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
@@ -44,16 +70,28 @@ def main():
     channel_info = ""
     program_info = ""
 
+    # Read program information from old_epg.xml and parse it
+    with open('old_epg.xml', 'r') as old_epg_file:
+        old_epg_content = old_epg_file.read()
+
+    # Extract existing channel and program details from old_epg_content
+    existing_channels = []
+    existing_programs = []
+    channel_match = re.finditer(r'<channel id="(.+)">\s*<display-name lang="en">(.+)</display-name>\s*<group>(.+)</group>\s*</channel>', old_epg_content)
+    for match in channel_match:
+        existing_channels.append({'name': match.group(2), 'group': match.group(3)})
+    program_match = re.finditer(r'<programme start="(.+)" stop="(.+)" channel="(.+)">', old_epg_content)
+    for match in program_match:
+        existing_programs.append({'channel': match.group(3), 'start': match.group(1), 'stop': match.group(2)})
+
     for line in lines:
         parsed_info = parse_live_status(line)
         if parsed_info:
             channel_name, live_status, time_str = parsed_info
-            channel_info += generate_channel_info(channel_name)
-            program_info += generate_program_info(channel_name, live_status, time_str)
-
-    # Read program information from old_epg.xml and insert it at the top
-    with open('old_epg.xml', 'r') as old_epg_file:
-        old_epg_content = old_epg_file.read()
+            channel_info_entry = generate_channel_info(channel_name, existing_channels)
+            if channel_info_entry:
+                channel_info += channel_info_entry
+            program_info += generate_program_info(channel_name, live_status, time_str, existing_programs)
 
     # Combine all information into the final XMLTV content
     xmltv_content = f"{header}{channel_info}{old_epg_content}{program_info}</tv>"
