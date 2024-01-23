@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "Get YouTube Live m3u8"
       - "Clean Old EPG"
     types:
       - completed
@@ -25,6 +24,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+
     - name: Execute generate_channel_info.py
       run: python generate_channel_info.py > combined_epg.xml
 
@@ -33,9 +33,9 @@ jobs:
       run: |
         git diff --exit-code || echo "Changes detected" && exit 0
 
-    - name: Stage changes
+    - name: Pull remote changes
       if: steps.check_changes.outputs.return-code == '0'
-      run: git add .
+      run: git pull || true
 
     - name: Commit and push changes
       if: steps.check_changes.outputs.return-code == '0'
