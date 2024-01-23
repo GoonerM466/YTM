@@ -12,9 +12,6 @@
   <channel id="EERIEISSSS">
     <display-name lang="en">EERIEISSSS</display-name>
   </channel>
-  <channel id="Jimmy_Broadbent">
-    <display-name lang="en">Jimmy_Broadbent</display-name>
-  </channel>
   <channel id="deadeyedelboy">
     <display-name lang="en">deadeyedelboy</display-name>
   </channel>
@@ -39,55 +36,51 @@
   <channel id="GBNews2">
     <display-name lang="en">GBNews2</display-name>
   </channel>
-  <programme start="20240123134323 +0000" stop="20240123164323 +0000" channel="beinsportshaber">
+  <programme start="20240123152606 +0000" stop="20240123182606 +0000" channel="beinsportshaber">
     <title lang="en">Live</title>
     <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123134327 +0000" stop="20240123164327 +0000" channel="AFCAsianCup">
+  <programme start="20240123152610 +0000" stop="20240123182610 +0000" channel="AFCAsianCup">
     <title lang="en">Not Live</title>
     <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123134333 +0000" stop="20240123164333 +0000" channel="talkSPORT">
+  <programme start="20240123152614 +0000" stop="20240123182614 +0000" channel="talkSPORT">
     <title lang="en">Live</title>
     <desc lang="en">talkSPORT is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123134339 +0000" stop="20240123164339 +0000" channel="EERIEISSSS">
-    <title lang="en">Live</title>
-    <desc lang="en">EERIEISSSS is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240123134343 +0000" stop="20240123164343 +0000" channel="Jimmy_Broadbent">
+  <programme start="20240123152616 +0000" stop="20240123182616 +0000" channel="EERIEISSSS">
     <title lang="en">Not Live</title>
-    <desc lang="en">Jimmy_Broadbent is not currently live. Check the schedule online or try again later!</desc>
+    <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123134344 +0000" stop="20240123164344 +0000" channel="deadeyedelboy">
+  <programme start="20240123152622 +0000" stop="20240123182622 +0000" channel="deadeyedelboy">
     <title lang="en">Not Live</title>
     <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123134350 +0000" stop="20240123164350 +0000" channel="NBCNews">
+  <programme start="20240123152627 +0000" stop="20240123182627 +0000" channel="NBCNews">
     <title lang="en">Live</title>
     <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123134356 +0000" stop="20240123164356 +0000" channel="SkyNews">
+  <programme start="20240123152632 +0000" stop="20240123182632 +0000" channel="SkyNews">
     <title lang="en">Live</title>
     <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123134402 +0000" stop="20240123164402 +0000" channel="ABCNews">
+  <programme start="20240123152638 +0000" stop="20240123182638 +0000" channel="ABCNews">
     <title lang="en">Live</title>
     <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123134404 +0000" stop="20240123164404 +0000" channel="HitsRadio">
+  <programme start="20240123152639 +0000" stop="20240123182639 +0000" channel="HitsRadio">
     <title lang="en">Not Live</title>
     <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123134416 +0000" stop="20240123164416 +0000" channel="FobosPlanet">
+  <programme start="20240123152649 +0000" stop="20240123182649 +0000" channel="FobosPlanet">
     <title lang="en">Live</title>
     <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123134420 +0000" stop="20240123164420 +0000" channel="DPWorldTour">
+  <programme start="20240123152652 +0000" stop="20240123182652 +0000" channel="DPWorldTour">
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123134426 +0000" stop="20240123164426 +0000" channel="GBNews2">
+  <programme start="20240123152657 +0000" stop="20240123182657 +0000" channel="GBNews2">
     <title lang="en">Live</title>
     <desc lang="en">GBNews2 is currently streaming live! Tune in and enjoy!</desc>
   </programme>
