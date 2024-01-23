@@ -63,20 +63,12 @@ def main():
             with open('old_epg.xml', 'w') as old_file:
                 old_file.write('<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="none" generator-info-url="none">\n</tv>')
             print(f"Check if old_epg.xml exists, if not, create it - success!")
-        return result
-    except Exception as e:
-        print(f"Error checking for old_epg, could not create either: {e}")
-        return None
 
         # Read existing combined_epg.xml and parse the end time of each program
         try:
             with open('combined_epg.xml', 'r') as combined_file:
                 existing_content = combined_file.read()
             print(f"Read existing combined_epg.xml and parse the end time of each program - success!")
-        return result
-    except Exception as e:
-        print(f"Error reading exiating epg: {e}")
-        return None
 
             # Remove header, channel info, and programs older than 36 hours
             lines = existing_content.split('\n')
@@ -84,56 +76,32 @@ def main():
             remaining_programs = [line for line in lines[1:] if 'stop="' in line]
             current_time = datetime.utcnow()
             print(f"Remove header, channel info, and programs older than 36 hours - success!")
-        return result
-    except Exception as e:
-        print(f"Error removing older programs: {e}")
-        return None
-            
+
             # Filter programs with an end time within the last 36 hours
             remaining_programs = [program for program in remaining_programs if (
                 current_time - datetime.strptime(re.search(r'stop="([^"]+)"', program).group(1), '%Y%m%d%H%M%S %z')).total_seconds() < 36 * 3600]
-            print(f"Read existing combined_epg.xml and parse the end time of each program - success!")
-        return result
-    except Exception as e:
-        print(f"Error filtering old programs: {e}")
-        return None
+            print(f"Filter programs with an end time within the last 36 hours - success!")
 
             # Write the remaining programs to old_epg.xml
             with open('old_epg.xml', 'a') as old_file:
                 old_file.write('\n'.join(remaining_programs))
             print(f"Write the remaining programs to old_epg.xml - success!")
-        return result
-    except Exception as e:
-        print(f"Error writing programs to old_epg: {e}")
-        return None
 
             # Clean the contents of combined_epg.xml before writing new information
             with open('combined_epg.xml', 'w') as combined_file:
                 combined_file.write(f"{header}\n")
             print(f"Clean the contents of combined_epg.xml before writing new information - success!")
-        return result
-    except Exception as e:
-        print(f"Error cleaning combined_epg: {e}")
-        return None
 
         except FileNotFoundError:
             # Create combined_epg.xml if it doesn't exist
             with open('combined_epg.xml', 'w') as combined_file:
                 combined_file.write('<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="none" generator-info-url="none">\n</tv>')
             print(f"Create combined_epg.xml - success!")
-        return result
-    except Exception as e:
-        print(f"Error creating combined_epg: {e}")
-        return None
 
         # Process live_status.txt and add new program information to combined_epg.xml
         with open('live_status.txt', 'r') as file:
             lines = file.readlines()
             print(f"Process live_status.txt and add new program information to combined_epg.xml - success!")
-        return result
-    except Exception as e:
-        print(f"Error adding new programs: {e}")
-        return None
 
         channel_info = ""
         program_info = ""
@@ -148,19 +116,11 @@ def main():
         # Combine all information into the final XMLTV content
         xmltv_content = f"{channel_info}{program_info}"
         print(f"Combine all information into the final XMLTV content - success!")
-        return result
-    except Exception as e:
-        print(f"Error combinbing old and new epg: {e}")
-        return None
 
         # Append the new program information to combined_epg.xml
         with open('combined_epg.xml', 'a') as combined_file:
             combined_file.write(xmltv_content)
         print(f"Append the new program information to combined_epg.xml - success!")
-        return result
-    except Exception as e:
-        print(f"Error appending newer programs: {e}")
-        return None
 
     except Exception as e:
         print(f"Error in main(): {e}")
