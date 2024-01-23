@@ -87,6 +87,6 @@ jobs:
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git add all_live_channels.txt
+        git add .
         git commit -m "Update live channels [skip ci]"
         git push
