@@ -6,7 +6,10 @@ from google.oauth2.credentials import Credentials
 import yt_dlp
 import time
 
+MAX_RUNTIME_SECONDS = 210  # 3.5 minutes
+
 def search_live_channels(api_key, max_results=50):
+    start_time = time.time()
     youtube = build('youtube', 'v3', developerKey=api_key)
 
     live_links = []
@@ -14,6 +17,7 @@ def search_live_channels(api_key, max_results=50):
 
     while True:
         try:
+            print("Searching...")
             request = youtube.search().list(
                 part="snippet",
                 eventType="live",
@@ -39,6 +43,7 @@ def search_live_channels(api_key, max_results=50):
                     'url': f'https://www.youtube.com/channel/{channel_id}',
                     'group': group if group else 'other',
                 })
+                print(f"Channel found: {channel_name}")
 
             next_page_token = response.get('nextPageToken')
 
@@ -47,11 +52,18 @@ def search_live_channels(api_key, max_results=50):
 
             print(f"Waiting 10 seconds before the next page...")
             time.sleep(10)
+            print("Waiting...")
+
+            elapsed_time = time.time() - start_time
+            if elapsed_time > MAX_RUNTIME_SECONDS:
+                print(f"Maximum runtime ({MAX_RUNTIME_SECONDS} seconds) reached. Exiting...")
+                break
 
         except Exception as e:
             if 'quota' in str(e).lower():
                 print(f"API Quota exceeded warning. Waiting 20 seconds...")
                 time.sleep(20)
+                print("Waiting...")
             else:
                 raise
 
