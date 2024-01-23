@@ -2,7 +2,7 @@ name: Delete M3U8 Files
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '00 23 * * *'
   workflow_dispatch:
     inputs:
       manual_run:
