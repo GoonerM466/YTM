@@ -1,5 +1,6 @@
 import re
 from datetime import datetime, timedelta
+import os
 
 def parse_live_status(line):
     # Parse the information from the live_status.txt line
@@ -60,6 +61,10 @@ def main():
     # Write the combined content to combined_epg.xml
     with open('combined_epg.xml', 'w') as combined_epg_file:
         combined_epg_file.write(xmltv_content)
+
+    # Clear the content of epg_old.xml
+    with open('epg_old.xml', 'w'):
+        pass
 
 if __name__ == '__main__':
     main()
