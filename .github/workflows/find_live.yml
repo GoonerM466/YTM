@@ -1,4 +1,4 @@
-name: Update Live Channels
+name: Find Live Channels
 
 on:
   schedule:
