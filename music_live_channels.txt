@@ -1,9 +1,23 @@
+Channel Name: Coffee Relaxing Jazz
+Channel URL: https://youtube.com/@CoffeeRelaxingJazz/live
+Title: Stress Relief with Relaxing Jazz Music  Cozy Coffee Shop Ambience amp Smooth Jazz Instrumental Music
+Description: Stress Relief with Relaxing Jazz Music  Cozy Coffee Shop Ambience  Smooth Jazz Instrumental Music Hello my friend
+Logo URL: https://i.ytimg.com/vi/Ix6emY1LHQE/default_live.jpg
+Add this link to the update file: New: Coffee Relaxing Jazz, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CoffeeRelaxingJazz/live
+
 Channel Name: Cozy Coffee Shop
 Channel URL: https://youtube.com/@CozyCoffeeShop/live
 Title: Soft Jazz Music for Working Relax  Soothing Jazz Instrumental Music with Cozy Coffee Shop Ambience
 Description: Soft Jazz Music for Working Relax  Soothing Jazz Instrumental Music with Cozy Coffee Shop Ambience    Lets experience 
 Logo URL: https://i.ytimg.com/vi/nyTdKLtWMkg/default_live.jpg
 Add this link to the update file: New: Cozy Coffee Shop, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CozyCoffeeShop/live
+
+Channel Name: KN Story Animated
+Channel URL: https://youtube.com/@KNStoryAnimated/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2 Soothing Jazz 
+Logo URL: https://i.ytimg.com/vi/UPiwBcpcYOk/default_live.jpg
+Add this link to the update file: New: KN Story Animated, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KNStoryAnimated/live
 
 Channel Name: Coffee Relaxing Jazz
 Channel URL: https://youtube.com/@CoffeeRelaxingJazz/live
@@ -33,12 +47,12 @@ Description: Positive Bossa Nova Jazz Music for Good Mood Start The Day  Outdoor
 Logo URL: https://i.ytimg.com/vi/kw1Kb-LSwZQ/default_live.jpg
 Add this link to the update file: New: Chill Caf Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChillCafMusic/live
 
-Channel Name: Cafe Music BGM channel
-Channel URL: https://youtube.com/@CafeMusicBGMchannel/live
-Title: TUESDAY MORNING JAZZ Jazz Relaxing Instrumental Music in Coffee Shop Ambience with Fireplace Sounds
-Description: Begin your Tuesday with the essence of a cozy morning cafe  Immerse yourself in the warm embrace of jazz and bossa 
-Logo URL: https://i.ytimg.com/vi/APrzRKzrkPw/default_live.jpg
-Add this link to the update file: New: Cafe Music BGM channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CafeMusicBGMchannel/live
+Channel Name: Open Heart Music  Helios 4K
+Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
+Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
+Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
+Logo URL: https://i.ytimg.com/vi/4GI6QEv-t8k/default_live.jpg
+Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
 
 Channel Name: Jazz Cafe Ambience
 Channel URL: https://youtube.com/@JazzCafeAmbience/live
@@ -47,12 +61,12 @@ Description: Warm Piano Jazz Music In Bookstore Coffee Shop  Smooth Jazz Music a
 Logo URL: https://i.ytimg.com/vi/d8a-fzk4Gu4/default_live.jpg
 Add this link to the update file: New: Jazz Cafe Ambience, INSERT YOUR PREFERRED GROUP, https://youtube.com/@JazzCafeAmbience/live
 
-Channel Name: Lofi Girl
-Channel URL: https://youtube.com/@LofiGirl/live
-Title: lofi hip hop radio   beats to sleepchill to
-Description: Listen on Spotify Apple music and more  httpsfanlinktolofigirlmusic  Lofi Girl on all social media 
-Logo URL: https://i.ytimg.com/vi/rUxyKA_-grg/default_live.jpg
-Add this link to the update file: New: Lofi Girl, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LofiGirl/live
+Channel Name: Cafe Music BGM channel
+Channel URL: https://youtube.com/@CafeMusicBGMchannel/live
+Title: TUESDAY MORNING JAZZ Jazz Relaxing Instrumental Music in Coffee Shop Ambience with Fireplace Sounds
+Description: Begin your Tuesday with the essence of a cozy morning cafe  Immerse yourself in the warm embrace of jazz and bossa 
+Logo URL: https://i.ytimg.com/vi/APrzRKzrkPw/default_live.jpg
+Add this link to the update file: New: Cafe Music BGM channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CafeMusicBGMchannel/live
 
 Channel Name: RELAXATION LoFi  CHILL
 Channel URL: https://youtube.com/@RELAXATIONLoFiCHILL/live
@@ -61,26 +75,12 @@ Description: Tuesday vibes Calm Your Mind  Lofi hip hop mix  Lofi music for slee
 Logo URL: https://i.ytimg.com/vi/SEIkeZPFTjA/default_live.jpg
 Add this link to the update file: New: RELAXATION LoFi  CHILL, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RELAXATIONLoFiCHILL/live
 
-Channel Name: FUN SPIDERMAN TV
-Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/oKvAeTzXzAA/default_live.jpg
-Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
-
 Channel Name: Magic Music
 Channel URL: https://youtube.com/@MagicMusic/live
 Title: Top Songs 2024  Pop Music Playlist  Music New Songs 2024
 Description: Top Songs 2024  Pop Music Playlist  Music New Songs 2024 Songs in this playlist 01 Aqua Vibe Pop Mage  Flowers 02
 Logo URL: https://i.ytimg.com/vi/ZmVRiyRkk1E/default_live.jpg
 Add this link to the update file: New: Magic Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MagicMusic/live
-
-Channel Name: Nogastic Music
-Channel URL: https://youtube.com/@NogasticMusic/live
-Title: Musica 2024 Los Mas Nuevo  Pop Latino 2024  Mix Canciones Reggaeton 2024
-Description: Musica 2024 Los Mas Nuevo  Pop Latino 2024  Mix Canciones Reggaeton 2024 Luis Fonsi Sebastian Yatra Nacho Wisin 
-Logo URL: https://i.ytimg.com/vi/y0PW5PUJfyw/default_live.jpg
-Add this link to the update file: New: Nogastic Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NogasticMusic/live
 
 Channel Name: HealingMate  Dog Music
 Channel URL: https://youtube.com/@HealingMateDogMusic/live
@@ -89,26 +89,19 @@ Description: LIVE Dog Music   Relaxing Sounds for Dogs with Anxiety   Separation
 Logo URL: https://i.ytimg.com/vi/uGQwUI7KpJg/default_live.jpg
 Add this link to the update file: New: HealingMate  Dog Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HealingMateDogMusic/live
 
-Channel Name: Cafe Music BGM channel
-Channel URL: https://youtube.com/@CafeMusicBGMchannel/live
-Title: MONDAY MORNING JAZZ Stress Relief with Smooth Jazz Music  Cozy Coffee Shop Ambience for Relaxing
-Description: Start your week with the soothing embrace of smooth jazz tunes  As the golden morning light filters through the cafe windows 
-Logo URL: https://i.ytimg.com/vi/BWjrWwhS-BU/default_live.jpg
-Add this link to the update file: New: Cafe Music BGM channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CafeMusicBGMchannel/live
+Channel Name: AP Music
+Channel URL: https://youtube.com/@APMusic/live
+Title: Feelings of love Jukebox  HT Music  Arijit Singh Songs  Arijit Singh Jukebox  Best of 2023
+Description: Feelings of love Jukebox  HT Music  Arijit Singh Songs  Arijit Singh Jukebox  Best of 2023 Feelings of love Jukebox  HT Music 
+Logo URL: https://i.ytimg.com/vi/4r_eKTrP0N0/default_live.jpg
+Add this link to the update file: New: AP Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@APMusic/live
 
-Channel Name: Cozy Jazz Music
-Channel URL: https://youtube.com/@CozyJazzMusic/live
-Title: Tuesday Morning Jazz Sweet January Jazz amp Spring Bossa Nova Music For Good Mood
-Description: Tuesday Morning Jazz Sweet January Jazz  Spring Bossa Nova Music For Good Mood httpsyoutubecomliverjPbJIbGZvo 
-Logo URL: https://i.ytimg.com/vi/rjPbJIbGZvo/default_live.jpg
-Add this link to the update file: New: Cozy Jazz Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CozyJazzMusic/live
-
-Channel Name: Open Heart Music  Helios 4K
-Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
-Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
-Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
-Logo URL: https://i.ytimg.com/vi/YfTiax1mklA/default_live.jpg
-Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
+Channel Name: Nogastic Music
+Channel URL: https://youtube.com/@NogasticMusic/live
+Title: Musica 2024 Los Mas Nuevo  Pop Latino 2024  Mix Canciones Reggaeton 2024
+Description: Musica 2024 Los Mas Nuevo  Pop Latino 2024  Mix Canciones Reggaeton 2024 Luis Fonsi Sebastian Yatra Nacho Wisin 
+Logo URL: https://i.ytimg.com/vi/y0PW5PUJfyw/default_live.jpg
+Add this link to the update file: New: Nogastic Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NogasticMusic/live
 
 Channel Name: KN Story Animated
 Channel URL: https://youtube.com/@KNStoryAnimated/live
@@ -117,19 +110,33 @@ Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Musi
 Logo URL: https://i.ytimg.com/vi/uYnsGUXRSYI/default_live.jpg
 Add this link to the update file: New: KN Story Animated, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KNStoryAnimated/live
 
-Channel Name: Soul Relajante
-Channel URL: https://youtube.com/@SoulRelajante/live
-Title: MSICA RELAJANTE PARA ALIVIAR EL ESTRES Y LA ANSIEDAD MSICA PARA MEDITAR RELAJARSE Y DORMIR
-Description: MSICA RELAJANTE PARA ALIVIAR EL ESTRES Y LA ANSIEDAD MSICA PARA MEDITAR RELAJARSE Y DORMIR
-Logo URL: https://i.ytimg.com/vi/bbXEq1hhkzo/default_live.jpg
-Add this link to the update file: New: Soul Relajante, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SoulRelajante/live
+Channel Name: Cafe Music BGM channel
+Channel URL: https://youtube.com/@CafeMusicBGMchannel/live
+Title: MONDAY MORNING JAZZ Stress Relief with Smooth Jazz Music  Cozy Coffee Shop Ambience for Relaxing
+Description: Start your week with the soothing embrace of smooth jazz tunes  As the golden morning light filters through the cafe windows 
+Logo URL: https://i.ytimg.com/vi/BWjrWwhS-BU/default_live.jpg
+Add this link to the update file: New: Cafe Music BGM channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CafeMusicBGMchannel/live
 
-Channel Name: Magic Club
-Channel URL: https://youtube.com/@MagicClub/live
-Title: Summer Music Mix 2023  Best Of Vocals Deep House  David Guetta Rema Alan Walker Miley Cyrus
-Description: Summer Music Mix 2023 Best Of Vocals Deep House David Guetta Rema Alan Walker Miley Cyrus Summer Music Mix 
-Logo URL: https://i.ytimg.com/vi/WkBX4N79r4w/default_live.jpg
-Add this link to the update file: New: Magic Club, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MagicClub/live
+Channel Name: FUN SPIDERMAN TV
+Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/oKvAeTzXzAA/default_live.jpg
+Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
+
+Channel Name: Beep Beep  Nursery Rhymes
+Channel URL: https://youtube.com/@BeepBeepNurseryRhymes/live
+Title: London Bridge is Falling Down  More Nursery Rhymes amp Kids Songs  Beep Beep
+Description: Little Kitty got stuck in the tree  Kids are making bridge to get her down but the bridge is falling down Lyrics London bridge is 
+Logo URL: https://i.ytimg.com/vi/-VBxijFm50Y/default_live.jpg
+Add this link to the update file: New: Beep Beep  Nursery Rhymes, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BeepBeepNurseryRhymes/live
+
+Channel Name: 4K Video Nature  Focus Music
+Channel URL: https://youtube.com/@4KVideoNatureFocusMusic/live
+Title: Deep Focus Music To Improve Concentration  12 Hours of Ambient Study Music to Concentrate 654
+Description: Deep Focus Music To Improve Concentration  12 Hours of Ambient Study Music to Concentrate 654 Enjoy these 12 of deep 
+Logo URL: https://i.ytimg.com/vi/ZVGbfjlfT00/default_live.jpg
+Add this link to the update file: New: 4K Video Nature  Focus Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@4KVideoNatureFocusMusic/live
 
 Channel Name: Yellow Brick Cinema  Relaxing Music
 Channel URL: https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
@@ -138,6 +145,13 @@ Description: Enjoy our latest relaxing music live stream youtubecomyellowbrickci
 Logo URL: https://i.ytimg.com/vi/ng474Vnutes/default_live.jpg
 Add this link to the update file: New: Yellow Brick Cinema  Relaxing Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
 
+Channel Name: Soul Relajante
+Channel URL: https://youtube.com/@SoulRelajante/live
+Title: MSICA RELAJANTE PARA ALIVIAR EL ESTRES Y LA ANSIEDAD MSICA PARA MEDITAR RELAJARSE Y DORMIR
+Description: MSICA RELAJANTE PARA ALIVIAR EL ESTRES Y LA ANSIEDAD MSICA PARA MEDITAR RELAJARSE Y DORMIR
+Logo URL: https://i.ytimg.com/vi/bbXEq1hhkzo/default_live.jpg
+Add this link to the update file: New: Soul Relajante, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SoulRelajante/live
+
 Channel Name: Open Heart Music  Helios 4K
 Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
 Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
@@ -145,40 +159,19 @@ Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Hea
 Logo URL: https://i.ytimg.com/vi/ZglMPZ_FgNs/default_live.jpg
 Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
 
-Channel Name: Super Simple Songs  Kids Songs
-Channel URL: https://youtube.com/@SuperSimpleSongsKidsSongs/live
-Title:  Super Simple Songs LIVE   Kids Songs  Super Simple Songs
-Description: Get the Super Simple App  httpbitlyTheSuperSimpleApp PARENTS AND TEACHERS Thank you so much for watching 
-Logo URL: https://i.ytimg.com/vi/iftl5p5R7iY/default_live.jpg
-Add this link to the update file: New: Super Simple Songs  Kids Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SuperSimpleSongsKidsSongs/live
+Channel Name: Magic Club
+Channel URL: https://youtube.com/@MagicClub/live
+Title: Summer Music Mix 2023  Best Of Vocals Deep House  David Guetta Rema Alan Walker Miley Cyrus
+Description: Summer Music Mix 2023 Best Of Vocals Deep House David Guetta Rema Alan Walker Miley Cyrus Summer Music Mix 
+Logo URL: https://i.ytimg.com/vi/WkBX4N79r4w/default_live.jpg
+Add this link to the update file: New: Magic Club, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MagicClub/live
 
-Channel Name: Cafe Cozy Jazz
-Channel URL: https://youtube.com/@CafeCozyJazz/live
-Title: Positive Jazz  Warm Relaxing Jazz Instrumental Music amp Smooth Spring Bossa Nova for Energy the day
-Description: Positive Jazz  Warm Relaxing Jazz Instrumental Music  Smooth Spring Bossa Nova for Energy the day    Lets experience 
-Logo URL: https://i.ytimg.com/vi/TtZBF60i68M/default_live.jpg
-Add this link to the update file: New: Cafe Cozy Jazz, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CafeCozyJazz/live
-
-Channel Name: Worship Music
-Channel URL: https://youtube.com/@WorshipMusic/live
-Title: Here I Am To Worship  Hillsong Worship Christian Worship Songs 2023  Best Praise And Worship Songs
-Description: Here I Am To Worship  Hillsong Worship Christian Worship Songs 2023  Best Praise And Worship Songs Lits 01Who You Say 
-Logo URL: https://i.ytimg.com/vi/np9AQCEL8ko/default_live.jpg
-Add this link to the update file: New: Worship Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WorshipMusic/live
-
-Channel Name: Love India
-Channel URL: https://youtube.com/@LoveIndia/live
-Title: 90s evergreen hits Hindi songs  Bollywood 9039s Love songs  Hindi Romantic Melodies Songs
-Description: 
-Logo URL: https://i.ytimg.com/vi/hJBifpG62-c/default_live.jpg
-Add this link to the update file: New: Love India, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveIndia/live
-
-Channel Name: Piz Heroes
-Channel URL: https://youtube.com/@PizHeroes/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: 2 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/cfacDnFkgjk/default_live.jpg
-Add this link to the update file: New: Piz Heroes, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PizHeroes/live
+Channel Name: Open Heart Music  Helios 4K
+Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
+Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
+Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
+Logo URL: https://i.ytimg.com/vi/YfTiax1mklA/default_live.jpg
+Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
 
 Channel Name: Sleepy Dogs
 Channel URL: https://youtube.com/@SleepyDogs/live
@@ -187,12 +180,54 @@ Description: 12 Hours of The Best AntiAnxiety Music for Dogs Videos to Entertain
 Logo URL: https://i.ytimg.com/vi/BB-UMKyedfQ/default_live.jpg
 Add this link to the update file: New: Sleepy Dogs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SleepyDogs/live
 
+Channel Name: Worship Music
+Channel URL: https://youtube.com/@WorshipMusic/live
+Title: Here I Am To Worship  Hillsong Worship Christian Worship Songs 2023  Best Praise And Worship Songs
+Description: Here I Am To Worship  Hillsong Worship Christian Worship Songs 2023  Best Praise And Worship Songs Lits 01Who You Say 
+Logo URL: https://i.ytimg.com/vi/np9AQCEL8ko/default_live.jpg
+Add this link to the update file: New: Worship Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WorshipMusic/live
+
+Channel Name: HealingMate  Dog Music
+Channel URL: https://youtube.com/@HealingMateDogMusic/live
+Title: LIVE Dog MusicRelaxing Calming MusicCure Separation Anxiety Music to Calm DogsDog Sleep Music1
+Description: LIVE Dog Music  Relaxing Calming Music  Cure Separation Anxiety Music to Calm Dogs  Dog Sleep Music  1 Hello The 
+Logo URL: https://i.ytimg.com/vi/ZaZAIZG6EDw/default_live.jpg
+Add this link to the update file: New: HealingMate  Dog Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HealingMateDogMusic/live
+
+Channel Name: Bico Fun Tv
+Channel URL: https://youtube.com/@BicoFunTv/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: N5 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/6JGN0PNh62Q/default_live.jpg
+Add this link to the update file: New: Bico Fun Tv, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BicoFunTv/live
+
+Channel Name: Cafe Cozy Jazz
+Channel URL: https://youtube.com/@CafeCozyJazz/live
+Title: Positive Jazz  Warm Relaxing Jazz Instrumental Music amp Smooth Spring Bossa Nova for Energy the day
+Description: Positive Jazz  Warm Relaxing Jazz Instrumental Music  Smooth Spring Bossa Nova for Energy the day    Lets experience 
+Logo URL: https://i.ytimg.com/vi/TtZBF60i68M/default_live.jpg
+Add this link to the update file: New: Cafe Cozy Jazz, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CafeCozyJazz/live
+
+Channel Name: K Spider
+Channel URL: https://youtube.com/@KSpider/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: 6 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/joGA7ivdNC0/default_live.jpg
+Add this link to the update file: New: K Spider, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KSpider/live
+
 Channel Name: Yellow Brick Cinema  Relaxing Music
 Channel URL: https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
 Title: Deep Sleep Music 247 Calming Music Insomnia Sleep Relaxing Music Study Rain Sounds
 Description: Enjoy our latest relaxing music live stream youtubecomyellowbrickcinemalive Deep Sleep Music 247 Calming Music Insomnia 
 Logo URL: https://i.ytimg.com/vi/GNLBc5DgU-s/default_live.jpg
 Add this link to the update file: New: Yellow Brick Cinema  Relaxing Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
+
+Channel Name: Piz Heroes
+Channel URL: https://youtube.com/@PizHeroes/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: 2 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/cfacDnFkgjk/default_live.jpg
+Add this link to the update file: New: Piz Heroes, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PizHeroes/live
 
 Channel Name: Satisfying Husky
 Channel URL: https://youtube.com/@SatisfyingHusky/live
@@ -201,26 +236,33 @@ Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Musi
 Logo URL: https://i.ytimg.com/vi/DjLkljn9HGo/default_live.jpg
 Add this link to the update file: New: Satisfying Husky, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SatisfyingHusky/live
 
-Channel Name: Piz Green TV
-Channel URL: https://youtube.com/@PizGreenTV/live
+Channel Name: K Spider
+Channel URL: https://youtube.com/@KSpider/live
 Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: N7 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/_lPPTlxV4wo/default_live.jpg
-Add this link to the update file: New: Piz Green TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PizGreenTV/live
+Description: 6 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/EJQdW9N2BcM/default_live.jpg
+Add this link to the update file: New: K Spider, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KSpider/live
 
 Channel Name: Love India
 Channel URL: https://youtube.com/@LoveIndia/live
-Title: Old Bollywood LOVE Hindi songs Bollywood 90s HIts Hindi Romantic Melodies Songs
+Title: 90s evergreen hits Hindi songs  Bollywood 9039s Love songs  Hindi Romantic Melodies Songs
 Description: 
-Logo URL: https://i.ytimg.com/vi/Ux7tLxjywaE/default_live.jpg
+Logo URL: https://i.ytimg.com/vi/hJBifpG62-c/default_live.jpg
 Add this link to the update file: New: Love India, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveIndia/live
 
-Channel Name: Pico Series
-Channel URL: https://youtube.com/@PicoSeries/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: N12 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/AycU4YpjAXk/default_live.jpg
-Add this link to the update file: New: Pico Series, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PicoSeries/live
+Channel Name: BabyBus  Kids Songs and Cartoons
+Channel URL: https://youtube.com/@BabyBusKidsSongsandCartoons/live
+Title:  LIVE  Five Little Cars Come to Rescue  Police Car Ambulance  Kids Songs  BabyBus
+Description: Enjoy watching BabyBus songs and cartoons 1Nursery Rhymes  Kids Cartoon All  Kiki and Miumiu  Baby Shark 
+Logo URL: https://i.ytimg.com/vi/ZKOHfPvGZII/default_live.jpg
+Add this link to the update file: New: BabyBus  Kids Songs and Cartoons, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BabyBusKidsSongsandCartoons/live
+
+Channel Name: HealingMate  Dog Music
+Channel URL: https://youtube.com/@HealingMateDogMusic/live
+Title: LIVE Dog MusicCalming Music for Dog Deep SleepSeparation Anxiety Music for Dog Relaxation 5
+Description: LIVE Dog Music  Calming Music for Dog Deep Sleep    Separation Anxiety Music for Dog Relaxation     5 Hello The Healing 
+Logo URL: https://i.ytimg.com/vi/7sHXqMtzg4o/default_live.jpg
+Add this link to the update file: New: HealingMate  Dog Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HealingMateDogMusic/live
 
 Channel Name: Fumikiri World
 Channel URL: https://youtube.com/@FumikiriWorld/live
@@ -229,19 +271,19 @@ Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Musi
 Logo URL: https://i.ytimg.com/vi/WDmLoZ1vPNs/default_live.jpg
 Add this link to the update file: New: Fumikiri World, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FumikiriWorld/live
 
-Channel Name: FC Toys
-Channel URL: https://youtube.com/@FCToys/live
+Channel Name: Piz Green TV
+Channel URL: https://youtube.com/@PizGreenTV/live
 Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/500cnxhFTA4/default_live.jpg
-Add this link to the update file: New: FC Toys, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FCToys/live
+Description: N7 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/_lPPTlxV4wo/default_live.jpg
+Add this link to the update file: New: Piz Green TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PizGreenTV/live
 
-Channel Name: FUN SPIDERMAN TV
-Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/IJdOTSGI0Ds/default_live.jpg
-Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
+Channel Name: Super Simple Songs  Kids Songs
+Channel URL: https://youtube.com/@SuperSimpleSongsKidsSongs/live
+Title:   Super Simple Songs Bedtime Livestream   Kids Nap Songs  Super Simple Songs
+Description: Get the Super Simple App  httpbitlyTheSuperSimpleApp PARENTS AND TEACHERS Thank you so much for watching 
+Logo URL: https://i.ytimg.com/vi/zLO3xHujRcA/default_live.jpg
+Add this link to the update file: New: Super Simple Songs  Kids Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SuperSimpleSongsKidsSongs/live
 
 Channel Name: ZumBi Creator
 Channel URL: https://youtube.com/@ZumBiCreator/live
@@ -250,19 +292,12 @@ Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Musi
 Logo URL: https://i.ytimg.com/vi/saFmilI4xM4/default_live.jpg
 Add this link to the update file: New: ZumBi Creator, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZumBiCreator/live
 
-Channel Name: Hits Songs
-Channel URL: https://youtube.com/@HitsSongs/live
-Title: Lagu Nostalgia  Tembang Kenangan  Lagu Pop Lawas 80an 90an Indonesia Terpopuler Paling Dicari
-Description: Lagu Nostalgia  Tembang Kenangan  Lagu Pop Lawas 80an 90an Indonesia Terpopuler Paling Dicari 
-Logo URL: https://i.ytimg.com/vi/i47QonLZpG0/default_live.jpg
-Add this link to the update file: New: Hits Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HitsSongs/live
-
-Channel Name: FUN EXPERIMENT
-Channel URL: https://youtube.com/@FUNEXPERIMENT/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/MoCEMRls7r0/default_live.jpg
-Add this link to the update file: New: FUN EXPERIMENT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNEXPERIMENT/live
+Channel Name: Love India
+Channel URL: https://youtube.com/@LoveIndia/live
+Title: Old Bollywood LOVE Hindi songs Bollywood 90s HIts Hindi Romantic Melodies Songs
+Description: 
+Logo URL: https://i.ytimg.com/vi/Ux7tLxjywaE/default_live.jpg
+Add this link to the update file: New: Love India, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveIndia/live
 
 Channel Name: Hindi ROmentic
 Channel URL: https://youtube.com/@HindiROmentic/live
@@ -271,33 +306,12 @@ Description: Best of Arijit Singh love songs  Every day is filled with love with
 Logo URL: https://i.ytimg.com/vi/EDJ-2u1M2mI/default_live.jpg
 Add this link to the update file: New: Hindi ROmentic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HindiROmentic/live
 
-Channel Name: Super 3d Animals
-Channel URL: https://youtube.com/@Super3dAnimals/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2 
-Logo URL: https://i.ytimg.com/vi/GNw8f2GZfVo/default_live.jpg
-Add this link to the update file: New: Super 3d Animals, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Super3dAnimals/live
-
-Channel Name: LTN Nerf War
-Channel URL: https://youtube.com/@LTNNerfWar/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/rnubAX50DRc/default_live.jpg
-Add this link to the update file: New: LTN Nerf War, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LTNNerfWar/live
-
-Channel Name: Yellow Brick Cinema  Relaxing Music
-Channel URL: https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
-Title:  Deep Sleep Music 247 Sleeping Music Insomnia Meditation Music Zen Yoga Study Music Rain
-Description: Enjoy our latest relaxing music live stream youtubecomyellowbrickcinemalive Deep Sleep Music 247 Sleeping Music 
-Logo URL: https://i.ytimg.com/vi/CXjREUZKEUM/default_live.jpg
-Add this link to the update file: New: Yellow Brick Cinema  Relaxing Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
-
-Channel Name: Praise Worship Music
-Channel URL: https://youtube.com/@PraiseWorshipMusic/live
-Title: Morning Christian Worship Songs 2023 With Lyrics Playlist  Greatest Worship Christian Music Ever
-Description: Music and Video Copyright belongs to Praise Worship Music DO NOT reupload otherwise you will get copyright strikes
-Logo URL: https://i.ytimg.com/vi/qeNCSDU8t_Y/default_live.jpg
-Add this link to the update file: New: Praise Worship Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PraiseWorshipMusic/live
+Channel Name: Finny The Shark
+Channel URL: https://youtube.com/@FinnyTheShark/live
+Title:  Finny The Shark Livestream  Kids Songs  Super Simple Songs
+Description: Get the Super Simple App  httpbitlyTheSuperSimpleApp PARENTS AND TEACHERS Thank you so much for watching 
+Logo URL: https://i.ytimg.com/vi/BJ5W8NlMj_o/default_live.jpg
+Add this link to the update file: New: Finny The Shark, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FinnyTheShark/live
 
 Channel Name: Chill Music Lab
 Channel URL: https://youtube.com/@ChillMusicLab/live
@@ -306,12 +320,12 @@ Description: Looking for the perfect music to boost your work productivity Youve
 Logo URL: https://i.ytimg.com/vi/zYFel2Ch4YI/default_live.jpg
 Add this link to the update file: New: Chill Music Lab, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChillMusicLab/live
 
-Channel Name: Finny The Shark
-Channel URL: https://youtube.com/@FinnyTheShark/live
-Title:  Finny The Shark Livestream  Kids Songs  Super Simple Songs
-Description: Get the Super Simple App  httpbitlyTheSuperSimpleApp PARENTS AND TEACHERS Thank you so much for watching 
-Logo URL: https://i.ytimg.com/vi/BJ5W8NlMj_o/default_live.jpg
-Add this link to the update file: New: Finny The Shark, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FinnyTheShark/live
+Channel Name: Praise Worship Music
+Channel URL: https://youtube.com/@PraiseWorshipMusic/live
+Title: Morning Christian Worship Songs 2023 With Lyrics Playlist  Greatest Worship Christian Music Ever
+Description: Music and Video Copyright belongs to Praise Worship Music DO NOT reupload otherwise you will get copyright strikes
+Logo URL: https://i.ytimg.com/vi/qeNCSDU8t_Y/default_live.jpg
+Add this link to the update file: New: Praise Worship Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PraiseWorshipMusic/live
 
 Channel Name: Love Song Forever
 Channel URL: https://youtube.com/@LoveSongForever/live
@@ -320,12 +334,26 @@ Description: GREATEST LOVE SONG Jim BrickmanDavid Pomeranz Rick Price  Air Suppl
 Logo URL: https://i.ytimg.com/vi/yjN6gPqJ1iY/default_live.jpg
 Add this link to the update file: New: Love Song Forever, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveSongForever/live
 
-Channel Name: Colors Jazz
-Channel URL: https://youtube.com/@ColorsJazz/live
-Title: Winter Relaxing Jazz Music  Jazz Background Music In The Living Room Space And Warm Fireplace Sound
-Description: Winter Relaxing Jazz Music  Jazz Background Music In The Living Room Space And Warm Fireplace Sound Are you looking 
-Logo URL: https://i.ytimg.com/vi/aqRjuB_KkP8/default_live.jpg
-Add this link to the update file: New: Colors Jazz, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ColorsJazz/live
+Channel Name: Chill Music Lab
+Channel URL: https://youtube.com/@ChillMusicLab/live
+Title: Music for Work  Limitless Productivity Radio
+Description: This radio is here to make your day more productive It plays a carefully selected mix of deep future garage and soothing chillstep 
+Logo URL: https://i.ytimg.com/vi/QEZiuxLsLgk/default_live.jpg
+Add this link to the update file: New: Chill Music Lab, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChillMusicLab/live
+
+Channel Name: Super 3d Animals
+Channel URL: https://youtube.com/@Super3dAnimals/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2 
+Logo URL: https://i.ytimg.com/vi/GNw8f2GZfVo/default_live.jpg
+Add this link to the update file: New: Super 3d Animals, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Super3dAnimals/live
+
+Channel Name: OPM Acoustic
+Channel URL: https://youtube.com/@OPMAcoustic/live
+Title: Best Of OPM Acoustic Love Songs 2024 Playlist 706  Top Tagalog Acoustic Songs Cover Of All Time
+Description: Best Of OPM Acoustic Love Songs 2024 Playlist 706  Top Tagalog Acoustic Songs Cover Of All Time If this music makes 
+Logo URL: https://i.ytimg.com/vi/90iKjiuRQAA/default_live.jpg
+Add this link to the update file: New: OPM Acoustic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OPMAcoustic/live
 
 Channel Name: RELAXATION LoFi  CHILL
 Channel URL: https://youtube.com/@RELAXATIONLoFiCHILL/live
@@ -334,12 +362,12 @@ Description: Warm Winter Lofi    Lofi Vibes Helps You Feel Positive and Relaxed 
 Logo URL: https://i.ytimg.com/vi/_QUU_92XwzA/default_live.jpg
 Add this link to the update file: New: RELAXATION LoFi  CHILL, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RELAXATIONLoFiCHILL/live
 
-Channel Name: BeamNG A
-Channel URL: https://youtube.com/@BeamNGA/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/XIBF3N2t3eQ/default_live.jpg
-Add this link to the update file: New: BeamNG A, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BeamNGA/live
+Channel Name: Colors Jazz
+Channel URL: https://youtube.com/@ColorsJazz/live
+Title: Winter Relaxing Jazz Music  Jazz Background Music In The Living Room Space And Warm Fireplace Sound
+Description: Winter Relaxing Jazz Music  Jazz Background Music In The Living Room Space And Warm Fireplace Sound Are you looking 
+Logo URL: https://i.ytimg.com/vi/aqRjuB_KkP8/default_live.jpg
+Add this link to the update file: New: Colors Jazz, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ColorsJazz/live
 
 Channel Name: Praise Worship Music
 Channel URL: https://youtube.com/@PraiseWorshipMusic/live
@@ -355,26 +383,12 @@ Description: Enjoy our latest relaxing music live stream youtubecomyellowbrickci
 Logo URL: https://i.ytimg.com/vi/6RUZS1rosEc/default_live.jpg
 Add this link to the update file: New: Yellow Brick Cinema  Relaxing Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
 
-Channel Name: Love Story
-Channel URL: https://youtube.com/@LoveStory/live
-Title: Best Romantic Love Songs 2024  Most Old Beautiful Love Songs 8039s 9039s  Love Songs Greatest Hits
-Description: Thank you for watchingI enjoyed reading your commentsWe will make your day better with the music we share Please 
-Logo URL: https://i.ytimg.com/vi/rm-t5zXkHDI/default_live.jpg
-Add this link to the update file: New: Love Story, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveStory/live
-
 Channel Name: BGM channel
 Channel URL: https://youtube.com/@BGMchannel/live
 Title:  January Jazz  Instrumental Sweet Jazz Coffee amp Bossa Nova Music to Study Work  BGM
 Description: Wrap yourself in the sweetness of January jazz As you sip on your morning coffee let the soothing strains of instrumental 
 Logo URL: https://i.ytimg.com/vi/40yRNs2eRhI/default_live.jpg
 Add this link to the update file: New: BGM channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BGMchannel/live
-
-Channel Name: TT SWAT
-Channel URL: https://youtube.com/@TTSWAT/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: 15 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/csoMD_F8qMU/default_live.jpg
-Add this link to the update file: New: TT SWAT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TTSWAT/live
 
 Channel Name: relaxdaily
 Channel URL: https://youtube.com/@relaxdaily/live
@@ -383,26 +397,12 @@ Description: A 247 stream of relaxing  calm piano music you can use as study mus
 Logo URL: https://i.ytimg.com/vi/eJf4_zktsCo/default_live.jpg
 Add this link to the update file: New: relaxdaily, INSERT YOUR PREFERRED GROUP, https://youtube.com/@relaxdaily/live
 
-Channel Name: Open Road Folk Music
-Channel URL: https://youtube.com/@OpenRoadFolkMusic/live
-Title: Instrumental Acoustic Indie Playlist  Chill Music amp Celtic Music quotWinter Owlsquot Open Road Folk Music
-Description: Instrumental Acoustic Indie Playlist  Chill Music  Celtic Music Winter Owls Open Road Folk Musicc This music will help you 
-Logo URL: https://i.ytimg.com/vi/WfLBSHnkz64/default_live.jpg
-Add this link to the update file: New: Open Road Folk Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenRoadFolkMusic/live
-
-Channel Name: HealingMate  Dog Music
-Channel URL: https://youtube.com/@HealingMateDogMusic/live
-Title: LIVE Dog MusicCalming Music for Dog Deep SleepSeparation Anxiety Music for Dog Relaxation 7
-Description: LIVE Dog Music  Calming Music for Dog Deep Sleep    Separation Anxiety Music for Dog Relaxation   7 Hello The Healing 
-Logo URL: https://i.ytimg.com/vi/Xih7oPCU3bg/default_live.jpg
-Add this link to the update file: New: HealingMate  Dog Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HealingMateDogMusic/live
-
-Channel Name: FUN SPIDERMAN TV
-Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/AdIkCgVo7qI/default_live.jpg
-Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
+Channel Name: Blues Music Collections
+Channel URL: https://youtube.com/@BluesMusicCollections/live
+Title: Beautiful Relaxing Blues Music  Whiskey Blues Music  The Best Blues Music Of All Time
+Description: If youre looking for a relaxing way to end the day then check out this blues music playlist This blues rock ballads playlist has 
+Logo URL: https://i.ytimg.com/vi/onIceC0vDVE/default_live.jpg
+Add this link to the update file: New: Blues Music Collections, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BluesMusicCollections/live
 
 Channel Name: Pico K
 Channel URL: https://youtube.com/@PicoK/live
@@ -411,12 +411,12 @@ Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Musi
 Logo URL: https://i.ytimg.com/vi/hIrgLr9jsAs/default_live.jpg
 Add this link to the update file: New: Pico K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PicoK/live
 
-Channel Name: Blues Music Collections
-Channel URL: https://youtube.com/@BluesMusicCollections/live
-Title: Beautiful Relaxing Blues Music  Whiskey Blues Music  The Best Blues Music Of All Time
-Description: If youre looking for a relaxing way to end the day then check out this blues music playlist This blues rock ballads playlist has 
-Logo URL: https://i.ytimg.com/vi/onIceC0vDVE/default_live.jpg
-Add this link to the update file: New: Blues Music Collections, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BluesMusicCollections/live
+Channel Name: Open Road Folk Music
+Channel URL: https://youtube.com/@OpenRoadFolkMusic/live
+Title: Instrumental Acoustic Indie Playlist  Chill Music amp Celtic Music quotWinter Owlsquot Open Road Folk Music
+Description: Instrumental Acoustic Indie Playlist  Chill Music  Celtic Music Winter Owls Open Road Folk Musicc This music will help you 
+Logo URL: https://i.ytimg.com/vi/WfLBSHnkz64/default_live.jpg
+Add this link to the update file: New: Open Road Folk Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenRoadFolkMusic/live
 
 Channel Name: Meow Melodies
 Channel URL: https://youtube.com/@MeowMelodies/live
@@ -425,26 +425,26 @@ Description: We specialize in crafting melodious compositions designed exclusive
 Logo URL: https://i.ytimg.com/vi/CaucicyF0Do/default_live.jpg
 Add this link to the update file: New: Meow Melodies, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MeowMelodies/live
 
+Channel Name: Zin and Bin
+Channel URL: https://youtube.com/@ZinandBin/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: 3 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/pcTR2GQtbzw/default_live.jpg
+Add this link to the update file: New: Zin and Bin, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZinandBin/live
+
+Channel Name: FUN SPIDERMAN TV
+Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/AdIkCgVo7qI/default_live.jpg
+Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
+
 Channel Name: Cozy Jazz Music
 Channel URL: https://youtube.com/@CozyJazzMusic/live
 Title: Elegant Jazz  Sweet January Jazz amp Bossa Nova to relax study and work
 Description: Elegant Jazz  Sweet January Jazz  Bossa Nova to relax study and work httpsyoutubecomlive3xfmrp4NMY 
 Logo URL: https://i.ytimg.com/vi/_3xfmrp4NMY/default_live.jpg
 Add this link to the update file: New: Cozy Jazz Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CozyJazzMusic/live
-
-Channel Name: PrizeSleepSleeping Music For Deep Sleeping
-Channel URL: https://youtube.com/@PrizeSleepSleepingMusicForDeepSleeping/live
-Title: Sleep Music  Sleeping Music For Deep Sleeping  Relaxing Music Healing Music Meditation Music
-Description: Experience deep sleep anes Soft breathable and designed to block out external light for a rejuvenating slumber 
-Logo URL: https://i.ytimg.com/vi/HyB33-U9nWY/default_live.jpg
-Add this link to the update file: New: PrizeSleepSleeping Music For Deep Sleeping, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PrizeSleepSleepingMusicForDeepSleeping/live
-
-Channel Name: Pico Series
-Channel URL: https://youtube.com/@PicoSeries/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: N14 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/-veMimJzDFw/default_live.jpg
-Add this link to the update file: New: Pico Series, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PicoSeries/live
 
 Channel Name: HP DIY Farming
 Channel URL: https://youtube.com/@HPDIYFarming/live
@@ -453,19 +453,12 @@ Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Musi
 Logo URL: https://i.ytimg.com/vi/9beOeQ1e5Yo/default_live.jpg
 Add this link to the update file: New: HP DIY Farming, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HPDIYFarming/live
 
-Channel Name: Zin and Bin
-Channel URL: https://youtube.com/@ZinandBin/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: 3 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/pcTR2GQtbzw/default_live.jpg
-Add this link to the update file: New: Zin and Bin, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZinandBin/live
-
-Channel Name: DC SWAT
-Channel URL: https://youtube.com/@DCSWAT/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: 3 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/Av2Ps6Dg9LQ/default_live.jpg
-Add this link to the update file: New: DC SWAT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DCSWAT/live
+Channel Name: PrizeSleepSleeping Music For Deep Sleeping
+Channel URL: https://youtube.com/@PrizeSleepSleepingMusicForDeepSleeping/live
+Title: Sleep Music  Sleeping Music For Deep Sleeping  Relaxing Music Healing Music Meditation Music
+Description: Experience deep sleep anes Soft breathable and designed to block out external light for a rejuvenating slumber 
+Logo URL: https://i.ytimg.com/vi/HyB33-U9nWY/default_live.jpg
+Add this link to the update file: New: PrizeSleepSleeping Music For Deep Sleeping, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PrizeSleepSleepingMusicForDeepSleeping/live
 
 Channel Name: Classic Music
 Channel URL: https://youtube.com/@ClassicMusic/live
@@ -474,20 +467,6 @@ Description: 80s Music Hits  Best Oldies Songs Of 1980s  Oldies But Goodies Grea
 Logo URL: https://i.ytimg.com/vi/F9Rvzwsel_Y/default_live.jpg
 Add this link to the update file: New: Classic Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ClassicMusic/live
 
-Channel Name: Chan Peaceful Piano
-Channel URL: https://youtube.com/@ChanPeacefulPiano/live
-Title:  Relaxing Music 247 Stress Relief Music Meditation Spa Sleep Zen Calming Music Study Yoga
-Description: Relaxing Music 247 Stress Relief Music Meditation Spa Sleep Zen Calming Music Study Yoga     Welcome to listen to 
-Logo URL: https://i.ytimg.com/vi/Q5AAjvTcpQo/default_live.jpg
-Add this link to the update file: New: Chan Peaceful Piano, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChanPeacefulPiano/live
-
-Channel Name: Yellow Brick Cinema  Relaxing Music
-Channel URL: https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
-Title:  Relaxing Zen Music 247 Stress Relief Music Sleep Music Meditation Music Study Calming Music
-Description: Enjoy our latest relaxing music live stream youtubecomyellowbrickcinemalive Relaxing Zen Music 247 Stress Relief Music 
-Logo URL: https://i.ytimg.com/vi/23m7LTQQvSM/default_live.jpg
-Add this link to the update file: New: Yellow Brick Cinema  Relaxing Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
-
 Channel Name: Yellow Brick Cinema  Relaxing Music
 Channel URL: https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
 Title:  Relaxing Music 247 Stress Relief Music Sleep Music Meditation Music Study Calming Music
@@ -495,47 +474,33 @@ Description: Enjoy our latest relaxing music live stream youtubecomyellowbrickci
 Logo URL: https://i.ytimg.com/vi/1V56VKBzNTM/default_live.jpg
 Add this link to the update file: New: Yellow Brick Cinema  Relaxing Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
 
-Channel Name: Open Heart Music  Helios 4K
-Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
-Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
-Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
-Logo URL: https://i.ytimg.com/vi/_s_pwzE9hsA/default_live.jpg
-Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
+Channel Name: Chan Peaceful Piano
+Channel URL: https://youtube.com/@ChanPeacefulPiano/live
+Title:  Relaxing Music 247 Stress Relief Music Meditation Spa Sleep Zen Calming Music Study Yoga
+Description: Relaxing Music 247 Stress Relief Music Meditation Spa Sleep Zen Calming Music Study Yoga     Welcome to listen to 
+Logo URL: https://i.ytimg.com/vi/Q5AAjvTcpQo/default_live.jpg
+Add this link to the update file: New: Chan Peaceful Piano, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChanPeacefulPiano/live
 
-Channel Name: Anju Sharma
-Channel URL: https://youtube.com/@AnjuSharma/live
-Title:    Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir
-Description:    Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir Song 
-Logo URL: https://i.ytimg.com/vi/oMg4al_pkWQ/default_live.jpg
-Add this link to the update file: New: Anju Sharma, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AnjuSharma/live
+Channel Name: DC SWAT
+Channel URL: https://youtube.com/@DCSWAT/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: 3 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/Av2Ps6Dg9LQ/default_live.jpg
+Add this link to the update file: New: DC SWAT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DCSWAT/live
 
-Channel Name: Magic Club
-Channel URL: https://youtube.com/@MagicClub/live
-Title: New Year Music Mix 2024  Best EDM Music 2024 Party Mix  Remixes of Popular Songs
-Description: New Year Music Mix 2024 Best EDM Music 2024 Party Mix Remixes of Popular Songs New Year Music Mix 2024 Best 
-Logo URL: https://i.ytimg.com/vi/ZKZPjNq3wDw/default_live.jpg
-Add this link to the update file: New: Magic Club, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MagicClub/live
+Channel Name: ZumBi Creator
+Channel URL: https://youtube.com/@ZumBiCreator/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/ZKBZjIV21DA/default_live.jpg
+Add this link to the update file: New: ZumBi Creator, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZumBiCreator/live
 
-Channel Name: Chanda Pop Songs
-Channel URL: https://youtube.com/@ChandaPopSongs/live
-Title: LIVE      Mangal Bhawan Amangal Haari I Ram Bhakti Song  Shree Ram Live Bhakti
-Description: LIVE      Mangal Bhawan Amangal Haari I Ram Bhakti Song  Shree Ram Live Bhakti LIVE 
-Logo URL: https://i.ytimg.com/vi/XxpfaTIplLI/default_live.jpg
-Add this link to the update file: New: Chanda Pop Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChandaPopSongs/live
-
-Channel Name: MAX OAZO
-Channel URL: https://youtube.com/@MAXOAZO/live
-Title: Motivation Music  Gym Songs Fitness Music Running Mix  Best Motivational Songs  Gaming Music
-Description: Motivation Music Gym Songs Fitness Music Running Mix Best Motivational Songs Get fit with the Best workout Gym 
-Logo URL: https://i.ytimg.com/vi/Nk7ZafxQw9o/default_live.jpg
-Add this link to the update file: New: MAX OAZO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MAXOAZO/live
-
-Channel Name: SUMMER CLUB
-Channel URL: https://youtube.com/@SUMMERCLUB/live
-Title: Winter 2023Relaxing amp Chill House Music Calm Deep amp Tropical House SongsAlan Walker Alok Kygo
-Description: Rihanna Avicii Justin Bieber Kygo Selena Gomez Alok Bastille David Guetta  Summer Nostalgia StreamDownload 
-Logo URL: https://i.ytimg.com/vi/_hdA-Mkg_Ig/default_live.jpg
-Add this link to the update file: New: SUMMER CLUB, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SUMMERCLUB/live
+Channel Name: DJ KOMORI
+Channel URL: https://youtube.com/@DJKOMORI/live
+Title: Best Love Song 2024  All Time Greatest Love Songs Romantic WestlifeMLTRBackstreet BoysBoyzone
+Description: lovesong bestlovesong romanticlovesong Thank you for watchingI enjoyed reading your commentsWe will make your day 
+Logo URL: https://i.ytimg.com/vi/FIB121H3BL4/default_live.jpg
+Add this link to the update file: New: DJ KOMORI, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DJKOMORI/live
 
 Channel Name: Native American Flute
 Channel URL: https://youtube.com/@NativeAmericanFlute/live
@@ -543,6 +508,20 @@ Title: Native American Flute Music 247  Relaxing Flute for Sleep Healing  Medita
 Description: Tune into the soothing rhythms of our Native American Flute Music streaming live 247 Each melody is infused with the serene 
 Logo URL: https://i.ytimg.com/vi/SJzvn245okQ/default_live.jpg
 Add this link to the update file: New: Native American Flute, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NativeAmericanFlute/live
+
+Channel Name: Tim Janis
+Channel URL: https://youtube.com/@TimJanis/live
+Title: Peaceful Music Relaxing Music Instrumental Music Flute amp Violin quotWinter Candle quotBy Tim Janis
+Description: Peaceful Music Relaxing Music Instrumental Music Flute  Violin Winter Candle By Tim Janis My instrumental music can help 
+Logo URL: https://i.ytimg.com/vi/Iew6nLtJmnI/default_live.jpg
+Add this link to the update file: New: Tim Janis, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TimJanis/live
+
+Channel Name: Open Heart Music  Helios 4K
+Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
+Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
+Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
+Logo URL: https://i.ytimg.com/vi/1C-k9TAu3MA/default_live.jpg
+Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
 
 Channel Name: Vani TV
 Channel URL: https://youtube.com/@VaniTV/live
@@ -558,41 +537,6 @@ Description: Workout Motivation Music 2024 Fitness Gym Workout music  Best Music
 Logo URL: https://i.ytimg.com/vi/Rk0YP3bTzaY/default_live.jpg
 Add this link to the update file: New: MAX OAZO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MAXOAZO/live
 
-Channel Name: Prayer Pray
-Channel URL: https://youtube.com/@PrayerPray/live
-Title: Harmony of Serenity  Relaxing Harp Music for Stress Relief amp Tranquility
-Description: Discover the therapeutic embrace of the Harmony of Serenity Let the soothing strains of the harp create a tranquil sanctuary 
-Logo URL: https://i.ytimg.com/vi/rdrGos536Fw/default_live.jpg
-Add this link to the update file: New: Prayer Pray, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PrayerPray/live
-
-Channel Name: Open Heart Music  Helios 4K
-Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
-Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
-Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
-Logo URL: https://i.ytimg.com/vi/s0MpxvzhMFw/default_live.jpg
-Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
-
-Channel Name: Moon Fun TV
-Channel URL: https://youtube.com/@MoonFunTV/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: N19 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/hUwWnDvldRA/default_live.jpg
-Add this link to the update file: New: Moon Fun TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MoonFunTV/live
-
-Channel Name: SweeT Hindi
-Channel URL: https://youtube.com/@SweeTHindi/live
-Title: Sad Songs  Mashup Songs  Arijit Singh Songs  arijitsinghmashup  Slow Motion Song SWEETHindi88
-Description: Sad Songs  Mashup Songs  Arijit Singh Songs  Arijit Singh Mashup  Slow Motion Song SWEETHindi88 Ae Dil Hai Mushkil 
-Logo URL: https://i.ytimg.com/vi/Ic4butBku4E/default_live.jpg
-Add this link to the update file: New: SweeT Hindi, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SweeTHindi/live
-
-Channel Name: DJ KOMORI
-Channel URL: https://youtube.com/@DJKOMORI/live
-Title: Best Love Song 2024  All Time Greatest Love Songs Romantic WestlifeMLTRBackstreet BoysBoyzone
-Description: lovesong bestlovesong romanticlovesong Thank you for watchingI enjoyed reading your commentsWe will make your day 
-Logo URL: https://i.ytimg.com/vi/FIB121H3BL4/default_live.jpg
-Add this link to the update file: New: DJ KOMORI, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DJKOMORI/live
-
 Channel Name: Yellow Brick Cinema  Relaxing Music
 Channel URL: https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
 Title:  Relaxing Zen Music 247 Stress Relief Music Sleep Music Meditation Music Study Nature Sounds
@@ -607,12 +551,54 @@ Description: 4 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Mu
 Logo URL: https://i.ytimg.com/vi/bN8fJQ-drcA/default_live.jpg
 Add this link to the update file: New: Piz Heroes, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PizHeroes/live
 
+Channel Name: Chanda Pop Songs
+Channel URL: https://youtube.com/@ChandaPopSongs/live
+Title: LIVE      Mangal Bhawan Amangal Haari I Ram Bhakti Song  Shree Ram Live Bhakti
+Description: LIVE      Mangal Bhawan Amangal Haari I Ram Bhakti Song  Shree Ram Live Bhakti LIVE 
+Logo URL: https://i.ytimg.com/vi/XxpfaTIplLI/default_live.jpg
+Add this link to the update file: New: Chanda Pop Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChandaPopSongs/live
+
+Channel Name: Anju Sharma
+Channel URL: https://youtube.com/@AnjuSharma/live
+Title:    Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir
+Description:    Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir Song 
+Logo URL: https://i.ytimg.com/vi/oMg4al_pkWQ/default_live.jpg
+Add this link to the update file: New: Anju Sharma, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AnjuSharma/live
+
+Channel Name: SUMMER CLUB
+Channel URL: https://youtube.com/@SUMMERCLUB/live
+Title: Winter 2023Relaxing amp Chill House Music Calm Deep amp Tropical House SongsAlan Walker Alok Kygo
+Description: Rihanna Avicii Justin Bieber Kygo Selena Gomez Alok Bastille David Guetta  Summer Nostalgia StreamDownload 
+Logo URL: https://i.ytimg.com/vi/_hdA-Mkg_Ig/default_live.jpg
+Add this link to the update file: New: SUMMER CLUB, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SUMMERCLUB/live
+
+Channel Name: New Hindi PartyMix
+Channel URL: https://youtube.com/@NewHindiPartyMix/live
+Title: Old Vs New Bollywood Mashup 2023  Superhits Romantic Hindi Songs Mashup Live  DJ MaShUP 2024
+Description: Old Vs New Bollywood Mashup 2023  Superhits Romantic Hindi Songs Mashup Live  DJ MaShUP 2024 
+Logo URL: https://i.ytimg.com/vi/PntPeobTMtY/default_live.jpg
+Add this link to the update file: New: New Hindi PartyMix, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NewHindiPartyMix/live
+
 Channel Name: MAX OAZO
 Channel URL: https://youtube.com/@MAXOAZO/live
-Title: Gym Motivation Music 2024   Best Fitness amp Workout Music Mix New Running Music 2024 Live 247
-Description: Gym Motivation Music 2024 Best Fitness  Workout Music Mix New Music 2024 Radio 247 Fitness  Gym Motivation Music 
-Logo URL: https://i.ytimg.com/vi/d3DdqDj7yKQ/default_live.jpg
+Title: Motivation Music  Gym Songs Fitness Music Running Mix  Best Motivational Songs  Gaming Music
+Description: Motivation Music Gym Songs Fitness Music Running Mix Best Motivational Songs Get fit with the Best workout Gym 
+Logo URL: https://i.ytimg.com/vi/Nk7ZafxQw9o/default_live.jpg
 Add this link to the update file: New: MAX OAZO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MAXOAZO/live
+
+Channel Name: Moon Fun TV
+Channel URL: https://youtube.com/@MoonFunTV/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: N19 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/hUwWnDvldRA/default_live.jpg
+Add this link to the update file: New: Moon Fun TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MoonFunTV/live
+
+Channel Name: Pico K
+Channel URL: https://youtube.com/@PicoK/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/yyBJGlIN7Us/default_live.jpg
+Add this link to the update file: New: Pico K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PicoK/live
 
 Channel Name: Music for Body and Spirit  Meditation Music
 Channel URL: https://youtube.com/@MusicforBodyandSpiritMeditationMusic/live
@@ -621,33 +607,12 @@ Description: Increase Brain Power Study Music Focus Music Reduce Anxiety Binaura
 Logo URL: https://i.ytimg.com/vi/eIEwYjNWR7Y/default_live.jpg
 Add this link to the update file: New: Music for Body and Spirit  Meditation Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MusicforBodyandSpiritMeditationMusic/live
 
-Channel Name: OPM Acoustic
-Channel URL: https://youtube.com/@OPMAcoustic/live
-Title: Best Of OPM Acoustic Love Songs 2024 Playlist 699  Top Tagalog Acoustic Songs Cover Of All Time
-Description: Best Of OPM Acoustic Love Songs 2024 Playlist 699  Top Tagalog Acoustic Songs Cover Of All Time If this music makes 
-Logo URL: https://i.ytimg.com/vi/2r1WCbiN7LI/default_live.jpg
-Add this link to the update file: New: OPM Acoustic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OPMAcoustic/live
-
-Channel Name: MAX OAZO
-Channel URL: https://youtube.com/@MAXOAZO/live
-Title: Workout Music  Best Workout Mix  Gaming Music  Energy Music Motivation
-Description: Workout Music Best Workout Mix Gaming Music Fitness  Gym Motivation Music Mix by Max Oazo Workout Music 2024 Workout 
-Logo URL: https://i.ytimg.com/vi/DXYrfEs8FKQ/default_live.jpg
-Add this link to the update file: New: MAX OAZO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MAXOAZO/live
-
-Channel Name: LOR Paper Crafts
-Channel URL: https://youtube.com/@LORPaperCrafts/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/W6VkwGwuUKk/default_live.jpg
-Add this link to the update file: New: LOR Paper Crafts, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LORPaperCrafts/live
-
-Channel Name: Lbc Jagran
-Channel URL: https://youtube.com/@LbcJagran/live
-Title: live  Hare Rama Hare Krishna  Achutam keshvam  Krishna bhajan  bhakti song  Krishna bhajan
-Description: Live  Hare Rama Hare Krishna  Achutam keshvam  Krishna bhajan  bhakti song  Krishna bhajan Live  Hare Rama Hare 
-Logo URL: https://i.ytimg.com/vi/4NQWjsteHOM/default_live.jpg
-Add this link to the update file: New: Lbc Jagran, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LbcJagran/live
+Channel Name: Open Heart Music  Helios 4K
+Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
+Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
+Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
+Logo URL: https://i.ytimg.com/vi/aKE3isyGSTA/default_live.jpg
+Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
 
 Channel Name: Praise Worship Music
 Channel URL: https://youtube.com/@PraiseWorshipMusic/live
@@ -656,33 +621,68 @@ Description: Music and Video Copyright belongs to Praise Worship Music DO NOT re
 Logo URL: https://i.ytimg.com/vi/t6m_slU2tNM/default_live.jpg
 Add this link to the update file: New: Praise Worship Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PraiseWorshipMusic/live
 
-Channel Name: Open Heart Music  Helios 4K
-Channel URL: https://youtube.com/@OpenHeartMusicHelios4K/live
-Title: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul
-Description: Relaxing Music For Stress Relief Anxiety and Depressive States  Heal Mind Body and Soul Music to sleep deeply and rest the 
-Logo URL: https://i.ytimg.com/vi/aKE3isyGSTA/default_live.jpg
-Add this link to the update file: New: Open Heart Music  Helios 4K, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OpenHeartMusicHelios4K/live
+Channel Name: OPM Acoustic
+Channel URL: https://youtube.com/@OPMAcoustic/live
+Title: Best Of OPM Acoustic Love Songs 2024 Playlist 699  Top Tagalog Acoustic Songs Cover Of All Time
+Description: Best Of OPM Acoustic Love Songs 2024 Playlist 699  Top Tagalog Acoustic Songs Cover Of All Time If this music makes 
+Logo URL: https://i.ytimg.com/vi/2r1WCbiN7LI/default_live.jpg
+Add this link to the update file: New: OPM Acoustic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OPMAcoustic/live
 
-Channel Name: Chanda Pop Songs
-Channel URL: https://youtube.com/@ChandaPopSongs/live
-Title: LIVE                   
-Description: LIVE              
-Logo URL: https://i.ytimg.com/vi/Txnyh2a9lG8/default_live.jpg
-Add this link to the update file: New: Chanda Pop Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChandaPopSongs/live
+Channel Name: Lbc Jagran
+Channel URL: https://youtube.com/@LbcJagran/live
+Title: live  Hare Rama Hare Krishna  Achutam keshvam  Krishna bhajan  bhakti song  Krishna bhajan
+Description: Live  Hare Rama Hare Krishna  Achutam keshvam  Krishna bhajan  bhakti song  Krishna bhajan Live  Hare Rama Hare 
+Logo URL: https://i.ytimg.com/vi/4NQWjsteHOM/default_live.jpg
+Add this link to the update file: New: Lbc Jagran, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LbcJagran/live
 
-Channel Name: Brahmakumaris Music Godlywood
-Channel URL: https://youtube.com/@BrahmakumarisMusicGodlywood/live
-Title: LIVE   Non Stop Meditation Songs BK Nonstop Divine Songs BK Live Divine Songs
-Description: omshantisongs meditationsongs mediatationmusic music songs bksongs bkmeditationsongs bkyogkegeet bk 
-Logo URL: https://i.ytimg.com/vi/IuRQ-gHYTW0/default_live.jpg
-Add this link to the update file: New: Brahmakumaris Music Godlywood, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BrahmakumarisMusicGodlywood/live
+Channel Name: MAX OAZO
+Channel URL: https://youtube.com/@MAXOAZO/live
+Title: Gym Motivation Music 2024   Best Fitness amp Workout Music Mix New Running Music 2024 Live 247
+Description: Gym Motivation Music 2024 Best Fitness  Workout Music Mix New Music 2024 Radio 247 Fitness  Gym Motivation Music 
+Logo URL: https://i.ytimg.com/vi/d3DdqDj7yKQ/default_live.jpg
+Add this link to the update file: New: MAX OAZO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MAXOAZO/live
 
-Channel Name: Cozy Coffee Shop
-Channel URL: https://youtube.com/@CozyCoffeeShop/live
+Channel Name: Classical Masterpieces
+Channel URL: https://youtube.com/@ClassicalMasterpieces/live
+Title: The Best of Piano Beethoven Chopin Debussy Bach Classical Music for Studying and Relaxation
+Description: A journey to experience the sound of the piano Through the melodious melodies created by the talents of Beethoven Chopin 
+Logo URL: https://i.ytimg.com/vi/Jf7hedxtus0/default_live.jpg
+Add this link to the update file: New: Classical Masterpieces, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ClassicalMasterpieces/live
+
+Channel Name: Praise Worship Music
+Channel URL: https://youtube.com/@PraiseWorshipMusic/live
+Title: TOp 100 Best Morning Worship Songs For Prayers 2023  Reflection of Praise amp Worship Songs
+Description: Music and Video Copyright belongs to Praise Worship Music DO NOT reupload otherwise you will get copyright strikes
+Logo URL: https://i.ytimg.com/vi/VKiACBdc8JM/default_live.jpg
+Add this link to the update file: New: Praise Worship Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PraiseWorshipMusic/live
+
+Channel Name: Crew Skye 
+Channel URL: https://youtube.com/@CrewSkye/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2 Soothing Jazz 
+Logo URL: https://i.ytimg.com/vi/YpONpq42ge4/default_live.jpg
+Add this link to the update file: New: Crew Skye , INSERT YOUR PREFERRED GROUP, https://youtube.com/@CrewSkye/live
+
+Channel Name: DG Funny
+Channel URL: https://youtube.com/@DGFunny/live
 Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience    Lets experience 
-Logo URL: https://i.ytimg.com/vi/AXtkz7WRzsY/default_live.jpg
-Add this link to the update file: New: Cozy Coffee Shop, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CozyCoffeeShop/live
+Description: 8 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/Q9BtsBY75FY/default_live.jpg
+Add this link to the update file: New: DG Funny, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DGFunny/live
+
+Channel Name: Music Hits
+Channel URL: https://youtube.com/@MusicHits/live
+Title: Greatest Hits 70s 80s 90s  Oldies Music 2893  Best Music Hits 70s 80s 90s  Playlist  Music Oldies
+Description: Greatest Hits 70s 80s 90s Oldies Music 2893 Best Music Hits 70s 80s 90s Playlist Music Oldies  Follow My Channel 
+Logo URL: https://i.ytimg.com/vi/opI42v7Zy8E/default_live.jpg
+Add this link to the update file: New: Music Hits, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MusicHits/live
+
+Channel Name: Chill Music Lab
+Channel URL: https://youtube.com/@ChillMusicLab/live
+Title: Stoic Music  Deep Future Garage Radio
+Description: Embark on an everlasting journey with our meticulously curated radio featuring profound deep future garage melodies streaming 
+Logo URL: https://i.ytimg.com/vi/EJ3_E6D9nxU/default_live.jpg
+Add this link to the update file: New: Chill Music Lab, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChillMusicLab/live
 
 Channel Name: SKELETIK  
 Channel URL: https://youtube.com/@SKELETIK/live
@@ -691,10 +691,10 @@ Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Musi
 Logo URL: https://i.ytimg.com/vi/ztz4Y2DmsC0/default_live.jpg
 Add this link to the update file: New: SKELETIK  , INSERT YOUR PREFERRED GROUP, https://youtube.com/@SKELETIK/live
 
-Channel Name: Starbucks Music
-Channel URL: https://youtube.com/@StarbucksMusic/live
-Title: Full Energy New Day With Starbucks Coffee Music  Starbucks Music  Morning Jazz amp Bossa Nova Music
-Description: Jazz Jazzmusic starbucksmusic Starbucks  About Starbucks Music channel SATURDAY MORNING COFFEE JAZZ 
-Logo URL: https://i.ytimg.com/vi/xrDEjvN1i2I/default_live.jpg
-Add this link to the update file: New: Starbucks Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@StarbucksMusic/live
+Channel Name: Mind  Spirit Relaxation with Music
+Channel URL: https://youtube.com/@MindSpiritRelaxationwithMusic/live
+Title: Beautiful  Irish Relaxing Music  Celtic Fantasy Music with Nature Landscapes
+Description: Beautiful Irish Relaxing Music Celtic Fantasy Music with Nature Landscapes Compilation of Relaxing Celtic Music mainly 
+Logo URL: https://i.ytimg.com/vi/z9HYyvf3_OM/default_live.jpg
+Add this link to the update file: New: Mind  Spirit Relaxation with Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MindSpiritRelaxationwithMusic/live
 

@@ -26,6 +26,13 @@ Description: Watch CNAs 24hour live coverage of the latest headlines and top sto
 Logo URL: https://i.ytimg.com/vi/XWq5kBlakcQ/default_live.jpg
 Add this link to the update file: New: CNA, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNA/live
 
+Channel Name: CNBC
+Channel URL: https://youtube.com/@CNBC/live
+Title: LIVE CNBC Marathon  Documentaries and deep dives 247
+Description: From Wall Street to Main Street to award winning original documentaries and digital deep dives CNBC has you covered
+Logo URL: https://i.ytimg.com/vi/9NyxcX3rhQs/default_live.jpg
+Add this link to the update file: New: CNBC, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNBC/live
+
 Channel Name: Rush NZ
 Channel URL: https://youtube.com/@RushNZ/live
 Title:   Most Unsettling UFO Encounters On NASA39s Unexplained Files  247 Live Stream
@@ -33,12 +40,12 @@ Description: Take a look back at some of the most unsettling UFO encounters on N
 Logo URL: https://i.ytimg.com/vi/j6Dnet8uH0s/default_live.jpg
 Add this link to the update file: New: Rush NZ, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RushNZ/live
 
-Channel Name: CNBC
-Channel URL: https://youtube.com/@CNBC/live
-Title: LIVE CNBC Marathon  Documentaries and deep dives 247
-Description: From Wall Street to Main Street to award winning original documentaries and digital deep dives CNBC has you covered
-Logo URL: https://i.ytimg.com/vi/9NyxcX3rhQs/default_live.jpg
-Add this link to the update file: New: CNBC, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNBC/live
+Channel Name: Factnomenal
+Channel URL: https://youtube.com/@Factnomenal/live
+Title: GREATEST Space Discoveries  Space Documentary
+Description: Buy us a coffee to show your support httpswwwbuymeacoffeecomFactnomenal Enjoy this space documentary by Factnomenal 
+Logo URL: https://i.ytimg.com/vi/IRnkOUYm4Ag/default_live.jpg
+Add this link to the update file: New: Factnomenal, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Factnomenal/live
 
 Channel Name: Factnomenal
 Channel URL: https://youtube.com/@Factnomenal/live
@@ -47,19 +54,26 @@ Description: Check out our official store httpsfactnomenalcom   Buy us a coffee 
 Logo URL: https://i.ytimg.com/vi/WBpTeM71zxw/default_live.jpg
 Add this link to the update file: New: Factnomenal, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Factnomenal/live
 
-Channel Name: DroneScapes
-Channel URL: https://youtube.com/@DroneScapes/live
-Title: FLYING TIGERS  Full Documentary amp Legacy Episode  WW2 History Documentary  P40 Warhawk
-Description: The Flying Tigers FULL DOCUMENTARY Plus THE LEGACY Episode 44 Narrated by Gary Sinise Missions that changed the 
-Logo URL: https://i.ytimg.com/vi/MhCgORB7nmk/default_live.jpg
-Add this link to the update file: New: DroneScapes, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DroneScapes/live
-
 Channel Name: Nat Geo Kids
 Channel URL: https://youtube.com/@NatGeoKids/live
 Title:  LIVE Sharks Dinosaurs Outer Space and MORE  Nat Geo Kids Compilations  natgeokids
 Description: Watch sharks dinosaurs outer space and all the best of Nat Geo Kids LIVE This stream features moments from Amazing Animals 
 Logo URL: https://i.ytimg.com/vi/zuy5N_mhVDc/default_live.jpg
 Add this link to the update file: New: Nat Geo Kids, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NatGeoKids/live
+
+Channel Name: Bloomberg Quicktake
+Channel URL: https://youtube.com/@BloombergQuicktake/live
+Title: Bloomberg Originals Live  News Documentaries amp More
+Description: The Bloomberg Global Financial Market News livestream has moved Follow here 
+Logo URL: https://i.ytimg.com/vi/DxmDPrfinXY/default_live.jpg
+Add this link to the update file: New: Bloomberg Quicktake, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BloombergQuicktake/live
+
+Channel Name: DroneScapes
+Channel URL: https://youtube.com/@DroneScapes/live
+Title: FLYING TIGERS  Full Documentary amp Legacy Episode  WW2 History Documentary  P40 Warhawk
+Description: The Flying Tigers FULL DOCUMENTARY Plus THE LEGACY Episode 44 Narrated by Gary Sinise Missions that changed the 
+Logo URL: https://i.ytimg.com/vi/MhCgORB7nmk/default_live.jpg
+Add this link to the update file: New: DroneScapes, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DroneScapes/live
 
 Channel Name: Safari Wonders 4K
 Channel URL: https://youtube.com/@SafariWonders4K/live
@@ -75,33 +89,19 @@ Description: If you like this video  put Thumb Up button please and Subscribe to
 Logo URL: https://i.ytimg.com/vi/AF4Q8ahMUao/default_live.jpg
 Add this link to the update file: New: Hubble, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Hubble/live
 
-Channel Name: Bloomberg Quicktake
-Channel URL: https://youtube.com/@BloombergQuicktake/live
-Title: Bloomberg Originals Live  News Documentaries amp More
-Description: The Bloomberg Global Financial Market News livestream has moved Follow here 
-Logo URL: https://i.ytimg.com/vi/DxmDPrfinXY/default_live.jpg
-Add this link to the update file: New: Bloomberg Quicktake, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BloombergQuicktake/live
-
-Channel Name: Love Nature
-Channel URL: https://youtube.com/@LoveNature/live
-Title:  247 LIVE Relaxing Wildlife Documentaries  Love Nature
-Description: Welcome to the Love Nature 247 stream Get closer to nature with exclusive and aweinspiring stories from around the world 
-Logo URL: https://i.ytimg.com/vi/Groutdl0NCs/default_live.jpg
-Add this link to the update file: New: Love Nature, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveNature/live
-
-Channel Name: Eternity
-Channel URL: https://youtube.com/@Eternity/live
-Title: ALL Space Secrets Revealed  Eternity Space Documentary
-Description: Hey Space Explorers Get ready for your own private tour of the galaxy with ALL Space Secrets Revealed  Eternity Space 
-Logo URL: https://i.ytimg.com/vi/3AqJGJ8_nio/default_live.jpg
-Add this link to the update file: New: Eternity, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Eternity/live
-
 Channel Name: Dream Msica
 Channel URL: https://youtube.com/@DreamMsica/live
 Title: 4K African Wildlife Nairobi National Park  Scenic Wildlife Film With Real Sounds
 Description: 4K African Wildlife Nairobi National Park  Scenic Wildlife Film With Real Sounds animalsworld RelaxationChannel 
 Logo URL: https://i.ytimg.com/vi/8jmHyQ9C7aE/default_live.jpg
 Add this link to the update file: New: Dream Msica, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DreamMsica/live
+
+Channel Name: The Universe  Space
+Channel URL: https://youtube.com/@TheUniverseSpace/live
+Title: What is Space Time and how it works    The Birth of New Galaxy  Space Universe Documentary
+Description: space spacedocumentary universe theuniverse howtheuniverseworks htuw Spacetime is a mathematical model that joins 
+Logo URL: https://i.ytimg.com/vi/ez5R3sn_l8Y/default_live.jpg
+Add this link to the update file: New: The Universe  Space, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheUniverseSpace/live
 
 Channel Name: IF YOU WANT TO KNOW
 Channel URL: https://youtube.com/@IFYOUWANTTOKNOW/live
@@ -110,6 +110,13 @@ Description: animals wildlife lion Relaxing Animals Documentary  Animal Document
 Logo URL: https://i.ytimg.com/vi/tanqvyla9SU/default_live.jpg
 Add this link to the update file: New: IF YOU WANT TO KNOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IFYOUWANTTOKNOW/live
 
+Channel Name: Space Documentary
+Channel URL: https://youtube.com/@SpaceDocumentary/live
+Title: Is Everything We Know About The Universe Wrong  Journey to the Edge of the Universe   Documentary
+Description: space universe theuniverse astronomy universe galaxy nasa science physics cosmos viral foryou
+Logo URL: https://i.ytimg.com/vi/rvqQk-AT-Z8/default_live.jpg
+Add this link to the update file: New: Space Documentary, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SpaceDocumentary/live
+
 Channel Name: The Universe  Space
 Channel URL: https://youtube.com/@TheUniverseSpace/live
 Title: The New Space Age  Journey Through The Universe  Space Documentary
@@ -117,19 +124,12 @@ Description: space spacedocumentary universe theuniverse howtheuniverseworks htu
 Logo URL: https://i.ytimg.com/vi/JNQq0E-p6WM/default_live.jpg
 Add this link to the update file: New: The Universe  Space, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheUniverseSpace/live
 
-Channel Name: IF YOU WANT TO KNOW
-Channel URL: https://youtube.com/@IFYOUWANTTOKNOW/live
-Title: Amazing Deep Sea Fish  Fish Documentary with Soothing Music 9
-Description: fish relaxingmusic Amazing Deep Sea Fish  Fish Documentary with Soothing Music 9 
-Logo URL: https://i.ytimg.com/vi/epIv4_yxmRU/default_live.jpg
-Add this link to the update file: New: IF YOU WANT TO KNOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IFYOUWANTTOKNOW/live
-
-Channel Name: World Mega Machines
-Channel URL: https://youtube.com/@WorldMegaMachines/live
-Title: React to Agricultura Pretty Girl Documentary Tractor Harvester
-Description: React to Agricultura Pretty Girl Documentary Tractor Harvester RC Crash World BogMonsterZ World Mega Machines 
-Logo URL: https://i.ytimg.com/vi/p03ytY-U7wg/default_live.jpg
-Add this link to the update file: New: World Mega Machines, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WorldMegaMachines/live
+Channel Name: Eternity
+Channel URL: https://youtube.com/@Eternity/live
+Title: ALL Space Secrets Revealed  Eternity Space Documentary
+Description: Hey Space Explorers Get ready for your own private tour of the galaxy with ALL Space Secrets Revealed  Eternity Space 
+Logo URL: https://i.ytimg.com/vi/3AqJGJ8_nio/default_live.jpg
+Add this link to the update file: New: Eternity, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Eternity/live
 
 Channel Name: The Universe  Space
 Channel URL: https://youtube.com/@TheUniverseSpace/live
@@ -152,26 +152,26 @@ Description: We inhabit a galaxy known as the Milky Way which contains hundreds 
 Logo URL: https://i.ytimg.com/vi/2mM4_LtVR1g/default_live.jpg
 Add this link to the update file: New: Universe History, INSERT YOUR PREFERRED GROUP, https://youtube.com/@UniverseHistory/live
 
-Channel Name: The Universe  Space
-Channel URL: https://youtube.com/@TheUniverseSpace/live
-Title: What is Space Time and how it works    The Birth of New Galaxy  Space Universe Documentary
-Description: space spacedocumentary universe theuniverse howtheuniverseworks htuw Spacetime is a mathematical model that joins 
-Logo URL: https://i.ytimg.com/vi/ez5R3sn_l8Y/default_live.jpg
-Add this link to the update file: New: The Universe  Space, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheUniverseSpace/live
+Channel Name: IF YOU WANT TO KNOW
+Channel URL: https://youtube.com/@IFYOUWANTTOKNOW/live
+Title: Amazing Deep Sea Fish  Fish Documentary with Soothing Music 9
+Description: fish relaxingmusic Amazing Deep Sea Fish  Fish Documentary with Soothing Music 9 
+Logo URL: https://i.ytimg.com/vi/epIv4_yxmRU/default_live.jpg
+Add this link to the update file: New: IF YOU WANT TO KNOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IFYOUWANTTOKNOW/live
 
 Channel Name: Space Documentary
 Channel URL: https://youtube.com/@SpaceDocumentary/live
-Title: Is Everything We Know About The Universe Wrong  Journey to the Edge of the Universe   Documentary
+Title: A Journey to the End of Time  Could The Universe Be Infinite  Space Documentary
 Description: space universe theuniverse astronomy universe galaxy nasa science physics cosmos viral foryou
-Logo URL: https://i.ytimg.com/vi/rvqQk-AT-Z8/default_live.jpg
+Logo URL: https://i.ytimg.com/vi/Q4WnKAAiXJ0/default_live.jpg
 Add this link to the update file: New: Space Documentary, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SpaceDocumentary/live
 
-Channel Name: The Universe  Space
-Channel URL: https://youtube.com/@TheUniverseSpace/live
-Title: Voyage to Pandora  The Quest for Alien Planets  Space documentary
-Description: Voyage to Pandora  The Quest for Alien Planets  Space documentary Discussing interstellar travel how to accomplish it and 
-Logo URL: https://i.ytimg.com/vi/J-8Az8Sv2Eo/default_live.jpg
-Add this link to the update file: New: The Universe  Space, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheUniverseSpace/live
+Channel Name: World Mega Machines
+Channel URL: https://youtube.com/@WorldMegaMachines/live
+Title: React to Agricultura Pretty Girl Documentary Tractor Harvester
+Description: React to Agricultura Pretty Girl Documentary Tractor Harvester RC Crash World BogMonsterZ World Mega Machines 
+Logo URL: https://i.ytimg.com/vi/p03ytY-U7wg/default_live.jpg
+Add this link to the update file: New: World Mega Machines, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WorldMegaMachines/live
 
 Channel Name: Intelligent Technology
 Channel URL: https://youtube.com/@IntelligentTechnology/live
@@ -187,6 +187,13 @@ Description: Uncover the Documentary Advantage Why Stories Stick  Join our live 
 Logo URL: https://i.ytimg.com/vi/CvJ9_VrIVyA/default_live.jpg
 Add this link to the update file: New: Lefteris Koutinas, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LefterisKoutinas/live
 
+Channel Name: Nicolas Ambrosios Portfolio
+Channel URL: https://youtube.com/@NicolasAmbrosiosPortfolio/live
+Title: The adventure begins Tennis Documentary  OffSeason 9
+Description: First cut on lock
+Logo URL: https://i.ytimg.com/vi/waCQG9nL-UY/default_live.jpg
+Add this link to the update file: New: Nicolas Ambrosios Portfolio, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NicolasAmbrosiosPortfolio/live
+
 Channel Name: Colors of Nature 4K
 Channel URL: https://youtube.com/@ColorsofNature4K/live
 Title: 4K Nature African  Relaxation Film African Wildlife With Natural Sound  Peaceful Relaxing Music
@@ -199,5 +206,12 @@ Channel URL: https://youtube.com/@BigfootChronicles1967/live
 Title:  LIVE STREAM Boogeymen Documentary Film  Bigfoot Sasquatch Swamp Monsters Yowie Moehau
 Description: Embark on a spinechilling journey into the realm of cryptids with our Boogeymen Documentary Film Series live stream Join 
 Logo URL: https://i.ytimg.com/vi/w9f783lQlTE/default_live.jpg
+Add this link to the update file: New: BigfootChronicles1967, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BigfootChronicles1967/live
+
+Channel Name: BigfootChronicles1967
+Channel URL: https://youtube.com/@BigfootChronicles1967/live
+Title:  LIVE STREAM BigfootChronicles1967 Originals Cryptozoology Bigfoot Documentaries
+Description: Join BigfootChronicles1967 at Patreon httpswwwpatreoncomBigfootChronicles1967 Support us via PayPal 
+Logo URL: https://i.ytimg.com/vi/Tvv2pfhGTzk/default_live.jpg
 Add this link to the update file: New: BigfootChronicles1967, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BigfootChronicles1967/live
 

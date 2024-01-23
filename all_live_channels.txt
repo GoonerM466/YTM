@@ -1,10 +1,3 @@
-Channel Name: Citizen TV Kenya
-Channel URL: https://youtube.com/@CitizenTVKenya/live
-Title: Citizen TV Live
-Description: CitizenTV citizendigital citizentvkenya
-Logo URL: https://i.ytimg.com/vi/YqdSpPCNWYI/default_live.jpg
-Add this link to the update file: New: Citizen TV Kenya, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CitizenTVKenya/live
-
 Channel Name: Salvation Ministries
 Channel URL: https://youtube.com/@SalvationMinistries/live
 Title: Glory Reign 2024  Day 2  Tuesday 23rd January 2024
@@ -12,26 +5,54 @@ Description: Stream our Live Services on these platforms Website httpswwwsmhosor
 Logo URL: https://i.ytimg.com/vi/fhTJTxg5Cuk/default_live.jpg
 Add this link to the update file: New: Salvation Ministries, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SalvationMinistries/live
 
-Channel Name: Kampleng Com
-Channel URL: https://youtube.com/@KamplengCom/live
-Title: Guinea vs Senegal LIVE 2024 CAF Africa Cup of Nations Full match  Video game simulation
-Description: Guinea vs Senegal LIVE 2024 CAF Africa Cup of Nations Full match  Video game simulation NOTE THIS IS NOT A REAL LIVE 
-Logo URL: https://i.ytimg.com/vi/-wMSIo66dOo/default_live.jpg
-Add this link to the update file: New: Kampleng Com, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KamplengCom/live
+Channel Name: Citizen TV Kenya
+Channel URL: https://youtube.com/@CitizenTVKenya/live
+Title: Citizen TV Live
+Description: CitizenTV citizendigital citizentvkenya
+Logo URL: https://i.ytimg.com/vi/YqdSpPCNWYI/default_live.jpg
+Add this link to the update file: New: Citizen TV Kenya, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CitizenTVKenya/live
 
-Channel Name: Blast Premier
-Channel URL: https://youtube.com/@BlastPremier/live
-Title: BLAST Premier Spring Groups 2024 Day 2 G2 vs NAVI NIP vs coL Vitality vs Astralis OG vs Falcons
-Description: BLASTPremier SpringGroups CS2 Watch Spring Groups 2024 adfree on httpsBLASTtvlive Check out our NEW BLASTtv 
-Logo URL: https://i.ytimg.com/vi/bE1GaTjTn8c/default_live.jpg
-Add this link to the update file: New: Blast Premier, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BlastPremier/live
+Channel Name: Cozy Coffee Shop
+Channel URL: https://youtube.com/@CozyCoffeeShop/live
+Title: Soft Jazz Music for Working Relax  Soothing Jazz Instrumental Music with Cozy Coffee Shop Ambience
+Description: Soft Jazz Music for Working Relax  Soothing Jazz Instrumental Music with Cozy Coffee Shop Ambience    Lets experience 
+Logo URL: https://i.ytimg.com/vi/nyTdKLtWMkg/default_live.jpg
+Add this link to the update file: New: Cozy Coffee Shop, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CozyCoffeeShop/live
 
-Channel Name: FUN SPIDERMAN TV
-Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/SLeP3IIN7Zs/default_live.jpg
-Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
+Channel Name: NBC News
+Channel URL: https://youtube.com/@NBCNews/live
+Title: LIVE NBC News NOW  Jan 23
+Description: NBC News NOW is live reporting breaking news and developing stories in real time We are on the scene covering the most 
+Logo URL: https://i.ytimg.com/vi/0HfWNRHTOOA/default_live.jpg
+Add this link to the update file: New: NBC News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NBCNews/live
+
+Channel Name: LawCrime Network
+Channel URL: https://youtube.com/@LawCrimeNetwork/live
+Title: WATCH LIVE Missing Mom Murder Trial  CT v Michelle Troconis  Day Eight
+Description: Jennifer Farber Dulos vanished on May 24 2019 Dulos a mother of five was in the midst of a divorce and custody battle with her 
+Logo URL: https://i.ytimg.com/vi/mSnIeaFI4C4/default_live.jpg
+Add this link to the update file: New: LawCrime Network, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LawCrimeNetwork/live
+
+Channel Name: ExMuslim Sahil Official
+Channel URL: https://youtube.com/@ExMuslimSahilOfficial/live
+Title: Kyu Best Role Model Aur Unke Manne Wale Kullam Kulli Wala Kaam Karte The  ExMuslim Sahil
+Description: Join this channel to get access to perks httpswwwyoutubecomchannelUCjk7V7Rw2jJSflLXYxBOY0gjoin Join Telegram 
+Logo URL: https://i.ytimg.com/vi/CMEWSMqvSfY/default_live.jpg
+Add this link to the update file: New: ExMuslim Sahil Official, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ExMuslimSahilOfficial/live
+
+Channel Name: Smile Family Spanish
+Channel URL: https://youtube.com/@SmileFamilySpanish/live
+Title: Sasha y sus amigas del futuro
+Description: Sasha conoci a sus amigas del futuro
+Logo URL: https://i.ytimg.com/vi/cXdDOHkzDUU/default_live.jpg
+Add this link to the update file: New: Smile Family Spanish, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SmileFamilySpanish/live
+
+Channel Name: Popcorned Planet
+Channel URL: https://youtube.com/@PopcornedPlanet/live
+Title: THIS ISN39T RIGHT Team Meghan Markle is Trying to STOP THE TRUTH  We Need Your Help To FIGHT BACK
+Description: THIS ISNT RIGHT Team Meghan Markle is Trying to STOP THE TRUTH  We Need Your Help To FIGHT BACK Thumbnail 
+Logo URL: https://i.ytimg.com/vi/z9XiEUD9KMY/default_live.jpg
+Add this link to the update file: New: Popcorned Planet, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PopcornedPlanet/live
 
 Channel Name: LawCrime Trials
 Channel URL: https://youtube.com/@LawCrimeTrials/live
@@ -40,12 +61,40 @@ Description: Franklin Tyrone Tucker is accused of murdering Matthew Bonnett in t
 Logo URL: https://i.ytimg.com/vi/5HTxL8-1aOA/default_live.jpg
 Add this link to the update file: New: LawCrime Trials, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LawCrimeTrials/live
 
-Channel Name: CelebrationTV
-Channel URL: https://youtube.com/@CelebrationTV/live
-Title: THE CHARACTER OF GREATNESS By Apostle Johnson Suleman  Intimacy 2024  ATLANTA  Day1 Morning
-Description: Join Wonders Without Number WWN Partnership to access Benefits httpswwwwwncenterorg Click HERE to PARTNER NOW 
-Logo URL: https://i.ytimg.com/vi/DtKG07gYXOA/default_live.jpg
-Add this link to the update file: New: CelebrationTV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CelebrationTV/live
+Channel Name: Insym
+Channel URL: https://youtube.com/@Insym/live
+Title: NEW Observation Duty Game Like The Exit 8
+Description: Mods used import with Thunderstore 018d376f232551121312c7098fe7e315 Join the Twitch chat over here 
+Logo URL: https://i.ytimg.com/vi/oPJeXD8bYhs/default_live.jpg
+Add this link to the update file: New: Insym, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Insym/live
+
+Channel Name: Animals Life
+Channel URL: https://youtube.com/@AnimalsLife/live
+Title: Bin Bon duck Monkey Baby Kittens Puppy Goes Koi Cat And swims Rabbits Animals Eats Egg Muckbang Asmr
+Description: Bin Bon duck Monkey Baby Kittens Puppy Goes Koi Cat And swims Rabbits Animals Eats Egg Muckbang Asmr Welcome to the 
+Logo URL: https://i.ytimg.com/vi/-cxZpL3qRi0/default_live.jpg
+Add this link to the update file: New: Animals Life, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AnimalsLife/live
+
+Channel Name: Rebel News
+Channel URL: https://youtube.com/@RebelNews/live
+Title: BREAKING Ezra Levant reacts to Trudeau39s invocation of the Emergencies Act ruled unconstitutional
+Description: In a major update from Federal Court today Justin Trudeaus invocation of the Emergencies Act has been ruled unconstitutional
+Logo URL: https://i.ytimg.com/vi/xO7C5WweGv4/default_live.jpg
+Add this link to the update file: New: Rebel News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RebelNews/live
+
+Channel Name: FUN SPIDERMAN TV
+Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/oKvAeTzXzAA/default_live.jpg
+Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
+
+Channel Name: SpongeBob SquarePants Official
+Channel URL: https://youtube.com/@SpongeBobSquarePantsOfficial/live
+Title: LIVE Best Krabby Patty Moments MARATHON   SpongeBob
+Description: Those bunsthat cheesethat patty How could you resist a Krusty Krab official Krabby Patty Check out our favorite Krabby Patty 
+Logo URL: https://i.ytimg.com/vi/FaeRi8S2Trg/default_live.jpg
+Add this link to the update file: New: SpongeBob SquarePants Official, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SpongeBobSquarePantsOfficial/live
 
 Channel Name: Reuters
 Channel URL: https://youtube.com/@Reuters/live
@@ -54,33 +103,75 @@ Description: Voters in New Hampshire cast their ballots in the first primary of 
 Logo URL: https://i.ytimg.com/vi/k3zTgLEcygU/default_live.jpg
 Add this link to the update file: New: Reuters, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Reuters/live
 
-Channel Name: Animal Stop Motion Cooking
-Channel URL: https://youtube.com/@AnimalStopMotionCooking/live
-Title: Colorful surprise eggs lobster snake cichlid betta fish turtle butterfly fish jelly fish
-Description: Colorful surprise eggs lobster snake cichlid betta fish turtle butterfly fish jelly fish  Warning This 
-Logo URL: https://i.ytimg.com/vi/1IHx6QrM2Mg/default_live.jpg
-Add this link to the update file: New: Animal Stop Motion Cooking, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AnimalStopMotionCooking/live
+Channel Name: Yellow Brick Cinema  Relaxing Music
+Channel URL: https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
+Title:  Relaxing Music 247 Stress Relief Music Sleep Music Meditation Music Study Calming Music
+Description: Enjoy our latest relaxing music live stream youtubecomyellowbrickcinemalive Relaxing Music 247 Stress Relief Music Sleep 
+Logo URL: https://i.ytimg.com/vi/ng474Vnutes/default_live.jpg
+Add this link to the update file: New: Yellow Brick Cinema  Relaxing Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YellowBrickCinemaRelaxingMusic/live
 
-Channel Name: Good Good Extra
-Channel URL: https://youtube.com/@GoodGoodExtra/live
-Title: 3v3 Good Good Simulator Battle  Pebble Beach
-Description: The Desert open Drop is here  httpsgoodgoodgolfcom Good Good Desert Open Tickets 
-Logo URL: https://i.ytimg.com/vi/9wjqqzFmBYI/default_live.jpg
-Add this link to the update file: New: Good Good Extra, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GoodGoodExtra/live
+Channel Name: Loork Football
+Channel URL: https://youtube.com/@LoorkFootball/live
+Title: GUINEE  SENEGAL LIVE  En Direct Coupe d39Afrique des Nations 2023  CAN 2024 Live
+Description: Guinee Senegal Live CAN CAN2024 Vivez en direct le match de coupe dAfrique entre la Guinee et la Guine Equatoriale
+Logo URL: https://i.ytimg.com/vi/kUJpT2hdxxU/default_live.jpg
+Add this link to the update file: New: Loork Football, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoorkFootball/live
 
-Channel Name: Dunya News
-Channel URL: https://youtube.com/@DunyaNews/live
-Title: Dunya News Live  Latest News Headlines  Bulletins and Events  247  Talk Shows and Infotainment
-Description: Dunya News Live brings you 247 coverage of the Latest News Headlines and events from Pakistan and around the world
-Logo URL: https://i.ytimg.com/vi/OyGI41p2C4s/default_live.jpg
-Add this link to the update file: New: Dunya News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DunyaNews/live
+Channel Name: Classic Rock Music
+Channel URL: https://youtube.com/@ClassicRockMusic/live
+Title: Best Classic Rock Songs Of All Time  Aerosmith U2 The Beatles ACDC Metallica Bon Jovi
+Description: rockhits classicrock rockmusic Tracklist   Best Classic Rock Songs Of All Time  Aerosmith U2 The Beatles ACDC Metallica 
+Logo URL: https://i.ytimg.com/vi/AJGTkB4XIH4/default_live.jpg
+Add this link to the update file: New: Classic Rock Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ClassicRockMusic/live
 
-Channel Name: Super Simple Songs  Kids Songs
-Channel URL: https://youtube.com/@SuperSimpleSongsKidsSongs/live
-Title:  Super Simple Songs LIVE   Kids Songs  Super Simple Songs
-Description: Get the Super Simple App  httpbitlyTheSuperSimpleApp PARENTS AND TEACHERS Thank you so much for watching 
-Logo URL: https://i.ytimg.com/vi/iftl5p5R7iY/default_live.jpg
-Add this link to the update file: New: Super Simple Songs  Kids Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SuperSimpleSongsKidsSongs/live
+Channel Name: CNBCTV18
+Channel URL: https://youtube.com/@CNBCTV18/live
+Title: Hunter Biden Appears On Capitol Hill As House GOP Votes For Contempt  Hunter Biden Hearing LIVE
+Description: Hunter Biden Hearing LIVE  Hunter Biden Appears On Capitol Hill As House GOP Votes For Contempt  CNBC TV18 The 
+Logo URL: https://i.ytimg.com/vi/1cMTogEyLS8/default_live.jpg
+Add this link to the update file: New: CNBCTV18, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNBCTV18/live
+
+Channel Name: Bico Fun Tv
+Channel URL: https://youtube.com/@BicoFunTv/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: N5 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/6JGN0PNh62Q/default_live.jpg
+Add this link to the update file: New: Bico Fun Tv, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BicoFunTv/live
+
+Channel Name: Marble ASMR house
+Channel URL: https://youtube.com/@MarbleASMRhouse/live
+Title: Marble Run Race ASMR  HABA Slope amp Retro Makita Dump Truck Garbage Truck Ambulance JCB Tractors
+Description: Marble Run Race ASMR  HABA Slope  Retro Makita Dump Truck Garbage Truck Ambulance JCB Tractors
+Logo URL: https://i.ytimg.com/vi/vPRmd3Cx_1U/default_live.jpg
+Add this link to the update file: New: Marble ASMR house, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MarbleASMRhouse/live
+
+Channel Name: Piz Heroes
+Channel URL: https://youtube.com/@PizHeroes/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: 2 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/cfacDnFkgjk/default_live.jpg
+Add this link to the update file: New: Piz Heroes, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PizHeroes/live
+
+Channel Name: Raxxanterax
+Channel URL: https://youtube.com/@Raxxanterax/live
+Title: LIVE Season 3 Blast D  Maxroll Playlist
+Description: diablo4 season3 d4 Maxroll blizzard  SubscribeFollow me here Thank you for the 
+Logo URL: https://i.ytimg.com/vi/4cSshVwtyBM/default_live.jpg
+Add this link to the update file: New: Raxxanterax, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Raxxanterax/live
+
+Channel Name: Satisfying Husky
+Channel URL: https://youtube.com/@SatisfyingHusky/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2 Soothing Jazz 
+Logo URL: https://i.ytimg.com/vi/DjLkljn9HGo/default_live.jpg
+Add this link to the update file: New: Satisfying Husky, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SatisfyingHusky/live
+
+Channel Name: GipsoCartoon
+Channel URL: https://youtube.com/@GipsoCartoon/live
+Title: Har Har Shambhu Shiv Mahadeva      Har Har Shambhu  Abhilipsa Panda ft Jeetu Sharma
+Description: Har Har Shambhu Shiv Mahadeva      Har Har Shambhu  Abhilipsa Panda ft Jeetu Sharma
+Logo URL: https://i.ytimg.com/vi/WJ_IsKutgY4/default_live.jpg
+Add this link to the update file: New: GipsoCartoon, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GipsoCartoon/live
 
 Channel Name: News18 Urdu
 Channel URL: https://youtube.com/@News18Urdu/live
@@ -89,173 +180,54 @@ Description: Israel says its 98th Division have surrounded the city of Khan Youn
 Logo URL: https://i.ytimg.com/vi/uCMj7tz1PyU/default_live.jpg
 Add this link to the update file: New: News18 Urdu, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18Urdu/live
 
-Channel Name: Magic Club
-Channel URL: https://youtube.com/@MagicClub/live
-Title: Rihanna Avicii Justin Bieber Kygo Selena Gomez Alok Bastille David Guetta  Summer Nostalgia
-Description: Rihanna Avicii Justin Bieber Kygo Selena Gomez Alok Bastille David Guetta  Summer Nostalgia StreamDownload 
-Logo URL: https://i.ytimg.com/vi/OxtMuutI0io/default_live.jpg
-Add this link to the update file: New: Magic Club, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MagicClub/live
+Channel Name: TinyKittens HQ
+Channel URL: https://youtube.com/@TinyKittensHQ/live
+Title: LIVE Rescue cat Ricci and her kittens
+Description: DEC 5 2023 Ricci gave birth for the last time in my lap She and her four beautiful kittens are doing well Chopper and Lila are 
+Logo URL: https://i.ytimg.com/vi/QdKjFHFlRLQ/default_live.jpg
+Add this link to the update file: New: TinyKittens HQ, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TinyKittensHQ/live
 
-Channel Name: MONO BONBON ESP
-Channel URL: https://youtube.com/@MONOBONBONESP/live
-Title: Best Funny Videos  30 minutes Funniest and Cutest Babies  Animal Bon Bon Eat Chocolate Candies
-Description: Best Funny Videos 30 minutes Funniest and Cutest Babies Animal Bon Bon Eat Chocolate Candies Best Funny Videos 
-Logo URL: https://i.ytimg.com/vi/4efVyikx19A/default_live.jpg
-Add this link to the update file: New: MONO BONBON ESP, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MONOBONBONESP/live
+Channel Name: Super Simple Songs  Kids Songs
+Channel URL: https://youtube.com/@SuperSimpleSongsKidsSongs/live
+Title:   Super Simple Songs Bedtime Livestream   Kids Nap Songs  Super Simple Songs
+Description: Get the Super Simple App  httpbitlyTheSuperSimpleApp PARENTS AND TEACHERS Thank you so much for watching 
+Logo URL: https://i.ytimg.com/vi/zLO3xHujRcA/default_live.jpg
+Add this link to the update file: New: Super Simple Songs  Kids Songs, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SuperSimpleSongsKidsSongs/live
 
-Channel Name: NBC News
-Channel URL: https://youtube.com/@NBCNews/live
-Title: LIVE White House holds press briefing  NBC News
-Description: Watch as White House Press Secretary Karine JeanPierre holds a press briefing  Subscribe to NBC News 
-Logo URL: https://i.ytimg.com/vi/Nf3UrgjU-CU/default_live.jpg
-Add this link to the update file: New: NBC News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NBCNews/live
+Channel Name: FUN SPIDERMAN TV
+Channel URL: https://youtube.com/@FUNSPIDERMANTV/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/IJdOTSGI0Ds/default_live.jpg
+Add this link to the update file: New: FUN SPIDERMAN TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNSPIDERMANTV/live
 
-Channel Name: Animal Stop Motion Cooking
-Channel URL: https://youtube.com/@AnimalStopMotionCooking/live
-Title: Colorful surprise eggs lobster snake cichlid betta fish turtle butterfly fish jelly fish
-Description: Colorful surprise eggs lobster snake cichlid betta fish turtle butterfly fish jelly fish  Warning This 
-Logo URL: https://i.ytimg.com/vi/_jXRNMypwQU/default_live.jpg
-Add this link to the update file: New: Animal Stop Motion Cooking, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AnimalStopMotionCooking/live
+Channel Name: Piz Green TV
+Channel URL: https://youtube.com/@PizGreenTV/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: N7 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/_lPPTlxV4wo/default_live.jpg
+Add this link to the update file: New: Piz Green TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PizGreenTV/live
 
-Channel Name: Zikir  
-Channel URL: https://youtube.com/@Zikir/live
-Title: Ayat Kursi 7xSurah YasinSurah Ar RahmanSurah Al WaqiahSurah Al Mulk
-Description: Ayat Kursi 7x Surah Yasin Ar Rahman Al Waqiah  Al Mulk By Syeikh Abdullahalkhalaf QURAN MERDU dzikir malam pagi 
-Logo URL: https://i.ytimg.com/vi/c0ldE2YYxns/default_live.jpg
-Add this link to the update file: New: Zikir  , INSERT YOUR PREFERRED GROUP, https://youtube.com/@Zikir/live
+Channel Name: RalaKONE
+Channel URL: https://youtube.com/@RalaKONE/live
+Title: 115K thankyou New Overlay  Road to 200K
+Description: PubgMobile PubgLive RalaKONE If you like the stream dont forget to like and Subscribe About  Name  Lalruatfela 
+Logo URL: https://i.ytimg.com/vi/F2HuK2jdzQs/default_live.jpg
+Add this link to the update file: New: RalaKONE, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RalaKONE/live
 
-Channel Name: Dynamo Gaming
-Channel URL: https://youtube.com/@DynamoGaming/live
-Title: 40000 UC NEW AKM CRATE OPENING BY HYDRA  DYNAMO shorts shortsvideo shortsfeed
-Description: New Shorts Channel httpswwwyoutubecomDynoShortsss Subscribe Karlo Jaldi Se  Notifications all on Discord 
-Logo URL: https://i.ytimg.com/vi/a54Kp8vIc2w/default_live.jpg
-Add this link to the update file: New: Dynamo Gaming, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DynamoGaming/live
-
-Channel Name: 123 GO
-Channel URL: https://youtube.com/@123GO/live
-Title: Good Teacher Vs Bad Teacher  Crazy Hacks and Funny Situations At School by 123 GO
-Description: Good Teacher Vs Bad Teacher Who can relate to the hilarious and sometimes crazy situations that go down in school Lets 
-Logo URL: https://i.ytimg.com/vi/RrjpkmuDRFw/default_live.jpg
-Add this link to the update file: New: 123 GO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@123GO/live
-
-Channel Name: Jrmy Pothin
-Channel URL: https://youtube.com/@JrmyPothin/live
-Title: LIVE GURISON  Les meurtrissures de Jsus
-Description: COMBAT SPIRITUEL  Tlcharger gratuitement les 60 premires pages   httpbitly3Z1kPg9 PARABOLES NOCTURNES 
-Logo URL: https://i.ytimg.com/vi/jHQhuZoSdx0/default_live.jpg
-Add this link to the update file: New: Jrmy Pothin, INSERT YOUR PREFERRED GROUP, https://youtube.com/@JrmyPothin/live
-
-Channel Name: CBS News
-Channel URL: https://youtube.com/@CBSNews/live
-Title: LIVE New Hampshire primary underway Oscar nominations announced and more  CBS News
-Description: New Hampshire voters are heading to the polls to cast their ballot in the states presidential primary tensions in the Middle East 
-Logo URL: https://i.ytimg.com/vi/zMLhJXHHwuE/default_live.jpg
-Add this link to the update file: New: CBS News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CBSNews/live
-
-Channel Name: Tyaedros
-Channel URL: https://youtube.com/@Tyaedros/live
-Title: NEW CHARACTER UNLOCKED SARAH DAHLIA EP1  GTA ROLEPLAY
-Description: Check out my new Single on Spotify  Dont forget to Subscribe Love  SocialBuzz httpssociabuzzcomtyaedrossupport 
-Logo URL: https://i.ytimg.com/vi/qi8wjE33o7c/default_live.jpg
-Add this link to the update file: New: Tyaedros, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Tyaedros/live
-
-Channel Name: Relax Coffee Shop
-Channel URL: https://youtube.com/@RelaxCoffeeShop/live
-Title: Ambient Jazz Music For Coffee Shop  Smooth Piano Jazz Music to WorkStudy
-Description: Relax Coffee Shop httpsopenspotifycomplaylist4EFLO4m9jqNgtIP1GstB4W Ambient Jazz Music For Coffee Shop  Smooth 
-Logo URL: https://i.ytimg.com/vi/iK3R9z13S30/default_live.jpg
-Add this link to the update file: New: Relax Coffee Shop, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RelaxCoffeeShop/live
-
-Channel Name: True North
-Channel URL: https://youtube.com/@TrueNorth/live
-Title: Federal Court declares use of Emergencies Act UNCONSTITUTIONAL
-Description: Its the twoyear anniversary of the first leg of the Freedom Convoy setting out for Ottawa from Delta British Columbia Today the 
-Logo URL: https://i.ytimg.com/vi/44FzcNs37mQ/default_live.jpg
-Add this link to the update file: New: True North, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TrueNorth/live
-
-Channel Name: Love India
-Channel URL: https://youtube.com/@LoveIndia/live
-Title: Old Bollywood LOVE Hindi songs Bollywood 90s HIts Hindi Romantic Melodies Songs
-Description: 
-Logo URL: https://i.ytimg.com/vi/Ux7tLxjywaE/default_live.jpg
-Add this link to the update file: New: Love India, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveIndia/live
-
-Channel Name: ISINIJURU TV
-Channel URL: https://youtube.com/@ISINIJURUTV/live
-Title: quotGUCUDIKA N39INKOTANYI NI UGUPFUMBATA URUPFUquot UBUZIMA BWACU NI IGITABO
-Description: 23012024 GUCUDIKA NINKOTANYI NI UGUPFUMBATA URUPFU UBUZIMA BWACU NI IGITABO  PAYPAL 
-Logo URL: https://i.ytimg.com/vi/OLUkhF9OI6k/default_live.jpg
-Add this link to the update file: New: ISINIJURU TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ISINIJURUTV/live
-
-Channel Name: Nick28T
-Channel URL: https://youtube.com/@Nick28T/live
-Title: TOTY MIDFIELDER PACKED on RTG  TOTYs Packed 4  Packs Opened 600  RTG 114  FC24
-Description: Broadcasted live on  WATCH ME LIVE HERE httpwwwtwitchtvNick28T Second Channel 
-Logo URL: https://i.ytimg.com/vi/GrcDgV8ww9k/default_live.jpg
-Add this link to the update file: New: Nick28T, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Nick28T/live
-
-Channel Name: Nastya Life
-Channel URL: https://youtube.com/@NastyaLife/live
-Title:    1  10      
-Description:    1  10       INSTAGRAM 
-Logo URL: https://i.ytimg.com/vi/k2fZrDwpl9o/default_live.jpg
-Add this link to the update file: New: Nastya Life, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NastyaLife/live
-
-Channel Name: LimeAndToys
-Channel URL: https://youtube.com/@LimeAndToys/live
-Title: 5 Colors with Nursery rhymes English Song For Kids  Wash your hands No Virus   Super Lime
-Description: 5 Colors with Nursery rhymes English Song For Kids  Wash your hands No Virus  Super Lime NurseryRhymes Kids colors 
-Logo URL: https://i.ytimg.com/vi/bZqHM2_6p88/default_live.jpg
-Add this link to the update file: New: LimeAndToys, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LimeAndToys/live
-
-Channel Name: Peppa Pig  Official Channel
-Channel URL: https://youtube.com/@PeppaPigOfficialChannel/live
-Title:  NEW Peppa Pig 2023  Peppa Pig Tales  All Episodes LIVE
-Description: Watch More BRAND NEW Peppa Pig Tales Here httpsbitly3LMLyJU Life as a little one is a journey of constant discovery and 
-Logo URL: https://i.ytimg.com/vi/ajQmNRYSYhc/default_live.jpg
-Add this link to the update file: New: Peppa Pig  Official Channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PeppaPigOfficialChannel/live
-
-Channel Name: 92 News HD
-Channel URL: https://youtube.com/@92NewsHD/live
-Title: 92 NEWS LIVE  Pakistan News Live  Latest Headlines amp Breaking News  Press Conferences amp Speeches
-Description: 92 NEWS LIVE  Pakistan News Live  Latest Headlines  Breaking News  Press Conferences  Speeches 92NewsLive 
-Logo URL: https://i.ytimg.com/vi/itpkkkO8t9o/default_live.jpg
-Add this link to the update file: New: 92 News HD, INSERT YOUR PREFERRED GROUP, https://youtube.com/@92NewsHD/live
-
-Channel Name: Love India
-Channel URL: https://youtube.com/@LoveIndia/live
-Title: 9039s 8039s Songs  Evergreen Songs Udit NarayanAlka Yagnik Songs Dil Evergreen Songs
-Description: 
-Logo URL: https://i.ytimg.com/vi/J46inSs9qt4/default_live.jpg
-Add this link to the update file: New: Love India, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoveIndia/live
-
-Channel Name: DeadwingDork
-Channel URL: https://youtube.com/@DeadwingDork/live
-Title: Live User Who Bingo and Crazy People
-Description: Today we practice for the big fuccfucc tournament coming up SSG lost his insanity and well hopefully discover new Users
-Logo URL: https://i.ytimg.com/vi/CzR_Vz-satc/default_live.jpg
-Add this link to the update file: New: DeadwingDork, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DeadwingDork/live
-
-Channel Name: Hindustan Times
-Channel URL: https://youtube.com/@HindustanTimes/live
-Title: Putins Minister Lavrov Clashes With Ukraine At UNSC West Preventing End Of RussiaUkraine War
-Description: Russia and Ukraine engaged in a fierce debate at the United Nations Security Council on Monday over the war Sergei Lavrov 
-Logo URL: https://i.ytimg.com/vi/krMAyR_X1EI/default_live.jpg
-Add this link to the update file: New: Hindustan Times, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HindustanTimes/live
-
-Channel Name: Kaztro GAMING
-Channel URL: https://youtube.com/@KaztroGAMING/live
-Title: BGMI amp GTA  Kaztro Live
-Description: kaztrogaming kaztrolive
-Logo URL: https://i.ytimg.com/vi/vA4IG8EfeoU/default_live.jpg
-Add this link to the update file: New: Kaztro GAMING, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KaztroGAMING/live
-
-Channel Name:   
+Channel Name:  
 Channel URL: https://youtube.com/@/live
-Title:       2024       
-Description: Thank you for like subscription or donation eth 0xAD6FDcAE73e3Cf0E564c91af5F1fB0c10F7B1C79 btc 
-Logo URL: https://i.ytimg.com/vi/mOcL_zOQvmc/default_live.jpg
-Add this link to the update file: New:   , INSERT YOUR PREFERRED GROUP, https://youtube.com/@/live
+Title:              
+Description:                 Sourate Al Baqarah    
+Logo URL: https://i.ytimg.com/vi/rmOU5nhZri0/default_live.jpg
+Add this link to the update file: New:  , INSERT YOUR PREFERRED GROUP, https://youtube.com/@/live
+
+Channel Name: Wolfoo Channel
+Channel URL: https://youtube.com/@WolfooChannel/live
+Title:  LIVE Lucy bath in bathtub full of Ice  Hot vs Cold Challenge  Kids Cartoon
+Description: LIVE Lucy bath in bathtub full of Ice Hot vs Cold Challenge  Kids Cartoon cartoon kids woavideos forkids kidsplaying 
+Logo URL: https://i.ytimg.com/vi/kgrP0svBx4Q/default_live.jpg
+Add this link to the update file: New: Wolfoo Channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WolfooChannel/live
 
 Channel Name: Rhykker
 Channel URL: https://youtube.com/@Rhykker/live
@@ -264,103 +236,124 @@ Description: Diablo 4 Season 3 Livestream Gameplay Join this channel to get acce
 Logo URL: https://i.ytimg.com/vi/jaaGXLbKTnE/default_live.jpg
 Add this link to the update file: New: Rhykker, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Rhykker/live
 
-Channel Name: Super 3d Animals
-Channel URL: https://youtube.com/@Super3dAnimals/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2 
-Logo URL: https://i.ytimg.com/vi/GNw8f2GZfVo/default_live.jpg
-Add this link to the update file: New: Super 3d Animals, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Super3dAnimals/live
+Channel Name: SAMAA TV
+Channel URL: https://youtube.com/@SAMAATV/live
+Title:  SAMAA News Live  Pakistan News Live  Latest News Headlines amp Breaking News  SAMAA TV
+Description: SAMAALIVE PakistanNewsLive LiveNews SamaaTv  Subscribe to Samaa News  httpsbitly2Wh8Sp8  Watch 
+Logo URL: https://i.ytimg.com/vi/N14lJkjmT58/default_live.jpg
+Add this link to the update file: New: SAMAA TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SAMAATV/live
 
-Channel Name: Magic Fingers Art
-Channel URL: https://youtube.com/@MagicFingersArt/live
-Title:  SIARAN LANGSUNG Hewan Laut yang Lucu Menggambar Melukis Mewarnai untuk Anak Balita
-Description: Halo semuanya Ini adalah TV Siaran Langsung Magic Fingers Art Berlangganan untuk video baru 
-Logo URL: https://i.ytimg.com/vi/ycO19z9BGPc/default_live.jpg
-Add this link to the update file: New: Magic Fingers Art, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MagicFingersArt/live
+Channel Name: GinoMachino
+Channel URL: https://youtube.com/@GinoMachino/live
+Title: DARK SOULS 3 CASUAL PLAYTHROUGH  Minecraft later w potasticpanda  requests newvid
+Description: Twitch httpswwwtwitchtvginomachino Twitter httpstwittercomGinoMachino Discord httpsdiscordggFACwsyh Challenge 
+Logo URL: https://i.ytimg.com/vi/rBuHbRrBfeM/default_live.jpg
+Add this link to the update file: New: GinoMachino, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GinoMachino/live
 
-Channel Name: 670 The Score
-Channel URL: https://youtube.com/@670TheScore/live
-Title: 670 The Score daily livestream 12324
-Description: nfl chicagobears chicagobulls Subscribe for the latest Chicago sports news  videos WEEKDAY SCHEDULE Mully  Haugh 
-Logo URL: https://i.ytimg.com/vi/GZjdoOFrTpA/default_live.jpg
-Add this link to the update file: New: 670 The Score, INSERT YOUR PREFERRED GROUP, https://youtube.com/@670TheScore/live
+Channel Name: TV9 Bharatvarsh
+Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Title: Ram Mandir Live News Updates    Asaduddin Owaisi   Interview Viral 
+Description: Ram Mandir Live News Updates    Asaduddin Owaisi   Interview Viral 
+Logo URL: https://i.ytimg.com/vi/kiQyYn6IA1c/default_live.jpg
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
 
-Channel Name: BabyBus  Kids Songs and Cartoons
-Channel URL: https://youtube.com/@BabyBusKidsSongsandCartoons/live
-Title: LIVE STREAM  Scary Water Monster  Kids Cartoon  Outdoor Safety Tips  Sheriff Labrador  BabyBus
-Description: Enjoy Sheriff Labrador Story   YouTube httpswwwyoutubecomplaylistlistPLPA49Pz3BAxMQZcPY3tAF9ODTxlJIawOv 
-Logo URL: https://i.ytimg.com/vi/fLfJmZFEHZo/default_live.jpg
-Add this link to the update file: New: BabyBus  Kids Songs and Cartoons, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BabyBusKidsSongsandCartoons/live
+Channel Name: DG Funny
+Channel URL: https://youtube.com/@DGFunny/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: 1 Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/uhsHUbj9psw/default_live.jpg
+Add this link to the update file: New: DG Funny, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DGFunny/live
 
-Channel Name: PBS NewsHour
-Channel URL: https://youtube.com/@PBSNewsHour/live
-Title: WATCH LIVE White House holds briefing after US allies launch new strike against Yemen39s Houthis
-Description: Stream your PBS favorites with the PBS app httpstopbsorg2Jb8twG Find more from PBS NewsHour at 
-Logo URL: https://i.ytimg.com/vi/Xk88zHxEilM/default_live.jpg
-Add this link to the update file: New: PBS NewsHour, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PBSNewsHour/live
+Channel Name: Ankkita C
+Channel URL: https://youtube.com/@AnkkitaC/live
+Title: SERIOUS GAMEPLAY TONIGHT  Day 23366
+Description: Managed by 8bit Creatives  httpswwwinstagramcom8bitcreatives Business email  contactankkitacgmailcom Become a 
+Logo URL: https://i.ytimg.com/vi/wBzf-nouH28/default_live.jpg
+Add this link to the update file: New: Ankkita C, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AnkkitaC/live
 
-Channel Name: Super Simple Espaol  Canciones Infantiles Y Ms
-Channel URL: https://youtube.com/@SuperSimpleEspaolCancionesInfantilesYMs/live
-Title:  Canciones de Super Simple en VIVO  Canciones Infantiles
-Description: Suscrbete  httpbitlysuscribeteSuperSimpleEspanol Mas canciones para nios httpbitly2ueS69r  Tambin Somos 
-Logo URL: https://i.ytimg.com/vi/WbBwO_rDDW8/default_live.jpg
-Add this link to the update file: New: Super Simple Espaol  Canciones Infantiles Y Ms, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SuperSimpleEspaolCancionesInfantilesYMs/live
+Channel Name: Hello Future Me
+Channel URL: https://youtube.com/@HelloFutureMe/live
+Title: Dissecting Netflix39s New Avatar Trailer  LIVE BREAKDOWN
+Description: READ MY PUBLISHED WORK  GET ON WRITING AND WORLDBUILDING VOL II I httpslinktreetimhickson Thank you patrons 
+Logo URL: https://i.ytimg.com/vi/_QG33zBZ7w0/default_live.jpg
+Add this link to the update file: New: Hello Future Me, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HelloFutureMe/live
 
-Channel Name: YAKEEN
-Channel URL: https://youtube.com/@YAKEEN/live
-Title: CHEMICAL KINETICS in 1 Shot FULL CHAPTER COVERAGE ConceptsPYQs  Prachand NEET
-Description: Playlist  httpswwwyoutubecomplaylistlistPL81liSLgyRwTHNy8y0rpraKxFck2n 
-Logo URL: https://i.ytimg.com/vi/pL9uUWD8u9M/default_live.jpg
-Add this link to the update file: New: YAKEEN, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YAKEEN/live
+Channel Name: Meditative Idea
+Channel URL: https://youtube.com/@MeditativeIdea/live
+Title: The Body Is Repair After 8 MinAlpha Waves Heal The Whole Internal Organ WarningVery Powerful
+Description: The Body Is Repair After 8 MinAlpha Waves Heal The Whole Internal Organ WarningVery Powerful
+Logo URL: https://i.ytimg.com/vi/tEUmuXdNDAI/default_live.jpg
+Add this link to the update file: New: Meditative Idea, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MeditativeIdea/live
 
-Channel Name: Apostle Orokpo Michael
-Channel URL: https://youtube.com/@ApostleOrokpoMichael/live
-Title: TUESDAY BIBLE STUDY  23012024  APOSTLE MICHAEL OROKPO
-Description: You are welcome to Encounter Service For your offeringgiving kindly check the details below NAIRA ACCOUNT Name 
-Logo URL: https://i.ytimg.com/vi/xnY1pthu-iw/default_live.jpg
-Add this link to the update file: New: Apostle Orokpo Michael, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ApostleOrokpoMichael/live
+Channel Name: Magic Club
+Channel URL: https://youtube.com/@MagicClub/live
+Title: Rihanna Avicii Justin Bieber Kygo Selena Gomez Alok Bastille David Guetta  Summer Nostalgia
+Description: Rihanna Avicii Justin Bieber Kygo Selena Gomez Alok Bastille David Guetta  Summer Nostalgia StreamDownload 
+Logo URL: https://i.ytimg.com/vi/_lQ901T5PWI/default_live.jpg
+Add this link to the update file: New: Magic Club, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MagicClub/live
 
-Channel Name: CNBC Television
-Channel URL: https://youtube.com/@CNBCTelevision/live
-Title: LIVE White House press secretary Karine JeanPierre and NSC39s John Kirby hold a briefing  12324
-Description: White House press secretary Karine JeanPierre is joined by NSC Coordinator for Strategic Communications John Kirby at a 
-Logo URL: https://i.ytimg.com/vi/_ca5xkIfcq0/default_live.jpg
-Add this link to the update file: New: CNBC Television, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNBCTelevision/live
+Channel Name: AceLawrence
+Channel URL: https://youtube.com/@AceLawrence/live
+Title: Capi Gaming is gonna carry me again
+Description: We have TTS enabled for donations 3 for super chat and only 2 for Direct donation using my streamelements link Reason why 
+Logo URL: https://i.ytimg.com/vi/Ql2N3BaayTM/default_live.jpg
+Add this link to the update file: New: AceLawrence, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AceLawrence/live
 
-Channel Name: eSports Network
-Channel URL: https://youtube.com/@eSportsNetwork/live
-Title: MN  BLAST Premier Spring Groups 2024  Day 2
-Description: ESN      eSports       
-Logo URL: https://i.ytimg.com/vi/_CzE992JRU8/default_live.jpg
-Add this link to the update file: New: eSports Network, INSERT YOUR PREFERRED GROUP, https://youtube.com/@eSportsNetwork/live
+Channel Name: Johny FamilyShow
+Channel URL: https://youtube.com/@JohnyFamilyShow/live
+Title: Are You Sleeping Brother John with Linda and Baby Dolls
+Description: Linda Pretend Play with Baby Dolls Are You Sleeping Brother John Collection by Johny FamilyShow
+Logo URL: https://i.ytimg.com/vi/kmfFyTzoaQk/default_live.jpg
+Add this link to the update file: New: Johny FamilyShow, INSERT YOUR PREFERRED GROUP, https://youtube.com/@JohnyFamilyShow/live
 
-Channel Name: 971 The Ticket
-Channel URL: https://youtube.com/@971TheTicket/live
-Title: 971 The Ticket Live Stream  Tuesday January 23rd
-Description: Listen live httpswwwaudacycom971theticketlisten Visit our website https971theticketcom Subscribe on Twitch 
-Logo URL: https://i.ytimg.com/vi/I62MpALMV1I/default_live.jpg
-Add this link to the update file: New: 971 The Ticket, INSERT YOUR PREFERRED GROUP, https://youtube.com/@971TheTicket/live
+Channel Name: AaronClarey
+Channel URL: https://youtube.com/@AaronClarey/live
+Title: We39re Well Beyond the Point of Shame
+Description: A World WIthout Men httpstcovR8OGMqQFc
+Logo URL: https://i.ytimg.com/vi/GvD1CdYVQ8I/default_live.jpg
+Add this link to the update file: New: AaronClarey, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AaronClarey/live
 
-Channel Name: Wise  Trader
-Channel URL: https://youtube.com/@WiseTrader/live
-Title: NIFTY CRASHED  Welcome Bears  What Next  BANKNIFTY  Stock Market Crash  HDFC  Wise Trader 
-Description: Patreon Membership is the best place to join me in Live Market where I will share some of my Advance Day Trading Position and 
-Logo URL: https://i.ytimg.com/vi/zYWrxvMNYWE/default_live.jpg
-Add this link to the update file: New: Wise  Trader, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WiseTrader/live
+Channel Name: OneDayAlex
+Channel URL: https://youtube.com/@OneDayAlex/live
+Title: Truck Excavator and Tractor JCB Power Wheels Construction Vehicles Funny story about cars toy
+Description: Truck Excavator and Tractor JCB Power Wheels Construction Vehicles Funny story about cars toy cars forkids tractor 
+Logo URL: https://i.ytimg.com/vi/RHOus2YCeY0/default_live.jpg
+Add this link to the update file: New: OneDayAlex, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OneDayAlex/live
 
-Channel Name: Aventuras com os Kratts  9 Story
-Channel URL: https://youtube.com/@AventurascomosKratts9Story/live
-Title:  VIVRE  Aventuras com os Kratts  MARATONA COMPLETA DE EPISDIOS
-Description: Enlouquea com os Wild Kratts com uma maratona de episdios completos S no canal oficial do Wild Kratts Nesta comdia de 
-Logo URL: https://i.ytimg.com/vi/izVx6oGX33s/default_live.jpg
-Add this link to the update file: New: Aventuras com os Kratts  9 Story, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AventurascomosKratts9Story/live
+Channel Name: Sakla TV
+Channel URL: https://youtube.com/@SaklaTV/live
+Title: Har Har Shambhu Shiv Mahadeva      Har Har Shambhu  Abhilipsa Panda ft Jeetu Sharma
+Description: Har Har Shambhu Shiv Mahadeva      Har Har Shambhu  Abhilipsa Panda ft Jeetu Sharma
+Logo URL: https://i.ytimg.com/vi/QBBppK7BCRU/default_live.jpg
+Add this link to the update file: New: Sakla TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SaklaTV/live
 
-Channel Name: 971 The Ticket
-Channel URL: https://youtube.com/@971TheTicket/live
-Title: 971 The Ticket Live Stream  Tuesday January 23rd
-Description: Listen live httpswwwaudacycom971theticketlisten Visit our website https971theticketcom Subscribe on Twitch 
-Logo URL: https://i.ytimg.com/vi/I62MpALMV1I/default_live.jpg
-Add this link to the update file: New: 971 The Ticket, INSERT YOUR PREFERRED GROUP, https://youtube.com/@971TheTicket/live
+Channel Name: Peppa Pig  Official Channel
+Channel URL: https://youtube.com/@PeppaPigOfficialChannel/live
+Title: Peppa Pig Full Episodes  LIVE Full Episodes STREAMING NOW  Kids Videos 
+Description: Watch FULL EPISODES Here httpsbitly3VtdFAR  Watch BRAND NEW Episodes Here httpsbitly3LMLyJU  Subscribe 
+Logo URL: https://i.ytimg.com/vi/v397onc-CmY/default_live.jpg
+Add this link to the update file: New: Peppa Pig  Official Channel, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PeppaPigOfficialChannel/live
+
+Channel Name: Yakis
+Channel URL: https://youtube.com/@Yakis/live
+Title: LIVE  YAKIS  PUBG  Shadow Force Master
+Description: httpsyakisstorecom Top up Game UC PUBG Mobile Legend Valorant Free Fire dll Download  Play PUBG Mobile 
+Logo URL: https://i.ytimg.com/vi/NOECRj_FzVI/default_live.jpg
+Add this link to the update file: New: Yakis, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Yakis/live
+
+Channel Name: Hindi ROmentic
+Channel URL: https://youtube.com/@HindiROmentic/live
+Title: Hindi Heart Touching Songs 2023  ROMANTIC HINDI LOVE MASHUP of Armaan Malik Atif Aslam Neha Kakkar
+Description: 
+Logo URL: https://i.ytimg.com/vi/jKHS2cMtS8o/default_live.jpg
+Add this link to the update file: New: Hindi ROmentic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HindiROmentic/live
+
+Channel Name: Pinkfong Baby Shark  Kids Songs  Stories
+Channel URL: https://youtube.com/@PinkfongBabySharkKidsSongsStories/live
+Title: LIVE 2024 BEST Songs for Kids  Favorite Songs from Pinkfong Baby Shark  Cars Dinosaur Animals 
+Description: Enjoy the best songs from 2023 prepared by Pinkfong Baby Shark Subscribe Pinkfong Baby Shark Official YouTube channel 
+Logo URL: https://i.ytimg.com/vi/HzQwD2ieZNE/default_live.jpg
+Add this link to the update file: New: Pinkfong Baby Shark  Kids Songs  Stories, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PinkfongBabySharkKidsSongsStories/live
 
 Channel Name: Regular Schmuck
 Channel URL: https://youtube.com/@RegularSchmuck/live
@@ -369,131 +362,117 @@ Description: Welcome or welcome back to another D2R stream Check out my latest v
 Logo URL: https://i.ytimg.com/vi/SSWIcWcHwfE/default_live.jpg
 Add this link to the update file: New: Regular Schmuck, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RegularSchmuck/live
 
-Channel Name: Wise  Trader
-Channel URL: https://youtube.com/@WiseTrader/live
-Title: NIFTY CRASHED  Welcome Bears  What Next  BANKNIFTY  Stock Market Crash  HDFC  Wise Trader 
-Description: Patreon Membership is the best place to join me in Live Market where I will share some of my Advance Day Trading Position and 
-Logo URL: https://i.ytimg.com/vi/zYWrxvMNYWE/default_live.jpg
-Add this link to the update file: New: Wise  Trader, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WiseTrader/live
+Channel Name: AceLawrence
+Channel URL: https://youtube.com/@AceLawrence/live
+Title: Capi Gaming is gonna carry me again
+Description: We have TTS enabled for donations 3 for super chat and only 2 for Direct donation using my streamelements link Reason why 
+Logo URL: https://i.ytimg.com/vi/Ql2N3BaayTM/default_live.jpg
+Add this link to the update file: New: AceLawrence, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AceLawrence/live
 
-Channel Name: CNNNews18
-Channel URL: https://youtube.com/@CNNNews18/live
-Title: Donald Trump News LIVE  Donald Trump39s Rally In Manchester LIVE  Trump Speech LIVE  N18L
-Description: Donald Trump News LIVE  Donald Trumps Rally In Manchester LIVE  Trump Speech LIVE  N18L DISCLAIMER This video may 
-Logo URL: https://i.ytimg.com/vi/PtfaYcWWw6c/default_live.jpg
-Add this link to the update file: New: CNNNews18, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNNNews18/live
+Channel Name: BAMA FOOTBALL ON YOUTUBE WITH KYLE HENDERSON
+Channel URL: https://youtube.com/@BAMAFOOTBALLONYOUTUBEWITHKYLEHENDERSON/live
+Title: Alabama Crimson Tide News and Rumors  Who will be the next to commit
+Description: Fan Fund Kyle Henderson and Bama Football on Youtube 
+Logo URL: https://i.ytimg.com/vi/nRO1o9CfErg/default_live.jpg
+Add this link to the update file: New: BAMA FOOTBALL ON YOUTUBE WITH KYLE HENDERSON, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BAMAFOOTBALLONYOUTUBEWITHKYLEHENDERSON/live
 
-Channel Name: Starry Sky
-Channel URL: https://youtube.com/@StarrySky/live
-Title: Aquarium 4K VIDEO ULTRA HD  Beautiful Coral Reef Fish  Relaxing Sleep Meditation Music 1
-Description: Aquarium 4K VIDEO ULTRA HD Beautiful Coral Reef Fish  Relaxing Sleep Meditation Music 1 Under the seas gentle 
-Logo URL: https://i.ytimg.com/vi/ji1uxrxZagQ/default_live.jpg
-Add this link to the update file: New: Starry Sky, INSERT YOUR PREFERRED GROUP, https://youtube.com/@StarrySky/live
+Channel Name: Johny FamilyShow
+Channel URL: https://youtube.com/@JohnyFamilyShow/live
+Title: Are You Sleeping Brother John with Linda and Baby Dolls
+Description: Linda Pretend Play with Baby Dolls Are You Sleeping Brother John Collection by Johny FamilyShow
+Logo URL: https://i.ytimg.com/vi/kmfFyTzoaQk/default_live.jpg
+Add this link to the update file: New: Johny FamilyShow, INSERT YOUR PREFERRED GROUP, https://youtube.com/@JohnyFamilyShow/live
 
-Channel Name: Nero3D the Canuck Creator
-Channel URL: https://youtube.com/@Nero3DtheCanuckCreator/live
-Title: BTT KRAKEN INSTALL and CANBUS UPGRADES PART 2 livestream
-Description: Tallboi getting a new brain Want to get your hands on some great filament and help out the channel at the same time
-Logo URL: https://i.ytimg.com/vi/Y4XqlbBiAXA/default_live.jpg
-Add this link to the update file: New: Nero3D the Canuck Creator, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Nero3DtheCanuckCreator/live
+Channel Name: Maya and Mary
+Channel URL: https://youtube.com/@MayaandMary/live
+Title: Balloons in the Car Surprise Parents Playground Show for Kids
+Description: Playground Show for Kids Balloons in the Car Surprise pet
+Logo URL: https://i.ytimg.com/vi/aHLyRYOW33w/default_live.jpg
+Add this link to the update file: New: Maya and Mary, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MayaandMary/live
 
-Channel Name: Sunny Beaches
-Channel URL: https://youtube.com/@SunnyBeaches/live
-Title:  HOTTEST DAY ON LEBLON BEACH 2024 BRAZIL RIO DE JANEIRO
-Description: BrazilBeachParty RioDeJaneiro beachwalk Subscribe and put like Lets go for Beach Walking Tour on Leblon beach in Rio de 
-Logo URL: https://i.ytimg.com/vi/HheZ5IVCsLM/default_live.jpg
-Add this link to the update file: New: Sunny Beaches, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SunnyBeaches/live
+Channel Name: Yakis
+Channel URL: https://youtube.com/@Yakis/live
+Title: LIVE  YAKIS  PUBG  Shadow Force Master
+Description: httpsyakisstorecom Top up Game UC PUBG Mobile Legend Valorant Free Fire dll Download  Play PUBG Mobile 
+Logo URL: https://i.ytimg.com/vi/NOECRj_FzVI/default_live.jpg
+Add this link to the update file: New: Yakis, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Yakis/live
 
-Channel Name: QAYZER GAMING
-Channel URL: https://youtube.com/@QAYZERGAMING/live
-Title: Hum hn Daaan  Tillu Baloch GTA 5 Roleplay nopixelindia 40
-Description: Hey there Welcome to the stream My name is Qaiser Khan and Im a streamer based in Karachi Pakistan Im passionate about 
-Logo URL: https://i.ytimg.com/vi/IR0_OStRTZk/default_live.jpg
-Add this link to the update file: New: QAYZER GAMING, INSERT YOUR PREFERRED GROUP, https://youtube.com/@QAYZERGAMING/live
+Channel Name: WION
+Channel URL: https://youtube.com/@WION/live
+Title: China Earthquake LIVE 71magnitude earthquake hits northwest China39s Xinjiang  WION LIVE
+Description: A 71magnitude earthquake jolted Wushi County in Aksu Prefecture in northwest Chinas Xinjiang Uygur Autonomous Region at 
+Logo URL: https://i.ytimg.com/vi/2wlB4bMN4E0/default_live.jpg
+Add this link to the update file: New: WION, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WION/live
 
-Channel Name: Walfadjri TV
-Channel URL: https://youtube.com/@WalfadjriTV/live
-Title: Sngal vs Guine   en direct sur Walf TV avec Sire Mbengue
-Description: Sngal vs Guine en direct sur Walf TV avec Sire Mbengue Pour suivre toutes vos vidos prfres   Abonnez  vous ici 
-Logo URL: https://i.ytimg.com/vi/81lyZP799WI/default_live.jpg
-Add this link to the update file: New: Walfadjri TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WalfadjriTV/live
+Channel Name: Hindi ROmentic
+Channel URL: https://youtube.com/@HindiROmentic/live
+Title: Hindi Heart Touching Songs 2023  ROMANTIC HINDI LOVE MASHUP of Armaan Malik Atif Aslam Neha Kakkar
+Description: 
+Logo URL: https://i.ytimg.com/vi/jKHS2cMtS8o/default_live.jpg
+Add this link to the update file: New: Hindi ROmentic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HindiROmentic/live
 
-Channel Name: Bonbon Creator
-Channel URL: https://youtube.com/@BonbonCreator/live
-Title: RC TRUCKS AND CONSTRUCTION MODELS  RC DIGGER LIEBHERR LOAD UP  SCANIA HEAVY HAULAGE TRUCK 7
-Description: RC TRUCKS AND CONSTRUCTION MODELS  RC DIGGER LIEBHERR LOAD UP  SCANIA HEAVY HAULAGE TRUCK 7
-Logo URL: https://i.ytimg.com/vi/l04W4cn_N8M/default_live.jpg
-Add this link to the update file: New: Bonbon Creator, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BonbonCreator/live
+Channel Name: WooHoo WHOA
+Channel URL: https://youtube.com/@WooHooWHOA/live
+Title: Extreme Makeover from Nerd to Popular Girl Broke Clothing Hacks in a Rich College
+Description: Subscribe Here httpswwwyoutubecomchannelUCJNwKVYOYnEDJR1QJg8aZwsubconfirmation1 Follow Woohoo 
+Logo URL: https://i.ytimg.com/vi/SGcLMrmQd5g/default_live.jpg
+Add this link to the update file: New: WooHoo WHOA, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WooHooWHOA/live
 
-Channel Name: HP DIY Farming
-Channel URL: https://youtube.com/@HPDIYFarming/live
+Channel Name: Sandhu2op
+Channel URL: https://youtube.com/@Sandhu2op/live
+Title: DOMINATION SNOW CASTLE  SANDHU2OP bgmishorts  bgmilive shortslive
+Description: bgmilive bgmi rushgameplay sandhu2op inventory shortslive Join this channel to get access to perks 
+Logo URL: https://i.ytimg.com/vi/JiKPx3B_I_E/default_live.jpg
+Add this link to the update file: New: Sandhu2op, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Sandhu2op/live
+
+Channel Name: OneDayAlex
+Channel URL: https://youtube.com/@OneDayAlex/live
+Title: Alex39s New Cars Toy Adventure Tractor Concrete Truck Fuel Truck amp Police Car
+Description: Alexs New Cars Toy Adventure Tractor Concrete Truck Fuel Truck  Police Car cars forkids tractor Instagram 
+Logo URL: https://i.ytimg.com/vi/iEOYXzAJebU/default_live.jpg
+Add this link to the update file: New: OneDayAlex, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OneDayAlex/live
+
+Channel Name: RYG Game Animation
+Channel URL: https://youtube.com/@RYGGameAnimation/live
+Title: Monster Among Us Boxing   Game Animation Live 
+Description: amongus  Among Us animated gameplay with monsters from other games Thank you for watching us
+Logo URL: https://i.ytimg.com/vi/tHPie7sdJ60/default_live.jpg
+Add this link to the update file: New: RYG Game Animation, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RYGGameAnimation/live
+
+Channel Name: Atlanta News First 
+Channel URL: https://youtube.com/@AtlantaNewsFirst/live
+Title: WATCH LIVE YSLYoung Thug RICO trial in Fulton County
+Description: Jeffery Williams aka Young Thug is on trial in Fulton County in a massive RICO case involving himself and five other defendants
+Logo URL: https://i.ytimg.com/vi/Kv1CaftA55s/default_live.jpg
+Add this link to the update file: New: Atlanta News First , INSERT YOUR PREFERRED GROUP, https://youtube.com/@AtlantaNewsFirst/live
+
+Channel Name: FUN EXPERIMENT
+Channel URL: https://youtube.com/@FUNEXPERIMENT/live
 Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
 Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
-Logo URL: https://i.ytimg.com/vi/9beOeQ1e5Yo/default_live.jpg
-Add this link to the update file: New: HP DIY Farming, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HPDIYFarming/live
+Logo URL: https://i.ytimg.com/vi/MoCEMRls7r0/default_live.jpg
+Add this link to the update file: New: FUN EXPERIMENT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUNEXPERIMENT/live
 
-Channel Name: 24 News HD
-Channel URL: https://youtube.com/@24NewsHD/live
-Title: LIVE  Pmln Leader Rana Sanaullah Address To Workers Convention  24 News HD
-Description: 24newshd ranasanaullah pmlnjalsa LIVE  Pmln Leader Rana Sanaullah Address To Workers Convention  24 News HD 24 
-Logo URL: https://i.ytimg.com/vi/5Xt2sTvASug/default_live.jpg
-Add this link to the update file: New: 24 News HD, INSERT YOUR PREFERRED GROUP, https://youtube.com/@24NewsHD/live
+Channel Name: Country Hits Album
+Channel URL: https://youtube.com/@CountryHitsAlbum/live
+Title: Top Country Songs 2024  Tim Mcgraw Dan Shay Luke Combs Chris Stapleton Morgan Wallen Niko Moon
+Description: countrysongs countryhit newcountrymusic2024 Top Country Songs 2024  Tim Mcgraw Dan Shay Luke Combs Chris 
+Logo URL: https://i.ytimg.com/vi/HrAp7GAGr50/default_live.jpg
+Add this link to the update file: New: Country Hits Album, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CountryHitsAlbum/live
 
-Channel Name: Pak Tv24
-Channel URL: https://youtube.com/@PakTv24/live
-Title: PTI Leader Barrister Gohar Ali Khan Jalsa Buner Today  PTI Jalsa Today  PTI Buner Jalsa Pak tv24
-Description:                 Click link To watch Latest Video httpsgooglEkJdcu  Click link 
-Logo URL: https://i.ytimg.com/vi/5ONs1biYBt8/default_live.jpg
-Add this link to the update file: New: Pak Tv24, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PakTv24/live
+Channel Name: SSM Animation
+Channel URL: https://youtube.com/@SSMAnimation/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work    Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/CdG0KgcZrlM/default_live.jpg
+Add this link to the update file: New: SSM Animation, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SSMAnimation/live
 
-Channel Name: Sky News
-Channel URL: https://youtube.com/@SkyNews/live
-Title: Watch live First primary of Republican presidential contest under way in New Hampshire
-Description: Watch live as the race for the Republican and Democratic presidential nominations converges in New Hampshire today It is the 
-Logo URL: https://i.ytimg.com/vi/3B5vVM0oQHs/default_live.jpg
-Add this link to the update file: New: Sky News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SkyNews/live
-
-Channel Name: Kraydens Right with David Krayden
-Channel URL: https://youtube.com/@KraydensRightwithDavidKrayden/live
-Title: Can Tucker Carlson Save Canada from the WEF
-Description: In this episode of Stand on Guard host David Krayden discusses US journalist Tucker Carlson s trip to Canada and his call to 
-Logo URL: https://i.ytimg.com/vi/O01WC1Bopdc/default_live.jpg
-Add this link to the update file: New: Kraydens Right with David Krayden, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KraydensRightwithDavidKrayden/live
-
-Channel Name: On The Sand 
-Channel URL: https://youtube.com/@OnTheSand/live
-Title: Leblon Beach Escapade Rio39s Coastal Beauty Unveiled  LeblonBeach RioWalk
-Description: Immerse yourself in the allure of Leblon Beach with our vibrant coastal walk in Rio de Janeiro Explore the golden sands and 
-Logo URL: https://i.ytimg.com/vi/v2IBPoD4SdA/default_live.jpg
-Add this link to the update file: New: On The Sand , INSERT YOUR PREFERRED GROUP, https://youtube.com/@OnTheSand/live
-
-Channel Name: News18 Urdu
-Channel URL: https://youtube.com/@News18Urdu/live
-Title: LIVE Asaduddin Owaisi on Ram Mandir  39Babri Masjid systematically taken away from Muslims39
-Description: AIMIM Chief Asaduddin Owaisi challenges the narrative of the Ram Mandir Pran Pratishtha stating the temple did not exist during 
-Logo URL: https://i.ytimg.com/vi/qNJqtTzPuoA/default_live.jpg
-Add this link to the update file: New: News18 Urdu, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18Urdu/live
-
-Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
-Title: Russia Ukraine War News Live Putin         World War3  Nuclear Attack
-Description: Russia Ukraine War News Live Putin         World War3  Nuclear Attack 
-Logo URL: https://i.ytimg.com/vi/Bp9_OG-laBs/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
-Channel Name: Toronto Tech  Transit 
-Channel URL: https://youtube.com/@TorontoTechTransit/live
-Title: LIVE HEAVY SNOWFALL DOWNTOWN TORONTO
-Description: This stream is created with PRISMLiveStudio
-Logo URL: https://i.ytimg.com/vi/6cpMb7wxZS8/default_live.jpg
-Add this link to the update file: New: Toronto Tech  Transit , INSERT YOUR PREFERRED GROUP, https://youtube.com/@TorontoTechTransit/live
-
-Channel Name: India Today
-Channel URL: https://youtube.com/@IndiaToday/live
-Title: Newstrack With Rahul Kanwal Is 39Ram Rajya39 Beyond Politics New Dawn For Indian Civilisation
-Description: Newstrack With Rahul Kanwal Is Ram Rajya Beyond Politics New Dawn For Indian Civilisation rammandirpolitics 
-Logo URL: https://i.ytimg.com/vi/yuaYjUyyV5c/default_live.jpg
-Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IndiaToday/live
+Channel Name: HackerFiscalia Richard Maok Riao Botina
+Channel URL: https://youtube.com/@HackerFiscaliaRichardMaokRiaoBotina/live
+Title: NUESTROS POSITIVOS Gobierno se esconde
+Description: Apoya httpsvakicoOE5 httpsvakicohackerFiscalia Artculo Nuestros positivos  Gobierno se esconde pero si saca pecho 
+Logo URL: https://i.ytimg.com/vi/LgBVUdW5N_c/default_live.jpg
+Add this link to the update file: New: HackerFiscalia Richard Maok Riao Botina, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HackerFiscaliaRichardMaokRiaoBotina/live
 
 Channel Name: NTD
 Channel URL: https://youtube.com/@NTD/live
@@ -502,40 +481,26 @@ Description: Voters in New Hampshire cast their ballots in the first primary of 
 Logo URL: https://i.ytimg.com/vi/86aKnFo6WxE/default_live.jpg
 Add this link to the update file: New: NTD, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NTD/live
 
-Channel Name: BeamNG A
-Channel URL: https://youtube.com/@BeamNGA/live
-Title: TRANSPORTING PIXAR CARS amp FRUITS WITH COLORED amp JOHN DEERE vs CLAAS vs TRACTORS  BeamNGdrive 2024
-Description: TRANSPORTING PIXAR CARS  FRUITS WITH COLORED  JOHN DEERE vs CLAAS vs TRACTORS  BeamNGdrive 2024 
-Logo URL: https://i.ytimg.com/vi/xdtsbubfbqE/default_live.jpg
-Add this link to the update file: New: BeamNG A, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BeamNGA/live
+Channel Name: Bawkbasoup
+Channel URL: https://youtube.com/@Bawkbasoup/live
+Title: BREEDING THE MOST OPTIMAL PALS   Will play RE4R Berserker Mod in next few days
+Description: Live almost every single day  httpswwwtwitchtvBawkbasoup Edited by httpstwittercomLeyendaDelGamer Become a Soup 
+Logo URL: https://i.ytimg.com/vi/vMH-MZTv0Ik/default_live.jpg
+Add this link to the update file: New: Bawkbasoup, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Bawkbasoup/live
 
-Channel Name: Marco Casario
-Channel URL: https://youtube.com/@MarcoCasario/live
-Title: Come Ricordare tutto quello che Leggi e Studi
-Description: Puoi ascoltare laudiolibro su Audible di Amazon con una prova gratuita di 30 giorni qui  httpsamznto491xvJe I 2 Libri che 
-Logo URL: https://i.ytimg.com/vi/GdBPL-Z_PI8/default_live.jpg
-Add this link to the update file: New: Marco Casario, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MarcoCasario/live
+Channel Name: Stock Sniper Trading
+Channel URL: https://youtube.com/@StockSniperTrading/live
+Title: Live Trading amp Education   Live Post New York Session  Gold amp US30 Play by Play Price Action
+Description: Website httpswwwstocksnipertradingcom A trading platform that displays market liquidity Check what candlesticks are hiding
+Logo URL: https://i.ytimg.com/vi/2_TzXXZg22M/default_live.jpg
+Add this link to the update file: New: Stock Sniper Trading, INSERT YOUR PREFERRED GROUP, https://youtube.com/@StockSniperTrading/live
 
-Channel Name: Vats Bhakti Geet
-Channel URL: https://youtube.com/@VatsBhaktiGeet/live
-Title:     Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir
-Description:    Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir Song 
-Logo URL: https://i.ytimg.com/vi/FNuuP5q4epo/default_live.jpg
-Add this link to the update file: New: Vats Bhakti Geet, INSERT YOUR PREFERRED GROUP, https://youtube.com/@VatsBhaktiGeet/live
-
-Channel Name: Barney  9 Story
-Channel URL: https://youtube.com/@Barney9Story/live
-Title:  Barney Live Stream  Brain Break for Kids  Full Episodes Live  Barney the Dinosaur
-Description: When we work hard in school or at home we need to have a break Join Barney and friends for a muchdeserved brain break with 
-Logo URL: https://i.ytimg.com/vi/dYnZRhx42Q0/default_live.jpg
-Add this link to the update file: New: Barney  9 Story, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Barney9Story/live
-
-Channel Name: Team SaGe
-Channel URL: https://youtube.com/@TeamSaGe/live
-Title:  REAL FORTNITE FASHION SHOW LIVE SKIN CONTEST CUSTOM MATCHMAKING  FORTNITE LIVE STREAM
-Description: Fortnite Fashion Show Live Second Channel httpsyoutubecomchannelUC51uhpoIRu33dJKMNbQ Become a MEMBER 
-Logo URL: https://i.ytimg.com/vi/wQyYJ59d4JE/default_live.jpg
-Add this link to the update file: New: Team SaGe, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TeamSaGe/live
+Channel Name: Vani TV
+Channel URL: https://youtube.com/@VaniTV/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/rGxq8vpUj1Q/default_live.jpg
+Add this link to the update file: New: Vani TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@VaniTV/live
 
 Channel Name: The Times and The Sunday Times
 Channel URL: https://youtube.com/@TheTimesandTheSundayTimes/live
@@ -544,19 +509,68 @@ Description: Voters in New Hampshire cast their ballots in the first primary of 
 Logo URL: https://i.ytimg.com/vi/y2U_gn55Kno/default_live.jpg
 Add this link to the update file: New: The Times and The Sunday Times, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheTimesandTheSundayTimes/live
 
-Channel Name: Crew Skye 
-Channel URL: https://youtube.com/@CrewSkye/live
-Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2
-Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience2 Soothing Jazz 
-Logo URL: https://i.ytimg.com/vi/ypq_n2tpMfQ/default_live.jpg
-Add this link to the update file: New: Crew Skye , INSERT YOUR PREFERRED GROUP, https://youtube.com/@CrewSkye/live
+Channel Name: Barney  9 Story
+Channel URL: https://youtube.com/@Barney9Story/live
+Title:  Barney Live Stream  Brain Break for Kids  Full Episodes Live  Barney the Dinosaur
+Description: When we work hard in school or at home we need to have a break Join Barney and friends for a muchdeserved brain break with 
+Logo URL: https://i.ytimg.com/vi/dYnZRhx42Q0/default_live.jpg
+Add this link to the update file: New: Barney  9 Story, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Barney9Story/live
 
-Channel Name: PANTHER LIVE FF
-Channel URL: https://youtube.com/@PANTHERLIVEFF/live
-Title: AFTER OB42 CSR PUSH TOP TO REGION 999 classyff nonstopgaming freefirelive rai  rggamer
-Description: nonstopgaming freefirelive rai  rggamer Like  Share  Subscribe Instagram httpswwwinstagramcomipantherg Like 
-Logo URL: https://i.ytimg.com/vi/wx1Q4cGXVG0/default_live.jpg
-Add this link to the update file: New: PANTHER LIVE FF, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PANTHERLIVEFF/live
+Channel Name: Anju Sharma
+Channel URL: https://youtube.com/@AnjuSharma/live
+Title:    Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir
+Description:    Ram Bhajan  Ram Aayenge To Angana Sajaungi  New Ram Bhajan 2024 Ayodhya Ram Mandir Song 
+Logo URL: https://i.ytimg.com/vi/oMg4al_pkWQ/default_live.jpg
+Add this link to the update file: New: Anju Sharma, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AnjuSharma/live
+
+Channel Name: AIRLINE VIDEOS
+Channel URL: https://youtube.com/@AIRLINEVIDEOS/live
+Title: LIVE BehindtheScenes with the Plane Jockeys in Action at LAX
+Description: planespotting aviation airportlive liveairport LIVE Behind the scenes action of Airline Videos Live at Los Angeles International 
+Logo URL: https://i.ytimg.com/vi/eL1mB1lFsKc/default_live.jpg
+Add this link to the update file: New: AIRLINE VIDEOS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AIRLINEVIDEOS/live
+
+Channel Name: Yah Doodland  Vit Nam
+Channel URL: https://youtube.com/@YahDoodlandVitNam/live
+Title: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Description: Soothing Jazz Instrumental Music for Study Work  Relaxing Jazz Music at Cozy Coffee Shop Ambience
+Logo URL: https://i.ytimg.com/vi/PAYHvne6vJA/default_live.jpg
+Add this link to the update file: New: Yah Doodland  Vit Nam, INSERT YOUR PREFERRED GROUP, https://youtube.com/@YahDoodlandVitNam/live
+
+Channel Name: Azzapp LoL
+Channel URL: https://youtube.com/@AzzappLoL/live
+Title: TANK VEL39KOZ TO CHALLENGER ON 135 PING
+Description: Become a youtube member httpswwwyoutubecomchannelUCjLuDK6daotQxTcjdLsyUzQjoin If you enjoy the stream consider 
+Logo URL: https://i.ytimg.com/vi/eatJWOzEIqY/default_live.jpg
+Add this link to the update file: New: Azzapp LoL, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AzzappLoL/live
+
+Channel Name: OPM Acoustic
+Channel URL: https://youtube.com/@OPMAcoustic/live
+Title: Best Of OPM Acoustic Love Songs 2024 Playlist 699  Top Tagalog Acoustic Songs Cover Of All Time
+Description: Best Of OPM Acoustic Love Songs 2024 Playlist 699  Top Tagalog Acoustic Songs Cover Of All Time If this music makes 
+Logo URL: https://i.ytimg.com/vi/2r1WCbiN7LI/default_live.jpg
+Add this link to the update file: New: OPM Acoustic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OPMAcoustic/live
+
+Channel Name: Amazing  Grand Cross
+Channel URL: https://youtube.com/@AmazingGrandCross/live
+Title:  LIVE STREAMING MY GRAND CROSS GRIND JOIN THE GRIND LETS PLAY TOGETHER Come Hang Out
+Description: Credit To deebumusic For The Background Music Of The Stream Check Out Their Channel For More Lofi Beats 
+Logo URL: https://i.ytimg.com/vi/2CAGhbCn49A/default_live.jpg
+Add this link to the update file: New: Amazing  Grand Cross, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AmazingGrandCross/live
+
+Channel Name: India Today
+Channel URL: https://youtube.com/@IndiaToday/live
+Title: Newstrack With Rahul Kanwal Is 39Ram Rajya39 Beyond Politics New Dawn For Indian Civilisation
+Description: Newstrack With Rahul Kanwal Is Ram Rajya Beyond Politics New Dawn For Indian Civilisation rammandirpolitics 
+Logo URL: https://i.ytimg.com/vi/yuaYjUyyV5c/default_live.jpg
+Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IndiaToday/live
+
+Channel Name: News18 Urdu
+Channel URL: https://youtube.com/@News18Urdu/live
+Title: Houthi LIVE Yemens Houthis launch new missile attack in Red Sea following air strikes  War News
+Description: Yemens Houthi rebels who control much of the country have responded to airstrikes on their country by firing another ballistic 
+Logo URL: https://i.ytimg.com/vi/HOA09h4I8ZE/default_live.jpg
+Add this link to the update file: New: News18 Urdu, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18Urdu/live
 
 Channel Name: Milky
 Channel URL: https://youtube.com/@Milky/live
@@ -565,136 +579,122 @@ Description: MILKYS SOCIALS TWITCH httpswwwtwitchtvstillmilky TIKTOK httpswwwtik
 Logo URL: https://i.ytimg.com/vi/8YPc4Co8o-8/default_live.jpg
 Add this link to the update file: New: Milky, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Milky/live
 
-Channel Name: Upshall
-Channel URL: https://youtube.com/@Upshall/live
-Title: LIVE HUGE FORTNITE UPDATE New Movement Sniper Nerf and MORE
-Description: Fortnite controller gameplay providing the best strategies tips and guides for Fortnite players Live Fortnite Gameplay Use Code 
-Logo URL: https://i.ytimg.com/vi/aR8cc_Jny7Y/default_live.jpg
-Add this link to the update file: New: Upshall, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Upshall/live
+Channel Name: Sangram Bhakti Sagar
+Channel URL: https://youtube.com/@SangramBhaktiSagar/live
+Title: LIVE      Hanuman Chalisa  Jai Hanuman Gyan Gun Sagar hanuman chalisa bhajan new
+Description: hanumanchalisabhajans hanumanchalisa hanumangatha2022 BalajiBhajanNew2022 NewHanumanBhaktiSongs2022 
+Logo URL: https://i.ytimg.com/vi/cnwGcAXPmjQ/default_live.jpg
+Add this link to the update file: New: Sangram Bhakti Sagar, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SangramBhaktiSagar/live
 
-Channel Name: WION
-Channel URL: https://youtube.com/@WION/live
-Title: RussiaUkraine war LIVE Most lethal weapons in use by Russia39s military in Ukraine  WION LIVE
-Description: RussiaUkraine war live Have a look at the new generations of weapons in which Russia says it is investing heavily including 
-Logo URL: https://i.ytimg.com/vi/w_UbvDZJokU/default_live.jpg
-Add this link to the update file: New: WION, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WION/live
+Channel Name: Community
+Channel URL: https://youtube.com/@Community/live
+Title:  We39re Gonna Finally Be Fine   Live Stream  Community
+Description: Get motivated for 2024 and lets get more calm and normal with these iconic moments from your favorite study group Watch full 
+Logo URL: https://i.ytimg.com/vi/Q3VjAaG1lWU/default_live.jpg
+Add this link to the update file: New: Community, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Community/live
 
-Channel Name: PRECIOUS SPIRITUAL TV
-Channel URL: https://youtube.com/@PRECIOUSSPIRITUALTV/live
-Title: Use GARLIC To Keep Your Enemies away from you It works like fire
-Description: Use garlic to keep your enemies away from you If you are looking for a spiritual way to keep your enemies far away from you use 
-Logo URL: https://i.ytimg.com/vi/wA2IBZHw4As/default_live.jpg
-Add this link to the update file: New: PRECIOUS SPIRITUAL TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PRECIOUSSPIRITUALTV/live
+Channel Name: Beach Walk
+Channel URL: https://youtube.com/@BeachWalk/live
+Title: Best Beach of Resort Island 2024 Live
+Description: Best Beach of Resort Island 2024 Live
+Logo URL: https://i.ytimg.com/vi/rvsWfg-N_UM/default_live.jpg
+Add this link to the update file: New: Beach Walk, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BeachWalk/live
 
-Channel Name: Shubh Darshan
-Channel URL: https://youtube.com/@ShubhDarshan/live
-Title: LIVE      PM Modi performs Bhoomi Pujan for Ram Mandir in Ayodhya
-Description: LIVE      PM Modi performs Bhoomi Pujan for Ram Mandir in Ayodhya LIVE 
-Logo URL: https://i.ytimg.com/vi/zQbAD34Ym70/default_live.jpg
-Add this link to the update file: New: Shubh Darshan, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ShubhDarshan/live
+Channel Name: Transformers Slag Podcast
+Channel URL: https://youtube.com/@TransformersSlagPodcast/live
+Title: Transformers Slag Podcast LIVE Super Secret Stream
+Description: Support the Podcast SUPER CHAT a Question or Comment Get Transformers Shirts Plush and Pins at 
+Logo URL: https://i.ytimg.com/vi/i1pF2i5f1VE/default_live.jpg
+Add this link to the update file: New: Transformers Slag Podcast, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TransformersSlagPodcast/live
 
-Channel Name: Music Hits
-Channel URL: https://youtube.com/@MusicHits/live
-Title: Greatest Hits 70s Oldies Music 2894  Best Music Hits 70s Playlist  Music Oldies But Goodies 2894
-Description: Greatest Hits 70s Oldies Music 2894 Best Music Hits 70s Playlist Music Oldies But Goodies 2894  Follow My Channel 
-Logo URL: https://i.ytimg.com/vi/xz00sFQ1mFc/default_live.jpg
-Add this link to the update file: New: Music Hits, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MusicHits/live
+Channel Name: DanQ8000
+Channel URL: https://youtube.com/@DanQ8000/live
+Title: The Cub  Gameplay Walkthrough FULL GAME
+Description: FULL GAME The Cub Gameplay Walkthrough With Commentary PS5 Gameplay 1440p 60 FPS SUBSCRIBE to DanQ8000 
+Logo URL: https://i.ytimg.com/vi/qiLiCK0nvXM/default_live.jpg
+Add this link to the update file: New: DanQ8000, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DanQ8000/live
 
-Channel Name: Stock Sniper Trading
-Channel URL: https://youtube.com/@StockSniperTrading/live
-Title: Live Trading amp Education   Live Post New York Session  Gold amp US30 Play by Play Price Action
-Description: Website httpswwwstocksnipertradingcom A trading platform that displays market liquidity Check what candlesticks are hiding
-Logo URL: https://i.ytimg.com/vi/HfprijktkX4/default_live.jpg
-Add this link to the update file: New: Stock Sniper Trading, INSERT YOUR PREFERRED GROUP, https://youtube.com/@StockSniperTrading/live
+Channel Name: IM Charlie
+Channel URL: https://youtube.com/@IMCharlie/live
+Title: HELLO BROTHERS
+Description: GAME  GTA V 1 Rs DonationDay  Phone Pe  8329741449 UPi ID  8329741449axl Bank Details  Name  SHREEMAN 
+Logo URL: https://i.ytimg.com/vi/zdbQChp9bB0/default_live.jpg
+Add this link to the update file: New: IM Charlie, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IMCharlie/live
 
-Channel Name: Joey Whispers 1776 
-Channel URL: https://youtube.com/@JoeyWhispers1776/live
-Title: 123 Good Morning Everyone Joey Whispers 1776 is quotLIVEquot
-Description: Hello everyone and thank you for joining the Wacha Wacha Clan LiveStream today Please remember we have viewers of all 
-Logo URL: https://i.ytimg.com/vi/DqyrFOY_x9g/default_live.jpg
-Add this link to the update file: New: Joey Whispers 1776 , INSERT YOUR PREFERRED GROUP, https://youtube.com/@JoeyWhispers1776/live
+Channel Name: Top Blue  Jazz 
+Channel URL: https://youtube.com/@TopBlueJazz/live
+Title: Best Blues Jazz 2024  Beautilful Relaxing Blues Jazz Music  Top Blues Music Playlist bluesjazz
+Description: Best Blues Jazz 2023  Beautilful Relaxing Blues Jazz Music  Top Blues Music Playlist bluesjazz Playlist 000000  01
+Logo URL: https://i.ytimg.com/vi/ATAhHMqLsnQ/default_live.jpg
+Add this link to the update file: New: Top Blue  Jazz , INSERT YOUR PREFERRED GROUP, https://youtube.com/@TopBlueJazz/live
 
-Channel Name:   
+Channel Name: TIMES NOW
+Channel URL: https://youtube.com/@TIMESNOW/live
+Title: Joe Biden News LIVE  Biden Impeachment LIVE  US Congress  Biden Impeachment Hearing  Times Now
+Description: LIVE Joe Biden News Biden Impeachment LIVE US Congress Biden Impeachment Hearing Times Now
+Logo URL: https://i.ytimg.com/vi/0pr6k46M_ic/default_live.jpg
+Add this link to the update file: New: TIMES NOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TIMESNOW/live
+
+Channel Name: David Baron
+Channel URL: https://youtube.com/@DavidBaron/live
+Title: VOW ONLY LETHAL COMPANY
+Description: 2 TTS Superchat JOIN CHAT ON TWITCH httpswwwtwitchtvdavidbarontv discord httpsdiscordggTWbZCYqF8S twitter 
+Logo URL: https://i.ytimg.com/vi/K7DrxEu7dBk/default_live.jpg
+Add this link to the update file: New: David Baron, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DavidBaron/live
+
+Channel Name: ASIA TV GURBANI
+Channel URL: https://youtube.com/@ASIATVGURBANI/live
+Title: Daily Live ASIA TV GURBANI Live From Dashmesh Culture Centre
+Description: Daily Live ASIA TV GURBANI Live From Dashmesh Culture Centre
+Logo URL: https://i.ytimg.com/vi/t3uNWxsKo5I/default_live.jpg
+Add this link to the update file: New: ASIA TV GURBANI, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ASIATVGURBANI/live
+
+Channel Name: Crazy Malkie Woodland Uncensored
+Channel URL: https://youtube.com/@CrazyMalkieWoodlandUncensored/live
+Title: MALKIE WOODLAND SHOW UNCENSORED
+Description: HELLLL YEAHHHHHHHH IM LEARNING NOT ONE IS BLOCKED IM HIGH ASF
+Logo URL: https://i.ytimg.com/vi/vlpJWdg6jHI/default_live.jpg
+Add this link to the update file: New: Crazy Malkie Woodland Uncensored, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CrazyMalkieWoodlandUncensored/live
+
+Channel Name: OPM Acoustic
+Channel URL: https://youtube.com/@OPMAcoustic/live
+Title: Best Of OPM Acoustic Love Songs 2024 Playlist 703  Top Tagalog Acoustic Songs Cover Of All Time
+Description: Best Of OPM Acoustic Love Songs 2024 Playlist 703  Top Tagalog Acoustic Songs Cover Of All Time If this music makes 
+Logo URL: https://i.ytimg.com/vi/rbZ7boJkllw/default_live.jpg
+Add this link to the update file: New: OPM Acoustic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OPMAcoustic/live
+
+Channel Name: COA TRACTOR
+Channel URL: https://youtube.com/@COATRACTOR/live
+Title: top most creative diy tractor plough machine science project of sano creator
+Description: top most creative diy tractor plough machine science project of sano creator
+Logo URL: https://i.ytimg.com/vi/0AUsOh-_0BY/default_live.jpg
+Add this link to the update file: New: COA TRACTOR, INSERT YOUR PREFERRED GROUP, https://youtube.com/@COATRACTOR/live
+
+Channel Name:     
 Channel URL: https://youtube.com/@/live
-Title:              NIC
-Description:   
-Logo URL: https://i.ytimg.com/vi/UXGB8su8IKI/default_live.jpg
-Add this link to the update file: New:   , INSERT YOUR PREFERRED GROUP, https://youtube.com/@/live
+Title: We will be Victorious
+Description: the demons are riled up and triggered Team Evil is losing
+Logo URL: https://i.ytimg.com/vi/f2Y6lx-LL_M/default_live.jpg
+Add this link to the update file: New:     , INSERT YOUR PREFERRED GROUP, https://youtube.com/@/live
 
-Channel Name: Shin Ghidorah Animation
-Channel URL: https://youtube.com/@ShinGhidorahAnimation/live
-Title: BLOOP vs GODZILLA SHIN GODZILLA SHARKZILLA RADIATION Monsters Ranked From Weakest To Strongest1
-Description: BLOOP vs GODZILLA SHIN GODZILLA SHARKZILLA RADIATION Monsters Ranked From Weakest To Strongest1
-Logo URL: https://i.ytimg.com/vi/AR7b0lfSXGM/default_live.jpg
-Add this link to the update file: New: Shin Ghidorah Animation, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ShinGhidorahAnimation/live
+Channel Name: afarTV
+Channel URL: https://youtube.com/@afarTV/live
+Title:  LIVE Overview Camera  View Earth from the International Space Station
+Description: Enjoy the live view of the overview camera on the International Space Station Our sister livestream from space can be found here 
+Logo URL: https://i.ytimg.com/vi/VigTmsEGS18/default_live.jpg
+Add this link to the update file: New: afarTV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@afarTV/live
 
-Channel Name: SweeT Hindi
-Channel URL: https://youtube.com/@SweeTHindi/live
-Title: Armaan Malik amp Neha Kakkar BEST SONGS  Bollywood LOVE MASHUP 2023Hindi Heart Touching Songs 2023
-Description: Armaan Malik  Neha Kakkar BEST SONGS  Bollywood LOVE MASHUP 2023  Hindi Heart Touching Songs 2023 
-Logo URL: https://i.ytimg.com/vi/gGP6kxOxUAM/default_live.jpg
-Add this link to the update file: New: SweeT Hindi, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SweeTHindi/live
+Channel Name: Praise Worship Music
+Channel URL: https://youtube.com/@PraiseWorshipMusic/live
+Title: Top 100 Worship Songs 2023 Playlist  Mighty Praise and Worship Songs LYRICS Collection Praise Lord
+Description: Music and Video Copyright belongs to Praise Worship Music DO NOT reupload otherwise you will get copyright strikes
+Logo URL: https://i.ytimg.com/vi/TPxxljCBm6Q/default_live.jpg
+Add this link to the update file: New: Praise Worship Music, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PraiseWorshipMusic/live
 
-Channel Name: GOODLAND
-Channel URL: https://youtube.com/@GOODLAND/live
-Title: Unbelievable Animated Doodles Prepare to Laugh Out Loud at These Skits  GOODLAND
-Description: Funny Doodles httpsclckruqZCAU Dont forget to subscribe and turn on notification bell httpsclckruqZD8f Funny doodles 
-Logo URL: https://i.ytimg.com/vi/yCmp8y9U9sA/default_live.jpg
-Add this link to the update file: New: GOODLAND, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GOODLAND/live
-
-Channel Name: Paulie Esther
-Channel URL: https://youtube.com/@PaulieEsther/live
-Title: Dead By Daylight Deadly Games amp Smoldering Fury Cosmetics Collections are live
-Description: Thanks to all your support weve finally reached that elusive 100000 YouTube subscribers milestone and the silver PLAY button 
-Logo URL: https://i.ytimg.com/vi/USaZzhEGwoY/default_live.jpg
-Add this link to the update file: New: Paulie Esther, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PaulieEsther/live
-
-Channel Name: Simulation Station
-Channel URL: https://youtube.com/@SimulationStation/live
-Title: 9039s FARM WORK  Richlands Ohio LHM Edit
-Description: How lucky are we to get access to this incredible map edit by Large H It is stunning and has an incredible old school feel Enjoy
-Logo URL: https://i.ytimg.com/vi/5CIhZrdSBCQ/default_live.jpg
-Add this link to the update file: New: Simulation Station, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SimulationStation/live
-
-Channel Name: OPM Acoustic
-Channel URL: https://youtube.com/@OPMAcoustic/live
-Title: Best Of OPM Acoustic Love Songs 2024 Playlist 708  Top Tagalog Acoustic Songs Cover Of All Time
-Description: Best Of OPM Acoustic Love Songs 2024 Playlist 708  Top Tagalog Acoustic Songs Cover Of All Time If this music makes 
-Logo URL: https://i.ytimg.com/vi/rIWoKjM2zCQ/default_live.jpg
-Add this link to the update file: New: OPM Acoustic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OPMAcoustic/live
-
-Channel Name: Creative Cooking
-Channel URL: https://youtube.com/@CreativeCooking/live
-Title: Colorful surprise eggs lobster snake cichlid betta fish turtle butterfly fish jelly fish
-Description: Colorful surprise eggs lobster snake cichlid betta fish turtle butterfly fish jelly fish
-Logo URL: https://i.ytimg.com/vi/HTtSDAXLAG4/default_live.jpg
-Add this link to the update file: New: Creative Cooking, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CreativeCooking/live
-
-Channel Name: Felipe y los directos
-Channel URL: https://youtube.com/@Felipeylosdirectos/live
-Title: Dubi Dubi Daba Daba stream  Hunt amp Run da 2
-Description: 
-Logo URL: https://i.ytimg.com/vi/9-i8E-OC-ss/default_live.jpg
-Add this link to the update file: New: Felipe y los directos, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Felipeylosdirectos/live
-
-Channel Name: OPM Acoustic
-Channel URL: https://youtube.com/@OPMAcoustic/live
-Title: Best Of OPM Acoustic Love Songs 2024 Playlist 709  Top Tagalog Acoustic Songs Cover Of All Time
-Description: Best Of OPM Acoustic Love Songs 2024 Playlist 709  Top Tagalog Acoustic Songs Cover Of All Time If this music makes 
-Logo URL: https://i.ytimg.com/vi/A-y73mYL3q0/default_live.jpg
-Add this link to the update file: New: OPM Acoustic, INSERT YOUR PREFERRED GROUP, https://youtube.com/@OPMAcoustic/live
-
-Channel Name: Rvrend Paul Mukendi
-Channel URL: https://youtube.com/@RvrendPaulMukendi/live
-Title: Commencez l39anne avec une tte dlivre  Rv Paul Mukendi
-Description: 
-Logo URL: https://i.ytimg.com/vi/QtfhOfcR2cI/default_live.jpg
-Add this link to the update file: New: Rvrend Paul Mukendi, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RvrendPaulMukendi/live
-
-Channel Name: SweeT Hindi
-Channel URL: https://youtube.com/@SweeTHindi/live
-Title: BOLLYWOOD LOVE HINDI SONGS  The Love Mashup 2023 of Atif Aslam Arijit Singh ft Shraddha Kapoor
-Description: 
-Logo URL: https://i.ytimg.com/vi/Mlp8BnO_DzQ/default_live.jpg
-Add this link to the update file: New: SweeT Hindi, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SweeTHindi/live
+Channel Name: Michael Sheldrake
+Channel URL: https://youtube.com/@MichaelSheldrake/live
+Title: Kitten Room 11 Night 20  Silver Dollar Pancake and her 6 Kittens
+Description: ALL MY LINKS httpwwwremaxallthestuff Grey Mama Cat and 6 babies By Collar Colour Reddy Player One Pink Pearl Yellow 
+Logo URL: https://i.ytimg.com/vi/P2JIL5JO1x4/default_live.jpg
+Add this link to the update file: New: Michael Sheldrake, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MichaelSheldrake/live
 
