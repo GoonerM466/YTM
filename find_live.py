@@ -1,8 +1,6 @@
 import os
-import json
 from googleapiclient.discovery import build
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
+from google.auth.credentials import AnonymousCredentials
 import yt_dlp
 import time
 from datetime import datetime
@@ -19,28 +17,28 @@ def search_live_channels(api_key, max_results=50):
     # Set the publishedBefore parameter to the current time in RFC 3339 format
     published_before = datetime.utcnow().isoformat() + "Z"
 
-while True:
-    try:
-        print("Searching...")
-        request = youtube.search().list(
-            part="snippet",
-            eventType="live",
-            maxResults=max_results,
-            order="viewCount",
-            type="video",
-            pageToken=next_page_token,
-            publishedBefore=published_before,
-            regionCode="CA",
-            relevanceLanguage="en",
-        )
+    while True:
+        try:
+            print("Searching...")
+            request = youtube.search().list(
+                part="snippet",
+                eventType="live",
+                maxResults=max_results,
+                order="viewCount",
+                publishedBefore=published_before,
+                regionCode="CA",
+                relevanceLanguage="en",
+                type="video",
+                pageToken=next_page_token
+            )
 
-        response = request.execute()
-        print("API Response:", response)  # Add this line to print the API response
+            response = request.execute()
+            print("API Response:", response)  # Add this line to print the API response
 
-        items = response.get('items', [])
-        if not items:
-            print("No live channels found.")
-            break
+            items = response.get('items', [])
+            if not items:
+                print("No live channels found.")
+                break
 
             for item in items:
                 try:
@@ -83,3 +81,7 @@ while True:
                 raise
 
     return live_links
+
+if __name__ == "__main__":
+    api_key = "AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc"  # Replace with your API key
+    search_live_channels(api_key)
