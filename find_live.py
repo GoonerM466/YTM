@@ -19,27 +19,28 @@ def search_live_channels(api_key, max_results=50):
     # Set the publishedBefore parameter to the current time in RFC 3339 format
     published_before = datetime.utcnow().isoformat() + "Z"
 
-    while True:
-        try:
-            print("Searching...")
-            request = youtube.search().list(
-                part="snippet",
-                eventType="live",
-                maxResults=max_results,
-                order="viewCount",
-                type="video",
-                pageToken=next_page_token,
-                publishedBefore=published_before,
-                regionCode="CA",  # ISO 3166-1 alpha-2 country code for Canada
-                relevanceLanguage="en",  # ISO 639-1 two-letter language code for English
-            )
+while True:
+    try:
+        print("Searching...")
+        request = youtube.search().list(
+            part="snippet",
+            eventType="live",
+            maxResults=max_results,
+            order="viewCount",
+            type="video",
+            pageToken=next_page_token,
+            publishedBefore=published_before,
+            regionCode="CA",
+            relevanceLanguage="en",
+        )
 
-            response = request.execute()
+        response = request.execute()
+        print("API Response:", response)  # Add this line to print the API response
 
-            items = response.get('items', [])
-            if not items:
-                print("No live channels found.")
-                break
+        items = response.get('items', [])
+        if not items:
+            print("No live channels found.")
+            break
 
             for item in items:
                 try:
