@@ -35,6 +35,13 @@ def search_live_channels(api_key, max_results=50):
                 break
 
             for item in items:
+                try:
+                    # Check if the video is live, skip if it's a premiere scheduled for the future
+                    if item['snippet']['liveBroadcastContent'] != 'live':
+                        continue
+                except KeyError:
+                    pass  # Key may not be present if it's a premiere
+
                 channel_name = item['snippet']['title']
                 channel_id = item['snippet']['channelId']
                 group = get_channel_category(channel_id)  # You may implement this function as in your previous script
