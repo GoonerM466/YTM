@@ -7,6 +7,11 @@ from datetime import datetime
 
 MAX_RUNTIME_SECONDS = 210  # 3.5 minutes
 
+def get_channel_category(channel_id):
+    # You may implement your logic to determine the category of the channel based on the channel_id
+    # For now, let's return None as a placeholder
+    return None
+
 def search_live_channels(api_key, max_results=50):
     start_time = time.time()
     youtube = build('youtube', 'v3', developerKey=api_key)
