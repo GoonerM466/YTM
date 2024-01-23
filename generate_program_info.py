@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from generate_channel_info import parse_live_status, generate_channel_info
+from merge_epg import merge_epg
 
 def convert_to_xmltv_time(time_str):
     # Convert the time string to XMLTV format
@@ -18,18 +18,29 @@ def generate_program_info(channel_name, live_status, time_str):
 '''
 
 def main():
-    with open('live_status.txt', 'r') as file:
-        lines = file.readlines()
+    with open('combined_epg.xml', 'r') as file:
+        epg_content = file.read()
 
     program_info = ""
 
-    for line in lines:
-        parsed_info = parse_live_status(line)
-        if parsed_info:
-            channel_name, live_status, time_str = parsed_info
-            program_info += generate_program_info(channel_name, live_status, time_str)
+    # Parse the combined EPG XML content
+    epg_lines = epg_content.splitlines()
 
-    print(program_info)
+    for line in epg_lines:
+        # Assuming each line is a program entry
+        program_info += line
+
+    # Generate new program entries
+    # Modify this part based on your logic for obtaining new programs
+    new_channel_name = "New Channel"
+    new_live_status = "Live"
+    new_time_str = "Mon Jan 01 12:00:00 UTC 2023"
+
+    program_info += generate_program_info(new_channel_name, new_live_status, new_time_str)
+
+    # Write the updated program information to combined_epg.xml
+    with open('combined_epg.xml', 'w') as file:
+        file.write(program_info)
 
 if __name__ == '__main__':
     main()
