@@ -50,9 +50,16 @@ def main():
             channel_info += generate_channel_info(channel_name)
             program_info += generate_program_info(channel_name, live_status, time_str)
 
+    # Read program information from old_epg.xml and insert it at the top
+    with open('old_epg.xml', 'r') as old_epg_file:
+        old_epg_content = old_epg_file.read()
+
     # Combine all information into the final XMLTV content
-    xmltv_content = f"{header}{channel_info}{program_info}</tv>"
-    print(xmltv_content)
+    xmltv_content = f"{header}{channel_info}{old_epg_content}{program_info}</tv>"
+
+    # Write the combined content to combined_epg.xml
+    with open('combined_epg.xml', 'w') as combined_epg_file:
+        combined_epg_file.write(xmltv_content)
 
 if __name__ == '__main__':
     main()
