@@ -46,6 +46,10 @@ def write_to_file(live_channels):
                 file.write(f'\n#####_{channel["group"]}_#####\n')
                 current_group = channel['group']
 
+        # Truncate the file before writing new entries
+        file.truncate(0)
+
+        for channel in live_channels:
             file.write(f'New! {channel["name"]}, {channel["group"]}, {channel["url"]}\n')
 
 if __name__ == '__main__':
