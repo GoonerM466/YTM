@@ -34,7 +34,7 @@ def search_live_channels(api_key, max_results=50):
                 maxResults=max_results,
                 order="viewCount",
                 regionCode="CA",
-                q="music"
+                q="music",
                 type="video",
                 pageToken=next_page_token
             )
