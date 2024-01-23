@@ -36,6 +36,10 @@
   <channel id="DPWorldTour">
     <display-name lang="en">DPWorldTour</display-name>
   </channel>
+  <programme start="20240122020153 +0000" stop="20240122080153 +0000" channel="deadeyedelboy">
+    <title lang="en">Not Live</title>
+    <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
+  </programme>
   <programme start="20240123020140 +0000" stop="20240123050140 +0000" channel="beinsportshaber">
     <title lang="en">Live</title>
     <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
