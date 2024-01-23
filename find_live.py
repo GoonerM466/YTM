@@ -14,9 +14,6 @@ def search_live_channels(api_key, max_results=50):
     live_links = []
     next_page_token = None
 
-    # Set the publishedBefore parameter to the current time in RFC 3339 format
-    published_before = 
-
     while True:
         try:
             print("Searching...")
@@ -25,7 +22,6 @@ def search_live_channels(api_key, max_results=50):
                 eventType="live",
                 maxResults=max_results,
                 order="viewCount",
-                publishedBefore=published_before,
                 regionCode="CA",
                 relevanceLanguage="en",
                 type="video",
