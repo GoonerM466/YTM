@@ -1,41 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="none" generator-info-url="none">
-  <channel id="beinsportshaber">
-    <display-name lang="en">beinsportshaber</display-name>
-  </channel>
-  <channel id="AFCAsianCup">
-    <display-name lang="en">AFCAsianCup</display-name>
-  </channel>
-  <channel id="talkSPORT">
-    <display-name lang="en">talkSPORT</display-name>
-  </channel>
-  <channel id="EERIEISSSS">
-    <display-name lang="en">EERIEISSSS</display-name>
-  </channel>
-  <channel id="Jimmy_Broadbent">
-    <display-name lang="en">Jimmy_Broadbent</display-name>
-  </channel>
-  <channel id="deadeyedelboy">
-    <display-name lang="en">deadeyedelboy</display-name>
-  </channel>
-  <channel id="NBCNews">
-    <display-name lang="en">NBCNews</display-name>
-  </channel>
-  <channel id="SkyNews">
-    <display-name lang="en">SkyNews</display-name>
-  </channel>
-  <channel id="ABCNews">
-    <display-name lang="en">ABCNews</display-name>
-  </channel>
-  <channel id="HitsRadio">
-    <display-name lang="en">HitsRadio</display-name>
-  </channel>
-  <channel id="FobosPlanet">
-    <display-name lang="en">FobosPlanet</display-name>
-  </channel>
-  <channel id="DPWorldTour">
-    <display-name lang="en">DPWorldTour</display-name>
-  </channel>
   <programme start="20240122225439 +0000" stop="20240123015439 +0000" channel="beinsportshaber">
     <title lang="en">Live</title>
     <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
@@ -84,4 +46,4 @@
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-</tv>
+
