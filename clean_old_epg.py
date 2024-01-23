@@ -26,14 +26,16 @@ def clean_old_epg(input_file, output_file, max_age_hours):
             root.remove(program)
 
     # Write the remaining programs to the output file
-    tree.write(output_file)
+    with open(output_file, 'wb') as output:
+        tree.write(output)
 
     # Check if the input file is empty after removing programs
     if root.findall('.//programme'):
         # Input file is not empty, clear its contents
         for element in root.findall('.//programme'):
             root.remove(element)
-        tree.write(input_file)
+        with open(input_file, 'wb') as input:
+            tree.write(input)
 
 if __name__ == "__main__":
     # Set your parameters
@@ -43,4 +45,3 @@ if __name__ == "__main__":
 
     # Execute the script
     clean_old_epg(input_file, output_file, max_age_hours)
-
