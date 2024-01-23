@@ -2,12 +2,8 @@ name: Clean Old EPG
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "Get YouTube Live m3u8"
-    types:
-      - completed
-
+  schedule:
+    - cron: '0 8 * * *' # Run every day at 8am
 jobs:
   clean_old_epg:
     runs-on: ubuntu-latest
