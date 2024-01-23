@@ -1,74 +1,104 @@
-name: Get YouTube Live m3u8
+import re
+from datetime import datetime, timedelta
 
-on:
-  schedule:
-    - cron: '45 0/2 * * *'
-  workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "New Channel Scrape Workflow"
-      - "Delete M3U8 Files"
-    types:
-      - completed
+def parse_live_status(line):
+    # Parse the information from the live_status.txt line
+    match = re.match(r'^([\w_]+) - (Live|Not Live) - (.+ UTC \d{4})$', line)
+    if match:
+        channel_name, live_status, time_str = match.groups()
+        return channel_name, live_status, time_str
+    return None
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: config
-      run: |
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-    - name: Install yt-dlp
-      run: |
-        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-        chmod a+rx /usr/local/bin/yt-dlp
-    - name: Delay for 10 seconds
-      run: sleep 10
+def convert_to_xmltv_time(time_str):
+    # Convert the time string to XMLTV format
+    dt = datetime.strptime(time_str, '%a %b %d %H:%M:%S %Z %Y')
+    return dt.strftime('%Y%m%d%H%M%S +0000')
 
-    - name: Pull latest changes
-      run: git pull origin main
+def generate_channel_info(channel_name, existing_channels):
+    # Extract the first part of the channel name before the first space
+    channel_name_first_part = channel_name.split()[0]
 
-    - name: Rebase changes
-      run: git pull --rebase origin main
+    # Check for duplicate channels based on the first part of the channel name
+    for existing_channel in existing_channels:
+        existing_channel_first_part = existing_channel['name'].split()[0]
+        if existing_channel_first_part == channel_name_first_part:
+            return None
 
-    - name: Create current_channels directory
-      run: mkdir -p ./current_channels
+    # No matching channel found, add the new channel
+    return f'''  <channel id="{channel_name}">
+    <display-name lang="en">{channel_name}</display-name>
+  </channel>
+'''
 
-    - name: Read channel information from current_channels.txt
-      run: |
-        # Clear the contents of live_status.txt
-        echo "" > live_status.txt
+def adjust_program_times(existing_program, new_program_start):
+    # If existing program started less than 5 minutes ago, adjust its start time backward by 25 minutes
+    start_time = datetime.strptime(existing_program['start'], '%Y%m%d%H%M%S +0000')
+    if start_time > new_program_start - timedelta(minutes=5):
+        existing_program['start'] = (new_program_start - timedelta(minutes=25)).strftime('%Y%m%d%H%M%S +0000')
 
-        while IFS=, read -r channel_name group channel_url; do
-          # Modify channel_name using sed regex: remove spaces and trim to 3 words
-          channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/')
-          mkdir -p "./current_channels/$group"
-          touch "./current_channels/$group/$channel_name.m3u8"
-          {
-            echo "#EXTM3U"
-            echo "#EXT-X-VERSION:3"
-            echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-            yt-dlp --print urls "$channel_url"
-          } | sudo tee "./current_channels/$group/$channel_name.m3u8" >/dev/null
-          
-          # Check if the channel is live
-          live_status="Not Live"
-          if yt-dlp --print is_live "$channel_url" | grep -q "True"; then
-            live_status="Live"
-            echo "$channel_name is live! Updating $channel_name.m3u8 with current live stream!"
-          fi
-          
-          # Append live status information to live_status.txt
-          echo "$channel_name - $live_status - $(date)" >> live_status.txt
-        done < current_channels.txt
+def generate_program_info(channel_name, live_status, time_str, existing_programs):
+    # Convert time_str to XMLTV format
+    new_program_start = datetime.strptime(convert_to_xmltv_time(time_str), '%Y%m%d%H%M%S +0000')
+    new_program_stop = (new_program_start + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
 
-    - name: git add
-      run: |
-        git add -A
-        ls -la
-    - name: commit & push
-      run: |
-        git diff --cached --quiet || git commit -m Updated
-        git push origin main
+    # Check for existing programs with the same details
+    for existing_program in existing_programs:
+        if existing_program['channel'] == channel_name and existing_program['start'] < new_program_stop and existing_program['stop'] > new_program_start:
+            # Adjust times to avoid overlap
+            adjust_program_times(existing_program, new_program_start)
+            return ""  # Do not add the new program as it already exists
+    else:
+        # No matching program found, add the new program
+        return f'''  <programme start="{new_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{new_program_stop}" channel="{channel_name}">
+    <title lang="en">{live_status}</title>
+    <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
+  </programme>
+'''
+
+def main():
+    with open('live_status.txt', 'r') as file:
+        lines = file.readlines()
+
+    header = '''<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+'''
+
+    channel_info = ""
+    program_info = ""
+
+    # Read program information from old_epg.xml and parse it
+    with open('old_epg.xml', 'r') as old_epg_file:
+        old_epg_content = old_epg_file.read()
+
+    # Extract existing channel and program details from old_epg_content
+    existing_channels = []
+    existing_programs = []
+    channel_match = re.finditer(r'<channel id="(.+)">\s*<display-name lang="en">(.+)</display-name>\s*</channel>', old_epg_content)
+    for match in channel_match:
+        existing_channels.append({'name': match.group(2)})
+    program_match = re.finditer(r'<programme start="(.+)" stop="(.+)" channel="(.+)">', old_epg_content)
+    for match in program_match:
+        existing_programs.append({'channel': match.group(3), 'start': match.group(1), 'stop': match.group(2)})
+
+    for line in lines:
+        parsed_info = parse_live_status(line)
+        if parsed_info:
+            channel_name, live_status, time_str = parsed_info
+            channel_info_entry = generate_channel_info(channel_name, existing_channels)
+            if channel_info_entry:
+                channel_info += channel_info_entry
+            program_info += generate_program_info(channel_name, live_status, time_str, existing_programs)
+
+    # Combine all information into the final XMLTV content
+    xmltv_content = f"{header}{channel_info}{old_epg_content}{program_info}</tv>"
+
+    # Write the combined content to combined_epg.xml
+    with open('combined_epg.xml', 'w') as combined_epg_file:
+        combined_epg_file.write(xmltv_content)
+
+    # Clear the content of epg_old.xml
+    with open('epg_old.xml', 'w'):
+        pass
+
+if __name__ == '__main__':
+    main()
