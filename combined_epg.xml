@@ -36,51 +36,51 @@
   <channel id="GBNews2">
     <display-name lang="en">GBNews2</display-name>
   </channel>
-  <programme start="20240123153804 +0000" stop="20240123183804 +0000" channel="beinsportshaber">
+  <programme start="20240123154524 +0000" stop="20240123184524 +0000" channel="beinsportshaber">
     <title lang="en">Live</title>
     <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123153808 +0000" stop="20240123183808 +0000" channel="AFCAsianCup">
+  <programme start="20240123154528 +0000" stop="20240123184528 +0000" channel="AFCAsianCup">
     <title lang="en">Not Live</title>
     <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123153812 +0000" stop="20240123183812 +0000" channel="talkSPORT">
+  <programme start="20240123154533 +0000" stop="20240123184533 +0000" channel="talkSPORT">
     <title lang="en">Live</title>
     <desc lang="en">talkSPORT is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123153814 +0000" stop="20240123183814 +0000" channel="EERIEISSSS">
+  <programme start="20240123154535 +0000" stop="20240123184535 +0000" channel="EERIEISSSS">
     <title lang="en">Not Live</title>
     <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123153820 +0000" stop="20240123183820 +0000" channel="deadeyedelboy">
+  <programme start="20240123154541 +0000" stop="20240123184541 +0000" channel="deadeyedelboy">
     <title lang="en">Not Live</title>
     <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123153825 +0000" stop="20240123183825 +0000" channel="NBCNews">
+  <programme start="20240123154546 +0000" stop="20240123184546 +0000" channel="NBCNews">
     <title lang="en">Live</title>
     <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123153830 +0000" stop="20240123183830 +0000" channel="SkyNews">
+  <programme start="20240123154550 +0000" stop="20240123184550 +0000" channel="SkyNews">
     <title lang="en">Live</title>
     <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123153834 +0000" stop="20240123183834 +0000" channel="ABCNews">
+  <programme start="20240123154555 +0000" stop="20240123184555 +0000" channel="ABCNews">
     <title lang="en">Live</title>
     <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123153836 +0000" stop="20240123183836 +0000" channel="HitsRadio">
+  <programme start="20240123154557 +0000" stop="20240123184557 +0000" channel="HitsRadio">
     <title lang="en">Not Live</title>
     <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123153846 +0000" stop="20240123183846 +0000" channel="FobosPlanet">
+  <programme start="20240123154606 +0000" stop="20240123184606 +0000" channel="FobosPlanet">
     <title lang="en">Live</title>
     <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240123153850 +0000" stop="20240123183850 +0000" channel="DPWorldTour">
+  <programme start="20240123154610 +0000" stop="20240123184610 +0000" channel="DPWorldTour">
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240123153855 +0000" stop="20240123183855 +0000" channel="GBNews2">
+  <programme start="20240123154615 +0000" stop="20240123184615 +0000" channel="GBNews2">
     <title lang="en">Live</title>
     <desc lang="en">GBNews2 is currently streaming live! Tune in and enjoy!</desc>
   </programme>
