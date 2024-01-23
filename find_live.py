@@ -24,7 +24,7 @@ def search_live_channels(api_key, max_results=50):
     next_page_token = None
 
     # Set the publishedBefore parameter to the current time in RFC 3339 format
-    published_before = datetime.now(timezone.utc).replace(microsecond=0).isoformat() + "Z"
+    published_before = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
     while True:
         try:
