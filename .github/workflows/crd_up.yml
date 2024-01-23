@@ -23,8 +23,8 @@ jobs:
 
     - name: Update API key in Python files
       run: |
-        oldApiKey='AIzaSyBztHpAhFSfGbFvIkPrcPE9HbhXjQo_tSc'
-        newApiKey='AIzaSyCQkT6oaf8A7rVaOx_ai0ode7QkquuJF0U'
+        oldApiKey='AIzaSyCQkT6oaf8A7rVaOx_ai0ode7QkquuJF0U'
+        newApiKey='AIzaSyAtg0O4emlRm5sAWF_8DW2ktWtgF_Wxuk4'
         find . -name 'find_*.py' -type f -exec sed -i "s/$oldApiKey/$newApiKey/g" {} +
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
