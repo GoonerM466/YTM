@@ -34,7 +34,7 @@ def search_live_channels(api_key, max_results=50):
                 maxResults=max_results,
                 order="viewCount",
                 regionCode="CA",
-                q="sport"
+                q="entertainment"
                 type="video",
                 pageToken=next_page_token
             )
