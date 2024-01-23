@@ -50,13 +50,17 @@ jobs:
           # Check for a 404 error on the main channel URL
           http_status=$(curl -s -o /dev/null -w "%{http_code}" "$channel_url")
           
+          echo "HTTP status for $channel_name: $http_status"  # Debugging line
+
           if [ "$http_status" -eq 404 ]; then
             # If 404, try finding live stream on the alternative URL
             alternative_url="https://youtube.com/$channel_name/streams"
             live_stream_url=$(yt-dlp --get-url "$alternative_url" | grep -m 15 -E '^https://www.youtube.com/watch\?v=')
             
+            echo "Alternative URL for $channel_name: $alternative_url"  # Debugging line
+            echo "Live stream URL found on alternative URL: $live_stream_url"  # Debugging line
+            
             if [ -n "$live_stream_url" ]; then
-              echo "Live stream found on alternative URL: $live_stream_url"
               echo "$channel_name is live! Updating $channel_name.m3u8 with current live stream!"
             else
               echo "$channel_name - Not Live - $(date)" >> live_status.txt
