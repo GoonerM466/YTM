@@ -32,7 +32,12 @@ jobs:
     - name: Check if changes exist
       id: check_changes
       run: |
-        git diff --exit-code || echo "Changes detected" && exit 0
+        changes=$(git status --porcelain)
+        [ -z "$changes" ] || { echo "Changes detected"; exit 0; }
+
+    - name: Stage changes
+      if: steps.check_changes.outputs.return-code == '0'
+      run: git add .
 
     - name: Commit and push changes
       if: steps.check_changes.outputs.return-code == '0'
