@@ -26,22 +26,26 @@ def generate_channel_info(channel_name, existing_channels):
   </channel>
 '''
 
+def adjust_program_times(existing_program, new_program_start):
+    # If existing program started less than 5 minutes ago, adjust its start time backward by 25 minutes
+    start_time = datetime.strptime(existing_program['start'], '%Y%m%d%H%M%S +0000')
+    if start_time > new_program_start - timedelta(minutes=5):
+        existing_program['start'] = (new_program_start - timedelta(minutes=25)).strftime('%Y%m%d%H%M%S +0000')
+
 def generate_program_info(channel_name, live_status, time_str, existing_programs):
     # Convert time_str to XMLTV format
-    start_time = convert_to_xmltv_time(time_str)
-    stop_time = (datetime.strptime(start_time, '%Y%m%d%H%M%S +0000') + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
+    new_program_start = datetime.strptime(convert_to_xmltv_time(time_str), '%Y%m%d%H%M%S +0000')
+    new_program_stop = (new_program_start + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
 
     # Check for existing programs with the same details
     for existing_program in existing_programs:
-        if existing_program['channel'] == channel_name and existing_program['start'] < stop_time and existing_program['stop'] > start_time:
-            # Update existing program's end time to the new program's start time
-            existing_program['stop'] = start_time
-            break
+        if existing_program['channel'] == channel_name and existing_program['start'] < new_program_stop and existing_program['stop'] > new_program_start:
+            # Adjust times to avoid overlap
+            adjust_program_times(existing_program, new_program_start)
+            return ""  # Do not add the new program as it already exists
     else:
         # No matching program found, add the new program
-        existing_programs.append({'channel': channel_name, 'start': start_time, 'stop': stop_time})
-
-    return f'''  <programme start="{start_time}" stop="{stop_time}" channel="{channel_name}">
+        return f'''  <programme start="{new_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{new_program_stop}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
     <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
