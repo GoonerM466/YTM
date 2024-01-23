@@ -1,4 +1,4 @@
-name: Update YouTube API Key
+name: Crd_Up
 
 on:
   workflow_dispatch:
