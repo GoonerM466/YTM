@@ -105,7 +105,7 @@ if __name__ == "__main__":
     live_channels = search_live_channels(api_key)
 
     # Write results to the all_live_channels.txt file
-    with open('music_live_channels.txt', 'w', encoding='utf-8') as file:
+    with open('gaming_live_channels.txt', 'w', encoding='utf-8') as file:
         for channel in live_channels:
             file.write(f"Channel Name: {channel['name']}\n")
             file.write(f"Channel URL: {channel['url']}\n")
