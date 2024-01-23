@@ -33,8 +33,8 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
 
-    #- name: Create current_channels directory
-    #  run: mkdir -p ./current_channels
+    - name: Create current_channels directory
+      run: mkdir -p ./current_channels
 
     - name: Read channel information from current_channels.txt
       run: |
