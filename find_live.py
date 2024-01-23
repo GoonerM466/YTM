@@ -112,4 +112,5 @@ if __name__ == "__main__":
             file.write(f"Title: {channel['title']}\n")
             file.write(f"Description: {channel['description']}\n")
             file.write(f"Logo URL: {channel['thumbnails']['default']['url']}\n")
+            file.write(f"Add this link to the update file: New! {channel['name']}, INSERT YOUR PREFERRED GROUP, {channel['url']}\n")
             file.write("\n")
