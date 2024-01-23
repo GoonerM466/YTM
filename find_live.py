@@ -59,8 +59,8 @@ def search_live_channels(api_key, max_results=50):
                 channel_id = item['snippet']['channelId']
                 group = get_channel_category(channel_id)  # You may implement this function as in your previous script
                 
-                # Construct channel URL
-                channel_url = f'https://youtube.com/@{channel_name}/live'
+                # Construct channel URL, removing spaces
+                channel_url = f'https://youtube.com/{channel_name}/live'
 
                 title = clean_text(item['snippet']['title'])
                 channel_logo = item['snippet']['thumbnails']['default']['url']
