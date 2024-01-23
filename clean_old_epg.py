@@ -1,6 +1,6 @@
-
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
+import os
 
 def clean_old_epg(input_file, output_file, max_age_hours=36):
     # Parse the input XML file
@@ -34,11 +34,10 @@ def clean_old_epg(input_file, output_file, max_age_hours=36):
         with open(input_file, 'w'):
             pass
 
+    # Always create old_epg.xml regardless of remaining programs
+    os.system('touch old_epg.xml')
+
 if __name__ == "__main__":
     input_file = 'combined_epg.xml'
     output_file = 'epg_old.xml'
     clean_old_epg(input_file, output_file)
-
-    # Create old_epg.xml even if there are no remaining programs
-    with open('old_epg.xml', 'w'):
-        pass
