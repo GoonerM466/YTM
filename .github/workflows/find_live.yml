@@ -41,41 +41,41 @@ jobs:
     - name: Waiting...
       run: sleep 5
       
-    - name: Finding sport channels
-      run: python find_sport.py
+ #   - name: Finding sport channels
+  #    run: python find_sport.py
 
-    - name: Waiting...
-      run: sleep 5
+   # - name: Waiting...
+    #  run: sleep 5
       
-    - name: Finding news channels
-      run: python find_news.py
+    #- name: Finding news channels
+     # run: python find_news.py
 
-    - name: Waiting...
-      run: sleep 5
+    #- name: Waiting...
+     # run: sleep 5
       
-    - name: Finding radio channels
-      run: python find_radio.py
+ #   - name: Finding radio channels
+  #    run: python find_radio.py
 
-    - name: Waiting...
-      run: sleep 5
+  #  - name: Waiting...
+   #   run: sleep 5
 
-    - name: Finding entertainment channels
-      run: python find_entertainment.py
+ #   - name: Finding entertainment channels
+  #    run: python find_entertainment.py
 
-    - name: Waiting...
-      run: sleep 5
+   # - name: Waiting...
+    #  run: sleep 5
 
-    - name: Finding gaming channels
-      run: python find_gaming.py
+  #  - name: Finding gaming channels
+   #   run: python find_gaming.py
       
-    - name: Finding documentary channels
-      run: python find_docs.py
+  #  - name: Finding documentary channels
+   #   run: python find_docs.py
 
-    - name: Waiting...
-      run: sleep 5
+ #   - name: Waiting...
+ #     run: sleep 5
 
-    - name: Finding comedy channels
-      run: python find_comedy.py
+  #  - name: Finding comedy channels
+ #     run: python find_comedy.py
 
     - name: Check for changes
       id: check-changes
