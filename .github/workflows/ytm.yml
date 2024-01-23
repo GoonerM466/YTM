@@ -66,12 +66,13 @@ jobs:
 
 
 
+
     - name: git add
       run: |
         git add -A
         ls -la
     - name: commit & push
       run: |
-        git diff --cached --quiet || git commit 
+        git diff --cached --quiet || git commit -m Updated
         git push origin main
 
