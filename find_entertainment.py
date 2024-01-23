@@ -100,7 +100,7 @@ def search_live_channels(api_key, max_results=50):
     return live_links
 
 if __name__ == "__main__":
-    api_key = "AIzaSyCQkT6oaf8A7rVaOx_ai0ode7QkquuJF0U"  # Replace with your API key
+    api_key = "AIzaSyAtg0O4emlRm5sAWF_8DW2ktWtgF_Wxuk4"  # Replace with your API key
     live_channels = search_live_channels(api_key)
 
     # Write results to the all_live_channels.txt file
