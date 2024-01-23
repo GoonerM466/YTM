@@ -1,8 +1,9 @@
-name: Find Live Channels
+name: Update Live Channels
 
 on:
   schedule:
     - cron: '0 * * * *' # Run every hour
+  workflow_dispatch:
 
 jobs:
   update-channels:
