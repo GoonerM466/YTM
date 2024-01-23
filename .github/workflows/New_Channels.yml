@@ -42,7 +42,7 @@ jobs:
                   ls -la
               - name: commit & push
                 run: |
-                  git diff --cached --quiet || git commit -m "links are updated"
+                  git diff --cached --quiet || git commit 
                   git push origin main
           " >> .github/workflows/ytm.yml
           
