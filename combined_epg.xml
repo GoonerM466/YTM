@@ -1,48 +1,48 @@
-  <programme start="20240122225439 +0000" stop="20240123015439 +0000" channel="beinsportshaber">
+  <programme start="20240123004545 +0000" stop="20240123034545 +0000" channel="beinsportshaber">
     <title lang="en">Live</title>
     <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240122225443 +0000" stop="20240123015443 +0000" channel="AFCAsianCup">
+  <programme start="20240123004549 +0000" stop="20240123034549 +0000" channel="AFCAsianCup">
     <title lang="en">Not Live</title>
     <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240122225449 +0000" stop="20240123015449 +0000" channel="talkSPORT">
-    <title lang="en">Live</title>
-    <desc lang="en">talkSPORT is currently streaming live! Tune in and enjoy!</desc>
+  <programme start="20240123004551 +0000" stop="20240123034551 +0000" channel="talkSPORT">
+    <title lang="en">Not Live</title>
+    <desc lang="en">talkSPORT is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240122225451 +0000" stop="20240123015451 +0000" channel="EERIEISSSS">
+  <programme start="20240123004553 +0000" stop="20240123034553 +0000" channel="EERIEISSSS">
     <title lang="en">Not Live</title>
     <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240122225453 +0000" stop="20240123015453 +0000" channel="Jimmy_Broadbent">
+  <programme start="20240123004555 +0000" stop="20240123034555 +0000" channel="Jimmy_Broadbent">
     <title lang="en">Not Live</title>
     <desc lang="en">Jimmy_Broadbent is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240122225455 +0000" stop="20240123015455 +0000" channel="deadeyedelboy">
+  <programme start="20240123004557 +0000" stop="20240123034557 +0000" channel="deadeyedelboy">
     <title lang="en">Not Live</title>
     <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240122225501 +0000" stop="20240123015501 +0000" channel="NBCNews">
+  <programme start="20240123004601 +0000" stop="20240123034601 +0000" channel="NBCNews">
     <title lang="en">Live</title>
     <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240122225506 +0000" stop="20240123015506 +0000" channel="SkyNews">
+  <programme start="20240123004606 +0000" stop="20240123034606 +0000" channel="SkyNews">
     <title lang="en">Live</title>
     <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240122225512 +0000" stop="20240123015512 +0000" channel="ABCNews">
+  <programme start="20240123004611 +0000" stop="20240123034611 +0000" channel="ABCNews">
     <title lang="en">Live</title>
     <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240122225514 +0000" stop="20240123015514 +0000" channel="HitsRadio">
+  <programme start="20240123004613 +0000" stop="20240123034613 +0000" channel="HitsRadio">
     <title lang="en">Not Live</title>
     <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240122225525 +0000" stop="20240123015525 +0000" channel="FobosPlanet">
+  <programme start="20240123004622 +0000" stop="20240123034622 +0000" channel="FobosPlanet">
     <title lang="en">Live</title>
     <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240122225529 +0000" stop="20240123015529 +0000" channel="DPWorldTour">
+  <programme start="20240123004625 +0000" stop="20240123034625 +0000" channel="DPWorldTour">
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
   </programme>
