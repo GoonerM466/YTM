@@ -26,6 +26,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
+    - name: Pull remote changes
+      if: steps.check_changes.outputs.return-code == '0'
+      run: git pull || true
+
     - name: Execute generate_channel_info.py
       run: python generate_channel_info.py > combined_epg.xml
 
@@ -33,10 +37,6 @@ jobs:
       id: check_changes
       run: |
         git diff --exit-code || echo "Changes detected" && exit 0
-
-    - name: Pull remote changes
-      if: steps.check_changes.outputs.return-code == '0'
-      run: git pull || true
 
     - name: Commit and push changes
       if: steps.check_changes.outputs.return-code == '0'
