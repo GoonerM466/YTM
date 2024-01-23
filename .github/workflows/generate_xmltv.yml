@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade pip
 
     - name: Execute generate_channel_info.py
-      run: python generate_channel_info.py
+      run: python generate_channel_info.py > combined_epg.xml
 
     - name: Check if changes exist
       id: check_changes
