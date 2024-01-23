@@ -26,6 +26,9 @@ jobs:
     - name: Run the script
       run: python find_live.py
 
+    - name: Run the script
+      run: python find_music.py
+
     - name: Check for changes
       id: check-changes
       run: |
