@@ -26,25 +26,21 @@ def generate_channel_info(channel_name, existing_channels):
   </channel>
 '''
 
+def remove_existing_program(channel_name, existing_programs):
+    # Remove existing program with the same channel name
+    existing_programs[:] = [program for program in existing_programs if program['channel'] != channel_name]
+
 def generate_program_info(channel_name, live_status, time_str, existing_programs):
     # Convert time_str to XMLTV format
-    start_time = convert_to_xmltv_time(time_str)
-    stop_time = (datetime.strptime(start_time, '%Y%m%d%H%M%S +0000') + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
+    current_time = datetime.utcnow()
+    start_time = (current_time - timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
+    stop_time = (current_time + timedelta(hours=5)).strftime('%Y%m%d%H%M%S +0000')
 
-    # Search for existing program with the same channel name
-    existing_program = next((program for program in existing_programs if program['channel'] == channel_name), None)
+    # Remove existing program with the same channel name
+    remove_existing_program(channel_name, existing_programs)
 
-    if existing_program:
-        # If titles match, extend end time by 2 hours
-        if existing_program['title'] == live_status:
-            existing_program['stop'] = (datetime.strptime(existing_program['stop'], '%Y%m%d%H%M%S +0000') + timedelta(hours=2)).strftime('%Y%m%d%H%M%S +0000')
-        else:
-            # If titles don't match, delete existing program and add the new one
-            existing_programs.remove(existing_program)
-            existing_programs.append({'channel': channel_name, 'title': live_status, 'start': start_time, 'stop': stop_time})
-    else:
-        # Add the new program
-        existing_programs.append({'channel': channel_name, 'title': live_status, 'start': start_time, 'stop': stop_time})
+    # Add the new program
+    existing_programs.append({'channel': channel_name, 'start': start_time, 'stop': stop_time})
 
     return f'''  <programme start="{start_time}" stop="{stop_time}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
