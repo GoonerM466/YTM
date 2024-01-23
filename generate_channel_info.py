@@ -32,9 +32,8 @@ def remove_existing_program(channel_name, existing_programs):
 
 def generate_program_info(channel_name, live_status, time_str, existing_programs):
     # Convert time_str to XMLTV format
-    current_time = datetime.utcnow()
-    start_time = (current_time - timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
-    stop_time = (current_time + timedelta(hours=5)).strftime('%Y%m%d%H%M%S +0000')
+    start_time = convert_to_xmltv_time(time_str)
+    stop_time = (datetime.strptime(start_time, '%Y%m%d%H%M%S +0000') + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
 
     # Remove existing program with the same channel name
     remove_existing_program(channel_name, existing_programs)
