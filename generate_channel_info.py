@@ -42,8 +42,8 @@ jobs:
         echo "" > live_status.txt
 
         while IFS=, read -r channel_name group channel_url; do
-          # Modify channel_name: remove spaces and trim to 3 words
-          channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g' | awk '{print $1; for(i=2;i<=3;i++) {if($i!="") {printf "-%s", $i}}}')
+          # Modify channel_name using sed regex: remove spaces and trim to 3 words
+          channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/')
           mkdir -p "./current_channels/$group"
           touch "./current_channels/$group/$channel_name.m3u8"
           {
