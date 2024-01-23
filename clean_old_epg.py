@@ -33,7 +33,7 @@ def clean_old_epg(input_file, output_file, max_age_hours=36):
 if __name__ == "__main__":
     input_file = 'combined_epg.xml'
     output_file = 'epg_old.xml'
-    clean_old_epg(input_file, output_file)
+    clean_old_epg(input_file, output_file, max_age_hours)
 
     # Create old_epg.xml even if there are no remaining programs
     with open('old_epg.xml', 'w'):
