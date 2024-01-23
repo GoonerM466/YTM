@@ -73,8 +73,8 @@ def main():
             with open('combined_epg.xml', 'r') as combined_file:
                 existing_content = combined_file.read()
             print(f"Read existing combined_epg.xml and parse the end time of each program - success!")
-         return result
-     except Exception as e:
+        return result
+    except Exception as e:
         print(f"Error reading exiating epg: {e}")
         return None
 
