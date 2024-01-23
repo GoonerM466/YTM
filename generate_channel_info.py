@@ -26,34 +26,25 @@ def generate_channel_info(channel_name, existing_channels):
   </channel>
 '''
 
-def adjust_existing_program(channel_name, live_status, start_time, stop_time, existing_programs):
-    # Check if there is an existing program with the same channel name
-    for program in existing_programs:
-        if program['channel'] == channel_name:
-            # Check if titles match
-            if program['title'] == live_status:
-                # Adjust start and stop times for the new addition
-                program['stop'] = start_time
-                stop_time = (datetime.strptime(start_time, '%Y%m%d%H%M%S +0000') + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
-                return start_time, stop_time
-            else:
-                # Titles don't match, remove existing program
-                existing_programs.remove(program)
-                return start_time, stop_time
-
-    # No matching program found, return the original times
-    return start_time, stop_time
-
 def generate_program_info(channel_name, live_status, time_str, existing_programs):
     # Convert time_str to XMLTV format
     start_time = convert_to_xmltv_time(time_str)
     stop_time = (datetime.strptime(start_time, '%Y%m%d%H%M%S +0000') + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
 
-    # Adjust existing program or remove it
-    start_time, stop_time = adjust_existing_program(channel_name, live_status, start_time, stop_time, existing_programs)
+    # Search for existing program with the same channel name
+    existing_program = next((program for program in existing_programs if program['channel'] == channel_name), None)
 
-    # Add the new program
-    existing_programs.append({'channel': channel_name, 'title': live_status, 'start': start_time, 'stop': stop_time})
+    if existing_program:
+        # If titles match, extend end time by 2 hours
+        if existing_program['title'] == live_status:
+            existing_program['stop'] = (datetime.strptime(existing_program['stop'], '%Y%m%d%H%M%S +0000') + timedelta(hours=2)).strftime('%Y%m%d%H%M%S +0000')
+        else:
+            # If titles don't match, delete existing program and add the new one
+            existing_programs.remove(existing_program)
+            existing_programs.append({'channel': channel_name, 'title': live_status, 'start': start_time, 'stop': stop_time})
+    else:
+        # Add the new program
+        existing_programs.append({'channel': channel_name, 'title': live_status, 'start': start_time, 'stop': stop_time})
 
     return f'''  <programme start="{start_time}" stop="{stop_time}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
