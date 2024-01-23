@@ -5,6 +5,7 @@ on:
   workflow_run:
     workflows:
       - "Get YouTube Live m3u8"
+      - "Clean Old EPG"
     types:
       - completed
 
