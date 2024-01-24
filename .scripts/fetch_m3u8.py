@@ -20,17 +20,20 @@ def fetch_m3u8(channel_name, group, channel_url):
             if video_id:
                 m3u8_url = "https://www.youtube.com/watch?v={}&ab_channel={}".format(video_id, channel_name)
 
-        with open(output_file, 'w') as f:
-            f.write("#EXTM3U\n")
-            f.write("#EXT-X-VERSION:3\n")
-            f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
-            f.write("{}\n".format(m3u8_url))
-
-        print(f"m3u8 for {channel_name} fetched successfully.")
-        return m3u8_url
-
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error fetching m3u8 for {channel_name}: {e}")
+
+    with open(output_file, 'w') as f:
+        f.write("#EXTM3U\n")
+        f.write("#EXT-X-VERSION:3\n")
+        f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
+        f.write("{}\n".format(m3u8_url))
+
+    if m3u8_url:
+        print(f"m3u8 for {channel_name} fetched successfully.")
+        return m3u8_url
+    else:
+        print(f"m3u8 for {channel_name} not available.")
         return None
 
 def update_live_status(channels):
