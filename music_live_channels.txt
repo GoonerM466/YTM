@@ -191,7 +191,7 @@ Description: Tune into the soothing rhythms of our Native American Flute Music, 
 Logo URL: https://i.ytimg.com/vi/ZJ7EeCeubpU/default_live.jpg
 Add this link to the update file: New: Native American Flute, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NativeAmericanFlute/live
 Channel Name: 4K Video Nature - Focus Music
-Channel URL: https://www.youtube.com/channel/UCNlfGuzOAKM1sycPuM_QTHg/live
+Channel URL: https://www.youtube.com/channel/UCPotnGNahFjLWjfsq4KYvuQ/live
 Title: Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #655
 Description: Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #655 Enjoy these 12 of deep ...
 Logo URL: https://i.ytimg.com/vi/o4y2geAHHG4/default_live.jpg
@@ -251,7 +251,7 @@ Description: Soothing Jazz Instrumental Music for Study, Work ☕ Relaxing Jazz 
 Logo URL: https://i.ytimg.com/vi/EZD3uz5IWdA/default_live.jpg
 Add this link to the update file: New: Fumikiri World, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FumikiriWorld/live
 Channel Name: Love Song Forever
-Channel URL: https://www.youtube.com/channel/UCJzQFJ7tZmYEHQcczU0TXYA/live
+Channel URL: https://www.youtube.com/channel/UC7_FRggjvg2NUtAOAfk1lAA/live
 Title: GREATEST LOVE SONG Jim Brickman,David Pomeranz, Rick Price , Air Supply | Love Song Forever NEW
 Description: GREATEST LOVE SONG Jim Brickman,David Pomeranz, Rick Price , Air Supply | Love Song Forever NEW Music list: 01. After All ...
 Logo URL: https://i.ytimg.com/vi/yjN6gPqJ1iY/default_live.jpg
