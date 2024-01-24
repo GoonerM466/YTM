@@ -6,7 +6,9 @@ def search_youtube_and_get_channel_url(search_phrase, max_results=1):
     channel_url = search_results.get('entries', [{}])[0].get('channel_url', None)
     return channel_url
 
-def process_input_file(input_filename, output_filename):
+def process_input_file(input_filename):
+    output_filename = input_filename.replace(".txt", "_updated.txt")
+
     with open(input_filename, 'r') as file:
         lines = file.readlines()
 
@@ -14,7 +16,7 @@ def process_input_file(input_filename, output_filename):
 
     for line in lines:
         if line.startswith("Channel Name:"):
-            channel_name = line.split("$search_term")[1].strip()
+            channel_name = line.replace("Channel Name:", "").strip()
             search_term = channel_name.lower()  # using the channel name as the search term
             channel_url = search_youtube_and_get_channel_url(search_term)
 
@@ -32,9 +34,8 @@ def process_input_file(input_filename, output_filename):
     with open(output_filename, 'w') as file:
         file.writelines(updated_lines)
 
+    print(f"Updated information written to {output_filename}")
+
 if __name__ == "__main__":
     input_file = "music_live_channels.txt"
-    output_file = "updated_music_live_channels.txt"
-
-    process_input_file(input_file, output_file)
-    print(f"Updated information written to {output_file}")
+    process_input_file(input_file)
