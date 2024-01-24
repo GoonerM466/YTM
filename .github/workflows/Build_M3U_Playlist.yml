@@ -51,4 +51,13 @@ jobs:
 
     - name: Check for Changes and Pull & Push
       run: |
-        git diff --exit-code && echo "No changes detected" || (git add Combined_YTL_Playlist.m3u && git commit -m "Update Combined YTL Playlist" && git pull origin main && git push)
+        git diff --exit-code && echo "No changes detected" || (git add Combined_YTL_Playlist.m3u && git commit -m "Update Combined YTL Playlist" && git pull --no-edit origin main && git push)
+        # Check if there are any conflicts after pull
+        git diff --check
+        if [ $? -ne 0 ]; then
+          # Auto-resolve conflicts by choosing one side
+          git checkout --ours Combined_YTL_Playlist.m3u
+          git add Combined_YTL_Playlist.m3u
+          git commit -m "Auto-resolve conflicts"
+          git push origin main
+        fi
