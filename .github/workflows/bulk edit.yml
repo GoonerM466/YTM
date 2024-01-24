@@ -1,28 +1,35 @@
-import os
-import re
+name: Bulk Edit Scripts
 
-def bulk_edit_scripts(directory):
-    for filename in os.listdir(directory):
-        if filename.startswith("find_") and filename.endswith(".py"):
-            file_path = os.path.join(directory, filename)
-            with open(file_path, 'r', encoding='utf-8') as file:
-                content = file.read()
+on:
+  push:
+    branches:
+      - main
 
-            # Replace the existing clean_text function
-            content = re.sub(r'def clean_text\(text\):.+?return\s+cleaned_text', 'def clean_text(text):\n    return text', content, flags=re.DOTALL)
+jobs:
+  bulk_edit_scripts:
+    runs-on: ubuntu-latest
 
-            # Replace the while True loop with a try-except block to break out of the loop
-            content = re.sub(r'while\s+True:', 'try:', content)
-            content = re.sub(r'except\s+Exception\s+as\s+e:.+?raise', 'except Exception as e:\n    print("No live channels found.")\n    break', content, flags=re.DOTALL)
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-            # Change the location of the *_live_channels.txt file
-            content = re.sub(r"with\s+open\('(\w+_live_channels.txt)',\s+'w',\s+encoding='utf-8'\)\s+as\s+file:", "with open('found_channels/\\1', 'w', encoding='utf-8') as file:", content)
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
 
-            with open(file_path, 'w', encoding='utf-8') as file:
-                file.write(content)
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
 
-            print(f"Script '{filename}' has been modified.")
+    - name: Bulk Edit Scripts
+      run: |
+        python bulk_edit_scripts.py
 
-if __name__ == "__main__":
-    script_directory = "./scripts"
-    bulk_edit_scripts(script_directory)
+    - name: Commit changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git diff-index --quiet HEAD || git commit -m "Auto-bulk-edit scripts"
+        git push
