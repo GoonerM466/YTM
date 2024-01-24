@@ -142,9 +142,3 @@ def main():
     except Exception as e:
         print("Error:", str(e))
         print("Everything is up to date.")
-
-if __name__ == '__main__':
-    main()
-
-if __name__ == '__main__':
-    main()
