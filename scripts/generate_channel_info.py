@@ -84,12 +84,8 @@ def generate_placeholder_programs(channel_name, current_time_rounded):
     return programs
 
 def main():
-    try:
-        with open('live_status.txt', 'r') as file:
-            lines = file.readlines()
-    except FileNotFoundError:
-        print("Error: File 'live_status.txt' not found.")
-        return
+    with open('live_status.txt', 'r') as file:
+        lines = file.readlines()
 
     header = '''<?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="none" generator-info-url="none">
@@ -134,11 +130,9 @@ def main():
 
     xmltv_content += '</tv>'
 
-    try:
-        # Write the combined content to combined_epg.xml
-        with open('combined_epg.xml', 'w') as combined_epg_file:
-            combined_epg_file.write(xmltv_content)
-        print("Combined EPG has been updated.")
-    except Exception as e:
-        print("Error:", str(e))
-        print("Everything is up to date.")
+    # Write the combined content to combined_epg.xml
+    with open('combined_epg.xml', 'w') as combined_epg_file:
+        combined_epg_file.write(xmltv_content)
+
+if __name__ == '__main__':
+    main()
