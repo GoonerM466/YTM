@@ -36,58 +36,58 @@ jobs:
     - name: Create current_channels directory
       run: mkdir -p ./current_channels
 
-    - name: Read channel information from current_channels.txt
-      run: |
-        while IFS=, read -r channel_name group channel_url; do
-          echo "Processing $channel_name at $channel_url..."
+- name: Read channel information from current_channels.txt
+  run: |
+    while IFS=, read -r channel_name group channel_url; do
+      echo "Processing $channel_name at $channel_url..."
 
-          # Modify channel_name using sed regex: remove spaces and trim to 3 words
-          channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/; s/-//g')
-          mkdir -p "./current_channels/$group"
-          
-          # Check if the channel URL starts with 'https://youtube.com/@'
-          if echo "$channel_url" | grep -q "^https://youtube.com/@"; then
-            # Extract the username from the channel URL
-            username=$(echo "$channel_url" | sed 's|https://youtube.com/@||')
-            live_url="https://www.youtube.com/$username/live"
-          else
-            live_url="$channel_url"
-          fi
-          
-          # Check if the m3u8 file exists at the channel address
-          if yt-dlp --print info "$live_url" | grep -q "m3u8"; then
-            echo "$channel_name is Live at $live_url. Downloading m3u8 link..."
-            yt-dlp --print urls "$live_url" > "./current_channels/$group/$channel_name.m3u8"
-          elif yt-dlp --print info "$live_url" | grep -q "404 Not Found"; then
-            echo "$channel_name is 404 at $live_url. Added to 404.txt..."
-            echo "404: $channel_name - $live_url" >> 404.txt
-            continue  # Skip to the next channel if a 404 error is encountered
-          else
-            # Extract video ID from the error message
-            error_message=$(yt-dlp "$live_url" 2>&1)
-            video_id=$(echo "$error_message" | awk -F ": " '/youtube\]/{print $2}' | cut -d: -f1)
-            
-            if [ -n "$video_id" ]; then
-              new_channel_url="https://www.youtube.com/watch?v=$video_id&ab_channel=$channel_name"
-              
-              # Check if the m3u8 file exists at the new channel address
-              if yt-dlp --print info "$new_channel_url" | grep -q "m3u8"; then
-                echo "$channel_name is Live at $new_channel_url. Downloading m3u8 link..."
-                yt-dlp --print urls "$new_channel_url" > "./current_channels/$group/$channel_name.m3u8"
-              else
-                echo "$channel_name is not currently live at $new_channel_url."
-              fi
-            else
-              echo "Unable to extract video ID from the error message for $channel_name at $live_url."
-            fi
-          fi
-          
-          # Append live status information to live_status.txt
-          echo "$channel_name - $(date)" >> live_status.txt
-        done < current_channels.txt
+      # Modify channel_name using sed regex: remove spaces and trim to 3 words
+      channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/; s/-//g')
+      mkdir -p "./current_channels/$group"
 
-    - name: Print workspace
-      run: ls -la
+      # Check if the channel URL starts with 'https://www.youtube.com/@'
+      if echo "$channel_url" | grep -q "^https://www.youtube.com/@"; then
+        # Extract the username from the channel URL
+        username=$(echo "$channel_url" | sed 's|https://www.youtube.com/@||')
+        live_url="https://www.youtube.com/$username/live"
+      else
+        live_url="$channel_url"
+      fi
+
+      # Check if the m3u8 file exists at the channel address
+      if yt-dlp --print info "$live_url" | grep -q "m3u8"; then
+        echo "$channel_name is Live at $live_url. Downloading m3u8 link..."
+        yt-dlp --print urls "$live_url" > "./current_channels/$group/$channel_name.m3u8"
+      elif yt-dlp --print info "$live_url" | grep -q "404 Not Found"; then
+        echo "$channel_name is 404 at $live_url. Added to 404.txt..."
+        echo "404: $channel_name - $live_url" >> 404.txt
+        continue  # Skip to the next channel if a 404 error is encountered
+      else
+        # Extract video ID from the error message
+        error_message=$(yt-dlp "$live_url" 2>&1)
+        video_id=$(echo "$error_message" | awk -F ": " '/youtube\]/{print $2}' | cut -d: -f1)
+
+        if [ -n "$video_id" ]; then
+          new_channel_url="https://www.youtube.com/watch?v=$video_id&ab_channel=$channel_name"
+
+          # Check if the m3u8 file exists at the new channel address
+          if yt-dlp --print info "$new_channel_url" | grep -q "m3u8"; then
+            echo "$channel_name is Live at $new_channel_url. Downloading m3u8 link..."
+            yt-dlp --print urls "$new_channel_url" > "./current_channels/$group/$channel_name.m3u8"
+          else
+            echo "$channel_name is not currently live at $new_channel_url."
+          fi
+        else
+          echo "Unable to extract video ID from the error message for $channel_name at $live_url."
+        fi
+      fi
+
+      # Append live status information to live_status.txt
+      echo "$channel_name - $(date)" >> live_status.txt
+    done < current_channels.txt
+
+- name: Print workspace
+  run: ls -la
       
     - name: git add
       run: |
