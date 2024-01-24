@@ -14,6 +14,7 @@ def process_input_file(input_filename):
 
     updated_lines = []
     channel_url = None  # Initialize channel_url here
+    channel_url_added = False  # Flag to track whether Channel URL line has been added
 
     for line in lines:
         if line.startswith("Channel Name:"):
@@ -25,18 +26,19 @@ def process_input_file(input_filename):
                 live_channel_url = f"{channel_url.rstrip('/')}/live"
                 updated_lines.append(f"Channel Name: {channel_name}\n")
                 updated_lines.append(f"Channel URL: {live_channel_url}\n")
+                channel_url_added = True  # Set the flag to true
             else:
                 print(f"Could not find a channel URL for '{channel_name}'. Skipping.")
         elif line.startswith(("Title:", "Description:", "Logo URL:")):
             # Preserve lines starting with "Title:", "Description:", and "Logo URL:"
             updated_lines.append(line)
         elif line.startswith("Add this link to the update file:"):
-            # Update the line with the new channel URL
-            if channel_url:
+            # Update the line with the new channel URL if not already added
+            if channel_url and not channel_url_added:
                 updated_line = f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {live_channel_url}\n"
                 updated_lines.append(updated_line)
             else:
-                # If channel URL not found, keep the original line
+                # If channel URL already added or not found, keep the original line
                 updated_lines.append(line)
         else:
             updated_lines.append(line)
