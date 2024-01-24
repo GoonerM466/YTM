@@ -44,20 +44,31 @@ jobs:
         while IFS=, read -r channel_name group channel_url; do
           # Modify channel_name using sed regex: remove spaces and trim to 3 words
           sanitized_channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/; s/-//g')
+          
+          # Create the directory only if it doesn't exist
           mkdir -p "./current_channels/$group"
+          
+          # Create the file only if it doesn't exist
           touch "./current_channels/$group/$sanitized_channel_name.m3u8"
-          {
-            echo "#EXTM3U"
-            echo "#EXT-X-VERSION:3"
-            echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-            yt-dlp --print urls "$channel_url"
-          } | sudo tee "./current_channels/$group/$sanitized_channel_name.m3u8" >/dev/null
           
           # Check if the channel is live
           live_status="Not Live"
           if yt-dlp --print is_live "$channel_url" | grep -q "True"; then
             live_status="Live"
             echo "$channel_name is live! Updating $sanitized_channel_name.m3u8 with the current live stream!"
+            {
+              echo "#EXTM3U"
+              echo "#EXT-X-VERSION:3"
+              echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
+              yt-dlp --print urls "$channel_url"
+            } | sudo tee "./current_channels/$group/$sanitized_channel_name.m3u8" >/dev/null
+          else
+            # If not live, create the m3u8 file with the specified format
+            {
+              echo "#EXTM3U"
+              echo "#EXT-X-VERSION:3"
+              echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
+            } | sudo tee "./current_channels/$group/$sanitized_channel_name.m3u8" >/dev/null
           fi
           
           # Append live status information to live_status.txt using sanitized channel name
