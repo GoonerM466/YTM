@@ -136,19 +136,15 @@ def main():
 
     try:
         # Write the combined content to combined_epg.xml
-        with open('combined_epg.xml', 'r') as existing_file:
-            existing_content = existing_file.read()
-
-        if existing_content != xmltv_content:
-            with open('combined_epg.xml', 'w') as combined_epg_file:
-                combined_epg_file.write(xmltv_content)
-            print("Combined EPG has been updated.")
-        else:
-            print("Everything is up to date.")
-
+        with open('combined_epg.xml', 'w') as combined_epg_file:
+            combined_epg_file.write(xmltv_content)
+        print("Combined EPG has been updated.")
     except Exception as e:
         print("Error:", str(e))
         print("Everything is up to date.")
+
+if __name__ == '__main__':
+    main()
 
 if __name__ == '__main__':
     main()
