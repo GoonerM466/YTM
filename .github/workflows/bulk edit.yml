@@ -1,0 +1,36 @@
+name: Bulk Edit Scripts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  bulk_edit_scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install google-api-python-client
+
+    - name: Bulk Edit Scripts
+      run: |
+        python ./.scripts/bulk_edit_scripts.py
+
+    - name: Commit changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add .
+        git diff-index --quiet HEAD || git commit -m "Auto-bulk-edit scripts"
+        git push
