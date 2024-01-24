@@ -38,30 +38,21 @@ jobs:
 
     - name: Read channel information from current_channels.txt
       run: |
-        # Clear the contents of live_status.txt
-        echo "" > live_status.txt
-
         while IFS=, read -r channel_name group channel_url; do
           # Modify channel_name using sed regex: remove spaces and trim to 3 words
           channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/; s/-//g')
           mkdir -p "./current_channels/$group"
-          touch "./current_channels/$group/$channel_name.m3u8"
-          {
-            echo "#EXTM3U"
-            echo "#EXT-X-VERSION:3"
-            echo "#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000"
-            yt-dlp --print urls "$channel_url"
-          } | sudo tee "./current_channels/$group/$channel_name.m3u8" >/dev/null
           
-          # Check if the channel is live
-          live_status="Not Live"
-          if yt-dlp --print is_live "$channel_url" | grep -q "True"; then
-            live_status="Live"
-            echo "$channel_name is live! Updating $channel_name.m3u8 with current live stream!"
+          # Check if the m3u8 file exists at the channel address
+          if yt-dlp --print info "$channel_url" | grep -q "m3u8"; then
+            echo "Found m3u8 for $channel_name at $channel_url. Downloading..."
+            yt-dlp --print urls "$channel_url" > "./current_channels/$group/$channel_name.m3u8"
+          elif yt-dlp --print info "$channel_url" | grep -q "404 Not Found"; then
+            echo "404: $channel_name - $channel_url" >> 404.txt
+            echo "No m3u8 found for $channel_name at $channel_url. Added to 404.txt."
+          else
+            echo "Unknown error for $channel_name at $channel_url."
           fi
-          
-          # Append live status information to live_status.txt
-          echo "$channel_name - $live_status - $(date)" >> live_status.txt
         done < current_channels.txt
 
     - name: git add
