@@ -54,75 +54,75 @@
   <channel id="4KVideoNature">
     <display-name lang="en">4KVideoNature</display-name>
   </channel>
-  <programme start="20240124044958 +0000" stop="20240124074958 +0000" channel="beinsportshaber">
+  <programme start="20240124064946 +0000" stop="20240124094946 +0000" channel="beinsportshaber">
     <title lang="en">Live</title>
     <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045003 +0000" stop="20240124075003 +0000" channel="AFCAsianCup">
+  <programme start="20240124064951 +0000" stop="20240124094951 +0000" channel="AFCAsianCup">
     <title lang="en">Not Live</title>
     <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045005 +0000" stop="20240124075005 +0000" channel="talkSPORT">
-    <title lang="en">Not Live</title>
-    <desc lang="en">talkSPORT is not currently live. Check the schedule online or try again later!</desc>
+  <programme start="20240124064956 +0000" stop="20240124094956 +0000" channel="talkSPORT">
+    <title lang="en">Live</title>
+    <desc lang="en">talkSPORT is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045007 +0000" stop="20240124075007 +0000" channel="EERIEISSSS">
+  <programme start="20240124064958 +0000" stop="20240124094958 +0000" channel="EERIEISSSS">
     <title lang="en">Not Live</title>
     <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045009 +0000" stop="20240124075009 +0000" channel="JimmyBroadbent">
+  <programme start="20240124065000 +0000" stop="20240124095000 +0000" channel="JimmyBroadbent">
     <title lang="en">Not Live</title>
     <desc lang="en">JimmyBroadbent is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045011 +0000" stop="20240124075011 +0000" channel="deadeyedelboy">
+  <programme start="20240124065002 +0000" stop="20240124095002 +0000" channel="deadeyedelboy">
     <title lang="en">Not Live</title>
     <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045017 +0000" stop="20240124075017 +0000" channel="NBCNews">
+  <programme start="20240124065008 +0000" stop="20240124095008 +0000" channel="NBCNews">
     <title lang="en">Live</title>
     <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045023 +0000" stop="20240124075023 +0000" channel="SkyNews">
+  <programme start="20240124065014 +0000" stop="20240124095014 +0000" channel="SkyNews">
     <title lang="en">Live</title>
     <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045028 +0000" stop="20240124075028 +0000" channel="ABCNews">
+  <programme start="20240124065020 +0000" stop="20240124095020 +0000" channel="ABCNews">
     <title lang="en">Live</title>
     <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045030 +0000" stop="20240124075030 +0000" channel="HitsRadio">
+  <programme start="20240124065021 +0000" stop="20240124095021 +0000" channel="HitsRadio">
     <title lang="en">Not Live</title>
     <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045036 +0000" stop="20240124075036 +0000" channel="classicmusictop1">
+  <programme start="20240124065027 +0000" stop="20240124095027 +0000" channel="classicmusictop1">
     <title lang="en">Live</title>
     <desc lang="en">classicmusictop1 is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045042 +0000" stop="20240124075042 +0000" channel="FobosPlanet">
+  <programme start="20240124065033 +0000" stop="20240124095033 +0000" channel="FobosPlanet">
     <title lang="en">Live</title>
     <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045046 +0000" stop="20240124075046 +0000" channel="DPWorldTour">
+  <programme start="20240124065037 +0000" stop="20240124095037 +0000" channel="DPWorldTour">
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045052 +0000" stop="20240124075052 +0000" channel="GBNews2">
+  <programme start="20240124065042 +0000" stop="20240124095042 +0000" channel="GBNews2">
     <title lang="en">Live</title>
     <desc lang="en">GBNews2 is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045057 +0000" stop="20240124075057 +0000" channel="JazzCafeAmbience">
+  <programme start="20240124065048 +0000" stop="20240124095048 +0000" channel="JazzCafeAmbience">
     <title lang="en">Live</title>
     <desc lang="en">JazzCafeAmbience is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240124045100 +0000" stop="20240124075100 +0000" channel="OpenHeartMusic">
+  <programme start="20240124065051 +0000" stop="20240124095051 +0000" channel="OpenHeartMusic">
     <title lang="en">Not Live</title>
     <desc lang="en">OpenHeartMusic is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045103 +0000" stop="20240124075103 +0000" channel="MegaHitMix">
+  <programme start="20240124065053 +0000" stop="20240124095053 +0000" channel="MegaHitMix">
     <title lang="en">Not Live</title>
     <desc lang="en">MegaHitMix is not currently live. Check the schedule online or try again later!</desc>
   </programme>
-  <programme start="20240124045105 +0000" stop="20240124075105 +0000" channel="4KVideoNature">
+  <programme start="20240124065056 +0000" stop="20240124095056 +0000" channel="4KVideoNature">
     <title lang="en">Not Live</title>
     <desc lang="en">4KVideoNature is not currently live. Check the schedule online or try again later!</desc>
   </programme>
