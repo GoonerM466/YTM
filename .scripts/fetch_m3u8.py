@@ -10,6 +10,9 @@ def fetch_m3u8(channel_name, group, channel_url):
 
     os.makedirs(output_folder, exist_ok=True)
 
+    # Remove extra "/" from the channel URL
+    channel_url = channel_url.rstrip('/')
+
     ydl_opts = {
         'quiet': False,  # Set to True if you want less console output from yt-dlp
     }
