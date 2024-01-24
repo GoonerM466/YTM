@@ -37,16 +37,22 @@ def generate_channel_info(channel_name):
   </channel>
 '''
 
-def generate_program_info(channel_name, live_status, time_str):
+def generate_program_info(channel_name, live_status, time_str, existing_programs):
     # Convert time_str to XMLTV format
     program_start = datetime.strptime(convert_to_xmltv_time(time_str), '%Y%m%d%H%M%S +0000')
 
     # Round up the start time to the nearest hour
     program_start_rounded = round_up_to_hour(program_start)
 
+    # Check for existing programs with the same details
+    for existing_program in existing_programs:
+        if existing_program['channel'] == channel_name and existing_program['start'] == program_start_rounded.strftime('%Y%m%d%H%M%S +0000') and existing_program['stop'] == (program_start_rounded + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000'):
+            # Program with the same details already exists, skip adding it
+            return ""
+
     # Create the new program
     program_stop = (program_start_rounded + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
-    program_info = f'''  <programme start="{program_start_rounded.strftime('%Y%m%d%H%M%S +0000')}" stop="{program_stop}" channel="{channel_name}">
+    new_program_info = f'''  <programme start="{program_start_rounded.strftime('%Y%m%d%H%M%S +0000')}" stop="{program_stop}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
     <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
@@ -57,11 +63,11 @@ def generate_program_info(channel_name, live_status, time_str):
     following_program_stop = (following_program_start + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
     following_program_info = f'''  <programme start="{following_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{following_program_stop}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
-    desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
+    <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
 '''
 
-    return program_info + following_program_info
+    return new_program_info + following_program_info
 
 def generate_placeholder_programs(channel_name, current_time_rounded):
     # Generate 12 hours worth of "To be Announced" programs for the given channel
