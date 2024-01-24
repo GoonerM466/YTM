@@ -1,4 +1,4 @@
-name: Bulk Edit Scripts
+name: ZZ-Bulk Edit Scripts
 
 on:
   push:
