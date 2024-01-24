@@ -37,7 +37,7 @@ jobs:
       run: mkdir -p ./current_channels
       
     - name: Run Fetch_m3u8 Script
-      run: ./current_channels/fetch_m3u8.py
+      run: pythion ./scripts/fetch_m3u8.py
 
     - name: Print workspace
       run: ls -la
