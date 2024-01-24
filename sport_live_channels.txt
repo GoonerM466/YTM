@@ -5,19 +5,33 @@ Description: SEGU LA TRANSMISIN EN VIVO DE TODO NOTICIAS Mir la programacin de T
 Logo URL: https://i.ytimg.com/vi/cb12KmMMDJA/default_live.jpg
 Add this link to the update file: New: Todo Noticias, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TodoNoticias/live
 
-Channel Name: Loork Football
-Channel URL: https://youtube.com/@LoorkFootball/live
-Title:          2024    HD  
-Description:                   
-Logo URL: https://i.ytimg.com/vi/S-7r75kMArI/default_live.jpg
-Add this link to the update file: New: Loork Football, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LoorkFootball/live
+Channel Name: The PWHL
+Channel URL: https://youtube.com/@ThePWHL/live
+Title: PWHL Toronto at Ottawa  January 23 2024
+Description: PWHL Toronto at Ottawa  January 23 2024 The Professional Womens Hockey League or PWHL is a firstofitskind womens 
+Logo URL: https://i.ytimg.com/vi/YJwLTGwXxns/default_live.jpg
+Add this link to the update file: New: The PWHL, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ThePWHL/live
 
-Channel Name: Sky News
-Channel URL: https://youtube.com/@SkyNews/live
-Title: Watch Sky News Live
-Description: Watch Sky News The US and UK have carried out joint attacks on Houthi military targets in Yemen for the second time US 
-Logo URL: https://i.ytimg.com/vi/w9uJg68CV4g/default_live.jpg
-Add this link to the update file: New: Sky News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SkyNews/live
+Channel Name: PLANETA FUTBOL
+Channel URL: https://youtube.com/@PLANETAFUTBOL/live
+Title: ECUADOR vs VENEZUELA  PREOLIMPICO EN VIVO CON IMAGEN
+Description: ECUADOR vs VENEZUELA EN VIVO ECUADOR vs VENEZUELA 2023 ECUADOR vs VENEZUELA tv ECUADOR vs 
+Logo URL: https://i.ytimg.com/vi/nsFtXqFfQEw/default_live.jpg
+Add this link to the update file: New: PLANETA FUTBOL, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PLANETAFUTBOL/live
+
+Channel Name: Karaoke Tnh Qu
+Channel URL: https://youtube.com/@KaraokeTnhQu/live
+Title: Kentucky vs South Carolina Live Stream  2023 2024 NCAA Men39s College Basketball
+Description: Kentucky vs South Carolina Live Stream  2023 2024 NCAA Mens College Basketball Kentucky vs South Carolina Live Stream 
+Logo URL: https://i.ytimg.com/vi/gPBlE4NOkhw/default_live.jpg
+Add this link to the update file: New: Karaoke Tnh Qu, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KaraokeTnhQu/live
+
+Channel Name: JERT SPORTS 
+Channel URL: https://youtube.com/@JERTSPORTS/live
+Title: ECUADOR VS VENEZUELA EN VIVO  PREOLMPICO SUB 23
+Description: ECUADOR vs VENEZUELA EN VIVO ECUADOR vs VENEZUELA 2023 ECUADOR vs VENEZUELA tv ECUADOR vs 
+Logo URL: https://i.ytimg.com/vi/DVHwmi4rvUs/default_live.jpg
+Add this link to the update file: New: JERT SPORTS , INSERT YOUR PREFERRED GROUP, https://youtube.com/@JERTSPORTS/live
 
 Channel Name: FRANCE 24
 Channel URL: https://youtube.com/@FRANCE24/live
@@ -26,33 +40,12 @@ Description: Regardez FRANCE 24 en franais en direct gratuitement et en streamin
 Logo URL: https://i.ytimg.com/vi/l8PMl7tUDIE/default_live.jpg
 Add this link to the update file: New: FRANCE 24, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FRANCE24/live
 
-Channel Name: Raiders Report by Chat Sports
-Channel URL: https://youtube.com/@RaidersReportbyChatSports/live
-Title: BREAKING NEWS Raiders Hire Tom Telesco As The Las Vegas Raiders GM To Pair With Antonio Pierce
-Description: The Las Vegas Raiders have hired Tom Telesco to be the Raiders GM in 2024 Raiders Owner Mark Davis has opted to hire 
-Logo URL: https://i.ytimg.com/vi/F74peWjo6PQ/default_live.jpg
-Add this link to the update file: New: Raiders Report by Chat Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RaidersReportbyChatSports/live
-
-Channel Name: QSVS  Qui Studio a Voi Stadio  TELELOMBARDIA
-Channel URL: https://youtube.com/@QSVSQuiStudioaVoiStadioTELELOMBARDIA/live
-Title: STREAMING TOP CALCIO
-Description: Iscriviti al nostro canale httpsbitlyYouTubeQSVS    Scopri ora i prodotti firmati QSVS httpsqsvsstorehoplixshop Sito 
-Logo URL: https://i.ytimg.com/vi/V1CCAvFCLBU/default_live.jpg
-Add this link to the update file: New: QSVS  Qui Studio a Voi Stadio  TELELOMBARDIA, INSERT YOUR PREFERRED GROUP, https://youtube.com/@QSVSQuiStudioaVoiStadioTELELOMBARDIA/live
-
-Channel Name: Mhmd 777
-Channel URL: https://youtube.com/@Mhmd777/live
-Title:           2024  Algeria vs Mauritania Live
-Description:           2024          
-Logo URL: https://i.ytimg.com/vi/7DZmrxXi18k/default_live.jpg
-Add this link to the update file: New: Mhmd 777, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Mhmd777/live
-
-Channel Name: Kampleng Com
-Channel URL: https://youtube.com/@KamplengCom/live
-Title: Angola vs Burkina Faso LIVE 2024 CAF Africa Cup of Nations Full match  Video game simulation
-Description: Angola vs Burkina Faso LIVE 2024 CAF Africa Cup of Nations Full match  Video game simulation NOTE THIS IS NOT A REAL 
-Logo URL: https://i.ytimg.com/vi/-wJtFftv-Xs/default_live.jpg
-Add this link to the update file: New: Kampleng Com, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KamplengCom/live
+Channel Name: Sky News
+Channel URL: https://youtube.com/@SkyNews/live
+Title: Watch Sky News Live
+Description: Watch Sky News Former cabinet minister Sir Simon Clarke has called on Rishi Sunak to resign as prime minister the Doomsday 
+Logo URL: https://i.ytimg.com/vi/w9uJg68CV4g/default_live.jpg
+Add this link to the update file: New: Sky News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SkyNews/live
 
 Channel Name: Geo News
 Channel URL: https://youtube.com/@GeoNews/live
@@ -61,47 +54,12 @@ Description: Geo News is Pakistans Number 1 news channel catering to a diverse a
 Logo URL: https://i.ytimg.com/vi/O3DPVlynUM0/default_live.jpg
 Add this link to the update file: New: Geo News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GeoNews/live
 
-Channel Name: LX PLAYS GAMING
-Channel URL: https://youtube.com/@LXPLAYSGAMING/live
-Title: LIVE Angola vs Burkina Faso  African Cup of Nations 2023  Match Live Today
-Description: Angola vs Burkina Faso LIVE  African Cup of Nations 2023  Match Live Today  Highlights  Goals  23012024 This is a Angola 
-Logo URL: https://i.ytimg.com/vi/kWqDL3pWo4A/default_live.jpg
-Add this link to the update file: New: LX PLAYS GAMING, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LXPLAYSGAMING/live
-
-Channel Name: AFTER FOOT
-Channel URL: https://youtube.com/@AFTERFOOT/live
-Title: AFTER LIVE  avec Thibaut GIANGRANDE  AFTER FOOT avec Nicolas JAMAIN
-Description: Vivez lintgralit de lAfter Foot de 20h  minuit avec la dream team RMC Sport Les podcasts de lAfter 
-Logo URL: https://i.ytimg.com/vi/OclcArsO58s/default_live.jpg
-Add this link to the update file: New: AFTER FOOT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AFTERFOOT/live
-
-Channel Name: Afrique Sports  La chaine du continent
-Channel URL: https://youtube.com/@AfriqueSportsLachaineducontinent/live
-Title: MAURITANIE  ALGERIE  ANGOLA  BURKINA FASO LIVE  SUIVEZ EN DIRECTLACAN2024
-Description: Abonnezvous  notre chane sur YouTube  httpbitly2xupmAQ Visitez note site internet pour plus dactus sports 
-Logo URL: https://i.ytimg.com/vi/n18051Iz73M/default_live.jpg
-Add this link to the update file: New: Afrique Sports  La chaine du continent, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AfriqueSportsLachaineducontinent/live
-
-Channel Name: ESPN 1320  Sacramentos Sports Leader
-Channel URL: https://youtube.com/@ESPN1320SacramentosSportsLeader/live
-Title: Kings Beat the Hawks 122107  January 23 The Insiders  DLo amp KC
-Description: Thank you for watching Please subscribe and hit the thumbs up The Insider LIVE MonFri 10a12pPST ESPN 1320 Sacramento 
-Logo URL: https://i.ytimg.com/vi/pNgc2Oj0-yg/default_live.jpg
-Add this link to the update file: New: ESPN 1320  Sacramentos Sports Leader, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ESPN1320SacramentosSportsLeader/live
-
-Channel Name: ProSamukaPT
-Channel URL: https://youtube.com/@ProSamukaPT/live
-Title: BRAGA X SPORTING  EM DIRETO   MEIA FINAL  TAA DA LIGA ALLIANZ CUP
-Description: braga sporting SEJAM BEMVINDOS ao canal Deixa j o MEGA LIKEZAO SUBSCREVE O CANAL Para mais 
-Logo URL: https://i.ytimg.com/vi/vpuXUjY1Nv8/default_live.jpg
-Add this link to the update file: New: ProSamukaPT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ProSamukaPT/live
-
-Channel Name: Locked On Sports Today
-Channel URL: https://youtube.com/@LockedOnSportsToday/live
-Title: 247 STREAM Coverage of the Biggest Stories in the NFL NBA MLB NHL amp NCAA
-Description: Local experts Biggest stories Every day Stay tuned for MORNING LockedOnMLB LockedOnNHL LockedOnNFL 
-Logo URL: https://i.ytimg.com/vi/LOBZMXKK4vE/default_live.jpg
-Add this link to the update file: New: Locked On Sports Today, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LockedOnSportsToday/live
+Channel Name: QSVS  Qui Studio a Voi Stadio  TELELOMBARDIA
+Channel URL: https://youtube.com/@QSVSQuiStudioaVoiStadioTELELOMBARDIA/live
+Title: STREAMING TOP CALCIO
+Description: Iscriviti al nostro canale httpsbitlyYouTubeQSVS    Scopri ora i prodotti firmati QSVS httpsqsvsstorehoplixshop Sito 
+Logo URL: https://i.ytimg.com/vi/V1CCAvFCLBU/default_live.jpg
+Add this link to the update file: New: QSVS  Qui Studio a Voi Stadio  TELELOMBARDIA, INSERT YOUR PREFERRED GROUP, https://youtube.com/@QSVSQuiStudioaVoiStadioTELELOMBARDIA/live
 
 Channel Name: KCMC Sports
 Channel URL: https://youtube.com/@KCMCSports/live
@@ -110,26 +68,40 @@ Description:
 Logo URL: https://i.ytimg.com/vi/sOV5jlvlL38/default_live.jpg
 Add this link to the update file: New: KCMC Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KCMCSports/live
 
-Channel Name: BPM Sports
-Channel URL: https://youtube.com/@BPMSports/live
-Title: Le retour des sportifs
-Description: Le retour des sportifs  tous les jours de semaine 15h
-Logo URL: https://i.ytimg.com/vi/W4xM175ULuM/default_live.jpg
-Add this link to the update file: New: BPM Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BPMSports/live
+Channel Name: Locked On Sports Today
+Channel URL: https://youtube.com/@LockedOnSportsToday/live
+Title: 247 STREAM Coverage of the Biggest Stories in the NFL NBA MLB NHL amp NCAA
+Description: Local experts Biggest stories Every day Stay tuned for MORNING LockedOnMLB LockedOnNHL LockedOnNFL 
+Logo URL: https://i.ytimg.com/vi/LOBZMXKK4vE/default_live.jpg
+Add this link to the update file: New: Locked On Sports Today, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LockedOnSportsToday/live
 
-Channel Name: 365 Sports
-Channel URL: https://youtube.com/@365Sports/live
-Title: 365 Sports  Arizona Fires AD LVille39s Transfer Portal Haul NFL Playoffs  12324
-Description: With Craig Smoak David Smoak  Paul Catalina
-Logo URL: https://i.ytimg.com/vi/6bzFVYjgfPQ/default_live.jpg
-Add this link to the update file: New: 365 Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@365Sports/live
+Channel Name: WAX777 FF
+Channel URL: https://youtube.com/@WAX777FF/live
+Title: Duke vs Louisville LIVE  Men Basketball Jan 232024
+Description: Duke vs Louisville LIVE  Men Basketball Jan 232024
+Logo URL: https://i.ytimg.com/vi/lsKLI1-3ouw/default_live.jpg
+Add this link to the update file: New: WAX777 FF, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WAX777FF/live
 
-Channel Name: beIN SPORTS Trkiye
-Channel URL: https://youtube.com/@beINSPORTSTrkiye/live
-Title: beIN SPORTS HABER Canl Yayn  beINSPORTS
-Description: beIN SPORTSun en gncel programlarn spor dolu ieriklerini takip etmek iin kanala abone olmay unutmayn 
-Logo URL: https://i.ytimg.com/vi/OypUpUTYAHI/default_live.jpg
-Add this link to the update file: New: beIN SPORTS Trkiye, INSERT YOUR PREFERRED GROUP, https://youtube.com/@beINSPORTSTrkiye/live
+Channel Name: WTUZ BigZsports
+Channel URL: https://youtube.com/@WTUZBigZsports/live
+Title: Garaway at Sandy Valley  OHSAA Boys Basketball from BIG Z Sports  WTUZ 999 FM
+Description: Sandy Valley welcomes Garaway in OHSAA Boys Basketball from BIG Z Sports  WTUZ 999 FM WTUZ Announcers BIG Z Sports 
+Logo URL: https://i.ytimg.com/vi/iQmvIWQtXeI/default_live.jpg
+Add this link to the update file: New: WTUZ BigZsports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WTUZBigZsports/live
+
+Channel Name: Redline Media Alliance  Corning Sports Report
+Channel URL: https://youtube.com/@RedlineMediaAllianceCorningSportsReport/live
+Title: Corning Bobcats  Gosnell Pirates Boys Basketball LIVE
+Description: Please share
+Logo URL: https://i.ytimg.com/vi/VL32F3_PQ0I/default_live.jpg
+Add this link to the update file: New: Redline Media Alliance  Corning Sports Report, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RedlineMediaAllianceCorningSportsReport/live
+
+Channel Name: Moravia Central School District Athletics
+Channel URL: https://youtube.com/@MoraviaCentralSchoolDistrictAthletics/live
+Title: Moravia vs Lansing High School Boys39 Varsity Moravia vs Lansing High School Boys39 Varsity Basketball
+Description: 
+Logo URL: https://i.ytimg.com/vi/5wP7voeDeFQ/default_live.jpg
+Add this link to the update file: New: Moravia Central School District Athletics, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MoraviaCentralSchoolDistrictAthletics/live
 
 Channel Name: MAX OAZO
 Channel URL: https://youtube.com/@MAXOAZO/live
@@ -138,96 +110,145 @@ Description: Workout Music 2024 Best Fitness  Gym Motivation Mix by Max Oazo  Li
 Logo URL: https://i.ytimg.com/vi/kAUVOHB3XYM/default_live.jpg
 Add this link to the update file: New: MAX OAZO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MAXOAZO/live
 
-Channel Name: The Raider Rundown
-Channel URL: https://youtube.com/@TheRaiderRundown/live
-Title: Raiders TO HIRE Tom Telesco as new GM BREAKING NEWSThe Raider Rundown
-Description: In this special breaking news episode of The Raider Rundown we bring you the latest scoop on the Las Vegas Raiders decision 
-Logo URL: https://i.ytimg.com/vi/n8-v29XDfkY/default_live.jpg
-Add this link to the update file: New: The Raider Rundown, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheRaiderRundown/live
+Channel Name: IH Sports Network
+Channel URL: https://youtube.com/@IHSportsNetwork/live
+Title: Oneida Indians Sporting Events
+Description: Oneida Indians Sporting Events
+Logo URL: https://i.ytimg.com/vi/fsLv048v9LI/default_live.jpg
+Add this link to the update file: New: IH Sports Network, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IHSportsNetwork/live
 
-Channel Name: ANDRE FLY GAMER
-Channel URL: https://youtube.com/@ANDREFLYGAMER/live
-Title: BRAGA VS SPORTING EM DIRETO  MEIA FINAL  TAA DA LIGA AO VIVO
-Description: braga sporting taadaliga semifinal allianzcup relatos antena1 scbraga sportingcp jogoaovivo futebolaovivo aovivo 
-Logo URL: https://i.ytimg.com/vi/UXoG3mg_REc/default_live.jpg
-Add this link to the update file: New: ANDRE FLY GAMER, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ANDREFLYGAMER/live
+Channel Name: Lakin Broncs Sports
+Channel URL: https://youtube.com/@LakinBroncsSports/live
+Title: Lakin Lady Broncs vs Syracuse
+Description: 
+Logo URL: https://i.ytimg.com/vi/COA_JqYzqs8/default_live.jpg
+Add this link to the update file: New: Lakin Broncs Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LakinBroncsSports/live
 
-Channel Name: Locked On Sports Los Angeles
-Channel URL: https://youtube.com/@LockedOnSportsLosAngeles/live
-Title: 247 STREAM Sports Talk on the LA Rams Lakers Dodgers Chargers Clippers Angels Kings and More
-Description: From the 1 local sports podcast network Locked On Sports Los Angeles brings you 247 coverage of the Los Angeles Rams Los 
-Logo URL: https://i.ytimg.com/vi/ln4sA37dDg0/default_live.jpg
-Add this link to the update file: New: Locked On Sports Los Angeles, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LockedOnSportsLosAngeles/live
+Channel Name: MAX OAZO
+Channel URL: https://youtube.com/@MAXOAZO/live
+Title: Workout Songs 2024  Best Fitness amp Gym Motivation Mix  New Music 2024 by Max Oazo
+Description: Workout Songs 2024 Best Fitness  Gym Motivation Mix New Music 2024 by Max Oazo Gym Workout 2024 Best Fitness 
+Logo URL: https://i.ytimg.com/vi/tMUxHx5fatA/default_live.jpg
+Add this link to the update file: New: MAX OAZO, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MAXOAZO/live
 
-Channel Name: Golo FM
-Channel URL: https://youtube.com/@GoloFM/live
-Title: Braga vs Sporting
-Description: Narrao de Hugo Taveira Comentrios de Andr Geraldes Coordenao de Jos Carlos Leal Golo FM l Portugal l GuinBissau 
-Logo URL: https://i.ytimg.com/vi/m7e4CiinDhU/default_live.jpg
-Add this link to the update file: New: Golo FM, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GoloFM/live
+Channel Name: Sarcasm City TV
+Channel URL: https://youtube.com/@SarcasmCityTV/live
+Title: CHELSEA THROUGH TO CARABAO CUP FINAL AFTER TROUNCING MIDDLESBROUGH  Sports QampA
+Description: JOIN THE SARCASM CITY TV MEMBERSHIP  httpswwwyoutubecomchannelUC3Ywver2FRIljydkx8aENkwjoin SARCASM 
+Logo URL: https://i.ytimg.com/vi/Y8I1885nXr8/default_live.jpg
+Add this link to the update file: New: Sarcasm City TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SarcasmCityTV/live
 
-Channel Name: Angola Press
-Channel URL: https://youtube.com/@AngolaPress/live
-Title: CAN 2023  Burkina Faso vs Angola 3 jornada
-Description: CAN 2023  Burkina Faso vs Angola 3 jornada
-Logo URL: https://i.ytimg.com/vi/6MuT_T6cFnM/default_live.jpg
-Add this link to the update file: New: Angola Press, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AngolaPress/live
+Channel Name: Vozes da Arquibancada
+Channel URL: https://youtube.com/@VozesdaArquibancada/live
+Title: 215 PR JOGO MAGUARY X SPORT  4 RODADA CAMPEONATO PERNAMBUCANO 2024
+Description: O melhor pr jogo de Maguary x Sport Marcelo Ajul x Fbio Matheus vlido pela 4 rodada do campeonato pernambucano 2024 
+Logo URL: https://i.ytimg.com/vi/Y30d-lKtE8Y/default_live.jpg
+Add this link to the update file: New: Vozes da Arquibancada, INSERT YOUR PREFERRED GROUP, https://youtube.com/@VozesdaArquibancada/live
 
-Channel Name: Pod do Sport 
-Channel URL: https://youtube.com/@PoddoSport/live
-Title: 11 EPISDIO  POD DO SPORT  ESTEVO COSTA   23012024
-Description: 11 EPISDIO  POD DO SPORT  ESTEVO COSTA  23012024
-Logo URL: https://i.ytimg.com/vi/mGGfbWpoEQ0/default_live.jpg
-Add this link to the update file: New: Pod do Sport , INSERT YOUR PREFERRED GROUP, https://youtube.com/@PoddoSport/live
+Channel Name: beIN SPORTS Trkiye
+Channel URL: https://youtube.com/@beINSPORTSTrkiye/live
+Title: beIN SPORTS HABER Canl Yayn  beINSPORTS
+Description: beIN SPORTSun en gncel programlarn spor dolu ieriklerini takip etmek iin kanala abone olmay unutmayn 
+Logo URL: https://i.ytimg.com/vi/OypUpUTYAHI/default_live.jpg
+Add this link to the update file: New: beIN SPORTS Trkiye, INSERT YOUR PREFERRED GROUP, https://youtube.com/@beINSPORTSTrkiye/live
 
-Channel Name: Action Sports Jax
-Channel URL: https://youtube.com/@ActionSportsJax/live
-Title: Brent amp Friends  Is the coaching carousel in the NFL broken
-Description: Brent Martineau Aaron Schachter and Kasey Kuhrts dig in on the NFL coaching carousel Is the system broken How is it that Bill 
-Logo URL: https://i.ytimg.com/vi/1Lt1b3x4JS4/default_live.jpg
-Add this link to the update file: New: Action Sports Jax, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ActionSportsJax/live
+Channel Name: NP Broadcast
+Channel URL: https://youtube.com/@NPBroadcast/live
+Title: VARSITY Girls amp Boys Basketball vs Adel DeSoto
+Description: VARSITY BASKETBALL
+Logo URL: https://i.ytimg.com/vi/Wo-V63sFpEo/default_live.jpg
+Add this link to the update file: New: NP Broadcast, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NPBroadcast/live
 
-Channel Name: CBS Sports Radio
-Channel URL: https://youtube.com/@CBSSportsRadio/live
-Title: Brock Purdy Top 5 QB I Why is Sirianni Returning 5 Most Disappointing Stories I The Zach Gelb Show
-Description: Dive into the latest episode of The Zach Gelb Show for a riveting discussion on the hottest topics in the NFL In this episode 
-Logo URL: https://i.ytimg.com/vi/ERRxlG-VP5M/default_live.jpg
-Add this link to the update file: New: CBS Sports Radio, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CBSSportsRadio/live
+Channel Name: Plainville Cardinals  Birds Eye View
+Channel URL: https://youtube.com/@PlainvilleCardinalsBirdsEyeView/live
+Title: HS BB Plainville vs Ellsworth Girls
+Description: 
+Logo URL: https://i.ytimg.com/vi/Ods-zRGie7o/default_live.jpg
+Add this link to the update file: New: Plainville Cardinals  Birds Eye View, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PlainvilleCardinalsBirdsEyeView/live
 
-Channel Name: Bruno Alves
-Channel URL: https://youtube.com/@BrunoAlves/live
-Title: SC BRAGA 10 SPORTING CP  EM DIRETO C BRUNA e PEPITO
-Description: EA FC httpsenebaBrunoAlvesFC24  PSN gift cards ao melhor preo  httpsenebaBrunoAlvesPSN  24mil jogos ao teu 
-Logo URL: https://i.ytimg.com/vi/sGrRpenxK0A/default_live.jpg
-Add this link to the update file: New: Bruno Alves, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BrunoAlves/live
+Channel Name: FUT LOVE SPORTS
+Channel URL: https://youtube.com/@FUTLOVESPORTS/live
+Title: FUT LOVE SPORTS39s broadcast
+Description: 
+Logo URL: https://i.ytimg.com/vi/bN8b2IcxAng/default_live.jpg
+Add this link to the update file: New: FUT LOVE SPORTS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FUTLOVESPORTS/live
 
-Channel Name: Drayton Madeira
-Channel URL: https://youtube.com/@DraytonMadeira/live
-Title: RESENHANDO 108   draytonmadeira sport ecvitoria ceara
-Description: draytonmadeira draytonmadeiradefreitas1974 USE PRODUTOS DE LIMPEZA 100 NATURAIS CONHEA A LOJA VIRTUAL 
-Logo URL: https://i.ytimg.com/vi/VeX0YKgV7Eg/default_live.jpg
-Add this link to the update file: New: Drayton Madeira, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DraytonMadeira/live
+Channel Name: White Rose Community TV
+Channel URL: https://youtube.com/@WhiteRoseCommunityTV/live
+Title: Girls Basketball  Delone Catholic vs York Catholic  Sports Shooting Stars  1232024
+Description: 
+Logo URL: https://i.ytimg.com/vi/jyoixCzn22o/default_live.jpg
+Add this link to the update file: New: White Rose Community TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WhiteRoseCommunityTV/live
 
-Channel Name: Locked On Sports Dallas
-Channel URL: https://youtube.com/@LockedOnSportsDallas/live
-Title: 247 STREAM Sports Talk on the Dallas Cowboys Dallas Mavericks Dallas Stars NCAA and More
-Description: From the 1 local podcast network Locked On Sports Dallas brings you daily coverage of the Dallas Cowboys Dallas Mavericks 
-Logo URL: https://i.ytimg.com/vi/m6f6nr7OqEE/default_live.jpg
-Add this link to the update file: New: Locked On Sports Dallas, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LockedOnSportsDallas/live
+Channel Name: EL DOMO SPORTS
+Channel URL: https://youtube.com/@ELDOMOSPORTS/live
+Title: KENTUCKY VS SOUTH CAROLINA LIVE  NCAAM Basketball Game Score JAN 23 2024
+Description: KENTUCKY VS SOUTH CAROLINA LIVE  NCAA Mens Basketball Game Score Radio JAN 23 2024  THANKS FOR 
+Logo URL: https://i.ytimg.com/vi/8HoQa6GuHYU/default_live.jpg
+Add this link to the update file: New: EL DOMO SPORTS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ELDOMOSPORTS/live
 
-Channel Name: 580 Sports Talk
-Channel URL: https://youtube.com/@580SportsTalk/live
-Title: 580 Sports Talk Jan 23 2024
-Description: On the Jan 23 2024 edition of 580 Sports Talk with Brendan Dan and Spencer How great does Mahomes have to be to win a 
-Logo URL: https://i.ytimg.com/vi/_S_Eg1CFZFs/default_live.jpg
-Add this link to the update file: New: 580 Sports Talk, INSERT YOUR PREFERRED GROUP, https://youtube.com/@580SportsTalk/live
+Channel Name: JHSTheWarning
+Channel URL: https://youtube.com/@JHSTheWarning/live
+Title: Basketball JHS vs Conway
+Description: 
+Logo URL: https://i.ytimg.com/vi/U4G6inPmUvo/default_live.jpg
+Add this link to the update file: New: JHSTheWarning, INSERT YOUR PREFERRED GROUP, https://youtube.com/@JHSTheWarning/live
 
-Channel Name: Locked On Sports Atlanta
-Channel URL: https://youtube.com/@LockedOnSportsAtlanta/live
-Title: 247 STREAM Sports Talk on the Atlanta Falcons Hawks Braves Georgia Bulldogs SEC and More
-Description: From the 1 local sports podcast network Locked On Sports Atlanta brings you 247 coverage of the Atlanta Falcons Atlanta 
-Logo URL: https://i.ytimg.com/vi/Xv-rLUKyzfo/default_live.jpg
-Add this link to the update file: New: Locked On Sports Atlanta, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LockedOnSportsAtlanta/live
+Channel Name: IFM
+Channel URL: https://youtube.com/@IFM/live
+Title: IFMTV 247
+Description: Suiveznous sur Facebook  httpswwwfacebookcomRadioIfm Instagram  httpswwwinstagramcomradioifm Twitter 
+Logo URL: https://i.ytimg.com/vi/GQI4Ii4wGCw/default_live.jpg
+Add this link to the update file: New: IFM, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IFM/live
+
+Channel Name: Zaleski Sports
+Channel URL: https://youtube.com/@ZaleskiSports/live
+Title: Wausau East at DC Everest  2024 WIAA Girls Basketball
+Description: 
+Logo URL: https://i.ytimg.com/vi/Hpz2raY1DTo/default_live.jpg
+Add this link to the update file: New: Zaleski Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZaleskiSports/live
+
+Channel Name: Fayetteville Sports Network
+Channel URL: https://youtube.com/@FayettevilleSportsNetwork/live
+Title: Varsity Girls Basketball I Bentonville  Fayetteville
+Description: 
+Logo URL: https://i.ytimg.com/vi/aRVnpFwgATY/default_live.jpg
+Add this link to the update file: New: Fayetteville Sports Network, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FayettevilleSportsNetwork/live
+
+Channel Name: Viking Sports Network
+Channel URL: https://youtube.com/@VikingSportsNetwork/live
+Title: Boys and Girls JV amp Varsity Basketball vs Morristown West
+Description: Tonights games vsMorrisotwn West feature JV Boys and Varsity Girls and Boys games
+Logo URL: https://i.ytimg.com/vi/CCGixv2uwaE/default_live.jpg
+Add this link to the update file: New: Viking Sports Network, INSERT YOUR PREFERRED GROUP, https://youtube.com/@VikingSportsNetwork/live
+
+Channel Name: Sauk Prairie Sports Boosters
+Channel URL: https://youtube.com/@SaukPrairieSportsBoosters/live
+Title: Sauk Prairie High School vs McFarland High School Womens JV Basketball
+Description: 
+Logo URL: https://i.ytimg.com/vi/g3ecUg3E_K4/default_live.jpg
+Add this link to the update file: New: Sauk Prairie Sports Boosters, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SaukPrairieSportsBoosters/live
+
+Channel Name: SummitCitySports
+Channel URL: https://youtube.com/@SummitCitySports/live
+Title: Huntington North at South Side  202324 Girls Basketball  SummitCitySports
+Description: repthefort Follow and like us on Facebook and Twitter wwwfacebookcom260sports httpstwittercom260sports 
+Logo URL: https://i.ytimg.com/vi/M5-EvdyQB74/default_live.jpg
+Add this link to the update file: New: SummitCitySports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SummitCitySports/live
+
+Channel Name: SHHS Sports
+Channel URL: https://youtube.com/@SHHSSports/live
+Title: Snow Hill High School vs Wicomico Womens Varsity Basketball
+Description: 
+Logo URL: https://i.ytimg.com/vi/zqZhbVWAjO4/default_live.jpg
+Add this link to the update file: New: SHHS Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SHHSSports/live
+
+Channel Name: WSGS
+Channel URL: https://youtube.com/@WSGS/live
+Title: WSGS SPORTS
+Description: 
+Logo URL: https://i.ytimg.com/vi/W9XHogsJ_JI/default_live.jpg
+Add this link to the update file: New: WSGS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WSGS/live
 
 Channel Name: KJBH Simulator GamePlay
 Channel URL: https://youtube.com/@KJBHSimulatorGamePlay/live
@@ -236,12 +257,19 @@ Description: Car Racing Stunt Simulator 3D  Impossible Sport Car Driving  Androi
 Logo URL: https://i.ytimg.com/vi/5JOeDVH1LZU/default_live.jpg
 Add this link to the update file: New: KJBH Simulator GamePlay, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KJBHSimulatorGamePlay/live
 
-Channel Name: GTSportsLeaguesTV6
-Channel URL: https://youtube.com/@GTSportsLeaguesTV6/live
-Title: GT sports tv6
-Description: Powered by Restream httpsrestreamio GTSports Leagues is a premium esports content and live tournament brand It has been 
-Logo URL: https://i.ytimg.com/vi/tZtJ8p74jCA/default_live.jpg
-Add this link to the update file: New: GTSportsLeaguesTV6, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GTSportsLeaguesTV6/live
+Channel Name: Locked On Sports Atlanta
+Channel URL: https://youtube.com/@LockedOnSportsAtlanta/live
+Title: 247 STREAM Sports Talk on the Atlanta Falcons Hawks Braves Georgia Bulldogs SEC and More
+Description: From the 1 local sports podcast network Locked On Sports Atlanta brings you 247 coverage of the Atlanta Falcons Atlanta 
+Logo URL: https://i.ytimg.com/vi/Xv-rLUKyzfo/default_live.jpg
+Add this link to the update file: New: Locked On Sports Atlanta, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LockedOnSportsAtlanta/live
+
+Channel Name: 8 Squad Rebel Radio Tv
+Channel URL: https://youtube.com/@8SquadRebelRadioTv/live
+Title: OFF THE TOP SPORTS RADIO PODCAST
+Description: JANUARY 23RD 2024 Sponsored by Burger King Gyro King All City Tax Service Lincoln Tax Unlimited Cheese Steaks 
+Logo URL: https://i.ytimg.com/vi/XTrQbKpsMWI/default_live.jpg
+Add this link to the update file: New: 8 Squad Rebel Radio Tv, INSERT YOUR PREFERRED GROUP, https://youtube.com/@8SquadRebelRadioTv/live
 
 Channel Name: HBGSD Cougar Sports
 Channel URL: https://youtube.com/@HBGSDCougarSports/live
@@ -250,19 +278,12 @@ Description: 1232024 430 PM  HBGSD Cougar Sports  Girls Basketball  Altoona vs t
 Logo URL: https://i.ytimg.com/vi/2HPCDKNs-j8/default_live.jpg
 Add this link to the update file: New: HBGSD Cougar Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HBGSDCougarSports/live
 
-Channel Name: Sports Updates By Anupam
-Channel URL: https://youtube.com/@SportsUpdatesByAnupam/live
-Title: 2024 World Open Snooker Qualifiers LIVE Score UPDATE Today Qualification Final Matches Jan 23 2024
-Description: 2024 World Open Snooker Qualifiers LIVE Score UPDATE Today Qualification Final Matches Jan 23 2024 BetVictor World Open 
-Logo URL: https://i.ytimg.com/vi/SnDtpi1PXwc/default_live.jpg
-Add this link to the update file: New: Sports Updates By Anupam, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SportsUpdatesByAnupam/live
-
-Channel Name: LOTO SPORT
-Channel URL: https://youtube.com/@LOTOSPORT/live
-Title: LOTO SPORT   
+Channel Name: Zaleski Sports
+Channel URL: https://youtube.com/@ZaleskiSports/live
+Title: Port Edwards at Pacelli  2024 WIAA Girls Basketball
 Description: 
-Logo URL: https://i.ytimg.com/vi/0hKoBc2U8-Y/default_live.jpg
-Add this link to the update file: New: LOTO SPORT, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LOTOSPORT/live
+Logo URL: https://i.ytimg.com/vi/6eC8llREQ7Y/default_live.jpg
+Add this link to the update file: New: Zaleski Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZaleskiSports/live
 
 Channel Name: HOP Sports
 Channel URL: https://youtube.com/@HOPSports/live
@@ -271,20 +292,6 @@ Description:
 Logo URL: https://i.ytimg.com/vi/MVnPU2Os5LE/default_live.jpg
 Add this link to the update file: New: HOP Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HOPSports/live
 
-Channel Name: Sports With BayZid Hossain
-Channel URL: https://youtube.com/@SportsWithBayZidHossain/live
-Title: LIVE  Hong Kong Vs Palestine  AFC Asian Cup Live Football Match Today Score
-Description: LIVE  Hong Kong Vs Palestine  AFC Asian Cup Live Football Match Today Score Hong Kong Vs Palestine Live Hong Kong Vs 
-Logo URL: https://i.ytimg.com/vi/v_YmmGAJLS0/default_live.jpg
-Add this link to the update file: New: Sports With BayZid Hossain, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SportsWithBayZidHossain/live
-
-Channel Name: Mummas Vlog
-Channel URL: https://youtube.com/@MummasVlog/live
-Title: Mumma39s Vlog is live welcome to my l v time freind s sport kijiyega
-Description: 
-Logo URL: https://i.ytimg.com/vi/GNVDHP-WiD8/default_live.jpg
-Add this link to the update file: New: Mummas Vlog, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MummasVlog/live
-
 Channel Name: esk rozhlas
 Channel URL: https://youtube.com/@eskrozhlas/live
 Title: esk rozhlas Radiournl Sport  Pohled do studia
@@ -292,33 +299,40 @@ Description:
 Logo URL: https://i.ytimg.com/vi/PrJe9MYgK0s/default_live.jpg
 Add this link to the update file: New: esk rozhlas, INSERT YOUR PREFERRED GROUP, https://youtube.com/@eskrozhlas/live
 
-Channel Name: THE BOAT SHOW
-Channel URL: https://youtube.com/@THEBOATSHOW/live
-Title: ITA The Boat Show Maratona Sky Sport 20152020 Stagioni Complete
-Description: Maratona The Boat Show Stagioni 2019 e 2020 il meglio della nautica internazionale a vela e a motore
-Logo URL: https://i.ytimg.com/vi/vQ01mXBK5nY/default_live.jpg
-Add this link to the update file: New: THE BOAT SHOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@THEBOATSHOW/live
+Channel Name: Casa D18 Studios
+Channel URL: https://youtube.com/@CasaD18Studios/live
+Title: Stat Boy39s Sports Bar January 23 2024
+Description: With less than three weeks until the Super Bowl the NBA and NHL near AllStar breaks and the rest of the athletic world making 
+Logo URL: https://i.ytimg.com/vi/aW9SIlIpOsQ/default_live.jpg
+Add this link to the update file: New: Casa D18 Studios, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CasaD18Studios/live
 
-Channel Name: Dima Sport
-Channel URL: https://youtube.com/@DimaSport/live
-Title:    Dima Sport
+Channel Name: Locked On Sports Minnesota
+Channel URL: https://youtube.com/@LockedOnSportsMinnesota/live
+Title: 247 STREAM Sports Talk on the Minnesota Vikings Timberwolves Twins Wild Gophers and Big 10
+Description: From the 1 local sports podcast network Locked On Sports Minnesota brings you 247 coverage of the Minnesota Vikings 
+Logo URL: https://i.ytimg.com/vi/2jU92cOOrtQ/default_live.jpg
+Add this link to the update file: New: Locked On Sports Minnesota, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LockedOnSportsMinnesota/live
+
+Channel Name: The Nate Brown Show
+Channel URL: https://youtube.com/@TheNateBrownShow/live
+Title: The Nate Brown Show on FOX Sports Rapid City 12324
+Description: Be sure to SUBSCRIBE and LIKE the video for more thoughtprovoking sports talk Links Website httpsfoxsportsrapidcitycom 
+Logo URL: https://i.ytimg.com/vi/9byyTj6UbTM/default_live.jpg
+Add this link to the update file: New: The Nate Brown Show, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheNateBrownShow/live
+
+Channel Name: Fronteira Internet
+Channel URL: https://youtube.com/@FronteiraInternet/live
+Title: Colina Sports Quadra BodyCompany
+Description: Colina Sports Quadra BodyCompany
+Logo URL: https://i.ytimg.com/vi/QaSNnbmnRIU/default_live.jpg
+Add this link to the update file: New: Fronteira Internet, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FronteiraInternet/live
+
+Channel Name: Sewickley Sport
+Channel URL: https://youtube.com/@SewickleySport/live
+Title: Sewickley Sports Arena   Livestream
 Description: 
-Logo URL: https://i.ytimg.com/vi/rg4CP_Q-_1I/default_live.jpg
-Add this link to the update file: New: Dima Sport, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DimaSport/live
-
-Channel Name: City of North Myrtle Beach
-Channel URL: https://youtube.com/@CityofNorthMyrtleBeach/live
-Title: NMB Park and Sports Complex Baseball Field 4
-Description: 
-Logo URL: https://i.ytimg.com/vi/UzdRSPBCt7I/default_live.jpg
-Add this link to the update file: New: City of North Myrtle Beach, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CityofNorthMyrtleBeach/live
-
-Channel Name: CricHeroes Live Stream
-Channel URL: https://youtube.com/@CricHeroesLiveStream/live
-Title: Live Cricket Match  Shree Adhishakti Construction vs Shree Ram Sports  23Jan24 0930 PM 6 overs
-Description: Watch Full Scorecard on CricHeroes httpsmatchscorecardpagelinktyKrQk6D8PSmwE78A Round League Matches Teams 
-Logo URL: https://i.ytimg.com/vi/DsGI2XrWlL8/default_live.jpg
-Add this link to the update file: New: CricHeroes Live Stream, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CricHeroesLiveStream/live
+Logo URL: https://i.ytimg.com/vi/Fi2NBE7J_VQ/default_live.jpg
+Add this link to the update file: New: Sewickley Sport, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SewickleySport/live
 
 Channel Name: Fronteira Internet
 Channel URL: https://youtube.com/@FronteiraInternet/live
@@ -327,19 +341,26 @@ Description: Colina Sports Quadra FrontCEL
 Logo URL: https://i.ytimg.com/vi/uPVr49a-poU/default_live.jpg
 Add this link to the update file: New: Fronteira Internet, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FronteiraInternet/live
 
-Channel Name: City of North Myrtle Beach
-Channel URL: https://youtube.com/@CityofNorthMyrtleBeach/live
-Title: NMB Park and Sports Complex Baseball Field 6
-Description: 
-Logo URL: https://i.ytimg.com/vi/7_jCHBfMNU0/default_live.jpg
-Add this link to the update file: New: City of North Myrtle Beach, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CityofNorthMyrtleBeach/live
+Channel Name: Sports With BayZid Hossain
+Channel URL: https://youtube.com/@SportsWithBayZidHossain/live
+Title: LIVE  Hong Kong Vs Palestine  AFC Asian Cup Live Football Match Today Score
+Description: LIVE  Hong Kong Vs Palestine  AFC Asian Cup Live Football Match Today Score Hong Kong Vs Palestine Live Hong Kong Vs 
+Logo URL: https://i.ytimg.com/vi/v_YmmGAJLS0/default_live.jpg
+Add this link to the update file: New: Sports With BayZid Hossain, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SportsWithBayZidHossain/live
 
-Channel Name: Vant Bf Info
-Channel URL: https://youtube.com/@VantBfInfo/live
-Title: Vant Bf Info Sport
-Description: Vant Bf Info Sport  Vant Bef Info  Anderson Jean
-Logo URL: https://i.ytimg.com/vi/cI4UFD5dZ9E/default_live.jpg
-Add this link to the update file: New: Vant Bf Info, INSERT YOUR PREFERRED GROUP, https://youtube.com/@VantBfInfo/live
+Channel Name: Fronteira Internet
+Channel URL: https://youtube.com/@FronteiraInternet/live
+Title: Colina Sports Quadra FrontCEL
+Description: Colina Sports Quadra FrontCEL
+Logo URL: https://i.ytimg.com/vi/uPVr49a-poU/default_live.jpg
+Add this link to the update file: New: Fronteira Internet, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FronteiraInternet/live
+
+Channel Name: The Official Home for Martin Houston
+Channel URL: https://youtube.com/@TheOfficialHomeforMartinHouston/live
+Title: The Martin Houston Show powered by MaX Sports  Instant Replay
+Description: Join the Live Broadcast at 6a7a MF Follow  Subscribe to the Livestream on Facebook  YouTube on martinjhouston35 
+Logo URL: https://i.ytimg.com/vi/4ocj7pKP2DI/default_live.jpg
+Add this link to the update file: New: The Official Home for Martin Houston, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TheOfficialHomeforMartinHouston/live
 
 Channel Name: City of North Myrtle Beach
 Channel URL: https://youtube.com/@CityofNorthMyrtleBeach/live
@@ -355,12 +376,19 @@ Description: Colina Sports Quadra Fronteira Internet
 Logo URL: https://i.ytimg.com/vi/inqZ229YNSk/default_live.jpg
 Add this link to the update file: New: Fronteira Internet, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FronteiraInternet/live
 
-Channel Name: village life pakistan8012
-Channel URL: https://youtube.com/@villagelifepakistan8012/live
-Title: 3k sport friend plz
-Description: 
-Logo URL: https://i.ytimg.com/vi/T7cIXHQRc6I/default_live.jpg
-Add this link to the update file: New: village life pakistan8012, INSERT YOUR PREFERRED GROUP, https://youtube.com/@villagelifepakistan8012/live
+Channel Name: Cricket news001
+Channel URL: https://youtube.com/@Cricketnews001/live
+Title: Star Sports Live Streaming  TEST LIVE COMMENTARY  INDIA VS ENGLAND LIVE MATCH   indvseng
+Description: Star Sports Live Streaming  ICC Cricket Match Live Star Sports Live Streaming  ICC Cricket Match Live Star Sports Live 
+Logo URL: https://i.ytimg.com/vi/czVsPur3HNc/default_live.jpg
+Add this link to the update file: New: Cricket news001, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Cricketnews001/live
+
+Channel Name: Hit The Books Sports
+Channel URL: https://youtube.com/@HitTheBooksSports/live
+Title: Ultimate Sports Betting Hub NBA NHL NFL Live Odds amp More  247 Action
+Description: Welcome to the ultimate destination for sports enthusiasts and betting aficionados Join our live stream for nonstop action 
+Logo URL: https://i.ytimg.com/vi/85wZQ4znnDk/default_live.jpg
+Add this link to the update file: New: Hit The Books Sports, INSERT YOUR PREFERRED GROUP, https://youtube.com/@HitTheBooksSports/live
 
 Channel Name: Sports With BayZid Hossain
 Channel URL: https://youtube.com/@SportsWithBayZidHossain/live
@@ -369,13 +397,6 @@ Description: LIVE  Gambia Vs Cameroon  CAF Africa Cup of Nations Live Football M
 Logo URL: https://i.ytimg.com/vi/WKhSxRiUvAg/default_live.jpg
 Add this link to the update file: New: Sports With BayZid Hossain, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SportsWithBayZidHossain/live
 
-Channel Name: Asd Sport 2000
-Channel URL: https://youtube.com/@AsdSport2000/live
-Title: U14 Sport 2000  Virtus Roma
-Description: 
-Logo URL: https://i.ytimg.com/vi/jm3gACndzfE/default_live.jpg
-Add this link to the update file: New: Asd Sport 2000, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AsdSport2000/live
-
 Channel Name: WebcamGreece
 Channel URL: https://youtube.com/@WebcamGreece/live
 Title: Dominican Republic Cabarete Palm Beach Resort near Santo Domingo Surf Water Sport Webcam
@@ -383,19 +404,26 @@ Description: Many Thanks to our partner  httpscabaretecondoscom Visit his websit
 Logo URL: https://i.ytimg.com/vi/6KuQFCdvc8U/default_live.jpg
 Add this link to the update file: New: WebcamGreece, INSERT YOUR PREFERRED GROUP, https://youtube.com/@WebcamGreece/live
 
-Channel Name: Goal Vision
-Channel URL: https://youtube.com/@GoalVision/live
-Title: Live 2D Football Match Stream  AFC Asian cup  Qatar vs China  Tajikistan vs Lebanon
-Description: Welcome to experience the captivating fusion of football and animation in a groundbreaking live event Watch your favorite teams 
-Logo URL: https://i.ytimg.com/vi/IeNv1WKNEy8/default_live.jpg
-Add this link to the update file: New: Goal Vision, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GoalVision/live
+Channel Name: MATHEUS BARBOSA VLOG 20
+Channel URL: https://youtube.com/@MATHEUSBARBOSAVLOG20/live
+Title: NOVO JOGO PS4 FC SPORT 24 PARTIDA CLASSICA
+Description: Matheus ziron Barbosa zago tenho 22ano nasceu dia 07 032001 CIDADE SANTOS SP FACO ANIVERSARIO MES MARCO 
+Logo URL: https://i.ytimg.com/vi/32X3HJ2SCZI/default_live.jpg
+Add this link to the update file: New: MATHEUS BARBOSA VLOG 20, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MATHEUSBARBOSAVLOG20/live
 
-Channel Name: Fronteira Internet
-Channel URL: https://youtube.com/@FronteiraInternet/live
-Title: Colina Sports Quadra BodyCompany
-Description: Colina Sports Quadra BodyCompany
-Logo URL: https://i.ytimg.com/vi/QaSNnbmnRIU/default_live.jpg
-Add this link to the update file: New: Fronteira Internet, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FronteiraInternet/live
+Channel Name: Cricket news001
+Channel URL: https://youtube.com/@Cricketnews001/live
+Title: PTV Sports Live  PTV Sports Live Streaming  PTV Sports  Pak vs Nz live t20 series
+Description: PTV Sports Live PTV Sports Live Streaming PTV Sports live Cricket Match Cricket Match Highlights Icc cricket world Cup 2023 
+Logo URL: https://i.ytimg.com/vi/ton9PpVhl4w/default_live.jpg
+Add this link to the update file: New: Cricket news001, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Cricketnews001/live
+
+Channel Name: City of North Myrtle Beach
+Channel URL: https://youtube.com/@CityofNorthMyrtleBeach/live
+Title: NMB Park and Sports Complex Baseball Field 1
+Description: 
+Logo URL: https://i.ytimg.com/vi/LuFHHGUUosM/default_live.jpg
+Add this link to the update file: New: City of North Myrtle Beach, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CityofNorthMyrtleBeach/live
 
 Channel Name: 30 Seconds Sound
 Channel URL: https://youtube.com/@30SecondsSound/live
@@ -403,4 +431,11 @@ Title: New Music January 2024 Livestream 247 Livestream Workout Sport Music
 Description: Welcome to our 247 Livestream Music channel Subscribe now to never miss out on the latest 2024 music and enjoy a 
 Logo URL: https://i.ytimg.com/vi/D4WTymsyQJI/default_live.jpg
 Add this link to the update file: New: 30 Seconds Sound, INSERT YOUR PREFERRED GROUP, https://youtube.com/@30SecondsSound/live
+
+Channel Name: Radioflamax
+Channel URL: https://youtube.com/@Radioflamax/live
+Title: FLAMAX SPORT  23012024
+Description: FLAMAX SPORT
+Logo URL: https://i.ytimg.com/vi/Wo9_cuFLrFw/default_live.jpg
+Add this link to the update file: New: Radioflamax, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Radioflamax/live
 
