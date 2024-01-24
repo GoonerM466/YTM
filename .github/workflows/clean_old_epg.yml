@@ -24,7 +24,7 @@ jobs:
       run: cat combined_epg.xml
 
     - name: Run clean_old_epg.py
-      run: python ./.scripts/clean_old_epg.py
+      run: python ./scripts/clean_old_epg.py
 
     - name: Print output file contents
       run: cat old_epg.xml
