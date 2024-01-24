@@ -17,7 +17,6 @@ def fetch_ts_segments(channel_name, group, channel_url):
         'quiet': False,  # Set to True if you want less console output from yt-dlp
         'format': 'best',  # Selects the best available quality
         'outtmpl': output_file,  # Output file template
-        'skip_download': True,  # Skip actual downloading of the video
     }
 
     try:
@@ -40,6 +39,15 @@ def fetch_ts_segments(channel_name, group, channel_url):
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error fetching TS segments for {channel_name}: {e}")
         return None
+
+def is_channel_live(channel_url):
+    try:
+        with yt_dlp.YoutubeDL() as ydl:
+            info_dict = ydl.extract_info(channel_url, download=False)
+            return info_dict.get('is_live', False)
+    except yt_dlp.utils.ExtractorError as e:
+        print(f"Error checking if the channel is live: {e}")
+        return False
 
 def update_live_status(channels):
     print("Updating live status...")
