@@ -1,8 +1,8 @@
-name: Log Cleanup Workflow
+name: Clean CHannel Log
 
 on:
   workflow_run:
-    workflows: ["Channel Logger Workflow"]
+    workflows: ["zzz-Channel Logger Workflow"]
     types:
       - completed
 
