@@ -33,7 +33,7 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
       
-    - name: Run Fetch_m3u8 Script
+    - name: Run Fetch_urls Script
       run: python ./.scripts/fetch_urls.py
 
     - name: Print workspace
