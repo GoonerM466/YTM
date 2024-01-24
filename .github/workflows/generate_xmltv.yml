@@ -32,7 +32,7 @@ jobs:
     - name: Check if changes exist
       id: check_changes
       run: |
-        git diff --exit-code || echo "Changes detected" && exit 0
+        git diff --quiet || (echo "Changes detected" && exit 0)
 
     - name: Check repository status before staging
       run: git status
