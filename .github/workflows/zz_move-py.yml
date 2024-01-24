@@ -1,4 +1,4 @@
-name: Move Live Channels Files
+name: ZZ-Move Python
 
 on:
   workflow_dispatch:
