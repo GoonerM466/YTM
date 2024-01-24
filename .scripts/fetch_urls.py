@@ -1,14 +1,13 @@
 import yt_dlp
-from yt_dlp.utils import ExtractorError
+import time
 
 def search_youtube_and_get_channel_url(search_phrase, max_results=1):
     ydl = yt_dlp.YoutubeDL()
-    
     try:
         search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
         channel_url = search_results.get('entries', [{}])[0].get('channel_url', None)
         return channel_url
-    except ExtractorError as e:
+    except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
         return None
 
@@ -19,35 +18,28 @@ def process_input_file(input_filename):
         lines = file.readlines()
 
     updated_lines = []
-    channel_url = None  # Initialize channel_url here
-    channel_url_added = False  # Flag to track whether Channel URL line has been added
 
     for line in lines:
         if line.startswith("Channel Name:"):
             channel_name = line.replace("Channel Name:", "").strip()
-            search_term = channel_name.lower()  # using the channel name as the search term
+            search_term = channel_name.lower()
             channel_url = search_youtube_and_get_channel_url(search_term)
 
             if channel_url:
                 live_channel_url = f"{channel_url.rstrip('/')}/live"
                 updated_lines.append(f"Channel Name: {channel_name}\n")
                 updated_lines.append(f"Channel URL: {live_channel_url}\n")
-                channel_url_added = True  # Set the flag to true
             else:
                 print(f"Could not find a channel URL for '{channel_name}'. Skipping.")
+
+            # Add a 2-second delay between each search
+            time.sleep(2)
         elif line.startswith(("Title:", "Description:", "Logo URL:")):
-            # Preserve lines starting with "Title:", "Description:", and "Logo URL:"
             updated_lines.append(line)
         elif line.startswith("Add this link to the update file:"):
-            # Update the line with the new channel URL if not already added
-            if channel_url and not channel_url_added:
-                updated_line = f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {live_channel_url}\n"
-                updated_lines.append(updated_line)
-            else:
-                # If channel URL already added or not found, keep the original line
-                updated_lines.append(line)
-        else:
-            updated_lines.append(line)
+            # Replace the existing "Add this link to the update file" line
+            channel_url_line = f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {live_channel_url}\n"
+            updated_lines.append(channel_url_line)
 
     with open(output_filename, 'w') as file:
         file.writelines(updated_lines)
