@@ -30,7 +30,14 @@ def process_input_file(input_filename):
             # Preserve lines starting with "Title:", "Description:", and "Logo URL:"
             updated_lines.append(line)
         elif line.startswith("Add this link to the update file:"):
-            # Preserve the original "Add this link to the update file:" line
+            # Update the line with the new channel URL
+            if channel_url:
+                updated_line = f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {live_channel_url}\n"
+                updated_lines.append(updated_line)
+            else:
+                # If channel URL not found, keep the original line
+                updated_lines.append(line)
+        else:
             updated_lines.append(line)
 
     with open(output_filename, 'w') as file:
