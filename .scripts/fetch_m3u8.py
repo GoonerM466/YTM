@@ -23,7 +23,7 @@ def fetch_m3u8(channel_name, group, channel_url):
             video_id = info_dict.get('video_id', None)
 
             if video_id:
-                m3u8_url = "https://www.youtube.com/watch?v={}&ab_channel={}".format(video_id, channel_name)
+                m3u8_url = next((format['url'] for format in info_dict.get('formats', []) if format.get('url') and format.get('protocol') == 'm3u8'), None)
             else:
                 m3u8_url = None
 
