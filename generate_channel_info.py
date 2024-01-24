@@ -20,7 +20,7 @@ def round_up_to_hour(dt):
     # Round up the given datetime object to the nearest hour
     return (dt + timedelta(hours=1)).replace(minute=0, second=0, microsecond=0)
 
-def generate_channel_info(channel_name):
+def generate_channel_info(channel_name, existing_channels):
     # Extract the first part of the channel name before the first space
     channel_name_first_part = channel_name.split()[0]
 
@@ -35,6 +35,7 @@ def generate_channel_info(channel_name):
     return f'''  <channel id="{channel_name}">
     <display-name lang="en">{channel_name}</display-name>
   </channel>
+'''
 '''
 
 def generate_program_info(channel_name, live_status, time_str, existing_programs):
@@ -94,6 +95,7 @@ def main():
 '''
 
     xmltv_content = header
+    existing_channels = []  # Keep track of existing channels
 
     # Get the current time rounded up to the next hour
     current_time = datetime.now()
@@ -105,7 +107,7 @@ def main():
             channel_name, live_status, time_str = parsed_info
 
             # Add channel information
-            channel_info_entry = generate_channel_info(channel_name)
+            channel_info_entry = generate_channel_info(channel_name, existing_channels)
             if channel_info_entry:
                 xmltv_content += channel_info_entry
 
@@ -128,6 +130,5 @@ def main():
         combined_epg_file.write(xmltv_content)
 
 if __name__ == '__main__':
-    main()
     main()
 
