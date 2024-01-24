@@ -133,9 +133,18 @@ def sort_xmltv_content(xmltv_content):
     lines = xmltv_content.split('\n')
     start_index = lines.index('<tv generator-info-name="none" generator-info-url="none">') + 1
     end_index = lines.index('</tv>')
-    programs = sorted(lines[start_index:end_index], key=lambda x: (extract_channel_name(x), extract_start_time(x)))
-    lines[start_index:end_index] = programs
-    return '\n'.join(lines)
+
+    # Extract program entries for sorting
+    programs = lines[start_index:end_index]
+    program_start_times = [extract_start_time(program) for program in programs]
+
+    # Sort program entries by start time
+    sorted_programs = [program for _, program in sorted(zip(program_start_times, programs))]
+
+    # Replace the original program entries with the sorted ones
+    lines[start_index:end_index] = sorted_programs
+
+    return '\n'.join(lines))
 
 def extract_channel_name(program_line):
     match = re.search(r'channel="(.+)"', program_line)
