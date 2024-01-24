@@ -29,53 +29,8 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
 
-    - name: Finding popular live channels
-      run: python find_live.py
-
-    - name: Waiting...
-      run: sleep 20
-
     - name: Finding music channels
       run: python find_music.py
-
-    - name: Waiting...
-      run: sleep 20
-      
-    - name: Finding sport channels
-      run: python find_sport.py
-
-    - name: Waiting...
-      run: sleep 20
-      
-    - name: Finding news channels
-      run: python find_news.py
-
-    - name: Waiting...
-      run: sleep 20
-      
-    - name: Finding radio channels
-      run: python find_radio.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding entertainment channels
-      run: python find_entertainment.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding gaming channels
-      run: python find_gaming.py
-      
-    - name: Finding documentary channels
-      run: python find_docs.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding comedy channels
-      run: python find_comedy.py
 
     - name: Check for changes
       id: check-changes
