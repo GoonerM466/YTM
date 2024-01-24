@@ -24,7 +24,7 @@ def search_youtube_and_get_channel_url(search_phrase, max_results=1):
     except Exception as e:
         print(f"An unexpected error occurred: {str(e)}")
         return None
-        
+
 def process_input_file(input_filename):
     output_filename = input_filename
 
@@ -54,7 +54,6 @@ def process_all_files_in_directory(directory):
     for filename in os.listdir(directory):
         if filename.endswith("_live_channels.txt"):
             input_file_path = os.path.join(directory, filename)
-            print(f"Processing file: {input_file_path}")
             process_input_file(input_file_path)
 
 if __name__ == "__main__":
