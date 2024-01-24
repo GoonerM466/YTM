@@ -17,6 +17,7 @@ def fetch_ts_segments(channel_name, group, channel_url):
         'quiet': False,  # Set to True if you want less console output from yt-dlp
         'format': 'best',  # Selects the best available quality
         'outtmpl': output_file,  # Output file template
+        'skip_download': True,  # Skip actual downloading of the video
     }
 
     try:
