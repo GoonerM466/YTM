@@ -1,4 +1,4 @@
-name: Generate XMLTV
+name: 3-Generate XMLTV
 
 on:
   workflow_dispatch:
