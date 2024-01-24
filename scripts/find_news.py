@@ -14,9 +14,7 @@ def get_channel_category(channel_id):
     return None
 
 def clean_text(text):
-    # Remove non-alphanumeric characters and emojis
-    cleaned_text = re.sub(r'[^a-zA-Z0-9 ]', '', text)
-    return cleaned_text
+    return text
 
 def search_live_channels(api_key, max_results=50):
     start_time = time.time()
@@ -25,7 +23,7 @@ def search_live_channels(api_key, max_results=50):
     live_links = []
     next_page_token = None
 
-    while True:
+    try:
         try:
             print("Searching...")
             request = youtube.search().list(
@@ -90,12 +88,8 @@ def search_live_channels(api_key, max_results=50):
                 break
 
         except Exception as e:
-            if 'quota' in str(e).lower():
-                print(f"API Quota exceeded warning. Waiting 20 seconds...")
-                time.sleep(20)
-                print("Waiting...")
-            else:
-                raise
+        print("No live channels found.")
+        break
 
     return live_links
 
@@ -104,7 +98,7 @@ if __name__ == "__main__":
     live_channels = search_live_channels(api_key)
 
     # Write results to the all_live_channels.txt file
-    with open('news_live_channels.txt', 'w', encoding='utf-8') as file:
+    with open('found_channels/news_live_channels.txt', 'w', encoding='utf-8') as file:
         for channel in live_channels:
             file.write(f"Channel Name: {channel['name']}\n")
             file.write(f"Channel URL: {channel['url']}\n")
