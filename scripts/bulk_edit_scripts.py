@@ -17,11 +17,14 @@ def bulk_edit_scripts(directory):
             content = re.sub(r'while True:', 'try:', content)
             content = re.sub(r'except Exception as e:.+?raise', 'except Exception as e:\n        print("No live channels found.")\n        break', content, flags=re.DOTALL)
 
+            # Change the location of the *_live_channels.txt file
+            content = re.sub(r"with open\('(\w+_live_channels.txt)', 'w', encoding='utf-8'\) as file:", "with open('found_channels/\\1', 'w', encoding='utf-8') as file:", content)
+
             with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(content)
 
             print(f"Script '{filename}' has been modified.")
 
 if __name__ == "__main__":
-    script_directory = "./.scripts"
+    script_directory = "./scripts"
     bulk_edit_scripts(script_directory)
