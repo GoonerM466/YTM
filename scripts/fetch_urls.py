@@ -1,3 +1,4 @@
+import os
 import yt_dlp
 import time
 
@@ -46,6 +47,15 @@ def process_input_file(input_filename):
 
     print(f"Updated information written to {output_filename}")
 
+def process_all_files_in_directory(directory):
+    for filename in os.listdir(directory):
+        if filename.endswith("_live_channels.txt"):
+            input_file_path = os.path.join(directory, filename)
+            process_input_file(input_file_path)
+
 if __name__ == "__main__":
-    input_file = "music_live_channels.txt"
-    process_input_file(input_file)
+    # Directory where the files are located
+    directory = "found_channels"
+    
+    # Process all files in the directory
+    process_all_files_in_directory(directory)
