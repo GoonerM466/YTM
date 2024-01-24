@@ -93,11 +93,13 @@ def main():
 
     xmltv_content = header
     existing_channels = []  # Keep track of existing channels
+    existing_programs = []  # Keep track of existing programs
 
     # Get the current time rounded up to the next hour
     current_time = datetime.now()
     current_time_rounded = round_up_to_hour(current_time)
 
+    # Accumulate channel information
     for line in lines:
         parsed_info = parse_live_status(line)
         if parsed_info:
@@ -107,6 +109,12 @@ def main():
             channel_info_entry = generate_channel_info(channel_name, existing_channels)
             if channel_info_entry:
                 xmltv_content += channel_info_entry
+
+    # Accumulate program information
+    for line in lines:
+        parsed_info = parse_live_status(line)
+        if parsed_info:
+            channel_name, live_status, time_str = parsed_info
 
             # Clear existing program information for the current channel
             existing_programs = []  # Reset the list for each channel
