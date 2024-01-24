@@ -61,6 +61,9 @@ jobs:
 
     - name: Finding gaming channels
       run: python ./scripts/find_gaming.py
+
+    - name: Waiting...
+      run: sleep 20
       
     - name: Finding documentary channels
       run: python ./scripts/find_docs.py
