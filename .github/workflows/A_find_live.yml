@@ -2,7 +2,7 @@ name: A-Find Live Channels
 
 on:
   schedule:
-  - cron: '0 */2 * * *'   # Run 2 hours
+    - cron: '0 */2 * * *'   # Run every 2 hours
   workflow_dispatch:
 
 jobs:
@@ -29,24 +29,27 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
 
+    - name: Pull latest changes with 'ours' strategy
+      run: git pull --strategy=ours origin main
+
     - name: Finding music channels
       run: python ./scripts/find_music.py
 
     - name: Waiting...
       run: sleep 20
-      
+
     - name: Finding sport channels
       run: python ./scripts/find_sport.py
 
     - name: Waiting...
       run: sleep 20
-      
+
     - name: Finding news channels
-      run: python./scripts/ find_news.py
+      run: python ./scripts/find_news.py
 
     - name: Waiting...
       run: sleep 20
-      
+
     - name: Finding radio channels
       run: python ./scripts/find_radio.py
 
@@ -64,7 +67,7 @@ jobs:
 
     - name: Waiting...
       run: sleep 20
-      
+
     - name: Finding documentary channels
       run: python ./scripts/find_docs.py
 
