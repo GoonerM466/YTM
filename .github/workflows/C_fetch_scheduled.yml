@@ -1,4 +1,4 @@
-name: B-Fetch Scheduled
+name: C-Fetch Scheduled
 
 on:
   workflow_dispatch:
