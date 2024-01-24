@@ -1215,7 +1215,6 @@
     <title lang="en">Live</title>
     <desc lang="en">JazzCafeAmbience is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-</tv>
   <programme start="20240124190000 +0000" stop="20240124190955 +0000" channel="ABCNews">
   <programme start="20240124190000 +0000" stop="20240124200000 +0000" channel="ABCNews">
   <programme start="20240124190000 +0000" stop="20240124200000 +0000" channel="ABCNews">
@@ -1606,3 +1605,4 @@
   <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="talkSPORT">
   <programme start="20240125170000 +0000" stop="20240125180000 +0000" channel="talkSPORT">
   <programme start="20240125180000 +0000" stop="20240125190000 +0000" channel="talkSPORT">
+</tv>
