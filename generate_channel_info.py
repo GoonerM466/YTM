@@ -1,6 +1,8 @@
 import re
 from datetime import datetime, timedelta
 
+existing_channels = []  
+
 def parse_live_status(line):
     # Parse the information from the live_status.txt line
     match = re.match(r'^([\w_]+) - (Live|Not Live) - (.+ UTC \d{4})$', line)
@@ -120,5 +122,6 @@ def main():
         combined_epg_file.write(xmltv_content)
 
 if __name__ == '__main__':
+    main()
     main()
 
