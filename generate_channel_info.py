@@ -14,6 +14,10 @@ def convert_to_xmltv_time(time_str):
     dt = datetime.strptime(time_str, '%a %b %d %H:%M:%S %Z %Y')
     return dt.strftime('%Y%m%d%H%M%S +0000')
 
+def round_up_to_hour(dt):
+    # Round up the given datetime object to the nearest hour
+    return (dt + timedelta(hours=1)).replace(minute=0, second=0, microsecond=0)
+
 def generate_channel_info(channel_name, existing_channels):
     # Extract the first part of the channel name before the first space
     channel_name_first_part = channel_name.split()[0]
@@ -30,30 +34,54 @@ def generate_channel_info(channel_name, existing_channels):
   </channel>
 '''
 
-def adjust_program_times(existing_program, new_program_start):
-    # If existing program started less than 5 minutes ago, adjust its start time backward by 25 minutes
-    start_time = datetime.strptime(existing_program['start'], '%Y%m%d%H%M%S +0000')
-    if start_time > new_program_start - timedelta(minutes=5):
-        existing_program['start'] = (new_program_start - timedelta(minutes=25)).strftime('%Y%m%d%H%M%S +0000')
-
 def generate_program_info(channel_name, live_status, time_str, existing_programs):
     # Convert time_str to XMLTV format
     new_program_start = datetime.strptime(convert_to_xmltv_time(time_str), '%Y%m%d%H%M%S +0000')
-    new_program_stop = (new_program_start + timedelta(hours=3)).strftime('%Y%m%d%H%M%S +0000')
+
+    # Round up the start time to the nearest hour
+    new_program_start_rounded = round_up_to_hour(new_program_start)
+    new_program_stop_rounded = (new_program_start_rounded + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
 
     # Check for existing programs with the same details
     for existing_program in existing_programs:
-        if existing_program['channel'] == channel_name and existing_program['start'] < new_program_stop and existing_program['stop'] > new_program_start:
-            # Adjust times to avoid overlap
-            adjust_program_times(existing_program, new_program_start)
-            return ""  # Do not add the new program as it already exists
-    else:
-        # No matching program found, add the new program
-        return f'''  <programme start="{new_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{new_program_stop}" channel="{channel_name}">
+        if existing_program['channel'] == channel_name and existing_program['start'] == new_program_start_rounded.strftime('%Y%m%d%H%M%S +0000') and existing_program['stop'] == new_program_stop_rounded:
+            # Program with the same details already exists, skip adding it
+            return ""
+
+    # Create the new program
+    new_program_stop = (new_program_start + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
+    new_program_info = f'''  <programme start="{new_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{new_program_stop}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
     <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
 '''
+
+    # Create the following program with the same details
+    following_program_start = new_program_start_rounded
+    following_program_stop = (following_program_start + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
+    following_program_info = f'''  <programme start="{following_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{following_program_stop}" channel="{channel_name}">
+    <title lang="en">{live_status}</title>
+    <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
+  </programme>
+'''
+
+    return new_program_info + following_program_info
+
+def generate_placeholder_programs(channel_name, current_time_rounded):
+    # Generate 24 hours worth of "To be Announced" programs for the given channel
+    programs = ""
+    for _ in range(24):
+        program_start = current_time_rounded.strftime('%Y%m%d%H%M%S +0000')
+        program_stop = (current_time_rounded + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
+        program_info = f'''  <programme start="{program_start}" stop="{program_stop}" channel="{channel_name}">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
+'''
+        programs += program_info
+        current_time_rounded += timedelta(hours=1)
+
+    return programs
 
 def main():
     with open('live_status.txt', 'r') as file:
@@ -66,19 +94,12 @@ def main():
     channel_info = ""
     program_info = ""
 
-    # Read program information from old_epg.xml and parse it
-    with open('old_epg.xml', 'r') as old_epg_file:
-        old_epg_content = old_epg_file.read()
+    existing_channels = []  # Remove old EPG channel extraction
+    existing_programs = []  # Remove old EPG program extraction
 
-    # Extract existing channel and program details from old_epg_content
-    existing_channels = []
-    existing_programs = []
-    channel_match = re.finditer(r'<channel id="(.+)">\s*<display-name lang="en">(.+)</display-name>\s*</channel>', old_epg_content)
-    for match in channel_match:
-        existing_channels.append({'name': match.group(2)})
-    program_match = re.finditer(r'<programme start="(.+)" stop="(.+)" channel="(.+)">', old_epg_content)
-    for match in program_match:
-        existing_programs.append({'channel': match.group(3), 'start': match.group(1), 'stop': match.group(2)})
+    # Get the current time rounded up to the next hour
+    current_time = datetime.now()
+    current_time_rounded = round_up_to_hour(current_time)
 
     for line in lines:
         parsed_info = parse_live_status(line)
@@ -87,10 +108,14 @@ def main():
             channel_info_entry = generate_channel_info(channel_name, existing_channels)
             if channel_info_entry:
                 channel_info += channel_info_entry
+
+            # Add 24 hours worth of "To be Announced" programs for the channel
+            program_info += generate_placeholder_programs(channel_name, current_time_rounded)
+
             program_info += generate_program_info(channel_name, live_status, time_str, existing_programs)
 
     # Combine all information into the final XMLTV content
-    xmltv_content = f"{header}{channel_info}{old_epg_content}{program_info}</tv>"
+    xmltv_content = f"{header}{channel_info}{program_info}</tv>"
 
     # Write the combined content to combined_epg.xml
     with open('combined_epg.xml', 'w') as combined_epg_file:
