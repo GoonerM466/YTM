@@ -1,5 +1,4 @@
 name: Delete M3U8 Files
-
 on:
   schedule:
     - cron: '0 23 * * *'
@@ -8,33 +7,23 @@ on:
       manual_run:
         description: 'Run the workflow manually'
         default: 'false'
-
 jobs:
   delete_files:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Delete .m3u8 files and empty folders
+    - name: Delete .m3u8 files
       run: |
-        find . -type f -name "*.m3u8" -delete
-
-        # Check if there are empty directories and delete them
-        while IFS= read -r -d '' dir; do
-          if [ -z "$(ls -A "$dir")" ]; then
-            rmdir "$dir"
-          fi
-        done < <(find . -type d -empty -print0)
-
-        # Commit and push changes if anything was deleted
-        if [ -n "$(git status --porcelain)" ]; then
+        files=$(find . -type f -name "*.m3u8")
+        if [ -z "$files" ]; then
+          echo "Directories are already clean - Nothing to delete"
+        else
+          find . -type f -name "*.m3u8" -delete
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git add .
-          git commit -m "Delete .m3u8 files and empty folders"
+          git commit -m "Delete .m3u8 files"
           git push
-        else
-          echo "Directories are already clean - Nothing to delete"
         fi
