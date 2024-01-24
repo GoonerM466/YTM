@@ -2,17 +2,11 @@
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
 #EXTINF:-1 tvg-id="classicmusic-top1" tvg-name="classicmusic-top1" tvg-logo="" group-title="music",classicmusic-top1
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="talkSPORT" tvg-name="talkSPORT" tvg-logo="" group-title="sports",talkSPORT
+#EXTINF:-1 tvg-id="JimmyBroadbent" tvg-name="JimmyBroadbent" tvg-logo="" group-title=" gaming",JimmyBroadbent
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="beinsportshaber" tvg-name="beinsportshaber" tvg-logo="" group-title="sports",beinsportshaber
+#EXTINF:-1 tvg-id="deadeyedelboy" tvg-name="deadeyedelboy" tvg-logo="" group-title=" gaming",deadeyedelboy
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="SkyNews" tvg-name="SkyNews" tvg-logo="" group-title="news",SkyNews
+#EXTINF:-1 tvg-id="AFCAsianCup" tvg-name="AFCAsianCup" tvg-logo="" group-title=" sports",AFCAsianCup
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="GBNews2" tvg-name="GBNews2" tvg-logo="" group-title="news",GBNews2
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="NBCNews" tvg-name="NBCNews" tvg-logo="" group-title="news",NBCNews
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="ABCNews" tvg-name="ABCNews" tvg-logo="" group-title="news",ABCNews
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="FobosPlanet" tvg-name="FobosPlanet" tvg-logo="" group-title="science",FobosPlanet
+#EXTINF:-1 tvg-id="DPWorldTour" tvg-name="DPWorldTour" tvg-logo="" group-title=" sports",DPWorldTour
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
