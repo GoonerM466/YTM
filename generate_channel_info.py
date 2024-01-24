@@ -1,50 +1,44 @@
-import yt_dlp
-
-def search_youtube_and_get_channel_url(search_phrase, max_results=1):
-    ydl = yt_dlp.YoutubeDL()
-    search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
-    channel_url = search_results.get('entries', [{}])[0].get('channel_url', None)
-    return channel_url
-
-def process_input_file(input_filename):
-    output_filename = input_filename
-
-    with open(input_filename, 'r') as file:
+def main():
+    with open('live_status.txt', 'r') as file:
         lines = file.readlines()
 
-    updated_lines = []
+    header = '''<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="none" generator-info-url="none">
+'''
+
+    xmltv_content = header
+
+    # Get the current time rounded up to the next hour
+    current_time = datetime.now()
+    current_time_rounded = round_up_to_hour(current_time)
 
     for line in lines:
-        if line.startswith("Channel Name:"):
-            channel_name = line.replace("Channel Name:", "").strip()
-            search_term = channel_name.lower()  # using the channel name as the search term
-            channel_url = search_youtube_and_get_channel_url(search_term)
+        parsed_info = parse_live_status(line)
+        if parsed_info:
+            channel_name, live_status, time_str = parsed_info
 
-            if channel_url:
-                live_channel_url = f"{channel_url.rstrip('/')}/live"
-                updated_lines.append(f"Channel Name: {channel_name}\n")
-                updated_lines.append(f"Channel URL: {live_channel_url}\n")
-            else:
-                print(f"Could not find a channel URL for '{channel_name}'. Skipping.")
-        elif line.startswith(("Title:", "Description:", "Logo URL:")):
-            # Preserve lines starting with "Title:", "Description:", and "Logo URL:"
-            updated_lines.append(line)
-        elif line.startswith("Add this link to the update file:"):
-            # Update the line with the new channel URL
-            if channel_url:
-                updated_line = f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {live_channel_url}\n"
-                updated_lines.append(updated_line)
-            else:
-                # If channel URL not found, keep the original line
-                updated_lines.append(line)
-        else:
-            updated_lines.append(line)
+            # Add channel information
+            channel_info_entry = generate_channel_info(channel_name)
+            if channel_info_entry:
+                xmltv_content += channel_info_entry
 
-    with open(output_filename, 'w') as file:
-        file.writelines(updated_lines)
+            # Clear existing program information for the current channel
+            existing_programs = []  # Reset the list for each channel
 
-    print(f"Updated information written to {output_filename}")
+            # Add current program information
+            xmltv_content += generate_program_info(channel_name, live_status, time_str, existing_programs)
 
-if __name__ == "__main__":
-    input_file = "music_live_channels.txt"
-    process_input_file(input_file)
+            # Calculate the end time of the last live program
+            last_program_end = current_time_rounded + timedelta(hours=2)
+
+            # Add 12 hours of placeholder programs
+            xmltv_content += generate_placeholder_programs(channel_name, last_program_end)
+
+    xmltv_content += '</tv>'
+
+    # Write the combined content to combined_epg.xml
+    with open('combined_epg.xml', 'w') as combined_epg_file:
+        combined_epg_file.write(xmltv_content)
+
+if __name__ == '__main__':
+    main()
