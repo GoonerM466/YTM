@@ -1,4 +1,4 @@
-name: New Channel Scrape Workflow
+name: 00-New Channel Scrape
 
 on:
   push:
