@@ -69,7 +69,7 @@ def main():
                 channels[channel_name] = "Live" if m3u8_url else "Not Live"
             except Exception as e:
                 print(f"Error processing {channel_name}: {e}")
-                channels[channel_name] = "Error"
+                channels[channel_name] = "Not Live"
 
     update_live_status(channels)
 
