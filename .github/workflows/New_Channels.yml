@@ -29,7 +29,7 @@ jobs:
 
       - name: Process YouTube Channel Info
         run: |
-          python ./.scripts/process_youtube_channel_info.py
+          python ./scripts/process_youtube_channel_info.py
           # Replace 'process_youtube_channel_info.py' with the actual script name
 
       - name: Add Git Steps
