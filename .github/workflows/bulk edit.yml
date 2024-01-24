@@ -24,7 +24,7 @@ jobs:
 
     - name: Bulk Edit Scripts
       run: |
-        python bulk_edit_scripts.py
+        python ./scripts/bulk_edit_scripts.py
 
     - name: Commit changes
       run: |
