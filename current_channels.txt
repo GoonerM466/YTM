@@ -13,6 +13,3 @@ FobosPlanet, science, https://www.youtube.com/@FobosPlanet/live
 DPWorldTour, sports, https://www.youtube.com/@DPWorldTour/live
 GBNews2, news, https://www.youtube.com/@GBNewsOnline/live
 Jazz Cafe Ambience, music, https://youtube.com/@JazzCafeAmbience/live
-Open Heart Music  Helios 4K, music, https://youtube.com/@OpenHeartMusicHelios4K/live
-Mega Hit Mix, music, https://youtube.com/@MegaHitMix/live
-4K Video Nature  Focus Music, relax, https://youtube.com/@4KVideoNatureFocusMusic/live
