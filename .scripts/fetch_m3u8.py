@@ -2,8 +2,8 @@ import os
 import datetime
 import yt_dlp
 
-def fetch_m3u8(channel_name, group, channel_url):
-    print(f"Fetching m3u8 for {channel_name}...")
+def fetch_ts_segments(channel_name, group, channel_url):
+    print(f"Fetching TS segments for {channel_name}...")
 
     output_folder = "./current_channels/{}/".format(group)
     output_file = "{}{}.m3u8".format(output_folder, channel_name)
@@ -15,30 +15,19 @@ def fetch_m3u8(channel_name, group, channel_url):
 
     ydl_opts = {
         'quiet': False,  # Set to True if you want less console output from yt-dlp
+        'format': 'best',  # Selects the best available quality
+        'outtmpl': output_file,  # Output file template
     }
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info_dict = ydl.extract_info("{}/live".format(channel_url), download=False)
-            video_id = info_dict.get('video_id', None)
+            ydl.download([channel_url])
 
-            if video_id:
-                m3u8_url = next((format['url'] for format in info_dict.get('formats', []) if format.get('url') and format.get('protocol') == 'm3u8'), None)
-            else:
-                m3u8_url = None
-
-            with open(output_file, 'w') as f:
-                f.write("#EXTM3U\n")
-                f.write("#EXT-X-VERSION:3\n")
-                f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
-                if m3u8_url:
-                    f.write("{}\n".format(m3u8_url))
-
-        print(f"m3u8 for {channel_name} fetched successfully.")
-        return m3u8_url
+        print(f"TS segments for {channel_name} fetched successfully.")
+        return output_file
 
     except yt_dlp.utils.ExtractorError as e:
-        print(f"Error fetching m3u8 for {channel_name}: {e}")
+        print(f"Error fetching TS segments for {channel_name}: {e}")
         return None
 
 def update_live_status(channels):
@@ -56,7 +45,7 @@ def update_live_status(channels):
     print("Live status updated successfully.")
 
 def main():
-    print("Fetching m3u8 for all channels...")
+    print("Fetching TS segments for all channels...")
 
     channels_file = "channels.txt"
     channels = {}
@@ -65,8 +54,8 @@ def main():
         for line in f:
             channel_name, group, channel_url = line.strip().split(', ')
             try:
-                m3u8_url = fetch_m3u8(channel_name, group, channel_url)
-                channels[channel_name] = "Live" if m3u8_url else "Not Live"
+                m3u8_file = fetch_ts_segments(channel_name, group, channel_url)
+                channels[channel_name] = "Live" if m3u8_file else "Not Live"
             except Exception as e:
                 print(f"Error processing {channel_name}: {e}")
                 channels[channel_name] = "Error"
