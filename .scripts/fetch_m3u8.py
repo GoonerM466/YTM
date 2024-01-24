@@ -4,14 +4,14 @@ import yt_dlp
 
 def fetch_m3u8(channel_name, group, channel_url):
     print(f"Fetching m3u8 for {channel_name}...")
-    
+
     output_folder = "./current_channels/{}/".format(group)
     output_file = "{}{}.m3u8".format(output_folder, channel_name)
 
     os.makedirs(output_folder, exist_ok=True)
 
     ydl_opts = {
-        'quiet': True,
+        'quiet': False,  # Set to True if you want less console output from yt-dlp
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -29,7 +29,7 @@ def fetch_m3u8(channel_name, group, channel_url):
             f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
             if m3u8_url:
                 f.write("{}\n".format(m3u8_url))
-    
+
     print(f"m3u8 for {channel_name} fetched successfully.")
     return m3u8_url
 
@@ -44,12 +44,12 @@ def update_live_status(channels):
     with open(live_status_file, 'a') as f:
         for channel_name, live_status in channels.items():
             f.write("{} - {} - {}\n".format(channel_name, live_status, current_datetime))
-    
+
     print("Live status updated successfully.")
 
 def main():
     print("Fetching m3u8 for all channels...")
-    
+
     channels_file = "channels.txt"
     channels = {}
 
