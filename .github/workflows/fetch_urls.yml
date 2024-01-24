@@ -34,7 +34,7 @@ jobs:
       run: git pull --rebase origin main
       
     - name: Run Fetch_urls Script
-      run: python ./.scripts/fetch_urls.py
+      run: python ./scripts/fetch_urls.py
 
     - name: Print workspace
       run: ls -la
