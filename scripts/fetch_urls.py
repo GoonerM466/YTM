@@ -5,24 +5,26 @@ import time
 def search_youtube_and_get_channel_url(search_phrase, max_results=1):
     ydl = yt_dlp.YoutubeDL()
     try:
-        with ydl:
-            search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
-            entry = search_results.get('entries', [{}])[0]
-
-            # Check if the video requires membership
-            if entry.get('requires_membership'):
-                print(f"Video requires membership. Skipping '{search_phrase}'.")
-                return None
-
-            channel_url = entry.get('channel_url', None)
-            return channel_url
+        search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
+        entry = search_results.get('entries', [{}])[0]
+        
+        # Check if the video requires membership
+        if entry.get('requires_membership'):
+            print(f"Video requires membership. Skipping '{search_phrase}'.")
+            return None
+        
+        channel_url = entry.get('channel_url', None)
+        return channel_url
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
         return None
     except yt_dlp.utils.DownloadError as e:
         print(f"Error downloading information from YouTube: {str(e)}")
         return None
-
+    except Exception as e:
+        print(f"An unexpected error occurred: {str(e)}")
+        return None
+        
 def process_input_file(input_filename):
     output_filename = input_filename
 
