@@ -3,7 +3,10 @@ import yt_dlp
 def search_youtube_and_get_channel_url(search_phrase, max_results=1):
     ydl = yt_dlp.YoutubeDL()
     search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
-    channel_url = search_results.get('entries', [{}])[0].get('channel_url', None)
+    
+    # Filter out video entries and get the channel URL
+    channel_url = next((entry.get('channel_url', None) for entry in search_results.get('entries', []) if entry.get('channel_url')), None)
+    
     return channel_url
 
 def process_input_file(input_filename):
