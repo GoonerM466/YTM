@@ -30,7 +30,7 @@ jobs:
       run: git pull --rebase origin main
 
     - name: Finding music channels
-      run: python find_music.py
+      run: python ./.scripts/find_music.py
 
     - name: Check for changes
       id: check-changes
