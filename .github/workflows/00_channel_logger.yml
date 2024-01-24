@@ -1,4 +1,4 @@
-name: Channel Logger Workflow
+name: zzz-Channel Logger Workflow
 
 on:
   workflow_run:
