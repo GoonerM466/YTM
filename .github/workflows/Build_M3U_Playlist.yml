@@ -18,11 +18,11 @@ jobs:
         repository: GoonerM466/YTM
         ref: main
 
+    - name: Waiting to ensure other tasks have completed
+      run: sleep 45
+
     - name: Rebase changes
       run: git pull --rebase origin main
-
-    - name: Wait for 10 seconds
-      run: sleep 10
 
     - name: Run Channel Generation Script
       run: |
