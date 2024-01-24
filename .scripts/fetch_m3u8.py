@@ -27,11 +27,18 @@ def fetch_m3u8(channel_name, group, channel_url):
             else:
                 m3u8_url = None
 
-            with open(output_file, 'w') as f:
-                f.write("#EXTM3U\n")
-                f.write("#EXT-X-VERSION:3\n")
-                f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
-                if m3u8_url:
+            if m3u8_url:
+                # Read the existing lines from the m3u8 file
+                existing_lines = []
+                if os.path.exists(output_file):
+                    with open(output_file, 'r') as f:
+                        existing_lines = f.readlines()
+
+                # Write the first three lines and the new m3u8 URL to the file
+                with open(output_file, 'w') as f:
+                    f.write(existing_lines[0])
+                    f.write(existing_lines[1])
+                    f.write(existing_lines[2])
                     f.write("{}\n".format(m3u8_url))
 
         print(f"m3u8 for {channel_name} fetched successfully.")
@@ -39,7 +46,14 @@ def fetch_m3u8(channel_name, group, channel_url):
 
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error fetching m3u8 for {channel_name}: {e}")
-        return None
+        m3u8_url = None
+
+        # Remove existing m3u8 file if it exists and m3u8_url is None
+        if os.path.exists(output_file):
+            os.remove(output_file)
+            print(f"Existing m3u8 file for {channel_name} removed.")
+
+    return m3u8_url
 
 def update_live_status(channels):
     print("Updating live status...")
