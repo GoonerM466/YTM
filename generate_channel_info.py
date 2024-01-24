@@ -136,15 +136,15 @@ def sort_xmltv_content(xmltv_content):
 
     # Extract program entries for sorting
     programs = lines[start_index:end_index]
-    program_start_times = [extract_start_time(program) for program in programs]
 
     # Sort program entries by start time
-    sorted_programs = [program for _, program in sorted(zip(program_start_times, programs))]
+    sorted_programs = sorted(programs, key=lambda x: (extract_channel_name(x), extract_start_time(x)))
 
     # Replace the original program entries with the sorted ones
     lines[start_index:end_index] = sorted_programs
 
     return '\n'.join(lines)
+
 
 
 def extract_channel_name(program_line):
