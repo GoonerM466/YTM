@@ -55,7 +55,7 @@ def generate_program_info(channel_name, live_status, time_str):
     following_program_stop = (following_program_start + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
     following_program_info = f'''  <programme start="{following_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{following_program_stop}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
-    <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if_live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
+    desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
 '''
 
