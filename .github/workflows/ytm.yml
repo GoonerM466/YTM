@@ -39,6 +39,8 @@ jobs:
     - name: Read channel information from current_channels.txt
       run: |
         while IFS=, read -r channel_name group channel_url; do
+          echo "Processing $channel_name at $channel_url..."
+
           # Modify channel_name using sed regex: remove spaces and trim to 3 words
           channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/; s/-//g')
           mkdir -p "./current_channels/$group"
@@ -75,6 +77,9 @@ jobs:
           echo "$channel_name - $(date)" >> live_status.txt
         done < current_channels.txt
 
+    - name: Print workspace
+      run: ls -la
+      
     - name: git add
       run: |
         git add -A
