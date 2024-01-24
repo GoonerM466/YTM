@@ -1,124 +1,50 @@
-import re
-from datetime import datetime, timedelta
+import yt_dlp
 
-def parse_live_status(line):
-    # Parse the information from the live_status.txt line
-    match = re.match(r'^([\w_]+) - (Live|Not Live) - (.+ UTC \d{4})$', line)
-    if match:
-        channel_name, live_status, time_str = match.groups()
-        return channel_name, live_status, time_str
-    return None
+def search_youtube_and_get_channel_url(search_phrase, max_results=1):
+    ydl = yt_dlp.YoutubeDL()
+    search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
+    channel_url = search_results.get('entries', [{}])[0].get('channel_url', None)
+    return channel_url
 
-def convert_to_xmltv_time(time_str):
-    # Convert the time string to XMLTV format
-    dt = datetime.strptime(time_str, '%a %b %d %H:%M:%S %Z %Y')
-    return dt.strftime('%Y%m%d%H%M%S +0000')
+def process_input_file(input_filename):
+    output_filename = input_filename
 
-def round_up_to_hour(dt):
-    # Round up the given datetime object to the nearest hour
-    return (dt + timedelta(hours=1)).replace(minute=0, second=0, microsecond=0)
-
-def generate_channel_info(channel_name):
-    # Extract the first part of the channel name before the first space
-    channel_name_first_part = channel_name.split()[0]
-
-    # Check for duplicate channels based on the first part of the channel name
-    for existing_channel in existing_channels:
-        existing_channel_first_part = existing_channel['name'].split()[0]
-        if existing_channel_first_part == channel_name_first_part:
-            return None
-
-    # No matching channel found, add the new channel
-    existing_channels.append({'name': channel_name})  # Keep track of added channels
-    return f'''  <channel id="{channel_name}">
-    <display-name lang="en">{channel_name}</display-name>
-  </channel>
-'''
-
-def generate_program_info(channel_name, live_status, time_str):
-    # Convert time_str to XMLTV format
-    program_start = datetime.strptime(convert_to_xmltv_time(time_str), '%Y%m%d%H%M%S +0000')
-
-    # Round up the start time to the nearest hour
-    program_start_rounded = round_up_to_hour(program_start)
-
-    # Create the new program
-    program_stop = (program_start_rounded + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
-    program_info = f'''  <programme start="{program_start_rounded.strftime('%Y%m%d%H%M%S +0000')}" stop="{program_stop}" channel="{channel_name}">
-    <title lang="en">{live_status}</title>
-    <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
-  </programme>
-'''
-
-    # Create the following program with the same details
-    following_program_start = program_start_rounded + timedelta(hours=1)
-    following_program_stop = (following_program_start + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
-    following_program_info = f'''  <programme start="{following_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{following_program_stop}" channel="{channel_name}">
-    <title lang="en">{live_status}</title>
-    <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if_live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
-  </programme>
-'''
-
-    return program_info + following_program_info
-
-def generate_placeholder_programs(channel_name, current_time_rounded):
-    # Generate 12 hours worth of "To be Announced" programs for the given channel
-    programs = ""
-    for _ in range(12):
-        program_start = current_time_rounded.strftime('%Y%m%d%H%M%S +0000')
-        program_stop = (current_time_rounded + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
-        program_info = f'''  <programme start="{program_start}" stop="{program_stop}" channel="{channel_name}">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
-  </programme>
-'''
-        programs += program_info
-        current_time_rounded += timedelta(hours=1)
-
-    return programs
-
-def main():
-    with open('live_status.txt', 'r') as file:
+    with open(input_filename, 'r') as file:
         lines = file.readlines()
 
-    header = '''<?xml version="1.0" encoding="UTF-8"?>
-<tv generator-info-name="none" generator-info-url="none">
-'''
-
-    xmltv_content = header
-
-    # Get the current time rounded up to the next hour
-    current_time = datetime.now()
-    current_time_rounded = round_up_to_hour(current_time)
+    updated_lines = []
 
     for line in lines:
-        parsed_info = parse_live_status(line)
-        if parsed_info:
-            channel_name, live_status, time_str = parsed_info
+        if line.startswith("Channel Name:"):
+            channel_name = line.replace("Channel Name:", "").strip()
+            search_term = channel_name.lower()  # using the channel name as the search term
+            channel_url = search_youtube_and_get_channel_url(search_term)
 
-            # Add channel information
-            channel_info_entry = generate_channel_info(channel_name)
-            if channel_info_entry:
-                xmltv_content += channel_info_entry
+            if channel_url:
+                live_channel_url = f"{channel_url.rstrip('/')}/live"
+                updated_lines.append(f"Channel Name: {channel_name}\n")
+                updated_lines.append(f"Channel URL: {live_channel_url}\n")
+            else:
+                print(f"Could not find a channel URL for '{channel_name}'. Skipping.")
+        elif line.startswith(("Title:", "Description:", "Logo URL:")):
+            # Preserve lines starting with "Title:", "Description:", and "Logo URL:"
+            updated_lines.append(line)
+        elif line.startswith("Add this link to the update file:"):
+            # Update the line with the new channel URL
+            if channel_url:
+                updated_line = f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {live_channel_url}\n"
+                updated_lines.append(updated_line)
+            else:
+                # If channel URL not found, keep the original line
+                updated_lines.append(line)
+        else:
+            updated_lines.append(line)
 
-            # Clear existing program information for the current channel
-            existing_programs = []  # Reset the list for each channel
+    with open(output_filename, 'w') as file:
+        file.writelines(updated_lines)
 
-            # Add current program information
-            xmltv_content += generate_program_info(channel_name, live_status, time_str, existing_programs)
+    print(f"Updated information written to {output_filename}")
 
-            # Calculate the end time of the last live program
-            last_program_end = current_time_rounded + timedelta(hours=2)
-
-            # Add 12 hours of placeholder programs
-            xmltv_content += generate_placeholder_programs(channel_name, last_program_end)
-
-    xmltv_content += '</tv>'
-
-    # Write the combined content to combined_epg.xml
-    with open('combined_epg.xml', 'w') as combined_epg_file:
-        combined_epg_file.write(xmltv_content)
-
-if __name__ == '__main__':
-    main()
-
+if __name__ == "__main__":
+    input_file = "music_live_channels.txt"
+    process_input_file(input_file)
