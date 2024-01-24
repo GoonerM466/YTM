@@ -1,6 +1,7 @@
 import os
 import datetime
 import yt_dlp
+
 def fetch_m3u8(channel_name, group, channel_url):
     print(f"Fetching m3u8 for {channel_name}...")
     output_folder = "./current_channels/{}/".format(group)
@@ -11,21 +12,19 @@ def fetch_m3u8(channel_name, group, channel_url):
     ydl_opts = {
         'quiet': False,  # Set to True if you want less console output from yt-dlp
     }
+    m3u8_url = ""
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info("{}/live".format(channel_url), download=False)
             video_id = info_dict.get('video_id', None)
             if video_id:
                 m3u8_url = "https://www.youtube.com/watch?v={}&ab_channel={}".format(video_id, channel_name)
-            else:
-                m3u8_url = None
 
-            with open(output_file, 'w') as f:
-                f.write("#EXTM3U\n")
-                f.write("#EXT-X-VERSION:3\n")
-                f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
-                if m3u8_url:
-                    f.write("{}\n".format(m3u8_url))
+        with open(output_file, 'w') as f:
+            f.write("#EXTM3U\n")
+            f.write("#EXT-X-VERSION:3\n")
+            f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
+            f.write("{}\n".format(m3u8_url))
 
         print(f"m3u8 for {channel_name} fetched successfully.")
         return m3u8_url
