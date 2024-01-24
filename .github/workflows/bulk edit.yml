@@ -1,8 +1,6 @@
 import os
 import re
 
-MAX_RUNTIME_SECONDS = 210  # 3.5 minutes
-
 def bulk_edit_scripts(directory):
     for filename in os.listdir(directory):
         if filename.startswith("find_") and filename.endswith(".py"):
@@ -11,14 +9,14 @@ def bulk_edit_scripts(directory):
                 content = file.read()
 
             # Replace the existing clean_text function
-            content = re.sub(r'def clean_text\(text\):.+?return cleaned_text', 'def clean_text(text):\n    return text', content, flags=re.DOTALL)
+            content = re.sub(r'def clean_text\(text\):.+?return\s+cleaned_text', 'def clean_text(text):\n    return text', content, flags=re.DOTALL)
 
             # Replace the while True loop with a try-except block to break out of the loop
-            content = re.sub(r'while True:', 'try:', content)
-            content = re.sub(r'except Exception as e:.+?raise', 'except Exception as e:\n        print("No live channels found.")\n        break', content, flags=re.DOTALL)
+            content = re.sub(r'while\s+True:', 'try:', content)
+            content = re.sub(r'except\s+Exception\s+as\s+e:.+?raise', 'except Exception as e:\n    print("No live channels found.")\n    break', content, flags=re.DOTALL)
 
             # Change the location of the *_live_channels.txt file
-            content = re.sub(r"with open\('(\w+_live_channels.txt)', 'w', encoding='utf-8'\) as file:", "with open('found_channels/\\1', 'w', encoding='utf-8') as file:", content)
+            content = re.sub(r"with\s+open\('(\w+_live_channels.txt)',\s+'w',\s+encoding='utf-8'\)\s+as\s+file:", "with open('found_channels/\\1', 'w', encoding='utf-8') as file:", content)
 
             with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(content)
