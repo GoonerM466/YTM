@@ -1,10 +1,16 @@
 import yt_dlp
+from yt_dlp.utils import ExtractorError
 
 def search_youtube_and_get_channel_url(search_phrase, max_results=1):
     ydl = yt_dlp.YoutubeDL()
-    search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
-    channel_url = search_results.get('entries', [{}])[0].get('channel_url', None)
-    return channel_url
+    
+    try:
+        search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
+        channel_url = search_results.get('entries', [{}])[0].get('channel_url', None)
+        return channel_url
+    except ExtractorError as e:
+        print(f"Error extracting information from YouTube: {str(e)}")
+        return None
 
 def process_input_file(input_filename):
     output_filename = input_filename
