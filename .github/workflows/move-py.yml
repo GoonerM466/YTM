@@ -1,9 +1,12 @@
-name: Move Python Files
+name: Move Live Channels Files
 
 on:
-  push:
-    branches:
-      - main  # Change this to the branch you want to trigger the workflow on
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to run the workflow on'
+        required: true
+        default: 'main'  # Change this to the default branch you want
 
 jobs:
   move_files:
@@ -13,15 +16,15 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Move Python Files
+    - name: Move Live Channels Files
       run: |
-        mkdir -p ./scripts/
-        find . -type f -name "*.py" -exec mv {} ./scripts/ \;
+        mkdir -p ./found_channels/
+        find . -type f -name "*live_channels.txt" -exec mv {} ./found_channels/ \;
 
     - name: Commit and Push Changes
       run: |
         git config --global user.name "${{ github.actor }}"
         git config --global user.email "${{ github.actor }}@users.noreply.github.com"
         git add .
-        git commit -m "Move Python files to ./scripts/"
+        git commit -m "Move *live_channels.txt files to ./found_channels/"
         git push
