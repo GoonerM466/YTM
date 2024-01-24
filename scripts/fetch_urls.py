@@ -34,16 +34,26 @@ def process_input_file(input_filename):
     updated_lines = []
 
     for line in lines:
-        # ... (existing code)
+        if line.startswith("Channel Name:"):
+            channel_name = line.replace("Channel Name:", "").strip()
+            search_term = channel_name.lower()
+            channel_url = search_youtube_and_get_channel_url(search_term)
 
-    if channel_url:
-        live_channel_url = f"{channel_url.rstrip('/')}/live"
-        updated_lines.append(f"Channel Name: {channel_name}\n")
-        updated_lines.append(f"Channel URL: {live_channel_url}\n")
-        # ... (remaining code)
-    else:
-        print(f"Could not find a channel URL for '{channel_name}'. Skipping.")
-        return  # Skip processing for this channel
+            if channel_url:
+                live_channel_url = f"{channel_url.rstrip('/')}/live"
+                updated_lines.append(f"Channel Name: {channel_name}\n")
+                updated_lines.append(f"Channel URL: {live_channel_url}\n")
+                # Add a 2-second delay between each search
+                time.sleep(2)
+            else:
+                print(f"Could not find a channel URL for '{channel_name}'. Skipping.")
+        elif line.startswith(("Title:", "Description:", "Logo URL:")):
+            updated_lines.append(line)
+        elif line.startswith("Add this link to the update file:"):
+            # Replace the existing "Add this link to the update file" line
+            if channel_url:
+                channel_url_line = f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {live_channel_url}\n"
+                updated_lines.append(channel_url_line)
 
     with open(output_filename, 'w') as file:
         file.writelines(updated_lines)
