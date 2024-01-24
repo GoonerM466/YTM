@@ -1,4 +1,4 @@
-name: Build M3U Playlist
+name: 2-Generate Combined m3u
 
 on:
   workflow_run:
