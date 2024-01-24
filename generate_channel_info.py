@@ -117,13 +117,33 @@ def main():
     # Combine all information into the final XMLTV content
     xmltv_content = f"{header}{channel_info}{program_info}</tv>"
 
-    # Write the combined content to combined_epg.xml
+    # Sort the programs by channel name and then in chronological order
+    sorted_xmltv_content = sort_xmltv_content(xmltv_content)
+
+    # Write the combined and sorted content to combined_epg.xml
     with open('combined_epg.xml', 'w') as combined_epg_file:
-        combined_epg_file.write(xmltv_content)
+        combined_epg_file.write(sorted_xmltv_content)
 
     # Clear the content of epg_old.xml
     with open('epg_old.xml', 'w'):
         pass
+
+def sort_xmltv_content(xmltv_content):
+    # Helper function to sort XMLTV content by channel name and then in chronological order
+    lines = xmltv_content.split('\n')
+    start_index = lines.index('<tv generator-info-name="none" generator-info-url="none">') + 1
+    end_index = lines.index('</tv>')
+    programs = sorted(lines[start_index:end_index], key=lambda x: (extract_channel_name(x), extract_start_time(x)))
+    lines[start_index:end_index] = programs
+    return '\n'.join(lines)
+
+def extract_channel_name(program_line):
+    match = re.search(r'channel="(.+)"', program_line)
+    return match.group(1) if match else ""
+
+def extract_start_time(program_line):
+    match = re.search(r'start="(.+)"', program_line)
+    return match.group(1) if match else ""
 
 if __name__ == '__main__':
     main()
