@@ -144,7 +144,8 @@ def sort_xmltv_content(xmltv_content):
     # Replace the original program entries with the sorted ones
     lines[start_index:end_index] = sorted_programs
 
-    return '\n'.join(lines))
+    return '\n'.join(lines)
+
 
 def extract_channel_name(program_line):
     match = re.search(r'channel="(.+)"', program_line)
