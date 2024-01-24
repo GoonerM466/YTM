@@ -130,18 +130,18 @@ def main():
 
 def sort_xmltv_content(xmltv_content):
     # Helper function to sort XMLTV content by channel name and then in chronological order
-    lines = xmltv_content.split('\n')
+    lines = xmltv_content.splitlines()
     start_index = lines.index('<tv generator-info-name="none" generator-info-url="none">') + 1
     end_index = lines.index('</tv>')
 
     # Extract program entries for sorting
-    programs = lines[start_index:end_index]
+    programs = "\n".join(lines[start_index:end_index + 1])
 
-    # Sort program entries by start time
-    sorted_programs = sorted(programs, key=lambda x: (extract_channel_name(x), extract_start_time(x)))
+    # Sort program entries by channel name and start time
+    sorted_programs = sorted(programs.split('\n'), key=lambda x: (extract_channel_name(x), extract_start_time(x)))
 
     # Replace the original program entries with the sorted ones
-    lines[start_index:end_index] = sorted_programs
+    lines[start_index:end_index + 1] = sorted_programs
 
     return '\n'.join(lines)
 
