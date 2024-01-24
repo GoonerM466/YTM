@@ -52,7 +52,23 @@ jobs:
             echo "404: $channel_name - $channel_url" >> 404.txt
             continue  # Skip to the next channel if a 404 error is encountered
           else
-            echo "$channel_name is not currently live at $channel_url."
+            # Extract video ID from the error message
+            error_message=$(yt-dlp "$channel_url" 2>&1)
+            video_id=$(echo "$error_message" | awk -F ": " '/youtube\]/{print $2}' | cut -d: -f1)
+            
+            if [ -n "$video_id" ]; then
+              new_channel_url="https://www.youtube.com/watch?v=$video_id&ab_channel=$channel_name"
+              
+              # Check if the m3u8 file exists at the new channel address
+              if yt-dlp --print info "$new_channel_url" | grep -q "m3u8"; then
+                echo "$channel_name is Live at $new_channel_url. Downloading m3u8 link..."
+                yt-dlp --print urls "$new_channel_url" > "./current_channels/$group/$channel_name.m3u8"
+              else
+                echo "$channel_name is not currently live at $new_channel_url."
+              fi
+            else
+              echo "Unable to extract video ID from the error message for $channel_name at $channel_url."
+            fi
           fi
           
           # Append live status information to live_status.txt
