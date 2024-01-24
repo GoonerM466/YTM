@@ -13,6 +13,7 @@ def process_input_file(input_filename):
         lines = file.readlines()
 
     updated_lines = []
+    channel_url = None  # Initialize channel_url here
 
     for line in lines:
         if line.startswith("Channel Name:"):
