@@ -10,6 +10,9 @@ def fetch_ts_segments(channel_name, group, channel_url):
 
     os.makedirs(output_folder, exist_ok=True)
 
+    # Touch the file to create it if it doesn't exist
+    open(output_file, 'a').close()
+
     # Remove extra "/" from the channel URL
     channel_url = channel_url.rstrip('/')
 
