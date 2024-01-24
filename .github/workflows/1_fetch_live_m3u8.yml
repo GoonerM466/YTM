@@ -7,7 +7,7 @@ on:
   workflow_run:
     workflows:
       - "New Channel Scrape Workflow"
-      - "Delete M3U8 Files"
+      - "clean Old m3u8s"
     types:
       - completed
 
