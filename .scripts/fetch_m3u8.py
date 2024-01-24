@@ -21,10 +21,20 @@ def fetch_ts_segments(channel_name, group, channel_url):
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([channel_url])
+            info_dict = ydl.extract_info("{}/live".format(channel_url), download=False)
+            m3u8_url = next((format['url'] for format in info_dict.get('formats', []) if format.get('url') and format.get('protocol') == 'm3u8'), None)
 
-        print(f"TS segments for {channel_name} fetched successfully.")
-        return output_file
+            if m3u8_url:
+                with open(output_file, 'w') as f:
+                    f.write("#EXTM3U\n")
+                    f.write("#EXT-X-VERSION:3\n")
+                    f.write("#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000\n")
+                    f.write("{}\n".format(m3u8_url))
+                print(f"TS segments for {channel_name} fetched successfully.")
+                return output_file
+            else:
+                print(f"No live stream found for {channel_name}")
+                return None
 
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error fetching TS segments for {channel_name}: {e}")
