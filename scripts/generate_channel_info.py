@@ -56,10 +56,11 @@ def generate_program_info(channel_name, live_status, time_str, existing_programs
   </programme>
 '''
 
-    # Create the following program with the same details
-    following_program_start = program_start_rounded + timedelta(hours=1)
-    following_program_stop = (following_program_start + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
-    following_program_info = f'''  <programme start="{following_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{following_program_stop}" channel="{channel_name}">
+    # Create the following programs with the same details
+    for i in range(2):
+        following_program_start = program_start_rounded + timedelta(hours=(i + 1))
+        following_program_stop = (following_program_start + timedelta(hours=1)).strftime('%Y%m%d%H%M%S +0000')
+        following_program_info = f'''  <programme start="{following_program_start.strftime('%Y%m%d%H%M%S +0000')}" stop="{following_program_stop}" channel="{channel_name}">
     <title lang="en">{live_status}</title>
     <desc lang="en">{"{} is currently streaming live! Tune in and enjoy!".format(channel_name) if live_status == "Live" else "{} is not currently live. Check the schedule online or try again later!".format(channel_name)}</desc>
   </programme>
@@ -123,7 +124,7 @@ def main():
             xmltv_content += generate_program_info(channel_name, live_status, time_str, existing_programs)
 
             # Calculate the end time of the last live program
-            last_program_end = current_time_rounded + timedelta(hours=2)
+            last_program_end = current_time_rounded + timedelta(hours=3)
 
             # Add 12 hours of placeholder programs
             xmltv_content += generate_placeholder_programs(channel_name, last_program_end)
