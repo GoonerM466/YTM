@@ -17,11 +17,6 @@ jobs:
           ref: main
           token: ${{ secrets.PAT_YTLM_TOKEN }}
 
-      - name: Search and Remove Git Steps
-        run: |
-          # Search for and remove the "git add," "commit & push" steps from ytm.yml
-          sed -i '/- name: git add/,/- git push/d' .github/workflows/ytm.yml
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -32,20 +27,6 @@ jobs:
           python ./scripts/process_youtube_channel_info.py
           # Replace 'process_youtube_channel_info.py' with the actual script name
 
-      - name: Add Git Steps
-        run: |
-          # Add git add, commit, and push steps to ytm.yml
-          echo "
-              - name: git add
-                run: |
-                  git add -A
-                  ls -la
-              - name: commit & push
-                run: |
-                  git diff --cached --quiet || git commit -m "Updated"
-                  git push origin main
-          " >> .github/workflows/ytm.yml
-          
       - name: Configure Git
         run: |
           git config --global user.email "actions@github.com"
