@@ -1,5 +1,4 @@
 import os
-import re
 import time
 
 MAX_RUNTIME_SECONDS = 210  # 3.5 minutes
@@ -35,7 +34,7 @@ def make_actual_request(api_key, max_results=50):
 
 def bulk_edit_scripts(directory, api_key):
     for filename in os.listdir(directory):
-        if filename.startswith("find_") and filename.endswith(".py"):
+        if filename.endswith(".py"):
             file_path = os.path.join(directory, filename)
             with open(file_path, 'r', encoding='utf-8') as file:
                 content = file.read()
