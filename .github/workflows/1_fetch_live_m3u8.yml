@@ -2,7 +2,7 @@ name: 1-Fetch Live m3u8
 
 on:
   schedule:
-    - cron: '45 0/2 * * *'
+    - cron: '01 0/2 * * *'
   workflow_dispatch:
   workflow_run:
     workflows:
