@@ -1,12 +1,9 @@
 name: 2A-Fetch Scheduled
 
 on:
+  schedule:
+    - cron: '30 */2 * * *'
   workflow_dispatch:
-  workflow_run:
-    workflows:
-      - "3-Generate XMLTV"
-    types:
-      - completed
 
 jobs:
   build:
