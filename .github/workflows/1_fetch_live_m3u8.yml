@@ -27,14 +27,11 @@ jobs:
     - name: Delay for 10 seconds
       run: sleep 10
 
-    - name: Pull latest changes
-      run: git pull origin main
+    - name: Fetch latest changes from remote
+      run: git fetch origin main
 
-    - name: Rebase changes
-      run: git pull --rebase origin main
-
-    - name: Pull latest changes with 'ours' strategy
-      run: git pull --strategy=ours origin main
+    - name: Rebase local changes with fetched changes
+      run: git rebase origin/main
 
     - name: Create current_channels directory
       run: mkdir -p ./current_channels
