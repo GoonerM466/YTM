@@ -34,14 +34,14 @@ def make_actual_request(api_key, max_results=50):
 
 def bulk_edit_scripts(directory, api_key):
     for filename in os.listdir(directory):
-        if filename.endswith(".py"):
+        if filename.endswith("_live_channels.py"):
             file_path = os.path.join(directory, filename)
             with open(file_path, 'r', encoding='utf-8') as file:
                 content = file.read()
 
             # Modify the script content
             modified_content = content.replace(
-                'response = make_api_request(api_key)',
+                'response = request.execute()',
                 'response = make_api_request(api_key)'
             )
 
