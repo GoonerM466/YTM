@@ -1,0 +1,51 @@
+name:  ZZ-EPG Log
+
+on:
+  schedule:
+    - cron: "25 * * * *"
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Create backup
+      run: |
+        mkdir -p epg_old/$(date +"%A")
+        current_time=$(date +"%H")
+        backup_file="epg_old/$(date +"%A")/${current_time}.txt"
+        cp live_status.txt "${backup_file}"
+        echo "Backup created at ${backup_file}"
+
+    - name: List existing backups
+      run: |
+        find epg_old -type f
+
+    - name: Cleanup old backups
+      run: |
+        find epg_old -type f -mtime +7 -exec rm {} \;
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+
+    - name: Pull latest changes
+      run: |
+        git pull
+
+    - name: Merge changes
+      run: |
+        git merge origin/main --no-edit
+
+    - name: Commit changes
+      run: |
+        git add .
+        git commit -m "Hourly backup $(date)"
+
+    - name: Push changes
+      run: |
+        git push
