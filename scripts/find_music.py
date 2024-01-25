@@ -24,6 +24,8 @@ def search_live_channels(api_key, max_results=50):
     live_links = []
 
     try:
+    retries = 0
+    while retries < MAX_RETRIES:
         print("Searching...")
         request = youtube.search().list(
             part="snippet",
@@ -39,11 +41,14 @@ def search_live_channels(api_key, max_results=50):
 
         items = response.get('items', [])
         if not items:
-            print("No live channels found.")
+            print(f"Maximum retries ({MAX_RETRIES}) reached. Exiting...")
+            break
             return live_links
 
         for item in items:
             try:
+    retries = 0
+    while retries < MAX_RETRIES:
                 # Check if the video is live, skip if it's a premiere scheduled for the future
                 if item['snippet']['liveBroadcastContent'] != 'live':
                     continue
@@ -73,7 +78,8 @@ def search_live_channels(api_key, max_results=50):
 
     except Exception as e:
         print("Error:", e)
-        print("No live channels found.")
+        print(f"Maximum retries ({MAX_RETRIES}) reached. Exiting...")
+            break
 
     return live_links
 
