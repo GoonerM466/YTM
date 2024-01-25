@@ -19,6 +19,13 @@ def get_scheduled_live_streams(channel_url):
             ]
         else:
             print(f"No upcoming live streams found for {channel_info['title']}.")
+
+            # Check if the error is about a live event starting soon
+            if 'This live event will begin in a few moments.' in str(channel_info.get('title', '')):
+                start_time_str = channel_info.get('title', '').split(':')[-1].strip()
+                start_time = datetime.strptime(start_time_str, '%I:%M %p %Z %a %b %d, %Y')
+                return [f"{channel_info['title']} - Live - {start_time.strftime('%a %b %d %H:%M:%S UTC %Y')}"]
+
             return None
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
