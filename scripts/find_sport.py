@@ -55,7 +55,7 @@ def search_live_channels(api_key, max_results=50):
                 channel_name = clean_text(item['snippet']['channelTitle'])
                 channel_id = item['snippet']['channelId']
                 group = get_channel_category(channel_id)  # You may implement this function as in your previous script
-                
+
                 # Construct channel URL, removing spaces
                 channel_url = f'https://youtube.com/@{channel_name.replace(" ", "")}/live'
 
@@ -88,7 +88,7 @@ def search_live_channels(api_key, max_results=50):
                 break
 
     except Exception as e:
-        print("An error occurred:", e)
+        print("Error during search:", e)
         print("No live channels found.")
 
     return live_links
@@ -98,7 +98,7 @@ if __name__ == "__main__":
     live_channels = search_live_channels(api_key)
 
     # Write results to the all_live_channels.txt file
-    with open('found_channels/radio_live_channels.txt', 'w', encoding='utf-8') as file:
+    with open('found_channels/sport_live_channels.txt', 'w', encoding='utf-8') as file:
         for channel in live_channels:
             file.write(f"Channel Name: {channel['name']}\n")
             file.write(f"Channel URL: {channel['url']}\n")
