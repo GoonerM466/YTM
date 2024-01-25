@@ -1,0 +1,44 @@
+name: Channel Logo Workflow
+
+on:
+  workflow_run:
+    workflows: ["1_fetch_live_m3u8s"]
+    types:
+      - completed
+
+jobs:
+  get_logo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install yt-dlp
+
+      - name: Wait for 5 minutes
+        run: sleep 300
+
+      - name: Process channels and get logos
+        run: |
+          while IFS=, read -r channel_name group channel_url; do
+            channel_url="https://youtube.com/$channel_url"
+            logo_url=$(yt-dlp --get-thumbnail "$channel_url" --skip-download)
+            echo "D$channel_name, $logo_url" >> current_logos.txt
+          done < current_channels.txt
+
+      - name: Touch output file
+        run: touch current_logos.txt
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add current_logos.txt
+          git commit -m "Update logos"
+          git pull origin main --no-edit
+          git push
