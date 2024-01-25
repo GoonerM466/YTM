@@ -2,7 +2,7 @@ name: zzz-Channel Logger Workflow
 
 on:
   workflow_run:
-    workflows: ["Build M3U Playlist"]
+    workflows: ["2-Generate m3u"]
     types:
       - completed
   workflow_dispatch:
