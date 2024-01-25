@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - name: config
       run: |
         git config --global user.email "action@github.com"
@@ -46,7 +47,12 @@ jobs:
       run: |
         git add -A
         ls -la
-    - name: commit & push
-      run: |
-        git diff --cached --quiet || git commit -m Updated
-        git push origin main
+
+    - name: Commit changes
+      run: git commit -m "Updated"
+
+    - name: Pull changes from the remote repository
+      run: git pull origin main
+
+    - name: Push changes to the remote repository
+      run: git push origin main
