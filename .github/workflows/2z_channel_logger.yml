@@ -29,6 +29,10 @@ jobs:
   
             # Extract channel_name by finding the first ", " and removing everything after it
             channel_name=$(echo "$channel_info" | awk -F ', ' '{print $1}')
+
+            # Debugging output
+            echo "Processing line: $line"
+            echo "Extracted channel_name: $channel_name"
   
             # Check if the file is empty
             if [ ! -s current_channels.txt ]; then
