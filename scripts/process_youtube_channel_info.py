@@ -1,3 +1,6 @@
+# Import the 're' module for regular expressions
+import re
+
 # Function to check if $channel_name exists in current_channels.txt
 def channel_exists(channel_name, current_channels_content):
     return re.search(fr'\s*{channel_name},', current_channels_content) is not None
