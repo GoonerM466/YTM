@@ -17,8 +17,6 @@ with open('current_channels.txt', 'r') as current_channels_file:
 
 # Read youtube_channel_info.txt and process each line
 with open('youtube_channel_info.txt', 'r') as info_file:
-    new_entries_added = False  # Flag to track if new entries are added
-
     for line in info_file:
         # Extract information from the line
         parts = line.strip().split('New: ')
@@ -48,13 +46,6 @@ with open('youtube_channel_info.txt', 'r') as info_file:
                 # If no empty line is found, simply append the new entry
                 with open('current_channels.txt', 'a') as current_channels_file_append:
                     current_channels_file_append.write(original_channel_name_entry + "\n")
-
-            new_entries_added = True  # Set the flag to true
-
-    # Check if the file is empty and break out of the loop
-    if not line:
-        print("youtube_channel_info.txt is empty. Exiting the loop.")
-        break
 
 # Print a message indicating the script has finished
 print("Script completed.")
