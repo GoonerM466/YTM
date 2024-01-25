@@ -29,7 +29,20 @@ def get_scheduled_live_streams(channel_url):
             return None
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
-        return None
+
+        # If the error is about a video ID, try to look up the video URL
+        video_id = str(e).split(":")[-1].strip()
+        video_url = f"https://youtube.com/watch?v={video_id}"
+
+        # Try to get live stream information for the video URL
+        streams = get_scheduled_live_streams(video_url)
+
+        if streams:
+            return streams
+        else:
+            print(f"Unable to retrieve live stream information for {video_url}.")
+            return None
+
     except yt_dlp.utils.DownloadError as e:
         print(f"Error downloading information from YouTube: {str(e)}")
         return None
