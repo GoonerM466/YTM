@@ -28,50 +28,7 @@ jobs:
         git fetch origin main
         git rebase origin/main
 
-    - name: Waiting...
-      run: sleep 20
 
-    - name: Finding music channels
-      run: python ./scripts/find_music.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding sport channels
-      run: python ./scripts/find_sport.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding news channels
-      run: python ./scripts/find_news.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding radio channels
-      run: python ./scripts/find_radio.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding entertainment channels
-      run: python ./scripts/find_entertainment.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding gaming channels
-      run: python ./scripts/find_gaming.py
-
-    - name: Waiting...
-      run: sleep 20
-
-    - name: Finding documentary channels
-      run: python ./scripts/find_docs.py
-
-    - name: Waiting...
-      run: sleep 20
 
     - name: Finding comedy channels
       run: python ./scripts/find_comedy.py
