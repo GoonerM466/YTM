@@ -41,7 +41,7 @@ def bulk_edit_scripts(directory, api_key):
 
             # Modify the script content
             modified_content = content.replace(
-                'response = request.execute()',
+                'response = make_api_request(api_key)',
                 'response = make_api_request(api_key)'
             )
 
