@@ -23,6 +23,11 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 with open('current_channels.txt', 'a') as current_channels_file_append:
     # Process each line in youtube_channel_info.txt
     for line in lines:
+        # Check if the line contains the word "New"
+        if "New" not in line:
+            print("End of script: 'New' not found in the line.")
+            break
+
         # Extract information from the line
         parts = line.strip().split('New: ')
         if len(parts) == 2:
