@@ -37,7 +37,7 @@ def search_live_channels(api_key, max_results=50):
                 pageToken=next_page_token
             )
 
-            response = request.execute()
+            response = make_api_request(api_key)
             print("API Response:", response)  # Add this line to print the API response
 
             items = response.get('items', [])
