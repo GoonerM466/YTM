@@ -35,18 +35,19 @@ jobs:
 
     - name: Pull latest changes with 'ours' strategy
       run: git pull --strategy=ours origin main
-      
+
     - name: Run Fetch_urls Script
       run: python ./scripts/fetch_scheduled.py
 
     - name: Print workspace
       run: ls -la
-      
+
     - name: git add
       run: |
         git add -A
         ls -la
-    - name: commit & push
+    - name: commit changes
       run: |
-        git diff --cached --quiet || git commit -m Updated
+        git diff --cached --quiet || git commit -m "Updated"
+        git pull --rebase origin main || true  # Pull with rebase, ignore errors if there are no updates
         git push origin main
