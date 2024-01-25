@@ -28,15 +28,15 @@ jobs:
     - name: Delay for 10 seconds
       run: sleep 10
 
-    - name: Pull latest changes
-      run: git pull origin main
+    - name: Fetch latest changes
+      run: git fetch origin main
 
     - name: Rebase changes
       run: git pull --rebase origin main
 
-    - name: Pull latest changes with 'ours' strategy
-      run: git pull --strategy=ours origin main
-      
+    - name: Set git pull strategy to rebase
+      run: git config pull.rebase true
+
     - name: Run Fetch_urls Script
       run: python ./scripts/fetch_urls.py
 
