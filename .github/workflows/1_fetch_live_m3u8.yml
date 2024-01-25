@@ -28,7 +28,11 @@ jobs:
       run: sleep 10
 
     - name: Fetch latest changes from remote
-      run: git fetch origin main
+      run: |
+        git fetch origin main
+
+        # Pull changes from remote, auto-resolve conflicts with remote changes
+        git pull origin main --no-edit
 
     - name: Rebase local changes with fetched changes
       run: git rebase origin/main
