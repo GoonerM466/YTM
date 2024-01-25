@@ -23,14 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib yt-dlp
 
-    - name: Pull latest changes
-      run: git pull origin main
-
-    - name: Rebase changes
-      run: git pull --rebase origin main
-
-    - name: Pull latest changes with 'ours' strategy
-      run: git pull --strategy=ours origin main
+    - name: Fetch and rebase changes
+      run: |
+        git fetch origin main
+        git rebase origin/main
 
     - name: Waiting...
       run: sleep 20
@@ -50,4 +46,4 @@ jobs:
         git config user.email "actions@github.com"
         git add .
         git commit -m "Update live channels [skip ci]"
-        git push
+        git push origin main
