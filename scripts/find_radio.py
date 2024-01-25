@@ -89,11 +89,11 @@ def search_live_channels(api_key, max_results=50):
                     break
 
             except Exception as e:
-                print("An unexpected error occurred:", e)
+                print("An unexpected error occurred inside the loop:", e)
                 pass  # Use pass instead of break
 
     except Exception as e:
-        print("An unexpected error occurred:", e)
+        print("An unexpected error occurred outside the loop:", e)
 
     return live_links
 
