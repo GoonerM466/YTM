@@ -21,11 +21,16 @@ def get_scheduled_live_streams(channel_url):
             print(f"No upcoming live streams found for {channel_info['title']}.")
 
             # Check if the error is about a live event starting soon
-            if 'This live event will begin in a few moments.' in str(channel_info.get('title', '')):
+            title = str(channel_info.get('title', ''))
+            if 'This live event will begin' in title:
                 # Try to extract the start time from the description
                 start_time_str = channel_info.get('description', '').split('on ')[-1].strip()
-                start_time = datetime.strptime(start_time_str, '%b %d, %Y at %I:%M %p %Z')
-                return [f"{channel_info['title']} - Live - {start_time.strftime('%a %b %d %H:%M:%S UTC %Y')}"]
+                try:
+                    start_time = datetime.strptime(start_time_str, '%b %d, %Y at %I:%M %p %Z')
+                    return [f"{channel_info['title']} - Live - {start_time.strftime('%a %b %d %H:%M:%S UTC %Y')}"]
+                except ValueError:
+                    print(f"Error parsing start time for {channel_info['title']} - {start_time_str}")
+                    return None
 
             return None
     except yt_dlp.utils.ExtractorError as e:
@@ -102,6 +107,9 @@ def remove_past_entries(input_filename):
     with open(input_filename, 'w') as file:
         file.writelines(filtered_lines)
 
+# Uncomment the following line if you want to remove past entries
+remove_past_entries(scheduled_streams_file)
+
 if __name__ == "__main__":
     # File containing current channels in the format: $channel_name, $group, $channel_url/live
     current_channels_file = "current_channels.txt"
@@ -110,4 +118,4 @@ if __name__ == "__main__":
 
     process_current_channels_file(current_channels_file, scheduled_streams_file)
     # Uncomment the following line if you want to remove past entries
-    remove_past_entries(scheduled_streams_file)
+    # remove_past_entries(scheduled_streams_file)
