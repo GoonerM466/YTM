@@ -27,7 +27,7 @@ jobs:
             # Check if ", " exists in the line
             if [[ ! $line =~ ", " ]]; then
                 echo "Error: \", \" not found in the line. Exiting script."
-                exit 1
+                exit 0
             fi
 
             # Remove "New: " from the line
