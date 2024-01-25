@@ -33,6 +33,9 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
 
+    - name: Pull latest changes with 'ours' strategy
+      run: git pull --strategy=ours orig
+
     - name: Create current_channels directory
       run: mkdir -p ./current_channels
 
