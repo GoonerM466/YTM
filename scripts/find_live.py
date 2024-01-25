@@ -26,7 +26,11 @@ def search_live_channels(api_key, max_results=50):
     try:
     retries = 0
     while retries < MAX_RETRIES:
+    retries = 0
+    while retries < MAX_RETRIES:
         try:
+    retries = 0
+    while retries < MAX_RETRIES:
     retries = 0
     while retries < MAX_RETRIES:
             print("Searching...")
@@ -52,6 +56,8 @@ def search_live_channels(api_key, max_results=50):
 
             for item in items:
                 try:
+    retries = 0
+    while retries < MAX_RETRIES:
     retries = 0
     while retries < MAX_RETRIES:
                     # Check if the video is live, skip if it's a premiere scheduled for the future

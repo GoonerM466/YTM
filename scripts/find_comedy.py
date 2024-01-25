@@ -14,6 +14,8 @@ def make_api_request(api_key, max_results=50):
     retries = 0
     while retries < MAX_RETRIES:
         try:
+    retries = 0
+    while retries < MAX_RETRIES:
             print("Searching...")
             youtube = build('youtube', 'v3', developerKey=api_key)
             request = youtube.search().list(
@@ -37,6 +39,8 @@ def make_api_request(api_key, max_results=50):
             live_links = []
             for item in items:
                 try:
+    retries = 0
+    while retries < MAX_RETRIES:
                     # Check if the video is live, skip if it's a premiere scheduled for the future
                     if item['snippet']['liveBroadcastContent'] != 'live':
                         continue
