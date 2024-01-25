@@ -90,7 +90,7 @@ def process_current_channels_file(input_filename, output_filename):
 
     print(f"Scheduled streams information written to {output_filename}")
 
- Uncomment the following function if you want to remove past entries
+# Uncomment the following function if you want to remove past entries
  def remove_past_entries(input_filename):
      current_time = time.time()
      with open(input_filename, 'r') as file:
