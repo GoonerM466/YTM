@@ -30,20 +30,23 @@ jobs:
             # Extract channel_name by finding the first ", " and removing everything after it
             channel_name=$(echo "$channel_info" | awk -F ', ' '{print $1}')
   
-            # Search for channel_name in current_channels.txt
-            if grep -q "$channel_name" current_channels.txt; then
-              echo "$channel_name has been added, transferred to log"
+            # Check if the file is empty
+            if [ ! -s current_channels.txt ]; then
+                echo "File is empty. Adding $channel_name to youtube_channel_info.txt"
+                echo "$line" >> youtube_channel_info.txt
+            elif grep -q "$channel_name" current_channels.txt; then
+                echo "$channel_name has been added, transferred to log"
   
-              # Copy line to recently_added_channels.txt
-              echo "$line" >> recently_added_channels.txt
+                # Copy line to recently_added_channels.txt
+                echo "$line" >> recently_added_channels.txt
   
-              # Remove line from youtube_channel_info.txt
-              awk -v pattern="$line" '$0 != pattern' youtube_channel_info.txt > tmpfile && mv tmpfile youtube_channel_info.txt
+                # Remove line from youtube_channel_info.txt
+                awk -v pattern="$line" '$0 != pattern' youtube_channel_info.txt > tmpfile && mv tmpfile youtube_channel_info.txt
             else
-              echo "Searched for $channel_name, match not found."
+                echo "Searched for $channel_name, match not found."
   
-              # Restore the original line to youtube_channel_info.txt
-              echo "$line" >> youtube_channel_info.txt
+                # Restore the original line to youtube_channel_info.txt
+                echo "$line" >> youtube_channel_info.txt
             fi
           done < youtube_channel_info.txt
 
