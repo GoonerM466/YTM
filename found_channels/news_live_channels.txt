@@ -1,700 +1,597 @@
 Channel Name: NBC News
-Channel URL: https://youtube.com/@NBCNews/live
+Channel URL: https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Title: LIVE New Hampshire Primary Special Coverage  NBC News NOW
 Description: NBC News NOW is live reporting breaking news and developing stories in real time We are on the scene covering the most 
 Logo URL: https://i.ytimg.com/vi/8KzA_ifDIYM/default_live.jpg
-Add this link to the update file: New: NBC News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NBCNews/live
-
+Add this link to the update file: New: NBC News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Channel Name: Record News
-Channel URL: https://youtube.com/@RecordNews/live
+Channel URL: https://www.youtube.com/channel/UCaXkIU1QidjPwiAYu6GcHjg/live
 Title: AO VIVO Acompanhe as principais notcias do dia na Record News
 Description: Inscrevase no canal da Record News no YouTube httpwwwyoutubecomrecordnews ACOMPANHE A RECORD NEWS 
 Logo URL: https://i.ytimg.com/vi/oIC6PLjQKHI/default_live.jpg
-Add this link to the update file: New: Record News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RecordNews/live
-
+Add this link to the update file: New: Record News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCaXkIU1QidjPwiAYu6GcHjg/live
 Channel Name: CBS News
-Channel URL: https://youtube.com/@CBSNews/live
+Channel URL: https://www.youtube.com/channel/UC8p1vwvWtl6T73JiExfWs1g/live
 Title: LIVE Trump and Haley face off in New Hampshire primary latest updates and more  CBS News
 Description: CBS News breaks down whats at stake for Donald Trump and Nikki Haley in New Hampshire as voters take part in the states 
 Logo URL: https://i.ytimg.com/vi/zMLhJXHHwuE/default_live.jpg
-Add this link to the update file: New: CBS News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CBSNews/live
-
+Add this link to the update file: New: CBS News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC8p1vwvWtl6T73JiExfWs1g/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: Ram Mandir Crowd LIVE Update            Breaking News
 Description: Ram Mandir Crowd LIVE Update           
 Logo URL: https://i.ytimg.com/vi/jGlFTdzWYcY/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: AgendaFree TV
-Channel URL: https://youtube.com/@AgendaFreeTV/live
+Channel URL: https://www.youtube.com/channel/UCshCsg1YVKli8yBai-wa78w/live
 Title: New Hampshire Primary LIVE Results Coverage with Breaking News Updates
 Description: Get the latest New Hampshire Primary results LIVE in our NH election coverage Well have uptotheminute vote totals and 
 Logo URL: https://i.ytimg.com/vi/b5blE6gac3k/default_live.jpg
-Add this link to the update file: New: AgendaFree TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AgendaFreeTV/live
-
+Add this link to the update file: New: AgendaFree TV, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCshCsg1YVKli8yBai-wa78w/live
 Channel Name: TOP NEWS
-Channel URL: https://youtube.com/@TOPNEWS/live
+Channel URL: https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Title:   24  2567
 Description:            
 Logo URL: https://i.ytimg.com/vi/Kj3sSxtgN7Q/default_live.jpg
-Add this link to the update file: New: TOP NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TOPNEWS/live
-
-Channel Name: 
-Channel URL: https://youtube.com/@/live
+Add this link to the update file: New: TOP NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Title: CTI24HD  CTITV Taiwan News HD LiveHD  HD    CtiTv
 Description: 24LIVE   APPhttpsdeepctinewscomappcti888  
 Logo URL: https://i.ytimg.com/vi/oIgbl7t0S_w/default_live.jpg
-Add this link to the update file: New: , INSERT YOUR PREFERRED GROUP, https://youtube.com/@/live
-
-Channel Name:  CH51
-Channel URL: https://youtube.com/@CH51/live
+Channel Name: CH51
+Channel URL: https://www.youtube.com/channel/UCNuKhv5T1zm5ioSd4shshEQ/live
 Title:  51  24 Taiwan EBC 24h live news EBC 24   
 Description: httpsnewsebcnettw YouTubehttpswwwyoutubecomusernewsebcvideos  
 Logo URL: https://i.ytimg.com/vi/2dfAzcDf8Zg/default_live.jpg
-Add this link to the update file: New:  CH51, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CH51/live
-
+Add this link to the update file: New: CH51, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCNuKhv5T1zm5ioSd4shshEQ/live
 Channel Name: LiveNOW from FOX
-Channel URL: https://youtube.com/@LiveNOWfromFOX/live
+Channel URL: https://www.youtube.com/channel/UCJg9wBPyKMNA5sRDnvzmkdg/live
 Title: LIVE New Hampshire primary results  Polls close Trump vs Nikki Haley  LiveNOW from FOX
 Description: New Hampshire primary Some polls are now closed as Nikki Haley and Donald Trump square off in the first presidential primary 
 Logo URL: https://i.ytimg.com/vi/WFjO9TtT50I/default_live.jpg
-Add this link to the update file: New: LiveNOW from FOX, INSERT YOUR PREFERRED GROUP, https://youtube.com/@LiveNOWfromFOX/live
-
+Add this link to the update file: New: LiveNOW from FOX, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCJg9wBPyKMNA5sRDnvzmkdg/live
 Channel Name: Jovem Pan News
-Channel URL: https://youtube.com/@JovemPanNews/live
+Channel URL: https://www.youtube.com/channel/UCP391YRAjSOdM_bwievgaZA/live
 Title: JORNAL JOVEM PAN  23012024
 Description: Baixe o app Panflix httpswwwpanflixcombr Inscrevase no nosso canal httpwwwyoutubecomcjovempannews Entre no 
 Logo URL: https://i.ytimg.com/vi/YT8D4MpBFqc/default_live.jpg
-Add this link to the update file: New: Jovem Pan News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@JovemPanNews/live
-
+Add this link to the update file: New: Jovem Pan News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCP391YRAjSOdM_bwievgaZA/live
 Channel Name: CH7HD News
-Channel URL: https://youtube.com/@CH7HDNews/live
+Channel URL: https://www.youtube.com/channel/UC2OtDM92rLjt4mm43ED1Q-w/live
 Title:  LIVE  7    quotquot    24  2567
 Description: LIVE  7        24  2567       
 Logo URL: https://i.ytimg.com/vi/qY60bRzbJew/default_live.jpg
-Add this link to the update file: New: CH7HD News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CH7HDNews/live
-
+Add this link to the update file: New: CH7HD News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC2OtDM92rLjt4mm43ED1Q-w/live
 Channel Name: TVBS NEWS
-Channel URL: https://youtube.com/@TVBSNEWS/live
+Channel URL: https://www.youtube.com/channel/UC5nwNW4KdC0SzrhF9BXEYOQ/live
 Title: LIVETVBS NEWS24 Taiwan News 24hr 24 24 55
 Description:  LIVE1700 17001800 LIVE1900  
 Logo URL: https://i.ytimg.com/vi/m_dhMSvUCIc/default_live.jpg
-Add this link to the update file: New: TVBS NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TVBSNEWS/live
-
+Add this link to the update file: New: TVBS NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC5nwNW4KdC0SzrhF9BXEYOQ/live
 Channel Name: FRANCE 24
-Channel URL: https://youtube.com/@FRANCE24/live
+Channel URL: https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg/live
 Title: FRANCE 24  EN DIRECT  Info et actualits internationales en continu 24h24
 Description: Regardez FRANCE 24 en franais en direct gratuitement et en streaming sur YouTube Suivez toutes les infos du monde en 
 Logo URL: https://i.ytimg.com/vi/l8PMl7tUDIE/default_live.jpg
-Add this link to the update file: New: FRANCE 24, INSERT YOUR PREFERRED GROUP, https://youtube.com/@FRANCE24/live
-
+Add this link to the update file: New: FRANCE 24, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg/live
 Channel Name: ABC News
-Channel URL: https://youtube.com/@ABCNews/live
+Channel URL: https://www.youtube.com/channel/UCBi2mrWuNuyYy4gbM6fU18Q/live
 Title: LIVE ABC News Live  Tuesday January 23
 Description: ABC News Live is ABC News awardwinning 247 streaming news channel with live coverage as news breaks upto theminute 
 Logo URL: https://i.ytimg.com/vi/mnEF_aN7bms/default_live.jpg
-Add this link to the update file: New: ABC News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABCNews/live
-
+Add this link to the update file: New: ABC News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCBi2mrWuNuyYy4gbM6fU18Q/live
 Channel Name: Sky News
-Channel URL: https://youtube.com/@SkyNews/live
+Channel URL: https://www.youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ/live
 Title: Watch Sky News Live
 Description: Watch Sky News Former cabinet minister Sir Simon Clarke has called on Rishi Sunak to resign as prime minister the Doomsday 
 Logo URL: https://i.ytimg.com/vi/w9uJg68CV4g/default_live.jpg
-Add this link to the update file: New: Sky News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SkyNews/live
-
-Channel Name:  ICTV
-Channel URL: https://youtube.com/@ICTV/live
+Add this link to the update file: New: Sky News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ/live
+Channel Name: ICTV
+Channel URL: https://www.youtube.com/channel/UCG26bSkEjJc7SqGsxoHNnbA/live
 Title:         live   ICTV      
 Description:             
 Logo URL: https://i.ytimg.com/vi/T88RnpKNN_s/default_live.jpg
-Add this link to the update file: New:  ICTV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ICTV/live
-
+Add this link to the update file: New: ICTV, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCG26bSkEjJc7SqGsxoHNnbA/live
 Channel Name: NBC News
-Channel URL: https://youtube.com/@NBCNews/live
+Channel URL: https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Title: LIVE COVERAGE 2024 New Hampshire Primaries  NBC News NOW
 Description: Watch NBC News NOWs coverage of the 2024 New Hampshire Primaries as former President Donald Trump looks to cement his 
 Logo URL: https://i.ytimg.com/vi/vjBHqyt1OcQ/default_live.jpg
-Add this link to the update file: New: NBC News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NBCNews/live
-
+Add this link to the update file: New: NBC News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Channel Name: Polimer News
-Channel URL: https://youtube.com/@PolimerNews/live
+Channel URL: https://www.youtube.com/channel/UC8Z-VjXBtDJTvq6aqkIskPg/live
 Title: LIVEPolimer News  PMModi  CMMKStalin  Ram Mandir  TN Cabinet Meeting  DMK  BJP  Jallikattu
 Description: LIVEPolimer News  PMModi  CMMKStalin  Ram Mandir  TN Cabinet Meeting  DMK  BJP  Jallikattu CMMKStalin  TNGovt 
 Logo URL: https://i.ytimg.com/vi/ePVKhbnwXgU/default_live.jpg
-Add this link to the update file: New: Polimer News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PolimerNews/live
-
+Add this link to the update file: New: Polimer News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC8Z-VjXBtDJTvq6aqkIskPg/live
 Channel Name: TBS NEWS DIG Powered by JNN
-Channel URL: https://youtube.com/@TBSNEWSDIGPoweredbyJNN/live
+Channel URL: https://www.youtube.com/channel/UC6AG81pAkf6Lbi_1VC5NmPA/live
 Title: Japan News Digest LiveTBS NEWS DIG124
 Description: 124 TBS NEWS   news live tbs 
 Logo URL: https://i.ytimg.com/vi/qzhoR-pkJtA/default_live.jpg
-Add this link to the update file: New: TBS NEWS DIG Powered by JNN, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TBSNEWSDIGPoweredbyJNN/live
-
+Add this link to the update file: New: TBS NEWS DIG Powered by JNN, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC6AG81pAkf6Lbi_1VC5NmPA/live
 Channel Name: ABC News
-Channel URL: https://youtube.com/@ABCNews/live
+Channel URL: https://www.youtube.com/channel/UCBi2mrWuNuyYy4gbM6fU18Q/live
 Title: LIVE Latest News Headlines and Events l ABC News Live
 Description: ABC News Live is ABC News awardwinning 247 streaming news channel with live coverage as news breaks upto theminute 
 Logo URL: https://i.ytimg.com/vi/gN0PZCe-kwQ/default_live.jpg
-Add this link to the update file: New: ABC News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABCNews/live
-
+Add this link to the update file: New: ABC News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCBi2mrWuNuyYy4gbM6fU18Q/live
 Channel Name: Chhittar Bazi
-Channel URL: https://youtube.com/@ChhittarBazi/live
+Channel URL: https://www.youtube.com/channel/UCCY6B_mFgb5AhMAM4yT6ziQ/live
 Title: LIVE   The Ingraham Angle 12324  Full  Fox Breaking News Trump January 23 2024
 Description: The Ingraham Angle 12324  The Ingraham Angle Full  Fox Breaking News Trump January 23 2024  Watch more The 
 Logo URL: https://i.ytimg.com/vi/bQ6kLulBuE8/default_live.jpg
-Add this link to the update file: New: Chhittar Bazi, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ChhittarBazi/live
-
+Add this link to the update file: New: Chhittar Bazi, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCCY6B_mFgb5AhMAM4yT6ziQ/live
 Channel Name: PBS NewsHour
-Channel URL: https://youtube.com/@PBSNewsHour/live
+Channel URL: https://www.youtube.com/channel/UC6ZFN9Tx6xh-skXCuRHCDpQ/live
 Title: WATCH LIVE 2024 New Hampshire primary  PBS NewsHour special coverage
 Description: Stream your PBS favorites with the PBS app httpstopbsorg2Jb8twG Find more from PBS NewsHour at 
 Logo URL: https://i.ytimg.com/vi/ON_a-Wr90pk/default_live.jpg
-Add this link to the update file: New: PBS NewsHour, INSERT YOUR PREFERRED GROUP, https://youtube.com/@PBSNewsHour/live
-
+Add this link to the update file: New: PBS NewsHour, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC6ZFN9Tx6xh-skXCuRHCDpQ/live
 Channel Name: CBS News
-Channel URL: https://youtube.com/@CBSNews/live
+Channel URL: https://www.youtube.com/channel/UC8p1vwvWtl6T73JiExfWs1g/live
 Title: Watch Live New Hampshire primary results polls and more  CBS News
 Description: New Hampshire voters are casting their ballots Tuesday in the firstinthenation presidential primary Republican presidential 
 Logo URL: https://i.ytimg.com/vi/_U0nbkkNQ6Q/default_live.jpg
-Add this link to the update file: New: CBS News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CBSNews/live
-
+Add this link to the update file: New: CBS News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC8p1vwvWtl6T73JiExfWs1g/live
 Channel Name: Great Belize Television  Channel 5 Livestream
-Channel URL: https://youtube.com/@GreatBelizeTelevisionChannel5Livestream/live
+Channel URL: https://www.youtube.com/channel/UC823EN3FaKJ4Pk_ZIcp34LA/live
 Title: News 5 Live
 Description: News 5 Live
 Logo URL: https://i.ytimg.com/vi/HITRt55KiiU/default_live.jpg
-Add this link to the update file: New: Great Belize Television  Channel 5 Livestream, INSERT YOUR PREFERRED GROUP, https://youtube.com/@GreatBelizeTelevisionChannel5Livestream/live
-
+Add this link to the update file: New: Great Belize Television  Channel 5 Livestream, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC823EN3FaKJ4Pk_ZIcp34LA/live
 Channel Name: SOMOY TV
-Channel URL: https://youtube.com/@SOMOYTV/live
+Channel URL: https://www.youtube.com/channel/UCxHoBXkY88Tb8z1Ssj6CWsQ/live
 Title: SOMOY TV LIVE          LIVE TV  SOMOY TV LIVE STREAMING  BANGLA TV LIVE
 Description: SOMOY TV LIVE          LIVE TV  SOMOY TV LIVE STREAMING 
 Logo URL: https://i.ytimg.com/vi/R3NfCQliOvA/default_live.jpg
-Add this link to the update file: New: SOMOY TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SOMOYTV/live
-
+Add this link to the update file: New: SOMOY TV, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCxHoBXkY88Tb8z1Ssj6CWsQ/live
 Channel Name: News18 India
-Channel URL: https://youtube.com/@News18India/live
+Channel URL: https://www.youtube.com/channel/UCPP3etACgdUWvizcES1dJ8Q/live
 Title: Today Breaking News  24  2024     Ram Mandir Pran Pratishtha News  N18L
 Description: Today Breaking News  24  2024     Ram Mandir Pran Pratishtha News  N18L Ram 
 Logo URL: https://i.ytimg.com/vi/yh7pWWcfzE8/default_live.jpg
-Add this link to the update file: New: News18 India, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18India/live
-
+Add this link to the update file: New: News18 India, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCPP3etACgdUWvizcES1dJ8Q/live
 Channel Name: Aaj Tak
-Channel URL: https://youtube.com/@AajTak/live
+Channel URL: https://www.youtube.com/channel/UCt4t-jeY85JegMlZ-E5UWtA/live
 Title: Black and White with Sudhir Chaudhary LIVE Ram Mandir Ayodhya  PM Modi  NDA Vs INDIA  Aaj Tak
 Description: Ram Mandir News            
 Logo URL: https://i.ytimg.com/vi/ei757Dk-ja4/default_live.jpg
-Add this link to the update file: New: Aaj Tak, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AajTak/live
-
+Add this link to the update file: New: Aaj Tak, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCt4t-jeY85JegMlZ-E5UWtA/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: Mamata Banerjee Vs Owaisi On Babri Masjid LIVE           
 Description: Mamata Banerjee Vs Owaisi On Babri Masjid LIVE          
 Logo URL: https://i.ytimg.com/vi/2cY4D43wO0E/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: Aaj Tak
-Channel URL: https://youtube.com/@AajTak/live
+Channel URL: https://www.youtube.com/channel/UCt4t-jeY85JegMlZ-E5UWtA/live
 Title: Aaj Tak LIVE TV Karpoori Thakur  Bharat Ratna  Bihar Politics  CM Nitish  Ayodhya Ram Mandir
 Description:            
 Logo URL: https://i.ytimg.com/vi/ZoKv_Ip5-YI/default_live.jpg
-Add this link to the update file: New: Aaj Tak, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AajTak/live
-
+Add this link to the update file: New: Aaj Tak, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCt4t-jeY85JegMlZ-E5UWtA/live
 Channel Name: CNNNews18
-Channel URL: https://youtube.com/@CNNNews18/live
+Channel URL: https://www.youtube.com/channel/UCef1-8eOpJgud7szVPlZQAQ/live
 Title: Donald Trump News LIVE  Donald Trump39s Rally In Manchester LIVE  Trump Speech LIVE  N18L
 Description: Donald Trump News LIVE  Donald Trumps Rally In Manchester LIVE  Trump Speech LIVE  N18L DISCLAIMER This video may 
 Logo URL: https://i.ytimg.com/vi/PtfaYcWWw6c/default_live.jpg
-Add this link to the update file: New: CNNNews18, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNNNews18/live
-
+Add this link to the update file: New: CNNNews18, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCef1-8eOpJgud7szVPlZQAQ/live
 Channel Name: BAMA FOOTBALL ON YOUTUBE WITH KYLE HENDERSON
-Channel URL: https://youtube.com/@BAMAFOOTBALLONYOUTUBEWITHKYLEHENDERSON/live
+Channel URL: https://www.youtube.com/channel/UCXLM426XzspM1Ea4aXWMhhw/live
 Title: Ryan Williams cancels official visit to Texas  Latest Alabama Crimson Tide News and Rumors
 Description: Fan Fund Kyle Henderson and Bama Football on Youtube 
 Logo URL: https://i.ytimg.com/vi/nRO1o9CfErg/default_live.jpg
-Add this link to the update file: New: BAMA FOOTBALL ON YOUTUBE WITH KYLE HENDERSON, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BAMAFOOTBALLONYOUTUBEWITHKYLEHENDERSON/live
-
+Add this link to the update file: New: BAMA FOOTBALL ON YOUTUBE WITH KYLE HENDERSON, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCXLM426XzspM1Ea4aXWMhhw/live
 Channel Name: V6 News Telugu
-Channel URL: https://youtube.com/@V6NewsTelugu/live
+Channel URL: https://www.youtube.com/channel/UCDCMjD1XIAsCZsYHNMGVcog/live
 Title: V6 News LIVE   Telangana Live TV Channel  V6 News
 Description: Watch Telugu news Live on V6 News LIVE  Telangana News Live Updates V6 News Brings the Best of the Telugu News for 
 Logo URL: https://i.ytimg.com/vi/_xtceKvlVYQ/default_live.jpg
-Add this link to the update file: New: V6 News Telugu, INSERT YOUR PREFERRED GROUP, https://youtube.com/@V6NewsTelugu/live
-
+Add this link to the update file: New: V6 News Telugu, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCDCMjD1XIAsCZsYHNMGVcog/live
 Channel Name: News Nation
-Channel URL: https://youtube.com/@NewsNation/live
+Channel URL: https://www.youtube.com/channel/UCCjG8NtOig0USdrT5D1FpxQ/live
 Title: Mira Road Clash LIVE Updates       Eknath Shinde    
 Description: Mira Road Clash LIVE Updates       Eknath Shinde    
 Logo URL: https://i.ytimg.com/vi/FOY8RKf8ROU/default_live.jpg
-Add this link to the update file: New: News Nation, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NewsNation/live
-
+Add this link to the update file: New: News Nation, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCCjG8NtOig0USdrT5D1FpxQ/live
 Channel Name: Tribunnews
-Channel URL: https://youtube.com/@Tribunnews/live
+Channel URL: https://www.youtube.com/channel/UCmxAIW7RDDC88EPk4ry16Kg/live
 Title: BREAKING NEWS Mahfud MD Mundur dari Menko Polhukam Bentuk Protes Keras ke Pemerintah
 Description: Download aplikasi berita TribunX di Play Store atau App Store untuk dapatkan pengalaman baru TRIBUNVIDEOCOM  Menteri 
 Logo URL: https://i.ytimg.com/vi/nT9q1XGoaHk/default_live.jpg
-Add this link to the update file: New: Tribunnews, INSERT YOUR PREFERRED GROUP, https://youtube.com/@Tribunnews/live
-
+Add this link to the update file: New: Tribunnews, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCmxAIW7RDDC88EPk4ry16Kg/live
 Channel Name: Mercado Media
-Channel URL: https://youtube.com/@MercadoMedia/live
+Channel URL: https://www.youtube.com/channel/UCA_KjizAMeuEKL9d7dkvPeg/live
 Title: Reacting to Latest News Events and Politics
 Description: This stream is dedicated to discussing researching and reporting accurate and relevant news centered around various current 
 Logo URL: https://i.ytimg.com/vi/USkHQOrNGYo/default_live.jpg
-Add this link to the update file: New: Mercado Media, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MercadoMedia/live
-
+Add this link to the update file: New: Mercado Media, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCA_KjizAMeuEKL9d7dkvPeg/live
 Channel Name: EYEWITNESS NEWS
-Channel URL: https://youtube.com/@EYEWITNESSNEWS/live
+Channel URL: https://www.youtube.com/channel/UC1BN2rEHho7wmM-GEIEm7FA/live
 Title: Tune into Eyewitness News Bahamas LIVE  JANUARY 23rd 2024
 Description: Tune into Eyewitness News Bahamas LIVE  JANUARY 23rd 2024 This video features materials protected by the Fair Use 
 Logo URL: https://i.ytimg.com/vi/g-ebND9Wknk/default_live.jpg
-Add this link to the update file: New: EYEWITNESS NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@EYEWITNESSNEWS/live
-
+Add this link to the update file: New: EYEWITNESS NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC1BN2rEHho7wmM-GEIEm7FA/live
 Channel Name: ABP NEWS
-Channel URL: https://youtube.com/@ABPNEWS/live
+Channel URL: https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Title: Ram Mandir  Yogi         Ayodhya Ram Mandir Pran Pratishtha  PM Modi
 Description: RamRajyaOnABP Ayodhya rammandir pmmodi RamTempleOpening rammandirinauguration 22january2024 rammandir 
 Logo URL: https://i.ytimg.com/vi/6MLektuWwCs/default_live.jpg
-Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABPNEWS/live
-
+Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: World Reaction On Ayodhya Ram Mandir Inauguration LIVE          News
 Description:             
 Logo URL: https://i.ytimg.com/vi/xR-AZW7SSmk/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: News18 Bangla
-Channel URL: https://youtube.com/@News18Bangla/live
+Channel URL: https://www.youtube.com/channel/UCbf0XHULBkTfv2hBjaaDw9Q/live
 Title: LIVE  Weather Update Today         Bangla News
 Description: LIVE  Weather Update Today         Bangla 
 Logo URL: https://i.ytimg.com/vi/RhXm1F4Ulno/default_live.jpg
-Add this link to the update file: New: News18 Bangla, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18Bangla/live
-
+Add this link to the update file: New: News18 Bangla, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCbf0XHULBkTfv2hBjaaDw9Q/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: Zee News LIVE Karpoori Thakur Bharat Ratan  Ayodhya Ram Mandir Updates  Rahul Gandhi Assam  Modi
 Description: Ayodhya Ram Mandir Inauguration Live Updates       
 Logo URL: https://i.ytimg.com/vi/TPcmrPrygDc/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: 92 News HD
-Channel URL: https://youtube.com/@92NewsHD/live
+Channel URL: https://www.youtube.com/channel/UCsgC5cbz3DE2Shh34gNKiog/live
 Title: 92 NEWS LIVE  Pakistan News Live  Latest Headlines amp Breaking News  Press Conferences amp Speeches
 Description: 92 NEWS LIVE  Pakistan News Live  Latest Headlines  Breaking News  Press Conferences  Speeches 92NewsLive 
 Logo URL: https://i.ytimg.com/vi/itpkkkO8t9o/default_live.jpg
-Add this link to the update file: New: 92 News HD, INSERT YOUR PREFERRED GROUP, https://youtube.com/@92NewsHD/live
-
+Add this link to the update file: New: 92 News HD, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCsgC5cbz3DE2Shh34gNKiog/live
 Channel Name: Aaj Tak
-Channel URL: https://youtube.com/@AajTak/live
+Channel URL: https://www.youtube.com/channel/UCt4t-jeY85JegMlZ-E5UWtA/live
 Title: Superfast News LIVE          Ayodhya Ram Mandir  PM Modi
 Description: Ram Mandir News            
 Logo URL: https://i.ytimg.com/vi/X1mwfDmoSew/default_live.jpg
-Add this link to the update file: New: Aaj Tak, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AajTak/live
-
+Add this link to the update file: New: Aaj Tak, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCt4t-jeY85JegMlZ-E5UWtA/live
 Channel Name: CBC News
-Channel URL: https://youtube.com/@CBCNews/live
+Channel URL: https://www.youtube.com/channel/UCKjU3KzdbJE1EFcHVqXC3_g/live
 Title: Canada Tonight for Jan 23 2024
 Description: Jan 23 2024  Host Travis Dhanraj gets expert reaction and analysis after a federal judge ruled the Liberal governments use of 
 Logo URL: https://i.ytimg.com/vi/xhzfCBQseVw/default_live.jpg
-Add this link to the update file: New: CBC News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CBCNews/live
-
+Add this link to the update file: New: CBC News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCKjU3KzdbJE1EFcHVqXC3_g/live
 Channel Name: ABC13 Houston
-Channel URL: https://youtube.com/@ABC13Houston/live
+Channel URL: https://www.youtube.com/channel/UCDmNmxF3ZVMeGyvWE9tOqPQ/live
 Title: ABC13 Houston  Live Local News and Weather
 Description: Watch ABC13 Houston for live breaking news and weather updates 247 Click the subscribe button to be notified about live 
 Logo URL: https://i.ytimg.com/vi/6EdywNFYhu8/default_live.jpg
-Add this link to the update file: New: ABC13 Houston, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABC13Houston/live
-
+Add this link to the update file: New: ABC13 Houston, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCDmNmxF3ZVMeGyvWE9tOqPQ/live
 Channel Name: Dunya News
-Channel URL: https://youtube.com/@DunyaNews/live
+Channel URL: https://www.youtube.com/channel/UCnMBV5Iw4WqKILKue1nP6Hg/live
 Title: Dunya News Live  Latest News Headlines  Bulletins and Events  247  Talk Shows and Infotainment
 Description: Dunya News Live brings you 247 coverage of the Latest News Headlines and events from Pakistan and around the world
 Logo URL: https://i.ytimg.com/vi/OyGI41p2C4s/default_live.jpg
-Add this link to the update file: New: Dunya News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@DunyaNews/live
-
+Add this link to the update file: New: Dunya News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCnMBV5Iw4WqKILKue1nP6Hg/live
 Channel Name: News18 Bihar Jharkhand
-Channel URL: https://youtube.com/@News18BiharJharkhand/live
+Channel URL: https://www.youtube.com/channel/UC531MlZA5LUbeGwEN_zcppw/live
 Title: KK Pathak News Live  Nitish            DM Chandrashekhar
 Description: KK Pathak News Live  Nitish          
 Logo URL: https://i.ytimg.com/vi/wGjT1irHqn8/default_live.jpg
-Add this link to the update file: New: News18 Bihar Jharkhand, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18BiharJharkhand/live
-
+Add this link to the update file: New: News18 Bihar Jharkhand, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC531MlZA5LUbeGwEN_zcppw/live
 Channel Name: Arise News
-Channel URL: https://youtube.com/@AriseNews/live
+Channel URL: https://www.youtube.com/channel/UCyEJX-kSj0kOOCS7Qlq2G7g/live
 Title: Arise News Live
 Description: Join the hosts of Africas premier news show for up to date conversations on politics business news sports exclusive interviews 
 Logo URL: https://i.ytimg.com/vi/blUPLZw_XyU/default_live.jpg
-Add this link to the update file: New: Arise News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@AriseNews/live
-
+Add this link to the update file: New: Arise News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCyEJX-kSj0kOOCS7Qlq2G7g/live
 Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Channel URL: https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Title: Yaman     World War3  Biden  America  Breaking News Live  Nuclear Attack
 Description: Yaman     World War3  Biden  America  Breaking News Live  Nuclear Attack 
 Logo URL: https://i.ytimg.com/vi/JDrh7UUz6nQ/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Channel Name: IndiaTV
-Channel URL: https://youtube.com/@IndiaTV/live
+Channel URL: https://www.youtube.com/channel/UCttspZesZIDEwwpVIgoZtWQ/live
 Title: Ram Mandir Darshan Closed Live            Breaking News
 Description: Ram Mandir Darshan Closed Live          
 Logo URL: https://i.ytimg.com/vi/1Vis063rgQw/default_live.jpg
-Add this link to the update file: New: IndiaTV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IndiaTV/live
-
+Add this link to the update file: New: IndiaTV, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCttspZesZIDEwwpVIgoZtWQ/live
 Channel Name: Zee Business
-Channel URL: https://youtube.com/@ZeeBusiness/live
+Channel URL: https://www.youtube.com/channel/UCkXopQ3ubd-rnXnStZqCl2w/live
 Title: Zee Business LIVE  Investment Tips  Share Market Live Updates  Stock Market News  ZeeBiz
 Description: Zee Business LIVE  Investment Tips  Share Market Live Updates  Stock Market News  ZeeBiz About Zee Business Zee 
 Logo URL: https://i.ytimg.com/vi/4OMy12PKv_g/default_live.jpg
-Add this link to the update file: New: Zee Business, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeBusiness/live
-
+Add this link to the update file: New: Zee Business, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCkXopQ3ubd-rnXnStZqCl2w/live
 Channel Name: News 24
-Channel URL: https://youtube.com/@News24/live
+Channel URL: https://www.youtube.com/channel/UCuzS3rPQAYqHcLWqOFuY0pw/live
 Title: Sabse Bada Sawal     393939INDIA39     Garima Singh
 Description: news24 latestnews news24live Sabse Bada Sawal     
 Logo URL: https://i.ytimg.com/vi/0veqq1nbB_I/default_live.jpg
-Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News24/live
-
+Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCuzS3rPQAYqHcLWqOFuY0pw/live
 Channel Name: TIMES NOW Navbharat
-Channel URL: https://youtube.com/@TIMESNOWNavbharat/live
+Channel URL: https://www.youtube.com/channel/UCMk9Tdc-d1BIcAFaSppiVkw/live
 Title:   Iran    Pakistan   Iran Vs Pakistan Attack News Live Updates  Hindi News
 Description: Iran Pakistan Attack            
 Logo URL: https://i.ytimg.com/vi/t5M4JOAATKU/default_live.jpg
-Add this link to the update file: New: TIMES NOW Navbharat, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TIMESNOWNavbharat/live
-
+Add this link to the update file: New: TIMES NOW Navbharat, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCMk9Tdc-d1BIcAFaSppiVkw/live
 Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Channel URL: https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Title: Russia Ukraine War News Live Putin           Putin  Zelenskyy
 Description: Russia Ukraine War News Live Putin         
 Logo URL: https://i.ytimg.com/vi/fVt7M91yO7Q/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Channel Name: SAMAA TV
-Channel URL: https://youtube.com/@SAMAATV/live
+Channel URL: https://www.youtube.com/channel/UCJekW1Vj5fCVEGdye_mBN6Q/live
 Title:  SAMAA News Live  Pakistan News Live  Latest News Headlines amp Breaking News  SAMAA TV
 Description: SAMAALIVE PakistanNewsLive LiveNews SamaaTv  Subscribe to Samaa News  httpsbitly2Wh8Sp8  Watch 
 Logo URL: https://i.ytimg.com/vi/N14lJkjmT58/default_live.jpg
-Add this link to the update file: New: SAMAA TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@SAMAATV/live
-
+Add this link to the update file: New: SAMAA TV, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCJekW1Vj5fCVEGdye_mBN6Q/live
 Channel Name: News18 Bihar Jharkhand
-Channel URL: https://youtube.com/@News18BiharJharkhand/live
+Channel URL: https://www.youtube.com/channel/UC531MlZA5LUbeGwEN_zcppw/live
 Title: KK Pathak News Live  Patna DM Chandrashekhar Singh          Nitish Kumar
 Description: KK Pathak News Live  Patna DM Chandrashekhar Singh        
 Logo URL: https://i.ytimg.com/vi/Q2UuTjkIhBY/default_live.jpg
-Add this link to the update file: New: News18 Bihar Jharkhand, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18BiharJharkhand/live
-
+Add this link to the update file: New: News18 Bihar Jharkhand, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC531MlZA5LUbeGwEN_zcppw/live
 Channel Name: News18 Odia
-Channel URL: https://youtube.com/@News18Odia/live
+Channel URL: https://www.youtube.com/channel/UCUK49UvmYWYLiB7_bZFuFZQ/live
 Title: Live 3939           Breaking News  Odia News
 Description:           
 Logo URL: https://i.ytimg.com/vi/OTxjjWv3_Ig/default_live.jpg
-Add this link to the update file: New: News18 Odia, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18Odia/live
-
+Add this link to the update file: New: News18 Odia, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCUK49UvmYWYLiB7_bZFuFZQ/live
 Channel Name: TIMES NOW
-Channel URL: https://youtube.com/@TIMESNOW/live
+Channel URL: https://www.youtube.com/channel/UC6RJ7-PaXg6TIH2BzZfTV7w/live
 Title: Ayodhya Ram Mandir LIVE  PM Modi  Ram Mandir News Live Updates  Ram Mandir LIVE  Times Now
 Description: Ayodhya Ram Mandir LIVE When PM Modi Laid Foundation Of Ram Mandir Ram Mandir LIVE Times Now A member of the 
 Logo URL: https://i.ytimg.com/vi/kGIxSX9UswM/default_live.jpg
-Add this link to the update file: New: TIMES NOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TIMESNOW/live
-
+Add this link to the update file: New: TIMES NOW, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC6RJ7-PaXg6TIH2BzZfTV7w/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: Rahul Gandhi Arrest News LIVE Update          Assam CM Himanta
 Description: Rahul Gandhi Arrest News LIVE Update          Assam CM 
 Logo URL: https://i.ytimg.com/vi/ca2kfzzD7yM/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title:    live Ayodhya darshan LIVE  Ram lala Darshan  Breaking News  UP Police 
 Description:            
 Logo URL: https://i.ytimg.com/vi/rUrTYHfq-CA/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: BOL News
-Channel URL: https://youtube.com/@BOLNews/live
+Channel URL: https://www.youtube.com/channel/UCz2yxQJZgiB_5elTzqV7FiQ/live
 Title:  BOL NEWS LIVE  Latest Pakistan News 247  Headlines Bulletins Breaking News Exclusive Coverage
 Description: BOL NEWS LIVE  Latest Pakistan News 247  Headlines Bulletins Breaking News  Exclusive Coverage BOLNEWSLIVE 
 Logo URL: https://i.ytimg.com/vi/ygXIhGil8a8/default_live.jpg
-Add this link to the update file: New: BOL News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@BOLNews/live
-
+Add this link to the update file: New: BOL News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCz2yxQJZgiB_5elTzqV7FiQ/live
 Channel Name: NEWS
-Channel URL: https://youtube.com/@NEWS/live
+Channel URL: https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Title: 24H  LIVE24H LATEST NEWS LIVE NOW On AirNEWS LIVE
 Description:   
 Logo URL: https://i.ytimg.com/vi/XyjAPB2k1ao/default_live.jpg
-Add this link to the update file: New: NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NEWS/live
-
+Add this link to the update file: New: NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Channel URL: https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Title: Ram Mandir Live News Updates    Asaduddin Owaisi   Interview Viral 
 Description: Ram Mandir Live News Updates    Asaduddin Owaisi   Interview Viral 
 Logo URL: https://i.ytimg.com/vi/kiQyYn6IA1c/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Channel Name: News 24
-Channel URL: https://youtube.com/@News24/live
+Channel URL: https://www.youtube.com/channel/UCuzS3rPQAYqHcLWqOFuY0pw/live
 Title: Rashtra Ki Baat    FIRRahul    Manak Gupta  PM Modi  Himanta Biswa Sarma
 Description: Rashtra Ki Baat   FIRRahul    Manak Gupta  PM Modi  Himanta Biswa Sarma 
 Logo URL: https://i.ytimg.com/vi/gYOceeZiqvM/default_live.jpg
-Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News24/live
-
+Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCuzS3rPQAYqHcLWqOFuY0pw/live
 Channel Name: ABP NEWS
-Channel URL: https://youtube.com/@ABPNEWS/live
+Channel URL: https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Title: Sandeep Chaudhary Live  INDIA Alliance  BJP    Nitish Kumar   Loksabha Election
 Description: nitishkumar laluyadav indiaalliance hindinews Hindinewslive abpnews latestnews abpnewslive Rashtriya Janata Dal 
 Logo URL: https://i.ytimg.com/vi/3jGxE5shODs/default_live.jpg
-Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABPNEWS/live
-
+Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: Zee News Digital LIVE TV Ayodhya Ram Mandir Pran Pratishtha  Breaking  PM Modi LIVE Updates Yogi
 Description:            
 Logo URL: https://i.ytimg.com/vi/rekNqYolSyw/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: TIMES NOW Navbharat
-Channel URL: https://youtube.com/@TIMESNOWNavbharat/live
+Channel URL: https://www.youtube.com/channel/UCMk9Tdc-d1BIcAFaSppiVkw/live
 Title: Live  News Ki Pathshala  Ram Lalla            
 Description: Ayodhya  Ram Mandir     PM Modi    
 Logo URL: https://i.ytimg.com/vi/D2kjPnjWrnA/default_live.jpg
-Add this link to the update file: New: TIMES NOW Navbharat, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TIMESNOWNavbharat/live
-
+Add this link to the update file: New: TIMES NOW Navbharat, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCMk9Tdc-d1BIcAFaSppiVkw/live
 Channel Name: Republic World
-Channel URL: https://youtube.com/@RepublicWorld/live
+Channel URL: https://www.youtube.com/channel/UCwqusr8YDwM-3mEYTDeJHzw/live
 Title: Republic TV LIVE Devotees Throng Ram Mandir In Record Numbers  Bharat Ratna For Karpoori Thakur
 Description: Republic TV LIVE Watch biggest news stories of day on Republic TV Live Stream republictvlive BreakingNews 
 Logo URL: https://i.ytimg.com/vi/kuIUNeuemFg/default_live.jpg
-Add this link to the update file: New: Republic World, INSERT YOUR PREFERRED GROUP, https://youtube.com/@RepublicWorld/live
-
+Add this link to the update file: New: Republic World, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCwqusr8YDwM-3mEYTDeJHzw/live
 Channel Name: KTN News Kenya
-Channel URL: https://youtube.com/@KTNNewsKenya/live
+Channel URL: https://www.youtube.com/channel/UCKVsdeoHExltrWMuK0hOWmg/live
 Title: LIVE KTN NEWS
 Description: Welcome to the 247 KTN Kenya News Channel on YouTube  your trusted source for the latest news and updates in Kenya and 
 Logo URL: https://i.ytimg.com/vi/OdIxeE2eWSg/default_live.jpg
-Add this link to the update file: New: KTN News Kenya, INSERT YOUR PREFERRED GROUP, https://youtube.com/@KTNNewsKenya/live
-
+Add this link to the update file: New: KTN News Kenya, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCKVsdeoHExltrWMuK0hOWmg/live
 Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Channel URL: https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Title: IranAmerica Conflict News Live   Biden           War
 Description: IranAmerica Conflict News Live   Biden         
 Logo URL: https://i.ytimg.com/vi/HfhZx6Iqt90/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Channel Name: NewsTamil 24X7
-Channel URL: https://youtube.com/@NewsTamil24X7/live
+Channel URL: https://www.youtube.com/channel/UCtbo6_eDG7zEtaOtcSltJkA/live
 Title: LIVE NewsTamil 24x7Tamil News CM MK Stalin  TN Cabinet Meeting  DMK BJP  PM Modi Ram Mandir
 Description: LIVE NewsTamil 24x7Tamil News CM MK Stalin  TN Cabinet Meeting  DMK  BJP  PM MODI  Ram Mandir NewsTamil24x7 
 Logo URL: https://i.ytimg.com/vi/ylnxfcc_gKw/default_live.jpg
-Add this link to the update file: New: NewsTamil 24X7, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NewsTamil24X7/live
-
+Add this link to the update file: New: NewsTamil 24X7, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCtbo6_eDG7zEtaOtcSltJkA/live
 Channel Name: Jamuna TV
-Channel URL: https://youtube.com/@JamunaTV/live
+Channel URL: https://www.youtube.com/channel/UCN6sm8iHiPd0cnoUardDAnw/live
 Title: JAMUNA TV LIVE  JTV LIVE      LIVE STREAMING  BANGLA TV LIVE  BD TV LIVE
 Description: breakingnews JamunaTelevisionLive JtvLive jamunatvlive jamunatv jamunatvYouTube banglaTvLive jamunanews 
 Logo URL: https://i.ytimg.com/vi/Saq9_ylXogU/default_live.jpg
-Add this link to the update file: New: Jamuna TV, INSERT YOUR PREFERRED GROUP, https://youtube.com/@JamunaTV/live
-
+Add this link to the update file: New: Jamuna TV, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCN6sm8iHiPd0cnoUardDAnw/live
 Channel Name: NEWS
-Channel URL: https://youtube.com/@NEWS/live
+Channel URL: https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Title: 47EU    NEWS LIVE
 Description:    
 Logo URL: https://i.ytimg.com/vi/CyqLWF9zNQw/default_live.jpg
-Add this link to the update file: New: NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@NEWS/live
-
+Add this link to the update file: New: NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCeY0bbntWzzVIaj2z3QigXg/live
 Channel Name: ABP NEWS
-Channel URL: https://youtube.com/@ABPNEWS/live
+Channel URL: https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Title: Swami Avimukteshwaranand Saraswati Exclusive Interview LIVE    
 Description: shankaracharya ayodhya rammadir hindinews Hindinewslive abpnews latestnews abpnewslive  
 Logo URL: https://i.ytimg.com/vi/C23St0-2sRg/default_live.jpg
-Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABPNEWS/live
-
+Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Channel Name: CNNNews18
-Channel URL: https://youtube.com/@CNNNews18/live
+Channel URL: https://www.youtube.com/channel/UCef1-8eOpJgud7szVPlZQAQ/live
 Title: China Earthquake Today 2024  China News  China News Live  Earthquake Today  China Earthquake
 Description: China Earthquake Today 2024  China News  China News Live  Earthquake Today  China Earthquake An earthquake of 
 Logo URL: https://i.ytimg.com/vi/8XhlJ2i5xxE/default_live.jpg
-Add this link to the update file: New: CNNNews18, INSERT YOUR PREFERRED GROUP, https://youtube.com/@CNNNews18/live
-
+Add this link to the update file: New: CNNNews18, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCef1-8eOpJgud7szVPlZQAQ/live
 Channel Name: ABP NEWS
-Channel URL: https://youtube.com/@ABPNEWS/live
+Channel URL: https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Title: Pran Pratishtha   Asaduddin Owaisi           Ayodhya Ram Mandir  Modi
 Description: owaisi rammadir ayodhya loksabhaelection2024 hindinews Hindinewslive abpnews latestnews abpnewslive 
 Logo URL: https://i.ytimg.com/vi/uJ_mQkIu3cI/default_live.jpg
-Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABPNEWS/live
-
+Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Channel Name: News 24
-Channel URL: https://youtube.com/@News24/live
+Channel URL: https://www.youtube.com/channel/UCuzS3rPQAYqHcLWqOFuY0pw/live
 Title: Rahul Gandhi            BJP   LIVE  Congress
 Description: Rahul Gandhi            BJP 
 Logo URL: https://i.ytimg.com/vi/QtDKx0LewN0/default_live.jpg
-Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News24/live
-
+Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCuzS3rPQAYqHcLWqOFuY0pw/live
 Channel Name: News18 MP Chhattisgarh
-Channel URL: https://youtube.com/@News18MPChhattisgarh/live
+Channel URL: https://www.youtube.com/channel/UCBwc2cbPpvxNCNEI2-8YrqQ/live
 Title: Mohan Yadav Cabinet Meeting LIVE  Mohan Cabinet      MP News  Madhya Pradesh LIVE
 Description: Mohan Yadav Cabinet Meeting LIVE  Mohan Cabinet      MP News  Madhya Pradesh LIVE Mohan 
 Logo URL: https://i.ytimg.com/vi/Ir1skxLSeBI/default_live.jpg
-Add this link to the update file: New: News18 MP Chhattisgarh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18MPChhattisgarh/live
-
+Add this link to the update file: New: News18 MP Chhattisgarh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCBwc2cbPpvxNCNEI2-8YrqQ/live
 Channel Name: India Today
-Channel URL: https://youtube.com/@IndiaToday/live
+Channel URL: https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw/live
 Title: Ram Mandir Pran Pratishtha Ceremony LIVE Ayodhya Ram Mandir LIVE News Ram Lalla Idol News LIVE
 Description: Ram Mandir Ayodhya LIVE Ram Mandir Inauguration  Ram Mandir LIVE  India Today LIVE  Ram Mandir Pran Pratishta 
 Logo URL: https://i.ytimg.com/vi/GJdzgSIZFSE/default_live.jpg
-Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IndiaToday/live
-
-Channel Name: Duramax News 
-Channel URL: https://youtube.com/@DuramaxNews/live
+Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw/live
+Channel Name: Duramax News
+Channel URL: https://www.youtube.com/channel/UCa8HfbikWMjDS9VKHOqoT7w/live
 Title: Flightradar 24 Eam Watch Breaking news
 Description: Your donations keep us on the air buy me coffee httpswwwbuymeacoffeecomAX7t8PpT5O contact me Email 
 Logo URL: https://i.ytimg.com/vi/rj60NuaKhrs/default_live.jpg
-Add this link to the update file: New: Duramax News , INSERT YOUR PREFERRED GROUP, https://youtube.com/@DuramaxNews/live
-
+Add this link to the update file: New: Duramax News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCa8HfbikWMjDS9VKHOqoT7w/live
 Channel Name: News18 India
-Channel URL: https://youtube.com/@News18India/live
+Channel URL: https://www.youtube.com/channel/UCPP3etACgdUWvizcES1dJ8Q/live
 Title: LIVE TV Bihar Politics  Ayodhya Deepotsav  Ayodhya Ram Mandir Updates  PM Modi  Earthquake
 Description: Aar Paar Live with Amish Devgan Ram Mandir Darshan  Overcrowd  Ayodhya  Pran Pratishtha  TMC  news18 live  news18 
 Logo URL: https://i.ytimg.com/vi/CSL5K9s3Y8s/default_live.jpg
-Add this link to the update file: New: News18 India, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18India/live
-
+Add this link to the update file: New: News18 India, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCPP3etACgdUWvizcES1dJ8Q/live
 Channel Name: Metro City Samachar
-Channel URL: https://youtube.com/@MetroCitySamachar/live
+Channel URL: https://www.youtube.com/channel/UCz6bsE-JWziWZlgLK-ESkYg/live
 Title: Mira Road Bulldozer News Today  Mumbai Mira Road Latest News  Mira Road Bulldozer News Today
 Description: Mira Road Bulldozer News Today  Mumbai Mira Road Latest News  Mira Road Bulldozer News Today miraroad buldozer 
 Logo URL: https://i.ytimg.com/vi/atP8-S-88UI/default_live.jpg
-Add this link to the update file: New: Metro City Samachar, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MetroCitySamachar/live
-
+Add this link to the update file: New: Metro City Samachar, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCz6bsE-JWziWZlgLK-ESkYg/live
 Channel Name: News 24
-Channel URL: https://youtube.com/@News24/live
+Channel URL: https://www.youtube.com/channel/UCjG2HX7jfwqIjzTlaF1CPGA/live
 Title: Ram Mandir         Ayodhya  Asaduddin Owaisi on Ram Mandir  PM Modi
 Description: rammandir ayodhyarammandir asaduddinowaisi aimim news24 Ram Mandir      
 Logo URL: https://i.ytimg.com/vi/zXHVxRW1rBA/default_live.jpg
-Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News24/live
-
+Add this link to the update file: New: News 24, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCjG2HX7jfwqIjzTlaF1CPGA/live
 Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Channel URL: https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Title: Ram Mandir Live News Updates    Asaduddin Owaisi   Interview Viral 
 Description: Ram Mandir Live News Updates    Asaduddin Owaisi   Interview Viral 
 Logo URL: https://i.ytimg.com/vi/uVhhiMZZRI0/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Channel Name: India Today
-Channel URL: https://youtube.com/@IndiaToday/live
+Channel URL: https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw/live
 Title: Ram Mandir Darshan LIVE Ram Lalla39s Idol Unveiled  Close Up Look Of Ram Lalla In Ayodhya LIVE
 Description: Ram Mandir Darshan LIVE Ram Lallas Idol Unveiled  Close Up Look Of Ram Lalla In Ayodhya LIVE rammandir 
 Logo URL: https://i.ytimg.com/vi/Vkhwh30YDtE/default_live.jpg
-Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IndiaToday/live
-
+Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw/live
 Channel Name: ET NOW
-Channel URL: https://youtube.com/@ETNOW/live
+Channel URL: https://www.youtube.com/channel/UCI_mwTKUhicNzFrhm33MzBQ/live
 Title: PM Modi Speech Live Ayodhya  Ram Mandir Pran Pratishtha Live  Ram Mandir Inauguration  Modi News
 Description: PM Modi Speech Live Ayodhya  Ram Mandir Pran Pratishtha Live  Ram Mandir Inauguration  Modi News live rammandir 
 Logo URL: https://i.ytimg.com/vi/1fiw-qZWYNQ/default_live.jpg
-Add this link to the update file: New: ET NOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ETNOW/live
-
+Add this link to the update file: New: ET NOW, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCI_mwTKUhicNzFrhm33MzBQ/live
 Channel Name: Mahaa News
-Channel URL: https://youtube.com/@MahaaNews/live
+Channel URL: https://www.youtube.com/channel/UCDKjhgRoPF1CQk7HluMz23A/live
 Title: LIVE      Magunta Srinivas Resigns To YCP Party  Mahaa News
 Description: ycpparty magunta cmjagan LIVE        Magunta Srinivas Resigns To YCP 
 Logo URL: https://i.ytimg.com/vi/JWAFiFwOxro/default_live.jpg
-Add this link to the update file: New: Mahaa News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MahaaNews/live
-
+Add this link to the update file: New: Mahaa News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCDKjhgRoPF1CQk7HluMz23A/live
 Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Channel URL: https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Title: IranAmerica Conflict News Live      US     World War3  Biden
 Description: IranAmerica Conflict News Live      US     World War3 
 Logo URL: https://i.ytimg.com/vi/qGqtiRZCIVc/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Channel Name: TVC News Nigeria
-Channel URL: https://youtube.com/@TVCNewsNigeria/live
+Channel URL: https://www.youtube.com/channel/UCgp4A6I8LCWrhUzn-5SbKvA/live
 Title: TVC News Nigeria Live
 Description: wike fubara riversstate breakingnews tinubu bolaahmedtinubu kashimshettima abuja TVCNews TVC News 
 Logo URL: https://i.ytimg.com/vi/xk3raC2YHcg/default_live.jpg
-Add this link to the update file: New: TVC News Nigeria, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TVCNewsNigeria/live
-
+Add this link to the update file: New: TVC News Nigeria, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCgp4A6I8LCWrhUzn-5SbKvA/live
 Channel Name: India Today
-Channel URL: https://youtube.com/@IndiaToday/live
+Channel URL: https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw/live
 Title: LIVE Prashant Kishor Interview On INDIA Alliance PM Modi amp Bihar Politics  Nitish Kumar News
 Description: LIVE Prashant Kishor Interview On INDIA Alliance PM Modi  Bihar Politics  Nitish Kumar News Days after the phenomenal 
 Logo URL: https://i.ytimg.com/vi/-K_nIgopluk/default_live.jpg
-Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://youtube.com/@IndiaToday/live
-
+Add this link to the update file: New: India Today, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCYPvAwZP8pZhSMW8qs7cVCw/live
 Channel Name: ABP NEWS
-Channel URL: https://youtube.com/@ABPNEWS/live
+Channel URL: https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Title: Top 100 News LIVE      Hindi Samachar     ABP News LIVE
 Description: madhyapradehelection2023 bjp madhyapradeshcm mohanyadav mohanyadavnews ShivrajSinghChouhan cm 
 Logo URL: https://i.ytimg.com/vi/RzH_fJWI2Zo/default_live.jpg
-Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ABPNEWS/live
-
+Add this link to the update file: New: ABP NEWS, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCRWFSbif-RFENbBrSiez1DA/live
 Channel Name: Metro City Samachar
-Channel URL: https://youtube.com/@MetroCitySamachar/live
+Channel URL: https://www.youtube.com/channel/UCz6bsE-JWziWZlgLK-ESkYg/live
 Title: Mira Road Bulldozer News Today  Mumbai Mira Road Latest News  Mira Road Bulldozer News Today
 Description: Mira Road Bulldozer News Today  Mumbai Mira Road Latest News  Mira Road Bulldozer News Today miraroad buldozer 
 Logo URL: https://i.ytimg.com/vi/-EmMfRb6fs4/default_live.jpg
-Add this link to the update file: New: Metro City Samachar, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MetroCitySamachar/live
-
+Add this link to the update file: New: Metro City Samachar, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCz6bsE-JWziWZlgLK-ESkYg/live
 Channel Name: News18 Bihar Jharkhand
-Channel URL: https://youtube.com/@News18BiharJharkhand/live
+Channel URL: https://www.youtube.com/channel/UC531MlZA5LUbeGwEN_zcppw/live
 Title: Bihar Politics News Live  Tejashwi Yadav  Nitish Kumar       JDU  RJD  News
 Description: Bihar Politics News Live  Tejashwi Yadav  Nitish Kumar       JDU  RJD  News 
 Logo URL: https://i.ytimg.com/vi/vc41WfFSf34/default_live.jpg
-Add this link to the update file: New: News18 Bihar Jharkhand, INSERT YOUR PREFERRED GROUP, https://youtube.com/@News18BiharJharkhand/live
-
+Add this link to the update file: New: News18 Bihar Jharkhand, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC531MlZA5LUbeGwEN_zcppw/live
 Channel Name: 24 News HD
-Channel URL: https://youtube.com/@24NewsHD/live
+Channel URL: https://www.youtube.com/channel/UCup3etEdjyF1L3sRbU-rKLw/live
 Title: 24 NEWS HD LIVE  Pakistan News  Latest Headlines amp Breaking News  Press Conferences amp Speeches
 Description: 24 NEWS HD LIVE  Pakistan News  Latest Headlines  Breaking News  Press Conferences  Speeches 24 News HD Is One Of 
 Logo URL: https://i.ytimg.com/vi/qah4pyuH_Jo/default_live.jpg
-Add this link to the update file: New: 24 News HD, INSERT YOUR PREFERRED GROUP, https://youtube.com/@24NewsHD/live
-
+Add this link to the update file: New: 24 News HD, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCup3etEdjyF1L3sRbU-rKLw/live
 Channel Name: ET NOW
-Channel URL: https://youtube.com/@ETNOW/live
+Channel URL: https://www.youtube.com/channel/UCI_mwTKUhicNzFrhm33MzBQ/live
 Title: Ram Mandir LIVE  PM Modi LIVE  Ram Mandir News Live Updates  Ram Mandir LIVE  ET Now LIVE
 Description: Ram Mandir LIVE PM Modi LIVE Ram Mandir News Live Updates Ram Mandir LIVE ET Now LIVE A member of the Ram 
 Logo URL: https://i.ytimg.com/vi/w2-UdqVlMHQ/default_live.jpg
-Add this link to the update file: New: ET NOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ETNOW/live
-
+Add this link to the update file: New: ET NOW, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCI_mwTKUhicNzFrhm33MzBQ/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: Bharat Ratna To Karpoori Thakur LIVE Update          Bihar
 Description: Karpoori Thakur Bihar          
 Logo URL: https://i.ytimg.com/vi/UCT1KAkILoM/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: TV9 Bharatvarsh
-Channel URL: https://youtube.com/@TV9Bharatvarsh/live
+Channel URL: https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Title: Russia Ukraine War News Live Putin         World War3  Nuclear Attack
 Description: Russia Ukraine War News Live Putin         World War3  Nuclear Attack 
 Logo URL: https://i.ytimg.com/vi/Bp9_OG-laBs/default_live.jpg
-Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TV9Bharatvarsh/live
-
+Add this link to the update file: New: TV9 Bharatvarsh, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCOutOIcn_oho8pyVN3Ng-Pg/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: DNA LIVE            Pakistan  Ram Mandir
 Description:            
 Logo URL: https://i.ytimg.com/vi/En_TeFU1v2E/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: Zee News
-Channel URL: https://youtube.com/@ZeeNews/live
+Channel URL: https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Title: Pakistani Reaction On Ayodhya Ram Mandir LIVE         
 Description: Pakistani Reaction On Ayodhya Ram mandir LIVE         
 Logo URL: https://i.ytimg.com/vi/JDrlSoEMHaQ/default_live.jpg
-Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@ZeeNews/live
-
+Add this link to the update file: New: Zee News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCIvaYmXn910QMdemBG3v1pQ/live
 Channel Name: TIMES NOW
-Channel URL: https://youtube.com/@TIMESNOW/live
+Channel URL: https://www.youtube.com/channel/UC6RJ7-PaXg6TIH2BzZfTV7w/live
 Title: Joe Biden News LIVE  Biden Impeachment LIVE  US Congress  Biden Impeachment Hearing  Times Now
 Description: LIVE Joe Biden News Biden Impeachment LIVE US Congress Biden Impeachment Hearing Times Now
 Logo URL: https://i.ytimg.com/vi/0pr6k46M_ic/default_live.jpg
-Add this link to the update file: New: TIMES NOW, INSERT YOUR PREFERRED GROUP, https://youtube.com/@TIMESNOW/live
-
+Add this link to the update file: New: TIMES NOW, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UC6RJ7-PaXg6TIH2BzZfTV7w/live
 Channel Name: Mahaa News
-Channel URL: https://youtube.com/@MahaaNews/live
+Channel URL: https://www.youtube.com/channel/UCDKjhgRoPF1CQk7HluMz23A/live
 Title: LIVE Super Prime Time With Vamsi  Mahaa Vamsi Analysis  Mahaa News
 Description: tspolitics appolitics spt mahaanewslive LIVE   Super Prime Time With Vamsi  Mahaa Vamsi Analysis  Mahaa News Thanks 
 Logo URL: https://i.ytimg.com/vi/jvC9AKJc-Q4/default_live.jpg
-Add this link to the update file: New: Mahaa News, INSERT YOUR PREFERRED GROUP, https://youtube.com/@MahaaNews/live
-
+Add this link to the update file: New: Mahaa News, INSERT YOUR PREFERRED GROUP, https://www.youtube.com/channel/UCDKjhgRoPF1CQk7HluMz23A/live
