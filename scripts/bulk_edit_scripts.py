@@ -39,6 +39,8 @@ def bulk_edit_scripts(directory, api_key):
             with open(file_path, 'r', encoding='utf-8') as file:
                 content = file.read()
 
+            print(f"Processing script '{filename}'...")
+
             # Modify the script content
             modified_content = content.replace(
                 'response = request.execute()',
