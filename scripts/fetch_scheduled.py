@@ -77,32 +77,37 @@ def process_current_channels_file(input_filename, output_filename):
                     print(f"No scheduled streams found for {channel_name}. Moving on.")
                     events_beginning_soon.append(f"{channel_name} - Live event will begin in a few moments.")
 
+    # Check if there are any events beginning soon before writing to the output file
+    if events_beginning_soon:
+        print("\nEvents beginning soon:")
+        for event in events_beginning_soon:
+            print(event)
+    else:
+        print("No events beginning soon.")
+
     with open(output_filename, 'w') as file:
         file.write('\n'.join(scheduled_streams))
 
     print(f"Scheduled streams information written to {output_filename}")
 
-    if events_beginning_soon:
-        print("\nEvents beginning soon:")
-        for event in events_beginning_soon:
-            print(event)
+ Uncomment the following function if you want to remove past entries
+ def remove_past_entries(input_filename):
+     current_time = time.time()
+     with open(input_filename, 'r') as file:
+         lines = file.readlines()
 
-def remove_past_entries(input_filename):
-    current_time = time.time()
-    with open(input_filename, 'r') as file:
-        lines = file.readlines()
+     # Filter out past entries
+     filtered_lines = [line for line in lines if int(line.split('-')[-1].strip()) > current_time]
 
-    # Filter out past entries
-    filtered_lines = [line for line in lines if int(line.split('-')[-1].strip()) > current_time]
-
-    with open(input_filename, 'w') as file:
-        file.writelines(filtered_lines)
+     with open(input_filename, 'w') as file:
+         file.writelines(filtered_lines)
 
 if __name__ == "__main__":
     # File containing current channels in the format: $channel_name, $group, $channel_url/live
     current_channels_file = "current_channels.txt"
-    # File to store upcoming scheduled live streams
+    #File to store upcoming scheduled live streams
     scheduled_streams_file = "scheduled_streams.txt"
 
     process_current_channels_file(current_channels_file, scheduled_streams_file)
-    remove_past_entries(scheduled_streams_file)
+     #Uncomment the following line if you want to remove past entries
+     remove_past_entries(scheduled_streams_file)
