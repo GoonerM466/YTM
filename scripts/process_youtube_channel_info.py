@@ -21,11 +21,14 @@ with open('youtube_channel_info.txt', 'r') as info_file:
 
 # Open current_channels.txt in append mode
 with open('current_channels.txt', 'a') as current_channels_file_append:
+    continue_processing = True
+
     # Process each line in youtube_channel_info.txt
     for line in lines:
         # Check if the line contains the word "New"
         if "New" not in line:
             print("End of script: 'New' not found in the line.")
+            continue_processing = False
             break
 
         # Extract information from the line
@@ -48,5 +51,6 @@ with open('current_channels.txt', 'a') as current_channels_file_append:
             # Append the new entry to the file
             current_channels_file_append.write(original_channel_name_entry + "\n")
 
-# Print a message indicating the script has finished
-print("Script completed.")
+    # Print a message indicating the script has finished
+    if continue_processing:
+        print("Script completed.")
