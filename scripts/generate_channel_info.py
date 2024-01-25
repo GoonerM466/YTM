@@ -18,6 +18,23 @@ def round_down_to_hour(dt):
     # Round down the given datetime object to the nearest hour
     return dt.replace(minute=0, second=0, microsecond=0)
 
+def generate_channel_info(channel_name, existing_channels):
+    # Extract the first part of the channel name before the first space
+    channel_name_first_part = channel_name.split()[0]
+
+    # Check for duplicate channels based on the first part of the channel name
+    for existing_channel in existing_channels:
+        existing_channel_first_part = existing_channel['name'].split()[0]
+        if existing_channel_first_part == channel_name_first_part:
+            return None
+
+    # No matching channel found, add the new channel
+    existing_channels.append({'name': channel_name})  # Keep track of added channels
+    return f'''  <channel id="{channel_name}">
+    <display-name lang="en">{channel_name}</display-name>
+  </channel>
+'''
+
 def generate_program_info(channel_name, live_status, time_str, existing_programs):
     # Convert time_str to XMLTV format
     program_start = datetime.strptime(convert_to_xmltv_time(time_str), '%Y%m%d%H%M%S +0000')
@@ -78,9 +95,9 @@ def main():
     existing_channels = []  # Keep track of existing channels
     existing_programs = []  # Keep track of existing programs
 
-    # Get the current time rounded up to the next hour
+    # Get the current time rounded down to the next hour
     current_time = datetime.now()
-    current_time_rounded = round_up_to_hour(current_time)
+    current_time_rounded = round_down_to_hour(current_time)
 
     # Accumulate channel information
     for line in lines:
