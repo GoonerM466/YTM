@@ -1,7 +1,10 @@
 import os
 import re
+import time
 
 MAX_RUNTIME_SECONDS = 210  # 3.5 minutes
+MAX_RETRIES = 3
+RETRY_DELAY_SECONDS = 20
 
 def bulk_edit_scripts(directory):
     for filename in os.listdir(directory):
@@ -9,6 +12,11 @@ def bulk_edit_scripts(directory):
             file_path = os.path.join(directory, filename)
             with open(file_path, 'r', encoding='utf-8') as file:
                 content = file.read()
+
+            # Add the retry mechanism
+            content = re.sub(r'try:', 'try:\n    retries = 0\n    while retries < MAX_RETRIES:', content)
+            content = re.sub(r'except Exception as e:.+?raise', 'except Exception as e:\n            print("Error during search:", e)\n            print(f"Retrying in {RETRY_DELAY_SECONDS} seconds...")\n            time.sleep(RETRY_DELAY_SECONDS)\n            retries += 1', content, flags=re.DOTALL)
+            content = re.sub(r'print\("No live channels found."\)', 'print(f"Maximum retries ({MAX_RETRIES}) reached. Exiting...")\n            break', content)
 
             # Replace the existing clean_text function
             content = re.sub(r'def clean_text\(text\):.+?return cleaned_text', 'def clean_text(text):\n    return text', content, flags=re.DOTALL)
