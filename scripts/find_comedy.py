@@ -99,10 +99,11 @@ if __name__ == "__main__":
     # Write results to the all_live_channels.txt file
     with open('found_channels/comedy_live_channels.txt', 'w', encoding='utf-8') as file:
         for channel in live_channels:
-            file.write(f"Channel Name: {channel['name']}\n")
+            channel_name = channel['name']
+            file.write(f"Channel Name: {channel_name}\n")
             file.write(f"Channel URL: {channel['url']}\n")
             file.write(f"Title: {channel['title']}\n")
             file.write(f"Description: {channel['description']}\n")
             file.write(f"Logo URL: {channel['thumbnails']['default']['url']}\n")
-            file.write(f"Add this link to the update file: New: {channel's name}, INSERT YOUR PREFERRED GROUP, {channel['url']}\n")
+            file.write(f"Add this link to the update file: New: {channel_name}, INSERT YOUR PREFERRED GROUP, {channel['url']}\n")
             file.write("\n")
