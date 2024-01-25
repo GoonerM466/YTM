@@ -2,7 +2,7 @@ name: 3-Generate XMLTV
 
 on:
   schedule:
-    - cron: '06 0/1 * * *'
+    - cron: '08 0/1 * * *'
   workflow_dispatch:
   workflow_run:
     workflows:
