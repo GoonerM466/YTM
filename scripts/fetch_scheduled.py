@@ -22,8 +22,9 @@ def get_scheduled_live_streams(channel_url):
 
             # Check if the error is about a live event starting soon
             if 'This live event will begin in a few moments.' in str(channel_info.get('title', '')):
-                start_time_str = channel_info.get('title', '').split(':')[-1].strip()
-                start_time = datetime.strptime(start_time_str, '%I:%M %p %Z %a %b %d, %Y')
+                # Try to extract the start time from the description
+                start_time_str = channel_info.get('description', '').split('on ')[-1].strip()
+                start_time = datetime.strptime(start_time_str, '%b %d, %Y at %I:%M %p %Z')
                 return [f"{channel_info['title']} - Live - {start_time.strftime('%a %b %d %H:%M:%S UTC %Y')}"]
 
             return None
@@ -55,6 +56,7 @@ def process_current_channels_file(input_filename, output_filename):
         channels = file.readlines()
 
     scheduled_streams = []
+    events_beginning_soon = []
 
     for channel in channels:
         channel_info = channel.strip().split(',')
@@ -73,11 +75,17 @@ def process_current_channels_file(input_filename, output_filename):
                     scheduled_streams.extend(streams)
                 else:
                     print(f"No scheduled streams found for {channel_name}. Moving on.")
+                    events_beginning_soon.append(f"{channel_name} - Live event will begin in a few moments.")
 
     with open(output_filename, 'w') as file:
         file.write('\n'.join(scheduled_streams))
 
     print(f"Scheduled streams information written to {output_filename}")
+
+    if events_beginning_soon:
+        print("\nEvents beginning soon:")
+        for event in events_beginning_soon:
+            print(event)
 
 def remove_past_entries(input_filename):
     current_time = time.time()
