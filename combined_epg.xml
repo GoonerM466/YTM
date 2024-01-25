@@ -86,10 +86,6 @@
     <title lang="en">Live</title>
     <desc lang="en">beinsportshaber is currently streaming live! Tune in and enjoy!</desc>
   </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="beinsportshaber">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
-  </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="beinsportshaber">
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
@@ -134,6 +130,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="beinsportshaber">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="AFCAsianCup">
     <title lang="en">Not Live</title>
     <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
@@ -141,10 +141,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="AFCAsianCup">
     <title lang="en">Not Live</title>
     <desc lang="en">AFCAsianCup is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="AFCAsianCup">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="AFCAsianCup">
     <title lang="en">To be Announced</title>
@@ -190,6 +186,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="AFCAsianCup">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="talkSPORT">
     <title lang="en">Not Live</title>
     <desc lang="en">talkSPORT is not currently live. Check the schedule online or try again later!</desc>
@@ -197,10 +197,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="talkSPORT">
     <title lang="en">Not Live</title>
     <desc lang="en">talkSPORT is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="talkSPORT">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="talkSPORT">
     <title lang="en">To be Announced</title>
@@ -246,6 +242,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="talkSPORT">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="EERIEISSSS">
     <title lang="en">Not Live</title>
     <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
@@ -253,10 +253,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="EERIEISSSS">
     <title lang="en">Not Live</title>
     <desc lang="en">EERIEISSSS is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="EERIEISSSS">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="EERIEISSSS">
     <title lang="en">To be Announced</title>
@@ -302,6 +298,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="EERIEISSSS">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="JimmyBroadbent">
     <title lang="en">Not Live</title>
     <desc lang="en">JimmyBroadbent is not currently live. Check the schedule online or try again later!</desc>
@@ -309,10 +309,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="JimmyBroadbent">
     <title lang="en">Not Live</title>
     <desc lang="en">JimmyBroadbent is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="JimmyBroadbent">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="JimmyBroadbent">
     <title lang="en">To be Announced</title>
@@ -358,6 +354,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="JimmyBroadbent">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="deadeyedelboy">
     <title lang="en">Not Live</title>
     <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
@@ -365,10 +365,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="deadeyedelboy">
     <title lang="en">Not Live</title>
     <desc lang="en">deadeyedelboy is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="deadeyedelboy">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="deadeyedelboy">
     <title lang="en">To be Announced</title>
@@ -414,6 +410,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="deadeyedelboy">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="NBCNews">
     <title lang="en">Live</title>
     <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
@@ -421,10 +421,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="NBCNews">
     <title lang="en">Live</title>
     <desc lang="en">NBCNews is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="NBCNews">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="NBCNews">
     <title lang="en">To be Announced</title>
@@ -470,6 +466,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="NBCNews">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="SkyNews">
     <title lang="en">Live</title>
     <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
@@ -477,10 +477,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="SkyNews">
     <title lang="en">Live</title>
     <desc lang="en">SkyNews is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="SkyNews">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="SkyNews">
     <title lang="en">To be Announced</title>
@@ -526,6 +522,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="SkyNews">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="ABCNews">
     <title lang="en">Live</title>
     <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
@@ -533,10 +533,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="ABCNews">
     <title lang="en">Live</title>
     <desc lang="en">ABCNews is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="ABCNews">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="ABCNews">
     <title lang="en">To be Announced</title>
@@ -582,6 +578,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="ABCNews">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="HitsRadio">
     <title lang="en">Not Live</title>
     <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
@@ -589,10 +589,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="HitsRadio">
     <title lang="en">Not Live</title>
     <desc lang="en">HitsRadio is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="HitsRadio">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="HitsRadio">
     <title lang="en">To be Announced</title>
@@ -638,6 +634,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="HitsRadio">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="classicmusictop1">
     <title lang="en">Live</title>
     <desc lang="en">classicmusictop1 is currently streaming live! Tune in and enjoy!</desc>
@@ -645,10 +645,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="classicmusictop1">
     <title lang="en">Live</title>
     <desc lang="en">classicmusictop1 is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="classicmusictop1">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="classicmusictop1">
     <title lang="en">To be Announced</title>
@@ -694,6 +690,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="classicmusictop1">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="FobosPlanet">
     <title lang="en">Live</title>
     <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
@@ -701,10 +701,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="FobosPlanet">
     <title lang="en">Live</title>
     <desc lang="en">FobosPlanet is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="FobosPlanet">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="FobosPlanet">
     <title lang="en">To be Announced</title>
@@ -750,6 +746,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="FobosPlanet">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="DPWorldTour">
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
@@ -757,10 +757,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="DPWorldTour">
     <title lang="en">Not Live</title>
     <desc lang="en">DPWorldTour is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="DPWorldTour">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="DPWorldTour">
     <title lang="en">To be Announced</title>
@@ -806,6 +802,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="DPWorldTour">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="GBNews2">
     <title lang="en">Live</title>
     <desc lang="en">GBNews2 is currently streaming live! Tune in and enjoy!</desc>
@@ -813,10 +813,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="GBNews2">
     <title lang="en">Live</title>
     <desc lang="en">GBNews2 is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="GBNews2">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="GBNews2">
     <title lang="en">To be Announced</title>
@@ -862,6 +858,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="GBNews2">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="JazzCafeAmbience">
     <title lang="en">Live</title>
     <desc lang="en">JazzCafeAmbience is currently streaming live! Tune in and enjoy!</desc>
@@ -869,10 +869,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="JazzCafeAmbience">
     <title lang="en">Live</title>
     <desc lang="en">JazzCafeAmbience is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="JazzCafeAmbience">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="JazzCafeAmbience">
     <title lang="en">To be Announced</title>
@@ -918,6 +914,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="JazzCafeAmbience">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="XdeepMix">
     <title lang="en">Live</title>
     <desc lang="en">XdeepMix is currently streaming live! Tune in and enjoy!</desc>
@@ -925,10 +925,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="XdeepMix">
     <title lang="en">Live</title>
     <desc lang="en">XdeepMix is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="XdeepMix">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="XdeepMix">
     <title lang="en">To be Announced</title>
@@ -974,6 +970,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="XdeepMix">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="MusicBrokers">
     <title lang="en">Live</title>
     <desc lang="en">MusicBrokers is currently streaming live! Tune in and enjoy!</desc>
@@ -981,10 +981,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="MusicBrokers">
     <title lang="en">Live</title>
     <desc lang="en">MusicBrokers is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="MusicBrokers">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="MusicBrokers">
     <title lang="en">To be Announced</title>
@@ -1030,6 +1026,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="MusicBrokers">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="NatGeoWILD">
     <title lang="en">Live</title>
     <desc lang="en">NatGeoWILD is currently streaming live! Tune in and enjoy!</desc>
@@ -1037,10 +1037,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="NatGeoWILD">
     <title lang="en">Live</title>
     <desc lang="en">NatGeoWILD is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="NatGeoWILD">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="NatGeoWILD">
     <title lang="en">To be Announced</title>
@@ -1086,6 +1082,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="NatGeoWILD">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="4KOceanWorld">
     <title lang="en">Live</title>
     <desc lang="en">4KOceanWorld is currently streaming live! Tune in and enjoy!</desc>
@@ -1093,10 +1093,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="4KOceanWorld">
     <title lang="en">Live</title>
     <desc lang="en">4KOceanWorld is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="4KOceanWorld">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="4KOceanWorld">
     <title lang="en">To be Announced</title>
@@ -1142,6 +1138,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="4KOceanWorld">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="ColdCaseDetective">
     <title lang="en">Live</title>
     <desc lang="en">ColdCaseDetective is currently streaming live! Tune in and enjoy!</desc>
@@ -1149,10 +1149,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="ColdCaseDetective">
     <title lang="en">Live</title>
     <desc lang="en">ColdCaseDetective is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="ColdCaseDetective">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="ColdCaseDetective">
     <title lang="en">To be Announced</title>
@@ -1198,6 +1194,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="ColdCaseDetective">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="GlenCooley">
     <title lang="en">Not Live</title>
     <desc lang="en">GlenCooley is not currently live. Check the schedule online or try again later!</desc>
@@ -1205,10 +1205,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="GlenCooley">
     <title lang="en">Not Live</title>
     <desc lang="en">GlenCooley is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="GlenCooley">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="GlenCooley">
     <title lang="en">To be Announced</title>
@@ -1254,6 +1250,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="GlenCooley">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="Tidgney">
     <title lang="en">Not Live</title>
     <desc lang="en">Tidgney is not currently live. Check the schedule online or try again later!</desc>
@@ -1261,10 +1261,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="Tidgney">
     <title lang="en">Not Live</title>
     <desc lang="en">Tidgney is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="Tidgney">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="Tidgney">
     <title lang="en">To be Announced</title>
@@ -1310,6 +1306,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="Tidgney">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="MagicClub">
     <title lang="en">Live</title>
     <desc lang="en">MagicClub is currently streaming live! Tune in and enjoy!</desc>
@@ -1317,10 +1317,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="MagicClub">
     <title lang="en">Live</title>
     <desc lang="en">MagicClub is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="MagicClub">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="MagicClub">
     <title lang="en">To be Announced</title>
@@ -1366,6 +1362,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="MagicClub">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="LiveMusicRadio">
     <title lang="en">Live</title>
     <desc lang="en">LiveMusicRadio is currently streaming live! Tune in and enjoy!</desc>
@@ -1373,10 +1373,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="LiveMusicRadio">
     <title lang="en">Live</title>
     <desc lang="en">LiveMusicRadio is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="LiveMusicRadio">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="LiveMusicRadio">
     <title lang="en">To be Announced</title>
@@ -1422,6 +1418,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="LiveMusicRadio">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="NSports">
     <title lang="en">Live</title>
     <desc lang="en">NSports is currently streaming live! Tune in and enjoy!</desc>
@@ -1429,10 +1429,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="NSports">
     <title lang="en">Live</title>
     <desc lang="en">NSports is currently streaming live! Tune in and enjoy!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="NSports">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="NSports">
     <title lang="en">To be Announced</title>
@@ -1478,6 +1474,10 @@
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="NSports">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
   <programme start="20240125020000 +0000" stop="20240125030000 +0000" channel="TheWhyFiles">
     <title lang="en">Not Live</title>
     <desc lang="en">TheWhyFiles is not currently live. Check the schedule online or try again later!</desc>
@@ -1485,10 +1485,6 @@
   <programme start="20240125030000 +0000" stop="20240125040000 +0000" channel="TheWhyFiles">
     <title lang="en">Not Live</title>
     <desc lang="en">TheWhyFiles is not currently live. Check the schedule online or try again later!</desc>
-  </programme>
-  <programme start="20240125040000 +0000" stop="20240125050000 +0000" channel="TheWhyFiles">
-    <title lang="en">To be Announced</title>
-    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125050000 +0000" stop="20240125060000 +0000" channel="TheWhyFiles">
     <title lang="en">To be Announced</title>
@@ -1531,6 +1527,10 @@
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
   <programme start="20240125150000 +0000" stop="20240125160000 +0000" channel="TheWhyFiles">
+    <title lang="en">To be Announced</title>
+    <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
+  </programme>
+  <programme start="20240125160000 +0000" stop="20240125170000 +0000" channel="TheWhyFiles">
     <title lang="en">To be Announced</title>
     <desc lang="en">The status of this channel for this time slot is unknown. Please check back later or check online for more information.</desc>
   </programme>
