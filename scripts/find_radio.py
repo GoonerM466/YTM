@@ -92,6 +92,9 @@ def search_live_channels(api_key, max_results=50):
                 print("An unexpected error occurred:", e)
                 pass  # Use pass instead of break
 
+    except Exception as e:
+        print("An unexpected error occurred:", e)
+
     return live_links
 
 if __name__ == "__main__":
