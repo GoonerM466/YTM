@@ -47,10 +47,13 @@ def bulk_edit_scripts(directory, api_key):
                 'response = make_api_request(api_key)'
             )
 
-            with open(file_path, 'w', encoding='utf-8') as file:
-                file.write(modified_content)
+            if content != modified_content:
+                with open(file_path, 'w', encoding='utf-8') as file:
+                    file.write(modified_content)
 
-            print(f"Script '{filename}' has been modified.")
+                print(f"Script '{filename}' has been modified.")
+            else:
+                print(f"Script '{filename}' is up to date.")
 
 if __name__ == "__main__":
     script_directory = "./scripts"
