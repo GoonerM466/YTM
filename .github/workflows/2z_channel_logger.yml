@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Wait for 10 seconds
+      - name: Wait for 10 minutes
         run: sleep 600s
 
       - name: Checkout Repository
