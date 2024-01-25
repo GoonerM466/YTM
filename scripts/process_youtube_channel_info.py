@@ -1,56 +1,28 @@
-import re
+def process_channel_info(input_file, output_file, current_channels_file):
+    with open(input_file, 'r') as input_file:
+        input_lines = input_file.readlines()
 
-def channel_exists(channel_name, current_channels_content):
-    pattern = fr'New: {re.escape(channel_name)},'
-    match = re.search(pattern, current_channels_content)
-    
-    if match:
-        print(f"Match found for '{channel_name}': {match.group()}")
-    else:
-        print(f"No match found for '{channel_name}', pattern: '{pattern}'")
+    if not input_lines:
+        print("Input file is empty. Script finished.")
+        return
 
-    return match is not None
+    with open(current_channels_file, 'r') as current_channels_file:
+        current_channels = current_channels_file.readlines()
 
-# Read current_channels.txt content
-with open('current_channels.txt', 'r') as current_channels_file:
-    current_channels_content = current_channels_file.read()
+    with open(output_file, 'a') as output_file:
+        for line in input_lines:
+            if line.startswith("New"):
+                channel_name = line.split("New: ")[1].split(" ,")[0]
+                if not any(channel_name in channel for channel in current_channels):
+                    output_file.write(line)
+            else:
+                output_file.write(line)
 
-# Read youtube_channel_info.txt and process each line
-with open('youtube_channel_info.txt', 'r') as info_file:
-    lines = info_file.readlines()
+    print("Script finished processing.")
 
-# Open current_channels.txt in append mode
-with open('current_channels.txt', 'a') as current_channels_file_append:
-    continue_processing = True
+# Replace these file names with the actual file paths
+input_file_path = "youtube_channel_info.txt"
+output_file_path = "current_channels.txt"
+current_channels_file_path = "current_channels.txt"
 
-    # Process each line in youtube_channel_info.txt
-    for line in lines:
-        # Check if the line contains the word "New"
-        if "New" not in line:
-            print("End of script: 'New' not found in the line.")
-            continue_processing = False
-            break
-
-        # Extract information from the line
-        parts = line.strip().split('New: ')
-        if len(parts) == 2:
-            _, channel_info = parts
-            channel_name, channel_group, channel_url = channel_info.split(', ', 2)
-
-            # Check if the channel exists in current_channels.txt
-            if channel_exists(channel_name, current_channels_content):
-                print(f"Channel '{channel_name}' already exists in current_channels.txt. Skipping...")
-                continue
-
-            # Process the channel information and add entry to current_channels.txt
-            print(f"Processing new channel: {channel_name}, {channel_group}, {channel_url}")
-
-            # Ensure that the original channel_name is used when adding the new entry
-            original_channel_name_entry = f"{channel_name}, {channel_group}, {channel_url}"
-
-            # Append the new entry to the file
-            current_channels_file_append.write(original_channel_name_entry + "\n")
-
-    # Print a message indicating the script has finished
-    if continue_processing:
-        print("Script completed.")
+process_channel_info(input_file_path, output_file_path, current_channels_file_path)
