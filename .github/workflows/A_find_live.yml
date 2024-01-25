@@ -35,8 +35,8 @@ jobs:
     - name: Waiting...
       run: sleep 20
 
-    - name: Finding radio channels
-      run: python ./scripts/find_radio.py
+    - name: Finding entertainment channels
+      run: python ./scripts/find_entertainment.py
 
     - name: Check for changes
       id: check-changes
