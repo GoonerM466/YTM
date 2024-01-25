@@ -3,7 +3,8 @@ import re
 
 # Function to check if $channel_name exists in current_channels.txt
 def channel_exists(channel_name, current_channels_content):
-    return re.search(fr'\s*{channel_name},', current_channels_content) is not None
+    # Updated regular expression to match the new format
+    return re.search(fr'New: {re.escape(channel_name)},', current_channels_content) is not None
 
 # Read current_channels.txt content
 with open('current_channels.txt', 'r') as current_channels_file:
