@@ -35,8 +35,8 @@ jobs:
     - name: Waiting...
       run: sleep 20
 
-    - name: Finding gaming channels
-      run: python ./scripts/find_gaming.py
+    - name: Finding documentary channels
+      run: python ./scripts/find_docs.py
 
     - name: Check for changes
       id: check-changes
