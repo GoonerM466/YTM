@@ -72,8 +72,8 @@ def search_live_channels(api_key, max_results=50):
             print(f"Channel found: {channel_name}")
 
     except Exception as e:
+        print("Error:", e)
         print("No live channels found.")
-        break
 
     return live_links
 
