@@ -3,6 +3,13 @@ import yt_dlp
 import time
 from datetime import datetime
 
+import time
+
+# File containing current channels in the format: $channel_name, $group, $channel_url/live
+current_channels_file = "current_channels.txt"
+# File to store upcoming scheduled live streams
+scheduled_streams_file = "scheduled_streams.txt"
+
 def get_scheduled_live_streams(channel_url):
     ydl = yt_dlp.YoutubeDL()
     try:
