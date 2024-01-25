@@ -1,7 +1,5 @@
-# Import the 're' module for regular expressions
 import re
 
-# Function to check if $channel_name exists in current_channels.txt
 def channel_exists(channel_name, current_channels_content):
     pattern = fr'New: {re.escape(channel_name)},'
     match = re.search(pattern, current_channels_content)
@@ -52,6 +50,11 @@ with open('youtube_channel_info.txt', 'r') as info_file:
                     current_channels_file_append.write(original_channel_name_entry + "\n")
 
             new_entries_added = True  # Set the flag to true
+
+    # Check if the file is empty and break out of the loop
+    if not line:
+        print("youtube_channel_info.txt is empty. Exiting the loop.")
+        break
 
 # Print a message indicating the script has finished
 print("Script completed.")
