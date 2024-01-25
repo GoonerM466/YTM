@@ -1,15 +1,9 @@
 import os
 import yt_dlp
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
-import time
-
-# File containing current channels in the format: $channel_name, $group, $channel_url/live
-current_channels_file = "current_channels.txt"
-# File to store upcoming scheduled live streams
-scheduled_streams_file = "scheduled_streams.txt"
-
+# Function to retrieve scheduled live streams from a channel URL
 def get_scheduled_live_streams(channel_url):
     ydl = yt_dlp.YoutubeDL()
     try:
@@ -63,12 +57,33 @@ def get_scheduled_live_streams(channel_url):
         print(f"An unexpected error occurred: {str(e)}")
         return None
 
+# Function to extract the time until the live event starts from the error message
+def get_time_until_event(error_message):
+    try:
+        time_str = error_message.split("will begin in ")[1].split(".")[0].strip()
+        parts = time_str.split(" ")
+        duration = timedelta(
+            hours=int(parts[0].split('h')[0]) if 'h' in parts[0] else 0,
+            minutes=int(parts[1].split('m')[0]) if 'm' in parts[1] else 0,
+            seconds=int(parts[2].split('s')[0]) if 's' in parts[2] else 0
+        )
+        return duration
+    except (IndexError, ValueError):
+        print(f"Error extracting time from error message: {error_message}")
+        return None
+
+if __name__ == "__main__":
+    # File containing current channels in the format: $channel_name, $group, $channel_url/live
+    current_channels_file = "current_channels.txt"
+    # File to store upcoming scheduled live streams
+    scheduled_streams_file = "scheduled_streams.txt"
+
+# Function to process the current channels file and write scheduled streams to the output file
 def process_current_channels_file(input_filename, output_filename):
     with open(input_filename, 'r') as file:
         channels = file.readlines()
 
     scheduled_streams = []
-    events_beginning_soon = []
 
     for channel in channels:
         channel_info = channel.strip().split(',')
@@ -87,18 +102,18 @@ def process_current_channels_file(input_filename, output_filename):
                     scheduled_streams.extend(streams)
                 else:
                     print(f"No scheduled streams found for {channel_name}. Moving on.")
-                    events_beginning_soon.append(f"{channel_name} - Live event will begin in a few moments.")
-
-    # Check if there are any events beginning soon before writing to the output file
-    if events_beginning_soon:
-        print("\nEvents beginning soon:")
-        for event in events_beginning_soon:
-            print(event)
-    else:
-        print("No events beginning soon.")
 
     with open(output_filename, 'w') as file:
-        file.write('\n'.join(scheduled_streams))
+        for stream_info in scheduled_streams:
+            parts = stream_info.split('- Live - ')
+            if len(parts) == 2:
+                channel_name, start_time_str = map(str.strip, parts)
+                start_time = datetime.strptime(start_time_str, '%a %b %d %H:%M:%S UTC %Y')
+                time_until_event = get_time_until_event(stream_info)
+
+                if time_until_event:
+                    print(f"Upcoming stream for {channel_name}: {start_time} (in {time_until_event})")
+                    file.write(f"{channel_name} - Live - {start_time} (in {time_until_event})\n")
 
     print(f"Scheduled streams information written to {output_filename}")
 
