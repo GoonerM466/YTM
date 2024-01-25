@@ -3,7 +3,7 @@ name: A-Find Live Channels
 on:
   schedule:
     - cron: '0 6,12,18 * * *'   # Run at 6 am, 12 pm, and 6 pm
-  workflow_dispatch::
+  workflow_dispatch:
 
 jobs:
   update-channels:
