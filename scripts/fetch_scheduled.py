@@ -90,24 +90,24 @@ def process_current_channels_file(input_filename, output_filename):
 
     print(f"Scheduled streams information written to {output_filename}")
 
-# Uncomment the following function if you want to remove past entries
- def remove_past_entries(input_filename):
-     current_time = time.time()
-     with open(input_filename, 'r') as file:
-         lines = file.readlines()
+# Function to remove past entries from the scheduled streams file
+def remove_past_entries(input_filename):
+    current_time = time.time()
+    with open(input_filename, 'r') as file:
+        lines = file.readlines()
 
-     # Filter out past entries
-     filtered_lines = [line for line in lines if int(line.split('-')[-1].strip()) > current_time]
+    # Filter out past entries
+    filtered_lines = [line for line in lines if int(line.split('-')[-1].strip()) > current_time]
 
-     with open(input_filename, 'w') as file:
-         file.writelines(filtered_lines)
+    with open(input_filename, 'w') as file:
+        file.writelines(filtered_lines)
 
 if __name__ == "__main__":
     # File containing current channels in the format: $channel_name, $group, $channel_url/live
     current_channels_file = "current_channels.txt"
-    #File to store upcoming scheduled live streams
+    # File to store upcoming scheduled live streams
     scheduled_streams_file = "scheduled_streams.txt"
 
     process_current_channels_file(current_channels_file, scheduled_streams_file)
-     #Uncomment the following line if you want to remove past entries
-     remove_past_entries(scheduled_streams_file)
+    # Uncomment the following line if you want to remove past entries
+    remove_past_entries(scheduled_streams_file)
