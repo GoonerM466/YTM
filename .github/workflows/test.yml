@@ -1,4 +1,4 @@
-name: Debug M3U8 Formats Workflow
+name: Extract M3U8 URL Workflow
 
 on:
   push:
@@ -21,16 +21,13 @@ jobs:
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
 
-    - name: Get Debug Information about M3U8 Formats
+    - name: Extract VideoID and Get M3U8 URL
       run: |
         # Extract VideoID from test.txt
         VIDEO_ID=$(grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+' test.txt)
 
-        # Use yt-dlp to list all available formats and write to test_debug file
-        yt-dlp --list-formats "https://www.youtube.com/watch?v=$VIDEO_ID" > test_debug
+        # Clear existing content of test.m3u8
+        echo "" > test.m3u8
 
-    - name: Commit and Push Debug Information
-      run: |
-        git add test_debug
-        git commit -m "Add M3U8 format debug information"
-        git push
+        # Use yt-dlp to get M3U8 URL and write to test.m3u8
+        yt-dlp -o - --format 312 --get-url "https://www.youtube.com/watch?v=$VIDEO_ID" > test.m3u8
