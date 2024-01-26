@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "---New Channel Scrape---"
+      - "0-Verify Urls"
       - "clean Old m3u8s"
     types:
       - completed
