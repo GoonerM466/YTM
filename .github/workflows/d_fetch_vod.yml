@@ -50,7 +50,7 @@ jobs:
             channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
 
             # Fetching HTML content of the streams page
-            html_content=$(curl -s --fail --max-time 10 "$channel_url")
+            html_content=$(curl -s --fail --max-time 5 "$channel_url")
 
             # Check if curl command was successful
             if [ $? -eq 0 ]; then
