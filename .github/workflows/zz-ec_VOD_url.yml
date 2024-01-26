@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       input_file:
-        description: 'Input file path (VOD_to_fetch.txt)'
+        description: 'VOD_to_fetch.txt'
         required: true
 
 jobs:
