@@ -38,22 +38,21 @@ jobs:
           group=$(echo $line | awk '{ print $2 }')
           channel_url=$(echo $line | awk '{ print $3 }')
 
-          # Replace spaces in channel_name with underscores for better handling
-          channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
-
           # Fetching HTML content of the streams page
           html_content=$(curl -s "$channel_url")
 
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
-            # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
-            video_ids=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 3)
+            # Extracting video IDs and descriptions from the HTML content (modify this based on the actual structure of the page)
+            video_info=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' -A 5 | grep -oP '"label":"[^"]+"' | head -n 1)
+            video_id=$(echo "$video_info" | grep -oP '(?<=/watch\?v=)[^"&]+')
+            video_description=$(echo "$video_info" | grep -oP '(?<=label":")[^"]+')
 
             # Loop through each video ID
             for video_id in $video_ids; do
               # Check if video_id is not empty and has not been processed before
               if [ -n "$video_id" ] && ! grep -q "$video_id" processed_video_ids.txt; then
-                # Create the YouTube video URL and image URL
+                # Create the YouTube video URL, image URL, and include the video description
                 video_url="https://www.youtube.com/watch?v=$video_id"
                 image_url="https://i.ytimg.com/vi/$video_id/hqdefault.jpg"
 
@@ -63,9 +62,10 @@ jobs:
                 echo "Video ID: $video_id"
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
+                echo "Video Description: $video_description"
 
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url" >> VOD_to_fetch.txt
+                echo "$channel_name, $group, $video_url, $image_url, $video_description" >> VOD_to_fetch.txt
 
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> processed_video_ids.txt
