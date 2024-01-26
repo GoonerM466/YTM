@@ -21,8 +21,7 @@ jobs:
 
     - name: Extract URL from test.txt
       run: |
-        URL=$(cat test.txt)
-        URL=$(echo "$URL" | sed 's/&/\\&/g')  # Sanitize URL with ampersand
+        URL=$(cat test.txt | sed 's/&/\\&/g')  # Escape ampersand in the URL
         echo "Extracted URL: $URL"
 
     - name: Debugging - Print environment variables
