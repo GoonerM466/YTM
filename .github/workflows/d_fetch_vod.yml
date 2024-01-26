@@ -23,6 +23,11 @@ jobs:
         git config user.email "you@example.com"
         git config user.name "Your Name"
 
+    - name: Prepare VOD File
+      run: |
+        touch VOD_to_fetch.txt
+        > VOD_to_fetch.txt
+
     - name: Extract and Fetch VOD
       run: |
         # Extracting channel information from the text file
@@ -36,12 +41,12 @@ jobs:
           channel_url=$(echo $line | awk '{ print $3 }')
 
           # Fetching video information using yt-dlp
-          video_ids=$(yt-dlp --quiet --get-id --skip-download "$channel_url" | head -n 20)
+          video_ids=$(yt-dlp --quiet --get-id --skip-download --format 91,92,93,94,301 "$channel_url" | head -n 20)
 
           # Loop through each video ID
           for video_id in $video_ids; do
             # Check if video_id is not empty and format 300 is not available
-            if [ -n "$video_id" ] && [ -z "$(yt-dlp --quiet --format 300 --get-id --skip-download "$channel_url" -- "$video_id")" ]; then
+            if [ -n "$video_id" ] && [ -z "$(yt-dlp --quiet --format 300,301,91,92,93,94 --get-id --skip-download "$channel_url" -- "$video_id")" ]; then
               # Create the YouTube video URL
               video_url="https://youtube.com/watch?v=$video_id"
 
@@ -51,22 +56,19 @@ jobs:
               echo "Video ID: $video_id"
               echo "Video URL: $video_url"
 
-              # Touch the file and wipe its contents
-              touch VOD_to_fetch.txt
-              > VOD_to_fetch.txt
-
-              # Write the information to the file
+              # Append the information to the file
               echo "$channel_name, $group, $video_url" >> VOD_to_fetch.txt
-
-              # Add, commit, and push changes
-              git add VOD_to_fetch.txt
-              git commit -m "Update VOD_to_fetch.txt with latest video for $channel_name"
-              git pull origin main
-              git merge -s ours origin/main
-              git push origin main
             else
               # Output a message if video_id is empty or format 300 is available
               echo "No valid video found for $channel_name"
             fi
           done
         done <<< "$channel_info"
+
+    - name: Add, Commit, and Push Changes
+      run: |
+        git add VOD_to_fetch.txt
+        git commit -m "Update VOD_to_fetch.txt with latest videos"
+        git pull origin main
+        git merge -s ours origin/main
+        git push origin main
