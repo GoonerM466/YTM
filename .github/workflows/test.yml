@@ -22,11 +22,12 @@ jobs:
     - name: Extract URL from test.txt
       run: |
         URL=$(cat test.txt)
+        URL=$(echo "$URL" | sed 's/&/\\&/g')  # Sanitize URL with ampersand
         echo "Extracted URL: $URL"
 
     - name: Download M3U8 using yt-dlp
       run: |
-        yt-dlp -o video.m3u8 $URL
+        yt-dlp -o video.m3u8 "$URL"
 
     - name: Write M3U8 link to test.m3u
       run: |
