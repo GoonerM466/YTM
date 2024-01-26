@@ -36,8 +36,8 @@ jobs:
           echo "Modified URL: $modified_url"
 
           # Check if the video is live or scheduled
-          video_status=$(yt-dlp "$modified_url" --get-status --skip-download)
-          if [[ "$video_status" == "live" || "$video_status" == "scheduled" ]]; then
+          status_check=$(yt-dlp "$modified_url" --skip-download)
+          if [[ "$status_check" == *"is live"* || "$status_check" == *"is scheduled"* ]]; then
             echo "Video is live or scheduled. Skipping..."
             continue
           fi
