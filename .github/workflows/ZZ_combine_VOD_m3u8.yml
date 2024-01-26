@@ -1,0 +1,54 @@
+name: ZZ-Combine M3u8
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+      with:
+        repository: GoonerM466/YTM
+        ref: main
+
+    - name: Waiting to ensure other tasks have completed
+      run: sleep 45
+
+    - name: Rebase changes
+      run: git pull --rebase origin main
+
+    - name: Run Channel Generation Script
+      run: |
+        find ./vod -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
+          category=$(basename "$(dirname "$file")")
+          channel_name=$(basename "$file" .m3u8)
+          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$channel_name/vod_videos.m3u8"
+
+          if [ -n "$channel_url" ]; then
+            # Create a separate m3u8 file for each subfolder
+            echo "#EXTM3U" > "./vod/$channel_name/$channel_name.m3u8"
+            echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/$channel_name.m3u8"
+            echo "#EXT-X-STREAM-INF:NAME=\"$channel_name\",RESOLUTION=1920x1080,BANDWIDTH=25000000" >> "./vod/$channel_name/$channel_name.m3u8"
+            echo "$channel_url" >> "./vod/$channel_name/$channel_name.m3u8"
+          fi
+        done
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+
+    - name: Check for Changes and Pull & Push
+      run: |
+        git diff --exit-code && echo "No changes detected" || (git add ./vod/*/ && git commit -m "Update Channel M3U8 Playlists" && git pull --no-edit origin main && git push)
+        # Check if there are any conflicts after pull
+        git diff --check
+        if [ $? -ne 0 ]; then
+          # Auto-resolve conflicts by choosing one side
+          git checkout --ours ./vod/*/*.m3u8
+          git add ./vod/*/*.m3u8
+          git commit -m "Auto-resolve conflicts"
+          git push origin main
+        fi
