@@ -1,6 +1,7 @@
 import os
 import yt_dlp
 import time
+import sys
 
 def search_youtube_and_get_channel_info(search_phrase, max_results=1):
     ydl = yt_dlp.YoutubeDL()
@@ -70,5 +71,11 @@ if __name__ == "__main__":
     # Specify the path for the input file
     input_file_path = "current_channels.txt"  # Change to the actual path
 
+    # Redirect stdout to a file
+    sys.stdout = open("workflow_report.txt", "w")
+
     # Process the specified input file
     process_input_file(input_file_path)
+
+    # Close the file to ensure all data is written
+    sys.stdout.close()
