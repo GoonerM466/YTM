@@ -48,7 +48,7 @@ jobs:
           if [ $? -eq 0 ]; then
             # Extracting video IDs and their descriptions from the HTML content (modify this based on the actual structure of the page)
             video_info=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 3 | while read -r video_id; do
-              video_description=$(echo "$html_content" | grep -oP -m 1 '(?<=\"label\":\")[^\"]+' | tac | grep -oP -m 1 '.*' | head -n 1)
+              video_description=$(echo "$html_content" | grep -oP -m 1 '(?<=\"{"accessibilityData":{"label":"":\")[^\"]+' | tac | grep -oP -m 1 '.*' | head -n 1)
               echo "$video_id,$video_description"
             done)
 
