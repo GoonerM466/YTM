@@ -33,52 +33,62 @@ jobs:
 
         # Loop through each line in channel_info
         while read -r line; do
-          # Extracting variables from each line
-          channel_name=$(echo $line | awk '{ print $1 }')
-          group=$(echo $line | awk '{ print $2 }')
-          channel_url=$(echo $line | awk '{ print $3 }')
+          retries=3  # Set the number of retries
+          success=false
 
-          # Touch the file for each channel
-          touch VOD_to_fetch.txt
+          # Loop with retries
+          while [ $retries -gt 0 ] && [ "$success" = false ]; do
+            # Extracting variables from each line
+            channel_name=$(echo $line | awk '{ print $1 }')
+            group=$(echo $line | awk '{ print $2 }')
+            channel_url=$(echo $line | awk '{ print $3 }')
 
-          # Replace spaces in channel_name with underscores for better handling
-          channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
+            # Touch the file for each channel
+            touch VOD_to_fetch.txt
 
-          # Fetching HTML content of the streams page
-          html_content=$(curl -s "$channel_url")
+            # Replace spaces in channel_name with underscores for better handling
+            channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
 
-          # Check if curl command was successful
-          if [ $? -eq 0 ]; then
-            # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
-            video_ids=$(echo "$html_content" | grep -oP '(?<=videoId":")[^"]+' | head -n 3)
+            # Fetching HTML content of the streams page
+            html_content=$(curl -s --fail --max-time 10 "$channel_url")
 
-            # Loop through each video ID
-            for video_id in $video_ids; do
-              # Check if video_id is not empty and has not been processed before
-              if [ -n "$video_id" ] && ! grep -q "$video_id" processed_video_ids.txt; then
-                # Create the YouTube video URL
-                video_url="https://youtube.com/watch?v=$video_id"
+            # Check if curl command was successful
+            if [ $? -eq 0 ]; then
+              # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
+              video_ids=$(echo "$html_content" | grep -oP '(?<=videoId":")[^"]+' | head -n 3)
 
-                # Output information to the console in real-time
-                echo "Channel Name: $channel_name"
-                echo "Group: $group"
-                echo "Video ID: $video_id"
-                echo "Video URL: $video_url"
+              # Loop through each video ID
+              for video_id in $video_ids; do
+                # Check if video_id is not empty and has not been processed before
+                if [ -n "$video_id" ] && ! grep -q "$video_id" processed_video_ids.txt; then
+                  # Create the YouTube video URL
+                  video_url="https://youtube.com/watch?v=$video_id"
 
-                # Append the information to the file
-                echo "$channel_url, $group, $video_url" >> VOD_to_fetch.txt
+                  # Output information to the console in real-time
+                  echo "Channel Name: $channel_name"
+                  echo "Group: $group"
+                  echo "Video ID: $video_id"
+                  echo "Video URL: $video_url"
 
-                # Add the video_id to the processed_video_ids.txt file
-                echo "$video_id" >> processed_video_ids.txt
-              else
-                # Output a message if video_id is empty or has been processed before
-                echo "No valid/uniquely processed video found for $channel_name"
-              fi
-            done
-          else
-            # Output an error message if curl command fails
-            echo "Error: Failed to fetch HTML content for $channel_name"
-          fi
+                  # Append the information to the file
+                  echo "$channel_url, $group, $video_url" >> VOD_to_fetch.txt
+
+                  # Add the video_id to the processed_video_ids.txt file
+                  echo "$video_id" >> processed_video_ids.txt
+
+                  # Set success flag to true
+                  success=true
+                else
+                  # Output a message if video_id is empty or has been processed before
+                  echo "No valid/uniquely processed video found for $channel_name"
+                fi
+              done
+            else
+              # Output an error message if curl command fails
+              echo "Error: Failed to fetch HTML content for $channel_name (Retry $((3 - retries + 1)))"
+              ((retries--))
+            fi
+          done
         done <<< "$channel_info"
 
     - name: Add, Commit, and Push Changes
