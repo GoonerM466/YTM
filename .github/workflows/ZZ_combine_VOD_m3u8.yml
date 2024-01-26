@@ -1,5 +1,6 @@
 name: ZZ-Combine M3u8
 
+on:
   workflow_dispatch:
 
 jobs:
