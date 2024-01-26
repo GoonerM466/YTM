@@ -79,6 +79,10 @@ jobs:
           echo "$sanitized_channel_name - $live_status - $(date)" >> live_status.txt
         done < ./program/alt_urls.txt
 
+          # Introduce a 2-second delay
+          sleep 2
+        done < ./programs/alt_urls.txt
+
     - name: git add
       run: |
         git add -A
