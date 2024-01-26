@@ -11,10 +11,6 @@ jobs:
     timeout-minutes: 10
     strategy:
       fail-fast: false
-      matrix:
-        search_term:
-          - beinsportshaber
-          - other_search_term
 
     steps:
     - name: Checkout repository
@@ -44,7 +40,6 @@ jobs:
         echo "SEARCH_TERM=${{ steps.read-search-term.outputs.search_term }}" >> $GITHUB_ENV
 
     - name: Extract top 3 video URLs
-      id: extract-urls
       run: |
         search_term=${{ steps.read-search-term.outputs.search_term }}
         # Create directory if it doesn't exist
@@ -52,13 +47,22 @@ jobs:
         # Touch the file to ensure it exists
         touch ./vod/$search_term/vod_videos.m3u8
         start_time=$(date +%s)
-        while [ $(( $(date +%s) - $start_time )) -lt 30 ]; do
-          timeout 5 yt-dlp "ytsearch:${search_term}" --get-url --skip-download
+        for i in {1..3}; do
+          echo "Attempting to extract video URL (Attempt $i)..."
+          m3u8_url=$(timeout 5 yt-dlp "ytsearch:${search_term}" --get-url --skip-download)
           if [ $? -eq 0 ]; then
-            echo "Video URL found for ${search_term}"
+            echo "Video URL found: $m3u8_url"
+            echo $m3u8_url >> ./vod/$search_term/vod_videos.m3u8
+          else
+            echo "Error extracting video URL. Skipping to the next."
             break
           fi
         done
+
+    - name: Print M3U8 content
+      run: |
+        echo "M3U8 content:"
+        cat ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
 
     - name: Create M3U8 file
       run: |
