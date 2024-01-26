@@ -1,4 +1,4 @@
-name: 2-Generate m3u
+name: ZZ-Combine VOD Step 2
 
 on:
   workflow_run:
