@@ -1,4 +1,4 @@
-name: Extract and Create M3U8 Files
+name: D-Fetch VOD
 
 on:
   push:
@@ -20,22 +20,23 @@ jobs:
     - name: Fetch latest changes from remote
       run: |
         git fetch origin main
-
-        # Pull changes from remote, auto-resolve conflicts with remote changes
         git pull origin main --no-edit
-
-    - name: Rebase local changes with fetched changes
-      run: git rebase origin/main
+        git rebase origin/main
 
     - name: Read search term from file
       id: read-search-term
-      run: echo "::set-output name=search_term::$(cat ./program/alt_url.txt | cut -d ',' -f 1)"
+      run: |
+        content=$(cat ./program/alt_url.txt)
+        search_term=$(echo "$content" | cut -d ',' -f 1 | awk -F', ' '{print $1}')
+        echo "::set-output name=search_term::$search_term"
+
+    - name: Print extracted search term
+      run: echo "Extracted Search Term: ${{ steps.read-search-term.outputs.search_term }}"
 
     - name: Extract top 10 video URLs
       id: extract-urls
       run: |
         search_term=${{ steps.read-search-term.outputs.search_term }}
-        echo "Search term: $search_term"
         for i in {1..10}; do
           m3u8_url=$(yt-dlp "${search_term}" --get-url --skip-download)
           echo $m3u8_url >> ./vod/$search_term/vod_videos.m3u8
