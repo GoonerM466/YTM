@@ -48,6 +48,15 @@ jobs:
           
           while [ $attempts -lt 3 ]; do
             echo "Attempting to extract video URL (Attempt $((attempts + 1)))..."
+            
+            # Use --simulate to check if the video is live or scheduled
+            is_live_or_scheduled=$(yt-dlp "$modified_url" --simulate | grep "This live event will begin\|This video will be published\|This video is scheduled")
+            
+            if [ -n "$is_live_or_scheduled" ]; then
+              echo "Found live or scheduled video. Skipping..."
+              break
+            fi
+            
             m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download --format "bestvideo[ext=m3u8]+bestaudio[ext=m4a]/best[ext=m3u8]/best" || true)  # Ignore errors
             
             if [ $? -eq 0 ]; then
