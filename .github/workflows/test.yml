@@ -19,19 +19,16 @@ jobs:
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
 
-    - name: Extract URL from test.txt
+    - name: Extract video ID from test.txt
       run: |
-        URL=$(cat test.txt | sed 's/&/\\&/g')  # Escape ampersand in the URL
-        echo "Extracted URL: $URL"
-
-    - name: Debugging - Print environment variables
-      run: |
-        echo "DEBUG: URL=$URL"
+        URL=$(cat test.txt)
+        VIDEO_ID=$(echo $URL | awk -F 'v=' '{print $2}' | awk -F '&' '{print $1}')
+        echo "Extracted Video ID: $VIDEO_ID"
 
     - name: Download M3U8 using yt-dlp
       run: |
-        yt-dlp -o video.m3u8 "$URL"
+        yt-dlp -o "video_$VIDEO_ID.m3u8" "https://www.youtube.com/watch?v=$VIDEO_ID"
 
-    - name: Write M3U8 link to test.m3u
+    - name: Write M3U8 link to test.m3u8
       run: |
-        echo "$URL" > test.m3u
+        echo "https://www.youtube.com/watch?v=$VIDEO_ID" > test.m3u8
