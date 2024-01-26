@@ -1,62 +1,99 @@
 name: D-Fetch VOD
 
 on:
-  workflow_run:
-    workflows: ["1-Fetch Live m3u8"]
-    types:
-      - completed
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  extract-m3u8:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-    - name: Checkout Repository
+    - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        repository: GoonerM466/YTM
-        ref: main
 
-    - name: Waiting to ensure other tasks have completed
-      run: sleep 45
-
-    - name: Rebase changes
-      run: git pull --rebase origin main
-
-    - name: Run Channel Generation Script
+    - name: Install yt-dlp
       run: |
-        find ./vod -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
-          category=$(basename "$(dirname "$file")")
-          channel_name=$(basename "$file" .m3u8)
-          
-          # Extract video URL from the M3U8 content
-          video_url=$(grep -E '^http' "$file" | tail -n 1 || echo "")
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        chmod a+rx /usr/local/bin/yt-dlp
 
-          if [ -n "$video_url" ]; then
-            # Create a separate m3u8 file for each subfolder
-            mkdir -p "./vod/$channel_name"
-            echo "#EXTM3U" > "./vod/$channel_name/$channel_name.m3u8"
-            echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/$channel_name.m3u8"
-            echo "#EXT-X-STREAM-INF:NAME=\"$channel_name\",RESOLUTION=1920x1080,BANDWIDTH=1" >> "./vod/$channel_name/$channel_name.m3u8"
-            echo "$video_url" >> "./vod/$channel_name/$channel_name.m3u8"
-          fi
+    - name: Fetch latest changes from remote
+      run: |
+        git fetch origin main
+        git pull origin main --no-edit
+        git rebase origin/main
+
+    - name: Read live URLs from file
+      run: |
+        while IFS=, read -r channel_name group live_url; do
+          echo "Processing live URL: $live_url"
+          
+          # Modify the live_url as needed
+          modified_url="${live_url/live/streams}"
+          
+          echo "Modified URL: $modified_url"
+
+          mkdir -p ./vod/$channel_name
+          m3u8_file="./vod/$channel_name/vod_videos.m3u8"
+
+          # Truncate the file before writing
+          : > "$m3u8_file"
+
+          start_time=$(date +%s)
+          attempts=0
+          broken_pipe_count=0
+          fallback_url_attempt=0
+          
+          while [ $attempts -lt 3 ]; do
+            echo "Attempting to extract video URL (Attempt $((attempts + 1)))..."
+            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download 2>/dev/null)
+            
+            if [ $? -eq 0 ]; then
+              echo "Video URL found: $m3u8_url"
+              echo $m3u8_url >> "$m3u8_file"
+              break
+            elif [ $? -eq 32 ]; then
+              echo "Error: Broken pipe"
+              ((broken_pipe_count++))
+              if [ $broken_pipe_count -eq 2 ]; then
+                echo "Two broken pipe errors occurred. Moving on to the next entry."
+                break
+              fi
+            else
+              echo "Error extracting video URL. Attempt $((attempts + 1)) failed."
+              break
+            fi
+            
+            ((attempts++))
+            sleep 2  # Sleep for 2 seconds between attempts
+          done
+
+          echo "M3U8 content:"
+          cat "$m3u8_file"
+
+          echo "Creating M3U8 file..."
+          echo "#EXTM3U" > "./vod/$channel_name/vod_videos_temp.m3u8"
+          echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/vod_videos_temp.m3u8"
+          video_number=1
+          while read -r line; do
+            # Check if the line contains ".m3u8"
+            if [[ "$line" == *".m3u8"* ]]; then
+              echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
+              echo "${line}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
+              ((video_number++))
+            else
+              echo "Skipping invalid line: $line"
+            fi
+          done < "$m3u8_file"
+
+          mv "./vod/$channel_name/vod_videos_temp.m3u8" "$m3u8_file"
         done
 
-    - name: Configure Git
-      run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
-
-    - name: Check for Changes and Pull & Push
-      run: |
-        git diff --exit-code && echo "No changes detected" || (git add ./vod/*/ && git commit -m "Update Channel M3U8 Playlists" && git pull --no-edit origin main && git push)
-        # Check if there are any conflicts after pull
-        git diff --check
-        if [ $? -ne 0 ]; then
-          # Auto-resolve conflicts by choosing one side
-          git checkout --ours ./vod/*/*.m3u8
-          git add ./vod/*/*.m3u8
-          git commit -m "Auto-resolve conflicts"
-          git push origin main
-        fi
+        echo "Committing changes..."
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git add -A
+        git diff --cached --quiet || git commit -m "Updated M3U8 files"
+        git push origin main
