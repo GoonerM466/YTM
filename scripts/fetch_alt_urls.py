@@ -15,6 +15,10 @@ def search_youtube_and_get_channel_info(search_phrase, max_results=1):
         
         channel_url = entry.get('channel_url', None)
         video_id = entry.get('id', None)
+
+        print(f"Found channel URL: {channel_url}")
+        print(f"Found video ID: {video_id}")
+
         return channel_url, video_id
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
@@ -47,6 +51,7 @@ def process_input_file(input_filename):
                 if video_id:
                     video_id_url = f"https://www.youtube.com/watch?v={video_id}\n"
                     updated_lines.append(f"{search_term}, {group}, {live_channel_url}, {video_id_url}")
+                    print(f"Updated information for '{search_term}' written to output.")
                 else:
                     print(f"Could not find a video ID for '{search_term}'. Skipping.")
 
