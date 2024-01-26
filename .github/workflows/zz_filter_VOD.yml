@@ -27,16 +27,15 @@ jobs:
 
     - name: Read channel information from VOD_to_fetch.txt
       run: |
-        # Create a temporary file to store updated entries
         tmpfile=$(mktemp)
 
         while IFS=, read -r channel_name group video_url image_url; do
           # Check if the video is live using yt-dlp JSON output without downloading
           video_info=$(yt-dlp --print-json --skip-download "$video_url")
-          live_status=$(echo "$video_info" | jq -r .is_live)
-          
+          live_status=$(echo "$video_info" | jq -r '.is_live or (.start_time and (.start_time | fromdateiso8601 < now | not))')
+
           if [ "$live_status" == "true" ]; then
-            echo "$video_url is live - discarding!"
+            echo "$video_url is live or scheduled - discarding!"
           else
             echo "$video_url is not live - saving!"
             # If not live, append the entry to the temporary file
