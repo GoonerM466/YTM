@@ -12,10 +12,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install yt-dlp
+    - name: Install yt-dlp and jq
       run: |
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
+        sudo apt-get install jq
 
     - name: Fetch latest changes from remote
       run: |
@@ -27,10 +28,12 @@ jobs:
         echo "Fetching channel information..."
         while IFS=, read -r channel_name group channel_url; do
           echo "Processing $channel_name from $group group with URL $channel_url/streams"
-          video_ids=$(yt-dlp "$channel_url/streams" --get-id --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --max-downloads 3 --skip-download --skip-unavailable-fragments --skip-live --skip-scheduled --verbose)
+          video_info=$(yt-dlp -j "$channel_url/streams" --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --max-downloads 3 --skip-download --skip-unavailable-fragments --verbose)
           
-          echo "$video_ids"  # Display video IDs for troubleshooting
+          echo "$video_info"  # Display video info for troubleshooting
           
+          video_ids=$(echo "$video_info" | jq -r '.entries[] | select(.is_live == false and .start_time == null) | .id')
+
           IFS=',' read -ra video_ids_array <<< "$video_ids"
           for video_id in "${video_ids_array[@]}"; do
             echo "Adding Video ID $video_id to VOD_to_fetch.txt"
