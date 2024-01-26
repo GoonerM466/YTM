@@ -40,6 +40,7 @@ jobs:
             if [ "$video_info" != "null" ]; then
               video_ids=$(echo "$video_info" | jq -r '.entries[] | select(.formats[].format_id == 300) | .id')
               
+              # Check if video_ids is not null
               if [ -n "$video_ids" ]; then
                 IFS=',' read -ra video_ids_array <<< "$video_ids"
                 for video_id in "${video_ids_array[@]}"; do
