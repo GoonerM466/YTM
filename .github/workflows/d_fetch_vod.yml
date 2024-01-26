@@ -1,12 +1,10 @@
-name: D-Fetch VOD
+name: Fetch VOD VideoID
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  extract-video-ids:
+  extract-m3u8:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -23,32 +21,18 @@ jobs:
       run: |
         git fetch origin main
         git pull origin main --no-edit
-        git rebase origin/main
 
-    - name: Read live URLs from file and extract video IDs
+    - name: Run Fetch VOD VideoID script
+      working-directory: ./scripts
       run: |
-        while IFS=, read -r channel_name group live_url; do
-          echo "Processing live URL: $live_url"
-          
-          # Modify the live_url as needed
-          modified_url="${live_url/live/streams}"
-          
-          echo "Modified URL: $modified_url"
+        python fetch_vod_video_id.py
 
-          video_id=$(yt-dlp "$modified_url" --get-id --skip-download 2>/dev/null)
-
-          if [ $? -eq 0 ]; then
-            echo "Video ID found: $video_id"
-            echo "$channel_name, $group, https://www.youtube.com/watch?v=$video_id" >> "./program/vod_to_fetch.txt"
-          else
-            echo "Error extracting video ID from $live_url."
-          fi
-        done < ./program/alt_urls.txt
-
-    - name: Commit changes and push to main
+    - name: Commit and push changes
       run: |
+        cd ./scripts
+        echo "Committing changes..."
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
         git add -A
-        git diff --cached --quiet || git commit -m "Updated video IDs"
+        git diff --cached --quiet || git commit -m "Updated VOD VideoID files"
         git push origin main
