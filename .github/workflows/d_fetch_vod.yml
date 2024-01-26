@@ -35,14 +35,14 @@ jobs:
           group=$(echo $line | awk '{ print $2 }')
           channel_url=$(echo $line | awk '{ print $3 }')
 
-          # Replace spaces with underscores in the channel name
-          channel_name_underscored=$(echo "$channel_name" | tr ' ' '_')
-
           # Touch the file for each channel
           touch VOD_to_fetch.txt
 
+          # Replace spaces in channel_name with underscores for better handling
+          channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
+
           # Fetching HTML content of the streams page
-          html_content=$(curl -s "https://youtube.com/$channel_name_underscored/streams")
+          html_content=$(curl -s "$channel_url")
 
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
@@ -63,7 +63,7 @@ jobs:
                 echo "Video URL: $video_url"
 
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url" >> VOD_to_fetch.txt
+                echo "$channel_url, $group, $video_url" >> VOD_to_fetch.txt
               else
                 # Output a message if video_id is empty
                 echo "No valid video found for $channel_name"
