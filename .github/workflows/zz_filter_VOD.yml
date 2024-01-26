@@ -27,7 +27,7 @@ jobs:
 
         while IFS=, read -r channel_name group video_url image_url; do
           # Replace spaces with underscores in the video URL
-          video_url=$(echo "$video_url" | sed 's/ /_/g')
+          video_url=$(echo "$video_url" | tr ' ' '_')
 
           # Check if the video is live using yt-dlp JSON output without downloading
           video_info=$(yt-dlp --print-json --skip-download "$video_url")
