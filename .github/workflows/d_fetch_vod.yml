@@ -75,4 +75,4 @@ jobs:
           git add -A
           git diff --cached --quiet || git commit -m "Updated M3U8 files"
           git push origin main
-        done < ./program/alt_url.txt
+        done < ./program/alt_urls.txt
