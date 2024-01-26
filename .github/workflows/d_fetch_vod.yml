@@ -47,7 +47,7 @@ jobs:
           
           while [ $attempts -lt 3 ]; do
             echo "Attempting to extract video URL (Attempt $((attempts + 1)))..."
-            m3u8_url=$(timeout 5 yt-dlp "$modified_url" --get-url --skip-download)
+            m3u8_url=$(yt-dlp "$modified_url" --get-url --skip-download)
             
             if [ $? -eq 0 ]; then
               echo "Video URL found: $m3u8_url"
