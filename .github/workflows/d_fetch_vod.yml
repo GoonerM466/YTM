@@ -17,6 +17,11 @@ jobs:
       run: |
         git config user.email "you@example.com"
         git config user.name "Your Name"
+        
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
 
     - name: Prepare VOD File
       run: |
@@ -30,8 +35,9 @@ jobs:
       run: |
         awk -F ', ' '{ gsub(/ /, "_", $1); print $0 }' current_channels.txt > temp_channels.txt
 
-    - name: Extract and Fetch VOD
-      run: |
+    - name: Run clean_old_epg.py
+      run: python ./scripts/filter_VOD.py
+
         # Extracting channel information from the temp file
         channel_info=$(cat temp_channels.txt)
 
