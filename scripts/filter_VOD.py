@@ -1,9 +1,17 @@
 import yt_dlp
 
 def is_video_live(video_url):
-    with yt_dlp.YoutubeDL() as ydl:
-        info = ydl.extract_info(video_url, download=False)
-        return info.get('is_live', False)
+    ydl_opts = {
+        'quiet': True,
+    }
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        try:
+            info_dict = ydl.extract_info(video_url, download=False, process=False)
+            return 'is_live' in info_dict and info_dict['is_live']
+        except yt_dlp.DownloadError:
+            # Video might not exist or other download error
+            return False
 
 def main():
     source_file = "VOD_to_fetch.txt"
