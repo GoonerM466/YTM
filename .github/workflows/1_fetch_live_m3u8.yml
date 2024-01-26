@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "0-Verify Urls"
+      - "---New Channel Scrape---"
       - "clean Old m3u8s"
     types:
       - completed
@@ -30,10 +30,8 @@ jobs:
     - name: Fetch latest changes from remote
       run: |
         git fetch origin main
-
         # Pull changes from remote, auto-resolve conflicts with remote changes
         git pull origin main --no-edit
-
     - name: Rebase local changes with fetched changes
       run: git rebase origin/main
 
@@ -44,7 +42,6 @@ jobs:
       run: |
         # Clear the contents of live_status.txt
         echo "" > live_status.txt
-
         while IFS=, read -r channel_name group channel_url; do
           # Modify channel_name using sed regex: remove spaces and trim to 3 words
           sanitized_channel_name=$(echo "$channel_name" | sed -E 's/[^a-zA-Z0-9]+/-/g; s/^([^-]+-[^-]+-[^-]+).*/\1/; s/-//g')
@@ -77,11 +74,7 @@ jobs:
           
           # Append live status information to live_status.txt using sanitized channel name
           echo "$sanitized_channel_name - $live_status - $(date)" >> live_status.txt
-
-          # Introduce a 2-second delay
-          sleep 2
         done < ./program/alt_urls.txt
-
     - name: git add
       run: |
         git add -A
