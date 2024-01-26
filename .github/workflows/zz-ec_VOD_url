@@ -1,4 +1,4 @@
-name: Extract and Construct VOD URLs
+name: zz-EC VOD URLs
 
 on:
   workflow_dispatch:
