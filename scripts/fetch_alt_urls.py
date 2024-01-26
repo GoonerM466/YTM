@@ -62,13 +62,13 @@ def process_input_file(input_filename):
 
                 if live_video_id:
                     video_id_url = f"https://www.youtube.com/watch?v={live_video_id}\n"
-                    updated_lines.append(f"{search_term}, {group}, {new_channel_url}, {video_id_url}")
-                    # Add a 2-second delay between each search
-                    time.sleep(2)
+                    updated_lines.append(f"{search_term}, {group}, {live_channel_url}, {video_id_url}")
                 else:
                     print(f"Could not find a live video ID for '{search_term}'. Skipping.")
+
             else:
                 print(f"Could not find a channel URL for '{search_term}'. Skipping.")
+
         else:
             updated_lines.append(line)
 
@@ -79,7 +79,7 @@ def process_input_file(input_filename):
 
 if __name__ == "__main__":
     # Specify the path for the input file
-    input_file_path = "current_channels.txt"  # Change to the actual path
+    input_file_path = ".current_channels.txt"  # Change to the actual path
 
     # Process the specified input file
     process_input_file(input_file_path)
