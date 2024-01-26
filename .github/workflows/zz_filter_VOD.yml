@@ -1,21 +1,21 @@
-name: 1-Fetch Live VOD
+name: zz-Filter VOD
 
 on:
-  schedule:
-    - cron: '01 0/2 * * *'
   workflow_dispatch:
 
 jobs:
-  fetch-live-vod:
+  filter-live-vod:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install yt-dlp
+    - name: Install yt-dlp and jq
       run: |
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
+        sudo apt-get update
+        sudo apt-get install jq
 
     - name: Read channel information from VOD_to_fetch.txt
       run: |
@@ -23,9 +23,11 @@ jobs:
         tmpfile=$(mktemp)
 
         while IFS=, read -r channel_name group video_url image_url; do
-          # Check if the video is live
-          live_status=$(yt-dlp --print is_live "$video_url")
-          if [ "$live_status" == "True" ]; then
+          # Check if the video is live using yt-dlp JSON output
+          video_info=$(yt-dlp --print-json "$video_url")
+          live_status=$(echo "$video_info" | jq -r .is_live)
+          
+          if [ "$live_status" == "true" ]; then
             echo "$video_url is live - discarding!"
           else
             echo "$video_url is not live - saving!"
@@ -44,5 +46,5 @@ jobs:
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         git add -A
-        git diff --cached --quiet || git commit -m "Update VOD list"
+        git diff --cached --quiet || git commit -m "Filter VOD list"
         git push origin main
