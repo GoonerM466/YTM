@@ -21,7 +21,7 @@ jobs:
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
 
-    - name: Extract VideoID and Get M3U8
+    - name: Extract VideoID and Get M3U8 URL
       run: |
         # Extract VideoID from test.txt
         VIDEO_ID=$(grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+' test.txt)
@@ -29,8 +29,8 @@ jobs:
         # Clear existing content of test.m3u8
         echo "" > test.m3u8
 
-        # Use yt-dlp to print M3U8 URL and write to test.m3u8
-        yt-dlp --print urls "https://www.youtube.com/watch?v=$VIDEO_ID" > test.m3u8
+        # Use yt-dlp to get M3U8 URL and write to test.m3u8
+        yt-dlp --get-url "https://www.youtube.com/watch?v=$VIDEO_ID" > test.m3u8
 
     - name: Commit and Push Changes
       run: |
