@@ -27,6 +27,8 @@ jobs:
 
     - name: Read live URLs from file
       run: |
+        current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        
         while IFS=, read -r channel_name group live_url; do
           echo "Processing live URL: $live_url"
           
@@ -34,13 +36,6 @@ jobs:
           modified_url="${live_url/live/streams}"
           
           echo "Modified URL: $modified_url"
-
-          # Check if the video is live or scheduled
-          status_check=$(yt-dlp "$modified_url" --skip-download)
-          if [[ "$status_check" == *"is live"* || "$status_check" == *"is scheduled"* ]]; then
-            echo "Video is live or scheduled. Skipping..."
-            continue
-          fi
 
           mkdir -p "./vod/$channel_name"
           m3u8_file="./vod/$channel_name/vod_videos.m3u8"
@@ -55,16 +50,20 @@ jobs:
           
           while [ $attempts -lt 3 ]; do
             echo "Attempting to extract video URL (Attempt $((attempts + 1)))..."
-            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download --format "bestvideo[ext=m3u8]+bestaudio[ext=m4a]/best[ext=m3u8]/best" || true)  # Ignore errors
+            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download || true)  # Ignore errors
             
-            if [ $? -eq 0 ]; then
-              # Check if the URL is an M3U8 link
-              if [[ $m3u8_url == *".m3u8"* ]]; then
-                echo "M3U8 Video URL found: $m3u8_url"
+            if [ $? -eq 0 ] && [[ "$m3u8_url" == *".m3u8"* ]]; then
+              echo "Video URL found: $m3u8_url"
+              
+              # Retrieve video upload time
+              upload_time=$(yt-dlp "$modified_url" --get-info --skip-download --format "%(upload_date)s" 2>/dev/null)
+              
+              if [ "$upload_time" \< "$current_time" ]; then
+                echo "Video uploaded before current time. Proceeding..."
                 echo "$m3u8_url" >> "$m3u8_file"
                 break
               else
-                echo "Found non-M3U8 link. Skipping..."
+                echo "Video uploaded after or at the current time. Skipping..."
               fi
             else
               if [[ "$m3u8_url" == *"broken pipe"* ]]; then
@@ -75,7 +74,7 @@ jobs:
                   break
                 fi
               else
-                echo "Error extracting video URL. Attempt $((attempts + 1)) failed. Error: $m3u8_url"
+                echo "Error extracting video URL or invalid format. Attempt $((attempts + 1)) failed. Error: $m3u8_url"
               fi
             fi
             
