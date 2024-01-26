@@ -1,6 +1,10 @@
-name: ZZ-Combine M3u8
+name: 2-Generate m3u
 
 on:
+  workflow_run:
+    workflows: ["1-Fetch Live m3u8"]
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
@@ -25,13 +29,14 @@ jobs:
         find ./vod -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
           category=$(basename "$(dirname "$file")")
           channel_name=$(basename "$file" .m3u8)
-          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$channel_name/vod_videos.m3u8"
+          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file"
 
           if [ -n "$channel_url" ]; then
             # Create a separate m3u8 file for each subfolder
+            mkdir -p "./vod/$channel_name"
             echo "#EXTM3U" > "./vod/$channel_name/$channel_name.m3u8"
             echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/$channel_name.m3u8"
-            echo "#EXT-X-STREAM-INF:NAME=\"$channel_name\",RESOLUTION=1920x1080,BANDWIDTH=25000000" >> "./vod/$channel_name/$channel_name.m3u8"
+            echo "#EXT-X-STREAM-INF:NAME=\"$channel_name\",RESOLUTION=1920x1080,BANDWIDTH=1" >> "./vod/$channel_name/$channel_name.m3u8"
             echo "$channel_url" >> "./vod/$channel_name/$channel_name.m3u8"
           fi
         done
