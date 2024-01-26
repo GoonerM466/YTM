@@ -1,4 +1,4 @@
-name: B-Fetch URLS
+name: 0-Verify Urls
 
 on:
   workflow_dispatch:
