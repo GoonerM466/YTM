@@ -11,6 +11,10 @@ jobs:
     timeout-minutes: 10
     strategy:
       fail-fast: false
+      matrix:
+        search_term:
+          - beinsportshaber
+          - other_search_term
 
     steps:
     - name: Checkout repository
@@ -66,14 +70,16 @@ jobs:
 
     - name: Create M3U8 file
       run: |
-        echo "#EXTM3U" > ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
-        echo "#EXT-X-VERSION:3" >> ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
+        echo "#EXTM3U" > ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos_temp.m3u8
+        echo "#EXT-X-VERSION:3" >> ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos_temp.m3u8
         video_number=1
         while read -r line; do
-          echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
-          echo "${line}" >> ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
+          echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos_temp.m3u8
+          echo "${line}" >> ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos_temp.m3u8
           ((video_number++))
         done < ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
+
+        mv ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos_temp.m3u8 ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
 
     - name: Commit changes
       run: |
