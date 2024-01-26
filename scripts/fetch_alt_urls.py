@@ -2,7 +2,7 @@ import os
 import yt_dlp
 import time
 
-def search_youtube_and_get_channel_url(search_phrase, max_results=1):
+def search_youtube_and_get_channel_info(search_phrase, max_results=1):
     ydl = yt_dlp.YoutubeDL()
     try:
         search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
@@ -11,35 +11,20 @@ def search_youtube_and_get_channel_url(search_phrase, max_results=1):
         # Check if the video requires membership
         if entry.get('requires_membership'):
             print(f"Video requires membership. Skipping '{search_phrase}'.")
-            return None
+            return None, None
         
         channel_url = entry.get('channel_url', None)
-        return channel_url
+        video_id = entry.get('id', None)
+        return channel_url, video_id
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
-        return None
+        return None, None
     except yt_dlp.utils.DownloadError as e:
         print(f"Error downloading information from YouTube: {str(e)}")
-        return None
+        return None, None
     except Exception as e:
         print(f"An unexpected error occurred: {str(e)}")
-        return None
-
-def get_live_video_id(channel_url):
-    ydl = yt_dlp.YoutubeDL()
-    try:
-        channel_info = ydl.extract_info(channel_url, download=False)
-        live_video_id = channel_info.get('url', '').split('=')[-1]
-        return live_video_id
-    except yt_dlp.utils.ExtractorError as e:
-        print(f"Error extracting information from YouTube: {str(e)}")
-        return None
-    except yt_dlp.utils.DownloadError as e:
-        print(f"Error downloading information from YouTube: {str(e)}")
-        return None
-    except Exception as e:
-        print(f"An unexpected error occurred: {str(e)}")
-        return None
+        return None, None
 
 def process_input_file(input_filename):
     output_filename = "./program/alt_urls.txt"  # Change the output file path
@@ -54,17 +39,16 @@ def process_input_file(input_filename):
             # Assuming the input file has the format $search_term, $group, $channel_url
             search_term, group, channel_url = line.strip().split(', ')
             search_term_lower = search_term.lower()
-            new_channel_url = search_youtube_and_get_channel_url(search_term_lower)
+
+            new_channel_url, video_id = search_youtube_and_get_channel_info(search_term_lower)
 
             if new_channel_url:
                 live_channel_url = f"{new_channel_url.rstrip('/')}/live"
-                live_video_id = get_live_video_id(live_channel_url)
-
-                if live_video_id:
-                    video_id_url = f"https://www.youtube.com/watch?v={live_video_id}\n"
+                if video_id:
+                    video_id_url = f"https://www.youtube.com/watch?v={video_id}\n"
                     updated_lines.append(f"{search_term}, {group}, {live_channel_url}, {video_id_url}")
                 else:
-                    print(f"Could not find a live video ID for '{search_term}'. Skipping.")
+                    print(f"Could not find a video ID for '{search_term}'. Skipping.")
 
             else:
                 print(f"Could not find a channel URL for '{search_term}'. Skipping.")
