@@ -49,8 +49,8 @@ jobs:
 
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
-            # Extracting up to 5 video IDs from the HTML content
-            video_ids=$(echo "$html_content" | grep -oP '"url":"/watch\?v=[^"]+' | awk -F ':"/watch?v=' '{ print $2 }' | head -n 5)
+            # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
+            video_ids=$(echo "$html_content" | grep -oP '(?<=videoId":")[^"]+' | head -n 3)
 
             # Loop through each video ID
             for video_id in $video_ids; do
@@ -66,7 +66,7 @@ jobs:
                 echo "Video URL: $video_url"
 
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url" >> VOD_to_fetch.txt
+                echo "$channel_url, $group, $video_url" >> VOD_to_fetch.txt
 
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> processed_video_ids.txt
