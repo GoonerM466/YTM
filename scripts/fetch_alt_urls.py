@@ -24,7 +24,7 @@ def search_youtube_and_get_channel_url(search_phrase, max_results=1):
         print(f"Error downloading information from YouTube: {str(e)}")
         return None
     except Exception as e:
-        print(f"An unexpected error occurred: {str(e)}")
+        print(f"An unexpected error occurred in search_youtube_and_get_channel_url: {str(e)}")
         return None
 
 def get_live_video_id(channel_url):
@@ -42,7 +42,7 @@ def get_live_video_id(channel_url):
         print(f"Error downloading information from YouTube: {str(e)}")
         return None
     except Exception as e:
-        print(f"An unexpected error occurred: {str(e)}")
+        print(f"An unexpected error occurred in get_live_video_id: {str(e)}")
         return None
 
 def process_input_file(input_filename):
