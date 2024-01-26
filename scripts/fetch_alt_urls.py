@@ -59,10 +59,11 @@ def process_input_file(input_filename):
             search_term, group, channel_url = line.strip().split(', ')
             search_term_lower = search_term.lower()
             print(f"Processing search term: {search_term}")
-            
+
             new_channel_url = search_youtube_and_get_channel_url(search_term_lower)
 
             if new_channel_url:
+                print(f"Got new channel URL: {new_channel_url}")
                 live_channel_url = f"{new_channel_url.rstrip('/')}/live"
                 live_video_id = get_live_video_id(live_channel_url)
 
