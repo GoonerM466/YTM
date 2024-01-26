@@ -22,7 +22,7 @@ jobs:
 
     - name: Replace spaces in video URLs
       run: |
-        sed -i 's/ /_/g' VOD_to_fetch.txt
+        sed -i 's/\(https:\/\/www\.youtube\.com\/watch?v=[^[:space:]]*\)/\1/g' VOD_to_fetch.txt
 
     - name: Read channel information from VOD_to_fetch.txt
       run: |
