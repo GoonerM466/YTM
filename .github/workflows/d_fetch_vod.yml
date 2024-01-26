@@ -39,7 +39,7 @@ jobs:
       run: python ./scripts/filter_VOD.py
 
         # Extracting channel information from the temp file
-        channel_info=$(cat temp_channels.txt)
+       channel_info=$(cat temp_channels.txt)
 
         # Loop through each line in channel_info
         while IFS=', ' read -r channel_name group channel_url; do
@@ -87,7 +87,7 @@ jobs:
         sed -i 's/_/ /g' VOD_to_fetch.txt
 
     -name: Filter VOD
-      runn: | 
+      run: python ./scripts/filter_VOD.py 
 
     - name: Add, Commit, and Push Changes
       run: |
