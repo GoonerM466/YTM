@@ -38,7 +38,7 @@ jobs:
       run: git config pull.rebase true
 
     - name: Run Fetch_urls Script
-      run: python ./scripts/fetch_alt_urls.py
+      run: python ./scripts/fetch_videoID.py
 
     - name: Print workspace
       run: ls -la
