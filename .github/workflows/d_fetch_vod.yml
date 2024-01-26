@@ -29,17 +29,12 @@ jobs:
     - name: Extract and Fetch VOD
       run: |
         # Extracting channel information from the text file
-        channel_info=$(awk -F ', ' '{ print $1, $2, $3 }' current_channels.txt)
+        channel_info=$(awk -F ', ' '{ print $0 }' current_channels.txt)
 
         # Loop through each line in channel_info
-        while read -r line; do
-          # Extracting variables from each line
-          channel_name=$(echo $line | awk '{ print $1 }')
-          group=$(echo $line | awk '{ print $2 }')
-          channel_url=$(echo $line | awk '{ print $3 }')
-
+        while IFS=', ' read -r channel_name group channel_url; do
           # Replace spaces in channel_name with underscores for better handling
-          channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
+          channel_name_no_spaces=$(echo "$channel_name" | tr ' ' '_')
 
           # Fetching HTML content of the streams page
           html_content=$(curl -s "$channel_url")
@@ -47,7 +42,7 @@ jobs:
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
             # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
-            video_ids=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' || true | head -n 3)
+            video_ids=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 3)
 
             # Loop through each video ID
             for video_id in $video_ids; do
@@ -58,24 +53,25 @@ jobs:
                 image_url="https://i.ytimg.com/vi/$video_id/hqdefault.jpg"
 
                 # Output information to the console in real-time
-                echo "Channel Name: $channel_name"
+                echo "Channel Name: $channel_name_no_spaces"
                 echo "Group: $group"
                 echo "Video ID: $video_id"
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
 
-                # Append the information to the file with quotes around variables
-                echo "!!str $channel_name, $group, $video_url, $image_url" >> VOD_to_fetch.txt
+                # Append the information to the file
+                echo "$channel_name_no_spaces, $group, $video_url, $image_url" >> VOD_to_fetch.txt
+
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> processed_video_ids.txt
               else
                 # Output a message if video_id is empty or has been processed before
-                echo "No valid/uniquely processed video found for $channel_name"
+                echo "No valid/uniquely processed video found for $channel_name_no_spaces"
               fi
             done
           else
             # Output an error message if curl command fails
-            echo "Error: Failed to fetch HTML content for $channel_name"
+            echo "Error: Failed to fetch HTML content for $channel_name_no_spaces"
           fi
         done <<< "$channel_info"
 
