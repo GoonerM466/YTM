@@ -64,8 +64,8 @@ jobs:
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
 
-                # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url" >> VOD_to_fetch.txt
+                # Append the information to the file with quotes around variables
+                echo "\"$channel_name\", \"$group\", \"$video_url\", \"$image_url\"" >> VOD_to_fetch.txt
 
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> processed_video_ids.txt
