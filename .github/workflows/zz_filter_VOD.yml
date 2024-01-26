@@ -32,10 +32,10 @@ jobs:
           fi
           # Introduce a 2-second delay
           sleep 2
-        done < ./programs/VOD_to_fetch.txt
+        done < VOD_to_fetch.txt
 
         # Overwrite the original file with the updated entries
-        mv "$tmpfile" ./programs/VOD_to_fetch.txt
+        mv "$tmpfile" VOD_to_fetch.txt
 
     - name: Commit and push changes
       run: |
