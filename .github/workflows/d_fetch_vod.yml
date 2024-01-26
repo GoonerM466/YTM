@@ -18,6 +18,11 @@ jobs:
         sudo apt-get install -y python3-pip
         pip3 install yt-dlp
 
+    - name: Set Git Config
+      run: |
+        git config user.email "you@example.com"
+        git config user.name "Your Name"
+
     - name: Extract and Fetch VOD
       run: |
         # Extracting channel information from the text file
