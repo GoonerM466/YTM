@@ -1,38 +1,3 @@
-
-beinsportshaber, sports, https://www.youtube.com/@beinsportsturkiye/live
-AFCAsianCup, sports, https://www.youtube.com/@AFCAsianCup/live
-talkSPORT, sports, https://www.youtube.com/@talkSPORT/live
-EERIEISSSS, entertainment, https://www.youtube.com/@EERIEISSSS/live
-Jimmy_Broadbent, gaming, https://www.youtube.com/@Jimmy_Broadbent/live
-deadeyedelboy, gaming, https://www.youtube.com/@deadeyedelboy/live
-NBCNews, news, https://www.youtube.com/@NBCNews/live
-SkyNews, news, https://www.youtube.com/@SkyNews/live
-ABCNews, news, https://www.youtube.com/@ABCNews/live
-HitsRadio, music, https://www.youtube.com/@HitsRadio/live
-classicmusic-top1, music, https://www.youtube.com/@classicmusic-top1/live
-FobosPlanet, science, https://www.youtube.com/@FobosPlanet/live
-DPWorldTour, sports, https://www.youtube.com/@DPWorldTour/live
-GBNews2, news, https://www.youtube.com/@GBNewsOnline/live
-Jazz Cafe Ambience, music, https://youtube.com/@JazzCafeAmbience/live
-Xdeep Mix, music, https://www.youtube.com/channel/UC_IleaoZ0fgSbDrnWoFdTDA/live
-Music Brokers, music, https://www.youtube.com/channel/UCyKs4L4EULCfySbTybA9bAg/live
-Nat Geo WILD, documentary, https://youtube.com/@NatGeoWILD/live
-4K Ocean World, scenic, https://youtube.com/@4KOceanWorld/live
-Cold Case Detective, documentary, https://youtube.com/@ColdCaseDetective/live
-Glen Cooley, gaming, https://www.youtube.com/@glencooley66/live
-Tidgney, gaming, https://www.youtube.com/@tidgney/live
-Magic Club, music, https://www.youtube.com/@MagicClub686/live
-Live Music Radio, music, https://www.youtube.com/@LiveMusicRadio/live
-NSports, sports, https://www.youtube.com/@NSPORTS_OFICIAL/live
-The Why Files, documentary, https://www.youtube.com/@TheWhyFiles/live
-National Geographic, documentary, https://www.youtube.com/@NatGeo/live
-Factnomenal, documentary, https://youtube.com/@Factnomenal/live
-Hubble, documentary, https://youtube.com/@Hubble/live
-Space Documentary, documentary, https://www.youtube.com/@Space2Documentary/live
-World Mega Machines, documentary, https://youtube.com/@WorldMegaMachines/live
-Intelligent Technology, documentary, https://youtube.com/@IntelligentTechnology/live
-BigfootChronicles1967, documentary, https://youtube.com/@BigfootChronicles1967/live
-Dream MUsica, scenic, https://www.youtube.com/@juggalouno420/live
 beinsportshaber, sports, https://www.youtube.com/@beinsportsturkiye/live
 AFCAsianCup, sports, https://www.youtube.com/@AFCAsianCup/live
 talkSPORT, sports, https://www.youtube.com/@talkSPORT/live
