@@ -26,7 +26,7 @@ def search_youtube_and_get_channel_url(search_phrase, max_results=1):
         return None
 
 def process_input_file(input_filename):
-    output_filename = "/program/alt_urls.txt"  # Change the output file path
+    output_filename = "./program/alt_urls.txt"  # Change the output file path
 
     with open(input_filename, 'r') as file:
         lines = file.readlines()
