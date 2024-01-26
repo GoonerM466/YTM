@@ -27,16 +27,21 @@ jobs:
         echo "Extracting channel information..."
         while IFS=, read -r channel_name group channel_url; do
           echo "Processing $channel_name from $group group with URL $channel_url/streams"
-         video_ids=$(yt-dlp "$channel_url/streams" --get-id --datebefore "$(date -u +"%Y%m%d")" --max-downloads 3 --skip-download --skip-unavailable-fragments)
+          video_ids=$(yt-dlp "$channel_url/streams" --get-id --datebefore "$(date -u +"%Y%m%d")" --max-downloads 3 --skip-download --skip-unavailable-fragments 2>/dev/null)
+          
+          IFS=',' read -ra video_ids_array <<< "$video_ids"
+          for video_id in "${video_ids_array[@]}"; do
+            # Check if the video is live or scheduled
+            is_live=$(yt-dlp "https://www.youtube.com/watch?v=$video_id" --get-duration --quiet 2>/dev/null | grep -i "live" || true)
 
-          if [ -n "$video_ids" ]; then
-            echo "Video IDs for $channel_name: $video_ids"
-            touch VOD_to_fetch.txt
-            echo "$video_ids, $group, $channel_url" >> VOD_to_fetch.txt
-            echo "Added entry to VOD_to_fetch.txt"
-          else
-            echo "No videos found for $channel_name"
-          fi
+            if [ -z "$is_live" ]; then
+              echo "Video ID $video_id is not live. Adding to VOD_to_fetch.txt"
+              touch VOD_to_fetch.txt
+              echo "$video_id, $group, $channel_url" >> VOD_to_fetch.txt
+            else
+              echo "Skipping live or scheduled video: $video_id"
+            fi
+          done
         done < current_channels.txt
 
     - name: Display VOD_to_fetch.txt content
