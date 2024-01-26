@@ -51,7 +51,7 @@ jobs:
               break  # Break out of the loop if a URL is found
             else
               echo "Error extracting video URL. Retrying..."
-              # For the second attempt, remove "/streams" from the URL
+              # For the second attempt, retry with the modified URL without "/live" or "/streams"
               modified_url="${live_url/live/}"
             fi
           done
