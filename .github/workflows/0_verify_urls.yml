@@ -1,0 +1,56 @@
+name: B-Fetch URLS
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Find Live Channels"
+    types:
+      - completed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: config
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+
+    - name: Install yt-dlp
+      run: |
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        chmod a+rx /usr/local/bin/yt-dlp
+        pip install yt-dlp
+
+    - name: Delay for 10 seconds
+      run: sleep 10
+
+    - name: Fetch latest changes
+      run: git fetch origin main
+
+    - name: Rebase changes
+      run: git pull --rebase origin main
+
+    - name: Set git pull strategy to rebase
+      run: git config pull.rebase true
+
+    - name: Run Fetch_urls Script
+      run: python ./scripts/fetch_videoID.py
+
+    - name: Print workspace
+      run: ls -la
+      
+    - name: Check for changes
+      run: |
+        if [[ -n "$(git status --porcelain)" ]]; then
+          git add -A
+          ls -la
+          git commit -m "Updated"
+          git pull origin main
+          git push origin main
+        else
+          echo "No changes found. Skipping commit and push."
+        fi
