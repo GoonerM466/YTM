@@ -1,9 +1,7 @@
 name: Extract and Format M3U8 URL Workflow
 
 on:
-#  push:
- #   branches:
-  #    - main
+  workflow_dispatch:
 
 jobs:
   build:
