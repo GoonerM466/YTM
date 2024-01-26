@@ -23,6 +23,9 @@ jobs:
         touch VOD_to_fetch.txt
         > VOD_to_fetch.txt
 
+        touch processed_video_ids.txt
+        > processed_video_ids.txt
+
     - name: Extract and Fetch VOD
       run: |
         # Extracting channel information from the text file
@@ -51,8 +54,8 @@ jobs:
 
             # Loop through each video ID
             for video_id in $video_ids; do
-              # Check if video_id is not empty
-              if [ -n "$video_id" ]; then
+              # Check if video_id is not empty and has not been processed before
+              if [ -n "$video_id" ] && ! grep -q "$video_id" processed_video_ids.txt; then
                 # Create the YouTube video URL
                 video_url="https://youtube.com/watch?v=$video_id"
 
@@ -64,9 +67,12 @@ jobs:
 
                 # Append the information to the file
                 echo "$channel_url, $group, $video_url" >> VOD_to_fetch.txt
+
+                # Add the video_id to the processed_video_ids.txt file
+                echo "$video_id" >> processed_video_ids.txt
               else
-                # Output a message if video_id is empty
-                echo "No valid video found for $channel_name"
+                # Output a message if video_id is empty or has been processed before
+                echo "No valid/uniquely processed video found for $channel_name"
               fi
             done
           else
