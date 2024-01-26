@@ -49,8 +49,8 @@ jobs:
 
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
-            # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
-            video_ids=$(echo "$html_content" | grep -oP '(?<=videoId":")[^"]+' | head -n 3)
+            # Extracting up to 5 video IDs from the HTML content
+            video_ids=$(echo "$html_content" | grep -oP '"url":"/watch\?v=[^"]+' | awk -F ':"/watch?v=' '{ print $2 }' | head -n 5)
 
             # Loop through each video ID
             for video_id in $video_ids; do
