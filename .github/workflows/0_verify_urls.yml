@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "Find Live Channels"
+      - "---New Channel Scrape---"
     types:
       - completed
 
