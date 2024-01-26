@@ -14,8 +14,7 @@ jobs:
 
     - name: Install yt-dlp
       run: |
-        # Download the latest version of yt-dlp
-        curl -L $(curl -s https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest | grep "browser_download_url.*yt-dlp" | cut -d '"' -f 4) -o /usr/local/bin/yt-dlp
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
 
     - name: Read channel information from VOD_to_fetch.txt
