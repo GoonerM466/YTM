@@ -79,7 +79,7 @@ def process_input_file(input_filename):
 
 if __name__ == "__main__":
     # Specify the path for the input file
-    input_file_path = ".current_channels.txt"  # Change to the actual path
+    input_file_path = "current_channels.txt"  # Change to the actual path
 
     # Process the specified input file
     process_input_file(input_file_path)
