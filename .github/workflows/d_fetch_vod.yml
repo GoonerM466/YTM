@@ -28,8 +28,7 @@ jobs:
         echo "Fetching channel information..."
         while IFS=, read -r channel_name group channel_url; do
           echo "Processing $channel_name from $group group with URL $channel_url/streams"
-         video_info=$(yt-dlp -j "$channel_url/streams" --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --max-downloads 3 --skip-download --skip-unavailable-fragments --skip-playlist --verbose)
-
+         video_info=$(yt-dlp -j "$channel_url/streams" --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --skip-download --skip-unavailable-fragments --skip-playlist --format "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best")
           
           echo "$video_info"  # Display video info for troubleshooting
           
