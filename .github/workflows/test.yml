@@ -10,26 +10,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: config
+
+    - name: Configure Git
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
+
     - name: Install yt-dlp
       run: |
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
 
-    - name: Extract video ID from test.txt
+    - name: Extract VideoID and Get M3U8
       run: |
-        URL=$(cat test.txt)
-        VIDEO_ID=$(echo $URL | awk -F 'v=' '{print $2}' | awk -F '&' '{print $1}')
-        echo "Extracted Video ID: $VIDEO_ID"
+        # Extract VideoID from test.txt
+        VIDEO_ID=$(grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+' test.txt)
 
-    - name: Download M3U8 using yt-dlp
-      run: |
-        VIDEO_URL="https://www.youtube.com/watch?v=$VIDEO_ID"
-        yt-dlp -o "video_$VIDEO_ID.m3u8" "$VIDEO_URL"
+        # Clear existing content of test.m3u8
+        echo "" > test.m3u8
 
-    - name: Write M3U8 link to test.m3u8
+        # Use yt-dlp to get M3U8 link and write to test.m3u8
+        yt-dlp -o test.m3u8 --format best --get-url "https://www.youtube.com/watch?v=$VIDEO_ID"
+
+    - name: Commit and Push Changes
       run: |
-        echo "$VIDEO_URL" > test.m3u8
+        git add test.m3u8
+        git commit -m "Update M3U8 file"
+        git push
