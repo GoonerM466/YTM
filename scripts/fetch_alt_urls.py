@@ -72,7 +72,7 @@ def process_input_file(input_filename):
         else:
             updated_lines.append(line)
 
-    with open(output_filename, 'a') as file:  # Change to 'a' for append mode
+    with open(output_filename, 'w') as file:  # Change to 'w' for write mode
         file.writelines(updated_lines)
 
     print(f"Updated information written to {output_filename}")
