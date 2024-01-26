@@ -27,7 +27,7 @@ jobs:
         VIDEO_ID=$(grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+' test.txt)
 
         # Use yt-dlp to get M3U8 URL and format output
-        M3U8_URL=$(yt-dlp --format 312+251 --get-url --no-playlist "https://www.youtube.com/watch?v=$VIDEO_ID")
+        M3U8_URL=$(yt-dlp --format 251 --get-url --no-playlist "https://www.youtube.com/watch?v=$VIDEO_ID")
 
         # Format output and write to test.m3u8 using echo
         echo "#EXTINF:-1 tvg-id=\"TEST\" tvg-name=\"TEST\" tvg-logo=\"\" group-title=\" TEST\",TEST" > test.m3u8
