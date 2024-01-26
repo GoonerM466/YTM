@@ -8,6 +8,14 @@ on:
 jobs:
   extract-m3u8:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        search_term:
+          - beinsportshaber
+          - other_search_term
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -26,7 +34,7 @@ jobs:
     - name: Read search term from file
       id: read-search-term
       run: |
-        content=$(cat ./program/alt_urls.txt)
+        content=$(cat ./program/alt_url.txt)
         search_term=$(echo "$content" | cut -d ',' -f 1 | awk -F', ' '{print $1}')
         echo "::set-output name=search_term::$search_term"
 
@@ -35,7 +43,7 @@ jobs:
         echo "Extracted Search Term: ${{ steps.read-search-term.outputs.search_term }}"
         echo "SEARCH_TERM=${{ steps.read-search-term.outputs.search_term }}" >> $GITHUB_ENV
 
-    - name: Extract top 10 video URLs
+    - name: Extract top 3 video URLs
       id: extract-urls
       run: |
         search_term=${{ steps.read-search-term.outputs.search_term }}
@@ -43,10 +51,13 @@ jobs:
         mkdir -p ./vod/$search_term
         # Touch the file to ensure it exists
         touch ./vod/$search_term/vod_videos.m3u8
-        for i in {1..10}; do
-          m3u8_url=$(yt-dlp "ytsearch:${search_term}" --get-url --skip-download)
-          echo $m3u8_url >> ./vod/$search_term/vod_videos.m3u8
-          sleep 2
+        start_time=$(date +%s)
+        while [ $(( $(date +%s) - $start_time )) -lt 30 ]; do
+          timeout 5 yt-dlp "ytsearch:${search_term}" --get-url --skip-download
+          if [ $? -eq 0 ]; then
+            echo "Video URL found for ${search_term}"
+            break
+          fi
         done
 
     - name: Create M3U8 file
