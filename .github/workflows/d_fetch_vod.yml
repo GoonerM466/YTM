@@ -9,12 +9,6 @@ jobs:
   extract-m3u8:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        search_term:
-          - beinsportshaber
-          - other_search_term
 
     steps:
     - name: Checkout repository
@@ -80,6 +74,11 @@ jobs:
         done < ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
 
         mv ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos_temp.m3u8 ./vod/${{ steps.read-search-term.outputs.search_term }}/vod_videos.m3u8
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
 
     - name: Commit changes
       run: |
