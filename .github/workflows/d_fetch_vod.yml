@@ -31,7 +31,9 @@ jobs:
         echo "::set-output name=search_term::$search_term"
 
     - name: Print extracted search term
-      run: echo "Extracted Search Term: ${{ steps.read-search-term.outputs.search_term }}"
+      run: |
+        echo "Extracted Search Term: ${{ steps.read-search-term.outputs.search_term }}"
+        echo "SEARCH_TERM=${{ steps.read-search-term.outputs.search_term }}" >> $GITHUB_ENV
 
     - name: Extract top 10 video URLs
       id: extract-urls
