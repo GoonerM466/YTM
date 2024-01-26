@@ -1,4 +1,4 @@
-name: D-Fetch_VOD
+name: Extract and Create M3U8 Files
 
 on:
   push:
