@@ -1,9 +1,7 @@
 name: D-Fetch VOD
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   extract-m3u8:
