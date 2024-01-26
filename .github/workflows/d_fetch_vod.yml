@@ -38,6 +38,8 @@ jobs:
           group=$(echo $line | awk '{ print $2 }')
           channel_url=$(echo $line | awk '{ print $3 }')
 
+          # Replace spaces in channel_name with underscores for better handling
+          channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
 
           # Fetching HTML content of the streams page
           html_content=$(curl -s "$channel_url")
@@ -51,10 +53,7 @@ jobs:
             for video_id in $video_ids; do
               # Check if video_id is not empty and has not been processed before
               if [ -n "$video_id" ] && ! grep -q "$video_id" processed_video_ids.txt; then
-                # Find the second instance of "Streamed" above the video ID
-                streamed_info=$(echo "$html_content" | awk -v video_id="$video_id" '/Streamed.*'"$video_id"'/{getline; print}' | tr -d '"')
-
-                # Create the YouTube video URL, image URL, and streamed_info
+                # Create the YouTube video URL and image URL
                 video_url="https://www.youtube.com/watch?v=$video_id"
                 image_url="https://i.ytimg.com/vi/$video_id/hqdefault.jpg"
 
@@ -64,10 +63,9 @@ jobs:
                 echo "Video ID: $video_id"
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
-                echo "Streamed Info: $streamed_info"
 
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url, $streamed_info" >> VOD_to_fetch.txt
+                echo "$channel_name, $group, $video_url, $image_url" >> VOD_to_fetch.txt
 
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> processed_video_ids.txt
