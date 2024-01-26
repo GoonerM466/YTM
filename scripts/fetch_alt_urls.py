@@ -42,7 +42,7 @@ def get_live_video_id(channel_url):
         return None
 
 def process_input_file(input_filename):
-    output_filename = "/program/alt_urls.txt"  # Change the output file path
+    output_filename = "./program/alt_urls.txt"  # Change the output file path
 
     with open(input_filename, 'r') as file:
         lines = file.readlines()
@@ -80,7 +80,7 @@ def process_input_file(input_filename):
 
 if __name__ == "__main__":
     # Specify the path for the input file
-    input_file_path = "/path/to/your/source/files/current_channels.txt"  # Change to the actual path
+    input_file_path = "current_channels.txt"  # Change to the actual path
 
     # Process the specified input file
     print(f"Processing input file: {input_file_path}")
