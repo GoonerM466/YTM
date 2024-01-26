@@ -43,16 +43,14 @@ jobs:
     - name: Print workspace
       run: ls -la
       
-    - name: git add
+    - name: Check for changes
       run: |
-        git add -A
-        ls -la
-
-    - name: Commit changes
-      run: git commit -m "Updated"
-
-    - name: Pull changes from the remote repository
-      run: git pull origin main
-
-    - name: Push changes to the remote repository
-      run: git push origin main
+        if [[ -n "$(git status --porcelain)" ]]; then
+          git add -A
+          ls -la
+          git commit -m "Updated"
+          git pull origin main
+          git push origin main
+        else
+          echo "No changes found. Skipping commit and push."
+        fi
