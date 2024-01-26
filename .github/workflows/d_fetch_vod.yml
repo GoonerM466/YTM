@@ -22,17 +22,30 @@ jobs:
         git fetch origin main
         git pull origin main --no-edit
 
-    - name: Run Fetch VOD VideoID script
-      working-directory: ./scripts
+    - name: Extract channel information
       run: |
-        python fetch_vod_video_id.py
+        echo "Extracting channel information..."
+        while IFS=, read -r channel_name group channel_url; do
+          echo "Processing $channel_name from $group group with URL $channel_url/streams"
+          video_ids=$(yt-dlp "$channel_url/streams" --quiet --get-id --datebefore "$(date -u +"%Y-%m-%dT%H:%M:%S")" --max-downloads 3 --skip-download)
+          
+          if [ -n "$video_ids" ]; then
+            echo "Video IDs for $channel_name: $video_ids"
+            touch VOD_to_fetch.txt
+            echo "$video_ids, $group, $channel_url" >> VOD_to_fetch.txt
+            echo "Added entry to VOD_to_fetch.txt"
+          else
+            echo "No videos found for $channel_name"
+          fi
+        done < current_channels.txt
 
-    - name: Commit and push changes
+    - name: Display VOD_to_fetch.txt content
+      run: cat VOD_to_fetch.txt
+
+    - name: Commit changes
       run: |
-        cd ./scripts
-        echo "Committing changes..."
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        git add -A
-        git diff --cached --quiet || git commit -m "Updated VOD VideoID files"
-        git push origin main
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add VOD_to_fetch.txt
+        git commit -m "Update VOD_to_fetch.txt"
+        git push
