@@ -27,8 +27,9 @@ jobs:
 
     - name: Download M3U8 using yt-dlp
       run: |
-        yt-dlp -o "video_$VIDEO_ID.m3u8" "https://www.youtube.com/watch?v=$VIDEO_ID"
+        VIDEO_URL="https://www.youtube.com/watch?v=$VIDEO_ID"
+        yt-dlp -o "video_$VIDEO_ID.m3u8" "$VIDEO_URL"
 
     - name: Write M3U8 link to test.m3u8
       run: |
-        echo "https://www.youtube.com/watch?v=$VIDEO_ID" > test.m3u8
+        echo "$VIDEO_URL" > test.m3u8
