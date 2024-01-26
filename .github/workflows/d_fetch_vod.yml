@@ -41,45 +41,48 @@ jobs:
           # Truncate the file before writing
           : > "$m3u8_file"
 
-          start_time=$(date +%s)
-          for i in {1..2}; do
+          failed_attempts=0
+          for i in {1..3}; do
             echo "Attempting to extract video URL (Attempt $i)..."
-            m3u8_url=$(timeout 30 yt-dlp "$modified_url" --get-url --skip-download)
-            if [ $? -eq 0 ] && [ -n "$m3u8_url" ]; then
+            m3u8_url=$(yt-dlp "$modified_url" --get-url --skip-download)
+            if [ $? -eq 0 ]; then
               echo "Video URL found: $m3u8_url"
               echo $m3u8_url >> "$m3u8_file"
-              break  # Break out of the loop if a URL is found
+              break
             else
-              echo "Error extracting video URL. Retrying..."
-              # For the second attempt, retry with the modified URL without "/live" or "/streams"
-              modified_url="${live_url/live/}"
+              echo "Error extracting video URL. Attempt $i failed."
+              failed_attempts=$((failed_attempts + 1))
+              if [ $failed_attempts -eq 1 ]; then
+                echo "Trying fallback URL without /live or /streams..."
+                modified_url="${live_url/live/}"
+              elif [ $failed_attempts -eq 2 ]; then
+                echo "Fallback attempt failed. Moving to the next entry."
+                break
+              fi
             fi
           done
 
-          if [ ! -s "$m3u8_file" ]; then
-            echo "No video URL found. Moving on to the next channel."
-            continue
+          if [ $failed_attempts -lt 2 ]; then
+            echo "M3U8 content:"
+            cat "$m3u8_file"
+
+            echo "Creating M3U8 file..."
+            echo "#EXTM3U" > "./vod/$channel_name/vod_videos_temp.m3u8"
+            echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/vod_videos_temp.m3u8"
+            video_number=1
+            while read -r line; do
+              echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
+              echo "${line}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
+              ((video_number++))
+            done < "$m3u8_file"
+
+            mv "./vod/$channel_name/vod_videos_temp.m3u8" "$m3u8_file"
+
+            echo "Committing changes..."
+            git config --global user.email "you@example.com"
+            git config --global user.name "Your Name"
+            git add -A
+            git diff --cached --quiet || git commit -m "Updated M3U8 files"
+            git push origin main
           fi
-
-          echo "M3U8 content:"
-          cat "$m3u8_file"
-
-          echo "Creating M3U8 file..."
-          echo "#EXTM3U" > "./vod/$channel_name/vod_videos_temp.m3u8"
-          echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/vod_videos_temp.m3u8"
-          video_number=1
-          while read -r line; do
-            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
-            echo "${line}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
-            ((video_number++))
-          done < "$m3u8_file"
-
-          mv "./vod/$channel_name/vod_videos_temp.m3u8" "$m3u8_file"
-
-          echo "Committing changes..."
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          git add -A
-          git diff --cached --quiet || git commit -m "Updated M3U8 files"
-          git push origin main
         done < ./program/alt_urls.txt
