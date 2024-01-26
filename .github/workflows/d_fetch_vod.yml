@@ -28,6 +28,7 @@ jobs:
 
     - name: Extract and Fetch VOD
       run: |
+        set -x
         # Extracting channel information from the text file
         channel_info=$(awk -F ', ' '{ print $0 }' current_channels.txt)
 
