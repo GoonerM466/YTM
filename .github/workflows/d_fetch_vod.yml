@@ -25,22 +25,26 @@ jobs:
         git pull origin main --no-edit
         git rebase origin/main
 
-    - name: Read search terms from file
+    - name: Read live URLs from file
       run: |
-        IFS=',' read -ra search_terms <<< $(cat ./program/alt_urls.txt)
-        for term in "${search_terms[@]}"; do
-          echo "Processing search term: $term"
+        while read -r live_url; do
+          echo "Processing live URL: $live_url"
           
-          mkdir -p ./vod/$term
-          touch ./vod/$term/vod_videos.m3u8
+          # Extracting channel name from the live_url (assuming URL format is consistent)
+          channel_name=$(basename "$live_url" | cut -d'_' -f1)
+          
+          echo "Channel Name: $channel_name"
+
+          mkdir -p ./vod/$channel_name
+          touch ./vod/$channel_name/vod_videos.m3u8
 
           start_time=$(date +%s)
           for i in {1..3}; do
             echo "Attempting to extract video URL (Attempt $i)..."
-            m3u8_url=$(timeout 5 yt-dlp "ytsearch:${term}" --get-url --skip-download)
+            m3u8_url=$(timeout 5 yt-dlp "$live_url" --get-url --skip-download)
             if [ $? -eq 0 ]; then
               echo "Video URL found: $m3u8_url"
-              echo $m3u8_url >> ./vod/$term/vod_videos.m3u8
+              echo $m3u8_url >> ./vod/$channel_name/vod_videos.m3u8
             else
               echo "Error extracting video URL. Skipping to the next."
               break
@@ -48,19 +52,19 @@ jobs:
           done
 
           echo "M3U8 content:"
-          cat ./vod/$term/vod_videos.m3u8
+          cat ./vod/$channel_name/vod_videos.m3u8
 
           echo "Creating M3U8 file..."
-          echo "#EXTM3U" > ./vod/$term/vod_videos_temp.m3u8
-          echo "#EXT-X-VERSION:3" >> ./vod/$term/vod_videos_temp.m3u8
+          echo "#EXTM3U" > ./vod/$channel_name/vod_videos_temp.m3u8
+          echo "#EXT-X-VERSION:3" >> ./vod/$channel_name/vod_videos_temp.m3u8
           video_number=1
           while read -r line; do
-            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> ./vod/$term/vod_videos_temp.m3u8
-            echo "${line}" >> ./vod/$term/vod_videos_temp.m3u8
+            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> ./vod/$channel_name/vod_videos_temp.m3u8
+            echo "${line}" >> ./vod/$channel_name/vod_videos_temp.m3u8
             ((video_number++))
-          done < ./vod/$term/vod_videos.m3u8
+          done < ./vod/$channel_name/vod_videos.m3u8
 
-          mv ./vod/$term/vod_videos_temp.m3u8 ./vod/$term/vod_videos.m3u8
+          mv ./vod/$channel_name/vod_videos_temp.m3u8 ./vod/$channel_name/vod_videos.m3u8
 
           echo "Committing changes..."
           git config --global user.email "you@example.com"
@@ -68,4 +72,4 @@ jobs:
           git add -A
           git diff --cached --quiet || git commit -m "Updated M3U8 files"
           git push origin main
-        done
+        done < ./program/alt_urls.txt
