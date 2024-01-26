@@ -73,15 +73,6 @@ jobs:
       run: |
         sed -i 's/_/ /g' VOD_to_fetch.txt
 
-    - name: Add, Commit, and Push Changes
-      run: |
-        git add VOD_to_fetch.txt
-        git add processed_video_ids.txt
-        git commit -m "Update VOD_to_fetch.txt with latest videos"
-        git pull origin main
-        git merge -s ours origin/main
-        git push origin main
-
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -93,3 +84,7 @@ jobs:
     - name: Run Filter VOD Script
       run: |
         ./scripts/filter_VOD.py
+
+    - name: Check for Changes
+      run: |
+        git diff --exit-code || (git add VOD_to_fetch.txt && git add processed_video_ids.txt && git commit -m "Update VOD_to_fetch.txt with latest videos" && git pull origin main && git merge -s ours origin/main && git push origin main)
