@@ -48,12 +48,17 @@ jobs:
           
           while [ $attempts -lt 3 ]; do
             echo "Attempting to extract video URL (Attempt $((attempts + 1)))..."
-            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download || true)  # Ignore errors
+            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download --format "bestvideo[ext=m3u8]+bestaudio[ext=m4a]/best[ext=m3u8]/best" || true)  # Ignore errors
             
             if [ $? -eq 0 ]; then
-              echo "Video URL found: $m3u8_url"
-              echo "$m3u8_url" >> "$m3u8_file"
-              break
+              # Check if the URL is an M3U8 link
+              if [[ $m3u8_url == *".m3u8"* ]]; then
+                echo "M3U8 Video URL found: $m3u8_url"
+                echo "$m3u8_url" >> "$m3u8_file"
+                break
+              else
+                echo "Found non-M3U8 link. Skipping..."
+              fi
             else
               if [[ "$m3u8_url" == *"broken pipe"* ]]; then
                 echo "Encountered 'broken pipe' response. Retrying..."
