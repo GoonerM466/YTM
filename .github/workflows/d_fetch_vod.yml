@@ -27,7 +27,9 @@ jobs:
         echo "Extracting channel information..."
         while IFS=, read -r channel_name group channel_url; do
           echo "Processing $channel_name from $group group with URL $channel_url/streams"
-          video_ids=$(yt-dlp "$channel_url/streams" --get-id --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --max-downloads 3 --skip-download --skip-unavailable-fragments 2>/dev/null)
+          video_ids=$(yt-dlp "$channel_url/streams" --get-id --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --max-downloads 3 --skip-download --skip-unavailable-fragments --verbose 2>/dev/null)
+          
+          echo "$video_ids"  # Display video IDs for troubleshooting
           
           IFS=',' read -ra video_ids_array <<< "$video_ids"
           for video_id in "${video_ids_array[@]}"; do
