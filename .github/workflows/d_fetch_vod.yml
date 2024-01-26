@@ -1,9 +1,7 @@
 name: Extract and Fetch VOD
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   extract_and_fetch:
