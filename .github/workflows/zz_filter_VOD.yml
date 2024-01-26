@@ -1,6 +1,8 @@
 name: zz-Filter VOD
 
 on:
+  schedule:
+    - cron: '01 0/2 * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,6 +18,11 @@ jobs:
         curl -L $(curl -s https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest | grep "browser_download_url.*yt-dlp" | cut -d '"' -f 4) -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
 
+    - name: Install jq
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y jq
+
     - name: Read channel information from VOD_to_fetch.txt
       run: |
         # Create a temporary file to store updated entries
@@ -23,7 +30,8 @@ jobs:
 
         while IFS=, read -r channel_name group video_url image_url; do
           # Check if the video is live
-          if yt-dlp --print is_live "$video_url" | grep -q "True"; then
+          is_live=$(yt-dlp --print-json "$video_url" | jq -r '.is_live')
+          if [ "$is_live" = "true" ]; then
             echo "$video_url is live - discarding!"
           else
             echo "$video_url is not live - saving!"
@@ -32,15 +40,15 @@ jobs:
           fi
           # Introduce a 2-second delay
           sleep 2
-        done < VOD_to_fetch.txt
+        done < ./program/VOD_to_fetch.txt
 
         # Overwrite the original file with the updated entries
-        mv "$tmpfile" VOD_to_fetch.txt
+        mv "$tmpfile" ./program/VOD_to_fetch.txt
 
     - name: Commit and push changes
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         git add -A
-        git diff --cached --quiet || git commit -m "Update VOD list"
+        git diff --cached --quiet || git commit -m "Filtered VOD List"
         git push origin main
