@@ -82,6 +82,14 @@ jobs:
         git merge -s ours origin/main
         git push origin main
 
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10  # specify your desired Python version
+
+    - name: Set execute permissions
+      run: chmod +x ./scripts/filter_VOD.py
+
     - name: Run Filter VOD Script
       run: |
         ./scripts/filter_VOD.py
