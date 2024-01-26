@@ -12,10 +12,13 @@ jobs:
 
     - name: Install yt-dlp and jq
       run: |
+        # Install yt-dlp
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
+
+        # Install jq
         sudo apt-get update
-        sudo apt-get install jq
+        sudo apt-get install jq -y
 
     - name: Read channel information from VOD_to_fetch.txt
       run: |
@@ -23,8 +26,8 @@ jobs:
         tmpfile=$(mktemp)
 
         while IFS=, read -r channel_name group video_url image_url; do
-          # Check if the video is live using yt-dlp JSON output
-          video_info=$(yt-dlp --print-json "$video_url")
+          # Check if the video is live using yt-dlp JSON output without downloading
+          video_info=$(yt-dlp --print-json --skip-download "$video_url")
           live_status=$(echo "$video_info" | jq -r .is_live)
           
           if [ "$live_status" == "true" ]; then
