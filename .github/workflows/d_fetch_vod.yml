@@ -80,6 +80,9 @@ jobs:
       run: |
         sed -i 's/_/ /g' VOD_to_fetch.txt
 
+    -name: Filter VOD
+      runn: | 
+
     - name: Add, Commit, and Push Changes
       run: |
         git add VOD_to_fetch.txt
