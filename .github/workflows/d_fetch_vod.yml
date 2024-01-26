@@ -32,14 +32,19 @@ jobs:
           
           echo "$video_info"  # Display video info for troubleshooting
           
-          video_ids=$(echo "$video_info" | jq -r '.entries[] | select(.is_live == false and .start_time == null) | .id')
-
-          IFS=',' read -ra video_ids_array <<< "$video_ids"
-          for video_id in "${video_ids_array[@]}"; do
-            echo "Adding Video ID $video_id to VOD_to_fetch.txt"
-            touch VOD_to_fetch.txt
-            echo "$video_id, $group, $channel_url" >> VOD_to_fetch.txt
-          done
+          # Check if the JSON data is not null
+          if [ "$video_info" != "null" ]; then
+            video_ids=$(echo "$video_info" | jq -r '.entries[] | select(.is_live == false and .start_time == null) | .id')
+            
+            IFS=',' read -ra video_ids_array <<< "$video_ids"
+            for video_id in "${video_ids_array[@]}"; do
+              echo "Adding Video ID $video_id to VOD_to_fetch.txt"
+              touch VOD_to_fetch.txt
+              echo "$video_id, $group, $channel_url" >> VOD_to_fetch.txt
+            done
+          else
+            echo "Error: No video information available for $channel_name."
+          fi
         done < current_channels.txt
 
     - name: Display VOD_to_fetch.txt content
