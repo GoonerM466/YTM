@@ -38,29 +38,23 @@ jobs:
           group=$(echo $line | awk '{ print $2 }')
           channel_url=$(echo $line | awk '{ print $3 }')
 
-          # Replace spaces in channel_name with underscores for better handling
-          channel_name_no_spaces=$(echo $channel_name | tr ' ' '_')
 
           # Fetching HTML content of the streams page
           html_content=$(curl -s "$channel_url")
 
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
-            # Extracting video IDs and their descriptions from the HTML content (modify this based on the actual structure of the page)
-            video_info=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 3 | while read -r video_id; do
-              video_description=$(echo "$html_content" | grep -oP -m 1 '(?<=\"{"accessibilityData":{"label":"":\")[^\"]+' | tac | grep -oP -m 1 '.*' | head -n 1)
-              echo "$video_id,$video_description"
-            done)
+            # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
+            video_ids=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 3)
 
-            # Loop through each video info
-            while read -r video_line; do
-              # Extracting video ID and description
-              video_id=$(echo "$video_line" | cut -d ',' -f 1)
-              video_description=$(echo "$video_line" | cut -d ',' -f 2)
-
+            # Loop through each video ID
+            for video_id in $video_ids; do
               # Check if video_id is not empty and has not been processed before
               if [ -n "$video_id" ] && ! grep -q "$video_id" processed_video_ids.txt; then
-                # Create the YouTube video URL, image URL, and output information
+                # Find the second instance of "Streamed" above the video ID
+                streamed_info=$(echo "$html_content" | awk -v video_id="$video_id" '/Streamed.*'"$video_id"'/{getline; print}' | tr -d '"')
+
+                # Create the YouTube video URL, image URL, and streamed_info
                 video_url="https://www.youtube.com/watch?v=$video_id"
                 image_url="https://i.ytimg.com/vi/$video_id/hqdefault.jpg"
 
@@ -70,10 +64,10 @@ jobs:
                 echo "Video ID: $video_id"
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
-                echo "Video Description: $video_description"
+                echo "Streamed Info: $streamed_info"
 
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url, $video_description" >> VOD_to_fetch.txt
+                echo "$channel_name, $group, $video_url, $image_url, $streamed_info" >> VOD_to_fetch.txt
 
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> processed_video_ids.txt
@@ -81,7 +75,7 @@ jobs:
                 # Output a message if video_id is empty or has been processed before
                 echo "No valid/uniquely processed video found for $channel_name"
               fi
-            done <<< "$video_info"
+            done
           else
             # Output an error message if curl command fails
             echo "Error: Failed to fetch HTML content for $channel_name"
