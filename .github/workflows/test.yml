@@ -1,4 +1,4 @@
-name: Extract M3U8 Workflow
+name: Extract M3U8 Playlist Workflow
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
 
-    - name: Extract VideoID and Get M3U8 URL
+    - name: Extract VideoID and Get M3U8 Playlist
       run: |
         # Extract VideoID from test.txt
         VIDEO_ID=$(grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+' test.txt)
@@ -29,11 +29,11 @@ jobs:
         # Clear existing content of test.m3u8
         echo "" > test.m3u8
 
-        # Use yt-dlp to get video info and extract M3U8 URL
-        yt-dlp -J "https://www.youtube.com/watch?v=$VIDEO_ID" | grep -oP '"url": "\K[^"]+' > test.m3u8
-
+        # Use yt-dlp to get the entire M3U8 playlist and write to test.m3u8
+        yt-dlp -o test.m3u8 --format best --get-url "https://www.youtube.com/watch?v=$VIDEO_ID"
+        
     - name: Commit and Push Changes
       run: |
         git add test.m3u8
-        git commit -m "Update M3U8 file"
+        git commit -m "Update M3U8 playlist file"
         git push
