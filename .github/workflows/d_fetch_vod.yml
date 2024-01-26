@@ -81,8 +81,10 @@ jobs:
     - name: Set execute permissions
       run: chmod +x ./scripts/filter_VOD.py
 
-    - name: Install yt-dlp
-      run: pip install yt-dlp
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install yt-dlp
 
     - name: Run Filter VOD Script
       run: |
