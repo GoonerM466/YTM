@@ -1,4 +1,4 @@
-name: 2-Generate m3u
+name: D-Fetch VOD
 
 on:
   workflow_run:
