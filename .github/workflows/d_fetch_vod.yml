@@ -27,24 +27,27 @@ jobs:
 
     - name: Read live URLs from file
       run: |
-        while read -r live_url; do
+        while IFS=, read -r channel_name group live_url; do
           echo "Processing live URL: $live_url"
           
-          # Extracting channel name from the live_url (assuming URL format is consistent)
-          channel_name=$(basename "$live_url" | cut -d'_' -f1)
+          # Modify the live_url as needed
+          modified_url="${live_url/live/streams}"
           
-          echo "Channel Name: $channel_name"
+          echo "Modified URL: $modified_url"
 
           mkdir -p ./vod/$channel_name
-          touch ./vod/$channel_name/vod_videos.m3u8
+          m3u8_file="./vod/$channel_name/vod_videos.m3u8"
+
+          # Truncate the file before writing
+          : > "$m3u8_file"
 
           start_time=$(date +%s)
           for i in {1..3}; do
             echo "Attempting to extract video URL (Attempt $i)..."
-            m3u8_url=$(timeout 5 yt-dlp "$live_url" --get-url --skip-download)
+            m3u8_url=$(timeout 5 yt-dlp "$modified_url" --get-url --skip-download)
             if [ $? -eq 0 ]; then
               echo "Video URL found: $m3u8_url"
-              echo $m3u8_url >> ./vod/$channel_name/vod_videos.m3u8
+              echo $m3u8_url >> "$m3u8_file"
             else
               echo "Error extracting video URL. Skipping to the next."
               break
@@ -52,19 +55,19 @@ jobs:
           done
 
           echo "M3U8 content:"
-          cat ./vod/$channel_name/vod_videos.m3u8
+          cat "$m3u8_file"
 
           echo "Creating M3U8 file..."
-          echo "#EXTM3U" > ./vod/$channel_name/vod_videos_temp.m3u8
-          echo "#EXT-X-VERSION:3" >> ./vod/$channel_name/vod_videos_temp.m3u8
+          echo "#EXTM3U" > "./vod/$channel_name/vod_videos_temp.m3u8"
+          echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/vod_videos_temp.m3u8"
           video_number=1
           while read -r line; do
-            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> ./vod/$channel_name/vod_videos_temp.m3u8
-            echo "${line}" >> ./vod/$channel_name/vod_videos_temp.m3u8
+            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
+            echo "${line}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
             ((video_number++))
-          done < ./vod/$channel_name/vod_videos.m3u8
+          done < "$m3u8_file"
 
-          mv ./vod/$channel_name/vod_videos_temp.m3u8 ./vod/$channel_name/vod_videos.m3u8
+          mv "./vod/$channel_name/vod_videos_temp.m3u8" "$m3u8_file"
 
           echo "Committing changes..."
           git config --global user.email "you@example.com"
