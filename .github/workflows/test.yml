@@ -1,0 +1,35 @@
+name: Extract M3U8 Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  extract_m3u8:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ffmpeg
+        sudo apt-get install -y python3-pip
+        pip3 install --upgrade pip
+        pip3 install yt-dlp
+
+    - name: Extract URL from test.txt
+      run: |
+        URL=$(cat test.txt)
+        echo "Extracted URL: $URL"
+
+    - name: Download M3U8 using yt-dlp
+      run: |
+        yt-dlp -o video.m3u8 $URL
+
+    - name: Write M3U8 link to test.m3u
+      run: |
+        echo "$URL" > test.m3u
