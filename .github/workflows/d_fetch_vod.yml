@@ -43,32 +43,37 @@ jobs:
 
           start_time=$(date +%s)
           attempts=0
-          broken_pipe_count=0
           fallback_url_attempt=0
+          broken_pipe_count=0
           
           while [ $attempts -lt 3 ]; do
             echo "Attempting to extract video URL (Attempt $((attempts + 1)))..."
-            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download 2>/dev/null)
+            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download || true)  # Ignore errors
             
             if [ $? -eq 0 ]; then
               echo "Video URL found: $m3u8_url"
               echo $m3u8_url >> "$m3u8_file"
               break
-            elif [ $? -eq 32 ]; then
-              echo "Error: Broken pipe"
-              ((broken_pipe_count++))
-              if [ $broken_pipe_count -eq 2 ]; then
-                echo "Two broken pipe errors occurred. Moving on to the next entry."
-                break
-              fi
             else
-              echo "Error extracting video URL. Attempt $((attempts + 1)) failed."
-              break
+              if [[ "$m3u8_url" == *"broken pipe"* ]]; then
+                echo "Encountered 'broken pipe' response. Retrying..."
+                ((broken_pipe_count++))
+                if [ $broken_pipe_count -ge 2 ]; then
+                  echo "Received 'broken pipe' response twice. Moving on to the next entry."
+                  break
+                fi
+              else
+                echo "Error extracting video URL. Attempt $((attempts + 1)) failed."
+              fi
             fi
             
             ((attempts++))
             sleep 2  # Sleep for 2 seconds between attempts
           done
+
+          if [ $broken_pipe_count -ge 2 ]; then
+            continue  # Skip to the next entry in case of two 'broken pipe' responses
+          fi
 
           echo "M3U8 content:"
           cat "$m3u8_file"
@@ -84,11 +89,11 @@ jobs:
           done < "$m3u8_file"
 
           mv "./vod/$channel_name/vod_videos_temp.m3u8" "$m3u8_file"
-        done
 
-        echo "Committing changes..."
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        git add -A
-        git diff --cached --quiet || git commit -m "Updated M3U8 files"
-        git push origin main
+          echo "Committing changes..."
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git add -A
+          git diff --cached --quiet || git commit -m "Updated M3U8 files"
+          git push origin main
+        done < ./program/alt_urls.txt
