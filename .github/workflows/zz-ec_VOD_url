@@ -1,0 +1,50 @@
+name: Extract and Construct VOD URLs
+
+on:
+  workflow_dispatch:
+    inputs:
+      input_file:
+        description: 'Input file path (VOD_to_fetch.txt)'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+
+    - name: Install yt-dlp
+      run: |
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        chmod a+rx /usr/local/bin/yt-dlp
+
+    - name: Process VOD URLs
+      run: |
+        while IFS=, read -r channel_name group video_url image_url; do
+          # Extract VideoID from video_url
+          VIDEO_ID=$(echo "$video_url" | grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+')
+
+          # Use yt-dlp to get combined M3U8 URL for formats 312+234
+          M3U8_URL=$(yt-dlp --format 312+234 --get-url --no-playlist "$video_url")
+
+          # Create directory structure if not exists
+          mkdir -p "./VOD/$group/$channel_name/videos"
+
+          # Write individual M3U8 file
+          echo "#EXTM3U" > "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+          echo "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"mp4\",LANGUAGE=\"eng\",NAME=\"English\",AUTOSELECT=YES,DEFAULT=YES,URI=\"$M3U8_URL\"" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+          echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=50000000" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+          echo "$M3U8_URL" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+
+        done < "${{ github.event.inputs.input_file }}"
+
+    - name: Commit and Push Changes
+      run: |
+        git add ./VOD
+        git commit -m "Update VOD files"
+        git push
