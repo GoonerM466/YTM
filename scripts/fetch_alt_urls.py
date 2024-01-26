@@ -5,6 +5,7 @@ import time
 def search_youtube_and_get_channel_url(search_phrase, max_results=1):
     ydl = yt_dlp.YoutubeDL()
     try:
+        print(f"Searching for '{search_phrase}'...")
         search_results = ydl.extract_info(f"ytsearch{max_results}:{search_phrase}", download=False)
         entry = search_results.get('entries', [{}])[0]
 
@@ -14,6 +15,7 @@ def search_youtube_and_get_channel_url(search_phrase, max_results=1):
             return None
 
         channel_url = entry.get('channel_url', None)
+        print(f"Found channel URL for '{search_phrase}': {channel_url}")
         return channel_url
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
@@ -28,8 +30,10 @@ def search_youtube_and_get_channel_url(search_phrase, max_results=1):
 def get_live_video_id(channel_url):
     ydl = yt_dlp.YoutubeDL()
     try:
+        print(f"Getting live video ID for channel URL: {channel_url}...")
         channel_info = ydl.extract_info(channel_url, download=False)
         live_video_id = channel_info.get('url', '').split('=')[-1]
+        print(f"Found live video ID: {live_video_id}")
         return live_video_id
     except yt_dlp.utils.ExtractorError as e:
         print(f"Error extracting information from YouTube: {str(e)}")
@@ -54,6 +58,8 @@ def process_input_file(input_filename):
             # Assuming the input file has the format $search_term, $group, $channel_url
             search_term, group, channel_url = line.strip().split(', ')
             search_term_lower = search_term.lower()
+            print(f"Processing search term: {search_term}")
+            
             new_channel_url = search_youtube_and_get_channel_url(search_term_lower)
 
             if new_channel_url:
