@@ -1,10 +1,12 @@
 name: D-Fetch VOD
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  extract-m3u8:
+  extract-video-ids:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -23,10 +25,8 @@ jobs:
         git pull origin main --no-edit
         git rebase origin/main
 
-    - name: Read live URLs from file
+    - name: Read live URLs from file and extract video IDs
       run: |
-        current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-        
         while IFS=, read -r channel_name group live_url; do
           echo "Processing live URL: $live_url"
           
@@ -35,74 +35,20 @@ jobs:
           
           echo "Modified URL: $modified_url"
 
-          mkdir -p "./vod/$channel_name"
-          m3u8_file="./vod/$channel_name/vod_videos.m3u8"
+          video_id=$(yt-dlp "$modified_url" --get-id --skip-download 2>/dev/null)
 
-          # Truncate the file before writing
-          : > "$m3u8_file"
-
-          start_time=$(date +%s)
-          attempts=0
-          fallback_url_attempt=0
-          broken_pipe_count=0
-          
-          while [ $attempts -lt 3 ]; do
-            echo "Attempting to extract video URL (Attempt $((attempts + 1)))..."
-            m3u8_url=$(timeout 10 yt-dlp "$modified_url" --get-url --skip-download || true)  # Ignore errors
-            
-            if [ $? -eq 0 ] && [[ "$m3u8_url" == *".m3u8"* ]]; then
-              echo "Video URL found: $m3u8_url"
-              
-              # Retrieve video upload time
-              upload_time=$(yt-dlp "$modified_url" --get-info --skip-download --format "%(upload_date)s" 2>/dev/null)
-              
-              if [ "$upload_time" \< "$current_time" ]; then
-                echo "Video uploaded before current time. Proceeding..."
-                echo "$m3u8_url" >> "$m3u8_file"
-                break
-              else
-                echo "Video uploaded after or at the current time. Skipping..."
-              fi
-            else
-              if [[ "$m3u8_url" == *"broken pipe"* ]]; then
-                echo "Encountered 'broken pipe' response. Retrying..."
-                ((broken_pipe_count++))
-                if [ $broken_pipe_count -ge 2 ]; then
-                  echo "Received 'broken pipe' response twice. Moving on to the next entry."
-                  break
-                fi
-              else
-                echo "Error extracting video URL or invalid format. Attempt $((attempts + 1)) failed. Error: $m3u8_url"
-              fi
-            fi
-            
-            ((attempts++))
-            sleep 2  # Sleep for 2 seconds between attempts
-          done
-
-          if [ $broken_pipe_count -ge 2 ]; then
-            continue  # Skip to the next entry in case of two 'broken pipe' responses
+          if [ $? -eq 0 ]; then
+            echo "Video ID found: $video_id"
+            echo "$channel_name, $group, https://www.youtube.com/watch?v=$video_id" >> "./program/vod_to_fetch.txt"
+          else
+            echo "Error extracting video ID from $live_url."
           fi
-
-          echo "M3U8 content:"
-          cat "$m3u8_file"
-
-          echo "Creating M3U8 file..."
-          echo "#EXTM3U" > "./vod/$channel_name/vod_videos_temp.m3u8"
-          echo "#EXT-X-VERSION:3" >> "./vod/$channel_name/vod_videos_temp.m3u8"
-          video_number=1
-          while read -r line; do
-            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=${video_number}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
-            echo "${line}" >> "./vod/$channel_name/vod_videos_temp.m3u8"
-            ((video_number++))
-          done < "$m3u8_file"
-
-          mv "./vod/$channel_name/vod_videos_temp.m3u8" "$m3u8_file"
-
-          echo "Committing changes..."
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          git add -A
-          git diff --cached --quiet || git commit -m "Updated M3U8 files"
-          git push origin main
         done < ./program/alt_urls.txt
+
+    - name: Commit changes and push to main
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        git add -A
+        git diff --cached --quiet || git commit -m "Updated video IDs"
+        git push origin main
