@@ -22,7 +22,7 @@ jobs:
 
     - name: Replace spaces in video URLs
       run: |
-        awk 'BEGIN{OFS=FS=","} {gsub(/https:\/\/www\.youtube\.com\/watch\?v=/, "", $3); gsub(/ /, "_", $3)} 1' VOD_to_fetch.txt > VOD_to_fetch_temp.txt
+        awk 'BEGIN{OFS=FS=","} {match($3, /v=([^&]+)/, arr); gsub(/ /, "_", arr[1]); $3 = "https://www.youtube.com/watch?v=" arr[1]} 1' VOD_to_fetch.txt > VOD_to_fetch_temp.txt
         mv VOD_to_fetch_temp.txt VOD_to_fetch.txt
 
     - name: Read channel information from VOD_to_fetch.txt
