@@ -12,11 +12,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install yt-dlp and jq
+    - name: Install yt-dlp
       run: |
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
-        sudo apt-get install jq
 
     - name: Fetch latest changes from remote
       run: |
@@ -28,20 +27,24 @@ jobs:
         echo "Fetching channel information..."
         while IFS=, read -r channel_name group channel_url; do
           echo "Processing $channel_name from $group group with URL $channel_url/streams"
-         video_info=$(yt-dlp -j "$channel_url/streams" --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --skip-download --skip-unavailable-fragments --skip-playlist --format "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best")
+          video_info=$(yt-dlp -j "$channel_url/streams" --datebefore "$(date -u -d '1 day ago' +"%Y%m%d")" --skip-download --skip-unavailable-fragments)
           
           echo "$video_info"  # Display video info for troubleshooting
           
           # Check if the JSON data is not null
           if [ "$video_info" != "null" ]; then
-            video_ids=$(echo "$video_info" | jq -r '.entries[] | select(.is_live == false and .start_time == null) | .id')
+            video_ids=$(echo "$video_info" | jq -r '.entries[] | select(.formats[].format_id == 300) | .id')
             
-            IFS=',' read -ra video_ids_array <<< "$video_ids"
-            for video_id in "${video_ids_array[@]}"; do
-              echo "Adding Video ID $video_id to VOD_to_fetch.txt"
-              touch VOD_to_fetch.txt
-              echo "$video_id, $group, $channel_url" >> VOD_to_fetch.txt
-            done
+            if [ -n "$video_ids" ]; then
+              IFS=',' read -ra video_ids_array <<< "$video_ids"
+              for video_id in "${video_ids_array[@]}"; do
+                echo "Adding Video ID $video_id to VOD_to_fetch.txt"
+                touch VOD_to_fetch.txt
+                echo "$video_id, $group, $channel_url" >> VOD_to_fetch.txt
+              done
+            else
+              echo "No available videos with format 300 for $channel_name."
+            fi
           else
             echo "Error: No video information available for $channel_name."
           fi
