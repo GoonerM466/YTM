@@ -17,18 +17,15 @@ jobs:
       run: |
         git config user.email "you@example.com"
         git config user.name "Your Name"
-
     - name: Prepare VOD File
       run: |
         touch VOD_to_fetch.txt
         > VOD_to_fetch.txt
         touch processed_video_ids.txt
         > processed_video_ids.txt
-
     - name: Create Temp File with Modified Channel Names
       run: |
         awk -F ', ' '{ gsub(/ /, "_", $1); print $0 }' current_channels.txt > temp_channels.txt
-
     - name: Extract and Fetch VOD
       run: |
         # Extracting channel information from the temp file
@@ -68,34 +65,14 @@ jobs:
             echo "Error: Failed to fetch HTML content for $channel_name"
           fi
         done <<< "$channel_info"
-
     - name: Replace Underscores with Spaces in Output File
       run: |
         sed -i 's/_/ /g' VOD_to_fetch.txt
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8  # specify your desired Python version
-
-    - name: Set execute permissions
-      run: chmod +x ./scripts/filter_VOD.py
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install yt-dlp
-
-    - name: Run Filter VOD Script
-      run: |
-        ./scripts/filter_VOD.py
-
     - name: Add, Commit, and Push Changes
       run: |
         git add VOD_to_fetch.txt
         git add processed_video_ids.txt
-        git status  # Display status for debugging purposes
-        git diff --exit-code || git commit -m "Update VOD_to_fetch.txt with latest videos"
+        git commit -m "Update VOD_to_fetch.txt with latest videos"
         git pull origin main
         git merge -s ours origin/main
         git push origin main
