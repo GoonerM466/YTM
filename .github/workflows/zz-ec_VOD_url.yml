@@ -84,19 +84,6 @@ jobs:
         done < "./program/temp/VOD_to_fetch.txt"
         set -e  # Enable exit-on-error again
 
-    - name: Clean Up Folder Names
-      run: |
-        for group_folder in ./vod/*/; do
-          # Remove leading spaces
-          group_name=$(echo "$group_folder" | sed 's/^\s*//')
-
-          # Replace other spaces with underscores
-          group_name=$(echo "$group_name" | tr ' ' '_')
-
-          # Rename the folder
-          mv "$group_folder" "$group_name"
-        done
-
     - name: Commit and Push Changes
       run: |
         git add ./vod
