@@ -25,7 +25,7 @@ jobs:
       run: git pull --rebase origin main
 
     - name: Fetch Directory Tree and File Names
-      run: ls -1 ./vod/*/*/*.m3u8 > ./program/temp/VOD_temp.txt
+      run: find ./vod -type f -name 'videos/*.m3u8' > ./program/temp/VOD_temp.txt
 
     - name: Run Channel Generation Script
       run: |
