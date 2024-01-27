@@ -30,7 +30,7 @@ jobs:
           group=$(dirname "$file" | sed 's|./vod/||')
           channel_name=$(basename "$(dirname "$file")")
           video_id=$(basename "$file" .m3u8)
-          channel_url="https://github.com/GoonerM466/YTM/blob/main/$file"
+          channel_url="https://github.com/GoonerM466/YTM/blob/main/$group/$channel_name/$video_id.m3u8"
 
           if [ -n "$channel_url" ]; then
             # Clear contents of the existing m3u8 file
