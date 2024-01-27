@@ -21,11 +21,18 @@ jobs:
     - name: Rebase changes
       run: git pull --rebase origin main
 
+    - name: Print Current Directory
+      run: pwd
+
     - name: List and Save Files
       run: |
-        mkdir -p ./program/temp  # Create the directory if it doesn't exist
+        mkdir -p ./program/temp
         ls ./vod > ./program/temp/VOD_temp.txt
       working-directory: .
+
+    - name: Print Contents of VOD_temp.txt
+      run: cat ./program/temp/VOD_temp.txt
+      working-directory: ..
 
     - name: Process M3U8 Files
       run: |
