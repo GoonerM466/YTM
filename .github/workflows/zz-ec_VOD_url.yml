@@ -18,6 +18,11 @@ jobs:
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
 
+    - name: Install yt-dlp
+      run: |
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        chmod a+rx /usr/local/bin/yt-dlp
+
     - name: List Temp Directory
       run: ls -R ./program/temp
 
