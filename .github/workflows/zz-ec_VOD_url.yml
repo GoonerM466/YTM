@@ -5,7 +5,7 @@ on:
     inputs:
       input_file:
         description: 'VOD_to_fetch.txt'
-
+        required: false
 
 jobs:
   build:
