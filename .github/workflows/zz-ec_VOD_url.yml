@@ -25,7 +25,11 @@ jobs:
 
     - name: Process VOD URLs
       run: |
-        # ... (your existing code)
+        set +e  # Disable exit-on-error temporarily
+        while IFS=, read -r channel_name group video_url image_url; do
+          # ... (your existing code)
+        done < "./program/temp/VOD_to_fetch.txt"
+        set -e  # Enable exit-on-error again
 
     - name: Clean Up Folder Names
       run: |
