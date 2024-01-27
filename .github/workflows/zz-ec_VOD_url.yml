@@ -29,17 +29,42 @@ jobs:
           # Extract VideoID from video_url
           VIDEO_ID=$(echo "$video_url" | grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+')
 
-          # Use yt-dlp to get combined M3U8 URL for formats 312+234
-          M3U8_URL=$(yt-dlp --format 312+234 --get-url --no-playlist "$video_url")
+          # Define the list of video and audio formats to try
+          VIDEO_FORMATS="623 617 312 612 311 606 231 605 230 604 229 603 269 602"
+          AUDIO_FORMATS="234 233"
 
-          # Create directory structure if not exists
-          mkdir -p "./VOD/$group/$channel_name/videos"
+          # Loop through video formats
+          for format in $VIDEO_FORMATS; do
+            # Use yt-dlp to get combined M3U8 URL for the current format
+            M3U8_URL=$(yt-dlp --format "$format" --get-url --no-playlist "$video_url")
 
-          # Write individual M3U8 file
-          echo "#EXTM3U" > "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-          echo "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"mp4\",LANGUAGE=\"eng\",NAME=\"English\",AUTOSELECT=YES,DEFAULT=YES,URI=\"$M3U8_URL\"" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-          echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=50000000" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-          echo "$M3U8_URL" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+            # Check if the M3U8_URL is not empty
+            if [ -n "$M3U8_URL" ]; then
+              # Loop through audio formats
+              for audio_format in $AUDIO_FORMATS; do
+                # Use yt-dlp to get the audio M3U8 URL
+                AUDIO_M3U8_URL=$(yt-dlp --format "$audio_format" --get-url --no-playlist "$video_url")
+
+                # Check if the AUDIO_M3U8_URL is not empty
+                if [ -n "$AUDIO_M3U8_URL" ]; then
+                  # Create directory structure if not exists
+                  mkdir -p "./VOD/$group/$channel_name/videos"
+
+                  # Write combined M3U8 file
+                  echo "#EXTM3U" > "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+                  echo "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"mp4\",LANGUAGE=\"eng\",NAME=\"English\",AUTOSELECT=YES,DEFAULT=YES,URI=\"$AUDIO_M3U8_URL\"" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+                  echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=50000000" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+                  echo "$M3U8_URL" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+
+                  # Break the inner loop (audio formats) since we found a valid combination
+                  break
+                fi
+              done
+
+              # Break the outer loop (video formats) since we found a valid combination
+              break
+            fi
+          done
 
         done < "./program/temp/VOD_to_fetch.txt"
 
