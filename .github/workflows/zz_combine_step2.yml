@@ -23,8 +23,9 @@ jobs:
 
     - name: List and Save Files
       run: |
+        mkdir -p ./program/temp  # Create the directory if it doesn't exist
         ls ./vod > ./program/temp/VOD_temp.txt
-      working-directory: ./program/temp
+      working-directory: .
 
     - name: Process M3U8 Files
       run: |
