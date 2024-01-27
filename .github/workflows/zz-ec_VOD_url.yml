@@ -37,19 +37,17 @@ jobs:
           SELECTED_VIDEO_FORMAT=""
           SELECTED_AUDIO_FORMAT=""
 
-          # Loop through video formats with debugging output
+          # Loop through video formats
           for video_format in $VIDEO_FORMATS; do
             echo "Trying video format: $video_format"
             M3U8_URL=$(yt-dlp --format "$video_format" --get-url --no-playlist "$video_url")
-            echo "M3U8_URL for $video_format: $M3U8_URL"
 
             # Check if the M3U8_URL is not empty
             if [ -n "$M3U8_URL" ]; then
-              # Loop through audio formats with debugging output
+              # Loop through audio formats
               for audio_format in $AUDIO_FORMATS; do
                 echo "Trying audio format: $audio_format"
                 AUDIO_M3U8_URL=$(yt-dlp --format "$audio_format" --get-url --no-playlist "$video_url")
-                echo "AUDIO_M3U8_URL for $audio_format: $AUDIO_M3U8_URL"
 
                 # Check if the AUDIO_M3U8_URL is not empty
                 if [ -n "$AUDIO_M3U8_URL" ]; then
@@ -66,6 +64,9 @@ jobs:
               if [ -n "$SELECTED_AUDIO_FORMAT" ]; then
                 break
               fi
+            else
+              # If M3U8_URL is empty, log a message and try the next video format
+              echo "Video format $video_format not available for $video_url"
             fi
           done
 
