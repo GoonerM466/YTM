@@ -18,12 +18,11 @@ jobs:
         repository: GoonerM466/YTM
         ref: main
 
-    - name: Create temp directory
-      run: mkdir -p ./program/temp
+    - name: Print Current Directory
+      run: pwd
 
-    - name: List and Save Files
-      run: ls ./vod > ./program/temp/VOD_temp.txt
-      working-directory: .
+    - name: List Contents of VOD Directory
+      run: ls -R ./vod > ./program/temp/VOD_temp.txt
 
     - name: Process M3U8 Files
       run: |
