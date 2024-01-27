@@ -30,21 +30,18 @@ jobs:
           group=$(dirname "$file" | sed 's|./vod/||')
           channel_name=$(basename "$(dirname "$file")")
           video_id=$(basename "$file" .m3u8)
-          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$group/$channel_name/videos/$video_id.m3u8"
+          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$group/$channel_name/$video_id.m3u8"
 
           if [ -n "$channel_url" ]; then
             # Clear contents of the existing m3u8 file
             echo "" > "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
 
-            # Create a separate m3u8 file for each subfolder
-            mkdir -p "./vod/$group/$channel_name/videos"
-            
             # Write header to the m3u8 file
             echo "#EXTM3U" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
             echo "#EXT-X-VERSION:3" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
 
             # Calculate video number
-            video_number=$(find "./vod/$group/$channel_name/videos" -type f -name '*.m3u8' | wc -l)
+            video_number=$(find "./vod/$group/$channel_name" -type f -name '*.m3u8' | wc -l)
             
             # Write entry to the m3u8 file
             echo "#EXT-X-STREAM-INF:NAME=\"$channel_name\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
