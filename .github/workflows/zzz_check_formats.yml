@@ -1,0 +1,42 @@
+name: zzz-CHeck formats
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+
+    - name: Install yt-dlp
+      run: |
+        curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+        chmod a+rx /usr/local/bin/yt-dlp
+
+    - name: Extract VideoID and List Available Formats
+      run: |
+        # Extract VideoID from test.txt
+        VIDEO_ID=$(grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+' test.txt)
+
+        # List available formats
+        AVAILABLE_FORMATS=$(yt-dlp --list-formats "https://www.youtube.com/watch?v=$VIDEO_ID")
+
+        # Display available formats for reference
+        echo "Available Formats: $AVAILABLE_FORMATS" > test.debug.txt
+
+    - name: Get M3U8 URLs for All Available Formats
+      run: |
+        # Use yt-dlp to get M3U8 URLs for all available formats
+        yt-dlp --format best --get-url --no-playlist "https://www.youtube.com/watch?v=$VIDEO_ID" > test.debug.txt
+
+    - name: Commit and Push Changes
+      run: |
+        git add test.debug.txt
+        git commit -m "Update debug file with M3U8 URLs"
+        git push
