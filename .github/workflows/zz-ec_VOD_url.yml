@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       input_file:
-        description: './program/temp/VOD_to_fetch.txt'
+        description: './program/temp/vod_to_fetch.txt'
         required: false
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
         set +e  # Disable exit-on-error temporarily
         while IFS=, read -r channel_name group video_url image_url; do
           # ... (your existing code)
-        done < "./program/temp/VOD_to_fetch.txt"
+        done < "./program/temp/vod_to_fetch.txt"
         set -e  # Enable exit-on-error again
 
     - name: Clean Up Folder Names
