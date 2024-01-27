@@ -37,6 +37,9 @@ jobs:
           SELECTED_VIDEO_FORMAT=""
           SELECTED_AUDIO_FORMAT=""
 
+          # Flag to check if any valid video format is found
+          VIDEO_FORMAT_FOUND=false
+
           # Loop through video formats
           for video_format in $VIDEO_FORMATS; do
             echo "Trying video format: $video_format"
@@ -44,6 +47,7 @@ jobs:
 
             # Check if the M3U8_URL is not empty
             if [ -n "$M3U8_URL" ]; then
+              VIDEO_FORMAT_FOUND=true
               # Loop through audio formats
               for audio_format in $AUDIO_FORMATS; do
                 echo "Trying audio format: $audio_format"
@@ -64,11 +68,14 @@ jobs:
               if [ -n "$SELECTED_AUDIO_FORMAT" ]; then
                 break
               fi
-            else
-              # If M3U8_URL is empty, log a message and try the next video format
-              echo "Video format $video_format not available for $video_url"
             fi
           done
+
+          # Check if any valid video format is found
+          if [ "$VIDEO_FORMAT_FOUND" = false ]; then
+            echo "Error: No valid video format found for $video_url"
+            continue  # Move to the next entry in the loop
+          fi
 
           # Check if both video and audio formats were found
           if [ -n "$SELECTED_VIDEO_FORMAT" ] && [ -n "$SELECTED_AUDIO_FORMAT" ]; then
