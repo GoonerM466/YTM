@@ -11,7 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
     - name: Configure Git
       run: |
@@ -27,8 +28,6 @@ jobs:
       run: |
         set +e  # Disable exit-on-error temporarily
         while IFS=, read -r channel_name group video_url image_url; do
-          # Trim leading space from the group variable
-          group="${group#" "}"
           # Extract VideoID from video_url
           VIDEO_ID=$(echo "$video_url" | grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+')
 
@@ -90,4 +89,8 @@ jobs:
       run: |
         git add ./vod
         git commit -m "Update vod files"
-        git push
+        git push -f
+
+    - name: Cleanup Group Directories
+      run: |
+        find ./vod -type d -exec sh -c 'mv "$1" "$(echo $1 | sed "s/\/ \+/\/")"' _ {} \;
