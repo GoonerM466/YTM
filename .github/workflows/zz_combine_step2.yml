@@ -18,28 +18,19 @@ jobs:
         repository: GoonerM466/YTM
         ref: main
 
-    - name: Rebase changes
-      run: git pull --rebase origin main
-
-    - name: Print Current Directory
-      run: pwd
+    - name: Create temp directory
+      run: mkdir -p ./program/temp
 
     - name: List and Save Files
-      run: |
-        mkdir -p ./program/temp
-        ls ./vod > ./program/temp/VOD_temp.txt
+      run: ls ./vod > ./program/temp/VOD_temp.txt
       working-directory: .
-
-    - name: Print Contents of VOD_temp.txt
-      run: cat ./program/temp/VOD_temp.txt
-      working-directory: ..
 
     - name: Process M3U8 Files
       run: |
         while IFS= read -r line; do
           if [ -d "./videos/$line" ]; then
             video_count=1
-            m3u8_file="./$line.m3u8"
+            m3u8_file="./vod/$line.m3u8"
             echo "#EXTM3U" > "$m3u8_file"
             echo "#EXT-X-VERSION:3" >> "$m3u8_file"
 
@@ -49,7 +40,7 @@ jobs:
               ((video_count++))
             done
           fi
-        done < VOD_temp.txt
+        done < ./program/temp/VOD_temp.txt
 
     - name: Configure Git
       run: |
