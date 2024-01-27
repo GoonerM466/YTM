@@ -18,31 +18,36 @@ jobs:
         repository: GoonerM466/YTM
         ref: main
 
+    - name: Waiting to ensure other tasks have completed
+      run: sleep 45
+
     - name: Rebase changes
       run: git pull --rebase origin main
 
     - name: Run Channel Generation Script
       run: |
-        find ./vod -type f -name '*.m3u8' | grep -E '/videos/.*\.m3u8$' | while IFS= read -r file; do
-          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/${file#./}/$video_id.m3u8"
-          output_directory="./vod/$(dirname "$file" | sed 's|./vod/||')"
-          output_filename="$(basename "$(dirname "$file")")_vod.m3u8"
-          output_file="$output_directory/$output_filename"
-          
-          # Clear contents of the existing m3u8 file
-          echo "" > "$output_file"
+        find ./vod -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
+          group=$(dirname "$file" | sed 's|./vod/||')
+          channel_name=$(basename "$(dirname "$file")")
+          video_id=$(basename "$file" .m3u8)
+          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$group/$channel_name/$video_id.m3u8"
 
-          # Write header to the m3u8 file
-          echo "#EXTM3U" >> "$output_file"
-          echo "#EXT-X-VERSION:3" >> "$output_file"
+          if [ -n "$channel_url" ]; then
+            # Clear contents of the existing m3u8 file
+            echo "" > "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
 
-          # Calculate video number starting from 1
-          video_number=$(find "$(dirname "$file")" -type f -name '*.m3u8' | grep -E '\.m3u8$' | wc -l)
-          ((video_number++))
+            # Write header to the m3u8 file
+            echo "#EXTM3U" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
+            echo "#EXT-X-VERSION:3" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
 
-          # Write entry to the m3u8 file
-          echo "#EXT-X-STREAM-INF:NAME=\"$(basename "$(dirname "$file")")\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$output_file"
-          echo "$channel_url" >> "$output_file"
+            # Calculate video number starting from 1
+            video_number=$(ls -1 "./vod/$group/$channel_name"/*.m3u8 | grep -E '\.m3u8$' | wc -l)
+            ((video_number++))
+
+            # Write entry to the m3u8 file
+            echo "#EXT-X-STREAM-INF:NAME=\"$channel_name\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
+            echo "$channel_url" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
+          fi
         done
 
     - name: Configure Git
