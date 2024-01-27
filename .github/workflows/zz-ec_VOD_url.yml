@@ -37,17 +37,19 @@ jobs:
           SELECTED_VIDEO_FORMAT=""
           SELECTED_AUDIO_FORMAT=""
 
-          # Loop through video formats
+          # Loop through video formats with debugging output
           for video_format in $VIDEO_FORMATS; do
-            # Use yt-dlp to get combined M3U8 URL for the current video format
+            echo "Trying video format: $video_format"
             M3U8_URL=$(yt-dlp --format "$video_format" --get-url --no-playlist "$video_url")
+            echo "M3U8_URL for $video_format: $M3U8_URL"
 
             # Check if the M3U8_URL is not empty
             if [ -n "$M3U8_URL" ]; then
-              # Loop through audio formats
+              # Loop through audio formats with debugging output
               for audio_format in $AUDIO_FORMATS; do
-                # Use yt-dlp to get the audio M3U8 URL
+                echo "Trying audio format: $audio_format"
                 AUDIO_M3U8_URL=$(yt-dlp --format "$audio_format" --get-url --no-playlist "$video_url")
+                echo "AUDIO_M3U8_URL for $audio_format: $AUDIO_M3U8_URL"
 
                 # Check if the AUDIO_M3U8_URL is not empty
                 if [ -n "$AUDIO_M3U8_URL" ]; then
