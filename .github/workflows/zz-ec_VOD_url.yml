@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       input_file:
-        description: './program/temp/VOD_to_fetch.txt'
+        description: '/program/temp/VOD_to_fetch.txt'
         required: false
 
 jobs:
@@ -34,7 +34,7 @@ jobs:
           # Rest of the script remains the same
           # ...
 
-        done < "./program/temp/VOD_to_fetch_temp.txt"
+        done < "/program/temp/VOD_to_fetch_temp.txt"
         set -e  # Enable exit-on-error again
 
     - name: Commit and Push Changes
