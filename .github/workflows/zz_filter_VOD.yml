@@ -30,19 +30,20 @@ jobs:
         tmpfile=$(mktemp)
 
         while IFS=, read -r channel_name group video_url image_url; do
-          # Check if the video is live or scheduled using yt-dlp JSON output without downloading
-          video_info=$(yt-dlp --print-json --skip-download "$video_url")
-          is_live=$(echo "$video_info" | jq -r '.is_live')
-          scheduled_start_time=$(echo "$video_info" | jq -r '.start_time')
+          # Check if the video is live using yt-dlp JSON output without downloading
+          if video_info=$(yt-dlp --print-json --skip-download "$video_url" 2>&1); then
+            live_status=$(echo "$video_info" | jq -r '.is_live or (.start_time and (.start_time | fromdateiso8601 < now | not))')
 
-          if [ "$is_live" == "true" ]; then
-            echo "$video_url is live - discarding!"
-          elif [ "$scheduled_start_time" != "null" ]; then
-            echo "$video_url is scheduled - discarding!"
+            if [ "$live_status" == "true" ]; then
+              echo "$video_url is live or scheduled - discarding!"
+            else
+              echo "$video_url is not live - saving!"
+              # If not live, append the entry to the temporary file
+              echo "$channel_name,$group,$video_url,$image_url" >> "$tmpfile"
+            fi
           else
-            echo "$video_url is not live or scheduled - saving!"
-            # If not live or scheduled, append the entry to the temporary file
-            echo "$channel_name,$group,$video_url,$image_url" >> "$tmpfile"
+            # Handle the case where yt-dlp returns an error (e.g., scheduled video)
+            echo "Error processing $video_url: $video_info - ignoring and continuing the search"
           fi
           # Introduce a 2-second delay
           sleep 2
