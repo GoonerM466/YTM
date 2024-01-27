@@ -1,10 +1,6 @@
 name: ZZ-Combine VOD Step 2
 
 on:
-  workflow_run:
-    workflows: ["1-Fetch Live m3u8"]
-    types:
-      - completed
   workflow_dispatch:
 
 jobs:
@@ -18,8 +14,6 @@ jobs:
         repository: GoonerM466/YTM
         ref: main
 
-    - name: Waiting to ensure other tasks have completed
-      run: sleep 45
 
     - name: Rebase changes
       run: git pull --rebase origin main
@@ -27,10 +21,10 @@ jobs:
     - name: Run Channel Generation Script
       run: |
         find ./vod -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
-          group=$(dirname "$(dirname "$file")" | tr ' ' '%20')
-          channel_name=$(basename "$(dirname "$file")" | tr ' ' '%20')
+          group=$(dirname "$file")
+          channel_name=$(basename "$(dirname "$file")")
           video_id=$(basename "$file" .m3u8)
-          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$group/$channel_name/videos/$video_id.m3u8"
+          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file"
 
           if [ -n "$channel_url" ]; then
             # Clear contents of the existing m3u8 file
