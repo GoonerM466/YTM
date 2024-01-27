@@ -27,6 +27,8 @@ jobs:
       run: |
         set +e  # Disable exit-on-error temporarily
         while IFS=, read -r channel_name group video_url image_url; do
+          # Trim leading space from the group variable
+          group="${group#" "}"
           # Extract VideoID from video_url
           VIDEO_ID=$(echo "$video_url" | grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+')
 
