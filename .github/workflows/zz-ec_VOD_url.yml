@@ -25,6 +25,7 @@ jobs:
 
     - name: Process VOD URLs
       run: |
+        set +e  # Disable exit-on-error temporarily
         while IFS=, read -r channel_name group video_url image_url; do
           # Extract VideoID from video_url
           VIDEO_ID=$(echo "$video_url" | grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+')
@@ -45,16 +46,16 @@ jobs:
             echo "Trying video format: $video_format"
             M3U8_URL=$(yt-dlp --format "$video_format" --get-url --no-playlist "$video_url")
 
-            # Check if the M3U8_URL is not empty
-            if [ -n "$M3U8_URL" ]; then
+            # Check if the command was successful
+            if [ $? -eq 0 ]; then
               VIDEO_FORMAT_FOUND=true
               # Loop through audio formats
               for audio_format in $AUDIO_FORMATS; do
                 echo "Trying audio format: $audio_format"
                 AUDIO_M3U8_URL=$(yt-dlp --format "$audio_format" --get-url --no-playlist "$video_url")
 
-                # Check if the AUDIO_M3U8_URL is not empty
-                if [ -n "$AUDIO_M3U8_URL" ]; then
+                # Check if the command was successful
+                if [ $? -eq 0 ]; then
                   # Set the selected formats
                   SELECTED_VIDEO_FORMAT="$video_format"
                   SELECTED_AUDIO_FORMAT="$audio_format"
@@ -68,6 +69,10 @@ jobs:
               if [ -n "$SELECTED_AUDIO_FORMAT" ]; then
                 break
               fi
+            else
+              echo "Error: Failed to retrieve M3U8_URL for video format $video_format"
+              # Continue to the next iteration of the loop
+              continue
             fi
           done
 
@@ -93,6 +98,8 @@ jobs:
           fi
 
         done < "./program/temp/VOD_to_fetch.txt"
+
+        set -e  # Enable exit-on-error again
 
     - name: Commit and Push Changes
       run: |
