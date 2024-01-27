@@ -70,10 +70,6 @@ jobs:
           fi
         done <<< "$channel_info"
 
-    - name: Replace Underscores with Spaces in Output File
-      run: |
-        sed -i 's/_/ /g' ./program/temp/VOD_to_fetch.txt
-
     - name: Add, Commit, and Push Changes
       run: |
         git add ./program/temp/VOD_to_fetch.txt
