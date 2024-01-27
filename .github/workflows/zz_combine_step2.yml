@@ -26,11 +26,10 @@ jobs:
 
     - name: Run Channel Generation Script
       run: |
-        set -x
-        for file in $(find ./vod -type f -name '*.m3u8'); do
-          channel_url="https://github.com/GoonerM466/YTM/blob/main/$file"
-
-          if [ -n "$channel_url" ]; then
+        find ./vod -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
+          if [[ "$file" == "./vod"*"/videos/"*".m3u8" ]]; then
+            channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/${file#./}/$video_id.m3u8"
+            
             # Clear contents of the existing m3u8 file
             echo "" > "$file"
 
@@ -39,7 +38,7 @@ jobs:
             echo "#EXT-X-VERSION:3" >> "$file"
 
             # Calculate video number
-            video_number=$(grep -c 'EXT-X-STREAM-INF' "$file")
+            video_number=$(find "$(dirname "$file")" -type f -name '*.m3u8' | wc -l)
 
             # Write entry to the m3u8 file
             echo "#EXT-X-STREAM-INF:NAME=\"$(basename "$(dirname "$file")")\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$file"
