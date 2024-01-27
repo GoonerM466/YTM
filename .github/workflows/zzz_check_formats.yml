@@ -30,10 +30,6 @@ jobs:
         # Display available formats for reference
         echo "Available Formats: $AVAILABLE_FORMATS" > test.debug.txt
 
-    - name: Get M3U8 URLs for All Available Formats
-      run: |
-        # Use yt-dlp to get M3U8 URLs for all available formats
-        yt-dlp --format best --get-url --no-playlist "https://www.youtube.com/watch?v=$VIDEO_ID" > test.debug.txt
 
     - name: Commit and Push Changes
       run: |
