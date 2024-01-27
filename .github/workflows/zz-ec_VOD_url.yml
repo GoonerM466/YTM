@@ -35,7 +35,7 @@ jobs:
           AVAILABLE_FORMATS=$(yt-dlp --list-formats "$video_url" | awk 'NR>1{print $1}')
 
           # Define the list of video and audio formats to try
-          VIDEO_FORMATS="623 308 312 617 311 605 230 604 229 603 269 602"
+          VIDEO_FORMATS="623 617 312 612 311 614 270 606 232 609 231 229 606 605 604 269 602 603"
           AUDIO_FORMATS="234 233"
 
           # Initialize variables to store the selected formats
