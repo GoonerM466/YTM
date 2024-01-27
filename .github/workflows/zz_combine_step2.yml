@@ -18,40 +18,30 @@ jobs:
         repository: GoonerM466/YTM
         ref: main
 
-    - name: Waiting to ensure other tasks have completed
-      run: sleep 45
-
     - name: Rebase changes
       run: git pull --rebase origin main
 
-    - name: Fetch Directory Tree and File Names
-      run: find ./vod -type f -name 'videos/*.m3u8' > ./program/temp/VOD_temp.txt
-
-    - name: Run Channel Generation Script
+    - name: List and Save Files
       run: |
-        cat ./program/temp/VOD_temp.txt | while IFS= read -r file; do
-          group=$(dirname "$file" | sed 's|^./vod/||;s|/videos.*||')
-          channel_name=$(basename "$(dirname "$file")")
-          video_id=$(basename "$file" .m3u8)
-          channel_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file"
+        ls ./vod > ./program/temp/VOD_temp.txt
+      working-directory: ./program/temp
 
-          if [ -n "$channel_url" ]; then
-            # Clear contents of the existing m3u8 file
-            echo "" > "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
+    - name: Process M3U8 Files
+      run: |
+        while IFS= read -r line; do
+          if [ -d "./videos/$line" ]; then
+            video_count=1
+            m3u8_file="./$line.m3u8"
+            echo "#EXTM3U" > "$m3u8_file"
+            echo "#EXT-X-VERSION:3" >> "$m3u8_file"
 
-            # Write header to the m3u8 file
-            echo "#EXTM3U" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
-            echo "#EXT-X-VERSION:3" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
-
-            # Calculate video number starting from 1
-            video_number=$(ls -1 "./vod/$group/$channel_name"/*.m3u8 | grep -E '\.m3u8$' | wc -l)
-            ((video_number++))
-
-            # Write entry to the m3u8 file
-            echo "#EXT-X-STREAM-INF:NAME=\"$channel_name\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
-            echo "$channel_url" >> "./vod/$group/$channel_name/${channel_name}_vod.m3u8"
+            for m3u8_path in $(find "./videos/$line" -name "*.m3u8"); do
+              echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$video_count" >> "$m3u8_file"
+              echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$line/$(basename "$m3u8_path")" >> "$m3u8_file"
+              ((video_count++))
+            done
           fi
-        done
+        done < VOD_temp.txt
 
     - name: Configure Git
       run: |
