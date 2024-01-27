@@ -25,65 +25,20 @@ jobs:
 
     - name: Process VOD URLs
       run: |
-        set +e  # Disable exit-on-error temporarily
-        while IFS=, read -r channel_name group video_url image_url; do
-          # Extract VideoID from video_url
-          VIDEO_ID=$(echo "$video_url" | grep -oP 'https://www.youtube.com/watch\?v=\K[^&]+')
+        # ... (your existing code)
 
-          # Retrieve all available formats in a single request
-          echo "Retrieving available formats for $video_url..."
-          AVAILABLE_FORMATS=$(yt-dlp --list-formats "$video_url" | awk 'NR>1{print $1}')
+    - name: Clean Up Folder Names
+      run: |
+        for group_folder in ./vod/*/; do
+          # Remove leading spaces
+          group_name=$(echo "$group_folder" | sed 's/^\s*//')
 
-          # Define the list of video and audio formats to try
-          VIDEO_FORMATS="623 617 312 612 311 614 270 606 232 609 231 229 606 605 604 269 602 603"
-          AUDIO_FORMATS="234 233"
+          # Replace other spaces with underscores
+          group_name=$(echo "$group_name" | tr ' ' '_')
 
-          # Initialize variables to store the selected formats
-          SELECTED_VIDEO_FORMAT=""
-          SELECTED_AUDIO_FORMAT=""
-
-          # Select the highest priority video format
-          for video_format in $VIDEO_FORMATS; do
-            if echo "$AVAILABLE_FORMATS" | grep -qw "$video_format"; then
-              SELECTED_VIDEO_FORMAT="$video_format"
-              echo "Selected video format: $SELECTED_VIDEO_FORMAT"
-              break
-            fi
-          done
-
-          # Select the highest priority audio format
-          for audio_format in $AUDIO_FORMATS; do
-            if echo "$AVAILABLE_FORMATS" | grep -qw "$audio_format"; then
-              SELECTED_AUDIO_FORMAT="$audio_format"
-              echo "Selected audio format: $SELECTED_AUDIO_FORMAT"
-              break
-            fi
-          done
-
-          # Check if both video and audio formats were found
-          if [ -n "$SELECTED_VIDEO_FORMAT" ] && [ -n "$SELECTED_AUDIO_FORMAT" ]; then
-            # Create directory structure if not exists
-            mkdir -p "./vod/$group/$channel_name/videos"
-
-            # Retrieve M3U8 URLs for selected formats
-            echo "Retrieving M3U8 URLs for $video_url..."
-            M3U8_URL=$(yt-dlp --format "$SELECTED_VIDEO_FORMAT" --get-url --no-playlist "$video_url")
-            AUDIO_M3U8_URL=$(yt-dlp --format "$SELECTED_AUDIO_FORMAT" --get-url --no-playlist "$video_url")
-
-            # Write combined M3U8 file
-            echo "Writing M3U8 file for $video_url..."
-            echo "#EXTM3U" > "./vod/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-            echo "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"mp4\",LANGUAGE=\"eng\",NAME=\"English\",AUTOSELECT=YES,DEFAULT=YES,URI=\"$AUDIO_M3U8_URL\"" >> "./vod/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=50000000" >> "./vod/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-            echo "$M3U8_URL" >> "./vod/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-          else
-            # Log an error message or handle the case when no valid combination is found
-            echo "Error: No valid video and audio formats found for $video_url"
-          fi
-
-        done < "./program/temp/VOD_to_fetch.txt"
-
-        set -e  # Enable exit-on-error again
+          # Rename the folder
+          mv "$group_folder" "$group_name"
+        done
 
     - name: Commit and Push Changes
       run: |
