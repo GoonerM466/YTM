@@ -33,10 +33,14 @@ jobs:
           VIDEO_FORMATS="623 617 312 612 311 606 231 605 230 604 229 603 269 602"
           AUDIO_FORMATS="234 233"
 
+          # Initialize variables to store the selected formats
+          SELECTED_VIDEO_FORMAT=""
+          SELECTED_AUDIO_FORMAT=""
+
           # Loop through video formats
-          for format in $VIDEO_FORMATS; do
-            # Use yt-dlp to get combined M3U8 URL for the current format
-            M3U8_URL=$(yt-dlp --format "$format" --get-url --no-playlist "$video_url")
+          for video_format in $VIDEO_FORMATS; do
+            # Use yt-dlp to get combined M3U8 URL for the current video format
+            M3U8_URL=$(yt-dlp --format "$video_format" --get-url --no-playlist "$video_url")
 
             # Check if the M3U8_URL is not empty
             if [ -n "$M3U8_URL" ]; then
@@ -47,24 +51,36 @@ jobs:
 
                 # Check if the AUDIO_M3U8_URL is not empty
                 if [ -n "$AUDIO_M3U8_URL" ]; then
-                  # Create directory structure if not exists
-                  mkdir -p "./VOD/$group/$channel_name/videos"
-
-                  # Write combined M3U8 file
-                  echo "#EXTM3U" > "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-                  echo "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"mp4\",LANGUAGE=\"eng\",NAME=\"English\",AUTOSELECT=YES,DEFAULT=YES,URI=\"$AUDIO_M3U8_URL\"" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-                  echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=50000000" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
-                  echo "$M3U8_URL" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+                  # Set the selected formats
+                  SELECTED_VIDEO_FORMAT="$video_format"
+                  SELECTED_AUDIO_FORMAT="$audio_format"
 
                   # Break the inner loop (audio formats) since we found a valid combination
                   break
                 fi
               done
 
-              # Break the outer loop (video formats) since we found a valid combination
-              break
+              # Check if audio format was found and break the outer loop (video formats)
+              if [ -n "$SELECTED_AUDIO_FORMAT" ]; then
+                break
+              fi
             fi
           done
+
+          # Check if both video and audio formats were found
+          if [ -n "$SELECTED_VIDEO_FORMAT" ] && [ -n "$SELECTED_AUDIO_FORMAT" ]; then
+            # Create directory structure if not exists
+            mkdir -p "./VOD/$group/$channel_name/videos"
+
+            # Write combined M3U8 file
+            echo "#EXTM3U" > "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+            echo "#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID=\"mp4\",LANGUAGE=\"eng\",NAME=\"English\",AUTOSELECT=YES,DEFAULT=YES,URI=\"$AUDIO_M3U8_URL\"" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=50000000" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+            echo "$M3U8_URL" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
+          else
+            # Log an error message or handle the case when no valid combination is found
+            echo "Error: No valid video and audio formats found for $video_url"
+          fi
 
         done < "./program/temp/VOD_to_fetch.txt"
 
