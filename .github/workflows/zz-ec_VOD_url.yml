@@ -41,7 +41,7 @@ jobs:
           echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=50000000" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
           echo "$M3U8_URL" >> "./VOD/$group/$channel_name/videos/$channel_name_$VIDEO_ID.m3u8"
 
-        done < "${{ github.event.inputs.input_file }}"
+        done < "VOD_to_fetch.txt"
 
     - name: Commit and Push Changes
       run: |
