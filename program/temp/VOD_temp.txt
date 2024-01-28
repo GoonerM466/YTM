@@ -1,50 +1,73 @@
+vod/entertainment/EERIEISSSS/videos/RM_eI9VA-0g.m3u8
+vod/entertainment/EERIEISSSS/videos/FtOCWPq5uw0.m3u8
+vod/entertainment/EERIEISSSS/videos/JRHSboaysfY.m3u8
+vod/sports/talkSPORT/videos/vwYaHkj9P48.m3u8
+vod/sports/talkSPORT/videos/HMp5HKvS-RY.m3u8
+vod/sports/talkSPORT/videos/bm-sxTgJB8o.m3u8
+vod/documentary/The_Why_Files/videos/D5DVy-ZCieA.m3u8
+vod/documentary/The_Why_Files/videos/UhXsyhXAe_M.m3u8
+vod/documentary/The_Why_Files/videos/9Rs_e21MJvA.m3u8
+vod/music/Music_Brokers/videos/5ZvHmK0Z4JM\u0026pp=QAFIAQ%3D%3D.m3u8
+vod/music/HitsRadio/videos/Il1ySBzx22Y.m3u8
+vod/gaming/Glen_Cooley/videos/Q8PRC5m_qss.m3u8
+vod/gaming/Glen_Cooley/videos/ynZKnf0EmZ4.m3u8
+vod/gaming/Glen_Cooley/videos/NBOTqa5Y_uI.m3u8
+vod/gaming/Jimmy_Broadbent/videos/uFFJJkxnvcY.m3u8
+vod/gaming/Jimmy_Broadbent/videos/JWU85dQp5CQ.m3u8
+vod/gaming/Jimmy_Broadbent/videos/s5I4rzu1fy0.m3u8
+vod/gaming/deadeyedelboy/videos/jA7KTHwSOO4.m3u8
+vod/gaming/deadeyedelboy/videos/C0_jkP7U7dQ.m3u8
+vod/gaming/deadeyedelboy/videos/CqrKZw5IGSU.m3u8
+vod/gaming/Tidgney/videos/uiDaSjBtL-Y.m3u8
+vod/gaming/Tidgney/videos/lcIiUJxJ-S0.m3u8
+vod/gaming/Tidgney/videos/_bU5MP9Why4.m3u8
 vod
-├── documentary
-│   └── The_Why_Files
-│       └── videos
-│           ├── 9Rs_e21MJvA.m3u8
-│           ├── D5DVy-ZCieA.m3u8
-│           └── UhXsyhXAe_M.m3u8
-├── entertainment
-│   └── EERIEISSSS
-│       └── videos
-│           ├── FtOCWPq5uw0.m3u8
-│           ├── JRHSboaysfY.m3u8
-│           └── RM_eI9VA-0g.m3u8
-├── gaming
-│   ├── Glen_Cooley
-│   │   └── videos
-│   │       ├── NBOTqa5Y_uI.m3u8
-│   │       ├── Q8PRC5m_qss.m3u8
-│   │       └── ynZKnf0EmZ4.m3u8
-│   ├── Jimmy_Broadbent
-│   │   └── videos
-│   │       ├── JWU85dQp5CQ.m3u8
-│   │       ├── s5I4rzu1fy0.m3u8
-│   │       └── uFFJJkxnvcY.m3u8
-│   ├── Tidgney
-│   │   └── videos
-│   │       ├── _bU5MP9Why4.m3u8
-│   │       ├── lcIiUJxJ-S0.m3u8
-│   │       └── uiDaSjBtL-Y.m3u8
-│   └── deadeyedelboy
-│       └── videos
-│           ├── C0_jkP7U7dQ.m3u8
-│           ├── CqrKZw5IGSU.m3u8
-│           └── jA7KTHwSOO4.m3u8
-├── music
-│   ├── HitsRadio
-│   │   └── videos
-│   │       └── Il1ySBzx22Y.m3u8
-│   └── Music_Brokers
-│       └── videos
-│           └── 5ZvHmK0Z4JM\u0026pp=QAFIAQ%3D%3D.m3u8
-├── sports
-│   └── talkSPORT
-│       └── videos
-│           ├── HMp5HKvS-RY.m3u8
-│           ├── bm-sxTgJB8o.m3u8
-│           └── vwYaHkj9P48.m3u8
-└── vods.txt
+vod/documentary
+vod/documentary/The_Why_Files
+vod/documentary/The_Why_Files/videos
+vod/documentary/The_Why_Files/videos/9Rs_e21MJvA.m3u8
+vod/documentary/The_Why_Files/videos/D5DVy-ZCieA.m3u8
+vod/documentary/The_Why_Files/videos/UhXsyhXAe_M.m3u8
+vod/entertainment
+vod/entertainment/EERIEISSSS
+vod/entertainment/EERIEISSSS/videos
+vod/entertainment/EERIEISSSS/videos/FtOCWPq5uw0.m3u8
+vod/entertainment/EERIEISSSS/videos/JRHSboaysfY.m3u8
+vod/entertainment/EERIEISSSS/videos/RM_eI9VA-0g.m3u8
+vod/gaming
+vod/gaming/Glen_Cooley
+vod/gaming/Glen_Cooley/videos
+vod/gaming/Glen_Cooley/videos/NBOTqa5Y_uI.m3u8
+vod/gaming/Glen_Cooley/videos/Q8PRC5m_qss.m3u8
+vod/gaming/Glen_Cooley/videos/ynZKnf0EmZ4.m3u8
+vod/gaming/Jimmy_Broadbent
+vod/gaming/Jimmy_Broadbent/videos
+vod/gaming/Jimmy_Broadbent/videos/JWU85dQp5CQ.m3u8
+vod/gaming/Jimmy_Broadbent/videos/s5I4rzu1fy0.m3u8
+vod/gaming/Jimmy_Broadbent/videos/uFFJJkxnvcY.m3u8
+vod/gaming/Tidgney
+vod/gaming/Tidgney/videos
+vod/gaming/Tidgney/videos/_bU5MP9Why4.m3u8
+vod/gaming/Tidgney/videos/lcIiUJxJ-S0.m3u8
+vod/gaming/Tidgney/videos/uiDaSjBtL-Y.m3u8
+vod/gaming/deadeyedelboy
+vod/gaming/deadeyedelboy/videos
+vod/gaming/deadeyedelboy/videos/C0_jkP7U7dQ.m3u8
+vod/gaming/deadeyedelboy/videos/CqrKZw5IGSU.m3u8
+vod/gaming/deadeyedelboy/videos/jA7KTHwSOO4.m3u8
+vod/music
+vod/music/HitsRadio
+vod/music/HitsRadio/videos
+vod/music/HitsRadio/videos/Il1ySBzx22Y.m3u8
+vod/music/Music_Brokers
+vod/music/Music_Brokers/videos
+vod/music/Music_Brokers/videos/5ZvHmK0Z4JM\u0026pp=QAFIAQ%3D%3D.m3u8
+vod/sports
+vod/sports/talkSPORT
+vod/sports/talkSPORT/videos
+vod/sports/talkSPORT/videos/HMp5HKvS-RY.m3u8
+vod/sports/talkSPORT/videos/bm-sxTgJB8o.m3u8
+vod/sports/talkSPORT/videos/vwYaHkj9P48.m3u8
+vod/vods.txt
 
 23 directories, 24 files
