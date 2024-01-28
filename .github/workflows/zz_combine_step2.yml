@@ -76,5 +76,5 @@ jobs:
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
         git add .
-        git commit -m "Update m3u8 files and create placahnenel ylists"
+        git commit -m "Update m3u8 files and create playlists"
         git push
