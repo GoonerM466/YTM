@@ -24,21 +24,21 @@ jobs:
       run: |
         touch program/temp/VOD_temp.txt
 
+    - name: Find and list m3u8 files
+      run: |
+        find vod -type f -path "vod/videos/*.m3u8" > program/temp/VOD_temp.txt
+        tree vod >> program/temp/VOD_temp.txt
+
     - name: Process m3u8 files
       run: |
-        while IFS= read -r line; do
-          # Extract directory path
-          dir_path=$(dirname "$line")
-          
-          # Generate URL prefix
-          url_prefix="https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/"
+        # Move to the correct directory
+        cd vod
 
-          # Generate complete URL
-          complete_url="$url_prefix$dir_path"
-
+        # Process each line in VOD_temp.txt
+        cat ../program/temp/VOD_temp.txt | while IFS= read -r line; do
           # Extract group, channel_name, and video_name
-          group=$(echo "$dir_path" | cut -d'/' -f2)
-          channel_name=$(echo "$dir_path" | cut -d'/' -f3)
+          group=$(echo "$line" | cut -d'/' -f2)
+          channel_name=$(echo "$line" | cut -d'/' -f4)
           video_name=$(basename "$line")
 
           # Generate m3u8 file path
@@ -51,13 +51,13 @@ jobs:
           fi
 
           # Count the number of m3u8 files in the same directory
-          video_number=$(ls "$dir_path" | grep -c ".m3u8")
+          video_number=$(ls "$group/$channel_name" | grep -c ".m3u8")
 
           # Print the entry for the m3u8 file
           echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$m3u8_path"
-          echo "$complete_url/$video_name" >> "$m3u8_path"
-        done < program/temp/VOD_temp.txt
-
+          echo "$line" >> "$m3u8_path"
+        done
+       
     - name: Commit and push changes
       run: |
         git config --global user.email "you@example.com"
