@@ -28,6 +28,10 @@ jobs:
       run: |
         find vod -type f -path "vod/*/videos/*.m3u8" | sed 's#^vod/##' > program/temp/VOD_temp.txt
 
+    - name: Wipe contents of existing m3u8 files
+      run: |
+        find vod/"$group/$channel_name" -maxdepth 1 -type f -name "*.m3u8" -exec sh -c 'echo -n > "{}"' \;
+
     - name: Process m3u8 files
       run: |
         # Move to the correct directory
@@ -42,13 +46,6 @@ jobs:
 
           # Generate m3u8 file path
           m3u8_path="$group/$channel_name/$channel_name.m3u8"
-
-          # Wipe the contents of the output m3u8 file if it exists
-          if [[ -e "$m3u8_path" ]]; then
-            echo -n > "$m3u8_path"
-          else
-            mkdir -p "$group/$channel_name"
-          fi
 
           # Add header to the m3u8 file
           echo "#EXTM3U" > "$m3u8_path"
