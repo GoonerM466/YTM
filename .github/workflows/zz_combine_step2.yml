@@ -26,8 +26,9 @@ jobs:
 
     - name: Find and list m3u8 files
       run: |
-        find vod -type f -path "vod/videos/*.m3u8" > program/temp/VOD_temp.txt
-        tree -fi vod/videos >> program/temp/VOD_temp.txt
+        find vod -type f -path "vod/*/videos/*.m3u8" > program/temp/VOD_temp.txt
+        tree -fi vod >> program/temp/VOD_temp.txt
+
        
     - name: Commit and push changes
       run: |
