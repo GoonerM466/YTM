@@ -24,11 +24,6 @@ jobs:
       run: |
         touch program/temp/VOD_temp.txt
 
-    - name: Find and list m3u8 files
-      run: |
-        find vod -type f -path "vod/videos/*.m3u8" > program/temp/VOD_temp.txt
-        tree vod >> program/temp/VOD_temp.txt
-
     - name: Process m3u8 files
       run: |
         while IFS= read -r line; do
