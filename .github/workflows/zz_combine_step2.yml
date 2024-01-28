@@ -43,18 +43,19 @@ jobs:
           # Generate m3u8 file path
           m3u8_path="$group/$channel_name/$channel_name.m3u8"
 
-          # Truncate m3u8 file and add header if not already present
-          if [[ ! -e "$m3u8_path" ]]; then
+          # Wipe the contents of the output m3u8 file if it exists
+          if [[ -e "$m3u8_path" ]]; then
+            echo -n > "$m3u8_path"
+          else
             mkdir -p "$group/$channel_name"
-            echo "#EXTM3U" > "$m3u8_path"
-            echo "#EXT-X-VERSION:3" >> "$m3u8_path"
           fi
 
-          # Wipe the contents of the output m3u8 file
-          echo -n > "$m3u8_path"
+          # Add header to the m3u8 file
+          echo "#EXTM3U" > "$m3u8_path"
+          echo "#EXT-X-VERSION:3" >> "$m3u8_path"
 
-          # Count the number of m3u8 files in the same directory
-          video_number=$(ls "$group/$channel_name" | grep -c ".m3u8")
+          # Count the number of m3u8 files in the 'videos' directory
+          video_number=$(ls "$group/$channel_name/videos" | grep -c ".m3u8")
 
           # Append the entry for the m3u8 file with URL prefix
           echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$m3u8_path"
@@ -68,4 +69,3 @@ jobs:
         git add .
         git commit -m "Update m3u8 files and create playlists"
         git push
-
