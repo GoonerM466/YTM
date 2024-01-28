@@ -58,22 +58,6 @@ jobs:
           echo "$line" >> "$m3u8_path"
         done
 
-    - name: Update BANDWIDTH in m3u8 files
-      run: |
-        # Move to the correct directory
-        cd $GITHUB_WORKSPACE/vod || exit 1
-
-        # Process each m3u8 file in vod/group/channel_name
-        find . -type d -name 'videos' -exec sh -c '
-          for m3u8_file in "$1"/*.m3u8; do
-            # Count the number of entries in the m3u8 file
-            entries=$(grep -c "^https" "$m3u8_file")
-
-            # Update BANDWIDTH in the m3u8 file
-            sed -i "s/BANDWIDTH=[0-9]*/BANDWIDTH=$entries/" "$m3u8_file"
-          done
-        ' _ {} \;
-
     - name: Commit and push changes
       run: |
         git config --global user.email "you@example.com"
