@@ -51,7 +51,7 @@ jobs:
           fi
 
           # Count the number of m3u8 files in the same directory
-          video_number=$(grep -c "^$group/$channel_name/$channel_name.m3u8" VOD_temp.txt)
+          video_number=$(grep -c "^$group/$channel_name/$channel_name.m3u8" ../../program/temp/VOD_temp.txt)
 
           # Print the entry for the m3u8 file
           echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$m3u8_path"
