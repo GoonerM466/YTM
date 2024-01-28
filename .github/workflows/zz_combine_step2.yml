@@ -56,7 +56,7 @@ jobs:
           # Count the number of m3u8 files in the same directory
           video_number=$(ls "$group/$channel_name" | grep -c ".m3u8")
 
-          # Print the entry for the m3u8 file with URL prefix
+          # Append the entry for the m3u8 file with URL prefix
           echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$m3u8_path"
           echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$line" >> "$m3u8_path"
         done
@@ -68,3 +68,4 @@ jobs:
         git add .
         git commit -m "Update m3u8 files and create playlists"
         git push
+
