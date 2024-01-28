@@ -33,10 +33,11 @@ jobs:
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
-        git add program/temp/VOD_temp.txt
+        git add -A
+        git status  # For debugging, check the status before committing
         git commit -m "Update VOD_temp.txt with directory tree and m3u8 files"
         git push
-
+          
     - name: Process m3u8 files
       run: |
         while IFS= read -r line; do
@@ -75,6 +76,7 @@ jobs:
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
-        git add .
+        git add -A
+        git status  # For debugging, check the status before committing
         git commit -m "Update m3u8 files and create playlists"
         git push
