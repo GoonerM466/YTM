@@ -22,7 +22,7 @@ jobs:
 
     - name: Create or truncate VOD_temp.txt
       run: |
-        touch program/temp/VOD_temp.txt
+        echo -n > program/temp/VOD_temp.txt
 
     - name: Find and list m3u8 files
       run: |
