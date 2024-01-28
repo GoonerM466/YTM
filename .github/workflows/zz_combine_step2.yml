@@ -29,15 +29,6 @@ jobs:
         find vod -type f -path "vod/videos/*.m3u8" > program/temp/VOD_temp.txt
         tree vod >> program/temp/VOD_temp.txt
 
-    - name: Commit and push changes to VOD_temp.txt
-      run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        git add -A
-        git status  # For debugging, check the status before committing
-        git commit -m "Update VOD_temp.txt with directory tree and m3u8 files"
-        git push
-          
     - name: Process m3u8 files
       run: |
         while IFS= read -r line; do
@@ -72,11 +63,10 @@ jobs:
           echo "$complete_url/$video_name" >> "$m3u8_path"
         done < program/temp/VOD_temp.txt
 
-    - name: Commit and push changes after processing m3u8 files
+    - name: Commit and push changes
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
-        git add -A
-        git status  # For debugging, check the status before committing
+        git add .
         git commit -m "Update m3u8 files and create playlists"
         git push
