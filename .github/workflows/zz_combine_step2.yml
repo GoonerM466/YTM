@@ -30,11 +30,32 @@ jobs:
       run: |
         find ./vod -type f -path "./vod/*/videos/*.m3u8" | sed 's#^./vod/##' > ./program/temp/VOD_temp.txt
 
+    - name: Wipe contents of existing m3u8 files and Add header
+      run: |
+        while IFS= read -r line; do
+          group=$(echo "$line" | cut -d'/' -f1)
+          channel_name=$(echo "$line" | cut -d'/' -f2)
+          
+          # Move to the correct directory
+          cd ./vod/"$group/$channel_name" || exit 1
+
+          # Wipe contents of existing m3u8 files
+          find . -maxdepth 1 -type f -name "*.m3u8" -exec sh -c 'echo -n > "{}"' \;
+
+          # Add header to all m3u8 files
+          for m3u8_file in *.m3u8; do
+            # Check if it's a file and not a directory
+            if [ -f "$m3u8_file" ]; then
+              # Add header only to files, not directories
+              echo "#EXTM3U" > "$m3u8_file"
+              echo "#EXT-X-VERSION:3" >> "$m3u8_file"
+            fi
+          done
+        done < ./program/temp/VOD_temp.txt
+
     - name: Process m3u8 files
       run: |
-        # Process each line in VOD_temp.txt
         cat ./program/temp/VOD_temp.txt | sort | uniq | while IFS= read -r line; do
-          # Extract group, channel_name, and video_name
           group=$(echo "$line" | cut -d'/' -f1)
           channel_name=$(echo "$line" | cut -d'/' -f2)
           video_name=$(basename "$line")
@@ -52,8 +73,10 @@ jobs:
           fi
 
           # Append the entry for the m3u8 file with URL prefix and video_number
-          echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$m3u8_path"
-          echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$line" >> "$m3u8_path"
+          for ((i=1; i<=$video_number; i++)); do
+            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$i" >> "$m3u8_path"
+            echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$line" >> "$m3u8_path"
+          done
         done
 
     - name: Commit and push changes
