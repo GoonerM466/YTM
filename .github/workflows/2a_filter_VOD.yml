@@ -62,5 +62,6 @@ jobs:
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         git add -A
+        git pull origin main --no-rebase
         git diff --cached --quiet || git commit -m "Filter VOD list"
         git push origin main
