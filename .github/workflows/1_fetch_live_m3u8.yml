@@ -7,7 +7,7 @@ on:
   workflow_run:
     workflows:
       - "---Verify URLS--"
-      - "clean Old m3u8s"
+      - "ZZ-Clean Old m3u8s"
     types:
       - completed
 
