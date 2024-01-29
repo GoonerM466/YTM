@@ -1,52 +1,40 @@
-name: 2-Generate VOD m3u
+name: Generate VOD m3u
 
 on:
-  workflow_dispatch:
-    workflows: ["ZZ-Combine VOD Step 2"]
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  generate-m3u:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      with:
-        repository: GoonerM466/YTM
-        ref: main
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Configure Git
-      run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
+      - name: Configure Git
+        run: |
+          git config user.name "Your Name"
+          git config user.email "your.email@example.com"
 
-    - name: Rebase changes
-      run: git pull --rebase origin main
+      - name: Rebase changes
+        run: git pull origin main --rebase
 
-    - name: Run Channel Generation Script
-      run: |
-        echo "Current directory: $GITHUB_WORKSPACE"
-        echo "List of files:"
-        find "$GITHUB_WORKSPACE/vod" -maxdepth 2 -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
-          echo "Processing file: $file"
-          category=$(basename "$(dirname "$file")")
-          channel=$(basename "$(dirname "$(dirname "$file")")")
-          video_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file"
+      - name: Wipe contents of combined_VOD_playlist.m3u8
+        run: echo "#extm3u" > combined_VOD_playlist.m3u8
 
-          # Add new entry
-          echo "#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\" tvg-logo=\"\" group-title=\"$category\",$channel"
-          echo "$video_url"
-        done > combined_VOD_playlist.m3u8
+      - name: Wipe contents of VOD-m3u-temp.txt
+        run: echo "" > ./program/temp/VOD-m3u-temp.txt
 
-    - name: Check for Changes and Pull & Push
-      run: |
-        git diff --exit-code && echo "No changes detected" || (git add combined_VOD_playlist.m3u8 && git commit -m "Update Combined VOD Playlist" && git pull --no-edit origin main && git push)
-        # Check if there are any conflicts after pull
-        git diff --check
-        if [ $? -ne 0 ]; then
-          # Auto-resolve conflicts by choosing one side
-          git checkout --ours combined_VOD_playlist.m3u8
-          git add combined_VOD_playlist.m3u8
-          git commit -m "Auto-resolve conflicts"
-          git push origin main
-        fi
+      - name: Find m3u8 files and print to temp file
+        run: |
+          find ./vod -maxdepth 2 -type f -name "*.m3u8" -exec echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/{}" >> ./program/temp/VOD-m3u-temp.txt \;
+
+      - name: Commit changes
+        run: |
+          git add combined_VOD_playlist.m3u8 ./program/temp/VOD-m3u-temp.txt
+          git commit -m "Update VOD m3u files"
+          
+      - name: Push changes
+        run: git push origin main
