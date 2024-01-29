@@ -1,4 +1,4 @@
-name: Extract and Format M3U8 URL Workflow
+name: ZZ-Test M3u Output
 
 on:
   workflow_dispatch:
