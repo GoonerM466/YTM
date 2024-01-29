@@ -1,0 +1,14 @@
+#extinf:-1 tvg-chno="1" tvg-id="The_Why_Files" tvg-name="The_Why_Files" group-title="The Why Files",The_Why_Files
+https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/documentary/The_Why_Files/The_Why_Files.m3u8
+#extinf:-1 tvg-chno="1" tvg-id="Music_Brokers" tvg-name="Music_Brokers" group-title="Music Brokers",Music_Brokers
+https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/music/Music_Brokers/Music_Brokers.m3u8
+#extinf:-1 tvg-chno="1" tvg-id="HitsRadio" tvg-name="HitsRadio" group-title="HitsRadio",HitsRadio
+https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/music/HitsRadio/HitsRadio.m3u8
+#extinf:-1 tvg-chno="1" tvg-id="Glen_Cooley" tvg-name="Glen_Cooley" group-title="Glen Cooley",Glen_Cooley
+https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/gaming/Glen_Cooley/Glen_Cooley.m3u8
+#extinf:-1 tvg-chno="1" tvg-id="Jimmy_Broadbent" tvg-name="Jimmy_Broadbent" group-title="Jimmy Broadbent",Jimmy_Broadbent
+https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/gaming/Jimmy_Broadbent/Jimmy_Broadbent.m3u8
+#extinf:-1 tvg-chno="1" tvg-id="deadeyedelboy" tvg-name="deadeyedelboy" group-title="deadeyedelboy",deadeyedelboy
+https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/gaming/deadeyedelboy/deadeyedelboy.m3u8
+#extinf:-1 tvg-chno="1" tvg-id="Tidgney" tvg-name="Tidgney" group-title="Tidgney",Tidgney
+https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/gaming/Tidgney/Tidgney.m3u8
