@@ -1,4 +1,4 @@
-name: Clean CHannel Log
+name: ZZ-Clean CHannel Log
 
 on:
   workflow_run:
