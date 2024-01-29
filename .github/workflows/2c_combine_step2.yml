@@ -31,8 +31,8 @@ jobs:
         find ./vod -type f -path "./vod/*/videos/*.m3u8" | sed 's#^./vod/##' > ./program/temp/VOD_temp.txt
     - name: Wipe contents of existing m3u8 files and Add header
       run: |
-        find ./vod -mindepth 3 -maxdepth 3 -type f -name "*.m3u8" -execdir sh -c 'echo -n > "{}"' \;
-        find ./vod -mindepth 3 -maxdepth 3 -type f -name "*.m3u8" -execdir sh -c 'echo "#EXTM3U" > "{}"; echo "#EXT-X-VERSION:3" >> "{}"' \;
+        find ./vod -mindepth 2 -maxdepth 2 -type f -name "*.m3u8" -execdir sh -c 'echo -n > "{}"' \;
+        find ./vod -mindepth 2 -maxdepth 2 -type f -name "*.m3u8" -execdir sh -c 'echo "#EXTM3U" > "{}"; echo "#EXT-X-VERSION:3" >> "{}"' \;
     - name: Process m3u8 files
       run: |
         cat ./program/temp/VOD_temp.txt | sort | uniq | while IFS= read -r line; do
