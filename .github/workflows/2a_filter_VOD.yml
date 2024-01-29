@@ -1,4 +1,4 @@
-name: zz-Filter VOD
+name: 2a-Filter VOD
 
 on:
   workflow_dispatch:
