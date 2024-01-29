@@ -1,4 +1,4 @@
-name: 3-Generate XMLTV
+name: 1d-Generate XMLTV
 
 on:
   schedule:
