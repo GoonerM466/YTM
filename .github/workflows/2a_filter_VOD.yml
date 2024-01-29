@@ -3,7 +3,7 @@ name: 2a-Filter VOD
 on:
   workflow_run:
     workflows:
-      - "---Verify URLS--"
+      - "2-Extract and Fetch VOD"
   workflow_dispatch:
 
 jobs:
