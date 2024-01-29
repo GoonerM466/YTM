@@ -1,4 +1,4 @@
-name: 2A-Fetch Scheduled
+name: 1e-Fetch Scheduled
 
 on:
   schedule:
