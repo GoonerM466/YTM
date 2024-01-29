@@ -2,7 +2,7 @@ name: 2-Extract and Fetch VOD
 
 on:
   schedule:
-    - cron: '15 0/8 * * *'
+    - cron: '15 2/12 * * *'
   workflow_dispatch:
 
 jobs:
