@@ -85,6 +85,6 @@ jobs:
         git add ./program/temp/VOD_to_fetch.txt
         git add ./program/temp/processed_video_ids.txt
         git commit -m "Update VOD_to_fetch.txt with latest videos"
-        git pull origin main
+        git pull origin main --no-rebase
         git merge -s ours origin/main
         git push origin main
