@@ -1,4 +1,4 @@
-name: Clean Old m3u8s
+name: ZZ-Clean Old m3u8s
 on:
   schedule:
     - cron: '0 23 * * *'
