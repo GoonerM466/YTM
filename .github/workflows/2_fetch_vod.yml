@@ -33,6 +33,9 @@ jobs:
         touch ./program/temp/processed_video_ids.txt
         > ./program/temp/processed_video_ids.txt
 
+    - name: Wait for 1 minutes
+      run: sleep 60
+
     - name: Create Temp File with Modified Channel Names
       run: |
         awk -F ', ' '{ gsub(/ /, "_", $1); print $0 }' current_channels.txt > ./program/temp/temp_channels.txt
