@@ -60,15 +60,9 @@ jobs:
           echo "$video_url"
         done >> combined_VOD_playlist.m3u8
 
-    - name: Check for Changes and Pull & Push
+    - name: Pull & Push Changes
       run: |
-        git diff --exit-code && echo "No changes detected" || (git add combined_VOD_playlist.m3u8 && git commit -m "Update Combined VOD Playlist" && git pull --no-edit origin main && git push)
-        # Check if there are any conflicts after pull
-        git diff --check
-        if [ $? -ne 0 ]; then
-          # Auto-resolve conflicts by choosing one side
-          git checkout --ours combined_VOD_playlist.m3u8
+          git pull --rebase --autostash origin main
           git add combined_VOD_playlist.m3u8
-          git commit -m "Auto-resolve conflicts"
+          git commit -m "Update Combined VOD Playlist"
           git push origin main
-        fi
