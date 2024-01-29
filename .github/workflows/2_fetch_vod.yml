@@ -1,4 +1,4 @@
-name: Extract and Fetch VOD
+name: 2-Extract and Fetch VOD
 
 on:
   workflow_dispatch:
