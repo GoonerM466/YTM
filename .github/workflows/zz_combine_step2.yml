@@ -32,16 +32,33 @@ jobs:
       run: |
         echo "Current directory: $GITHUB_WORKSPACE"
         echo "List of files:"
-        find "$GITHUB_WORKSPACE/vod" -maxdepth 2 -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
+        find "./vod" -maxdepth 2 -type f -name '*.m3u8' -print0
+
+        # Add debugging statements to check if the files are found
+        if [ "$(find "$./vod" -maxdepth 2 -type f -name '*.m3u8')" != "" ]; then
+          echo "Files found."
+        else
+          echo "No files found."
+          exit 1  # Exit with an error code if no files are found
+        fi
+
+        # Continue with the loop
+        find "./vod" -maxdepth 2 -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
           echo "Processing file: $file"
           category=$(basename "$(dirname "$file")")
           channel=$(basename "$(dirname "$(dirname "$file")")")
           video_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file"
 
+          # Check if the channel already exists in combined_VOD_playlist.m3u8
+          if grep -q "#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\"" combined_VOD_playlist.m3u8; then
+            # Remove existing entries with the same $channel_name and the following line
+            sed -i "/#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\"/,+1d" combined_VOD_playlist.m3u8
+          fi
+
           # Add new entry
           echo "#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\" tvg-logo=\"\" group-title=\"$category\",$channel"
           echo "$video_url"
-        done >> combined_VOD_playlist.m3u8  # Use '>>' to append to the file
+        done >> combined_VOD_playlist.m3u8
 
     - name: Check for Changes and Pull & Push
       run: |
