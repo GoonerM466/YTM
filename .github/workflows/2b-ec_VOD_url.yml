@@ -1,6 +1,11 @@
 name: 2b-EC VOD URLs
 
 on:
+  workflow_run:
+    workflows:
+      - "2a-Filter VOD"
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       input_file:
