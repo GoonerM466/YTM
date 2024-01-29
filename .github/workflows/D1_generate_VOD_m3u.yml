@@ -1,9 +1,7 @@
 name: Generate VOD m3u
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   generate-m3u:
