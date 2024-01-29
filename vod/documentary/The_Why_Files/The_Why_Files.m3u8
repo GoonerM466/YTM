@@ -2,7 +2,7 @@
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:NAME="1",RESOLUTION=1920x1080,BANDWIDTH=500000
 https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/documentary/The_Why_Files/videos/9Rs_e21MJvA.m3u8
-#EXT-X-STREAM-INF:NAME="2",RESOLUTION=1920x1080,BANDWIDTH=500000
+#EXT-X-STREAM-INF:NAME="2",RESOLUTION=1280x720,BANDWIDTH=400000
 https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/documentary/The_Why_Files/videos/D5DVy-ZCieA.m3u8
-#EXT-X-STREAM-INF:NAME="3",RESOLUTION=1920x1080,BANDWIDTH=500000
+#EXT-X-STREAM-INF:NAME="3",RESOLUTION=640x480,BANDWIDTH=300000
 https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/documentary/The_Why_Files/videos/UhXsyhXAe_M.m3u8
