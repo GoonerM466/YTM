@@ -1,68 +1,64 @@
-name: 2-Generate VOD m3u
+name: ZZ-Combine VOD Step 2
 
 on:
   workflow_dispatch:
-    workflows: ["ZZ-Combine VOD Step 2"]
 
 jobs:
-  build:
+  process_vod:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
+    - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Debug Info
+      run: |
+        pwd
+        ls -la ./program/temp
+        echo -n > ./program/temp/VOD_temp.txt
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        repository: GoonerM466/YTM
-        ref: main
+        python-version: 3.8
 
-    - name: Configure Git
+    - name: Install dependencies
       run: |
-        git config --global user.email "actions@github.com"
-        git config --global user.name "GitHub Actions"
-
-    - name: Rebase changes
-      run: git pull --rebase origin main
-
-    - name: Clear and Initialize combined_VOD_playlist.m3u8
+        pip install tree
+    - name: Find and list m3u8 files
       run: |
-        echo "#extm3u" > combined_VOD_playlist.m3u8
-        echo -n > combined_VOD_playlist.m3u8
-
-    - name: Run Channel Generation Script
+        find ./vod -type f -path "./vod/*/videos/*.m3u8" | sed 's#^./vod/##' > ./program/temp/VOD_temp.txt
+    - name: Wipe contents of existing m3u8 files and Add header
       run: |
-        echo "Current directory: $GITHUB_WORKSPACE"
-        echo "List of files:"
-        find "./vod" -maxdepth 2 -type f -name '*.m3u8' -print0
-
-        # Add debugging statements to check if the files are found
-        if [ "$(find "$./vod" -maxdepth 2 -type f -name '*.m3u8')" != "" ]; then
-          echo "Files found."
-        else
-          echo "No files found."
-          exit 1  # Exit with an error code if no files are found
-        fi
-
-        # Continue with the loop
-        find "./vod" -maxdepth 2 -type f -name '*.m3u8' -print0 | while IFS= read -r -d '' file; do
-          echo "Processing file: $file"
-          category=$(basename "$(dirname "$file")")
-          channel=$(basename "$(dirname "$(dirname "$file")")")
-          video_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file"
-
-          # Check if the channel already exists in combined_VOD_playlist.m3u8
-          if grep -q "#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\"" combined_VOD_playlist.m3u8; then
-            # Remove existing entries with the same $channel_name and the following line
-            sed -i "/#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\"/,+1d" combined_VOD_playlist.m3u8
+        find ./vod -mindepth 3 -maxdepth 3 -type f -name "*.m3u8" -execdir sh -c 'echo -n > "{}"' \;
+        find ./vod -mindepth 3 -maxdepth 3 -type f -name "*.m3u8" -execdir sh -c 'echo "#EXTM3U" > "{}"; echo "#EXT-X-VERSION:3" >> "{}"' \;
+    - name: Process m3u8 files
+      run: |
+        cat ./program/temp/VOD_temp.txt | sort | uniq | while IFS= read -r line; do
+          group=$(echo "$line" | cut -d'/' -f1)
+          channel_name=$(echo "$line" | cut -d'/' -f2)
+          # Generate m3u8 file path
+          m3u8_path="./vod/$group/$channel_name/$channel_name.m3u8"
+          # Check if some condition is not met
+          if [ ! -f "$m3u8_path" ]; then
+            echo "Error: No m3u8 file found for $line. Skipping..."
+            continue
           fi
-
-          # Add new entry
-          echo "#EXTINF:-1 tvg-id=\"$channel\" tvg-name=\"$channel\" tvg-logo=\"\" group-title=\"$category\",$channel"
-          echo "$video_url"
-        done >> combined_VOD_playlist.m3u8
-
+          # Add header to the m3u8 file
+          echo "#EXTM3U" > "$m3u8_path"
+          echo "#EXT-X-VERSION:3" >> "$m3u8_path"
+          # Append the entry for the m3u8 file with URL prefix and unique numbering
+          i=1
+          while IFS= read -r video_file; do
+            echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$i" >> "$m3u8_path"
+            echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/vod/$group/$channel_name/videos/$video_file" >> "$m3u8_path"
+            ((i++))
+          done < <(ls "./vod/$group/$channel_name/videos" | grep ".m3u8")
+        done
     - name: Pull & Push Changes
       run: |
-          git pull --rebase --autostash origin main
-          git add combined_VOD_playlist.m3u8
-          git commit -m "Update Combineded VODs"
-          git push origin main
+        git pull --rebase --autostash origin main
+        git add 
+        git commit -m "Update m3u8 files and create playlists"
+        git push origin main
+
+        git push origin main
