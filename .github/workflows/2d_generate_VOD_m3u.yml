@@ -1,12 +1,9 @@
-name: 2d-Generate VOD m3u
+name: Generate VOD m3u
 
 on:
-  workflow_run:
-    workflows:
-      - "2c-Combine VOD Step 2"
-    types:
-      - completed
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   generate-m3u:
@@ -49,10 +46,11 @@ jobs:
             echo "#extinf:-1 tvg-chno=\"1\" tvg-id=\"$formatted_channel_name\" tvg-name=\"$formatted_channel_name\" group-title=\"$group\",$formatted_channel_name" >> combined_VOD_playlist.m3u8
             echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
           done < ./program/temp/VOD-m3u-temp.txt
-          
-      - name: Commit and Push Changes
+
+      - name: Commit changes
         run: |
-          git pull --rebase --autostash origin main
-          git commit --allow-empty -m "Update Combined VOD Playlist"
-          git push origin main
-    
+          git add combined_VOD_playlist.m3u8
+          git commit -m "Update VOD m3u files"
+          
+      - name: Push changes
+        run: git push origin main
