@@ -28,9 +28,25 @@ jobs:
         run: |
           find ./vod -type f -name "*.m3u8" -not -path "./vod/*/videos/*" -exec ls -l {} \; > ./program/temp/VOD-m3u-temp.txt
 
+      - name: Process VOD entries
+        run: |
+          while IFS= read -r line; do
+            # Extract information from each line
+            file_path=$(echo "$line" | grep -oP 'vod.*\.m3u8')
+            group=$(echo "$file_path" | cut -d'/' -f2)
+            channel_name=$(echo "$file_path" | cut -d'/' -f3)
+
+            # Construct the channel VOD URL
+            channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
+
+            # Append entry to combined_VOD_playlist.m3u8
+            echo "#extinf:-1 tvg-chno=\"1\" tvg-id=\"$channel_name\" tvg-name=\"$channel_name\" group-title=\"$group\",$channel_name" >> combined_VOD_playlist.m3u8
+            echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
+          done < ./program/temp/VOD-m3u-temp.txt
+
       - name: Commit changes
         run: |
-          git add combined_VOD_playlist.m3u8 ./program/temp/VOD-m3u-temp.txt
+          git add combined_VOD_playlist.m3u8
           git commit -m "Update VOD m3u files"
           
       - name: Push changes
