@@ -1,9 +1,3 @@
-entertainment/EERIEISSSS/videos/RM_eI9VA-0g.m3u8
-entertainment/EERIEISSSS/videos/FtOCWPq5uw0.m3u8
-entertainment/EERIEISSSS/videos/JRHSboaysfY.m3u8
-sports/talkSPORT/videos/vwYaHkj9P48.m3u8
-sports/talkSPORT/videos/HMp5HKvS-RY.m3u8
-sports/talkSPORT/videos/bm-sxTgJB8o.m3u8
 documentary/The_Why_Files/videos/D5DVy-ZCieA.m3u8
 documentary/The_Why_Files/videos/UhXsyhXAe_M.m3u8
 documentary/The_Why_Files/videos/9Rs_e21MJvA.m3u8
