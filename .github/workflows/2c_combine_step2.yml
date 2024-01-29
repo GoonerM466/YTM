@@ -1,4 +1,4 @@
-name: ZZ-Combine VOD Step 2
+name: 2c-Combine VOD Step 2
 
 on:
   workflow_dispatch:
