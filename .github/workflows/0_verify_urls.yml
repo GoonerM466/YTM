@@ -1,4 +1,4 @@
-name: 0-Verify Urls
+name: ---Verify URLS--
 
 on:
   workflow_dispatch:
