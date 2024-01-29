@@ -40,11 +40,6 @@ jobs:
           channel_name=$(echo "$line" | cut -d'/' -f2)
           # Generate m3u8 file path
           m3u8_path="./vod/$group/$channel_name/$channel_name.m3u8"
-          # Check if some condition is not met
-          if [ ! -f "$m3u8_path" ]; then
-            echo "Error: No m3u8 file found for $line. Skipping..."
-            continue
-          fi
           # Add header to the m3u8 file
           echo "#EXTM3U" > "$m3u8_path"
           echo "#EXT-X-VERSION:3" >> "$m3u8_path"
