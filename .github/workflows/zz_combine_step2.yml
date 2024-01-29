@@ -32,21 +32,8 @@ jobs:
 
     - name: Wipe contents of existing m3u8 files and Add header
       run: |
-        # Move to the correct directory
-        cd ./vod/"$group/$channel_name" || exit 1
-
-        # Wipe contents of existing m3u8 files
-        find . -maxdepth 1 -type f -name "*.m3u8" -exec sh -c 'echo -n > "{}"' \;
-
-        # Add header to all m3u8 files
-        for m3u8_file in *.m3u8; do
-          # Check if it's a file and not a directory
-          if [ -f "$m3u8_file" ]; then
-            # Add header only to files, not directories
-            echo "#EXTM3U" > "$m3u8_file"
-            echo "#EXT-X-VERSION:3" >> "$m3u8_file"
-          fi
-        done
+        find ./vod -mindepth 3 -maxdepth 3 -type f -name "*.m3u8" -execdir sh -c 'echo -n > "{}"' \;
+        find ./vod -mindepth 3 -maxdepth 3 -type f -name "*.m3u8" -execdir sh -c 'echo "#EXTM3U" > "{}"; echo "#EXT-X-VERSION:3" >> "{}"' \;
 
     - name: Process m3u8 files
       run: |
