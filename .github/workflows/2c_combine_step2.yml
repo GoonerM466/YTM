@@ -59,6 +59,12 @@ jobs:
             ((i++))
           done < <(ls "./vod/$group/$channel_name/videos" | grep ".m3u8")
         done
+        
+    - name: Set Git User Identity
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+
     - name: Pull & Push Changes
       run: |
         git pull --rebase --autostash origin main
