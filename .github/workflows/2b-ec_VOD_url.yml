@@ -1,4 +1,4 @@
-name: zz-EC VOD URLs
+name: 2b-EC VOD URLs
 
 on:
   workflow_dispatch:
