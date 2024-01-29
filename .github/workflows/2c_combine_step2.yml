@@ -65,11 +65,11 @@ jobs:
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
 
-    - name: Pull & Push Changes
+    - name: Commit and Push Changes
       run: |
         git pull --rebase --autostash origin main
-        git add 
-        git commit -m "Update m3u8 files and create playlists"
+        git commit --allow-empty -m "Update m3u8 files and create playlists"
         git push origin main
+
 
         git push origin main
