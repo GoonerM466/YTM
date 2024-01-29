@@ -1,4 +1,4 @@
-name: Clean Old EPG
+name: ZZ-Clean Old EPG
 
 on:
   workflow_dispatch:
