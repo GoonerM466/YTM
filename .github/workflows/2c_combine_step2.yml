@@ -1,6 +1,11 @@
 name: 2c-Combine VOD Step 2
 
 on:
+  workflow_run:
+    workflows:
+      - "2b-EC VOD URLs"
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
