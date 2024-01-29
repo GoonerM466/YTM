@@ -1,9 +1,12 @@
-name: Generate VOD m3u
+name: 2d-Generate VOD m3u
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows:
+      - "2c-Combine VOD Step 2"
+    types:
+      - completed
+  workflow_dispatch:
 
 jobs:
   generate-m3u:
