@@ -25,7 +25,7 @@ jobs:
 
       - name: Find and list m3u8 files excluding "videos" folder
         run: |
-          find ./vod mindepth 3 -maxdepth 3 -type f -name "*.m3u8" " -exec ls -l {} \; > ./program/temp/VOD-m3u-temp.txt
+          find ./vod -mindepth 3 -maxdepth 3 -type f -name "*.m3u8" -exec ls -l {} \; > ./program/temp/VOD-m3u-temp.txt
 
       - name: Process VOD entries
         run: |
