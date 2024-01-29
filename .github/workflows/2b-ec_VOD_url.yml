@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows:
       - "2a-Filter VOD"
+      - "1-Fetch Live m3u8"
     types:
       - completed
   workflow_dispatch:
