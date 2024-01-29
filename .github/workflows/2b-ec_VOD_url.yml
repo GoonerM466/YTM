@@ -106,6 +106,7 @@ jobs:
       run: |
         git add ./program/temp/VOD_to_fetch_temp.txt
         git add ./vod
+        git pull origin main --no-rebase
         git commit -m "Update vod files"
         git push -f  # Force push changes
 
