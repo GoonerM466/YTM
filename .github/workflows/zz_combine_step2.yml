@@ -11,6 +11,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Debug Info
+      run: |
+        pwd
+        ls -la ./program/temp
+        echo -n > ./program/temp/VOD_temp.txt
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -20,25 +26,21 @@ jobs:
       run: |
         pip install tree
 
-    - name: Create or truncate VOD_temp.txt
-      run: |
-        echo -n > /github/workspace/program/temp/VOD_temp.txt
-
     - name: Find and list m3u8 files
       run: |
-        find /github/workspace -type f -path "/github/workspace/*/videos/*.m3u8" | sed 's#^/github/workspace/##' > /github/workspace/program/temp/VOD_temp.txt
+        find ./vod -type f -path "./vod/*/videos/*.m3u8" | sed 's#^./vod/##' > ./program/temp/VOD_temp.txt
 
     - name: Process m3u8 files
       run: |
         # Process each line in VOD_temp.txt
-        cat /github/workspace/program/temp/VOD_temp.txt | sort | uniq | while IFS= read -r line; do
+        cat ./program/temp/VOD_temp.txt | sort | uniq | while IFS= read -r line; do
           # Extract group, channel_name, and video_name
           group=$(echo "$line" | cut -d'/' -f1)
           channel_name=$(echo "$line" | cut -d'/' -f2)
           video_name=$(basename "$line")
 
           # Generate m3u8 file path
-          m3u8_path="/github/workspace/vod/$group/$channel_name/$channel_name.m3u8"
+          m3u8_path="./vod/$group/$channel_name/$channel_name.m3u8"
 
           # Check if m3u8 file already exists
           if [ ! -f "$m3u8_path" ]; then
@@ -48,7 +50,7 @@ jobs:
           fi
 
           # Count the number of m3u8 files in the 'videos' directory
-          video_number=$(ls "/github/workspace/vod/$group/$channel_name/videos" | grep -c ".m3u8")
+          video_number=$(ls "./vod/$group/$channel_name/videos" | grep -c ".m3u8")
 
           # Check if some condition is not met
           if [ "$video_number" -eq 0 ]; then
