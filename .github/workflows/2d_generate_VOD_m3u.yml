@@ -1,4 +1,4 @@
-name: Generate VOD m3u
+name: 2d-Generate VOD m3u
 
 on:
   workflow_dispatch:
