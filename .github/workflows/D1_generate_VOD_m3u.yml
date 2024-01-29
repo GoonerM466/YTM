@@ -28,7 +28,8 @@ jobs:
         run: echo "" > ./program/temp/VOD-m3u-temp.txt
 
       - name: Find m3u8 files and print to temp file
-        run: find ./vod -maxdepth 2 -type f -name "*.m3u8" -exec bash -c 'echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/$1" >> ./program/temp/VOD-m3u-temp.txt' _ {} \;
+        run: |
+          find ./vod -maxdepth 2 -type f -name "*.m3u8" -exec bash -c 'echo "Found file: $1"; echo "https://raw.githubusercontent.com/GoonerM466/YTM/main/$1" >> ./program/temp/VOD-m3u-temp.txt' _ {} \;
 
       - name: Commit changes
         run: |
