@@ -22,44 +22,23 @@ jobs:
 
     - name: Create or truncate VOD_temp.txt
       run: |
-        echo -n > program/temp/VOD_temp.txt
+        echo -n > /github/workspace/program/temp/VOD_temp.txt
 
     - name: Find and list m3u8 files
       run: |
-        find vod -type f -path "vod/*/videos/*.m3u8" | sed 's#^vod/##' > program/temp/VOD_temp.txt
-
-    - name: Wipe contents of existing m3u8 files and Add header
-      run: |
-        # Move to the correct directory
-        cd vod/"$group/$channel_name" || exit 1
-
-        # Wipe contents of existing m3u8 files
-        find . -maxdepth 1 -type f -name "*.m3u8" -exec sh -c 'echo -n > "{}"' \;
-
-        # Add header to all m3u8 files
-        for m3u8_file in *.m3u8; do
-          # Check if it's a file and not a directory
-          if [ -f "$m3u8_file" ]; then
-            # Add header only to files, not directories
-            echo "#EXTM3U" > "$m3u8_file"
-            echo "#EXT-X-VERSION:3" >> "$m3u8_file"
-          fi
-        done
+        find /github/workspace -type f -path "/github/workspace/*/videos/*.m3u8" | sed 's#^/github/workspace/##' > /github/workspace/program/temp/VOD_temp.txt
 
     - name: Process m3u8 files
       run: |
-        # Move to the correct directory
-        cd vod || exit 1
-
         # Process each line in VOD_temp.txt
-        cat program/temp/VOD_temp.txt | sort | uniq | while IFS= read -r line; do
+        cat /github/workspace/program/temp/VOD_temp.txt | sort | uniq | while IFS= read -r line; do
           # Extract group, channel_name, and video_name
           group=$(echo "$line" | cut -d'/' -f1)
           channel_name=$(echo "$line" | cut -d'/' -f2)
           video_name=$(basename "$line")
 
           # Generate m3u8 file path
-          m3u8_path="$group/$channel_name/$channel_name.m3u8"
+          m3u8_path="/github/workspace/vod/$group/$channel_name/$channel_name.m3u8"
 
           # Check if m3u8 file already exists
           if [ ! -f "$m3u8_path" ]; then
@@ -69,7 +48,13 @@ jobs:
           fi
 
           # Count the number of m3u8 files in the 'videos' directory
-          video_number=$(ls "$group/$channel_name/videos" | grep -c ".m3u8")
+          video_number=$(ls "/github/workspace/vod/$group/$channel_name/videos" | grep -c ".m3u8")
+
+          # Check if some condition is not met
+          if [ "$video_number" -eq 0 ]; then
+            echo "Error: No m3u8 files found for $line. Skipping..."
+            continue
+          fi
 
           # Append the entry for the m3u8 file with URL prefix
           echo "#EXT-X-STREAM-INF:NAME=\"FHD\",RESOLUTION=1920x1080,BANDWIDTH=$video_number" >> "$m3u8_path"
