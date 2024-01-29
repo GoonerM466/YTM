@@ -1,1 +1,9 @@
-
+-rw-r--r-- 1 runner docker 532 Jan 29 07:18 ./vod/entertainment/EERIEISSSS/EERIEISSSS.m3u8
+-rw-r--r-- 1 runner docker 508 Jan 29 07:18 ./vod/sports/talkSPORT/talkSPORT.m3u8
+-rw-r--r-- 1 runner docker 535 Jan 29 07:18 ./vod/documentary/The_Why_Files/The_Why_Files.m3u8
+-rw-r--r-- 1 runner docker 210 Jan 29 07:18 ./vod/music/Music_Brokers/Music_Brokers.m3u8
+-rw-r--r-- 1 runner docker 185 Jan 29 07:18 ./vod/music/HitsRadio/HitsRadio.m3u8
+-rw-r--r-- 1 runner docker 514 Jan 29 07:18 ./vod/gaming/Glen_Cooley/Glen_Cooley.m3u8
+-rw-r--r-- 1 runner docker 526 Jan 29 07:18 ./vod/gaming/Jimmy_Broadbent/Jimmy_Broadbent.m3u8
+-rw-r--r-- 1 runner docker 520 Jan 29 07:18 ./vod/gaming/deadeyedelboy/deadeyedelboy.m3u8
+-rw-r--r-- 1 runner docker 502 Jan 29 07:18 ./vod/gaming/Tidgney/Tidgney.m3u8
