@@ -50,9 +50,9 @@ jobs:
             echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
           done < ./program/temp/VOD-m3u-temp.txt
           
-      - name: Pull & Push Changes
+      - name: Commit and Push Changes
         run: |
           git pull --rebase --autostash origin main
-          git add combined_VOD_playlist.m3u8
-          git commit -m "Update Combined VOD Playlist"
+          git commit --allow-empty -m "Update Combined VOD Playlist"
           git push origin main
+    
