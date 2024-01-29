@@ -1,6 +1,9 @@
 name: 2a-Filter VOD
 
 on:
+  workflow_run:
+    workflows:
+      - "---Verify URLS--"
   workflow_dispatch:
 
 jobs:
