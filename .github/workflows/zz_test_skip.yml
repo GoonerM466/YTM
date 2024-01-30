@@ -42,7 +42,7 @@ jobs:
             channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
 
             # Find matching entry in live_vod_meta.txt
-            matching_entry=$(grep "https://youtube.com/watch?v=$file_name" live_vod_meta.txt)
+            matching_entry=$(grep "https://youtube.com/watch?v=$file_name" ./program/temp/live_vod_meta.txt)
 
             # Extract additional information from matching entry
             video_url=$(echo "$matching_entry" | cut -d',' -f3)
