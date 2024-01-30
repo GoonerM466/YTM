@@ -29,7 +29,6 @@ jobs:
 
     - name: Fetch video information
       run: |
-        set -x
         # Use a temporary file to store the updated information
         temp_file="./program/temp/VOD_to_fetch_temp.txt.tmp"
         > "$temp_file"  # Clear the temp file
@@ -56,8 +55,7 @@ jobs:
           # Save information to the temporary file
           echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
-        set +x
-
+ 
         # Overwrite the original file with the updated information
         mv "$temp_file" "./program/temp/live_vod_meta.txt"
 
