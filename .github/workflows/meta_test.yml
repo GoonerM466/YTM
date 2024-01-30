@@ -49,7 +49,7 @@ jobs:
 
     - name: Add, Commit, and Push Changes
       run: |
-        git add ./program/temp/VOD_to_fetch_temp.txt
+        git add 
         git commit -m "Update VOD_to_fetch_temp.txt with latest videos & metadata"
         git pull origin main --no-rebase
         git merge -s ours origin/main
