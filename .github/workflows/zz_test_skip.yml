@@ -31,20 +31,30 @@ jobs:
           while IFS= read -r line; do
             # Extract information from each line
             file_path=$(echo "$line" | grep -oP 'vod.*\.m3u8')
-            group=$(echo "$file_path" | cut -d'/' -f2)
-            channel_name=$(echo "$file_path" | cut -d'/' -f3)
             file_name=$(basename "$file_path" | cut -d'.' -f1)
+
+            # Find matching entry in live_vod_meta.txt based on video_ID
+            matching_entry=$(grep "$file_name" ./program/temp/live_vod_meta.txt | head -n 1)
+
+            # Extract information from the matching entry
+            IFS=', ' read -r -a entry_fields <<< "$matching_entry"
+            channel_name="${entry_fields[0]}"
+            group="${entry_fields[1]}"
+            video_url="${entry_fields[2]}"
+            video_image="${entry_fields[3]}"
+            title="${entry_fields[4]}"
+            upload_date="${entry_fields[5]}"
+            view_count="${entry_fields[6]}"
 
             # Replace underscores with spaces only for combined_VOD_playlist.m3u8 output
             formatted_channel_name=$(echo "$channel_name" | tr '_' ' ')
 
-            # Get additional metadata from live_vod_meta.txt
-            metadata_line=$(grep "$file_name" ./program/temp/live_vod_meta.txt)
-            IFS=',' read -r channel_name group video_url video_image title upload_date view_count <<< "$metadata_line"
-
             # Construct the channel VOD URL
+            channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
+
+            # Append entry to combined_VOD_playlist.m3u8
             echo "#EXTINF:-1 tvg-id=\"$title - $upload_date - $view_count\" tvg-name=\"$title - $upload_date - $view_count\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$title - $upload_date - $view_count" >> test_skip.m3u8
-            echo "$video_url" >> test_skip.m3u8
+            echo "$channel_vod_url" >> test_skip.m3u8
           done < ./program/temp/live_vod_temp.txt
 
       - name: Commit changes
@@ -52,6 +62,6 @@ jobs:
           git add test_skip.m3u8
           git add ./program/temp/live_vod_temp.txt
           git commit -m "Update VOD m3u files"
-
+          
       - name: Push changes
         run: git push origin main
