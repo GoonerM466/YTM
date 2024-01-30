@@ -30,7 +30,7 @@ jobs:
 
     - name: Wait for 1 minute
       run: sleep 60
-      
+
     - name: Create Temp File with Modified Channel Names
       run: |
         awk -F ', ' '{ gsub(/ /, "_", $1); print $0 }' current_channels.txt > ./program/temp/temp_channels.txt
@@ -43,12 +43,22 @@ jobs:
         while IFS=', ' read -r channel_name group channel_url; do
           # Remove "live" from channel_url and append "videos"
           modified_url="${channel_url/live/videos}"
+
           # Fetching HTML content of the streams page
-          html_content=$(curl -s "$modified_url")
+          html_content=$(curl -s "$modified_url" | head -n 20)
+
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
             # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
-            video_ids=$(echo "$html_content" | grep -oP '"videoId":"([^"]+)"' | cut -d'"' -f4 | head -n 10)
+            video_ids=$(echo "$html_content" | grep -oP '"videoId":"([^"]+)"' | cut -d'"' -f4 | head -n 5)
+
+            # Check if video_ids is empty and try again without "@" in channel_url
+            if [ -z "$video_ids" ] && [[ "$channel_url" == *'@'* ]]; then
+              modified_url="${channel_url/@/}"
+              html_content=$(curl -s "$modified_url/videos" | head -n 20)
+              video_ids=$(echo "$html_content" | grep -oP '"videoId":"([^"]+)"' | cut -d'"' -f4 | head -n 5)
+            fi
+
             # Loop through each video ID
             for video_id in $video_ids; do
               # Check if video_id is not empty and has not been processed before
@@ -63,7 +73,7 @@ jobs:
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp/vod_uploads_to_fetch.txt
+                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp/vod_to_fetch.txt
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> ./program/temp/processed_video_ids.txt
               else
@@ -76,10 +86,10 @@ jobs:
             echo "Error: Failed to fetch HTML content for $channel_name"
           fi
         done <<< "$channel_info"
-        
+
     - name: Add, Commit, and Push Changes
       run: |
-        git add ./program/temp/vod_uploads_to_fetch.txt
+        git add ./program/temp/vod_to_fetch.txt
         git add ./program/temp/temp_channels.txt
         git add ./program/temp/processed_video_ids.txt
         git commit -m "Update vod_to_fetch.txt with latest videos & metadata"
