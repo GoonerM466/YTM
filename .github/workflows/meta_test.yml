@@ -23,8 +23,8 @@ jobs:
 
     - name: Prepare VOD File
       run: |
-        touch ./program/temp/VOD_to_fetch.txt
-        > ./program/temp/VOD_to_fetch.txt
+        touch ./program/temp/VOD_to_fetch_temp.txt
+        > ./program/temp/VOD_to_fetch_temp.txt
 
     - name: Fetch video information
       run: |
@@ -47,7 +47,7 @@ jobs:
 
           # Save information back to the source file
           echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch.txt
-        done < ./program/temp/VOD_to_fetch.txt
+        done < ./program/temp/VOD_to_fetch_temp.txt
 
     - name: Add, Commit, and Push Changes
       run: |
