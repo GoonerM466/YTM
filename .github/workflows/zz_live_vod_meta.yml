@@ -62,8 +62,11 @@ jobs:
             views_adjusted="$views_no_commas"
           fi
 
+          # Sanitize the title using iconv
+          sanitized_title=$(echo "$title" | iconv -t ASCII//TRANSLIT//IGNORE)
+
           # Save information to the temporary file
-          echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$views_adjusted" >> "$temp_file"
+          echo "$channel_name,$group,$video_url,$video_image,$sanitized_title,$upload_date,$views_adjusted" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
         # Overwrite the original file with the updated information
         mv "$temp_file" "./program/temp/live_vod_meta.txt"
