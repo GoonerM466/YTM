@@ -63,7 +63,7 @@ jobs:
           fi
 
           view_count_raw_no_commas=$(echo "$view_count_raw" | tr -d ',')
-          view_count_formatted=$(python -c "print(round($view_count_raw_no_commas / 1000, 1) if $view_count_raw_no_commas < 1000000 else round($view_count_raw_no_commas / 1000000, 1), 'K' if $view_count_raw_no_commas >= 1000 and $view_count_raw_no_commas < 1000000 else 'M' if $view_count_raw_no_commas >= 1000000 else '')")
+          view_count_formatted=$(python -c "print(f'{round(int($view_count_raw_no_commas) / 1000, 1)}K' if int($view_count_raw_no_commas) >= 1000 and int($view_count_raw_no_commas) < 1000000 else f'{round(int($view_count_raw_no_commas) / 1000000, 1)}M' if int($view_count_raw_no_commas) >= 1000000 else str(int($view_count_raw_no_commas)))")
 
           # Save information to the temporary file
           echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count_formatted" >> "$temp_file"
