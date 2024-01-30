@@ -1,4 +1,4 @@
-name: ZZ-Test Skip
+name: 2d-Generate Catchup VOD M3u8
 
 on:
   workflow_run:
@@ -6,6 +6,7 @@ on:
       - "2c-Live VOD Metadata"
     types:
       - completed
+
 jobs:
   generate-m3u:
     runs-on: ubuntu-latest
@@ -22,8 +23,8 @@ jobs:
       - name: Rebase changes
         run: git pull origin main --rebase
 
-      - name: Wipe contents of combined_VOD_playlist.m3u8
-        run: echo "#extm3u" > combined_VOD_playlist.m3u8
+      - name: Wipe contents of Live CatchUp VOD.m3u8
+        run: echo "#extm3u" > "Live CatchUp VOD.m3u8"
 
       - name: Find and list m3u8 files excluding "videos" folder
         run: |
@@ -43,21 +44,21 @@ jobs:
               # Extract values from matching entry
               IFS=, read -r channel_name group video_url video_image title upload_date view_count <<< "$matching_entry"
 
-              # Replace underscores with spaces only for combined_VOD_playlist.m3u8 output
+              # Replace underscores with spaces only for Live CatchUp VOD.m3u8 output
               formatted_channel_name=$(echo "$channel_name" | tr '_' ' ')
 
               # Construct the channel VOD URL
               channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
 
-              # Append entry to combined_VOD_playlist.m3u8
-              echo "#EXTINF:-1 tvg-id=\"$title - $upload_date - $view_count\" tvg-name=\"$title - $upload_date - $view_count\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$title - $upload_date - $view_count" >> test_skip.m3u8
-              echo "$channel_vod_url" >> test_skip.m3u8
+              # Append entry to Live CatchUp VOD.m3u8
+              echo "#EXTINF:-1 tvg-id=\"$title - $upload_date - $view_count\" tvg-name=\"$title - $upload_date - $view_count\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$title - $upload_date - $view_count" >> "Live CatchUp VOD.m3u8"
+              echo "$channel_vod_url" >> "Live CatchUp VOD.m3u8"
             fi
           done < ./program/temp/live_vod_temp.txt
 
       - name: Commit changes
         run: |
-          git add test_skip.m3u8
+          git add "Live CatchUp VOD.m3u8"
           git add ./program/temp/live_vod_temp.txt
           git commit -m "Update VOD m3u files"
           
