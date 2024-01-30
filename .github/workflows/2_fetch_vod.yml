@@ -78,6 +78,12 @@ jobs:
     - name: Fetch video information
       run: |
         while IFS=, read -r channel_name group video_url video_image; do
+          # Check if any of the required variables is empty
+          if [ -z "$channel_name" ] || [ -z "$group" ] || [ -z "$video_url" ] || [ -z "$video_image" ]; then
+            echo "One or more required variables is empty. Skipping..."
+            continue
+          fi
+
           # Construct modified video URL
           channel_url=$(echo "$channel_name" | tr -d ' ' | tr '_' '')
           modified_video_url="$video_url&ab_channel=$channel_url"
