@@ -1,28 +1,26 @@
-name: meta test
+name: Fetch Video Information
 
 on:
   schedule:
-    - cron: '15 2/12 * * *'
-  workflow_dispatch:
+    - cron: '0 */4 * * *'  # Run every 4 hours
 
 jobs:
-  extract_and_fetch:
+  fetch_video_info:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Set Git Config
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install Dependencies
       run: |
-        git config user.email "you@example.com"
-        git config user.name "Your Name"
-
-    - name: Create Temp Directory
-      run: mkdir -p ./program/temp
-
-    - name: Prepare VOD File
-      run: touch ./program/temp/VOD_to_fetch_temp.txt
+        python -m pip install --upgrade pip
+        pip install requests
 
     - name: Fetch video information
       run: |
@@ -34,6 +32,9 @@ jobs:
             continue
           fi
 
+          # Construct modified video URL (commented out for now)
+          # ...
+
           # Extract video information (dummy values for now)
           title="Dummy Title"
           upload_date="2022-01-30"
@@ -42,14 +43,14 @@ jobs:
           # Print values for debugging
           echo "Channel: $channel_name, Group: $group, Video URL: $video_url, Image: $video_image, Title: $title, Upload Date: $upload_date, View Count: $view_count"
 
-          # Save information back to the source file (commented out for now)
-          # echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch_temp.txt
+          # Save information back to the source file
+          echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch_temp.txt
         done < ./program/temp/VOD_to_fetch_temp.txt
         set +x
 
     - name: Add, Commit, and Push Changes
       run: |
-        git add .
+        git add ./program/temp/VOD_to_fetch_temp.txt
         git commit -m "Update VOD_to_fetch_temp.txt with latest videos & metadata"
         git pull origin main --no-rebase
         git merge -s ours origin/main
