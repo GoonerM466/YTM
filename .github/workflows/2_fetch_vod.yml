@@ -78,8 +78,12 @@ jobs:
     - name: Fetch video information
       run: |
         while IFS=, read -r channel_name group video_url video_image; do
+          # Construct modified video URL
+          channel_url=$(echo "$channel_name" | tr -d ' ' | tr '_' '')
+          modified_video_url="$video_url&ab_channel=$channel_url"
+
           # Extract video information
-          video_page_content=$(wget -qO- "$video_url") || { echo "Failed to fetch video page for $video_url"; exit 1; }
+          video_page_content=$(curl -s "$modified_video_url") || { echo "Failed to fetch video page for $modified_video_url"; exit 1; }
           title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' || echo "Title not found")
           upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+' || echo "Upload date not found")
           view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+' || echo "View count not found")
