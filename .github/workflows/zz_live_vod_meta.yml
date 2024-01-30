@@ -20,12 +20,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
-
     - name: Set Git Config
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
-
     - name: Clear the output file
       run: echo "" > ./program/temp/live_vod_meta.txt
 
@@ -34,44 +32,24 @@ jobs:
         # Use a temporary file to store the updated information
         temp_file="./program/temp/VOD_to_fetch_temp.txt.tmp"
         > "$temp_file"  # Clear the temp file
-
         while IFS=, read -r channel_name group video_url video_image; do
-          # Check if any of the required variables are empty
+          # Check if any of the required variables is empty
           if [ -z "$channel_name" ] || [ -z "$group" ] || [ -z "$video_url" ] || [ -z "$video_image" ]; then
             echo "One or more required variables are empty. Skipping..."
             continue
           fi
-
           # Construct modified video URL (commented out for now)
           # ...
-
           # Extract video information
           video_page_content=$(curl -s "$video_url")
-          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' | sed 's/,/-/g')  # Replace commas with hyphens in the title
-          upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+' | tr -d ',')  # Remove commas from upload_date
-          view_count_raw=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
-
-          # Format upload_date to a more friendly format
-          upload_date=$(date -d "$upload_date" +"%Y-%m-%d")
-          today=$(date +"%Y-%m-%d")
-          if [ "$upload_date" = "$today" ]; then
-            upload_date="today"
-          elif [ "$upload_date" = "$(date -d 'yesterday' +"%Y-%m-%d")" ]; then
-            upload_date="yesterday"
-          else
-            upload_date=$(date -d "$upload_date" +"%d %b %Y")
-          fi
-
-          view_count_raw_no_commas=$(echo "$view_count_raw" | tr -d ',')
-          view_count_formatted=$(python -c "print(f'{round(int($view_count_raw_no_commas) / 1000, 1)}K' if int($view_count_raw_no_commas) >= 1000 and int($view_count_raw_no_commas) < 1000000 else f'{round(int($view_count_raw_no_commas) / 1000000, 1)}M' if int($view_count_raw_no_commas) >= 1000000 else str(int($view_count_raw_no_commas)))")
-
+          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' | sed 's/"/\\"/g')  # Ensure quotes are included in the title
+          upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+')
+          view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
           # Save information to the temporary file
-          echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count_formatted" >> "$temp_file"
+          echo "$channel_name,$group,$video_url,$video_image,\"$title\",$upload_date,$view_count" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
-
         # Overwrite the original file with the updated information
         mv "$temp_file" "./program/temp/live_vod_meta.txt"
-
     - name: Add, Commit, and Push Changes
       run: |
         git add ./program/temp/live_vod_meta.txt
