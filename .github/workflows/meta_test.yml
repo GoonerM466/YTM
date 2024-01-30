@@ -3,7 +3,7 @@ name: Fetch Video Information
 on:
   schedule:
     - cron: '0 */4 * * *'  # Run every 4 hours
-
+  workflow_dispatch:
 jobs:
   fetch_video_info:
     runs-on: ubuntu-latest
