@@ -53,7 +53,7 @@ jobs:
           echo "Channel:$channel_name,Group:$group,Video URL:$video_url,Image:$video_image,Title:$title,Upload Date:$upload_date,View Count:$view_count"
 
           # Save information to the temporary file
-          echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count" >> "$temp_file"
+          echo "$channel_name,$group,$video_url,$video_image,\"$title\",$upload_date,$view_count" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
  
         # Overwrite the original file with the updated information
