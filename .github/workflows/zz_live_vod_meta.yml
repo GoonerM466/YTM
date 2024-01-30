@@ -53,11 +53,10 @@ jobs:
 
           # Adjust views field based on the criteria
           if [ "$views_no_commas" -gt 999 ]; then
-            views_adjusted=$(awk "BEGIN {printf \"%.1f\n\", $views_no_commas/1000}")
             if [ "$views_no_commas" -le 999999 ]; then
-              views_adjusted="${views_adjusted}K"
+              views_adjusted="${views_no_commas%???}K"
             else
-              views_adjusted="${views_adjusted}M"
+              views_adjusted="${views_no_commas%??????}M"
             fi
           else
             views_adjusted="$views_no_commas"
