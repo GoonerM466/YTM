@@ -23,8 +23,8 @@ jobs:
 
     - name: Prepare VOD File
       run: |
-        touch ./program/temp/vod_to_fetch.txt
-        > ./program/temp/vod_to_fetch.txt
+        touch ./program/temp/vod_uploads_to_fetch.txt
+        > ./program/temp/vod_uploads_to_fetch.txt
         touch ./program/temp/processed_video_ids.txt
         > ./program/temp/processed_video_ids.txt
 
@@ -68,7 +68,7 @@ jobs:
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp/vod_to_fetch.txt
+                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp/vod_uploads_to_fetch.txt
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> ./program/temp/processed_video_ids.txt
                 # Increment the counter
@@ -87,7 +87,7 @@ jobs:
 
     - name: Add, Commit, and Push Changes
       run: |
-        git add ./program/temp/vod_to_fetch.txt
+        git add ./program/temp/vod_uploads_to_fetch.txtt
         git add ./program/temp/temp_channels.txt
         git add ./program/temp/processed_video_ids.txt
         git commit -m "Update vod_to_fetch.txt with latest videos & metadata"
