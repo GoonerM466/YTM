@@ -51,7 +51,7 @@ jobs:
 
           # Retrieve all available formats in a single request
           echo "Retrieving available formats for $video_url..."
-          AVAILABLE_FORMATS=$(yt-dlp --list-formats "$video_url" | awk 'NR>1{print $1}')
+          AVAILABLE_FORMATS=$(yt-dlp --geo-bypass-country CA --list-formats "$video_url" | awk 'NR>1{print $1}')
 
           # Define the list of video and audio formats to try
           VIDEO_FORMATS="312 270 311 232"
@@ -86,7 +86,7 @@ jobs:
 
             # Retrieve M3U8 URLs for selected formats
             echo "Retrieving M3U8 URLs for $video_url..."
-            M3U8_URL=$(yt-dlp --format "$SELECTED_VIDEO_FORMAT" --get-url --no-playlist "$video_url")
+            M3U8_URL=$(yt-dlp --geo-bypass-country CA --format "$SELECTED_VIDEO_FORMAT" --get-url --no-playlist "$video_url")
             AUDIO_M3U8_URL=$(yt-dlp --format "$SELECTED_AUDIO_FORMAT" --get-url --no-playlist "$video_url")
 
             # Write combined M3U8 file
