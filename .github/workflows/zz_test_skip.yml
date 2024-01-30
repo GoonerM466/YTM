@@ -60,7 +60,7 @@ jobs:
               tvg_name="$title $upload_date $view_count"
               
               # Modify combined_VOD_playlist.m3u8 with additional fields
-              sed -i "/$file_name/ s|$| tvg-id=\"$tvg_id\" tvg-name=\"$tvg_name\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$tvg_id $title $upload_date $view_count|" combined_VOD_playlist.m3u8
+              sed -i "s|$file_name| tvg-id=\"$tvg_id\" tvg-name=\"$tvg_name\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$tvg_id $title $upload_date $view_count|" combined_VOD_playlist.m3u8
             fi
           done < ./program/temp/live_vod_meta.txt
 
