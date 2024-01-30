@@ -59,7 +59,7 @@ jobs:
             touch "./current_channels/$group/$sanitized_channel_name.m3u8"
 
             # Set Canadian proxy server
-            export HTTPS_PROXY=https://167.114.107.37:80
+            export HTTPS_PROXY=http://167.114.107.37:80
 
             # Check if the channel is live
             live_status="Not Live"
