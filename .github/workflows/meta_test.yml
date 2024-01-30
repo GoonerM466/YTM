@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 */4 * * *'  # Run every 4 hours
   workflow_dispatch:
-
+  
 jobs:
   fetch_video_info:
     runs-on: ubuntu-latest
@@ -47,8 +47,11 @@ jobs:
             continue
           fi
 
+          # Extract video ID using Python
+          video_id=$(python -c "from urllib.parse import urlparse, parse_qs; print(parse_qs(urlparse('$video_url').query)['v'][0])")
+
           # Construct modified video URL
-          modified_video_url="https://www.youtube.com/watch?v=$(youtube-dl --get-id $video_url)"
+          modified_video_url="https://www.youtube.com/watch?v=$video_id"
           # Fetch video metadata using youtube-dl
           metadata_json=$(youtube-dl -j --skip-download "$modified_video_url")
 
