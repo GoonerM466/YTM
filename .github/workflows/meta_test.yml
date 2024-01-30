@@ -22,6 +22,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
 
+    - name: Set Git Config
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+
     - name: Fetch video information
       run: |
         set -x
@@ -32,7 +37,7 @@ jobs:
         while IFS=, read -r channel_name group video_url video_image; do
           # Check if any of the required variables is empty
           if [ -z "$channel_name" ] || [ -z "$group" ] || [ -z "$video_url" ] || [ -z "$video_image" ]; then
-            echo "One or more required variables is empty. Skipping..."
+            echo "One or more required variables are empty. Skipping..."
             continue
           fi
 
