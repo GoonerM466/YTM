@@ -1,31 +1,24 @@
 name: ZZ-Test Skip
-
 on:
   workflow_dispatch:
-
 jobs:
   generate-m3u:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Configure Git
         run: |
           git config user.name "Your Name"
           git config user.email "your.email@example.com"
-
       - name: Rebase changes
         run: git pull origin main --rebase
-
       - name: Wipe contents of combined_VOD_playlist.m3u8
         run: echo "#extm3u" > combined_VOD_playlist.m3u8
 
       - name: Find and list m3u8 files excluding "videos" folder
         run: |
           find ./vod -mindepth 4 -maxdepth 4 -type f -name "*.m3u8" -exec ls -l {} \; > ./program/temp/VOD-m3u-temp.txt
-
       - name: Process VOD entries
         run: |
           while IFS= read -r line; do
@@ -34,39 +27,17 @@ jobs:
             group=$(echo "$file_path" | cut -d'/' -f2)
             channel_name=$(echo "$file_path" | cut -d'/' -f3)
             file_name=$(basename "$file_path" | cut -d'.' -f1)
-
             # Replace underscores with spaces only for combined_VOD_playlist.m3u8 output
             formatted_channel_name=$(echo "$channel_name" | tr '_' ' ')
-
             # Construct the channel VOD URL
             channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
-
             # Append entry to combined_VOD_playlist.m3u8
-            echo "#extinf:-1 tvg-chno=\"1\" tvg-id=\"$file_name\" tvg-name=\"$file_name\" group-title=\"$formatted_channel_name\",$file_name" >> combined_VOD_playlist.m3u8
-            echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
+            echo "#extinf:-1 tvg-chno=\"1\" tvg-id=\"$file_name\" tvg-name=\"$file_name\" group-title=\"$formatted_channel_name\",$file_name" >> test_skip.m3u8
+            echo "$channel_vod_url" >> test_skip.m3u8
           done < ./program/temp/VOD-m3u-temp.txt
-
-      - name: Process live_vod_meta.txt entries
-        run: |
-          while IFS=, read -r channel_name group video_url video_image title upload_date view_count; do
-            # Find matching entry in VOD-m3u-temp.txt
-            matching_entry=$(grep "$video_url" ./program/temp/VOD-m3u-temp.txt | cut -f 2)
-
-            # If a matching entry is found, update combined_VOD_playlist.m3u8
-            if [ -n "$matching_entry" ]; then
-              # Extract information from live_vod_meta.txt
-              video_title="$title $upload_date $view_count"
-              tvg_logo="$video_image"
-              group_title=" #EXTINF:-1 tvg-id=\"$video_title\" tvg-name=\"$video_title\" tvg-logo=\"$tvg_logo\" group-title=\"$group\",$formatted_channel_name\",\"$video_title"
-
-              # Update entry in combined_VOD_playlist.m3u8
-              sed -i "/$matching_entry/s/.*/$group_title/" combined_VOD_playlist.m3u8
-            fi
-          done < ./program/temp/live_vod_meta.txt
-
       - name: Commit changes
         run: |
-          git add combined_VOD_playlist.m3u8
+          git add test_skip.m3u8
           git commit -m "Update VOD m3u files"
           
       - name: Push changes
