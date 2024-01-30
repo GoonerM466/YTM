@@ -46,9 +46,9 @@ jobs:
               # Construct the channel VOD URL
               channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
 
-              # Construct the channel VOD URL
+              # Append entry to combined_VOD_playlist.m3u8
               echo "#EXTINF:-1 tvg-id=\"$title - $upload_date - $view_count\" tvg-name=\"$title - $upload_date - $view_count\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$title - $upload_date - $view_count" >> test_skip.m3u8
-              echo "$channel_video_url" >> test_skip.m3u8
+              echo "$channel_vod_url" >> test_skip.m3u8
             fi
           done < ./program/temp/live_vod_temp.txt
 
