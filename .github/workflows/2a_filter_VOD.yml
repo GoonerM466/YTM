@@ -41,6 +41,7 @@ jobs:
 
             if [ "$live_status" == "true" ]; then
               echo "$video_url is live or scheduled - discarding!"
+              echo "$channel_name,$group,$video_url,$image_url" >> ./program/temp/alt_live_feeds.txt
             else
               echo "$video_url is not live - saving!"
               # If not live, append the entry to the temporary file
