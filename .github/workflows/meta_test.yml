@@ -35,9 +35,13 @@ jobs:
           fi
 
           # Construct modified video URL
-          channel_url=$(echo "$channel_name" | tr -d ' ' | tr '_' '')
-          modified_video_url="$video_url&ab_channel=$channel_url"
-          
+          if [[ "$channel_name" =~ [_\ ] ]]; then
+            channel_url=$(echo "$channel_name" | tr -d ' ' | tr '_' '')
+            modified_video_url="$video_url&ab_channel=$channel_url"
+          else
+            modified_video_url="$video_url"
+          fi
+
           # Extract video information (dummy values for now)
           title="Dummy Title"
           upload_date="2022-01-30"
@@ -47,7 +51,7 @@ jobs:
           echo "Channel: $channel_name, Group: $group, Video URL: $video_url, Image: $video_image, Title: $title, Upload Date: $upload_date, View Count: $view_count"
 
           # Save information back to the source file (commented out for now)
-          # echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch.txt
+          # echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch_temp.txt
         done < ./program/temp/VOD_to_fetch_temp.txt
         set +x
 
