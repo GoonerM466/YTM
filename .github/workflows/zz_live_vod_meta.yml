@@ -62,8 +62,8 @@ jobs:
             upload_date=$(date -d "$upload_date" +"%d %b %Y")
           fi
 
-          # Format view_count to a rounded number
-          view_count_formatted=$(python -c "print(round($view_count_raw / 1000, 1) if $view_count_raw < 1000000 else round($view_count_raw / 1000000, 1), 'K' if $view_count_raw >= 1000 and $view_count_raw < 1000000 else 'M' if $view_count_raw >= 1000000 else '')")
+          view_count_raw_no_commas=$(echo "$view_count_raw" | tr -d ',')
+          view_count_formatted=$(python -c "print(round($view_count_raw_no_commas / 1000, 1) if $view_count_raw_no_commas < 1000000 else round($view_count_raw_no_commas / 1000000, 1), 'K' if $view_count_raw_no_commas >= 1000 and $view_count_raw_no_commas < 1000000 else 'M' if $view_count_raw_no_commas >= 1000000 else '')")
 
           # Save information to the temporary file
           echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count_formatted" >> "$temp_file"
