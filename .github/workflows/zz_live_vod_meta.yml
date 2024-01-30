@@ -62,6 +62,7 @@ jobs:
     - name: Add, Commit, and Push Changes
       run: |
         git add ./program/temp/live_vod_meta.txt
+        git add ./program/temp/VOD_to_fetch_temp.txt.tmp
         git commit -m "Update live_vod_meta with latest videos & metadata"
         git pull origin main --no-rebase
         git merge -s ours origin/main
