@@ -54,13 +54,14 @@ jobs:
             # Check if file_name exists in live_vod_temp.txt
             if grep -q "$file_name" ./program/temp/live_vod_temp.txt; then
               # Extract additional information
-              title=$(echo "$title" | sed 's/^"\(.*\)"$/\1/' | tr ' ' '-')
+              title=$(echo "$title" | tr -d '"' | tr ' ' '-')
               upload_date=$(date -d "$upload_date" +%Y%m%d)
               tvg_id="$title $upload_date $view_count"
               tvg_name="$title $upload_date $view_count"
               
               # Modify combined_VOD_playlist.m3u8 with additional fields
               awk -i inplace -v file_name="$file_name" -v tvg_id="$tvg_id" -v tvg_name="$tvg_name" -v video_image="$video_image" -v formatted_channel_name="$formatted_channel_name" -v title="$title" -v upload_date="$upload_date" -v view_count="$view_count" '
+                BEGIN { FS = "," }
                 {gsub("/"file_name, " tvg-id=\""tvg_id"\" tvg-name=\""tvg_name"\" tvg-logo=\""video_image"\" group-title=\""formatted_channel_name"\","tvg_id" "title" "upload_date" "view_count)}
                 1' combined_VOD_playlist.m3u8
             fi
