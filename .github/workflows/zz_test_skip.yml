@@ -28,40 +28,28 @@ jobs:
 
       - name: Process VOD entries
         run: |
-          while IFS= read -r line; do
-            # Extract information from each line
-            file_path=$(echo "$line" | grep -oP 'vod.*\.m3u8')
-            group=$(echo "$file_path" | cut -d'/' -f2)
-            channel_name=$(echo "$file_path" | cut -d'/' -f3)
-            file_name=$(basename "$file_path" | cut -d'.' -f1)
 
-            # Replace underscores with spaces only for combined_VOD_playlist.m3u8 output
-            formatted_channel_name=$(echo "$channel_name" | tr '_' ' ')
+          # Read video metadata from live_vod_meta.txt
+          while IFS=',' read -r channel_name group video_url video_image title upload_date view_count; do
+            # Search for matching video entry in live_vod_temp.txt
+            line=$(grep -F "$video_url" ./program/temp/live_vod_temp.txt)
 
-            # Construct the channel VOD URL
-            channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
+            if [ -n "$line" ]; then
+              # Extract information from the matched line
+              file_path=$(echo "$line" | grep -oP 'vod.*\.m3u8')
+              group=$(echo "$file_path" | cut -d'/' -f2)
+              channel_name=$(echo "$file_path" | cut -d'/' -f3)
+              file_name=$(basename "$file_path" | cut -d'.' -f1)
 
-            # Append entry to combined_VOD_playlist.m3u8
-            echo "#EXTINF:-1 tvg-id=\"$file_name\" tvg-name=\"$file_name\" tvg-logo=\"\" group-title=\"$formatted_channel_name\",$file_name" >> combined_VOD_playlist.m3u8
-            echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
-          done < ./program/temp/live_vod_temp.txt
+              # Replace underscores with spaces only for combined_VOD_playlist.m3u8 output
+              formatted_channel_name=$(echo "$channel_name" | tr '_' ' ')
 
-      - name: Find and process additional metadata
-        run: |
-          while IFS=, read -r channel_name group video_url video_image title upload_date view_count; do
-            # Extract video ID from video_url
-            video_id=$(echo "$video_url" | awk -F"v=" '{print $2}')
+              # Construct the channel VOD URL
+              channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
 
-            # Check if video_id exists in combined_VOD_playlist.m3u8
-            if grep -q "#EXTINF:-1.*$video_id" combined_VOD_playlist.m3u8; then
-              # Replace video_id and tvg-logo in combined_VOD_playlist.m3u8
-              awk -i inplace -v video_id="$video_id" -v video_image="$video_image" '
-                BEGIN { FS = "," }
-                /^#EXTINF:-1/ && $0 ~ video_id {
-                  gsub(video_id, title" "upload_date" "view_count)
-                  gsub("tvg-logo=\"\"", "tvg-logo=\""video_image"\"")
-                }
-                1' combined_VOD_playlist.m3u8
+              # Append entry to combined_VOD_playlist.m3u8
+              echo "#EXTINF:-1 tvg-id=\"$title - $upload_date - $view_count\" tvg-name=\"$title - $upload_date - $view_count\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$title - $upload_date - $view_count" >> combined_VOD_playlist.m3u8
+              echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
             fi
           done < ./program/temp/live_vod_meta.txt
 
@@ -69,7 +57,6 @@ jobs:
         run: |
           git add combined_VOD_playlist.m3u8
           git add ./program/temp/live_vod_temp.txt
-          git add ./program/temp/live_vod_meta.txt
           git commit -m "Update VOD m3u files"
           
       - name: Push changes
