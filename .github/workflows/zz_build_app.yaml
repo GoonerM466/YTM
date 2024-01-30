@@ -1,4 +1,4 @@
-name: zz- BUILD APP
+name: Run GitHub Workflow App
 
 on:
   push:
@@ -21,6 +21,12 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
+  
+          
+      - name: Install Additional Dependencies
+        run: |
+          pip install requests
+          # Add any other dependencies your script may need
 
       - name: Run GitHub Workflow App
         run: |
