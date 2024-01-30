@@ -47,8 +47,24 @@ jobs:
           title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' | sed 's/"/\\"/g' | tr ',' '-')  # Replace commas with hyphens in the title
           upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+')
           view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
+          
+          # Remove commas from the views field
+          views_no_commas=$(echo "$view_count" | tr -d ',')
+
+          # Adjust views field based on the criteria
+          if [ "$views_no_commas" -gt 999 ]; then
+            views_adjusted=$(awk "BEGIN {printf \"%.1f\n\", $views_no_commas/1000}")
+            if [ "$views_no_commas" -le 999999 ]; then
+              views_adjusted="${views_adjusted}K"
+            else
+              views_adjusted="${views_adjusted}M"
+            fi
+          else
+            views_adjusted="$views_no_commas"
+          fi
+
           # Save information to the temporary file
-          echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count" >> "$temp_file"
+          echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$views_adjusted" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
         # Overwrite the original file with the updated information
         mv "$temp_file" "./program/temp/live_vod_meta.txt"
