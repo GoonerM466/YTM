@@ -4,8 +4,6 @@ on:
   schedule:
     - cron: '0 */4 * * *'  # Run every 4 hours
 
-  workflow_dispatch:
-
 jobs:
   fetch_video_info:
     runs-on: ubuntu-latest
@@ -27,6 +25,10 @@ jobs:
     - name: Fetch video information
       run: |
         set -x
+        # Use a temporary file to store the updated information
+        temp_file="./program/temp/VOD_to_fetch_temp.txt.tmp"
+        > "$temp_file"  # Clear the temp file
+
         while IFS=, read -r channel_name group video_url video_image; do
           # Check if any of the required variables is empty
           if [ -z "$channel_name" ] || [ -z "$group" ] || [ -z "$video_url" ] || [ -z "$video_image" ]; then
@@ -45,10 +47,13 @@ jobs:
           # Print values for debugging
           echo "Channel: $channel_name, Group: $group, Video URL: $video_url, Image: $video_image, Title: $title, Upload Date: $upload_date, View Count: $view_count"
 
-          # Save information back to the source file
-          echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch_temp.txt
-        done < ./program/temp/VOD_to_fetch_temp.txt
+          # Save information to the temporary file
+          echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> "$temp_file"
+        done < "./program/temp/VOD_to_fetch_temp.txt"
         set +x
+
+        # Overwrite the original file with the updated information
+        mv "$temp_file" "./program/temp/VOD_to_fetch_temp.txt"
 
     - name: Add, Commit, and Push Changes
       run: |
