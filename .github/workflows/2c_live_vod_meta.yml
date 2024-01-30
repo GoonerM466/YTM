@@ -1,8 +1,12 @@
-name: ZZ-Live VOD Metadata
+name:2c-Live VOD Metadata
 
 on:
+  workflow_run:
+    workflows:
+      - "2b-EC VOD URLs"
+    types:
+      - completed
   workflow_dispatch:
-
 jobs:
   fetch_video_info:
     runs-on: ubuntu-latest
