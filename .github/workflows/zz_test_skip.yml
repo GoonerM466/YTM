@@ -41,18 +41,28 @@ jobs:
             # Construct the channel VOD URL
             channel_vod_url="https://raw.githubusercontent.com/GoonerM466/YTM/main/$file_path"
 
-            # Find matching entry in live_vod-meta.txt
-            video_entry=$(grep "$file_name" ./program/temp/live_vod-meta.txt | head -n 1)
-
-            if [ -n "$video_entry" ]; then
-              # Extract additional information
-              IFS=',' read -r channel_name group video_url video_image title upload_date view_count <<< "$video_entry"
-
-              # Append entry to combined_VOD_playlist.m3u8
-              echo "#EXTINF:-1 tvg-id=\"$title $upload_date $view_count\" tvg-name=\"$title $upload_date $view_count\" tvg-logo=\"$video_image\" group-title=\"$formatted_channel_name\",$title $upload_date $view_count" >> combined_VOD_playlist.m3u8
-              echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
-            fi
+            # Append entry to combined_VOD_playlist.m3u8
+            echo "#extinf:-1 tvg-chno=\"1\" tvg-id=\"$file_name\" tvg-name=\"$file_name\" group-title=\"$formatted_channel_name\",$file_name" >> combined_VOD_playlist.m3u8
+            echo "$channel_vod_url" >> combined_VOD_playlist.m3u8
           done < ./program/temp/VOD-m3u-temp.txt
+
+      - name: Process live_vod_meta.txt entries
+        run: |
+          while IFS=, read -r channel_name group video_url video_image title upload_date view_count; do
+            # Find matching entry in VOD-m3u-temp.txt
+            matching_entry=$(grep "$video_url" ./program/temp/VOD-m3u-temp.txt | cut -f 2)
+
+            # If a matching entry is found, update combined_VOD_playlist.m3u8
+            if [ -n "$matching_entry" ]; then
+              # Extract information from live_vod_meta.txt
+              video_title="$title $upload_date $view_count"
+              tvg_logo="$video_image"
+              group_title=" #EXTINF:-1 tvg-id=\"$video_title\" tvg-name=\"$video_title\" tvg-logo=\"$tvg_logo\" group-title=\"$group\",$formatted_channel_name\",\"$video_title"
+
+              # Update entry in combined_VOD_playlist.m3u8
+              sed -i "/$matching_entry/s/.*/$group_title/" combined_VOD_playlist.m3u8
+            fi
+          done < ./program/temp/live_vod_meta.txt
 
       - name: Commit changes
         run: |
