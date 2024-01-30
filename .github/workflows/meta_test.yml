@@ -25,9 +25,6 @@ jobs:
       run: |
         touch ./program/temp/VOD_to_fetch.txt
         > ./program/temp/VOD_to_fetch.txt
-        touch ./program/temp/processed_video_ids.txt
-        > ./program/temp/processed_video_ids.txt
-
 
     - name: Fetch video information
       run: |
