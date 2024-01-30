@@ -75,18 +75,18 @@ jobs:
           fi
         done <<< "$channel_info"
 
-    - name: Fetch video information
-      run: |          
+    - name: Fetch metadata
+      run: |
         while IFS=, read -r channel_name group video_url video_image; do
-        # Extract video information
-         video_page_content=$(curl -s "$video_url")
-         title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)')
-         upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+')
-            view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
+          # Extract video information
+          video_page_content=$(curl -s "$video_url") || { echo "Failed to fetch video page for $video_url"; exit 1; }
+          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' || echo "Title not found")
+          upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+' || echo "Upload date not found")
+          view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+' || echo "View count not found")
 
-         # Save information back to the source file
-        echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch.txt
-        done < ./program/temp/VOD_to_fetch.txt
+          # Save information back to the source file
+          echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch.txt
+         done < ./program/temp/VOD_to_fetch.txt
 
     - name: Add, Commit, and Push Changes
       run: |
