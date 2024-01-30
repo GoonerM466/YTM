@@ -34,14 +34,6 @@ jobs:
             continue
           fi
 
-          # Construct modified video URL
-          if [[ "$channel_name" =~ [_\ ] ]]; then
-            channel_url=$(echo "$channel_name" | tr -d ' ' | tr '_' '')
-            modified_video_url="$video_url&ab_channel=$channel_url"
-          else
-            modified_video_url="$video_url"
-          fi
-
           # Extract video information (dummy values for now)
           title="Dummy Title"
           upload_date="2022-01-30"
