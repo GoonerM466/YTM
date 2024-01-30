@@ -62,8 +62,8 @@ jobs:
             views_adjusted="$views_no_commas"
           fi
 
-          # Sanitize the title using iconv
-          sanitized_title=$(echo "$title" | iconv -t ASCII//TRANSLIT//IGNORE)
+          # Sanitize the title
+          sanitized_title=$(echo "$title" | iconv -t ASCII//TRANSLIT//IGNORE | sed 's/&#39;/\x27/g' | sed 's/&amp;/and/g' | tr '|' '-' | tr ':' '-' | tr ';' '-' | sed 's/🔴//g' | sed 's/🟡//g')
 
           # Save information to the temporary file
           echo "$channel_name,$group,$video_url,$video_image,$sanitized_title,$upload_date,$views_adjusted" >> "$temp_file"
