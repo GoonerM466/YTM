@@ -49,10 +49,24 @@ jobs:
           video_page_content=$(curl -s "$video_url")
           title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' | sed 's/"/\\"/g')  # Ensure quotes are included in the title
           upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+')
-          view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
+          view_count_raw=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
+
+          # Format upload_date to a more friendly format
+          upload_date=$(date -d "$upload_date" +"%Y-%m-%d")
+          today=$(date +"%Y-%m-%d")
+          if [ "$upload_date" = "$today" ]; then
+            upload_date="today"
+          elif [ "$upload_date" = "$(date -d 'yesterday' +"%Y-%m-%d")" ]; then
+            upload_date="yesterday"
+          else
+            upload_date=$(date -d "$upload_date" +"%d %b %Y")
+          fi
+
+          # Format view_count to a rounded number
+          view_count_formatted=$(python -c "print(round($view_count_raw / 1000, 1) if $view_count_raw < 1000000 else round($view_count_raw / 1000000, 1), 'K' if $view_count_raw >= 1000 and $view_count_raw < 1000000 else 'M' if $view_count_raw >= 1000000 else '')")
 
           # Save information to the temporary file
-          echo "$channel_name,$group,$video_url,$video_image,\"$title\",$upload_date,$view_count" >> "$temp_file"
+          echo "$channel_name,$group,$video_url,$video_image,\"$title\",$upload_date,$view_count_formatted" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
 
         # Overwrite the original file with the updated information
