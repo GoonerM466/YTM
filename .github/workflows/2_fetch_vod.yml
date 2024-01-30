@@ -46,7 +46,7 @@ jobs:
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
             # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
-            video_ids=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 3)
+            video_ids=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 5)
             # Loop through each video ID
             for video_id in $video_ids; do
               # Check if video_id is not empty and has not been processed before
