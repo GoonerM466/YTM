@@ -1,4 +1,4 @@
-name: 2c-Combine VOD Step 2
+name: zz-Combine VOD Step 2
 
 on:
   workflow_run:
