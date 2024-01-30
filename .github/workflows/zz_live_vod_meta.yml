@@ -47,7 +47,7 @@ jobs:
 
           # Extract video information
           video_page_content=$(curl -s "$video_url")
-          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' | sed 's/"/\\"/g')  # Ensure quotes are included in the title
+          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' | sed 's/,/-/g')  # Replace commas with hyphens in the title
           upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+')
           view_count_raw=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
 
@@ -63,9 +63,10 @@ jobs:
           fi
 
           # Format view_count to a rounded number
-          view_count_formatted=$(python -c "print(round(24915 / 1000, 1) if 24915 < 1000000 else round(24915 / 1000000, 1), 'K' if 24915 >= 1000 and 24915 < 1000000 else 'M' if 24915 >= 1000000 else '')")
+          view_count_formatted=$(python -c "print(round($view_count_raw / 1000, 1) if $view_count_raw < 1000000 else round($view_count_raw / 1000000, 1), 'K' if $view_count_raw >= 1000 and $view_count_raw < 1000000 else 'M' if $view_count_raw >= 1000000 else '')")
+
           # Save information to the temporary file
-          echo "$channel_name,$group,$video_url,$video_image,\"$title\",$upload_date,$view_count_formatted" >> "$temp_file"
+          echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count_formatted" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
 
         # Overwrite the original file with the updated information
