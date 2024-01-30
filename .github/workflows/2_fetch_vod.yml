@@ -42,7 +42,7 @@ jobs:
         # Loop through each line in channel_info
         while IFS=', ' read -r channel_name group channel_url; do
           # Fetching HTML content of the streams page
-          html_content=$(curl -s "$channel_url")
+          html_content=$(curl -s "https://youtube.com/$channel_name/streams")
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
             # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
