@@ -26,6 +26,9 @@ jobs:
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
+ 
+    - name: Clear the output file
+      run: echo "" > ./program/temp/live_vod_meta.txt
 
     - name: Fetch video information
       run: |
