@@ -37,7 +37,6 @@ jobs:
 
     - name: Extract and Fetch VOD
       run: |
-        set -x
         # Extracting channel information from the temp file
         channel_info=$(cat ./program/temp/temp_channels.txt)
         # Loop through each line in channel_info
@@ -45,7 +44,7 @@ jobs:
           # Remove "live" from channel_url and append "videos"
           modified_url="${channel_url/live/videos}"
           # Fetching HTML content of the streams page
-          html_content=$(curl -s "$modified_url" | head -n 20)
+          html_content=$(curl -s "$modified_url")
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
             # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
@@ -77,7 +76,7 @@ jobs:
             echo "Error: Failed to fetch HTML content for $channel_name"
           fi
         done <<< "$channel_info"
-        set +x
+        
     - name: Add, Commit, and Push Changes
       run: |
         git add ./program/temp/vod_uploads_to_fetch.txt
