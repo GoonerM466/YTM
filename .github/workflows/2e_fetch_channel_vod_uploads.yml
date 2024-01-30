@@ -2,7 +2,7 @@ name: 2e-Fetch Channel VOD Uploads
 
 on:
   schedule:
-    - cron: '45 2/12 * * *'
+    - cron: '15 2/12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,26 +23,28 @@ jobs:
 
     - name: Prepare VOD File
       run: |
-        touch ./program/temp/vod_uploads_to_fetch.txt
-        > ./program/temp/vod_uploads_to_fetch.txt
-        touch ./program/temp/processed_video_ids.txt
-        > ./program/temp/processed_video_ids.txt
+        touch ./program/temp_vod_uploads/vod_uploads_to_fetch.txt
+        > ./program/temp_vod_uploads/vod_uploads_to_fetch.txt
+        touch ./program/temp_vod_uploads/processed_video_ids.txt
+        > ./program/temp_vod_uploads/processed_video_ids.txt
 
     - name: Wait for 1 minute
       run: sleep 60
 
     - name: Create Temp File with Modified Channel Names
       run: |
-        awk -F ', ' '{ gsub(/ /, "_", $1); print $0 }' current_channels.txt > ./program/temptemp_channels.txt
+        awk -F ', ' '{ gsub(/ /, "_", $1); print $0 }' current_channels.txt > ./program/temp_vod_uploads/temp_channels.txt
 
     - name: Extract and Fetch VOD
       run: |
         # Extracting channel information from the temp file
-        channel_info=$(cat ./program/temp/temp_channels.txt)
+        channel_info=$(cat ./program/temp_vod_uploads/temp_channels.txt)
         # Loop through each line in channel_info
         while IFS=', ' read -r channel_name group channel_url; do
+          # Remove "live" from channel_url and append "videos"
+          modified_url="${channel_url/live/videos}"
           # Fetching HTML content of the streams page
-          html_content=$(curl -s "${channel_url}videos" | head -n 20)
+          html_content=$(curl -s "$modified_url" | head -n 20)
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
             # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
@@ -50,7 +52,7 @@ jobs:
             # Loop through each video ID
             for video_id in $video_ids; do
               # Check if video_id is not empty and has not been processed before
-              if [ -n "$video_id" ] && ! grep -q "$video_id" ./program/temp/processed_video_ids.txt; then
+              if [ -n "$video_id" ] && ! grep -q "$video_id" ./program/temp_vod_uploads/processed_video_ids.txt; then
                 # Create the YouTube video URL and image URL
                 video_url="https://www.youtube.com/watch?v=$video_id"
                 image_url="https://i.ytimg.com/vi/$video_id/hqdefault.jpg"
@@ -61,9 +63,9 @@ jobs:
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp/vod_uploads_to_fetch.txt
+                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp_vod_uploads/vod_uploads_to_fetch.txt
                 # Add the video_id to the processed_video_ids.txt file
-                echo "$video_id" >> ./program/temp/processed_video_ids.txt
+                echo "$video_id" >> ./program/temp_vod_uploads/processed_video_ids.txt
               else
                 # Output a message if video_id is empty or has been processed before
                 echo "No valid/uniquely processed video found for $channel_name"
@@ -77,9 +79,9 @@ jobs:
 
     - name: Add, Commit, and Push Changes
       run: |
-        git add ./program/temp/vod_uploads_to_fetch.txt
-        git add ./program/temp/temp_channels.txt
-        git add ./program/temp/processed_video_ids.txt
+        git add ./program/temp_vod_uploads/vod_uploads_to_fetch.txt
+        git add ./program/temp_vod_uploads/temp_channels.txt
+        git add ./program/temp_vod_uploads/processed_video_ids.txt
         git commit -m "Update vod_uploads_to_fetch.txt with latest videos & metadata"
         git pull origin main --no-rebase
         git merge -s ours origin/main
