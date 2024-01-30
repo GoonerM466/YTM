@@ -1,8 +1,7 @@
-name: Fetch Video Information
+name: ZZ-Live VOD Metadata
 
 on:
-  schedule:
-    - cron: '0 */4 * * *'  # Run every 4 hours
+
   workflow_dispatch:
    
 jobs:
@@ -60,12 +59,12 @@ jobs:
         set +x
 
         # Overwrite the original file with the updated information
-        mv "$temp_file" "./program/temp/VOD_to_fetch_temp.txt"
+        mv "$temp_file" "./program/temp/live_vod_meta.txt"
 
     - name: Add, Commit, and Push Changes
       run: |
-        git add ./program/temp/VOD_to_fetch_temp.txt
-        git commit -m "Update VOD_to_fetch_temp.txt with latest videos & metadata"
+        git add ./program/temp/live_vod_meta.txt
+        git commit -m "Update live_vod_meta with latest videos & metadata"
         git pull origin main --no-rebase
         git merge -s ours origin/main
         git push origin main
