@@ -3,7 +3,7 @@ name: ZZ-Test Skip
 on:
   workflow_run:
     workflows:
-      - "2c Live VOD META"
+      - "2c-Live VOD Metadata"
     types:
       - completed
 jobs:
