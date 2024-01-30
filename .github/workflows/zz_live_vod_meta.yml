@@ -1,9 +1,8 @@
 name: ZZ-Live VOD Metadata
 
 on:
-
   workflow_dispatch:
-   
+
 jobs:
   fetch_video_info:
     runs-on: ubuntu-latest
@@ -26,7 +25,7 @@ jobs:
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
- 
+
     - name: Clear the output file
       run: echo "" > ./program/temp/live_vod_meta.txt
 
@@ -48,14 +47,14 @@ jobs:
 
           # Extract video information
           video_page_content=$(curl -s "$video_url")
-          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)')
+          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' | sed 's/"/\\"/g')  # Ensure quotes are included in the title
           upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+')
           view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
 
           # Save information to the temporary file
           echo "$channel_name,$group,$video_url,$video_image,\"$title\",$upload_date,$view_count" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
- 
+
         # Overwrite the original file with the updated information
         mv "$temp_file" "./program/temp/live_vod_meta.txt"
 
