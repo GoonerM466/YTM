@@ -54,7 +54,7 @@ jobs:
             # Check if file_name exists in live_vod_temp.txt
             if grep -q "$file_name" ./program/temp/live_vod_temp.txt; then
               # Extract additional information
-              title=$(echo "$title" | tr -d '"' | tr ' ' '-')
+              title=$(echo "$title" | sed 's/^"\(.*\)"$/\1/' | tr ' ' '-')
               upload_date=$(date -d "$upload_date" +%Y%m%d)
               tvg_id="$title $upload_date $view_count"
               tvg_name="$title $upload_date $view_count"
