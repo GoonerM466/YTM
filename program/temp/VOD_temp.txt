@@ -1,6 +1,13 @@
+entertainment/EERIEISSSS/videos/FtOCWPq5uw0.m3u8
+entertainment/EERIEISSSS/videos/JRHSboaysfY.m3u8
+entertainment/EERIEISSSS/videos/JdpzAfQiNY8.m3u8
+sports/talkSPORT/videos/vwYaHkj9P48.m3u8
+sports/talkSPORT/videos/HMp5HKvS-RY.m3u8
+sports/talkSPORT/videos/bm-sxTgJB8o.m3u8
 documentary/The_Why_Files/videos/D5DVy-ZCieA.m3u8
 documentary/The_Why_Files/videos/UhXsyhXAe_M.m3u8
 documentary/The_Why_Files/videos/9Rs_e21MJvA.m3u8
+music/Music_Brokers/videos/sjrgHdX5e70\u0026pp=QAFIAQ%3D%3D.m3u8
 music/Music_Brokers/videos/2IprgDi_BZ0\u0026pp=QAFIAQ%3D%3D.m3u8
 music/HitsRadio/videos/Il1ySBzx22Y.m3u8
 gaming/Glen_Cooley/videos/Q8PRC5m_qss.m3u8
