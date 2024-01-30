@@ -1,4 +1,4 @@
-name:2c-Live VOD Metadata
+name: 2c-Live VOD Metadata
 
 on:
   workflow_run:
