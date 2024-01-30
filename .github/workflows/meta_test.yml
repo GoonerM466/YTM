@@ -4,6 +4,7 @@ on:
   schedule:
     - cron: '0 */4 * * *'  # Run every 4 hours
   workflow_dispatch:
+
 jobs:
   fetch_video_info:
     runs-on: ubuntu-latest
@@ -21,6 +22,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
+
+    - name: Install youtube-dl
+      run: |
+        sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+        sudo chmod a+rx /usr/local/bin/youtube-dl
 
     - name: Set Git Config
       run: |
@@ -41,19 +47,21 @@ jobs:
             continue
           fi
 
-          # Construct modified video URL (commented out for now)
-          # ...
+          # Construct modified video URL
+          modified_video_url="https://www.youtube.com/watch?v=$(youtube-dl --get-id $video_url)"
+          # Fetch video metadata using youtube-dl
+          metadata_json=$(youtube-dl -j --skip-download "$modified_video_url")
 
-          # Extract video information (dummy values for now)
-          title="Dummy Title"
-          upload_date="2022-01-30"
-          view_count="1000"
+          # Extract relevant information from the metadata JSON
+          title=$(echo "$metadata_json" | jq -r '.title')
+          upload_date=$(echo "$metadata_json" | jq -r '.upload_date')
+          view_count=$(echo "$metadata_json" | jq -r '.view_count')
 
           # Print values for debugging
-          echo "Channel: $channel_name, Group: $group, Video URL: $video_url, Image: $video_image, Title: $title, Upload Date: $upload_date, View Count: $view_count"
+          echo "Channel:$channel_name,Group:$group,Video URL:$video_url,Image:$video_image,Title:$title,Upload Date:$upload_date,View Count:$view_count"
 
           # Save information to the temporary file
-          echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> "$temp_file"
+          echo "$channel_name,$group,$video_url,$video_image,$title,$upload_date,$view_count" >> "$temp_file"
         done < "./program/temp/VOD_to_fetch_temp.txt"
         set +x
 
