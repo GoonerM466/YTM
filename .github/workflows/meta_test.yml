@@ -22,9 +22,7 @@ jobs:
       run: mkdir -p ./program/temp
 
     - name: Prepare VOD File
-      run: |
-        touch ./program/temp/VOD_to_fetch_temp.txt
-        > ./program/temp/VOD_to_fetch_temp.txt
+      run: touch ./program/temp/VOD_to_fetch_temp.txt
 
     - name: Fetch video information
       run: |
@@ -39,21 +37,24 @@ jobs:
           # Construct modified video URL
           channel_url=$(echo "$channel_name" | tr -d ' ' | tr '_' '')
           modified_video_url="$video_url&ab_channel=$channel_url"
-          # Extract video information
-          video_page_content=$(curl -s "$modified_video_url") || { echo "Failed to fetch video page for $modified_video_url"; exit 1; }
-          title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)' || echo "Title not found")
-          upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+' || echo "Upload date not found")
-          view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+' || echo "View count not found")
+          
+          # Extract video information (dummy values for now)
+          title="Dummy Title"
+          upload_date="2022-01-30"
+          view_count="1000"
 
-          # Save information back to the source file
-          echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch.txt
+          # Print values for debugging
+          echo "Channel: $channel_name, Group: $group, Video URL: $video_url, Image: $video_image, Title: $title, Upload Date: $upload_date, View Count: $view_count"
+
+          # Save information back to the source file (commented out for now)
+          # echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch.txt
         done < ./program/temp/VOD_to_fetch_temp.txt
         set +x
+
     - name: Add, Commit, and Push Changes
       run: |
-        git add ./program/temp/VOD_to_fetch.txt
-        git add ./program/temp/processed_video_ids.txt
-        git commit -m "Update VOD_to_fetch.txt with latest videos & metadata"
+        git add ./program/temp/VOD_to_fetch_temp.txt
+        git commit -m "Update VOD_to_fetch_temp.txt with latest videos & metadata"
         git pull origin main --no-rebase
         git merge -s ours origin/main
         git push origin main
