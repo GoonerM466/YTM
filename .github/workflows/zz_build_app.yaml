@@ -25,8 +25,9 @@ jobs:
 
       - name: Set up Xvfb
         run: sudo apt-get install xvfb
-          set -x
+         
       - name: Run GitHub Workflow App
         run: |
+          set -x
           xvfb-run python scripts/build_app.py
           set +x
