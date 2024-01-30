@@ -75,11 +75,24 @@ jobs:
           fi
         done <<< "$channel_info"
 
+    - name: Fetch video information
+      run: |          
+        while IFS=, read -r channel_name group video_url video_image; do
+        # Extract video information
+         video_page_content=$(curl -s "$video_url")
+         title=$(echo "$video_page_content" | grep -oP '<title>\K(.*)(?=<\/title>)')
+         upload_date=$(echo "$video_page_content" | grep -oP '<meta itemprop="uploadDate" content="\K[^"]+')
+            view_count=$(echo "$video_page_content" | grep -oP '{"viewCount":{"simpleText":"\K[^"]+')
+
+         # Save information back to the source file
+        echo "$channel_name, $group, $video_url, $video_image, $title, $upload_date, $view_count" >> ./program/temp/VOD_to_fetch.txt
+        done < ./program/temp/VOD_to_fetch.txt
+
     - name: Add, Commit, and Push Changes
       run: |
         git add ./program/temp/VOD_to_fetch.txt
         git add ./program/temp/processed_video_ids.txt
-        git commit -m "Update VOD_to_fetch.txt with latest videos"
+        git commit -m "Update VOD_to_fetch.txt with latest videos & metadata"
         git pull origin main --no-rebase
         git merge -s ours origin/main
         git push origin main
