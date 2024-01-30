@@ -49,7 +49,7 @@ jobs:
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
             # Extracting video IDs from the HTML content (modify this based on the actual structure of the page)
-            video_ids=$(echo "$html_content" | grep -oP '(?<=/watch\?v=)[^"&]+' | head -n 5)
+            video_ids=$(echo "$html_content" | grep -oP '"videoId":"([^"]+)"' | cut -d'"' -f4 | head -n 10)
             # Loop through each video ID
             for video_id in $video_ids; do
               # Check if video_id is not empty and has not been processed before
@@ -64,7 +64,7 @@ jobs:
                 echo "Video URL: $video_url"
                 echo "Image URL: $image_url"
                 # Append the information to the file
-                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp/vod_to_fetch.txt
+                echo "$channel_name, $group, $video_url, $image_url" >> ./program/temp/vod_uploads_to_fetch.txt
                 # Add the video_id to the processed_video_ids.txt file
                 echo "$video_id" >> ./program/temp/processed_video_ids.txt
               else
@@ -80,7 +80,7 @@ jobs:
         set +x
     - name: Add, Commit, and Push Changes
       run: |
-        git add ./program/temp/vod_to_fetch.txt
+        git add ./program/temp/vod_uploads_to_fetch.txt
         git add ./program/temp/temp_channels.txt
         git add ./program/temp/processed_video_ids.txt
         git commit -m "Update vod_to_fetch.txt with latest videos & metadata"
