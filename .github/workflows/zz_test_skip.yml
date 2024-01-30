@@ -49,21 +49,17 @@ jobs:
       - name: Find and process additional metadata
         run: |
           while IFS=, read -r channel_name group video_url video_image title upload_date view_count; do
-            file_name=$(echo "$video_url" | grep -oP 'v=.*' | cut -d'=' -f2)
-            
-            # Check if file_name exists in live_vod_temp.txt
-            if grep -q "$file_name" ./program/temp/live_vod_temp.txt; then
-              # Extract additional information
-              title=$(echo "$title" | tr -d '"' | tr ' ' '-')
-              upload_date=$(date -d "$upload_date" +%Y%m%d)
-              tvg_id="$title $upload_date $view_count"
-              tvg_name="$title $upload_date $view_count"
-              
-              # Modify combined_VOD_playlist.m3u8 with additional fields
-              awk -i inplace -v file_name="$file_name" -v tvg_id="$tvg_id" -v tvg_name="$tvg_name" -v video_image="$video_image" -v formatted_channel_name="$formatted_channel_name" '
+            # Extract video ID from video_url
+            video_id=$(echo "$video_url" | awk -F"v=" '{print $2}')
+
+            # Check if video_id exists in combined_VOD_playlist.m3u8
+            if grep -q "#EXTINF:-1.*$video_id" combined_VOD_playlist.m3u8; then
+              # Replace video_id and tvg-logo in combined_VOD_playlist.m3u8
+              awk -i inplace -v video_id="$video_id" -v video_image="$video_image" '
                 BEGIN { FS = "," }
-                /^#EXTINF:-1/ && $0 ~ file_name {
-                  sub(file_name, tvg_id" "tvg_name" "video_image" "formatted_channel_name)
+                /^#EXTINF:-1/ && $0 ~ video_id {
+                  gsub(video_id, title" "upload_date" "view_count)
+                  gsub("tvg-logo=\"\"", "tvg-logo=\""video_image"\"")
                 }
                 1' combined_VOD_playlist.m3u8
             fi
