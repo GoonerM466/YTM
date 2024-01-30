@@ -21,13 +21,12 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-  
-          
-      - name: Install Additional Dependencies
-        run: |
+          pip install -r requirements.txt  # Replace with your actual requirements if any
           pip install requests
-          # Add any other dependencies your script may need
+
+      - name: Set up Xvfb
+        run: sudo apt-get install xvfb
 
       - name: Run GitHub Workflow App
         run: |
-          python scripts/build_app.py
+          xvfb-run python scripts/build_app.py
