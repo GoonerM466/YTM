@@ -53,6 +53,10 @@ jobs:
             # Create the file only if it doesn't exist
             touch "./current_channels/$group/$sanitized_channel_name.m3u8"
 
+            # Set Canadian proxy server
+            export HTTP_PROXY=http://162.223.116.54:80
+            export HTTPS_PROXY=https://162.223.116.54:80
+
             # Check if the channel is live
             live_status="Not Live"
             if yt-dlp --geo-bypass-country CA --print is_live "$channel_url" | grep -q "True"; then
