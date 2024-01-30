@@ -1,8 +1,11 @@
 name: ZZ-Test Skip
 
 on:
-  workflow_dispatch:
-
+  workflow_run:
+    workflows:
+      - "2c Live VOD META"
+    types:
+      - completed
 jobs:
   generate-m3u:
     runs-on: ubuntu-latest
