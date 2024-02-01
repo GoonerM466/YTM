@@ -45,7 +45,7 @@ jobs:
           modified_url="${channel_url/live/videos}"
 
           # Fetching HTML content of the streams page
-          html_content=$(curl -s "$modified_url"))
+          html_content=$(curl -s "$modified_url")
 
           # Check if curl command was successful
           if [ $? -eq 0 ]; then
