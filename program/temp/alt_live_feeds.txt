@@ -2677,3 +2677,4 @@ Dream_MUsica, scenic,https://www.youtube.com/watch?v=EIysqv2xycY, https://i.ytim
 Dream_MUsica, scenic,https://www.youtube.com/watch?v=bKLftRxcy3k, https://i.ytimg.com/vi/bKLftRxcy3k/hqdefault.jpg
 Live_Music_Radio, music,https://www.youtube.com/watch?v=hQ9mwj7fhoM, https://i.ytimg.com/vi/hQ9mwj7fhoM/hqdefault.jpg
 FobosPlanet, science,https://www.youtube.com/watch?v=soSXsuGVkqc, https://i.ytimg.com/vi/soSXsuGVkqc/hqdefault.jpg
+Xdeep_Mix, music,https://www.youtube.com/watch?v=MO6ufgWTl4E, https://i.ytimg.com/vi/MO6ufgWTl4E/hqdefault.jpg
