@@ -1,68 +1,68 @@
-#EXTINF:-1 tvg-id="NatGeoWILD" tvg-name="NatGeoWILD" tvg-logo="" group-title=" documentary",NatGeoWILD
+#EXTINF:-1 tvg-id="Tidgney" tvg-name="Tidgney" tvg-logo="" group-title=" gaming",Tidgney
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="Hubble" tvg-name="Hubble" tvg-logo="" group-title=" documentary",Hubble
+#EXTINF:-1 tvg-id="deadeyedelboy" tvg-name="deadeyedelboy" tvg-logo="" group-title=" gaming",deadeyedelboy
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="TheWhyFiles" tvg-name="TheWhyFiles" tvg-logo="" group-title=" documentary",TheWhyFiles
+#EXTINF:-1 tvg-id="GlenCooley" tvg-name="GlenCooley" tvg-logo="" group-title=" gaming",GlenCooley
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="ColdCaseDetective" tvg-name="ColdCaseDetective" tvg-logo="" group-title=" documentary",ColdCaseDetective
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="WorldMegaMachines" tvg-name="WorldMegaMachines" tvg-logo="" group-title=" documentary",WorldMegaMachines
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="NationalGeographic" tvg-name="NationalGeographic" tvg-logo="" group-title=" documentary",NationalGeographic
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1737598255/ei/z1CRZ-OlAr75sfIPpqmS6AM/ip/20.43.247.168/id/zESaoCFT0Yk.1/itag/96/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr6---sn-4h.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/gcr/us/bui/AY2Et-NO156MNFX-V9IUX0IctejjPkoK906J5LOgUsL4jdhSnT43MZbMewFyQfGwlNKLrR53JsSSeyai/spc/9kzgDWbovxHT0pCYOPvlLrs8Es7DkSaGsSjVhJ_szDllvOni8u_xw-1Q8SYkJos/vprv/1/playlist_type/DVR/met/1737576655,/mh/Xi/mm/44/mn/sn-4h/ms/lva/mv/u/mvi/6/pl/24/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51326932,51335594,51353498,51355912,51371294,51384461/mt/1737576300/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,gcr,bui,spc,vprv,playlist_type/sig/AJfQdSswRQIgUn4acaqZrQdeuYCODhSyzNMbqu6_yKvhL43-y9CtzqMCIQCftXFHW76EwT1LLj-mZ49l0JMxsrUyEfE6UexeEJo2Jg%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/AGluJ3MwRQIgYRcH7-QFPMRSHo8pod74-YOLsTIoc8k_fPHy7ByVCvoCIQChfLGJIwbercTbviOE2qPBpfvCZ0fF2JuRYIdWH3hBhQ%3D%3D/playlist/index.m3u8
-#EXTINF:-1 tvg-id="IntelligentTechnology" tvg-name="IntelligentTechnology" tvg-logo="" group-title=" documentary",IntelligentTechnology
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="SpaceDocumentary" tvg-name="SpaceDocumentary" tvg-logo="" group-title=" documentary",SpaceDocumentary
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="BigfootChronicles1967" tvg-name="BigfootChronicles1967" tvg-logo="" group-title=" documentary",BigfootChronicles1967
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="Factnomenal" tvg-name="Factnomenal" tvg-logo="" group-title=" documentary",Factnomenal
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="NSports" tvg-name="NSports" tvg-logo="" group-title=" sports",NSports
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="DPWorldTour" tvg-name="DPWorldTour" tvg-logo="" group-title=" sports",DPWorldTour
+#EXTINF:-1 tvg-id="JimmyBroadbent" tvg-name="JimmyBroadbent" tvg-logo="" group-title=" gaming",JimmyBroadbent
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
 #EXTINF:-1 tvg-id="talkSPORT" tvg-name="talkSPORT" tvg-logo="" group-title=" sports",talkSPORT
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
 #EXTINF:-1 tvg-id="beinsportshaber" tvg-name="beinsportshaber" tvg-logo="" group-title=" sports",beinsportshaber
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="DPWorldTour" tvg-name="DPWorldTour" tvg-logo="" group-title=" sports",DPWorldTour
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
 #EXTINF:-1 tvg-id="AFCAsianCup" tvg-name="AFCAsianCup" tvg-logo="" group-title=" sports",AFCAsianCup
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="FobosPlanet" tvg-name="FobosPlanet" tvg-logo="" group-title=" science",FobosPlanet
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="XdeepMix" tvg-name="XdeepMix" tvg-logo="" group-title=" music",XdeepMix
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="LiveMusicRadio" tvg-name="LiveMusicRadio" tvg-logo="" group-title=" music",LiveMusicRadio
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="MusicBrokers" tvg-name="MusicBrokers" tvg-logo="" group-title=" music",MusicBrokers
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="JazzCafeAmbience" tvg-name="JazzCafeAmbience" tvg-logo="" group-title=" music",JazzCafeAmbience
-https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="MagicClub" tvg-name="MagicClub" tvg-logo="" group-title=" music",MagicClub
+#EXTINF:-1 tvg-id="NSports" tvg-name="NSports" tvg-logo="" group-title=" sports",NSports
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
 #EXTINF:-1 tvg-id="HitsRadio" tvg-name="HitsRadio" tvg-logo="" group-title=" music",HitsRadio
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
 #EXTINF:-1 tvg-id="classicmusictop1" tvg-name="classicmusictop1" tvg-logo="" group-title=" music",classicmusictop1
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="4KOceanWorld" tvg-name="4KOceanWorld" tvg-logo="" group-title=" scenic",4KOceanWorld
+#EXTINF:-1 tvg-id="LiveMusicRadio" tvg-name="LiveMusicRadio" tvg-logo="" group-title=" music",LiveMusicRadio
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="DreamMUsica" tvg-name="DreamMUsica" tvg-logo="" group-title=" scenic",DreamMUsica
+#EXTINF:-1 tvg-id="MagicClub" tvg-name="MagicClub" tvg-logo="" group-title=" music",MagicClub
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="EERIEISSSS" tvg-name="EERIEISSSS" tvg-logo="" group-title=" entertainment",EERIEISSSS
+#EXTINF:-1 tvg-id="JazzCafeAmbience" tvg-name="JazzCafeAmbience" tvg-logo="" group-title=" music",JazzCafeAmbience
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="NBCNews" tvg-name="NBCNews" tvg-logo="" group-title=" news",NBCNews
+#EXTINF:-1 tvg-id="MusicBrokers" tvg-name="MusicBrokers" tvg-logo="" group-title=" music",MusicBrokers
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="ABCNews" tvg-name="ABCNews" tvg-logo="" group-title=" news",ABCNews
+#EXTINF:-1 tvg-id="XdeepMix" tvg-name="XdeepMix" tvg-logo="" group-title=" music",XdeepMix
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="SkyNews" tvg-name="SkyNews" tvg-logo="" group-title=" news",SkyNews
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
 #EXTINF:-1 tvg-id="GBNews2" tvg-name="GBNews2" tvg-logo="" group-title=" news",GBNews2
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="SkyNews" tvg-name="SkyNews" tvg-logo="" group-title=" news",SkyNews
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1737598231/ei/t1CRZ6egHtqVsfIP5evF6QM/ip/20.43.247.168/id/0uMe71jMM2Q.1/itag/96/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr1---sn-4h.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/bui/AY2Et-NH1TY09fkaucug9mcdYfLGftQZLlgUS7hV2-CI_95EyjPlZh2fKjV96_ugVF3A-YUwREBndHGC/spc/9kzgDTnEcqZSUWlxrYofqYpbmS6gBY7phnPCKJ0fVMkfzubvAJph38N4SSXtDMs/vprv/1/playlist_type/DVR/met/1737576632,/mh/5U/mm/44/mn/sn-4h/ms/lva/mv/u/mvi/1/pl/24/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51326932,51335594,51353498,51355912,51371294,51384461/mt/1737576300/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,bui,spc,vprv,playlist_type/sig/AJfQdSswRQIgJtMcPG5y8yBMiobNXSmeTboWNoL_w2BdNUYKSREYbBwCIQC_PuK03e15zq70zamznyA_B4HA9uvonPutufVapeqwDg%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/AGluJ3MwRAIgVTMJJTuFcxBnx0q0EfBnwaDs-nayNFYd2gjB5rZx_j4CIGOyTJdaIdIspVovqt1A8LI5Qpc3JC_91fyD1uvSb4Ve/playlist/index.m3u8
-#EXTINF:-1 tvg-id="GlenCooley" tvg-name="GlenCooley" tvg-logo="" group-title=" gaming",GlenCooley
+#EXTINF:-1 tvg-id="ABCNews" tvg-name="ABCNews" tvg-logo="" group-title=" news",ABCNews
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="deadeyedelboy" tvg-name="deadeyedelboy" tvg-logo="" group-title=" gaming",deadeyedelboy
+#EXTINF:-1 tvg-id="NBCNews" tvg-name="NBCNews" tvg-logo="" group-title=" news",NBCNews
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="Tidgney" tvg-name="Tidgney" tvg-logo="" group-title=" gaming",Tidgney
+#EXTINF:-1 tvg-id="DreamMUsica" tvg-name="DreamMUsica" tvg-logo="" group-title=" scenic",DreamMUsica
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
-#EXTINF:-1 tvg-id="JimmyBroadbent" tvg-name="JimmyBroadbent" tvg-logo="" group-title=" gaming",JimmyBroadbent
+#EXTINF:-1 tvg-id="4KOceanWorld" tvg-name="4KOceanWorld" tvg-logo="" group-title=" scenic",4KOceanWorld
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="FobosPlanet" tvg-name="FobosPlanet" tvg-logo="" group-title=" science",FobosPlanet
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="SpaceDocumentary" tvg-name="SpaceDocumentary" tvg-logo="" group-title=" documentary",SpaceDocumentary
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="BigfootChronicles1967" tvg-name="BigfootChronicles1967" tvg-logo="" group-title=" documentary",BigfootChronicles1967
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="NatGeoWILD" tvg-name="NatGeoWILD" tvg-logo="" group-title=" documentary",NatGeoWILD
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="IntelligentTechnology" tvg-name="IntelligentTechnology" tvg-logo="" group-title=" documentary",IntelligentTechnology
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="Factnomenal" tvg-name="Factnomenal" tvg-logo="" group-title=" documentary",Factnomenal
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="NationalGeographic" tvg-name="NationalGeographic" tvg-logo="" group-title=" documentary",NationalGeographic
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="ColdCaseDetective" tvg-name="ColdCaseDetective" tvg-logo="" group-title=" documentary",ColdCaseDetective
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="TheWhyFiles" tvg-name="TheWhyFiles" tvg-logo="" group-title=" documentary",TheWhyFiles
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="Hubble" tvg-name="Hubble" tvg-logo="" group-title=" documentary",Hubble
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="WorldMegaMachines" tvg-name="WorldMegaMachines" tvg-logo="" group-title=" documentary",WorldMegaMachines
+https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
+#EXTINF:-1 tvg-id="EERIEISSSS" tvg-name="EERIEISSSS" tvg-logo="" group-title=" entertainment",EERIEISSSS
 https://raw.githubusercontent.com/benmoose39/YouTube_to_m3u/main/assets/moose_na.m3u
