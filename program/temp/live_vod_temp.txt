@@ -1,1 +1,1 @@
--rw-r--r-- 1 runner docker 181 Aug  7 04:37 ./vod/news/NBCNews/videos/MSXolqq_4H4.m3u8
+-rw-r--r-- 1 runner docker 181 Aug  7 06:20 ./vod/news/NBCNews/videos/MSXolqq_4H4.m3u8
