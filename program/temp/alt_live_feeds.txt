@@ -2681,3 +2681,4 @@ Xdeep_Mix, music,https://www.youtube.com/watch?v=MO6ufgWTl4E, https://i.ytimg.co
 Live_Music_Radio, music,https://www.youtube.com/watch?v=EPXXYlY4uE4, https://i.ytimg.com/vi/EPXXYlY4uE4/hqdefault.jpg
 Music_Brokers, music,https://www.youtube.com/watch?v=DDwnZwPbR0Q, https://i.ytimg.com/vi/DDwnZwPbR0Q/hqdefault.jpg
 ABCNews, news,https://www.youtube.com/watch?v=iipR5yUp36o, https://i.ytimg.com/vi/iipR5yUp36o/hqdefault.jpg
+Magic_Club, music,https://www.youtube.com/watch?v=bvM3ibaf1vw, https://i.ytimg.com/vi/bvM3ibaf1vw/hqdefault.jpg
