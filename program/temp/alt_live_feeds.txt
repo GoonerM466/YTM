@@ -2683,3 +2683,8 @@ Music_Brokers, music,https://www.youtube.com/watch?v=DDwnZwPbR0Q, https://i.ytim
 ABCNews, news,https://www.youtube.com/watch?v=iipR5yUp36o, https://i.ytimg.com/vi/iipR5yUp36o/hqdefault.jpg
 Magic_Club, music,https://www.youtube.com/watch?v=bvM3ibaf1vw, https://i.ytimg.com/vi/bvM3ibaf1vw/hqdefault.jpg
 Dream_MUsica, scenic,https://www.youtube.com/watch?v=uYuk_ZjxL4A\u0026pp=0gcJCeAJAYcqIYzv, https://i.ytimg.com/vi/uYuk_ZjxL4A\u0026pp=0gcJCeAJAYcqIYzv/hqdefault.jpg
+NBCNews, news,https://www.youtube.com/watch?v=eEajJ2rRzXc, https://i.ytimg.com/vi/eEajJ2rRzXc/hqdefault.jpg
+NBCNews, news,https://www.youtube.com/watch?v=kibSei4N68I, https://i.ytimg.com/vi/kibSei4N68I/hqdefault.jpg
+ABCNews, news,https://www.youtube.com/watch?v=iGlNITFV6Kc, https://i.ytimg.com/vi/iGlNITFV6Kc/hqdefault.jpg
+ABCNews, news,https://www.youtube.com/watch?v=W7iSLDZzUG0, https://i.ytimg.com/vi/W7iSLDZzUG0/hqdefault.jpg
+ABCNews, news,https://www.youtube.com/watch?v=iipR5yUp36o, https://i.ytimg.com/vi/iipR5yUp36o/hqdefault.jpg
