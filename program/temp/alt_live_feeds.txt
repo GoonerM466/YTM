@@ -2688,3 +2688,4 @@ NBCNews, news,https://www.youtube.com/watch?v=kibSei4N68I, https://i.ytimg.com/v
 ABCNews, news,https://www.youtube.com/watch?v=iGlNITFV6Kc, https://i.ytimg.com/vi/iGlNITFV6Kc/hqdefault.jpg
 ABCNews, news,https://www.youtube.com/watch?v=W7iSLDZzUG0, https://i.ytimg.com/vi/W7iSLDZzUG0/hqdefault.jpg
 ABCNews, news,https://www.youtube.com/watch?v=iipR5yUp36o, https://i.ytimg.com/vi/iipR5yUp36o/hqdefault.jpg
+Live_Music_Radio, music,https://www.youtube.com/watch?v=SwiqSo3mXSE, https://i.ytimg.com/vi/SwiqSo3mXSE/hqdefault.jpg
